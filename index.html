@@ -3,22 +3,22 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>OneMouse | PC와 Android를 하나의 작업 흐름으로</title>
+  <title>OneMouse | PC와 Android를 한 작업 흐름으로</title>
   <meta
     name="description"
-    content="OneMouse는 PC의 마우스와 키보드를 Android로 자연스럽게 이어 주고, 파일 전송과 멀티 디바이스 배치까지 지원하는 연결 앱입니다."
+    content="OneMouse는 Windows PC의 마우스, 키보드, 클립보드, 파일 전송을 Android와 로컬로 이어 주는 연결 도구입니다. QR 페어링, mDNS/UDP 발견, USB/ADB 실험 연결을 안내합니다."
   />
   <link rel="stylesheet" href="./css/style.css" />
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a href="./index.html" class="brand">
-        <div class="brand-mark">ML</div>
-        <div class="brand-copy">
+      <a href="./index.html" class="brand" aria-label="OneMouse 홈">
+        <span class="brand-mark">OM</span>
+        <span class="brand-copy">
           <strong>OneMouse</strong>
-          <span>PC와 Android를 하나의 작업 흐름으로</span>
-        </div>
+          <span>Windows와 Android를 로컬로 연결</span>
+        </span>
       </a>
       <nav class="top-nav" aria-label="주요 메뉴">
         <a href="./index.html" class="is-active">소개</a>
@@ -30,30 +30,23 @@
   </header>
 
   <main>
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow">Windows + Android 로컬 연결</p>
-          <h1>PC의 입력과 모바일 작업을 한 화면 흐름처럼 이어 주세요.</h1>
-          <p class="hero-text">
-            OneMouse는 마우스 이동, 키보드 입력, 파일 전송을 하나의 연결 흐름으로 묶어 줍니다.
-            테스트용 기기 여러 대를 붙여 놓고 오가거나, 문서와 링크를 모바일로 빠르게 넘겨야 할 때
-            작업 리듬을 끊지 않고 이어갈 수 있습니다. 기본은 같은 Wi-Fi 연결이며, 네트워크가 막힌 환경에서는
-            개발자 옵션과 USB 디버깅이 필요한 USB 대체 연결을 사용할 수 있습니다.
-          </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="./guide.html">처음 연결하는 방법</a>
-            <a class="button button-secondary" href="./help.html">문제 해결 보기</a>
-          </div>
-          <div class="tag-row" aria-label="핵심 기능">
-            <span>마우스 브리지</span>
-            <span>키보드 입력</span>
-            <span>파일 전송</span>
-            <span>멀티 디바이스</span>
-          </div>
+    <section class="home-hero">
+      <div class="container hero-content">
+        <p class="eyebrow eyebrow-dark">2026.05 업데이트 반영</p>
+        <h1>OneMouse</h1>
+        <p class="hero-text">
+          PC의 마우스, 키보드, 클립보드, 파일을 Android로 이어 주는 로컬 연결 앱입니다.
+          같은 Wi-Fi에서는 mDNS와 UDP fallback으로 찾고, 연결이 까다로운 환경에서는 USB/ADB 실험 경로까지 준비했습니다.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="./guide.html">처음 연결하기</a>
+          <a class="button button-secondary on-dark" href="./help.html">막힐 때 확인하기</a>
         </div>
-        <div class="hero-media">
-          <img src="./bg.png" alt="OneMouse 소개 이미지" class="hero-image" />
+        <div class="hero-badges" aria-label="최근 핵심 기능">
+          <span>QR 페어링</span>
+          <span>mDNS + UDP</span>
+          <span>USB/ADB PoC</span>
+          <span>클립보드 동기화</span>
         </div>
       </div>
     </section>
@@ -61,54 +54,78 @@
     <section class="section">
       <div class="container">
         <div class="section-heading">
-          <p class="section-kicker">Overview</p>
-          <h2>소개는 짧게, 실제 사용 흐름은 더 선명하게</h2>
+          <p class="section-kicker">What Changed</p>
+          <h2>최근 앱 흐름에 맞춰 소개를 다시 정리했습니다.</h2>
           <p>
-            기존 원페이지의 긴 설명은 역할별 페이지로 나눴고, 홈에서는 OneMouse가 어떤 상황에서
-            빛나는지 바로 파악할 수 있도록 핵심 기능만 추렸습니다.
+            이제 웹 문서는 단순 소개를 넘어 실제 앱에서 보이는 최신 연결 방식, 권한 순서, 복구 방법을 함께 설명합니다.
+            USB는 아직 일반 배포 기능이 아니라 ADB 기반 실험 연결로 분리해 표기했습니다.
           </p>
         </div>
-        <div class="feature-grid">
-          <article class="feature-card">
-            <span class="feature-number">01</span>
-            <h3>자연스러운 마우스 진입</h3>
-            <p>PC 화면 가장자리에서 Android 쪽으로 커서를 넘겨 바로 조작할 수 있습니다.</p>
+        <div class="update-grid">
+          <article class="update-card">
+            <span class="update-label">Pairing</span>
+            <h3>QR 또는 6자리 코드로 페어링</h3>
+            <p>PC 하단에 상시 표시되는 페어링 코드와 QR을 Android에서 바로 사용할 수 있습니다.</p>
           </article>
-          <article class="feature-card">
-            <span class="feature-number">02</span>
-            <h3>PC 키보드 그대로 사용</h3>
-            <p>모바일 검색, 메시지 입력, 텍스트 붙여넣기 같은 반복 작업이 편해집니다.</p>
+          <article class="update-card">
+            <span class="update-label">Discovery</span>
+            <h3>mDNS 우선, UDP fallback 유지</h3>
+            <p>같은 네트워크에서는 mDNS로 먼저 찾고, 막히는 환경에서는 기존 UDP discovery가 보조합니다.</p>
           </article>
-          <article class="feature-card">
-            <span class="feature-number">03</span>
-            <h3>파일 전송과 배치 관리</h3>
-            <p>선택된 기기로 파일을 보내고, 여러 Android 기기의 위치를 한 번에 정리할 수 있습니다.</p>
+          <article class="update-card">
+            <span class="update-label">USB</span>
+            <h3>Wi-Fi가 어려울 때 USB/ADB 실험 경로</h3>
+            <p>개발자 옵션과 ADB가 준비된 환경에서 USB PC를 감지하고 TCP 터널로 연결을 시도합니다.</p>
+          </article>
+          <article class="update-card">
+            <span class="update-label">Transfer</span>
+            <h3>파일, 텍스트, 클립보드 전송</h3>
+            <p>PC에서 Android로 보내고, Android 공유 메뉴나 클립보드를 통해 PC로 다시 보낼 수 있습니다.</p>
+          </article>
+          <article class="update-card">
+            <span class="update-label">Layout</span>
+            <h3>화면 방향과 배치 동기화</h3>
+            <p>Android 화면 크기와 방향 변화를 다시 반영하고, 삭제된 기기의 배치 잔상을 줄였습니다.</p>
+          </article>
+          <article class="update-card">
+            <span class="update-label">Safety</span>
+            <h3>커서 복귀 단축키 추가</h3>
+            <p>Android로 넘어간 커서가 돌아오지 않으면 PC에서 Ctrl + Alt + Backspace로 강제 복귀할 수 있습니다.</p>
           </article>
         </div>
       </div>
     </section>
 
     <section class="section section-alt">
-      <div class="container split-grid">
-        <div class="panel">
-          <p class="section-kicker">Demo</p>
-          <h2>시연 영상이 들어갈 자리도 미리 준비해 두었습니다.</h2>
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Product Flow</p>
+          <h2>연결은 발견, 페어링, 배치, 입력 순서로 이어집니다.</h2>
           <p>
-            유튜브 업로드가 끝나면 아래 영역에 임베드 URL만 넣으면 됩니다. 지금은 썸네일과 안내 문구가
-            들어가는 자리로 비워 두어, 페이지 구조를 미리 잡아 놓은 상태입니다.
+            사용자는 복잡한 포트나 transport를 직접 만질 필요 없이 PC와 Android 앱 화면에서 필요한 단계만 따라가면 됩니다.
           </p>
-          <ul class="bullet-list">
-            <li>권장 내용: 페어링, 위치 조정, 마우스 진입, 파일 전송</li>
-            <li>16:9 비율로 반응형 고정</li>
-            <li>모바일과 데스크톱 모두에서 자연스럽게 보이도록 구성</li>
-          </ul>
         </div>
-        <div class="video-shell is-placeholder" aria-label="유튜브 시연 영상 영역">
-          <div class="video-placeholder">
-            <span class="video-badge">YouTube Demo</span>
-            <strong>시연 영상 영역</strong>
-            <p>영상 업로드 후 iframe 또는 썸네일 링크를 이 위치에 넣으면 됩니다.</p>
-          </div>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <span class="feature-number">01</span>
+            <h3>PC를 찾습니다</h3>
+            <p>mDNS, UDP, USB/ADB 중 가능한 경로로 PC가 감지되고 transport 상태가 앱에 표시됩니다.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-number">02</span>
+            <h3>안전하게 페어링합니다</h3>
+            <p>접근성 권한을 먼저 켠 뒤 QR 스캔 또는 6자리 코드로 같은 기기인지 확인합니다.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-number">03</span>
+            <h3>폰 위치를 맞춥니다</h3>
+            <p>PC 모니터 외곽에 Android를 배치하면 그 방향으로 커서를 밀 때 제어가 넘어갑니다.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-number">04</span>
+            <h3>입력과 전송을 이어갑니다</h3>
+            <p>마우스, 키보드, 파일, 클립보드가 선택된 Android와 PC 사이에서 이어집니다.</p>
+          </article>
         </div>
       </div>
     </section>
@@ -116,54 +133,88 @@
     <section class="section">
       <div class="container">
         <div class="section-heading">
-          <p class="section-kicker">Pages</p>
-          <h2>읽는 흐름에 맞춰 페이지를 나눴습니다.</h2>
-          <p>홈은 소개, 가이드는 실제 연결 순서, 도움말은 문제 해결과 FAQ 중심으로 구성했습니다.</p>
+          <p class="section-kicker">Screens</p>
+          <h2>실제 온보딩 화면으로 최신 흐름을 보여줍니다.</h2>
+          <p>
+            별도 생성 이미지 대신 앱에 들어간 최신 온보딩 캡처를 사용했습니다. 사용자가 앱에서 보는 안내와 웹 설명이 같은 방향을 가리키도록 맞췄습니다.
+          </p>
         </div>
-        <div class="page-grid">
-          <a class="page-card" href="./guide.html">
-            <strong>사용 가이드</strong>
-            <p>처음 연결하는 순서, 빠른 시작 체크리스트, 듀얼 모니터와 기기 배치 팁을 확인합니다.</p>
-            <span>가이드 보기</span>
-          </a>
-          <a class="page-card" href="./help.html">
-            <strong>도움말</strong>
-            <p>권한 안내, 연결이 안 될 때 점검할 항목, 파일 전송 팁, FAQ를 한 번에 모아 둡니다.</p>
-            <span>도움말 보기</span>
-          </a>
+        <div class="shot-grid">
+          <figure class="shot-card shot-wide">
+            <img src="./assets/onboarding_pc_dashboard.png" alt="PC 하단에 페어링 코드와 QR 코드가 보이는 OneMouse 대시보드" />
+            <figcaption>PC 하단의 6자리 코드와 QR 페어링</figcaption>
+          </figure>
+          <figure class="shot-card">
+            <img src="./assets/onboarding_mobile_settings.jpg" alt="Android 접근성 권한 안내 화면" />
+            <figcaption>접근성 권한 먼저 켜기</figcaption>
+          </figure>
+          <figure class="shot-card">
+            <img src="./assets/onboarding_mobile_pair.jpg" alt="Android에서 감지된 PC를 페어링하는 화면" />
+            <figcaption>감지된 PC에서 페어링 시작</figcaption>
+          </figure>
+          <figure class="shot-card shot-wide">
+            <img src="./assets/onboarding_pc_position.png" alt="PC에서 Android 위치를 모니터 가장자리에 배치하는 화면" />
+            <figcaption>PC 모니터 외곽 기준으로 모바일 위치 배치</figcaption>
+          </figure>
         </div>
       </div>
     </section>
 
-    <section class="section section-alt" id="download">
-      <div class="container download-panel">
+    <section class="section section-alt">
+      <div class="container split-grid">
         <div>
-          <p class="section-kicker">Download</p>
-          <h2>바로 설치해서 연결을 시작하세요.</h2>
-          <p>
-            실제 배포 파일 이름에 맞춰 링크만 교체하면 됩니다. 같은 Wi-Fi 환경에서 PC와 Android를
-            함께 실행하면 바로 페어링을 시작할 수 있습니다. USB 연결은 방화벽 환경을 위한 고급 모드로,
-            Android 개발자 옵션과 USB 디버깅 허용이 필요합니다.
+          <p class="section-kicker">Connection Paths</p>
+          <h2>네트워크 환경에 따라 연결 경로가 달라집니다.</h2>
+          <p class="lead">
+            같은 Wi-Fi가 가장 일반적인 경로입니다. mDNS가 막힌 공유기나 회사망에서는 UDP fallback이 남아 있고,
+            USB는 Android 개발자 옵션과 ADB가 가능한 환경을 위한 실험 경로로 안내합니다.
           </p>
-          <div class="spec-grid">
-            <span>Windows 10/11</span>
-            <span>Android 8.0 이상</span>
-            <span>같은 로컬 네트워크 권장</span>
-            <span>6자리 코드 페어링</span>
-          </div>
+        </div>
+        <div class="path-list">
+          <article class="path-item">
+            <strong>Wi-Fi / LAN</strong>
+            <span>mDNS discovery 우선, UDP discovery fallback</span>
+          </article>
+          <article class="path-item">
+            <strong>USB / ADB</strong>
+            <span>ADB forward/reverse 터널을 쓰는 PoC 연결</span>
+          </article>
+          <article class="path-item">
+            <strong>보안 흐름</strong>
+            <span>페어링된 기기만 입력, 파일, 클립보드 채널 사용</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="download">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Download</p>
+          <h2>Windows 앱과 Android APK를 함께 준비합니다.</h2>
+          <p>
+            릴리스 파일을 웹 배포 폴더에 올린 뒤 실제 파일명으로 링크만 교체하면 됩니다.
+            Android는 8.0 이상을 기준으로 하고, PC는 Windows 10/11 환경을 우선 지원합니다.
+          </p>
         </div>
         <div class="download-grid">
           <article class="download-card">
-            <div class="download-icon">PC</div>
-            <strong>Windows 설치 파일</strong>
-            <p>예시 파일명: OneMouse_Setup.exe</p>
-            <a class="button button-primary" href="https://github.com/sdlckdrl/mouselink-web/releases/download/v0.2.0/OneMouse-Setup-0.2.0-x64.exe" download>Windows 다운로드</a>
+            <span class="download-icon">PC</span>
+            <h3>Windows</h3>
+            <p>릴리스 예시: OneMouse-Setup-&lt;version&gt;-x64.exe</p>
+            <a class="button button-primary" href="./OneMouse-Setup-latest-x64.exe" download>Windows 다운로드</a>
           </article>
           <article class="download-card">
-            <div class="download-icon download-icon-green">APK</div>
-            <strong>Android APK</strong>
-            <p>예시 파일명: OneMouse.apk</p>
-            <a class="button button-secondary button-green" href="./OneMouse.apk" download>Android 다운로드</a>
+            <span class="download-icon download-icon-green">APK</span>
+            <h3>Android</h3>
+            <p>접근성 서비스와 알림 권한을 켠 뒤 PC와 페어링합니다.</p>
+            <a class="button button-secondary" href="./OneMouse.apk" download>Android APK 다운로드</a>
+          </article>
+          <article class="download-card">
+            <span class="download-icon download-icon-amber">USB</span>
+            <h3>USB/ADB 실험 연결</h3>
+            <p>ADB가 PATH 또는 Android SDK 위치에 있고 USB 디버깅이 승인된 환경에서 테스트합니다.</p>
+            <a class="button button-secondary" href="./guide.html#usb">USB 절차 보기</a>
           </article>
         </div>
       </div>
@@ -173,7 +224,7 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <span>© 2026 OneMouse</span>
-      <span>소개 / 사용 가이드 / 도움말로 분리된 문서형 웹 페이지</span>
+      <span>소개 / 사용 가이드 / 도움말</span>
     </div>
   </footer>
 </body>

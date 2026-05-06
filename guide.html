@@ -6,19 +6,19 @@
   <title>OneMouse | 사용 가이드</title>
   <meta
     name="description"
-    content="OneMouse를 처음 연결하는 방법, 빠른 시작 체크리스트, 모니터와 모바일 위치 배치 팁을 안내합니다."
+    content="OneMouse를 처음 연결하는 순서, QR/6자리 코드 페어링, mDNS/UDP 발견, USB/ADB 실험 연결, 폰 위치 배치와 클립보드 전송 흐름을 안내합니다."
   />
   <link rel="stylesheet" href="./css/style.css" />
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a href="./index.html" class="brand">
-        <div class="brand-mark">ML</div>
-        <div class="brand-copy">
+      <a href="./index.html" class="brand" aria-label="OneMouse 홈">
+        <span class="brand-mark">OM</span>
+        <span class="brand-copy">
           <strong>OneMouse</strong>
-          <span>PC와 Android를 하나의 작업 흐름으로</span>
-        </div>
+          <span>Windows와 Android를 로컬로 연결</span>
+        </span>
       </a>
       <nav class="top-nav" aria-label="주요 메뉴">
         <a href="./index.html">소개</a>
@@ -33,10 +33,10 @@
     <section class="page-hero">
       <div class="container narrow">
         <p class="section-kicker">Guide</p>
-        <h1>처음 연결할 때 필요한 순서를 한 번에 정리했습니다.</h1>
+        <h1>처음 연결부터 USB 대안까지 한 번에 따라갑니다.</h1>
         <p class="page-intro">
-          설치 직후 어디서부터 시작해야 하는지 헷갈리지 않도록, 실제 연결 순서와 배치 팁을 짧고 선명하게
-          정리했습니다.
+          최신 앱은 권한을 먼저 켜고, 감지된 PC에서 페어링을 시작하는 흐름으로 정리되었습니다.
+          QR 스캔, 6자리 코드, USB/ADB 실험 경로를 상황에 맞게 선택하세요.
         </p>
       </div>
     </section>
@@ -47,36 +47,43 @@
           <article class="timeline-step">
             <span>1</span>
             <div>
-              <strong>PC 앱 실행</strong>
-              <p>Windows에서 OneMouse를 실행하고, 기기 검색이 시작된 상태인지 확인합니다.</p>
+              <strong>PC 앱을 실행합니다</strong>
+              <p>Windows에서 OneMouse를 켜면 하단에 6자리 페어링 코드와 QR 코드가 표시됩니다.</p>
             </div>
           </article>
           <article class="timeline-step">
             <span>2</span>
             <div>
-              <strong>Android 앱 열기</strong>
-              <p>모바일에서 앱을 열고 연결 대기 상태로 둡니다. 권한 요청이 보이면 먼저 허용합니다.</p>
+              <strong>Android 접근성 권한을 켭니다</strong>
+              <p>입력 제어를 받으려면 접근성 서비스가 먼저 필요합니다. 권한이 꺼져 있으면 페어링 버튼이 설정 화면으로 안내합니다.</p>
             </div>
           </article>
           <article class="timeline-step">
             <span>3</span>
             <div>
-              <strong>6자리 페어링 코드 확인</strong>
-              <p>PC에 표시된 코드를 모바일에 입력해 같은 기기인지 확인하고, 안전하게 페어링합니다.</p>
+              <strong>감지된 PC를 고릅니다</strong>
+              <p>같은 Wi-Fi에서는 mDNS가 우선 동작하고, 필요하면 UDP discovery가 보조합니다. USB 터널이 열려 있으면 USB PC도 목록에 나타납니다.</p>
             </div>
           </article>
           <article class="timeline-step">
             <span>4</span>
             <div>
-              <strong>모바일 위치 배치</strong>
-              <p>모니터의 어느 가장자리로 진입할지 정하고, 모바일을 왼쪽·오른쪽·위·아래에 배치합니다.</p>
+              <strong>QR 또는 6자리 코드로 페어링합니다</strong>
+              <p>PC 화면의 QR을 스캔하거나 6자리 코드를 입력합니다. 페어링되지 않은 기기는 연결 버튼 대신 페어링 필요 상태로 남습니다.</p>
             </div>
           </article>
           <article class="timeline-step">
             <span>5</span>
             <div>
-              <strong>마우스와 키보드 사용 시작</strong>
-              <p>배치된 방향으로 커서를 넘기면 제어가 이동하고, PC 키보드로 모바일 입력도 이어집니다.</p>
+              <strong>폰 위치를 PC 가장자리에 배치합니다</strong>
+              <p>모니터 왼쪽, 오른쪽, 위, 아래 중 실제로 커서를 넘길 위치에 Android를 배치합니다. 위치 변경은 PC로 동기화됩니다.</p>
+            </div>
+          </article>
+          <article class="timeline-step">
+            <span>6</span>
+            <div>
+              <strong>입력, 파일, 클립보드를 사용합니다</strong>
+              <p>마우스를 배치 방향으로 밀면 Android로 넘어가고, 파일과 텍스트는 선택된 기기 또는 기본 PC로 전송됩니다.</p>
             </div>
           </article>
         </div>
@@ -86,58 +93,76 @@
     <section class="section section-alt">
       <div class="container guide-grid">
         <article class="panel">
-          <p class="section-kicker">Checklist</p>
-          <h2>빠른 시작 체크리스트</h2>
+          <p class="section-kicker">Wi-Fi</p>
+          <h2>일반 연결 체크리스트</h2>
           <ul class="bullet-list">
-            <li>PC와 Android가 같은 Wi-Fi 또는 같은 로컬 네트워크에 연결되어 있는지 확인</li>
-            <li>PC 앱이 실행 중이고 모바일 앱이 연결 대기 상태인지 확인</li>
-            <li>처음 연결이라면 6자리 코드 입력이 완료되었는지 확인</li>
-            <li>Android 쪽 접근성 또는 입력 관련 권한이 허용되었는지 확인</li>
-            <li>모바일 위치가 실제 마우스 진입 방향과 맞게 배치되었는지 확인</li>
+            <li>PC와 Android가 같은 로컬 네트워크에 있는지 확인합니다.</li>
+            <li>공유기나 회사망에서 로컬 discovery가 막히면 UDP fallback도 실패할 수 있습니다.</li>
+            <li>PC 방화벽이나 백신이 OneMouse 포트를 막지 않는지 확인합니다.</li>
+            <li>Android 앱을 다시 열어 연결 대기 상태와 mDNS 재광고가 살아 있는지 확인합니다.</li>
           </ul>
         </article>
-        <article class="panel">
-          <p class="section-kicker">USB Mode</p>
-          <h2>USB 연결은 고급 대체 모드입니다</h2>
+        <article class="panel" id="usb">
+          <p class="section-kicker">USB / ADB</p>
+          <h2>Wi-Fi가 안 될 때의 실험 경로</h2>
           <ul class="bullet-list">
-            <li>회사망, 공용 Wi-Fi, 방화벽 때문에 Wi-Fi 검색이 어려울 때 사용하는 보조 연결 방식입니다.</li>
-            <li>Android에서 개발자 옵션과 USB 디버깅을 켜고, 최초 연결 시 PC의 RSA 키를 허용해야 합니다.</li>
-            <li>Windows 배포판에는 ADB 구성요소가 포함되어 있어 별도 Android Studio 설치 없이 사용할 수 있습니다.</li>
-            <li>USB 테더링이 아니라 ADB 터널링 방식이므로, `adb devices`에서 기기가 `device` 상태로 보여야 합니다.</li>
-          </ul>
-        </article>
-        <article class="panel">
-          <p class="section-kicker">Layout</p>
-          <h2>듀얼 모니터와 여러 모바일을 쓸 때</h2>
-          <ul class="bullet-list">
-            <li>배치 화면에는 PC 모니터 구성이 그대로 축소되어 표시됩니다.</li>
-            <li>여러 Android가 연결돼 있으면 각 기기를 겹치지 않게 외곽에 배치하는 것이 좋습니다.</li>
-            <li>모바일에서는 다른 기기도 보이지만, 자신의 기기만 직접 이동할 수 있습니다.</li>
-            <li>PC에서는 선택된 기기가 파일 전송 대상이 되므로 현재 선택 상태를 함께 확인합니다.</li>
+            <li>Android 개발자 옵션에서 USB 디버깅을 켭니다.</li>
+            <li>PC에서 `adb devices`가 `device` 상태로 보이는지 확인합니다.</li>
+            <li>PC 앱을 재시작하면 ADB forward/reverse 터널이 잡히고 USB PC가 감지될 수 있습니다.</li>
+            <li>일반 사용자용 순수 USB 연결은 아직 별도 검토가 필요한 단계입니다.</li>
           </ul>
         </article>
       </div>
     </section>
 
     <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Visual Steps</p>
+          <h2>앱 화면에서 확인할 위치입니다.</h2>
+          <p>PC에서는 코드와 QR, Android에서는 접근성 권한과 페어링 버튼, 배치 화면을 차례로 확인합니다.</p>
+        </div>
+        <div class="shot-row">
+          <figure class="shot-card">
+            <img src="./assets/onboarding_pc_dashboard.png" alt="PC 대시보드 하단 페어링 코드와 QR" />
+            <figcaption>PC 코드와 QR</figcaption>
+          </figure>
+          <figure class="shot-card">
+            <img src="./assets/onboarding_mobile_settings.jpg" alt="Android 설정 탭 접근성 권한 안내" />
+            <figcaption>접근성 권한</figcaption>
+          </figure>
+          <figure class="shot-card">
+            <img src="./assets/onboarding_mobile_pair.jpg" alt="Android 감지된 PC 페어링 버튼" />
+            <figcaption>PC 페어링</figcaption>
+          </figure>
+          <figure class="shot-card">
+            <img src="./assets/onboarding_pc_position.png" alt="PC 위치 배치 화면" />
+            <figcaption>위치 배치</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
       <div class="container split-grid">
-        <div class="panel">
-          <p class="section-kicker">Flow</p>
-          <h2>실제 사용 흐름에 잘 맞는 순간</h2>
+        <div>
+          <p class="section-kicker">Daily Use</p>
+          <h2>연결 후 자주 쓰는 흐름</h2>
           <ul class="bullet-list">
-            <li>테스트 기기 두세 대를 번갈아 조작하면서 앱 상태를 확인할 때</li>
-            <li>모바일 검색창이나 로그인 입력을 PC 키보드로 빠르게 처리할 때</li>
-            <li>스크린샷, APK, 문서 파일을 선택된 기기로 바로 보내야 할 때</li>
-            <li>작업 중 메시지, 인증 코드, 메모를 확인하고 다시 PC 작업으로 돌아올 때</li>
+            <li>테스트 기기 여러 대를 연결해 PC에서 선택하고 위치를 조정합니다.</li>
+            <li>모바일 검색창, 로그인 입력, 메시지 작성은 PC 키보드로 처리합니다.</li>
+            <li>PC 파일은 선택된 Android로 보내고, Android 공유 메뉴에서는 기본 PC로 보냅니다.</li>
+            <li>복사한 텍스트는 클립보드 동기화로 PC와 Android 사이를 오갑니다.</li>
           </ul>
         </div>
-        <div class="panel">
-          <p class="section-kicker">Next</p>
-          <h2>문제가 생기면 도움말로 바로 이동하세요.</h2>
-          <p>
-            연결이 보이지 않거나 입력이 전달되지 않는 경우를 위한 권한 안내, 문제 해결 순서, FAQ를
-            별도 도움말 페이지에 모아 두었습니다.
+        <div>
+          <p class="section-kicker">Recovery</p>
+          <h2>커서가 돌아오지 않을 때</h2>
+          <p class="lead">
+            Android로 넘어간 커서가 PC로 복귀하지 않으면 PC에서 Ctrl + Alt + Backspace를 누릅니다.
+            이 단축키는 PC의 cursor capture를 해제하고 Android에 복귀 메시지를 다시 보냅니다.
           </p>
+          <div class="shortcut">Ctrl + Alt + Backspace</div>
           <div class="hero-actions">
             <a class="button button-primary" href="./help.html">도움말 열기</a>
             <a class="button button-secondary" href="./index.html">소개로 돌아가기</a>
@@ -150,7 +175,7 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <span>© 2026 OneMouse</span>
-      <span>사용 가이드 페이지</span>
+      <span>사용 가이드</span>
     </div>
   </footer>
 </body>
