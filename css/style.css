@@ -145,7 +145,7 @@ figure {
   border-bottom: 1px solid #18233a;
   background:
     linear-gradient(90deg, rgba(8, 16, 32, 0.86) 0%, rgba(8, 16, 32, 0.68) 44%, rgba(8, 16, 32, 0.2) 100%),
-    url("../assets/onboarding_pc_dashboard.png") center / cover no-repeat;
+    url("../assets/hero-bg-generated-2.png") center / cover no-repeat;
 }
 
 .hero-content {
@@ -626,7 +626,7 @@ figure {
     min-height: 560px;
     background:
       linear-gradient(180deg, rgba(8, 16, 32, 0.9) 0%, rgba(8, 16, 32, 0.74) 58%, rgba(8, 16, 32, 0.48) 100%),
-      url("../assets/onboarding_pc_dashboard.png") center / cover no-repeat;
+      url("../assets/hero-bg-generated-2.png") center / cover no-repeat;
   }
 
   .hero-content {
