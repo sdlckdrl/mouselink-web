@@ -442,6 +442,12 @@ figure {
   background: #dfe7f2;
 }
 
+.shot-card.shot-phone img {
+  height: 430px;
+  object-fit: contain;
+  background: #edf3fb;
+}
+
 .shot-card.shot-wide {
   grid-column: span 2;
 }
@@ -912,6 +918,10 @@ figure {
   .shot-card img,
   .shot-card.shot-wide img {
     height: 280px;
+  }
+
+  .shot-card.shot-phone img {
+    height: 390px;
   }
 
   .timeline-step {
