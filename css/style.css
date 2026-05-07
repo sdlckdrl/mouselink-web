@@ -334,6 +334,10 @@ figure {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
+.shot-row.text-step-row {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
 .guide-grid,
 .help-grid,
 .download-grid,
@@ -802,6 +806,7 @@ figure {
   .update-grid,
   .feature-grid,
   .shot-row,
+  .shot-row.text-step-row,
   .download-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -906,6 +911,7 @@ figure {
   .update-grid,
   .feature-grid,
   .shot-row,
+  .shot-row.text-step-row,
   .shot-grid,
   .download-grid {
     grid-template-columns: 1fr;
