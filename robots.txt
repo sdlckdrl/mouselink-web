@@ -1,0 +1,4 @@
+﻿User-agent: *
+Allow: /
+
+Sitemap: https://sdlckdrl.github.io/mouselink-web/sitemap.xml
