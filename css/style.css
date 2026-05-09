@@ -647,6 +647,28 @@ figure {
   border-bottom: 0;
 }
 
+.shortcut-table {
+  min-width: 860px;
+}
+
+.shortcut-table td:first-child {
+  white-space: nowrap;
+}
+
+.key-combo {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 7px 10px;
+  border: 1px solid #cdd9ec;
+  border-radius: 8px;
+  background: #f8fbff;
+  color: var(--blue-deep);
+  font-size: 14px;
+  line-height: 1.15;
+  font-weight: 950;
+}
+
 .timeline {
   display: grid;
   gap: 14px;
