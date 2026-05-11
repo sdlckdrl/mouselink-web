@@ -1,8 +1,13 @@
 {
   "pc": {
-    "version": "0.3.0",
+    "version": "0.3.1",
+    "minimumRequiredVersion": "0.3.1",
     "notes": "현재 공개 버전입니다.",
-    "downloadUrl": "https://github.com/sdlckdrl/MouseLink/releases/latest",
+    "downloadUrl": "https://github.com/sdlckdrl/mouselink-web/releases",
     "mandatory": false
+  },
+  "android": {
+    "minimumPcVersion": "0.3.1",
+    "pcUpdateMessage": "이 Android 앱과 안정적으로 연결하려면 PC 앱 v0.3.1 이상이 필요합니다."
   }
 }
