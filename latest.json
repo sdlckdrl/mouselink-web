@@ -1,0 +1,8 @@
+﻿{
+  "pc": {
+    "version": "0.3.0",
+    "notes": "현재 공개 버전입니다.",
+    "downloadUrl": "https://github.com/sdlckdrl/MouseLink/releases/latest",
+    "mandatory": false
+  }
+}
