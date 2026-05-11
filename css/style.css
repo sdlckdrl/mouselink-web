@@ -555,6 +555,10 @@ figure {
   line-height: 1.2;
 }
 
+.plan-preview div:nth-child(2) strong {
+  color: #dc2626;
+}
+
 .plan-preview span {
   margin-top: 7px;
   color: var(--muted);
@@ -574,8 +578,8 @@ figure {
 }
 
 .plan-tier-pro {
-  border-color: #bad4c8;
-  background: linear-gradient(180deg, #ffffff, #f3fbf7);
+  border-color: #fecaca;
+  background: linear-gradient(180deg, #ffffff, #fff5f5);
 }
 
 .plan-tier h2 {
@@ -602,7 +606,7 @@ figure {
 }
 
 .plan-tier-pro .plan-price {
-  color: var(--green);
+  color: #dc2626;
 }
 
 .compare-table-wrap {
@@ -636,11 +640,19 @@ figure {
 }
 
 .compare-table td:nth-child(2) {
-  color: #475569;
+  color: #2563eb;
 }
 
 .compare-table td:nth-child(3) {
-  color: var(--green);
+  color: #dc2626;
+}
+
+.compare-table th:nth-child(2) {
+  color: #2563eb;
+}
+
+.compare-table th:nth-child(3) {
+  color: #dc2626;
 }
 
 .compare-table tr:last-child td {
