@@ -1,7 +1,7 @@
 {
   "pc": {
-    "version": "0.3.1",
-    "minimumRequiredVersion": "0.3.1",
+    "version": "0.3.2",
+    "minimumRequiredVersion": "0.3.2",
     "notes": "현재 공개 버전입니다.",
     "downloadUrl": "https://github.com/sdlckdrl/mouselink-web/releases",
     "mandatory": false
