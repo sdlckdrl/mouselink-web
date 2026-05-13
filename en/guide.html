@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OneMouse | Guide</title>
+  <meta name="description" content="Follow the OneMouse setup flow: PC app, Android power, Accessibility permission, device search, QR pairing, phone placement, and input handoff." />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="canonical" href="https://sdlckdrl.github.io/mouselink-web/en/guide.html" />
+  <link rel="alternate" hreflang="ko" href="https://sdlckdrl.github.io/mouselink-web/guide.html" />
+  <link rel="alternate" hreflang="en" href="https://sdlckdrl.github.io/mouselink-web/en/guide.html" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="./index.html" class="brand" aria-label="OneMouse home">
+        <span class="brand-mark">OM</span>
+        <span class="brand-copy">
+          <strong>OneMouse</strong>
+          <span>Connect Windows and Android locally</span>
+        </span>
+      </a>
+      <nav class="top-nav" aria-label="Main navigation">
+        <a href="./index.html">Overview</a>
+        <a href="./guide.html" class="is-active">Guide</a>
+        <a href="./pricing.html">Free / Pro</a>
+        <a href="./help.html">Help</a>
+        <a href="./index.html#download" class="nav-cta">Download</a>
+      </nav>
+      <div class="lang-switch" aria-label="Language">
+        <a href="../guide.html">KOR</a>
+        <span class="is-active">ENG</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container narrow">
+        <p class="section-kicker">Guide</p>
+        <h1>From first connection to PC input handoff.</h1>
+        <p class="page-intro">
+          Turn on OneMouse in Android, check permissions, search for the PC, pair, place the phone, then move the cursor across the selected PC edge.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="timeline">
+          <article class="timeline-step">
+            <span>1</span>
+            <div>
+              <strong>Run the PC app</strong>
+              <p>Open OneMouse on Windows. The PC app shows a 6-digit pairing code and QR code at the bottom.</p>
+            </div>
+          </article>
+          <article class="timeline-step">
+            <span>2</span>
+            <div>
+              <strong>Turn on Android power and Accessibility</strong>
+              <p>The power button must be on for discovery and input receivers. Accessibility is required to control Android input.</p>
+            </div>
+          </article>
+          <article class="timeline-step">
+            <span>3</span>
+            <div>
+              <strong>Search for the PC</strong>
+              <p>On the same Wi-Fi or LAN, mDNS is used first and UDP discovery is used as fallback. Run device search again if the PC is not visible.</p>
+            </div>
+          </article>
+          <article class="timeline-step">
+            <span>4</span>
+            <div>
+              <strong>Pair with QR or code</strong>
+              <p>Scan the QR code or enter the 6-digit code from the PC app. Unpaired devices remain in a pairing-required state.</p>
+            </div>
+          </article>
+          <article class="timeline-step">
+            <span>5</span>
+            <div>
+              <strong>Place the phone on a PC edge</strong>
+              <p>Choose left, right, top, or bottom based on where you want the cursor to enter Android.</p>
+            </div>
+          </article>
+          <article class="timeline-step">
+            <span>6</span>
+            <div>
+              <strong>Use input, files, and clipboard</strong>
+              <p>Move the PC mouse across the configured edge. Files and text can be sent between the selected PC and Android device.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container guide-grid">
+        <article class="panel">
+          <p class="section-kicker">Wi-Fi</p>
+          <h2>Connection checklist</h2>
+          <ul class="bullet-list">
+            <li>Make sure the PC and Android device are on the same local network.</li>
+            <li>Guest Wi-Fi, AP isolation, company networks, or firewalls can block discovery.</li>
+            <li>Allow OneMouse through the Windows firewall or security software.</li>
+            <li>Check that the Android power button is on, then run device search again.</li>
+          </ul>
+        </article>
+        <article class="panel">
+          <p class="section-kicker">Pairing</p>
+          <h2>Permissions before pairing</h2>
+          <ul class="bullet-list">
+            <li>Turn on the Android app power button.</li>
+            <li>Enable Android Accessibility for OneMouse.</li>
+            <li>Tap Pair on a detected PC or scan the QR code.</li>
+            <li>If the PC is not visible, confirm both devices are on the same Wi-Fi or LAN.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Visual Steps</p>
+          <h2>Where to look in the app.</h2>
+          <p>Check the PC code and QR, the Android pairing button, and the PC placement screen.</p>
+        </div>
+        <div class="shot-row">
+          <figure class="shot-card">
+            <img src="../assets/onboarding_pc_dashboard.png" alt="PC pairing code and QR" />
+            <figcaption>PC pairing code and QR</figcaption>
+          </figure>
+          <figure class="shot-card">
+            <img src="../assets/onboarding_mobile_pair.jpg" alt="Android detected PC pairing screen" />
+            <figcaption>Pair a detected PC</figcaption>
+          </figure>
+          <figure class="shot-card">
+            <img src="../assets/onboarding_pc_position.png" alt="PC placement screen" />
+            <figcaption>Phone placement</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© 2026 OneMouse</span>
+      <span class="footer-links">
+        <a href="./pricing.html">Free / Pro</a>
+        <a href="./privacy.html">Privacy</a>
+        <a href="./terms.html">Terms</a>
+        <a href="./licenses.html">Licenses</a>
+      </span>
+    </div>
+  </footer>
+</body>
+</html>

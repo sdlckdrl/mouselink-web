@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OneMouse | Help</title>
+  <meta name="description" content="Troubleshoot OneMouse power, permissions, discovery, pairing, placement, file transfer, and cursor return issues." />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="canonical" href="https://sdlckdrl.github.io/mouselink-web/en/help.html" />
+  <link rel="alternate" hreflang="ko" href="https://sdlckdrl.github.io/mouselink-web/help.html" />
+  <link rel="alternate" hreflang="en" href="https://sdlckdrl.github.io/mouselink-web/en/help.html" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="./index.html" class="brand" aria-label="OneMouse home">
+        <span class="brand-mark">OM</span>
+        <span class="brand-copy">
+          <strong>OneMouse</strong>
+          <span>Connect Windows and Android locally</span>
+        </span>
+      </a>
+      <nav class="top-nav" aria-label="Main navigation">
+        <a href="./index.html">Overview</a>
+        <a href="./guide.html">Guide</a>
+        <a href="./pricing.html">Free / Pro</a>
+        <a href="./help.html" class="is-active">Help</a>
+        <a href="./index.html#download" class="nav-cta">Download</a>
+      </nav>
+      <div class="lang-switch" aria-label="Language">
+        <a href="../help.html">KOR</a>
+        <span class="is-active">ENG</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container narrow">
+        <p class="section-kicker">Help</p>
+        <h1>Narrow issues by power, permission, discovery, and placement.</h1>
+        <p class="page-intro">
+          Most issues fall into app power, Android permission, local network discovery, pairing, or placement.
+          Check them in order before changing advanced settings.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container help-grid">
+        <article class="help-card">
+          <p class="section-kicker">Power</p>
+          <h2>Check app power</h2>
+          <p>If the Android power button is off, background work and input receivers are stopped. Turn it on before connecting.</p>
+        </article>
+        <article class="help-card">
+          <p class="section-kicker">Permissions</p>
+          <h2>Accessibility comes first</h2>
+          <p>Android input control requires the OneMouse Accessibility service. A visible PC does not mean input can be delivered.</p>
+        </article>
+        <article class="help-card">
+          <p class="section-kicker">Battery</p>
+          <h2>Check battery limits</h2>
+          <p>If the connection drops after the screen turns off, open the battery optimization setting from the app settings screen.</p>
+        </article>
+        <article class="help-card">
+          <p class="section-kicker">Discovery</p>
+          <h2>Check mDNS and UDP</h2>
+          <p>Guest Wi-Fi, AP isolation, company networks, and firewalls can block both mDNS and UDP discovery.</p>
+        </article>
+        <article class="help-card">
+          <p class="section-kicker">Layout</p>
+          <h2>When placement feels wrong</h2>
+          <p>Save the phone position again after rotation or display changes. The PC uses that placement for cursor handoff.</p>
+        </article>
+        <article class="help-card">
+          <p class="section-kicker">Return</p>
+          <h2>Cursor return shortcut</h2>
+          <p>If the cursor does not return from Android, press Ctrl + Alt + Backspace on the PC.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Troubleshooting</p>
+          <h2>Follow this order.</h2>
+          <p>Finding the failing step is faster than changing several settings at once.</p>
+        </div>
+        <div class="timeline">
+          <article class="timeline-step">
+            <span>1</span>
+            <div>
+              <strong>Check app and permission state</strong>
+              <p>Confirm the PC app, Android app power, foreground service, and Accessibility permission are active.</p>
+            </div>
+          </article>
+          <article class="timeline-step">
+            <span>2</span>
+            <div>
+              <strong>Check whether the PC is visible</strong>
+              <p>Confirm both devices are on the same local network and run device search again.</p>
+            </div>
+          </article>
+          <article class="timeline-step">
+            <span>3</span>
+            <div>
+              <strong>Check pairing state</strong>
+              <p>If the PC shows pairing required, use QR or the 6-digit code again. If state is confused, unpair and pair again.</p>
+            </div>
+          </article>
+          <article class="timeline-step">
+            <span>4</span>
+            <div>
+              <strong>Check input and placement</strong>
+              <p>Check the selected PC, Android position, entry direction, and display rotation state.</p>
+            </div>
+          </article>
+          <article class="timeline-step">
+            <span>5</span>
+            <div>
+              <strong>Use recovery shortcut</strong>
+              <p>Use Ctrl + Alt + Backspace if the cursor feels stuck on the Android side.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container split-grid">
+        <div>
+          <p class="section-kicker">Transfer</p>
+          <h2>When files or clipboard do not transfer</h2>
+          <ul class="bullet-list">
+            <li>Check which Android device is selected in the PC app.</li>
+            <li>Android to PC sharing uses the default PC.</li>
+            <li>If OneMouse does not appear in Android share targets, enable it in the app list.</li>
+            <li>Large files depend on local network stability.</li>
+            <li>Pairing and session key state must be valid.</li>
+          </ul>
+        </div>
+        <figure class="shot-card">
+          <img src="../assets/onboarding_mobile_pair.jpg" alt="Android detected PC pairing screen" />
+          <figcaption>When transfer fails, first check that the PC is detected on the same network.</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© 2026 OneMouse</span>
+      <span class="footer-links">
+        <a href="./pricing.html">Free / Pro</a>
+        <a href="./privacy.html">Privacy</a>
+        <a href="./terms.html">Terms</a>
+        <a href="./licenses.html">Licenses</a>
+      </span>
+    </div>
+  </footer>
+</body>
+</html>
