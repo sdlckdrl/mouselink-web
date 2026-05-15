@@ -305,7 +305,7 @@
           <p class="section-kicker">Download</p>
           <h2>Windows 앱과 Android APK를 함께 준비합니다.</h2>
           <p>
-            릴리스 파일을 웹 배포 폴더에 올린 뒤 실제 파일명으로 링크만 교체하면 됩니다.
+            Windows 버튼은 최신 GitHub 릴리스의 Setup 파일로 자동 연결됩니다.
             Android는 8.0 이상을 기준으로 하고, PC는 Windows 10/11 환경을 우선 지원합니다.
           </p>
         </div>
@@ -313,8 +313,8 @@
           <article class="download-card">
             <span class="download-icon">PC</span>
             <h3>Windows</h3>
-            <p>릴리스 예시: OneMouse-Setup-&lt;version&gt;-x64.exe</p>
-            <a class="button button-primary" href="https://github.com/sdlckdrl/mouselink-web/releases" download>Windows 다운로드</a>
+            <p data-download-filename>최신 Setup 파일을 확인 중입니다.</p>
+            <a class="button button-primary" href="https://github.com/sdlckdrl/mouselink-web/releases" data-latest-windows-download>Windows 다운로드</a>
           </article>
           <article class="download-card">
             <span class="download-icon download-icon-green">APK</span>
@@ -338,5 +338,6 @@
       </span>
     </div>
   </footer>
+  <script src="./js/downloads.js"></script>
 </body>
 </html>
