@@ -3,11 +3,13 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>OneMouse | 사용 가이드</title>
+  <title>OneMouse(원마우스) 사용 가이드 | Android PC 제어 설정</title>
   <meta
     name="description"
-    content="OneMouse를 처음 연결하는 순서, QR/6자리 코드 페어링, 폰 위치 배치, 클립보드 전송, 키보드 단축키를 안내합니다."
+    content="OneMouse(원마우스) 최신 사용 가이드입니다. Windows PC와 Android를 Wi-Fi/LAN으로 연결하고, 접근성 권한, QR/6자리 코드 페어링, 위치 배치, 파일/클립보드 전송, 스크린샷과 밝기 단축키를 안내합니다."
   />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta name="keywords" content="OneMouse 사용법, 원마우스 가이드, Android PC 제어, 스마트폰 PC 마우스, Android 키보드 입력, 모바일 스크린샷 PC" />
   <link rel="stylesheet" href="./css/style.css" />
   <link rel="canonical" href="https://sdlckdrl.github.io/mouselink-web/guide.html" />
   <link rel="alternate" hreflang="ko" href="https://sdlckdrl.github.io/mouselink-web/guide.html" />
@@ -17,21 +19,23 @@
   <link rel="alternate" hreflang="x-default" href="https://sdlckdrl.github.io/mouselink-web/guide.html" />
   <meta property="og:site_name" content="OneMouse" />
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="OneMouse 사용 가이드" />
-  <meta property="og:description" content="OneMouse를 처음 연결하는 순서, QR/6자리 코드 페어링, 폰 위치 배치, 클립보드 전송, 키보드 단축키를 안내합니다." />
+  <meta property="og:title" content="OneMouse(원마우스) 사용 가이드" />
+  <meta property="og:description" content="Windows PC와 Android를 Wi-Fi/LAN으로 연결하고, 권한, 페어링, 위치 배치, 전송, 스크린샷과 밝기 단축키를 최신 흐름으로 안내합니다." />
   <meta property="og:url" content="https://sdlckdrl.github.io/mouselink-web/guide.html" />
   <meta property="og:image" content="https://sdlckdrl.github.io/mouselink-web/assets/hero-bg-generated-2.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="OneMouse 사용 가이드" />
-  <meta name="twitter:description" content="OneMouse를 처음 연결하는 순서, QR/6자리 코드 페어링, 폰 위치 배치, 클립보드 전송, 키보드 단축키를 안내합니다." />
+  <meta name="twitter:title" content="OneMouse(원마우스) 사용 가이드" />
+  <meta name="twitter:description" content="Windows PC와 Android를 Wi-Fi/LAN으로 연결하고, 권한, 페어링, 위치 배치, 전송, 스크린샷과 밝기 단축키를 최신 흐름으로 안내합니다." />
   <meta name="twitter:image" content="https://sdlckdrl.github.io/mouselink-web/assets/hero-bg-generated-2.png" />
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebPage",
-      "name": "OneMouse 사용 가이드",
+      "name": "OneMouse(원마우스) 사용 가이드",
       "url": "https://sdlckdrl.github.io/mouselink-web/guide.html",
-      "description": "OneMouse를 처음 연결하는 순서, QR/6자리 코드 페어링, 폰 위치 배치, 클립보드 전송, 키보드 단축키를 안내합니다.",
+      "inLanguage": "ko-KR",
+      "keywords": "OneMouse 사용법, 원마우스 가이드, Android PC 제어, 모바일 스크린샷 PC",
+      "description": "Windows PC와 Android를 Wi-Fi/LAN으로 연결하고, 권한, 페어링, 위치 배치, 전송, 스크린샷과 밝기 단축키를 최신 흐름으로 안내합니다.",
       "isPartOf": {
         "@type": "WebSite",
         "name": "OneMouse",
@@ -77,59 +81,111 @@
   <main>
     <section class="page-hero">
       <div class="container narrow">
-        <p class="section-kicker">Guide</p>
-        <h1>처음 연결부터 PC 입력까지 한 번에 따라갑니다.</h1>
+        <p class="section-kicker">Updated Guide</p>
+        <h1>필수 설정은 하나, 연결은 더 쉽게.</h1>
         <p class="page-intro">
-          최신 앱은 오른쪽 위 전원을 켠 뒤 권한, 기기 검색, 페어링, 위치 배치 순서로 진행합니다.
-          QR 스캔 또는 6자리 코드로 같은 로컬 네트워크의 PC와 페어링하세요.
+          OneMouse는 Windows PC와 Android를 같은 Wi-Fi 또는 같은 LAN에서 연결합니다.
+          처음에는 접근성 권한만 필수로 켜고, 알림, 주변 Wi-Fi, 밝기 조절 같은 권한은 해당 기능을 사용할 때만 확인합니다.
         </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#quick-start">5분 연결 순서</a>
+          <a class="button button-secondary" href="#permissions">필요한 권한 보기</a>
+          <a class="button button-secondary" href="#keyboard-shortcuts">단축키 보기</a>
+        </div>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" id="quick-start">
       <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Quick Start</p>
+          <h2>처음 연결은 이 순서만 따라가면 됩니다.</h2>
+          <p>포트나 IP를 직접 입력할 필요가 없습니다. PC 앱을 켜고 Android에서 PC를 찾은 뒤 QR 또는 6자리 코드로 확인합니다.</p>
+        </div>
         <div class="timeline">
           <article class="timeline-step">
             <span>1</span>
             <div>
               <strong>PC 앱을 실행합니다</strong>
-              <p>Windows에서 OneMouse를 켜면 하단에 6자리 페어링 코드와 QR 코드가 표시됩니다.</p>
+              <p>Windows에서 OneMouse를 켜면 PC 화면에 6자리 코드와 QR 코드가 표시됩니다. 최신 Setup 파일은 다운로드 페이지에서 자동으로 연결됩니다.</p>
             </div>
           </article>
           <article class="timeline-step">
             <span>2</span>
             <div>
-              <strong>Android 전원과 접근성 권한을 켭니다</strong>
-              <p>오른쪽 위 전원 버튼이 켜져 있어야 PC 검색과 입력 수신이 동작합니다. 입력 제어를 받으려면 접근성 서비스도 먼저 필요합니다.</p>
+              <strong>Android에서 접근성 권한을 켭니다</strong>
+              <p>PC 마우스와 키보드로 Android를 제어하려면 OneMouse 접근성 서비스가 필요합니다. 처음 설정에서 사실상 필수로 봐야 하는 항목은 이것 하나입니다.</p>
             </div>
           </article>
           <article class="timeline-step">
             <span>3</span>
             <div>
-              <strong>기기 검색으로 PC를 고릅니다</strong>
-              <p>같은 Wi-Fi 또는 같은 LAN에서는 mDNS가 우선 동작하고, 필요하면 UDP discovery가 보조합니다. PC가 보이지 않으면 기기 검색을 다시 실행합니다.</p>
+              <strong>PC를 검색합니다</strong>
+              <p>같은 Wi-Fi 또는 같은 LAN에서 PC를 찾습니다. Android 13 이상에서는 이 순간에만 주변 Wi-Fi 기기 권한을 요청할 수 있습니다.</p>
             </div>
           </article>
           <article class="timeline-step">
             <span>4</span>
             <div>
               <strong>QR 또는 6자리 코드로 페어링합니다</strong>
-              <p>PC 화면의 QR을 스캔하거나 6자리 코드를 입력합니다. 페어링되지 않은 기기는 연결 버튼 대신 페어링 필요 상태로 남습니다.</p>
+              <p>PC 화면의 QR을 스캔하거나 6자리 코드를 입력합니다. 이 단계가 끝나야 입력, 파일, 클립보드 채널을 사용할 수 있습니다.</p>
             </div>
           </article>
           <article class="timeline-step">
             <span>5</span>
             <div>
               <strong>폰 위치를 PC 가장자리에 배치합니다</strong>
-              <p>모니터 왼쪽, 오른쪽, 위, 아래 중 실제로 커서를 넘길 위치에 Android를 배치합니다. 위치 변경은 PC로 동기화됩니다.</p>
+              <p>모니터 왼쪽, 오른쪽, 위, 아래 중 실제로 커서를 넘길 위치에 Android를 배치합니다. 이 배치가 커서 진입 방향이 됩니다.</p>
             </div>
           </article>
           <article class="timeline-step">
             <span>6</span>
             <div>
-              <strong>입력, 파일, 클립보드를 사용합니다</strong>
-              <p>마우스를 배치 방향으로 밀면 Android로 넘어가고, PC 파일은 전송 화면 또는 빠른 드롭존으로 보냅니다. 텍스트를 꾹 눌러 선택한 뒤 OneMouse to PC를 누르면 바로 PC 클립보드로 보냅니다.</p>
+              <strong>입력, 전송, 스크린샷을 사용합니다</strong>
+              <p>마우스를 배치 방향으로 밀면 Android로 넘어갑니다. PC 파일은 빠른 드롭존으로 보내고, Print Screen 또는 Ctrl + Alt + S로 모바일 스크린샷을 PC 기본 뷰어에 띄울 수 있습니다.</p>
             </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="permissions">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Permissions</p>
+          <h2>사용자가 켜야 하는 항목은 기능별로 나뉩니다.</h2>
+          <p>처음부터 모두 켜는 구조가 아닙니다. 접근성은 입력 제어의 필수 조건이고, 나머지는 필요한 순간에만 요청하거나 권장합니다.</p>
+        </div>
+        <div class="permission-grid">
+          <article class="permission-card permission-required">
+            <span class="status-pill">필수</span>
+            <h3>접근성 서비스</h3>
+            <p>PC 마우스와 키보드로 Android를 제어하고, 스크린샷 요청을 처리하기 위해 필요합니다.</p>
+          </article>
+          <article class="permission-card">
+            <span class="status-pill">연결 시</span>
+            <h3>주변 Wi-Fi 기기</h3>
+            <p>Android 13 이상에서 같은 네트워크의 PC를 찾을 때 요청될 수 있습니다. 앱 실행 직후에는 묻지 않습니다.</p>
+          </article>
+          <article class="permission-card">
+            <span class="status-pill">서비스 시작 시</span>
+            <h3>알림</h3>
+            <p>백그라운드 연결 상태를 표시할 때 사용합니다. 연결 서비스를 켤 때 필요한 경우에만 요청합니다.</p>
+          </article>
+          <article class="permission-card">
+            <span class="status-pill">밝기 사용 시</span>
+            <h3>시스템 설정 변경</h3>
+            <p>Alt + Shift + ↑ / ↓로 Android 밝기를 조절하려면 첫 사용 시 Android 설정에서 허용해야 합니다.</p>
+          </article>
+          <article class="permission-card">
+            <span class="status-pill">권장</span>
+            <h3>배터리 제한 예외</h3>
+            <p>화면이 꺼진 뒤 연결이 자주 끊길 때만 확인합니다. 안정성을 높이는 권장 설정입니다.</p>
+          </article>
+          <article class="permission-card permission-unsupported">
+            <span class="status-pill">지원 안 함</span>
+            <h3>USB 연결</h3>
+            <p>현재 가이드는 Wi-Fi/LAN 연결 기준입니다. USB 연결은 지원하지 않으며 앞으로도 지원 계획에 넣지 않습니다.</p>
           </article>
         </div>
       </div>
@@ -139,10 +195,10 @@
       <div class="container split-grid">
         <div>
           <p class="section-kicker">Quick Drop</p>
-          <h2>PC에서 파일을 잡으면 드롭존으로 바로 보낼 수 있습니다.</h2>
+          <h2>PC 파일은 드롭존에 놓는 흐름이 가장 빠릅니다.</h2>
           <p class="lead">
             PC 앱을 열지 않아도 화면 위의 작은 드롭존에 파일을 놓으면 선택된 Android로 전송을 시작합니다.
-            드롭존은 마우스로 잡아 원하는 위치로 옮길 수 있고, 설정 화면에서 끄거나 켤 수 있습니다.
+            드롭존은 원하는 위치로 옮길 수 있고, 작업 중 방해될 때는 전역 단축키로 즉시 숨길 수 있습니다.
           </p>
         </div>
         <div class="panel">
@@ -163,23 +219,22 @@
       <div class="container guide-grid">
         <article class="panel">
           <p class="section-kicker">Wi-Fi</p>
-          <h2>일반 연결 체크리스트</h2>
+          <h2>PC가 보이지 않을 때</h2>
           <ul class="bullet-list">
             <li>PC와 Android가 같은 로컬 네트워크에 있는지 확인합니다.</li>
-            <li>공유기나 회사망에서 로컬 discovery가 막히면 UDP fallback도 실패할 수 있습니다.</li>
+            <li>게스트 Wi-Fi, AP 격리, 회사망 정책은 로컬 검색을 막을 수 있습니다.</li>
             <li>PC 방화벽이나 백신이 OneMouse 포트를 막지 않는지 확인합니다.</li>
-            <li>Android 앱 전원이 켜져 있는지 확인하고, 기기 검색을 다시 실행합니다.</li>
+            <li>Android 앱에서 PC 검색을 다시 실행합니다.</li>
           </ul>
         </article>
         <article class="panel">
           <p class="section-kicker">Pairing</p>
-          <h2>권한과 페어링을 먼저 확인하세요</h2>
+          <h2>입력이 들어가지 않을 때</h2>
           <ul class="bullet-list">
-            <li>Android 앱 오른쪽 위 전원이 꺼져 있으면 먼저 켭니다.</li>
-            <li>Android 접근성 권한을 먼저 켭니다.</li>
-            <li>감지된 PC에서 페어링 버튼을 누르거나 QR 코드를 스캔합니다.</li>
-            <li>PC가 보이지 않으면 같은 Wi-Fi 또는 같은 LAN에 있는지 확인합니다.</li>
-            <li>게스트 Wi-Fi, AP 격리, 회사망 정책은 로컬 검색을 막을 수 있습니다.</li>
+            <li>Android 접근성 서비스가 켜져 있는지 먼저 확인합니다.</li>
+            <li>PC 목록에서 현재 선택된 Android가 맞는지 확인합니다.</li>
+            <li>QR 또는 6자리 코드 페어링이 완료되어 있는지 확인합니다.</li>
+            <li>커서가 돌아오지 않으면 Ctrl + Alt + Backspace로 PC 입력을 복구합니다.</li>
           </ul>
         </article>
       </div>
@@ -214,7 +269,7 @@
         <div class="section-heading">
           <p class="section-kicker">Keyboard Shortcuts</p>
           <h2>PC 키보드로 Android를 제어할 때 쓰는 단축키입니다.</h2>
-          <p>마우스가 Android로 넘어간 상태에서 동작합니다. 앱마다 입력창 처리 방식이 달라 일부 단축키는 앱 정책의 영향을 받을 수 있습니다.</p>
+          <p>마우스가 Android로 넘어간 상태에서 동작합니다. 일부 Android 앱은 접근성 입력, 선택, 붙여넣기를 제한할 수 있습니다.</p>
         </div>
         <div class="compare-table-wrap shortcut-table-wrap">
           <table class="compare-table shortcut-table">
@@ -259,7 +314,17 @@
               <tr>
                 <td><span class="key-combo">Alt + Shift + ↑ / ↓</span></td>
                 <td>Android 화면 밝기를 조절합니다.</td>
-                <td>볼륨 단축키와 구분하기 위해 Shift를 함께 사용합니다.</td>
+                <td>처음 사용할 때 Android의 시스템 설정 변경 권한을 허용해야 합니다.</td>
+              </tr>
+              <tr>
+                <td><span class="key-combo">Print Screen</span></td>
+                <td>Android 화면을 캡처해 PC 기본 이미지 뷰어로 엽니다.</td>
+                <td>Android 11 이상에서 접근성 스크린샷 기능을 사용합니다. 보안 화면은 캡처되지 않을 수 있습니다.</td>
+              </tr>
+              <tr>
+                <td><span class="key-combo">Ctrl + Alt + S</span></td>
+                <td>Print Screen 대신 모바일 스크린샷을 실행합니다.</td>
+                <td>노트북이나 원격 키보드에서 Print Screen 키를 쓰기 어려울 때 사용합니다.</td>
               </tr>
               <tr>
                 <td><span class="key-combo">Alt + Tab</span></td>
@@ -283,10 +348,11 @@
           <p class="section-kicker">Daily Use</p>
           <h2>연결 후 자주 쓰는 흐름</h2>
           <ul class="bullet-list">
-            <li>테스트 기기 여러 대를 연결해 PC에서 선택하고 위치를 조정합니다.</li>
+            <li>PC에서 현재 제어할 Android를 선택하고 위치를 조정합니다.</li>
             <li>모바일 검색창, 로그인 입력, 메시지 작성은 PC 키보드로 처리합니다.</li>
             <li>PC 파일은 전송 화면에서 고르거나 화면 위 빠른 드롭존에 놓아 선택된 Android로 보냅니다.</li>
             <li>텍스트를 꾹 눌러 선택한 뒤 OneMouse to PC를 누르면 PC 클립보드로 바로 보냅니다.</li>
+            <li>모바일 화면이 필요하면 Print Screen 또는 Ctrl + Alt + S로 스크린샷을 찍어 PC에서 확인합니다.</li>
           </ul>
         </div>
         <div>
@@ -301,6 +367,29 @@
             <a class="button button-primary" href="./help.html">도움말 열기</a>
             <a class="button button-secondary" href="./index.html">소개로 돌아가기</a>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container split-grid">
+        <div>
+          <p class="section-kicker">Screenshot</p>
+          <h2>모바일 스크린샷은 PC에서 바로 확인합니다.</h2>
+          <p class="lead">
+            Android 화면을 캡처하면 PC로 전송되고 Windows 기본 이미지 뷰어로 열립니다.
+            보안 정책이 걸린 화면이나 Android 접근성 스크린샷이 허용되지 않는 상태에서는 실패할 수 있습니다.
+          </p>
+        </div>
+        <div class="panel">
+          <p class="section-kicker">When It Fails</p>
+          <h2>실패할 때 확인할 것</h2>
+          <ul class="bullet-list">
+            <li>앱 업데이트 후 OneMouse 접근성 서비스를 껐다가 다시 켭니다.</li>
+            <li>은행, DRM, 보안 키보드처럼 캡처 금지 화면인지 확인합니다.</li>
+            <li>너무 빠르게 연속 캡처했다면 잠시 기다린 뒤 다시 시도합니다.</li>
+            <li>PC와 Android 연결이 유지되어 있는지 확인합니다.</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -333,6 +422,29 @@
             <img src="./assets/text_to_pc_step_5.jpg" alt="PC 클립보드로 보냈다는 완료 토스트가 표시된 화면" />
             <figcaption>5. 완료 메시지가 보이면 PC에서 바로 붙여넣을 수 있습니다.</figcaption>
           </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container split-grid">
+        <div>
+          <p class="section-kicker">Support Scope</p>
+          <h2>현재 가이드는 Wi-Fi/LAN 연결만 다룹니다.</h2>
+          <p class="lead">
+            OneMouse는 같은 로컬 네트워크의 Windows PC와 Android를 연결하는 앱입니다.
+            USB/ADB 연결은 사용자용 연결 방식에서 제외했으며, 향후 지원 계획에도 포함하지 않습니다.
+          </p>
+        </div>
+        <div class="panel">
+          <p class="section-kicker">Best Path</p>
+          <h2>가장 안정적인 환경</h2>
+          <ul class="bullet-list">
+            <li>PC와 Android가 같은 공유기 또는 같은 LAN에 연결되어 있습니다.</li>
+            <li>게스트 Wi-Fi와 AP 격리가 꺼져 있습니다.</li>
+            <li>PC 방화벽에서 OneMouse를 허용합니다.</li>
+            <li>Android 접근성 권한과 배터리 제한 예외를 확인합니다.</li>
+          </ul>
         </div>
       </div>
     </section>
