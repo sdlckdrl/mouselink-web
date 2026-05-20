@@ -573,6 +573,26 @@ figure {
   height: 300px;
 }
 
+.shot-row.pc-flow-row {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 22px;
+}
+
+.shot-card.shot-desktop img {
+  height: 230px;
+  object-fit: contain;
+  background: #f6faff;
+}
+
+.shot-card.inline-shot {
+  margin-top: 18px;
+  box-shadow: none;
+}
+
+.shot-card.inline-shot img {
+  height: 220px;
+}
+
 .shot-card figcaption {
   padding: 13px 14px 15px;
   color: #334155;
@@ -953,6 +973,7 @@ figure {
   .update-grid,
   .feature-grid,
   .shot-row,
+  .shot-row.pc-flow-row,
   .shot-row.text-step-row,
   .download-grid,
   .onboarding-flow-grid,
