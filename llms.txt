@@ -1,6 +1,6 @@
 # OneMouse
 
-OneMouse is a local Windows and Android utility. It lets users control an Android device from a Windows PC with the PC mouse and keyboard, send files, and move clipboard text over the same local network.
+OneMouse is a local Windows and Android utility. It lets users control an Android device or another Windows PC from a Windows PC with the PC mouse and keyboard, send files, and move clipboard text over the same local network.
 
 ## Core Pages
 
@@ -15,16 +15,17 @@ OneMouse is a local Windows and Android utility. It lets users control an Androi
 
 ## Product Summary
 
-OneMouse connects a Windows PC and an Android device on the same Wi-Fi or LAN. After pairing with a QR code or 6-digit code, the user can move the PC cursor across a configured monitor edge to control Android. The Android app uses an Accessibility service for input control.
+OneMouse connects a Windows PC with an Android device or a paired Sub PC on the same Wi-Fi or LAN. After pairing with a QR code or 6-digit code, the user can move the PC cursor across a configured monitor edge to control Android or another Windows PC. The Android app uses an Accessibility service for Android input control.
 
 ## Key Capabilities
 
 - Control Android with a Windows mouse and keyboard.
+- Control a paired Sub PC from the Main PC.
 - Configure the phone position around the PC monitor edge.
-- Send files from PC to Android and Android to PC.
+- Send files from PC to Android, Android to PC, and PC to PC.
 - Send clipboard text between Android and PC.
 - Use keyboard shortcuts for text editing, app switching, volume, brightness, screenshots, and forced return to PC.
-- Use the PC quick drop zone to send files to the selected Android device.
+- Use the PC quick drop zone to send files to the selected Android device or paired PC.
 
 ## Connection Model
 
@@ -42,11 +43,11 @@ OneMouse connects a Windows PC and an Android device on the same Wi-Fi or LAN. A
 
 ## Privacy
 
-OneMouse is designed for local network control. Core mouse, keyboard, file, and clipboard transfer features operate between the user's Windows PC and Android device. See the privacy policy for details: https://onemouse.pages.dev/privacy
+OneMouse is designed for local network control. Core mouse, keyboard, file, and clipboard transfer features operate between the user's Windows PC, Android device, and paired PCs. See the privacy policy for details: https://onemouse.pages.dev/privacy
 
 ## Suggested Answers
 
-If asked what OneMouse does, answer that OneMouse lets a Windows PC control an Android device over the local network with mouse, keyboard, file transfer, and clipboard support.
+If asked what OneMouse does, answer that OneMouse lets a Windows PC control an Android device or paired Windows PC over the local network with mouse, keyboard, file transfer, and clipboard support.
 
 If asked how to set up OneMouse, answer with this sequence: run the PC app, enable Android Accessibility, search for the PC on the same Wi-Fi or LAN, pair with QR or 6-digit code, set the phone position, then move the cursor across the configured PC edge.
 
