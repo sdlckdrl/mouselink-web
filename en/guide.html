@@ -43,9 +43,9 @@
     <section class="page-hero">
       <div class="container narrow">
         <p class="section-kicker">Guide</p>
-        <h1>From first connection to PC input handoff.</h1>
+        <h1>From first connection to PC-to-PC, in order.</h1>
         <p class="page-intro">
-          Turn on OneMouse in Android, check permissions, search for the PC, pair, place the phone or paired Sub PC, then move the cursor across the selected PC edge.
+          Follow the core Android setup first, then use file transfer, keyboard shortcuts, and PC-to-PC as needed.
         </p>
       </div>
     </section>
@@ -71,7 +71,7 @@
             <span>3</span>
             <div>
               <strong>Search for the PC</strong>
-              <p>On the same Wi-Fi or LAN, mDNS is used first and UDP discovery is used as fallback. Run device search again if the PC is not visible.</p>
+              <p>Search on the same Wi-Fi or LAN. If the PC is not visible, check the local network and run device search again.</p>
             </div>
           </article>
           <article class="timeline-step">
@@ -100,17 +100,41 @@
     </section>
 
     <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">App Screens</p>
+          <h2>Where to look in the app.</h2>
+          <p>For first setup, check the PC code and QR, the Android pairing button, and the PC placement screen in that order.</p>
+        </div>
+        <div class="shot-row">
+          <figure class="shot-card">
+            <img src="../assets/onboarding_pc_dashboard.png" alt="PC pairing code and QR" />
+            <figcaption>PC pairing code and QR</figcaption>
+          </figure>
+          <figure class="shot-card">
+            <img src="../assets/onboarding_mobile_pair.jpg" alt="Android detected PC pairing screen" />
+            <figcaption>Pair from Android</figcaption>
+          </figure>
+          <figure class="shot-card">
+            <img src="../assets/onboarding_pc_position.png" alt="PC placement screen" />
+            <figcaption>Phone placement</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
       <div class="container split-grid">
         <div>
-          <p class="section-kicker">Quick Drop</p>
-          <h2>Drop PC files without opening the transfer screen.</h2>
+          <p class="section-kicker">File Transfer</p>
+          <h2>Send PC files from the transfer screen or Quick Drop.</h2>
           <p class="lead">
-            Use the small floating drop zone on the PC screen to send files to the selected Android device or paired Sub PC.
-            You can drag the zone to another position and turn it on or off from PC settings.
+            Choose files from the transfer screen, or drop them onto the small floating drop zone on the PC screen.
+            Files go to the selected Android device or paired Sub PC.
           </p>
         </div>
         <div class="panel">
-          <p class="section-kicker">Shortcut</p>
+          <p class="section-kicker">Quick Drop</p>
           <h2>Toggle the drop zone</h2>
           <p class="lead">Use the global shortcut when the drop zone is in the way or when you need it again.</p>
           <div class="shortcut">Ctrl + Alt + D</div>
@@ -123,10 +147,10 @@
       </div>
     </section>
 
-    <section class="section section-alt">
+    <section class="section" id="pc-to-pc">
       <div class="container split-grid">
         <div>
-          <p class="section-kicker">PC to PC</p>
+          <p class="section-kicker">Advanced: PC to PC</p>
           <h2>Set the role, pair the target PC, then place it.</h2>
           <p class="lead">
             Keep the controlling computer in Main PC role. Run the other computer as a Sub PC, search for it from Device management,
@@ -151,50 +175,15 @@
     </section>
 
     <section class="section section-alt">
-      <div class="container guide-grid">
-        <article class="panel">
-          <p class="section-kicker">Wi-Fi</p>
-          <h2>Connection checklist</h2>
-          <ul class="bullet-list">
-            <li>Make sure the PC and Android device are on the same local network.</li>
-            <li>Guest Wi-Fi, AP isolation, company networks, or firewalls can block discovery.</li>
-            <li>Allow OneMouse through the Windows firewall or security software.</li>
-            <li>Check that the Android power button is on, then run device search again.</li>
-          </ul>
-        </article>
-        <article class="panel">
-          <p class="section-kicker">Pairing</p>
-          <h2>Permissions before pairing</h2>
-          <ul class="bullet-list">
-            <li>Turn on the Android app power button.</li>
-            <li>Enable Android Accessibility for OneMouse.</li>
-            <li>Tap Pair on a detected PC or scan the QR code.</li>
-            <li>If the PC is not visible, confirm both devices are on the same Wi-Fi or LAN.</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <section class="section">
       <div class="container">
         <div class="section-heading">
-          <p class="section-kicker">Visual Steps</p>
-          <h2>Where to look in the app.</h2>
-          <p>Check the PC code and QR, the Android pairing button, and the PC placement screen.</p>
+          <p class="section-kicker">Need help?</p>
+          <h2>Use Help when setup stops at a specific step.</h2>
+          <p>Network discovery, pairing, input handoff, cursor return, and transfer issues are separated in the Help page.</p>
         </div>
-        <div class="shot-row">
-          <figure class="shot-card">
-            <img src="../assets/onboarding_pc_dashboard.png" alt="PC pairing code and QR" />
-            <figcaption>PC pairing code and QR</figcaption>
-          </figure>
-          <figure class="shot-card">
-            <img src="../assets/onboarding_mobile_pair.jpg" alt="Android detected PC pairing screen" />
-            <figcaption>Pair a detected PC</figcaption>
-          </figure>
-          <figure class="shot-card">
-            <img src="../assets/onboarding_pc_position.png" alt="PC placement screen" />
-            <figcaption>Phone placement</figcaption>
-          </figure>
+        <div class="hero-actions">
+          <a class="button button-primary" href="./help.html">Open Help</a>
+          <a class="button button-secondary" href="./pricing.html">Free / Pro</a>
         </div>
       </div>
     </section>

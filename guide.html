@@ -130,14 +130,15 @@
     <section class="page-hero">
       <div class="container narrow">
         <p class="section-kicker">Updated Guide</p>
-        <h1>필수 설정은 하나, 연결은 더 쉽게.</h1>
+        <h1>처음 연결부터 PC-to-PC까지 순서대로 봅니다.</h1>
         <p class="page-intro">
           OneMouse는 Windows PC와 Android, 다른 Windows PC를 같은 Wi-Fi 또는 같은 LAN에서 연결합니다.
-          처음에는 접근성 권한만 필수로 켜고, 알림, 주변 Wi-Fi, 밝기 조절 같은 권한은 해당 기능을 사용할 때만 확인합니다.
+          이 가이드는 처음 연결, 앱 화면에서 볼 위치, 파일 전송, 단축키, 다른 PC 연결 순서로 정리했습니다.
         </p>
         <div class="hero-actions">
           <a class="button button-primary" href="#quick-start">5분 연결 순서</a>
           <a class="button button-secondary" href="#permissions">필요한 권한 보기</a>
+          <a class="button button-secondary" href="#pc-to-pc">다른 PC 연결</a>
           <a class="button button-secondary" href="#keyboard-shortcuts">단축키 보기</a>
         </div>
       </div>
@@ -197,6 +198,30 @@
       </div>
     </section>
 
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">App Screens</p>
+          <h2>앱 화면에서 확인할 위치입니다.</h2>
+          <p>처음 연결에서는 PC 코드와 QR, Android의 페어링 버튼, PC의 위치 배치 화면만 순서대로 확인하면 됩니다.</p>
+        </div>
+        <div class="shot-row">
+          <figure class="shot-card">
+            <img src="./assets/onboarding_pc_dashboard.png" alt="PC 대시보드 하단 페어링 코드와 QR" />
+            <figcaption>PC 코드와 QR</figcaption>
+          </figure>
+          <figure class="shot-card">
+            <img src="./assets/onboarding_mobile_pair.jpg" alt="Android 감지된 PC 페어링 버튼" />
+            <figcaption>Android에서 PC 페어링</figcaption>
+          </figure>
+          <figure class="shot-card">
+            <img src="./assets/onboarding_pc_position.png" alt="PC 위치 배치 화면" />
+            <figcaption>폰 위치 배치</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
     <section class="section section-alt" id="permissions">
       <div class="container">
         <div class="section-heading">
@@ -239,23 +264,22 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" id="file-transfer">
       <div class="container split-grid">
         <div>
-          <p class="section-kicker">Quick Drop</p>
-          <h2>PC 파일은 드롭존에 놓는 흐름이 가장 빠릅니다.</h2>
+          <p class="section-kicker">File Transfer</p>
+          <h2>PC 파일은 전송 화면 또는 빠른 드롭존으로 보냅니다.</h2>
           <p class="lead">
-            PC 앱을 열지 않아도 화면 위의 작은 드롭존에 파일을 놓으면 선택된 Android 또는 서브 PC로 전송을 시작합니다.
-            드롭존은 원하는 위치로 옮길 수 있고, 작업 중 방해될 때는 전역 단축키로 즉시 숨길 수 있습니다.
+            전송 화면에서 파일을 고르거나, PC 화면 위 작은 드롭존에 파일을 놓으면 선택된 Android 또는 서브 PC로 전송합니다.
+            Android에서 PC로 보낼 때는 Android 전송 탭 또는 공유 메뉴를 사용합니다.
           </p>
         </div>
         <div class="panel">
-          <p class="section-kicker">Shortcut</p>
-          <h2>드롭존 켜기/끄기</h2>
-          <p class="lead">드롭존이 방해될 때는 전역 단축키로 즉시 숨기거나 다시 표시합니다.</p>
+          <p class="section-kicker">Quick Drop</p>
+          <h2>빠른 드롭존</h2>
+          <p class="lead">드롭존 위치와 활성화 상태는 PC 앱에 저장됩니다. 방해될 때는 전역 단축키로 숨기거나 다시 표시합니다.</p>
           <div class="shortcut">Ctrl + Alt + D</div>
           <ul class="bullet-list">
-            <li>드롭존 위치와 활성화 상태는 PC 앱에 저장됩니다.</li>
             <li>파일 전송은 선택된 대상에 따라 PC -> Android 또는 PC -> PC 경로를 사용합니다.</li>
             <li>전송이 시작되지 않으면 Android/PC 연결 상태와 선택된 기기를 먼저 확인합니다.</li>
           </ul>
@@ -263,10 +287,10 @@
       </div>
     </section>
 
-    <section class="section section-alt">
+    <section class="section section-alt" id="pc-to-pc">
       <div class="container split-grid">
         <div>
-          <p class="section-kicker">PC to PC</p>
+          <p class="section-kicker">Advanced: PC to PC</p>
           <h2>다른 Windows PC는 설정, 기기 관리, 배치 순서로 붙입니다.</h2>
           <p class="lead">
             제어를 시작할 PC는 설정 화면의 PC 역할을 메인 PC로 둡니다. 제어받을 PC는 서브 PC로 실행한 뒤,
@@ -310,55 +334,6 @@
             <li>서브 PC는 메인 PC에게 제어받는 역할입니다. 페어링된 메인 PC로 파일을 다시 보낼 수 있지만, Android 연결 시작은 메인 PC에서 관리하는 것이 기본 흐름입니다.</li>
           </ul>
         </article>
-      </div>
-    </section>
-
-    <section class="section section-alt">
-      <div class="container guide-grid">
-        <article class="panel">
-          <p class="section-kicker">Wi-Fi</p>
-          <h2>PC가 보이지 않을 때</h2>
-          <ul class="bullet-list">
-            <li>PC와 Android가 같은 로컬 네트워크에 있는지 확인합니다.</li>
-            <li>게스트 Wi-Fi, AP 격리, 회사망 정책은 로컬 검색을 막을 수 있습니다.</li>
-            <li>PC 방화벽이나 백신이 OneMouse 포트를 막지 않는지 확인합니다.</li>
-            <li>Android 앱에서 PC 검색을 다시 실행합니다.</li>
-          </ul>
-        </article>
-        <article class="panel">
-          <p class="section-kicker">Pairing</p>
-          <h2>입력이 들어가지 않을 때</h2>
-          <ul class="bullet-list">
-            <li>Android 접근성 서비스가 켜져 있는지 먼저 확인합니다.</li>
-            <li>PC 목록에서 현재 선택된 Android가 맞는지 확인합니다.</li>
-            <li>QR 또는 6자리 코드 페어링이 완료되어 있는지 확인합니다.</li>
-            <li>커서가 돌아오지 않으면 Ctrl + Alt + Backspace로 PC 입력을 복구합니다.</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="section-heading">
-          <p class="section-kicker">Visual Steps</p>
-          <h2>앱 화면에서 확인할 위치입니다.</h2>
-          <p>PC에서는 코드와 QR, Android에서는 페어링 버튼, PC에서는 배치 화면을 차례로 확인합니다.</p>
-        </div>
-        <div class="shot-row">
-          <figure class="shot-card">
-            <img src="./assets/onboarding_pc_dashboard.png" alt="PC 대시보드 하단 페어링 코드와 QR" />
-            <figcaption>PC 코드와 QR</figcaption>
-          </figure>
-          <figure class="shot-card">
-            <img src="./assets/onboarding_mobile_pair.jpg" alt="Android 감지된 PC 페어링 버튼" />
-            <figcaption>PC 페어링</figcaption>
-          </figure>
-          <figure class="shot-card">
-            <img src="./assets/onboarding_pc_position.png" alt="PC 위치 배치 화면" />
-            <figcaption>위치 배치</figcaption>
-          </figure>
-        </div>
       </div>
     </section>
 
