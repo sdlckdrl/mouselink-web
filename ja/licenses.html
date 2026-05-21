@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>OneMouse | オープンソースライセンス</title>
-  <meta name="description" content="OneMouse が使用するオープンソースライブラリとサードパーティ SDK の通知です。" />
+  <meta name="description" content="OneMouse の PC アプリと Android アプリで使用するオープンソースライブラリとサードパーティ SDK の通知です。" />
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="canonical" href="https://onemouse.pages.dev/ja/licenses" />
   <link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/licenses" />
@@ -12,16 +12,6 @@
   <link rel="alternate" hreflang="ja" href="https://onemouse.pages.dev/ja/licenses" />
   <link rel="alternate" hreflang="zh" href="https://onemouse.pages.dev/zh/licenses" />
   <link rel="alternate" hreflang="x-default" href="https://onemouse.pages.dev/licenses" />
-  <meta property="og:site_name" content="OneMouse" />
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="OneMouse | オープンソースライセンス" />
-  <meta property="og:description" content="OneMouse が使用するオープンソースライブラリとサードパーティ SDK の通知です。" />
-  <meta property="og:url" content="https://onemouse.pages.dev/ja/licenses" />
-  <meta property="og:image" content="https://onemouse.pages.dev/assets/hero-bg-generated-2.png" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="OneMouse | オープンソースライセンス" />
-  <meta name="twitter:description" content="OneMouse が使用するオープンソースライブラリとサードパーティ SDK の通知です。" />
-  <meta name="twitter:image" content="https://onemouse.pages.dev/assets/hero-bg-generated-2.png" />
 </head>
 <body>
   <header class="site-header">
@@ -30,7 +20,7 @@
         <span class="brand-mark">OM</span>
         <span class="brand-copy"><strong>OneMouse</strong><span>Windows と Android をローカル接続</span></span>
       </a>
-      <nav class="top-nav" aria-label="メインメニュー">
+      <nav class="top-nav" aria-label="メインナビゲーション">
         <a href="./index.html">概要</a>
         <a href="./guide.html">ガイド</a>
         <a href="./pricing.html">Free / Pro</a>
@@ -47,16 +37,67 @@
   </header>
 
   <main>
-    <section class="page-hero"><div class="container narrow"><p class="section-kicker">Licenses</p><h1>オープンソースライセンス</h1><p class="page-intro">OneMouse は PC アプリ、Android アプリ、QR スキャン、決済、広告のためにオープンソースライブラリとサードパーティ SDK を使用します。</p></div></section>
-    <section class="section"><div class="container legal-layout"><article class="legal-card"><h2>Android</h2><p>Android アプリの実装には AndroidX と Kotlin ライブラリを使用します。QR スキャンには ZXing ベースのコンポーネントを使用します。</p></article>
-        <article class="legal-card"><h2>Google SDK</h2><p>Pro の購入と復元には Google Play Billing Library を使用します。Free モードのバナー広告には Google Mobile Ads SDK を使用します。</p></article>
-        <article class="legal-card"><h2>PC アプリ</h2><p>Windows アプリはデスクトップ UI、ローカル discovery、入力キャプチャ、転送機能のために Electron と Python コンポーネントを使用します。</p></article>
-        <article class="legal-card"><h2>通知</h2><p>依存関係の変更に合わせてライセンス通知を更新する場合があります。</p></article></div></section>
+    <section class="page-hero">
+      <div class="container narrow">
+        <p class="section-kicker">Licenses</p>
+        <h1>オープンソースライセンス</h1>
+        <p class="page-intro">
+          OneMouse は PC アプリ、Android アプリ、QR スキャン、課金、広告のためにオープンソースライブラリとサードパーティ SDK を使用します。
+          各コンポーネントの著作権とライセンス条件は、元の配布元の通知に従います。
+        </p>
+        <p class="policy-date">最終更新日: 2026年5月21日</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container legal-layout">
+        <article class="legal-card">
+          <h2>Android アプリ</h2>
+          <ul class="bullet-list">
+            <li><strong>AndroidX Core KTX 1.13.1</strong><br />用途: Android 互換ユーティリティと Kotlin 拡張<br />ライセンス: Apache License 2.0</li>
+            <li><strong>AndroidX AppCompat 1.6.1</strong><br />用途: 旧 Android バージョン向けの互換 UI<br />ライセンス: Apache License 2.0</li>
+            <li><strong>Kotlin standard library</strong><br />用途: Kotlin ランタイムサポート<br />ライセンス: Apache License 2.0</li>
+            <li><strong>ZXing Android Embedded 4.3.0 / ZXing Core</strong><br />用途: QR コードスキャン<br />ライセンス: Apache License 2.0</li>
+            <li><strong>Google Play Billing Library 8.3.0</strong><br />用途: Pro のアプリ内購入と購入復元<br />条件: Google SDK terms</li>
+            <li><strong>Google Mobile Ads SDK 24.7.0</strong><br />用途: Free モードのバナー広告<br />条件: Google SDK terms</li>
+          </ul>
+        </article>
+
+        <article class="legal-card">
+          <h2>PC アプリ</h2>
+          <ul class="bullet-list">
+            <li><strong>Electron 41.3.0</strong><br />用途: Windows デスクトップ UI ランタイム<br />ライセンス: MIT License</li>
+            <li><strong>Python 3.13 runtime</strong><br />用途: PC バックエンド実行環境<br />ライセンス: Python Software Foundation License</li>
+            <li><strong>PyInstaller 6.20.0</strong><br />用途: バックエンド実行ファイルのパッケージング<br />ライセンス: GPLv2-or-later with special exception</li>
+            <li><strong>cryptography 47.0.0</strong><br />用途: 安全なペアリングとセッション暗号化<br />ライセンス: Apache License 2.0 OR BSD 3-Clause License</li>
+            <li><strong>pynput 1.7.6</strong><br />用途: キーボードとマウス入力フック<br />ライセンス: GNU Lesser General Public License v3</li>
+            <li><strong>zeroconf 0.148.0</strong><br />用途: mDNS デバイス検出<br />ライセンス: GNU Lesser General Public License v2.1 or later</li>
+            <li><strong>cffi 2.0.0, pycparser 3.0, six 1.17.0</strong><br />用途: Python ライブラリの補助依存関係<br />ライセンス: MIT License または BSD 3-Clause License</li>
+          </ul>
+        </article>
+
+        <article class="legal-card">
+          <h2>ビルドとテスト専用</h2>
+          <p>
+            Android Gradle Plugin、Kotlin Gradle Plugin、Gradle wrapper、JUnit、org.json、Electron Builder はビルドまたはテスト工程で使用されます。
+            配布されるランタイム構成要素は上記の一覧を基準に通知します。
+          </p>
+        </article>
+
+        <article class="legal-card">
+          <h2>通知基準</h2>
+          <p>
+            このページは OneMouse 配布版に含まれる、または主要機能に使用されるライブラリと SDK の概要です。
+            正式なライセンス本文、著作権表示、条件は各プロジェクトの公式通知が優先されます。
+          </p>
+        </article>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <span>© 2026 OneMouse</span>
+      <span>&copy; 2026 OneMouse</span>
       <span class="footer-links">
         <a href="./pricing.html">Free / Pro</a>
         <a href="./privacy.html">プライバシー</a>
