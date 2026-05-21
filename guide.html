@@ -113,8 +113,9 @@
       <nav class="top-nav" aria-label="주요 메뉴">
         <a href="./index.html">소개</a>
         <a href="./guide.html" class="is-active">사용 가이드</a>
-        <a href="./pricing.html">요금/Pro</a>
         <a href="./help.html">도움말</a>
+        <a href="./technical.html">기술/보안</a>
+        <a href="./pricing.html">요금/Pro</a>
         <a href="./index.html#download" class="nav-cta">다운로드</a>
       </nav>
       <div class="lang-switch" aria-label="언어">
@@ -130,16 +131,17 @@
     <section class="page-hero">
       <div class="container narrow">
         <p class="section-kicker">Updated Guide</p>
-        <h1>처음 연결부터 PC-to-PC까지 순서대로 봅니다.</h1>
+        <h1>처음 연결부터 자주 쓰는 기능까지 순서대로 봅니다.</h1>
         <p class="page-intro">
           OneMouse는 PC 마우스와 키보드로 Android와 다른 Windows PC를 제어하도록 돕습니다.
-          이 가이드는 처음 연결, 앱 화면에서 볼 위치, 파일 전송, 단축키, 다른 PC 연결 순서로 정리했습니다.
+          이 가이드는 설치 후 바로 필요한 연결 순서, 앱 화면에서 볼 위치, 파일 전송, 단축키, 다른 PC 연결 흐름만 정리했습니다.
         </p>
         <div class="hero-actions">
           <a class="button button-primary" href="#quick-start">5분 연결 순서</a>
           <a class="button button-secondary" href="#permissions">필요한 권한 보기</a>
           <a class="button button-secondary" href="#pc-to-pc">다른 PC 연결</a>
           <a class="button button-secondary" href="#keyboard-shortcuts">단축키 보기</a>
+          <a class="button button-secondary" href="./technical.html">기술/보안 안내</a>
         </div>
       </div>
     </section>
@@ -254,11 +256,6 @@
             <span class="status-pill">권장</span>
             <h3>배터리 제한 예외</h3>
             <p>화면이 꺼진 뒤 연결이 자주 끊길 때만 확인합니다. 안정성을 높이는 권장 설정입니다.</p>
-          </article>
-          <article class="permission-card permission-unsupported">
-            <span class="status-pill">지원 안 함</span>
-            <h3>USB 연결</h3>
-            <p>일반 사용자는 PC와 Android를 같은 Wi-Fi 또는 같은 공유기 아래에서 연결하면 됩니다. USB 연결은 현재 지원하지 않습니다.</p>
           </article>
         </div>
       </div>
@@ -556,22 +553,25 @@
     <section class="section section-alt">
       <div class="container split-grid">
         <div>
-          <p class="section-kicker">지원 범위</p>
-          <h2>현재 가이드는 일반 Wi-Fi 연결만 다룹니다.</h2>
+          <p class="section-kicker">Technical Notes</p>
+          <h2>연결 구조와 권한 설명은 별도 페이지에 모았습니다.</h2>
           <p class="lead">
-            OneMouse는 같은 Wi-Fi 또는 같은 공유기 아래의 Windows PC와 Android 연결을 기준으로 안내합니다.
-            USB 연결은 사용자용 연결 방식에서 제외했습니다.
+            일반 사용자는 이 가이드의 순서대로 설치, 권한, 페어링, 위치 배치만 따라가면 됩니다.
+            로컬 네트워크 구조, 접근성 서비스, 포그라운드 서비스, 파일과 클립보드 처리 방식은 기술/보안 안내에서 확인할 수 있습니다.
           </p>
         </div>
         <div class="panel">
-          <p class="section-kicker">Best Path</p>
-          <h2>가장 안정적인 환경</h2>
+          <p class="section-kicker">Next Step</p>
+          <h2>문제가 생기면 도움말에서 원인을 좁힙니다.</h2>
           <ul class="bullet-list">
-            <li>PC와 Android가 같은 Wi-Fi 또는 같은 공유기에 연결되어 있습니다.</li>
-            <li>게스트 Wi-Fi와 AP 격리가 꺼져 있습니다.</li>
-            <li>PC 방화벽에서 OneMouse를 허용합니다.</li>
-            <li>Android 접근성 권한과 배터리 제한 예외를 확인합니다.</li>
+            <li>PC가 보이지 않으면 같은 Wi-Fi, 방화벽, 게스트 Wi-Fi 여부를 먼저 확인합니다.</li>
+            <li>입력이 들어가지 않으면 접근성 서비스와 앱 전원 상태를 확인합니다.</li>
+            <li>커서가 돌아오지 않으면 Ctrl + Alt + Backspace를 사용합니다.</li>
           </ul>
+          <div class="hero-actions">
+            <a class="button button-primary" href="./help.html">도움말 보기</a>
+            <a class="button button-secondary" href="./technical.html">기술/보안 보기</a>
+          </div>
         </div>
       </div>
     </section>
@@ -581,6 +581,7 @@
     <div class="container footer-inner">
       <span>© 2026 OneMouse</span>
       <span class="footer-links">
+        <a href="./technical.html">기술/보안</a>
         <a href="./pricing.html">요금/Pro</a>
         <a href="./privacy.html">개인정보처리방침</a>
         <a href="./terms.html">이용약관</a>

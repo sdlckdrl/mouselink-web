@@ -7,6 +7,7 @@ OneMouse is a local Windows and Android utility. It lets users control an Androi
 - Overview: https://onemouse.pages.dev/
 - Setup guide: https://onemouse.pages.dev/guide
 - Help and troubleshooting: https://onemouse.pages.dev/help
+- Technical and security notes: https://onemouse.pages.dev/technical
 - Free and Pro policy: https://onemouse.pages.dev/pricing
 - Privacy policy: https://onemouse.pages.dev/privacy
 - Terms: https://onemouse.pages.dev/terms

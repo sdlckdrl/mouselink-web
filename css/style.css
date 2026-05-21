@@ -517,6 +517,10 @@ figure {
   margin: 10px 0 0;
 }
 
+.update-card .button {
+  margin-top: 16px;
+}
+
 .feature-number,
 .download-icon {
   width: 44px;
