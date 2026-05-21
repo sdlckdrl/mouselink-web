@@ -73,6 +73,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://onemouse.pages.dev/en/technical</loc>
+    <lastmod>2026-05-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://onemouse.pages.dev/en/privacy</loc>
     <lastmod>2026-05-19</lastmod>
     <changefreq>yearly</changefreq>
@@ -115,6 +121,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://onemouse.pages.dev/ja/technical</loc>
+    <lastmod>2026-05-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://onemouse.pages.dev/ja/privacy</loc>
     <lastmod>2026-05-19</lastmod>
     <changefreq>yearly</changefreq>
@@ -155,6 +167,12 @@
     <lastmod>2026-05-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://onemouse.pages.dev/zh/technical</loc>
+    <lastmod>2026-05-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://onemouse.pages.dev/zh/privacy</loc>

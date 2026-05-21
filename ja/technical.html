@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OneMouse 技術/セキュリティ | ローカル接続と権限</title>
+  <meta
+    name="description"
+    content="OneMouse のローカルネットワーク接続、アクセシビリティサービス、フォアグラウンドサービス、ファイル・クリップボード・入力データの扱い、対応範囲を説明します。"
+  />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="canonical" href="https://onemouse.pages.dev/ja/technical" />
+  <link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/technical" />
+  <link rel="alternate" hreflang="en" href="https://onemouse.pages.dev/en/technical" />
+  <link rel="alternate" hreflang="ja" href="https://onemouse.pages.dev/ja/technical" />
+  <link rel="alternate" hreflang="zh" href="https://onemouse.pages.dev/zh/technical" />
+  <link rel="alternate" hreflang="x-default" href="https://onemouse.pages.dev/technical" />
+  <meta property="og:site_name" content="OneMouse" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="OneMouse 技術/セキュリティ" />
+  <meta property="og:description" content="OneMouse のローカル接続、権限、データ処理、ネットワーク条件を説明します。" />
+  <meta property="og:url" content="https://onemouse.pages.dev/ja/technical" />
+  <meta property="og:image" content="https://onemouse.pages.dev/assets/hero-bg-generated-2.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="OneMouse 技術/セキュリティ" />
+  <meta name="twitter:description" content="ローカル接続、権限、データ処理、ネットワーク条件、対応範囲を確認できます。" />
+  <meta name="twitter:image" content="https://onemouse.pages.dev/assets/hero-bg-generated-2.png" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "OneMouse 技術/セキュリティ",
+      "url": "https://onemouse.pages.dev/ja/technical",
+      "inLanguage": "ja",
+      "description": "OneMouse のローカル接続、権限、データ処理、対応範囲を説明します。",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "OneMouse",
+        "url": "https://onemouse.pages.dev/"
+      }
+    }
+  </script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MJ73H86TWX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-MJ73H86TWX');
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="./index.html" class="brand" aria-label="OneMouse ホーム">
+        <span class="brand-mark">OM</span>
+        <span class="brand-copy">
+          <strong>OneMouse</strong>
+          <span>Windows と Android をローカル接続</span>
+        </span>
+      </a>
+      <nav class="top-nav" aria-label="主要メニュー">
+        <a href="./index.html">概要</a>
+        <a href="./guide.html">ガイド</a>
+        <a href="./help.html">ヘルプ</a>
+        <a href="./technical.html" class="is-active">技術/セキュリティ</a>
+        <a href="./pricing.html">Free / Pro</a>
+        <a href="./index.html#download" class="nav-cta">ダウンロード</a>
+      </nav>
+      <div class="lang-switch" aria-label="言語">
+        <a href="../technical.html">KOR</a>
+        <a href="../en/technical.html">ENG</a>
+        <span class="is-active">JPN</span>
+        <a href="../zh/technical.html">CHN</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container narrow">
+        <p class="section-kicker">Technical & Security</p>
+        <h1>接続構造、権限、データ処理を分けて説明します。</h1>
+        <p class="page-intro">
+          このページは日常的な操作手順ではなく、OneMouse が Windows PC と Android をどのように接続し、
+          どの権限を何のために使うのかを説明するページです。
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#data-flow">データの流れ</a>
+          <a class="button button-secondary" href="#permissions">権限</a>
+          <a class="button button-secondary" href="#network">ネットワーク</a>
+          <a class="button button-secondary" href="#scope">対応範囲</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="data-flow">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Local First</p>
+          <h2>OneMouse はユーザーがペアリングした端末間で動作します。</h2>
+          <p>
+            基本接続は、同じ Wi-Fi または同じルーター配下の Windows PC と Android 端末の間で行われます。
+            入力内容、ファイル、クリップボード内容を OneMouse のサーバーへアップロードする構造ではありません。
+          </p>
+        </div>
+        <div class="timeline">
+          <article class="timeline-step"><span>1</span><div><strong>端末検出</strong><p>PC アプリと Android アプリはローカルネットワーク内で互いを探します。ネットワーク設定によって検出が遅れる場合があります。</p></div></article>
+          <article class="timeline-step"><span>2</span><div><strong>ユーザー確認</strong><p>PC アプリに表示される QR コードまたは 6 桁コードで、ユーザーがペアリングを確認します。</p></div></article>
+          <article class="timeline-step"><span>3</span><div><strong>入力制御</strong><p>PC のマウス移動、クリック、スクロール、キーボード入力は、ペアリング済み Android へ制御イベントとして送られます。</p></div></article>
+          <article class="timeline-step"><span>4</span><div><strong>ファイルとテキスト</strong><p>ユーザーが選択したファイル、テキスト、クリップボード内容だけがペアリング済み端末間で移動します。</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="permissions">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Permissions</p>
+          <h2>権限は必要な機能のために使用します。</h2>
+          <p>OneMouse は起動時にすべての権限を要求しません。関連する機能を使うときに必要な項目を案内します。</p>
+        </div>
+        <div class="permission-grid">
+          <article class="permission-card permission-required"><span class="status-pill">主要機能</span><h3>アクセシビリティサービス</h3><p>Android の仮想カーソル表示、クリック、スクロール、ドラッグ、Back、Home、キーボード入力など、ユーザーが要求した操作を実行するために使用します。</p></article>
+          <article class="permission-card"><span class="status-pill">接続維持</span><h3>フォアグラウンドサービス</h3><p>PC と Android のローカル接続を維持し、実行中であることを通知で表示するために使用します。</p></article>
+          <article class="permission-card"><span class="status-pill">端末検出</span><h3>付近の Wi-Fi デバイス</h3><p>Android 13 以降で同じネットワーク上の PC を探すために必要になる場合があります。位置追跡目的では使用しません。</p></article>
+          <article class="permission-card"><span class="status-pill">状態表示</span><h3>通知</h3><p>接続サービスの実行状態やファイル転送状態を知らせるために使用します。</p></article>
+          <article class="permission-card"><span class="status-pill">任意機能</span><h3>システム設定の変更</h3><p>PC のショートカットで Android の画面明るさを調整するときだけ使用します。</p></article>
+          <article class="permission-card"><span class="status-pill">安定性</span><h3>バッテリー制限の除外</h3><p>画面オフ後に接続が頻繁に切れる場合のみ推奨します。</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="security">
+      <div class="container split-grid">
+        <div>
+          <p class="section-kicker">Data Handling</p>
+          <h2>入力、ファイル、クリップボードは選択された操作の範囲で処理します。</h2>
+          <p class="lead">OneMouse はユーザー自身のペアリング済み端末をつなぐためのツールです。ユーザーのファイルを保存する OneMouse アカウントサーバーは必要ありません。</p>
+          <ul class="bullet-list">
+            <li>マウスとキーボード入力は Android 制御イベントとして送られます。</li>
+            <li>ファイル転送はユーザーが選択またはドロップしたファイルに対してのみ開始されます。</li>
+            <li>クリップボードとテキスト転送は、ユーザーが機能または共有操作を使ったときだけ処理されます。</li>
+            <li>広告分析のためにアクセシビリティデータを使用しません。</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <p class="section-kicker">Review Notes</p>
+          <h2>ユーザー案内とアプリ審査で重要な点</h2>
+          <ul class="bullet-list">
+            <li>Windows PC アプリと Android アプリの両方が必要です。</li>
+            <li>アクセシビリティは Android 入力制御のための主要機能です。</li>
+            <li>フォアグラウンドサービスはユーザーが開始した接続と転送状態のために使用します。</li>
+            <li>PC と Android は同じ Wi-Fi または同じルーター配下にある必要があります。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="network">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Network</p>
+          <h2>接続品質はローカルネットワークの条件に影響されます。</h2>
+          <p>OneMouse はインターネットサーバー経由で制御を中継する製品ではありません。ペアリング済み端末同士がローカルネットワークで通信できる必要があります。</p>
+        </div>
+        <div class="guide-grid">
+          <article class="panel"><p class="section-kicker">推奨環境</p><h2>個人 Wi-Fi または同じルーター</h2><ul class="bullet-list"><li>PC と Android が同じルーターに接続されています。</li><li>ゲスト Wi-Fi と AP 分離が無効です。</li><li>PC ファイアウォールが OneMouse の通信を許可しています。</li><li>セキュリティソフトがローカル通信をブロックしていません。</li></ul></article>
+          <article class="panel"><p class="section-kicker">注意環境</p><h2>会社ネットワーク、公共 Wi-Fi、分離ネットワーク</h2><ul class="bullet-list"><li>会社のセキュリティポリシーが端末検出をブロックする場合があります。</li><li>公共 Wi-Fi は端末間通信を遮断する場合があります。</li><li>VPN やファイアウォール設定により PC が見えない場合があります。</li><li>不安定な場合は、まず個人ルーター環境で確認してください。</li></ul></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="scope">
+      <div class="container split-grid">
+        <div>
+          <p class="section-kicker">Support Scope</p>
+          <h2>公開ガイドは現在 Wi-Fi/LAN 接続を中心にしています。</h2>
+          <p class="lead">一般ユーザーは Windows PC と Android を同じ Wi-Fi または同じローカルルーターで接続します。USB/ADB 接続は現在の公開サポート範囲に含まれません。</p>
+        </div>
+        <div class="panel">
+          <p class="section-kicker">Next Step</p>
+          <h2>インストールとペアリングはガイドを確認してください。</h2>
+          <p class="lead">技術説明を確認したら、実際のインストール、ペアリング、配置、ファイル転送はユーザーガイドで続けて確認できます。</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="./guide.html">ガイドを見る</a>
+            <a class="button button-secondary" href="./help.html">ヘルプを見る</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© 2026 OneMouse</span>
+      <span class="footer-links">
+        <a href="./technical.html">技術/セキュリティ</a>
+        <a href="./pricing.html">Free / Pro</a>
+        <a href="./privacy.html">プライバシー</a>
+        <a href="./terms.html">規約</a>
+        <a href="./licenses.html">ライセンス</a>
+      </span>
+    </div>
+  </footer>
+</body>
+</html>

@@ -28,6 +28,7 @@ body {
   color: var(--text);
   font-family: "Segoe UI", "Noto Sans KR", Arial, sans-serif;
   background: var(--bg);
+  overflow-x: hidden;
 }
 
 a {
@@ -113,6 +114,8 @@ figure {
 }
 
 .top-nav {
+  min-width: 0;
+  max-width: 100%;
   display: flex;
   align-items: center;
   gap: 6px;
@@ -124,6 +127,7 @@ figure {
   padding: 10px 12px;
   border-radius: 8px;
   color: #334155;
+  white-space: nowrap;
 }
 
 .top-nav a:hover,
@@ -165,6 +169,20 @@ figure {
 .lang-switch .is-active {
   color: #fff;
   background: var(--blue);
+}
+
+@media (max-width: 1120px) {
+  .brand-copy span {
+    display: none;
+  }
+
+  .header-inner {
+    gap: 14px;
+  }
+
+  .top-nav a {
+    padding-inline: 9px;
+  }
 }
 
 .home-hero {
@@ -1007,11 +1025,6 @@ figure {
   .lang-switch {
     margin-top: 2px;
   }
-
-  .top-nav a {
-    white-space: nowrap;
-  }
-
   .home-hero {
     min-height: 560px;
     background:

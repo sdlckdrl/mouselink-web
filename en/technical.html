@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OneMouse Technical and Security Notes | Local connection and permissions</title>
+  <meta
+    name="description"
+    content="Technical and security notes for OneMouse, including local network connection, Accessibility service usage, foreground service usage, file and clipboard handling, and support scope."
+  />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="canonical" href="https://onemouse.pages.dev/en/technical" />
+  <link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/technical" />
+  <link rel="alternate" hreflang="en" href="https://onemouse.pages.dev/en/technical" />
+  <link rel="alternate" hreflang="ja" href="https://onemouse.pages.dev/ja/technical" />
+  <link rel="alternate" hreflang="zh" href="https://onemouse.pages.dev/zh/technical" />
+  <link rel="alternate" hreflang="x-default" href="https://onemouse.pages.dev/technical" />
+  <meta property="og:site_name" content="OneMouse" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="OneMouse Technical and Security Notes" />
+  <meta property="og:description" content="How OneMouse connects locally, uses Android permissions, and handles input, files, and clipboard data." />
+  <meta property="og:url" content="https://onemouse.pages.dev/en/technical" />
+  <meta property="og:image" content="https://onemouse.pages.dev/assets/hero-bg-generated-2.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="OneMouse Technical and Security Notes" />
+  <meta name="twitter:description" content="Local connection, permissions, data handling, network conditions, and support scope." />
+  <meta name="twitter:image" content="https://onemouse.pages.dev/assets/hero-bg-generated-2.png" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "OneMouse Technical and Security Notes",
+      "url": "https://onemouse.pages.dev/en/technical",
+      "inLanguage": "en",
+      "description": "Technical and security notes for OneMouse local connection, permissions, data handling, and support scope.",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "OneMouse",
+        "url": "https://onemouse.pages.dev/"
+      }
+    }
+  </script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MJ73H86TWX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-MJ73H86TWX');
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="./index.html" class="brand" aria-label="OneMouse home">
+        <span class="brand-mark">OM</span>
+        <span class="brand-copy">
+          <strong>OneMouse</strong>
+          <span>Local Windows and Android connection</span>
+        </span>
+      </a>
+      <nav class="top-nav" aria-label="Primary menu">
+        <a href="./index.html">Overview</a>
+        <a href="./guide.html">Guide</a>
+        <a href="./help.html">Help</a>
+        <a href="./technical.html" class="is-active">Technical/Security</a>
+        <a href="./pricing.html">Free / Pro</a>
+        <a href="./index.html#download" class="nav-cta">Download</a>
+      </nav>
+      <div class="lang-switch" aria-label="Language">
+        <a href="../technical.html">KOR</a>
+        <span class="is-active">ENG</span>
+        <a href="../ja/technical.html">JPN</a>
+        <a href="../zh/technical.html">CHN</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container narrow">
+        <p class="section-kicker">Technical & Security</p>
+        <h1>Connection, permissions, and data handling are documented separately.</h1>
+        <p class="page-intro">
+          This page is for technical and security context, not day-to-day setup.
+          It explains how OneMouse connects a Windows PC and Android device, why permissions are used, and how input, files, and clipboard data are handled.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#data-flow">Data flow</a>
+          <a class="button button-secondary" href="#permissions">Permissions</a>
+          <a class="button button-secondary" href="#network">Network</a>
+          <a class="button button-secondary" href="#scope">Support scope</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="data-flow">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Local First</p>
+          <h2>OneMouse works between devices the user pairs.</h2>
+          <p>
+            The default connection runs between a Windows PC and Android device on the same Wi-Fi or local router.
+            OneMouse is not designed to upload input contents, files, or clipboard contents to a OneMouse server.
+          </p>
+        </div>
+        <div class="timeline">
+          <article class="timeline-step"><span>1</span><div><strong>Discovery</strong><p>The PC app and Android app find each other on the local network. Discovery can be delayed by network settings.</p></div></article>
+          <article class="timeline-step"><span>2</span><div><strong>User confirmation</strong><p>The user confirms pairing with a QR code or 6-digit code shown in the PC app.</p></div></article>
+          <article class="timeline-step"><span>3</span><div><strong>Input control</strong><p>Mouse movement, clicks, scrolling, and keyboard input from the PC are sent as control events to the paired Android device.</p></div></article>
+          <article class="timeline-step"><span>4</span><div><strong>Files and text</strong><p>Only files, text, or clipboard content chosen by the user are transferred between paired devices.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="permissions">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Permissions</p>
+          <h2>Permissions are used for the feature that needs them.</h2>
+          <p>OneMouse does not ask for every permission at startup. Required or recommended items are shown when the related feature is used.</p>
+        </div>
+        <div class="permission-grid">
+          <article class="permission-card permission-required"><span class="status-pill">Core feature</span><h3>Accessibility service</h3><p>Used to show and control the Android cursor and perform user-requested actions such as click, scroll, drag, Back, Home, and keyboard input.</p></article>
+          <article class="permission-card"><span class="status-pill">Connection</span><h3>Foreground service</h3><p>Used to keep the local PC-to-Android connection active and show a persistent status notification while the service is running.</p></article>
+          <article class="permission-card"><span class="status-pill">Discovery</span><h3>Nearby Wi-Fi devices</h3><p>May be required on Android 13 or newer to find the PC on the same network. It is not used for location tracking.</p></article>
+          <article class="permission-card"><span class="status-pill">Status</span><h3>Notifications</h3><p>Used for connection status and file transfer status when the service is active.</p></article>
+          <article class="permission-card"><span class="status-pill">Optional</span><h3>Modify system settings</h3><p>Used only when controlling Android screen brightness with PC keyboard shortcuts.</p></article>
+          <article class="permission-card"><span class="status-pill">Stability</span><h3>Battery optimization exception</h3><p>Recommended only when the connection frequently stops after the screen turns off.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="security">
+      <div class="container split-grid">
+        <div>
+          <p class="section-kicker">Data Handling</p>
+          <h2>Input, files, and clipboard data are handled within the selected workflow.</h2>
+          <p class="lead">OneMouse helps the user's own paired devices communicate. It does not require a OneMouse account server to store the user's files.</p>
+          <ul class="bullet-list">
+            <li>Mouse and keyboard input are transferred as Android control events.</li>
+            <li>File transfer starts only for files the user selects or drops.</li>
+            <li>Clipboard and text transfer happen only when the user uses the feature or share action.</li>
+            <li>Accessibility data is not used to analyze screen contents for advertising.</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <p class="section-kicker">Review Notes</p>
+          <h2>Key points for users and app review</h2>
+          <ul class="bullet-list">
+            <li>The Windows PC app and Android app are both required.</li>
+            <li>Accessibility is a core feature for Android input control.</li>
+            <li>The foreground service is for user-initiated connection and transfer status.</li>
+            <li>The PC and Android device should be on the same Wi-Fi or local router.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="network">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Network</p>
+          <h2>Connection quality depends on the local network.</h2>
+          <p>OneMouse does not relay control through an internet server. The paired devices need to find and communicate with each other on the local network.</p>
+        </div>
+        <div class="guide-grid">
+          <article class="panel"><p class="section-kicker">Recommended</p><h2>Private Wi-Fi or the same router</h2><ul class="bullet-list"><li>The PC and Android device are on the same router.</li><li>Guest Wi-Fi and AP isolation are disabled.</li><li>The PC firewall allows OneMouse communication.</li><li>Security software does not block local traffic.</li></ul></article>
+          <article class="panel"><p class="section-kicker">Watch out</p><h2>Company networks, public Wi-Fi, isolated networks</h2><ul class="bullet-list"><li>Company policies may block device discovery.</li><li>Public Wi-Fi can block device-to-device communication.</li><li>VPN or firewall rules may hide the PC from Android.</li><li>If the connection is unstable, test on a private router first.</li></ul></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="scope">
+      <div class="container split-grid">
+        <div>
+          <p class="section-kicker">Support Scope</p>
+          <h2>The public guide currently focuses on Wi-Fi/LAN connection.</h2>
+          <p class="lead">General users should connect the Windows PC and Android device on the same Wi-Fi or local router. USB/ADB connection is not part of the current public support scope.</p>
+        </div>
+        <div class="panel">
+          <p class="section-kicker">Next Step</p>
+          <h2>Use the setup guide for installation and pairing.</h2>
+          <p class="lead">After reviewing the technical notes, continue with the user guide for installation, pairing, placement, and file transfer.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="./guide.html">Open guide</a>
+            <a class="button button-secondary" href="./help.html">Open help</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© 2026 OneMouse</span>
+      <span class="footer-links">
+        <a href="./technical.html">Technical/Security</a>
+        <a href="./pricing.html">Free / Pro</a>
+        <a href="./privacy.html">Privacy</a>
+        <a href="./terms.html">Terms</a>
+        <a href="./licenses.html">Licenses</a>
+      </span>
+    </div>
+  </footer>
+</body>
+</html>
