@@ -623,6 +623,18 @@ figure {
   font-weight: 850;
 }
 
+.comic-showcase {
+  margin: 0;
+}
+
+.comic-showcase img {
+  width: 100%;
+  height: auto;
+  border: 1px solid #d8e6fb;
+  border-radius: 8px;
+  box-shadow: 0 24px 60px rgba(26, 72, 140, 0.13);
+}
+
 .path-list {
   display: grid;
   gap: 12px;
