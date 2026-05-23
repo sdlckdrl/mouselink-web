@@ -172,9 +172,18 @@
             짧은 만화 형식으로 정리했습니다.
           </p>
         </div>
-        <figure class="comic-showcase">
-          <img src="./assets/onemouse-core-comic.png" alt="OneMouse 핵심 기능 만화: PC 커서 모바일 이동, 텍스트 복사 붙여넣기, 파일 전송, PC와 PC 간 커서 이동" loading="lazy" />
-        </figure>
+        <details class="guide-reference">
+          <summary>
+            <span>핵심 기능 요약 보기</span>
+            <small>커서 이동, 텍스트 복사, 파일 전송, PC-to-PC 흐름을 한 장으로 확인합니다.</small>
+          </summary>
+          <figure class="comic-showcase">
+            <a href="./assets/onemouse-core-comic.png" target="_blank" rel="noopener">
+              <img src="./assets/onemouse-core-comic.png" alt="OneMouse 핵심 기능 만화: PC 커서 모바일 이동, 텍스트 복사 붙여넣기, 파일 전송, PC와 PC 간 커서 이동" loading="lazy" />
+            </a>
+            <figcaption>이미지를 누르면 원본 크기로 열립니다.</figcaption>
+          </figure>
+        </details>
       </div>
     </section>
 
@@ -210,6 +219,22 @@
             <p>PC 화면 가장자리에 폰이나 다른 PC를 배치한 뒤 마우스를 그 방향으로 넘깁니다.</p>
           </article>
         </div>
+        <details class="guide-reference">
+          <summary>
+            <span>실제 UI 페어링 흐름 보기</span>
+            <small>PC 코드 확인, 숫자 입력, QR 스캔 중 하나로 연결하는 흐름입니다.</small>
+          </summary>
+          <figure class="comic-showcase">
+            <a href="./assets/onemouse-pairing-real-ui-comic-v5.png" target="_blank" rel="noopener">
+              <img
+                src="./assets/onemouse-pairing-real-ui-comic-v5.png"
+                alt="OneMouse 페어링 방법: 준비, PC 코드 확인, 숫자 입력, QR 스캔 순서 안내"
+                loading="lazy"
+              />
+            </a>
+            <figcaption>이미지를 누르면 원본 크기로 열립니다.</figcaption>
+          </figure>
+        </details>
       </div>
     </section>
 
@@ -267,51 +292,6 @@
             allowfullscreen
             loading="lazy"
           ></iframe>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="section-heading">
-          <p class="section-kicker">Screens</p>
-          <h2>실제 앱 화면 기준으로 처음 연결 순서를 보여줍니다.</h2>
-          <p>
-            소개 이미지는 생성 이미지가 아니라 현재 앱에서 쓰는 화면을 기준으로 정리했습니다.
-            전원과 권한을 확인하고, QR 또는 6자리 코드로 연결한 뒤, PC 모니터 가장자리에 Android 위치를 맞추면 바로 사용할 수 있습니다.
-          </p>
-        </div>
-        <div class="onboarding-flow-grid" aria-label="처음 연결 흐름">
-          <article class="onboarding-flow-card">
-            <strong>1. 전원과 권한</strong>
-            <span>Android 앱 오른쪽 위 전원을 켜고 접근성 권한을 확인합니다.</span>
-          </article>
-          <article class="onboarding-flow-card">
-            <strong>2. PC 검색</strong>
-            <span>같은 Wi-Fi 또는 같은 공유기 안에서 PC를 찾습니다.</span>
-          </article>
-          <article class="onboarding-flow-card">
-            <strong>3. QR 또는 코드</strong>
-            <span>PC 하단의 QR이나 6자리 코드로 같은 기기인지 확인합니다.</span>
-          </article>
-          <article class="onboarding-flow-card">
-            <strong>4. 위치와 입력</strong>
-            <span>PC 화면 가장자리에 Android를 배치하고 그 방향으로 커서를 넘깁니다. 파일은 빠른 드롭존으로 바로 보낼 수 있습니다.</span>
-          </article>
-        </div>
-        <div class="shot-grid">
-          <figure class="shot-card shot-wide">
-            <img src="./assets/onboarding_pc_dashboard.png" alt="PC 하단에 페어링 코드와 QR 코드가 보이는 OneMouse 대시보드" />
-            <figcaption>PC 하단의 6자리 코드와 QR 페어링</figcaption>
-          </figure>
-          <figure class="shot-card">
-            <img src="./assets/onboarding_mobile_pair.jpg" alt="Android에서 감지된 PC를 페어링하는 화면" />
-            <figcaption>감지된 PC에서 페어링 시작</figcaption>
-          </figure>
-          <figure class="shot-card shot-wide">
-            <img src="./assets/onboarding_pc_position.png" alt="PC에서 Android 위치를 모니터 가장자리에 배치하는 화면" />
-            <figcaption>PC 모니터 외곽 기준으로 모바일 위치 배치</figcaption>
-          </figure>
         </div>
       </div>
     </section>
