@@ -635,6 +635,72 @@ figure {
   box-shadow: 0 24px 60px rgba(26, 72, 140, 0.13);
 }
 
+.comic-showcase a {
+  display: block;
+}
+
+.comic-showcase figcaption {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.guide-reference {
+  margin-top: 20px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #f8fbff;
+}
+
+.guide-reference summary {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 5px;
+  cursor: pointer;
+  color: var(--text);
+  font-weight: 950;
+  list-style: none;
+}
+
+.guide-reference summary::-webkit-details-marker {
+  display: none;
+}
+
+.guide-reference summary::after {
+  content: "+";
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  align-self: center;
+  justify-self: end;
+  color: var(--blue);
+  font-size: 26px;
+  line-height: 1;
+}
+
+.guide-reference[open] summary::after {
+  content: "-";
+}
+
+.guide-reference summary span {
+  font-size: 18px;
+}
+
+.guide-reference summary small {
+  max-width: 680px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.45;
+  font-weight: 700;
+}
+
+.guide-reference .comic-showcase,
+.guide-reference .shot-row,
+.guide-reference .shot-card.inline-shot {
+  margin-top: 18px;
+}
+
 .path-list {
   display: grid;
   gap: 12px;
