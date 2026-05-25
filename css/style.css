@@ -36,6 +36,18 @@ a {
   text-decoration: none;
 }
 
+/* Paid plan copy is intentionally hidden while OneMouse is operated as free.
+   Remove this block when Free / Pro messaging is ready to be shown again. */
+a[href$="pricing.html"],
+section:has(.plan-preview),
+body:has(.pricing-hero) main,
+.paid-plan-copy,
+.pricing-hero,
+.plan-cards,
+.compare-table-wrap {
+  display: none !important;
+}
+
 img {
   display: block;
   max-width: 100%;
