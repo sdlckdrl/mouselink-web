@@ -1,9 +1,9 @@
 {
   "pc": {
-    "version": "1.0.2"
+    "version": "1.1.0"
   },
   "android": {
-    "minimumPcVersion": "0.3.9",
-    "pcUpdateMessage": "이 Android 앱과 안정적으로 연결하려면 PC 앱 v0.3.9 이상이 필요합니다."
+    "minimumPcVersion": "1.1.0",
+    "pcUpdateMessage": "이 Android 앱과 안정적으로 연결하려면 PC 앱 v1.1.0 이상이 필요합니다."
   }
 }
