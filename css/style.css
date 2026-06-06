@@ -622,8 +622,18 @@ figure {
   margin-top: 22px;
 }
 
+.shot-row.remote-control-row {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .shot-card.shot-desktop img {
   height: 230px;
+  object-fit: contain;
+  background: #f6faff;
+}
+
+.shot-card.remote-shot img {
+  height: 320px;
   object-fit: contain;
   background: #f6faff;
 }
@@ -1217,6 +1227,10 @@ figure {
   .shot-card img,
   .shot-card.shot-wide img {
     height: 280px;
+  }
+
+  .shot-card.remote-shot img {
+    height: 260px;
   }
 
   .shot-card.shot-phone img {
