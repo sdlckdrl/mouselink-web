@@ -19,6 +19,18 @@
 
 ---
 
+## 🎬 데모
+
+| 모바일 화면 원격 제어 | PC to PC 제어 |
+| :---: | :---: |
+| ![모바일 화면 원격 제어](assets/demo/mobile.gif) | ![PC to PC 제어](assets/demo/pc-to-pc.gif) |
+
+| 파일 드래그 전송 | 원격 제어 창 |
+| :---: | :---: |
+| ![파일 드래그 전송](assets/demo/drag-file.gif) | ![원격 제어 창](assets/demo/window.gif) |
+
+---
+
 ## ✨ 주요 기능
 
 - **마우스 이동** — 커서를 화면 가장자리로 밀면 Android 또는 다른 PC로 제어가 넘어갑니다.
