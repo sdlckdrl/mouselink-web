@@ -25,8 +25,11 @@ OneMouse connects a Windows PC with an Android device or a paired Sub PC on the 
 - Configure the phone position around the PC monitor edge.
 - Send files from PC to Android, Android to PC, and PC to PC.
 - Send clipboard text between Android and PC.
-- Use keyboard shortcuts for text editing, app switching, volume, brightness, screenshots, and forced return to PC.
+- Use keyboard shortcuts for text editing, app switching, volume, brightness, screenshots, quick device connection, and forced return to PC.
 - Use the PC quick drop zone to send files to the selected Android device or paired PC.
+- Use Ctrl + Alt + 1-9 from the PC device list to connect to the first nine devices; pressing the same shortcut again disconnects that device.
+- Enable auto reconnect so the PC app can reconnect when the last device is ready again or only one ready device is available.
+- The PC app shows small desktop toasts for connection, shortcut disconnect, and Ctrl + Alt + Backspace forced return. Normal mouse movement between devices does not show a toast.
 
 ## Connection Model
 
