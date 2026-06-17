@@ -626,6 +626,10 @@ figure {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.shot-row.single-shot-row {
+  grid-template-columns: minmax(0, 552px);
+}
+
 .shot-card.shot-desktop img {
   height: 230px;
   object-fit: contain;
