@@ -4,7 +4,10 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>OneMouse | ヘルプ</title>
-  <meta name="description" content="OneMouse の電源、権限、検索、ペアリング、配置、ファイル転送、カーソル復帰の問題を確認します。" />
+  <meta
+    name="description"
+    content="OneMouse の権限、ペアリング、ネットワーク検索、配置の同期、クリップボードとファイル転送の問題を解決するヘルプです。"
+  />
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="canonical" href="https://onemouse.pages.dev/ja/help" />
   <link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/help" />
@@ -14,21 +17,103 @@
   <link rel="alternate" hreflang="x-default" href="https://onemouse.pages.dev/help" />
   <meta property="og:site_name" content="OneMouse" />
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="OneMouse | ヘルプ" />
-  <meta property="og:description" content="OneMouse の電源、権限、検索、ペアリング、配置、ファイル転送、カーソル復帰の問題を確認します。" />
+  <meta property="og:title" content="OneMouse ヘルプ" />
+  <meta property="og:description" content="OneMouse の権限、ペアリング、ネットワーク検索、配置の同期、クリップボードとファイル転送の問題を解決するヘルプです。" />
   <meta property="og:url" content="https://onemouse.pages.dev/ja/help" />
   <meta property="og:image" content="https://onemouse.pages.dev/assets/hero-bg-generated-2.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="OneMouse | ヘルプ" />
-  <meta name="twitter:description" content="OneMouse の電源、権限、検索、ペアリング、配置、ファイル転送、カーソル復帰の問題を確認します。" />
+  <meta name="twitter:title" content="OneMouse ヘルプ" />
+  <meta name="twitter:description" content="OneMouse の権限、ペアリング、ネットワーク検索、配置の同期、クリップボードとファイル転送の問題を解決するヘルプです。" />
   <meta name="twitter:image" content="https://onemouse.pages.dev/assets/hero-bg-generated-2.png" />
-</head>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "OneMouse ヘルプ",
+      "url": "https://onemouse.pages.dev/ja/help",
+      "inLanguage": "ja-JP",
+      "description": "OneMouse の権限、ペアリング、ネットワーク検索、配置の同期、クリップボードとファイル転送の問題を解決するヘルプです。",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "OneMouse",
+        "url": "https://onemouse.pages.dev/"
+      }
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "OneMouse で PC が見つからないときは何を確認すればよいですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "PC と Android が同じ Wi-Fi または同じルーターの下にあるかを確認し、ゲスト Wi-Fi、会社ネットワークのポリシー、ファイアウォールやセキュリティソフトがデバイス検索を妨げていないかを確認します。その後、Android アプリでデバイス検索をもう一度実行します。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Bluetoothでペアリングしたのに PC が電話を見つけられないときはどうすればよいですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "電話の OneMouse 設定タブで Bluetooth モード（ベータ）を先にオンにしてから、Windows でペアリングしてください。順序が逆だと Windows が通信用の送信 COM ポートを作らないため、PC が電話を見つけられません。すでにペアリング済みの場合は、Windows でデバイスを削除して再ペアリングするか、コントロールパネルの『デバイスとプリンター』でデバイスのプロパティ →『サービス』タブの『MouseLink』シリアルポートをオンにするとポートが作成されます。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "OneMouse で入力が入らないとき、最初に確認することは何ですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Android のアクセシビリティサービスがオンになっているかをまず確認します。アクセシビリティ権限がオフの場合、PC が見えたり接続されたように見えても、実際のマウスとキーボード入力は Android へ伝わりません。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "画面が消えた後に OneMouse の接続が切れるときはどうすればよいですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Android の設定で OneMouse のバッテリー最適化の除外を確認します。アプリ設定のバッテリー制限の項目から、関連する Android の設定画面へ移動できます。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "カーソルが Android 側に残り PC へ戻らないときはどうすればよいですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "PC のキーボードで Ctrl + Alt + Backspace を押して、マウス入力を PC へ強制的に戻します。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "OneMouse は USB 接続に対応していますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "現在の公開ガイドは Wi-Fi または LAN 接続を前提としています。USB 接続には現在対応していません。"
+          }
+        }
+      ]
+    }
+  </script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MJ73H86TWX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-MJ73H86TWX');
+  </script></head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
       <a href="./index.html" class="brand" aria-label="OneMouse ホーム">
         <span class="brand-mark">OM</span>
-        <span class="brand-copy"><strong>OneMouse</strong><span>Windows と Android をローカル接続</span></span>
+        <span class="brand-copy">
+          <strong>OneMouse</strong>
+          <span>Windows と Android をローカル接続</span>
+        </span>
       </a>
       <nav class="top-nav" aria-label="メインメニュー">
         <a href="./index.html">概要</a>
@@ -48,14 +133,173 @@
   </header>
 
   <main>
-    <section class="page-hero"><div class="container narrow"><p class="section-kicker">Help</p><h1>電源、権限、検索、配置で問題を切り分けます。</h1><p class="page-intro">多くの問題はアプリ電源、Android 権限、ローカルネットワーク検索、ペアリング、配置のどれかです。</p></div></section>
-    <section class="section"><div class="container help-grid"><article class="help-card"><p class="section-kicker">Power</p><h2>電源を確認</h2><p>Android の電源ボタンがオフの場合、バックグラウンド動作と入力受信は停止します。</p></article>
-        <article class="help-card"><p class="section-kicker">Permissions</p><h2>アクセシビリティを確認</h2><p>Android 入力制御には OneMouse アクセシビリティサービスが必要です。</p></article>
-        <article class="help-card"><p class="section-kicker">Battery</p><h2>バッテリー制限を確認</h2><p>画面オフ後に切断される場合は、バッテリー最適化設定を確認します。</p></article>
-        <article class="help-card"><p class="section-kicker">Discovery</p><h2>mDNS と UDP を確認</h2><p>ゲスト Wi-Fi、AP 分離、会社ネットワーク、ファイアウォールは検索を遮断する場合があります。</p></article>
-        <article class="help-card"><p class="section-kicker">Layout</p><h2>配置を保存し直す</h2><p>回転や表示変更後に位置が合わない場合は、スマートフォン位置を保存し直します。</p></article>
-        <article class="help-card"><p class="section-kicker">Return</p><h2>復帰ショートカット</h2><p>戻らない場合は PC で Ctrl + Alt + Backspace を押します。</p></article></div></section>
-    <section class="section section-alt"><div class="container"><div class="section-heading"><p class="section-kicker">Troubleshooting</p><h2>Follow this order.</h2><p>Finding the failing step is faster than changing several settings at once.</p></div><div class="timeline"><article class="timeline-step"><span>1</span><div><strong>Check app and permission state</strong><p>Confirm PC app, Android power, foreground service, and Accessibility permission.</p></div></article><article class="timeline-step"><span>2</span><div><strong>Check whether the target is visible</strong><p>Confirm both devices are on the same local network and run device search again.</p></div></article><article class="timeline-step"><span>3</span><div><strong>Check pairing state</strong><p>If pairing is required, use QR or the 6-digit code again.</p></div></article><article class="timeline-step"><span>4</span><div><strong>Check input and placement</strong><p>Check selected Android or Sub PC, position, entry direction, and display state.</p></div></article><article class="timeline-step"><span>5</span><div><strong>Use recovery shortcut</strong><p>Use Ctrl + Alt + Backspace if the cursor feels stuck on a target device.</p></div></article></div></div></section>
+    <section class="page-hero">
+      <div class="container narrow">
+        <p class="section-kicker">Help</p>
+        <h1>権限、検出、復帰の問題をすばやく絞り込みます。</h1>
+        <p class="page-intro">
+          問題の原因は、アプリの電源、権限、ネットワーク検索、ペアリング、配置に分けて見る方が早く見つかります。
+          以下の順序で確認すれば、ほとんどのつまずきを絞り込めます。
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container help-grid">
+        <article class="help-card">
+          <p class="section-kicker">Power</p>
+          <h2>アプリの電源を確認します</h2>
+          <p>右上の電源がオフだと、バックグラウンド動作と入力の受信が停止します。接続を始めるときは、まず電源をオンにしてください。</p>
+        </article>
+        <article class="help-card">
+          <p class="section-kicker">Permissions</p>
+          <h2>権限が先です</h2>
+          <p>Android の入力制御には、アクセシビリティサービスがオンになっている必要があります。権限がオフだと、PC が見えても実際の入力は入りません。</p>
+        </article>
+        <article class="help-card">
+          <p class="section-kicker">Battery</p>
+          <h2>バッテリー制限を確認します</h2>
+          <p>画面が消えた後によく切断される場合は、Android の設定でバッテリー最適化の除外を確認します。アプリ設定のバッテリー制限の項目からすぐに移動できます。</p>
+        </article>
+        <article class="help-card">
+          <p class="section-kicker">Pairing</p>
+          <h2>QR または 6 桁コード</h2>
+          <p>PC 下部の QR をスキャンするか、6 桁コードを入力します。ペアリング前は接続ボタンが有効にならないのが正常です。</p>
+        </article>
+        <article class="help-card">
+          <p class="section-kicker">Device Search</p>
+          <h2>ネットワーク検索を確認します</h2>
+          <p>会社ネットワーク、ゲスト Wi-Fi、一部のルーター設定では、デバイス検索が遮断されることがあります。まず同じルーターの下にあるか確認してください。</p>
+        </article>
+        <article class="help-card">
+          <p class="section-kicker">Firewall</p>
+          <h2>ファイアウォールとネットワークを確認します</h2>
+          <p>PC が見えない場合は、同じ Wi-Fi または同じルーターの下にあるか、ゲスト Wi-Fi や会社ネットワークのポリシーに遮断されていないかを確認します。</p>
+        </article>
+        <article class="help-card">
+          <p class="section-kicker">Layout</p>
+          <h2>配置がずれたとき</h2>
+          <p>Android の画面方向を切り替えた後は、画面サイズと位置が再び同期されます。それでもおかしい場合は、スマートフォンの位置を保存し直してください。</p>
+        </article>
+        <article class="help-card">
+          <p class="section-kicker">Return</p>
+          <h2>カーソル復帰ショートカット</h2>
+          <p>PC へカーソルが戻らない場合は、Ctrl + Alt + Backspace を押してマウス入力を PC へ戻します。復帰が実行されると、PC に小さな通知が表示されます。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Troubleshooting</p>
+          <h2>問題解決の順序</h2>
+          <p>どの段階でつまずいているかを先に切り分けると、解決がずっと早くなります。</p>
+        </div>
+        <div class="timeline">
+          <article class="timeline-step">
+            <span>1</span>
+            <div>
+              <strong>アプリと権限の状態を確認</strong>
+              <p>PC アプリがオンになっていて、Android アプリの電源とアクセシビリティ権限がオンになっているかを確認します。</p>
+            </div>
+          </article>
+          <article class="timeline-step">
+            <span>2</span>
+            <div>
+              <strong>PC が見えるか確認</strong>
+              <p>同じ Wi-Fi または同じルーターの下でデバイス検索ができるか確認し、デバイス検索をもう一度実行します。</p>
+            </div>
+          </article>
+          <article class="timeline-step">
+            <span>3</span>
+            <div>
+              <strong>ペアリングの状態を確認</strong>
+              <p>PC 一覧にペアリングが必要と表示される場合は、QR または 6 桁コードをもう一度使います。すでにこじれている場合は、いったんペアリングを解除してから再接続します。</p>
+            </div>
+          </article>
+          <article class="timeline-step">
+            <span>4</span>
+            <div>
+              <strong>入力と配置を確認</strong>
+              <p>PC で選択中のデバイス、Android の位置、進入方向、画面方向の変更後の同期状態を確認します。</p>
+            </div>
+          </article>
+          <article class="timeline-step">
+            <span>5</span>
+            <div>
+              <strong>復旧ショートカットを使う</strong>
+              <p>カーソルが Android 側に閉じ込められた感覚があれば、Ctrl + Alt + Backspace で PC 入力へ強制的に戻します。強制復帰すると、PC に復帰通知が表示されます。</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container split-grid">
+        <div>
+          <p class="section-kicker">Transfer</p>
+          <h2>ファイルとクリップボードが使えないとき</h2>
+          <ul class="bullet-list">
+            <li>PC でどの Android またはサブ PC が選択されているかを確認します。PC -> Android/PC のファイルは、選択中のデバイスへ送られます。</li>
+            <li>テキスト選択メニューで OneMouse to PC を押すか、Android の共有メニューで OneMouse を選ぶと、既定の PC へ送ります。</li>
+            <li>サブ PC では、ペアリングされたメイン PC が接続対象として見えていれば、PC -> PC のファイル転送が可能です。</li>
+            <li>OneMouse to PC が見えない場合は、「その他」のアプリ管理で One Mouse をオンにします。この設定は通常、最初の一度だけ必要です。</li>
+            <li>大きなファイルはネットワーク状態の影響を受けるため、接続が安定しているかをまず確認します。</li>
+            <li>クリップボードはファイル転送の TCP チャンネルを再利用するため、ペアリングとセッションキーの状態が重要です。</li>
+          </ul>
+        </div>
+        <figure class="shot-card">
+          <img src="../assets/onboarding_mobile_pair.jpg" alt="Android で検出された PC のペアリング画面" />
+          <figcaption>転送ができない場合は、まず同じネットワークで PC が検出されるかを確認します。</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">FAQ</p>
+          <h2>よくある質問</h2>
+          <p>最新の接続構造に合わせて回答をまとめ直しました。</p>
+        </div>
+        <div class="faq-grid">
+          <details open>
+            <summary>中継サーバーを経由しますか？</summary>
+            <div class="faq-answer">基本の構造は、同じ Wi-Fi または同じルーターの下で PC と Android が直接接続される方式です。</div>
+          </details>
+          <details>
+            <summary>PC が検索されない場合はどうすればよいですか？</summary>
+            <div class="faq-answer">PC と Android が同じ Wi-Fi または同じルーターの下にあるかを確認し、ゲスト Wi-Fi や会社ネットワークのように、デバイス同士が互いに見えない環境でないかを確認してください。</div>
+          </details>
+          <details>
+            <summary>Bluetoothでペアリングしたのに PC が電話を見つけられません。</summary>
+            <div class="faq-answer">電話の OneMouse 設定タブで Bluetooth モード（ベータ）を先にオンにしてから、Windows でペアリングしてください。順序が逆だと Windows が通信用の送信 COM ポートを作らないため、PC が電話を見つけられません。すでにペアリング済みの場合は、Windows でデバイスを削除して再ペアリングするか、コントロールパネルの『デバイスとプリンター』でデバイスのプロパティ →『サービス』タブの『MouseLink』シリアルポートをオンにするとポートが作成されます。</div>
+          </details>
+          <details>
+            <summary>QR スキャンと 6 桁コードは何が違いますか？</summary>
+            <div class="faq-answer">どちらも同じペアリングを開始する方法です。QR は入力を減らせて、6 桁コードはカメラを使いにくいときに利用できます。</div>
+          </details>
+          <details>
+            <summary>複数の Android を同時に接続できますか？</summary>
+            <div class="faq-answer">できます。PC で複数のデバイスを検出し、選択、接続、配置できます。</div>
+          </details>
+          <details>
+            <summary>他の Windows PC も制御できますか？</summary>
+            <div class="faq-answer">できます。メイン PC で対象 PC を検索し、6 桁コードでペアリングした後、スマートフォン位置 / 入力進入方向の画面で対象 PC を配置します。</div>
+          </details>
+          <details>
+            <summary>カーソルが Android から PC へ戻らないときはどうすればよいですか？</summary>
+            <div class="faq-answer">PC で Ctrl + Alt + Backspace を押してください。マウス入力を PC へ戻す復旧ショートカットです。</div>
+          </details>
+          <details>
+            <summary>Android から PC へテキストやファイルを送れますか？</summary>
+            <div class="faq-answer">Android の共有メニューで OneMouse を選ぶか、クリップボード同期を使うと、既定の PC へテキストやファイルを送れます。</div>
+          </details>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
@@ -64,9 +308,9 @@
       <span class="footer-links">
         <a href="./technical.html">技術/セキュリティ</a>
         <a href="./pricing.html">Free / Pro</a>
-        <a href="./privacy.html">プライバシー</a>
+        <a href="./privacy.html">プライバシーポリシー</a>
         <a href="./terms.html">利用規約</a>
-        <a href="./licenses.html">ライセンス</a>
+        <a href="./licenses.html">オープンソースライセンス</a>
       </span>
     </div>
   </footer>

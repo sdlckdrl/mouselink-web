@@ -4,7 +4,10 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>OneMouse | Help</title>
-  <meta name="description" content="Troubleshoot OneMouse power, permissions, discovery, pairing, placement, file transfer, and cursor return issues." />
+  <meta
+    name="description"
+    content="OneMouse help for troubleshooting permissions, pairing, network discovery, placement, and clipboard and file transfer issues."
+  />
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="canonical" href="https://onemouse.pages.dev/en/help" />
   <link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/help" />
@@ -12,7 +15,96 @@
   <link rel="alternate" hreflang="ja" href="https://onemouse.pages.dev/ja/help" />
   <link rel="alternate" hreflang="zh" href="https://onemouse.pages.dev/zh/help" />
   <link rel="alternate" hreflang="x-default" href="https://onemouse.pages.dev/help" />
-</head>
+  <meta property="og:site_name" content="OneMouse" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="OneMouse Help" />
+  <meta property="og:description" content="OneMouse help for troubleshooting permissions, pairing, network discovery, placement, and clipboard and file transfer issues." />
+  <meta property="og:url" content="https://onemouse.pages.dev/en/help" />
+  <meta property="og:image" content="https://onemouse.pages.dev/assets/hero-bg-generated-2.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="OneMouse Help" />
+  <meta name="twitter:description" content="OneMouse help for troubleshooting permissions, pairing, network discovery, placement, and clipboard and file transfer issues." />
+  <meta name="twitter:image" content="https://onemouse.pages.dev/assets/hero-bg-generated-2.png" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "OneMouse Help",
+      "url": "https://onemouse.pages.dev/en/help",
+      "inLanguage": "en-US",
+      "description": "OneMouse help for troubleshooting permissions, pairing, network discovery, placement, and clipboard and file transfer issues.",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "OneMouse",
+        "url": "https://onemouse.pages.dev/"
+      }
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What should I check when the PC is not visible in OneMouse?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Make sure the PC and Android are on the same Wi-Fi or under the same router, and check that guest Wi-Fi, a company network policy, a firewall, or security software is not blocking device discovery. Then run device search again in the Android app."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "I paired over Bluetooth, but the PC cannot find my phone. What do I do?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Turn on Bluetooth mode (Beta) on the OneMouse Settings tab on the phone first, then pair in Windows. If you do it in the reverse order, Windows does not create the outgoing COM port used for communication, so the PC cannot find the phone. If you have already paired, remove the device in Windows and pair again, or turn on the MouseLink serial port under the device's Services tab in Control Panel > Devices and Printers to create the port."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What should I check first when input does not go through in OneMouse?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "First check that the Android Accessibility service is on. If the Accessibility permission is off, your mouse and keyboard input is not delivered to Android even when the PC looks visible or connected."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What should I do when the OneMouse connection drops after the screen turns off?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Check the battery limit exception for OneMouse in Android settings. You can jump to the related Android settings screen from the battery limit item in the app settings."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What do I do when the cursor is stuck on Android and does not come back to the PC?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Press Ctrl + Alt + Backspace on the PC keyboard to force mouse input back to the PC."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does OneMouse support USB connections?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The current public guide is based on Wi-Fi or LAN connections. USB connections are not supported at this time."
+          }
+        }
+      ]
+    }
+  </script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MJ73H86TWX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-MJ73H86TWX');
+  </script></head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
@@ -44,10 +136,10 @@
     <section class="page-hero">
       <div class="container narrow">
         <p class="section-kicker">Help</p>
-        <h1>Narrow issues by power, permission, discovery, and placement.</h1>
+        <h1>Quickly narrow down permission, discovery, and return issues.</h1>
         <p class="page-intro">
-          Most issues fall into app power, Android permission, local network discovery, pairing, or placement.
-          Check them in order before changing advanced settings.
+          It is faster to split the cause into app power, permissions, network discovery, pairing, and placement.
+          Check the items below in order and you can narrow down most blockers.
         </p>
       </div>
     </section>
@@ -56,33 +148,43 @@
       <div class="container help-grid">
         <article class="help-card">
           <p class="section-kicker">Power</p>
-          <h2>Check app power</h2>
-          <p>If the Android power button is off, background work and input receivers are stopped. Turn it on before connecting.</p>
+          <h2>Check the app power</h2>
+          <p>If the power in the top-right is off, background activity and input receiving stop. Turn the power on first when you start a connection.</p>
         </article>
         <article class="help-card">
           <p class="section-kicker">Permissions</p>
-          <h2>Accessibility comes first</h2>
-          <p>Android input control requires the OneMouse Accessibility service. A visible PC does not mean input can be delivered.</p>
+          <h2>Permissions come first</h2>
+          <p>Android input control requires the Accessibility service to be on. If the permission is off, real input does not go through even when the PC is visible.</p>
         </article>
         <article class="help-card">
           <p class="section-kicker">Battery</p>
           <h2>Check battery limits</h2>
-          <p>If the connection drops after the screen turns off, open the battery optimization setting from the app settings screen.</p>
+          <p>If the connection drops often after the screen turns off, check the battery limit exception in Android settings. You can jump there directly from the battery limit item in the app settings.</p>
+        </article>
+        <article class="help-card">
+          <p class="section-kicker">Pairing</p>
+          <h2>QR or 6-digit code</h2>
+          <p>Scan the QR at the bottom of the PC or enter the 6-digit code. It is normal for the connect button to stay disabled before pairing.</p>
         </article>
         <article class="help-card">
           <p class="section-kicker">Device Search</p>
-          <h2>Check the network</h2>
-          <p>Guest Wi-Fi, company networks, router isolation, and firewalls can prevent your PC and Android device from seeing each other.</p>
+          <h2>Check network discovery</h2>
+          <p>On company networks, guest Wi-Fi, and some router settings, device discovery may be blocked. First check that you are under the same router.</p>
+        </article>
+        <article class="help-card">
+          <p class="section-kicker">Firewall</p>
+          <h2>Check the firewall and network</h2>
+          <p>If the PC is not visible, check whether you are on the same Wi-Fi or under the same router, and whether a guest Wi-Fi or company network policy is blocking it.</p>
         </article>
         <article class="help-card">
           <p class="section-kicker">Layout</p>
-          <h2>When placement feels wrong</h2>
-          <p>Save the phone position again after rotation or display changes. The PC uses that placement for cursor handoff.</p>
+          <h2>When the placement is off</h2>
+          <p>After an Android orientation change, the screen size and position are synced again. If it still feels off, save the phone position again.</p>
         </article>
         <article class="help-card">
           <p class="section-kicker">Return</p>
           <h2>Cursor return shortcut</h2>
-          <p>If the cursor does not return from Android, press Ctrl + Alt + Backspace on the PC. A small desktop toast confirms the forced return.</p>
+          <p>If the cursor does not come back to the PC, press Ctrl + Alt + Backspace to return mouse input to the PC. When the return runs, a small notification appears on the PC.</p>
         </article>
       </div>
     </section>
@@ -91,43 +193,43 @@
       <div class="container">
         <div class="section-heading">
           <p class="section-kicker">Troubleshooting</p>
-          <h2>Follow this order.</h2>
-          <p>Finding the failing step is faster than changing several settings at once.</p>
+          <h2>Troubleshooting order</h2>
+          <p>Splitting out which step you are stuck at first makes the fix much faster.</p>
         </div>
         <div class="timeline">
           <article class="timeline-step">
             <span>1</span>
             <div>
-              <strong>Check app and permission state</strong>
-              <p>Confirm the PC app, Android app power, foreground service, and Accessibility permission are active.</p>
+              <strong>Check the app and permission state</strong>
+              <p>Confirm the PC app is on, and that the Android app power and Accessibility permission are on.</p>
             </div>
           </article>
           <article class="timeline-step">
             <span>2</span>
             <div>
               <strong>Check whether the PC is visible</strong>
-              <p>Confirm both devices are on the same local network and run device search again.</p>
+              <p>Confirm that device search works under the same Wi-Fi or the same router, then run device search again.</p>
             </div>
           </article>
           <article class="timeline-step">
             <span>3</span>
             <div>
-              <strong>Check pairing state</strong>
-              <p>If the PC shows pairing required, use QR or the 6-digit code again. If state is confused, unpair and pair again.</p>
+              <strong>Check the pairing state</strong>
+              <p>If the PC list shows pairing required, use the QR or 6-digit code again. If it is already tangled, unpair and connect again.</p>
             </div>
           </article>
           <article class="timeline-step">
             <span>4</span>
             <div>
               <strong>Check input and placement</strong>
-              <p>Check the selected PC, Android position, entry direction, and display rotation state.</p>
+              <p>On the PC, check the selected device, the Android position, the entry direction, and the sync state after a screen orientation change.</p>
             </div>
           </article>
           <article class="timeline-step">
             <span>5</span>
             <div>
-              <strong>Use recovery shortcut</strong>
-              <p>Use Ctrl + Alt + Backspace if the cursor feels stuck on the Android side. The PC shows a return toast when the forced return runs.</p>
+              <strong>Use the recovery shortcut</strong>
+              <p>If the cursor feels trapped on the Android side, force PC input back with Ctrl + Alt + Backspace. On a forced return, a return notification appears on the PC.</p>
             </div>
           </article>
         </div>
@@ -138,20 +240,64 @@
       <div class="container split-grid">
         <div>
           <p class="section-kicker">Transfer</p>
-          <h2>When files or clipboard do not transfer</h2>
+          <h2>When files and clipboard do not work</h2>
           <ul class="bullet-list">
-            <li>Check which Android device or Sub PC is selected in the PC app.</li>
-            <li>Android to PC sharing uses the default PC.</li>
-            <li>In Sub PC mode, the paired Main PC must be visible before PC-to-PC file transfer can start.</li>
-            <li>If OneMouse does not appear in Android share targets, enable it in the app list.</li>
-            <li>Large files depend on local network stability.</li>
-            <li>Pairing and session key state must be valid.</li>
+            <li>Check which Android device or Sub PC is selected on the PC. PC -> Android/PC files go to the selected device.</li>
+            <li>Press OneMouse to PC in the text selection menu, or choose OneMouse from the Android share menu, to send it to the default PC.</li>
+            <li>On a Sub PC, the paired Main PC must appear as the connection target before PC -> PC file transfer is possible.</li>
+            <li>If OneMouse to PC does not appear, turn on One Mouse in Manage apps under the More menu. This setting is usually only needed once at the start.</li>
+            <li>Large files are affected by the network state, so first check that the connection is stable.</li>
+            <li>The clipboard reuses the file transfer TCP channel, so the pairing and session key state matters.</li>
           </ul>
         </div>
         <figure class="shot-card">
-          <img src="../assets/onboarding_mobile_pair.jpg" alt="Android detected PC pairing screen" />
-          <figcaption>When transfer fails, first check that the PC is detected on the same network.</figcaption>
+          <img src="../assets/onboarding_mobile_pair.jpg" alt="The Android screen for pairing a detected PC" />
+          <figcaption>If transfer fails, first check that the PC is detected on the same network.</figcaption>
         </figure>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">FAQ</p>
+          <h2>Frequently asked questions</h2>
+          <p>The answers have been reorganized around the latest connection structure.</p>
+        </div>
+        <div class="faq-grid">
+          <details open>
+            <summary>Does it go through an intermediate server?</summary>
+            <div class="faq-answer">The default structure is a direct connection between the PC and Android under the same Wi-Fi or the same router.</div>
+          </details>
+          <details>
+            <summary>What do I do if the PC is not discovered?</summary>
+            <div class="faq-answer">Make sure the PC and Android are on the same Wi-Fi or under the same router, and check that you are not in an environment where devices cannot see each other, such as guest Wi-Fi or a company network.</div>
+          </details>
+          <details>
+            <summary>I paired over Bluetooth, but the PC cannot find my phone.</summary>
+            <div class="faq-answer">Turn on Bluetooth mode (Beta) on the OneMouse Settings tab on the phone first, then pair in Windows. If you do it in the reverse order, Windows does not create the outgoing COM port used for communication, so the PC cannot find the phone. If you have already paired, remove the device in Windows and pair again, or turn on the 'MouseLink' serial port under device properties → the Services tab in Control Panel > 'Devices and Printers' to create the port.</div>
+          </details>
+          <details>
+            <summary>What is the difference between scanning the QR and the 6-digit code?</summary>
+            <div class="faq-answer">Both are ways to start the same pairing. The QR reduces typing, and the 6-digit code can be used when the camera is hard to use.</div>
+          </details>
+          <details>
+            <summary>Can I connect several Android devices at once?</summary>
+            <div class="faq-answer">Yes. You can discover, select, connect, and place multiple devices on the PC.</div>
+          </details>
+          <details>
+            <summary>Can I control another Windows PC too?</summary>
+            <div class="faq-answer">Yes. Search for the target PC on the Main PC, pair it with the 6-digit code, then place the target PC on the Phone position / input direction screen.</div>
+          </details>
+          <details>
+            <summary>What do I do if the cursor does not return from Android to the PC?</summary>
+            <div class="faq-answer">Press Ctrl + Alt + Backspace on the PC. It is the recovery shortcut that returns mouse input to the PC.</div>
+          </details>
+          <details>
+            <summary>Can I send text or files from Android to the PC?</summary>
+            <div class="faq-answer">You can send text and files to the default PC by choosing OneMouse from the Android share menu or by using clipboard sync.</div>
+          </details>
+        </div>
       </div>
     </section>
   </main>
@@ -162,9 +308,9 @@
       <span class="footer-links">
         <a href="./technical.html">Technical/Security</a>
         <a href="./pricing.html">Free / Pro</a>
-        <a href="./privacy.html">Privacy</a>
+        <a href="./privacy.html">Privacy Policy</a>
         <a href="./terms.html">Terms</a>
-        <a href="./licenses.html">Licenses</a>
+        <a href="./licenses.html">Open Source Licenses</a>
       </span>
     </div>
   </footer>
