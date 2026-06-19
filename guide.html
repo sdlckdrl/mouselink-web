@@ -87,6 +87,14 @@
             "@type": "Answer",
             "text": "커서가 Android 쪽에 남아 있는 느낌이면 PC에서 Ctrl + Alt + Backspace를 눌러 입력 제어를 PC로 강제 복귀합니다."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "OneMouse를 Wi-Fi 없이 블루투스로 연결할 수 있나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "네. Android 설정 탭에서 블루투스 모드(베타)를 켜고 Windows 블루투스 설정에서 폰을 한 번 페어링하면, PC 앱이 자동으로 연결해 마우스와 키보드 입력, 클립보드, 파일 전송을 사용할 수 있습니다. 라우터나 인터넷 연결은 필요하지 않습니다. Wi-Fi가 연결되면 더 빠른 Wi-Fi를 우선 사용하고 블루투스는 자동으로 꺼집니다."
+          }
         }
       ]
     }
@@ -140,6 +148,7 @@
           <a class="button button-primary" href="#quick-start">5분 연결 순서</a>
           <a class="button button-secondary" href="#mobile-mirror-control">원격 제어</a>
           <a class="button button-secondary" href="#permissions">필요한 권한 보기</a>
+          <a class="button button-secondary" href="#bluetooth-connect">블루투스 연결</a>
           <a class="button button-secondary" href="#pc-to-pc">다른 PC 연결</a>
           <a class="button button-secondary" href="#keyboard-shortcuts">단축키 보기</a>
           <a class="button button-secondary" href="./technical.html">기술/보안 안내</a>
@@ -236,6 +245,79 @@
             </figure>
           </div>
         </details>
+      </div>
+    </section>
+
+    <section class="section" id="bluetooth-connect">
+      <div class="container split-grid">
+        <div>
+          <p class="section-kicker">Bluetooth (Beta)</p>
+          <h2>공유기 없이 블루투스로도 연결할 수 있습니다.</h2>
+          <p class="lead">
+            같은 Wi-Fi가 없거나 인터넷이 끊긴 환경에서도 블루투스로 PC와 Android를 직접 연결해
+            마우스와 키보드 입력, 클립보드, 파일 전송을 사용할 수 있습니다. 라우터나 인터넷 연결은 필요하지 않습니다.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-secondary" href="#quick-start">Wi-Fi 연결 순서</a>
+            <a class="button button-secondary" href="#file-transfer">파일 전송 보기</a>
+          </div>
+        </div>
+        <div class="panel">
+          <p class="section-kicker">When To Use</p>
+          <h2>이런 때 유용합니다</h2>
+          <ul class="bullet-list">
+            <li>회의실, 외부, 차량처럼 같은 Wi-Fi에 둘 수 없는 환경</li>
+            <li>게스트 Wi-Fi나 방화벽 때문에 PC가 검색되지 않을 때</li>
+            <li>키보드 입력과 클립보드 위주로 가볍게 쓰고 싶을 때</li>
+          </ul>
+        </div>
+      </div>
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Order</p>
+          <h2>블루투스 연결은 이 순서로 합니다.</h2>
+          <p>먼저 Android에서 블루투스 모드를 켜고, Windows에서 한 번 페어링하면 PC 앱이 자동으로 연결합니다. PC에서 따로 연결 버튼을 누를 필요는 없습니다.</p>
+        </div>
+        <div class="timeline">
+          <article class="timeline-step">
+            <span>1</span>
+            <div>
+              <strong>Android 설정 탭에서 블루투스 모드를 켭니다</strong>
+              <p>OneMouse 앱의 설정 탭에 있는 블루투스 모드(베타)를 켜면 Android가 PC의 연결을 기다립니다.</p>
+            </div>
+          </article>
+          <article class="timeline-step">
+            <span>2</span>
+            <div>
+              <strong>Windows 블루투스 설정에서 폰을 페어링합니다</strong>
+              <p>Windows의 블루투스 및 기기 설정에서 폰을 추가해 한 번 페어링합니다. 이 과정에서 통신용 COM 포트가 자동으로 만들어집니다. 페어링은 처음 한 번만 하면 됩니다.</p>
+            </div>
+          </article>
+          <article class="timeline-step">
+            <span>3</span>
+            <div>
+              <strong>PC 앱이 자동으로 연결합니다</strong>
+              <p>페어링이 끝나면 PC 앱이 블루투스 기기를 찾아 자동으로 연결합니다. 기기 관리 목록에 블루투스 기기로 표시됩니다.</p>
+            </div>
+          </article>
+          <article class="timeline-step">
+            <span>4</span>
+            <div>
+              <strong>입력, 클립보드, 파일 전송을 사용합니다</strong>
+              <p>Wi-Fi 연결과 동일하게 마우스와 키보드 입력, 양방향 클립보드, 파일 전송을 사용할 수 있습니다.</p>
+            </div>
+          </article>
+        </div>
+        <div class="panel">
+          <p class="section-kicker">Notes</p>
+          <h2>알아두면 좋은 점</h2>
+          <ul class="bullet-list">
+            <li>Wi-Fi가 연결되면 더 빠른 Wi-Fi를 우선 사용하고 블루투스는 자동으로 꺼집니다. 기기 목록에 같은 폰이 두 번 보이지 않습니다.</li>
+            <li>블루투스는 Wi-Fi보다 느립니다. 마우스와 키보드 입력, 클립보드, 작은 파일에 적합하며 큰 파일은 Wi-Fi를 권장합니다.</li>
+            <li>모바일 화면 원격 제어는 대역폭이 큰 기능이라 블루투스에서는 권장하지 않습니다.</li>
+            <li>연결이 보이지 않으면 Windows에서 폰이 페어링되어 있는지, Android의 블루투스 모드가 켜져 있는지 확인합니다.</li>
+          </ul>
+        </div>
       </div>
     </section>
 
