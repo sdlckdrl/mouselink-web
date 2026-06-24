@@ -214,7 +214,7 @@ figure {
 
 .hero-content h1 {
   margin: 16px 0 0;
-  font-size: 72px;
+  font-size: 60px;
   line-height: 1;
   letter-spacing: 0;
 }
@@ -324,7 +324,7 @@ figure {
 }
 
 .page-hero h1 {
-  font-size: 52px;
+  font-size: 46px;
 }
 
 .section-heading {
@@ -334,7 +334,7 @@ figure {
 
 .section-heading h2,
 .split-grid h2 {
-  font-size: 38px;
+  font-size: 32px;
 }
 
 .eyebrow,
@@ -1189,16 +1189,16 @@ figure {
   }
 
   .hero-content h1 {
-    font-size: 56px;
+    font-size: 50px;
   }
 
   .page-hero h1 {
-    font-size: 40px;
+    font-size: 36px;
   }
 
   .section-heading h2,
   .split-grid h2 {
-    font-size: 32px;
+    font-size: 28px;
   }
 
   .guide-grid,
