@@ -93,7 +93,7 @@
           "name": "OneMouse を Wi-Fi なしで Bluetooth で接続できますか？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "はい。AndroidのOneMouseアプリの設定タブでBluetoothモード（ベータ）をオンにし、WindowsのBluetooth設定で一度ペアリングすると、PCアプリが自動的に接続します。マウスとキーボード入力、クリップボード、ファイル転送をそのまま使えます。ルーターやインターネット接続は不要です。BluetoothはWi-Fi接続とは独立して動作するため、一方のデバイスをWi-Fiで、もう一方をBluetoothで同時に使うこともできます。"
+            "text": "はい。AndroidのOneMouseアプリの設定タブでBluetoothモードをオンにし、WindowsのBluetooth設定で一度ペアリングすると、PCアプリが自動的に接続します。マウスとキーボード入力、クリップボード、ファイル転送をそのまま使えます。ルーターやインターネット接続は不要です。BluetoothはWi-Fi接続とは独立して動作するため、一方のデバイスをWi-Fiで、もう一方をBluetoothで同時に使うこともできます。"
           }
         }
       ]
@@ -251,10 +251,10 @@
     <section class="section" id="bluetooth-connect">
       <div class="container split-grid">
         <div>
-          <p class="section-kicker">Bluetooth (Beta)</p>
+          <p class="section-kicker">Bluetooth</p>
           <h2>ルーターなしでも Bluetooth で接続できます。</h2>
           <p class="lead">
-            同じ Wi-Fi がない環境やインターネットが切れた環境でも、Bluetooth で PC と Android を直接つないで
+            同じ Wi-Fi がない環境やインターネットが切れた環境でも、Bluetooth で PC と Android を、そして別の PC とも直接つないで
             マウスとキーボード入力、クリップボード、ファイル転送を使えます。ルーターやインターネット接続は必要ありません。
           </p>
           <div class="hero-actions">
@@ -283,7 +283,7 @@
             <span>1</span>
             <div>
               <strong>Android の設定タブで Bluetooth モードをオンにします</strong>
-              <p>OneMouse アプリの設定タブにある Bluetooth モード（ベータ）をオンにすると、Android が PC からの接続を待ちます。</p>
+              <p>OneMouse アプリの設定タブにある Bluetooth モードをオンにすると、Android が PC からの接続を待ちます。</p>
             </div>
           </article>
           <article class="timeline-step">
@@ -308,11 +308,29 @@
             </div>
           </article>
         </div>
+        <figure class="shot-card shot-desktop">
+          <img src="../assets/guide_bt_sub_devices.png" alt="サブPCのデバイス管理画面 — Bluetoothで接続したメインPCが「メインPC・接続済み」の行として表示される様子" loading="lazy" />
+          <figcaption>接続すると、BluetoothでつながったPCがデバイス管理に表示されます。（サブPC画面）</figcaption>
+        </figure>
+        <figure class="shot-card shot-desktop">
+          <video src="../assets/demo/bt-typing.mp4" poster="../assets/demo/bt-typing-poster.jpg" autoplay loop muted playsinline preload="metadata" style="width:100%;height:auto;display:block;border-radius:14px;">
+            <img src="../assets/demo/bt-typing.gif" alt="PCキーボードで入力すると、Bluetoothで接続したスマホの入力欄にそのまま文字が入る様子" loading="lazy" />
+          </video>
+          <figcaption>PCキーボードで打つと、Bluetoothで接続したスマホにそのまま入力されます（Wi‑Fiなし）。</figcaption>
+        </figure>
+        <figure class="shot-card shot-desktop">
+          <video src="../assets/demo/bt-drag.mp4" poster="../assets/demo/bt-drag-poster.jpg" autoplay loop muted playsinline preload="metadata" style="width:100%;height:auto;display:block;border-radius:14px;">
+            <img src="../assets/demo/bt-drag.gif" alt="ファイルを画面の端へドラッグして、Bluetoothで接続した別の端末へ送る様子" loading="lazy" />
+          </video>
+          <figcaption>ファイルを画面の端へドラッグすると、Bluetoothで接続した端末へ送られます。（Wi‑Fiと同じ操作）</figcaption>
+        </figure>
         <div class="panel">
           <p class="section-kicker">Notes</p>
           <h2>知っておくと便利な点</h2>
           <ul class="bullet-list">
             <li>Bluetooth は設定タブのトグルでオン・オフし、Wi-Fi 接続とは独立して動作します。オンにしておくと、スマートフォンが準備できた時点で自動的に接続し、スマートフォンが見つからないときは間隔を徐々に広げながら控えめに再試行します。</li>
+            <li>別の PC とも Bluetooth で接続できます。一方をメイン PC、もう一方をサブ PC にすると、マウスとキーボードを渡し、クリップボードを共有し、ファイルを画面の端へドラッグして双方向（送る・取り戻す）にやり取りできます。</li>
+            <li>Bluetooth デバイスは複数台を同時に接続できます。デバイス管理の Bluetooth 一覧で、各デバイスをトグルでオン・オフします。</li>
             <li>Bluetooth は Wi-Fi より低速です。マウスとキーボード入力、クリップボード、小さなファイルに適しており、大きなファイルには Wi-Fi をおすすめします。</li>
             <li>モバイル画面のリモート制御は帯域幅が大きい機能のため、Bluetooth では推奨しません。</li>
             <li>接続が表示されない場合は、Windows でスマートフォンがペアリングされているか、Android の Bluetooth モードがオンになっているかを確認します。</li>

@@ -93,7 +93,7 @@
           "name": "可以不用 Wi-Fi 而通过蓝牙连接 OneMouse 吗？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "可以。在 Android 的 OneMouse 应用设置标签页中开启蓝牙模式（测试版），并在 Windows 蓝牙设置中配对一次手机后，PC 应用会自动连接，即可使用鼠标和键盘输入、剪贴板以及文件传输。无需路由器或互联网连接。蓝牙独立于 Wi-Fi 连接运行，因此你甚至可以让一台设备通过 Wi-Fi、另一台通过蓝牙同时使用。"
+            "text": "可以。在 Android 的 OneMouse 应用设置标签页中开启蓝牙模式，并在 Windows 蓝牙设置中配对一次手机后，PC 应用会自动连接，即可使用鼠标和键盘输入、剪贴板以及文件传输。无需路由器或互联网连接。蓝牙独立于 Wi-Fi 连接运行，因此你甚至可以让一台设备通过 Wi-Fi、另一台通过蓝牙同时使用。"
           }
         }
       ]
@@ -251,10 +251,10 @@
     <section class="section" id="bluetooth-connect">
       <div class="container split-grid">
         <div>
-          <p class="section-kicker">Bluetooth (Beta)</p>
+          <p class="section-kicker">Bluetooth</p>
           <h2>无需路由器也可以通过蓝牙连接。</h2>
           <p class="lead">
-            即使没有相同的 Wi-Fi 或在断网环境下，也可以用蓝牙将 PC 与 Android 直接连接，
+            即使没有相同的 Wi-Fi 或在断网环境下，也可以用蓝牙将 PC 与 Android，以及另一台 PC 直接连接，
             使用鼠标和键盘输入、剪贴板以及文件传输。无需路由器或互联网连接。
           </p>
           <div class="hero-actions">
@@ -283,7 +283,7 @@
             <span>1</span>
             <div>
               <strong>在 Android 设置标签页中开启蓝牙模式</strong>
-              <p>在 OneMouse 应用设置标签页中开启蓝牙模式（测试版）后，Android 会等待 PC 的连接。</p>
+              <p>在 OneMouse 应用设置标签页中开启蓝牙模式后，Android 会等待 PC 的连接。</p>
             </div>
           </article>
           <article class="timeline-step">
@@ -308,11 +308,29 @@
             </div>
           </article>
         </div>
+        <figure class="shot-card shot-desktop">
+          <img src="../assets/guide_bt_sub_devices.png" alt="副 PC 的设备管理界面 — 通过蓝牙连接的主 PC 显示为「主 PC · 已连接」一行" loading="lazy" />
+          <figcaption>连接后，通过蓝牙连接的 PC 会显示在设备管理中。（副 PC 界面）</figcaption>
+        </figure>
+        <figure class="shot-card shot-desktop">
+          <video src="../assets/demo/bt-typing.mp4" poster="../assets/demo/bt-typing-poster.jpg" autoplay loop muted playsinline preload="metadata" style="width:100%;height:auto;display:block;border-radius:14px;">
+            <img src="../assets/demo/bt-typing.gif" alt="在 PC 键盘上打字，字符直接进入通过蓝牙连接的手机输入框" loading="lazy" />
+          </video>
+          <figcaption>在 PC 键盘上打字，直接输入到通过蓝牙连接的手机（无需 Wi‑Fi）。</figcaption>
+        </figure>
+        <figure class="shot-card shot-desktop">
+          <video src="../assets/demo/bt-drag.mp4" poster="../assets/demo/bt-drag-poster.jpg" autoplay loop muted playsinline preload="metadata" style="width:100%;height:auto;display:block;border-radius:14px;">
+            <img src="../assets/demo/bt-drag.gif" alt="把文件拖到屏幕边缘，发送到通过蓝牙连接的另一台设备" loading="lazy" />
+          </video>
+          <figcaption>把文件拖到屏幕边缘，即可发送到通过蓝牙连接的设备。（与 Wi‑Fi 相同）</figcaption>
+        </figure>
         <div class="panel">
           <p class="section-kicker">Notes</p>
           <h2>值得了解的事项</h2>
           <ul class="bullet-list">
             <li>蓝牙通过设置标签页中的开关来开启或关闭，并独立于 Wi-Fi 连接运行。开启后，会在手机准备就绪时自动连接；如果找不到手机，则会以逐渐拉长的间隔轻量地重试。</li>
+            <li>也可以通过蓝牙连接另一台 PC。把一台设为主 PC、另一台设为副 PC，就能传递鼠标和键盘、共享剪贴板，并把文件拖过屏幕边界进行双向收发（发送和取回）。</li>
+            <li>蓝牙设备可以同时连接多台。在设备管理的蓝牙列表中，用各自的开关分别开启或关闭每台设备。</li>
             <li>蓝牙比 Wi-Fi 慢。适合鼠标和键盘输入、剪贴板以及小文件，大文件建议使用 Wi-Fi。</li>
             <li>移动屏幕远程控制是带宽较大的功能，不建议在蓝牙下使用。</li>
             <li>如果看不到连接，请确认 Android 的蓝牙模式是否已开启、手机是否已在 Windows 中完成配对，然后稍等片刻；如果仍未连接，请在 Windows 中删除该设备并重新配对一次。</li>

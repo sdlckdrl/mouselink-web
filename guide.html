@@ -93,7 +93,7 @@
           "name": "OneMouse를 Wi-Fi 없이 블루투스로 연결할 수 있나요?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "네. Android 설정 탭에서 블루투스 모드(베타)를 켜고 Windows 블루투스 설정에서 폰을 한 번 페어링하면, PC 앱이 자동으로 연결해 마우스와 키보드 입력, 클립보드, 파일 전송을 사용할 수 있습니다. 라우터나 인터넷 연결은 필요하지 않습니다. 블루투스는 Wi-Fi 연결과 독립적으로 동작하므로, 한 기기는 Wi-Fi로 다른 기기는 블루투스로 동시에 사용할 수도 있습니다."
+            "text": "네. Android 설정 탭에서 블루투스 모드를 켜고 Windows 블루투스 설정에서 폰을 한 번 페어링하면, PC 앱이 자동으로 연결해 마우스와 키보드 입력, 클립보드, 파일 전송을 사용할 수 있습니다. 라우터나 인터넷 연결은 필요하지 않습니다. 블루투스는 Wi-Fi 연결과 독립적으로 동작하므로, 한 기기는 Wi-Fi로 다른 기기는 블루투스로 동시에 사용할 수도 있습니다."
           }
         }
       ]
@@ -251,10 +251,10 @@
     <section class="section" id="bluetooth-connect">
       <div class="container split-grid">
         <div>
-          <p class="section-kicker">Bluetooth (Beta)</p>
+          <p class="section-kicker">Bluetooth</p>
           <h2>공유기 없이 블루투스로도 연결할 수 있습니다.</h2>
           <p class="lead">
-            같은 Wi-Fi가 없거나 인터넷이 끊긴 환경에서도 블루투스로 PC와 Android를 직접 연결해
+            같은 Wi-Fi가 없거나 인터넷이 끊긴 환경에서도 블루투스로 PC와 Android를, 그리고 다른 PC와도 직접 연결해
             마우스와 키보드 입력, 클립보드, 파일 전송을 사용할 수 있습니다. 라우터나 인터넷 연결은 필요하지 않습니다.
           </p>
           <div class="hero-actions">
@@ -283,7 +283,7 @@
             <span>1</span>
             <div>
               <strong>Android 설정 탭에서 블루투스 모드를 켭니다</strong>
-              <p>OneMouse 앱의 설정 탭에 있는 블루투스 모드(베타)를 켜면 Android가 PC의 연결을 기다립니다.</p>
+              <p>OneMouse 앱의 설정 탭에 있는 블루투스 모드를 켜면 Android가 PC의 연결을 기다립니다.</p>
             </div>
           </article>
           <article class="timeline-step">
@@ -308,11 +308,29 @@
             </div>
           </article>
         </div>
+        <figure class="shot-card shot-desktop">
+          <img src="./assets/guide_bt_sub_devices.png" alt="서브 PC의 기기 관리 화면 — 블루투스로 연결된 메인 PC가 '메인 PC · 연결됨' 행으로 표시된 모습" loading="lazy" />
+          <figcaption>연결되면 기기 관리에 블루투스로 붙은 기기가 표시됩니다. (서브 PC 화면)</figcaption>
+        </figure>
+        <figure class="shot-card shot-desktop">
+          <video src="./assets/demo/bt-typing.mp4" poster="./assets/demo/bt-typing-poster.jpg" autoplay loop muted playsinline preload="metadata" style="width:100%;height:auto;display:block;border-radius:14px;">
+            <img src="./assets/demo/bt-typing.gif" alt="PC 키보드로 입력하면 블루투스로 연결된 폰 입력칸에 글자가 그대로 들어가는 모습" loading="lazy" />
+          </video>
+          <figcaption>PC 키보드로 치면 블루투스로 연결된 폰에 그대로 입력됩니다. (Wi-Fi 없이)</figcaption>
+        </figure>
+        <figure class="shot-card shot-desktop">
+          <video src="./assets/demo/bt-drag.mp4" poster="./assets/demo/bt-drag-poster.jpg" autoplay loop muted playsinline preload="metadata" style="width:100%;height:auto;display:block;border-radius:14px;">
+            <img src="./assets/demo/bt-drag.gif" alt="파일을 화면 경계로 끌어 블루투스로 연결된 다른 기기로 보내는 모습" loading="lazy" />
+          </video>
+          <figcaption>파일을 화면 경계로 끌면 블루투스로 연결된 기기로 전송됩니다. (Wi-Fi와 동일한 방식)</figcaption>
+        </figure>
         <div class="panel">
           <p class="section-kicker">Notes</p>
           <h2>알아두면 좋은 점</h2>
           <ul class="bullet-list">
             <li>블루투스는 설정 탭의 토글로 켜고 끄며, Wi-Fi 연결과 독립적으로 동작합니다. 켜 두면 폰이 준비될 때 자동으로 연결되고, 폰이 없으면 점점 간격을 늘려 가볍게 재시도합니다.</li>
+            <li>다른 PC와도 블루투스로 연결됩니다. 한쪽을 메인 PC, 다른 쪽을 서브 PC로 두면 마우스·키보드를 넘기고 클립보드를 공유하며, 파일을 화면 경계로 끌어 양방향(가져가기·가져오기)으로 주고받을 수 있습니다.</li>
+            <li>블루투스 기기는 여러 대를 동시에 연결할 수 있습니다. 기기 관리의 블루투스 목록에서 각 기기를 토글로 켜고 끕니다.</li>
             <li>블루투스는 Wi-Fi보다 느립니다. 마우스와 키보드 입력, 클립보드, 작은 파일에 적합하며 큰 파일은 Wi-Fi를 권장합니다.</li>
             <li>모바일 화면 원격 제어는 대역폭이 큰 기능이라 블루투스에서는 권장하지 않습니다.</li>
             <li>연결이 보이지 않으면 Android의 블루투스 모드가 켜져 있고 Windows에서 폰이 페어링되어 있는지 확인한 뒤 잠시 기다립니다. 그래도 안 되면 Windows에서 기기를 제거하고 다시 페어링합니다.</li>
