@@ -422,6 +422,10 @@ figure {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.faq-grid {
+  grid-template-columns: 1fr;
+}
+
 .split-grid {
   display: grid;
   gap: 28px;

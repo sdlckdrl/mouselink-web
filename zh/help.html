@@ -58,7 +58,7 @@
           "name": "连接成功后大约 10 秒就会断开，而且反复出现。",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "首次连接成功，但之后的状态信号（心跳）如果无法到达 PC，约 10 秒后就会被判定为断开。常见原因包括：访客或公司 Wi-Fi、路由器的设备隔离（AP 隔离）在连接后阻断数据包；Android 电池优化结束了后台服务；Windows 防火墙阻止入站；以及手机熄屏后 Wi-Fi 进入省电而断开。请在普通的共享 Wi-Fi 下，为 OneMouse 设置电池优化例外并在防火墙中放行。蓝牙连接则需检查距离与干扰。"
+            "text": "首次连接成功，但之后的状态信号如果无法到达 PC，约 10 秒后就会被判定为断开。常见原因包括：访客或公司 Wi-Fi、路由器的设备隔离在连接后阻断信号；Android 电池优化结束了后台服务；Windows 防火墙阻止入站；以及手机熄屏后 Wi-Fi 进入省电而断开。请在普通的共享 Wi-Fi 下，为 OneMouse 设置电池优化例外并在防火墙中放行。蓝牙连接则需检查距离与干扰。"
           }
         },
         {
@@ -74,7 +74,7 @@
           "name": "通过蓝牙配对后 PC 找不到手机怎么办？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "在 Windows 蓝牙设置中将手机配对一次即可，无需设置任何 COM 端口或串口。配对后启动 PC 应用即会自动连接。如果 PC 找不到手机，请确认手机 OneMouse 设置标签页中的蓝牙模式已开启、且手机已在 Windows 中配对，然后稍等片刻；若仍然失败，请在 Windows 中删除该设备后重新配对。"
+            "text": "在 Windows 蓝牙设置中将手机配对一次即可。配对后启动 PC 应用即会自动连接。如果 PC 找不到手机，请确认手机 OneMouse 设置标签页中的蓝牙模式已开启、且手机已在 Windows 中配对，然后稍等片刻；若仍然失败，请在 Windows 中删除该设备后重新配对。"
           }
         },
         {
@@ -231,7 +231,7 @@
             <span>3</span>
             <div>
               <strong>确认配对状态</strong>
-              <p>如果 PC 列表显示为需要配对，请重新使用二维码或 6 位代码。如果已经混乱，请先取消配对再重新连接。</p>
+              <p>如果 PC 列表显示为需要配对，请重新使用二维码或 6 位代码。如果已经混乱，请先删除配对再重新连接。</p>
             </div>
           </article>
           <article class="timeline-step">
@@ -263,7 +263,6 @@
             <li>在副 PC 上，需要把已配对的主 PC 显示为连接对象，才能进行 PC -> PC 文件传输。</li>
             <li>如果看不到 OneMouse to PC，请在更多的应用管理中开启 One Mouse。此设置通常只需首次进行一次。</li>
             <li>大文件会受网络状态影响，请先确认连接是否稳定。</li>
-            <li>剪贴板会复用文件传输的 TCP 通道，因此配对和会话密钥状态很重要。</li>
           </ul>
         </div>
         <figure class="shot-card">
@@ -291,7 +290,7 @@
           </details>
           <details>
             <summary>连接后大约 10 秒就反复断开。</summary>
-            <div class="faq-answer">首次连接成功，但之后的状态信号若无法到达 PC，约 10 秒后会被判定为断开。通常是 ① 访客/公司 Wi-Fi 或路由器的设备隔离（AP 隔离）在连接后阻断数据包，② Android 电池优化结束了后台服务（在设置的电池限制中把 OneMouse 设为“无限制”），③ Windows 防火墙阻止入站，④ 手机熄屏后 Wi-Fi 省电断开。请在普通共享 Wi-Fi 下设置电池优化例外并在防火墙放行。蓝牙则检查距离与干扰。</div>
+            <div class="faq-answer">首次连接成功，但之后的状态信号若无法到达 PC，约 10 秒后会被判定为断开。通常是 ① 访客/公司 Wi-Fi 或路由器的设备隔离在连接后阻断信号，② Android 电池优化结束了后台服务（在设置的电池限制中把 OneMouse 设为“无限制”），③ Windows 防火墙阻止入站，④ 手机熄屏后 Wi-Fi 省电断开。请在普通共享 Wi-Fi 下设置电池优化例外并在防火墙放行。蓝牙则检查距离与干扰。</div>
           </details>
           <details>
             <summary>手机能看到 PC，但 PC 找不到手机。</summary>
@@ -303,7 +302,7 @@
           </details>
           <details>
             <summary>通过蓝牙配对了，但 PC 找不到手机。</summary>
-            <div class="faq-answer">在 Windows 蓝牙设置中将手机配对一次即可，无需设置任何 COM 端口或串口。配对后启动 PC 应用即会自动连接。如果 PC 找不到手机，请确认手机 OneMouse 设置标签页中的蓝牙模式已开启、且手机已在 Windows 中配对，然后稍等片刻；若仍然失败，请在 Windows 中删除该设备后重新配对。</div>
+            <div class="faq-answer">在 Windows 蓝牙设置中将手机配对一次即可。配对后启动 PC 应用即会自动连接。如果 PC 找不到手机，请确认手机 OneMouse 设置标签页中的蓝牙模式已开启、且手机已在 Windows 中配对，然后稍等片刻；若仍然失败，请在 Windows 中删除该设备后重新配对。</div>
           </details>
           <details>
             <summary>可以同时连接多台 Android 吗？</summary>
