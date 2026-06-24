@@ -48,6 +48,11 @@ body:has(.pricing-hero) main,
   display: none !important;
 }
 
+/* 단축키 표는 .compare-table-wrap(가격/Pro 비교표 숨김)에 함께 걸려 사라지므로 다시 표시한다. */
+.shortcut-table-wrap {
+  display: block !important;
+}
+
 img {
   display: block;
   max-width: 100%;
