@@ -733,6 +733,10 @@ figure {
   margin-top: 18px;
 }
 
+.guide-reference > .shot-card {
+  margin-top: 18px;
+}
+
 .path-list {
   display: grid;
   gap: 12px;
