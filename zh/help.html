@@ -55,6 +55,22 @@
         },
         {
           "@type": "Question",
+          "name": "连接成功后大约 10 秒就会断开，而且反复出现。",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "首次连接成功，但之后的状态信号（心跳）如果无法到达 PC，约 10 秒后就会被判定为断开。常见原因包括：访客或公司 Wi-Fi、路由器的设备隔离（AP 隔离）在连接后阻断数据包；Android 电池优化结束了后台服务；Windows 防火墙阻止入站；以及手机熄屏后 Wi-Fi 进入省电而断开。请在普通的共享 Wi-Fi 下，为 OneMouse 设置电池优化例外并在防火墙中放行。蓝牙连接则需检查距离与干扰。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "手机能看到 PC，但 PC 检测不到手机。",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "这几乎都是 Windows 防火墙的入站拦截。手机能收到 PC 的信号，但 PC 接收手机信号的通道被挡住了；如果 Wi-Fi 被识别为“公用”网络，入站会更严格。请在防火墙中放行 OneMouse（应用首次启动时会询问），把网络改为“专用”，或使用最新版本（会自动放行公用配置文件）。然后在手机上重新搜索设备，并检查杀毒/安全软件是否拦截了入站。"
+          }
+        },
+        {
+          "@type": "Question",
           "name": "通过蓝牙配对后 PC 找不到手机怎么办？",
           "acceptedAnswer": {
             "@type": "Answer",
@@ -274,12 +290,20 @@
             <div class="faq-answer">请确认 PC 和 Android 是否处于同一 Wi-Fi 或同一路由器下，并确认是否处于访客 Wi-Fi 或公司网络这类设备之间彼此不可见的环境。</div>
           </details>
           <details>
-            <summary>通过蓝牙配对了，但 PC 找不到手机。</summary>
-            <div class="faq-answer">在 Windows 蓝牙设置中将手机配对一次即可，无需设置任何 COM 端口或串口。配对后启动 PC 应用即会自动连接。如果 PC 找不到手机，请确认手机 OneMouse 设置标签页中的蓝牙模式已开启、且手机已在 Windows 中配对，然后稍等片刻；若仍然失败，请在 Windows 中删除该设备后重新配对。</div>
+            <summary>连接后大约 10 秒就反复断开。</summary>
+            <div class="faq-answer">首次连接成功，但之后的状态信号若无法到达 PC，约 10 秒后会被判定为断开。通常是 ① 访客/公司 Wi-Fi 或路由器的设备隔离（AP 隔离）在连接后阻断数据包，② Android 电池优化结束了后台服务（在设置的电池限制中把 OneMouse 设为“无限制”），③ Windows 防火墙阻止入站，④ 手机熄屏后 Wi-Fi 省电断开。请在普通共享 Wi-Fi 下设置电池优化例外并在防火墙放行。蓝牙则检查距离与干扰。</div>
           </details>
           <details>
-            <summary>二维码扫描和 6 位代码有什么区别？</summary>
-            <div class="faq-answer">两者都是开始同一个配对的方式。二维码可以减少输入，6 位代码可在不便使用摄像头时使用。</div>
+            <summary>手机能看到 PC，但 PC 找不到手机。</summary>
+            <div class="faq-answer">几乎都是 Windows 防火墙的“入站”拦截。手机能收到 PC 信号，但 PC 接收手机信号的通道被挡住；如果 Wi-Fi 是“公用”网络，入站更严格。请在防火墙放行 OneMouse（首次启动会询问，若拒绝过请重新允许），把网络改为“专用”，或使用最新版本（会自动放行公用配置文件）。然后在手机上重新搜索设备，并检查杀毒/安全软件是否拦截入站。</div>
+          </details>
+          <details>
+            <summary>在家能用，但公司或咖啡店 Wi-Fi 不行。</summary>
+            <div class="faq-answer">访客 Wi-Fi 和公司网络出于安全常常隔离设备互访（客户端隔离），导致搜索/连接失败或连接后断开。请使用普通的共享 Wi-Fi（路由器）、把 PC 连到手机热点，或在 Wi-Fi 不便时改用蓝牙连接。</div>
+          </details>
+          <details>
+            <summary>通过蓝牙配对了，但 PC 找不到手机。</summary>
+            <div class="faq-answer">在 Windows 蓝牙设置中将手机配对一次即可，无需设置任何 COM 端口或串口。配对后启动 PC 应用即会自动连接。如果 PC 找不到手机，请确认手机 OneMouse 设置标签页中的蓝牙模式已开启、且手机已在 Windows 中配对，然后稍等片刻；若仍然失败，请在 Windows 中删除该设备后重新配对。</div>
           </details>
           <details>
             <summary>可以同时连接多台 Android 吗？</summary>
