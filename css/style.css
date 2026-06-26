@@ -782,7 +782,8 @@ figure {
   box-shadow: var(--shadow);
 }
 
-.video-frame iframe {
+.video-frame iframe,
+.video-frame video {
   width: 100%;
   height: 100%;
   display: block;
