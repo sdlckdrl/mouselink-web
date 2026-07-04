@@ -1007,6 +1007,23 @@ figure {
   font-weight: 640;
 }
 
+.bullet-list li strong {
+  color: var(--text);
+  font-weight: 850;
+}
+
+/* 업데이트 내역(기술 페이지)의 월 구분 라벨 */
+.update-date {
+  margin: 26px 0 4px;
+  color: var(--blue-deep);
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+}
+.update-date:first-of-type {
+  margin-top: 6px;
+}
+
 .shortcut {
   margin-top: 20px;
   padding: 18px;
