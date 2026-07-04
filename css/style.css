@@ -549,6 +549,12 @@ figure {
   font-weight: 900;
 }
 
+/* 최신 업데이트 섹션에서 새로 추가된 항목을 강조하는 라벨 변형. */
+.update-label.is-new {
+  background: #e2f5eb;
+  color: var(--green);
+}
+
 .update-card h3,
 .feature-card h3,
 .download-card h3,
