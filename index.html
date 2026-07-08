@@ -295,9 +295,26 @@
           const dist=(x+d.w/2-cx0)**2+(y+d.h/2-cy0)**2+(collides(id,x,y)?1e9:0);
           if(dist<bd){ bd=dist; best={x:x,y:y,side:c.side,ax:c.ax}; } } }
       return best; }
-    function snap(id){ const d=devs[id], b=bestDock(id);
-      if(b){ d.x=b.x; d.y=b.y; } d.x=clamp(d.x,0,VW-d.w); d.y=clamp(d.y,0,VH-d.h); }
-    function showSnap(id){ const b=bestDock(id); if(!b){ snapedge.style.opacity=0; return; }
+    function inRow(id){ const d=devs[id], p=devs.pc, dc=d.y+d.h/2; return dc>p.y-24 && dc<p.y+p.h+24; }
+    function placeRow(id){ const p=devs.pc, cy=p.y+p.h/2, sx=devs[id].x+devs[id].w/2;
+      const cenX=oid=>oid===id?sx:(oid==='pc'?p.x+p.w/2:devs[oid].x+devs[oid].w/2);
+      const row=['pc'];
+      for(const oid in devs){ if(oid===id||oid==='pc') continue; const m=devs[oid];
+        if(m.y+m.h/2>p.y-24 && m.y+m.h/2<p.y+p.h+24) row.push(oid); }
+      row.push(id); row.sort((a,b)=>cenX(a)-cenX(b));
+      let total=0; for(const oid of row) total+=devs[oid].w;
+      if(total>VW) return false;
+      let before=0; for(const oid of row){ if(oid==='pc') break; before+=devs[oid].w; }
+      let x=clamp(p.x-before,0,VW-total);
+      for(const oid of row){ const m=devs[oid]; m.x=x; m.y=clamp(cy-m.h/2,0,VH-m.h); x+=m.w; }
+      return true; }
+    function snap(id){ const d=devs[id];
+      if(!(inRow(id) && placeRow(id))){ const b=bestDock(id); if(b){ d.x=b.x; d.y=b.y; } }
+      d.x=clamp(d.x,0,VW-d.w); d.y=clamp(d.y,0,VH-d.h); }
+    function showSnap(id){ const d=devs[id], p=devs.pc;
+      if(inRow(id)){ const T=4, x=clamp(d.x+d.w/2,p.x-140,p.x+p.w+140);
+        snapedge.style.left=(x-T/2)+'px'; snapedge.style.top=p.y+'px'; snapedge.style.width=T+'px'; snapedge.style.height=p.h+'px'; snapedge.style.opacity=.9; return; }
+      const b=bestDock(id); if(!b){ snapedge.style.opacity=0; return; }
       const a=rectOf(devs[b.ax]),T=4; let s;
       if(b.side==='right')s={l:a.r-T/2,t:a.t,w:T,h:a.b-a.t}; else if(b.side==='left')s={l:a.l-T/2,t:a.t,w:T,h:a.b-a.t};
       else if(b.side==='bottom')s={l:a.l,t:a.b-T/2,w:a.r-a.l,h:T}; else s={l:a.l,t:a.t-T/2,w:a.r-a.l,h:T};
