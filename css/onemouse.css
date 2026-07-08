@@ -223,12 +223,13 @@ footer.site{ border-top:1px solid var(--line-soft); padding:30px 0; color:var(--
 .monitor .bar,.subpc .bar{ position:absolute; left:0; right:0; bottom:0; height:15px; background:rgba(10,20,35,.5); display:flex; align-items:center; gap:5px; padding:0 8px; }
 .monitor .bar i,.subpc .bar i{ width:9px; height:9px; border-radius:3px; background:rgba(255,255,255,.5); display:block; }
 #cursor{ position:absolute; left:0; top:0; width:22px; height:22px; z-index:8; pointer-events:none; transform:translate(-50%,-50%); will-change:transform; }
-#cursor svg{ width:100%; height:100%; filter:drop-shadow(0 3px 5px rgba(20,20,30,.5)); }
+#cursor svg{ display:block; width:100%; height:100%; transform-box:border-box; transform-origin:50% 50%; filter:drop-shadow(0 3px 5px rgba(20,20,30,.5)); }
 .pulse{ position:absolute; z-index:7; width:20px; height:20px; margin:-10px 0 0 -10px; border-radius:50%; border:2.5px solid var(--coral); pointer-events:none; }
 .snapedge{ position:absolute; z-index:5; border-radius:999px; background:var(--coral); opacity:0; pointer-events:none; transition:opacity .15s; }
 @media (prefers-reduced-motion:no-preference){
   .pulse{ animation:pop .55s ease-out forwards; } @keyframes pop{ from{ transform:scale(.4); opacity:.9; } to{ transform:scale(3.4); opacity:0; } }
-  #cursor.squash{ animation:squash .34s ease; } @keyframes squash{ 40%{ transform:translate(-50%,-50%) scale(1.5,.7); } 100%{ transform:translate(-50%,-50%) scale(1,1); } }
+  /* #cursor 자체는 JS가 인라인 transform으로 위치를 잡는다. 여기서 transform을 건드리면 커서가 스테이지 좌상단으로 튄다. 스쿼시는 안쪽 svg에만 건다. */
+  #cursor.squash svg{ animation:squash .34s ease; } @keyframes squash{ 40%{ transform:scale(1.5,.7); } 100%{ transform:scale(1,1); } }
 }
 .play-foot{ display:flex; align-items:center; gap:12px; padding:13px 18px; border-top:1px solid var(--line); flex-wrap:wrap; }
 #status{ font-size:14px; font-weight:700; display:flex; align-items:center; gap:9px; }
