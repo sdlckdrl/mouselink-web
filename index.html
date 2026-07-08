@@ -4,14 +4,11 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="naver-site-verification" content="8f3cbe8a89ca9969cc81ecf1ef5e0aae01858816" />
-  <title>OneMouse 원마우스 | PC로 Android와 다른 PC 제어</title>
-  <meta
-    name="description"
-    content="OneMouse는 PC 마우스와 키보드로 Android와 다른 Windows PC를 제어하고, 파일과 클립보드를 쉽게 주고받는 앱입니다."
-  />
+  <title>OneMouse 원마우스 | 마우스 하나로 폰·태블릿·다른 PC까지</title>
+  <meta name="description" content="OneMouse는 PC 마우스와 키보드로 Android와 다른 Windows PC를 제어하고, 파일과 클립보드를 쉽게 주고받는 무료 앱입니다. 마우스를 화면 끝으로 넘겨 그대로 이어 쓰세요." />
   <meta name="robots" content="index,follow,max-image-preview:large" />
-  <meta name="keywords" content="OneMouse, 원마우스, MouseLink, share mouse, Share Mouse, 쉐어마우스, 공유마우스, 마우스 공유, PC 마우스 공유, Android PC 제어, PC 마우스로 스마트폰 제어, Android 키보드 입력, PC to PC 마우스, Wi-Fi 파일 전송" />
-  <link rel="stylesheet" href="./css/style.css" />
+  <meta name="keywords" content="OneMouse, 원마우스, MouseLink, share mouse, 쉐어마우스, 공유마우스, 마우스 공유, PC 마우스 공유, Android PC 제어, PC 마우스로 스마트폰 제어, Android 키보드 입력, PC to PC 마우스, Wi-Fi 파일 전송" />
+  <link rel="stylesheet" href="./css/onemouse.css" />
   <link rel="canonical" href="https://onemouse.pages.dev/" />
   <link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/" />
   <link rel="alternate" hreflang="en" href="https://onemouse.pages.dev/en/" />
@@ -20,13 +17,13 @@
   <link rel="alternate" hreflang="x-default" href="https://onemouse.pages.dev/" />
   <meta property="og:site_name" content="OneMouse" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="OneMouse 원마우스 | PC로 Android와 다른 PC 제어" />
-  <meta property="og:description" content="PC 마우스와 키보드로 Android와 다른 Windows PC를 제어하고, 파일과 클립보드를 쉽게 주고받습니다." />
+  <meta property="og:title" content="OneMouse 원마우스 | 마우스 하나로 폰·태블릿·다른 PC까지" />
+  <meta property="og:description" content="PC 마우스와 키보드로 Android와 다른 Windows PC를 제어하고, 파일과 클립보드를 쉽게 주고받습니다. 무료." />
   <meta property="og:url" content="https://onemouse.pages.dev/" />
   <meta property="og:image" content="https://onemouse.pages.dev/assets/hero-bg-generated-2.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="OneMouse 원마우스 | PC로 Android와 다른 PC 제어" />
-  <meta name="twitter:description" content="PC 마우스와 키보드로 Android와 다른 Windows PC를 제어하고, 파일과 클립보드를 쉽게 주고받습니다." />
+  <meta name="twitter:title" content="OneMouse 원마우스 | 마우스 하나로 폰·태블릿·다른 PC까지" />
+  <meta name="twitter:description" content="PC 마우스와 키보드로 Android와 다른 Windows PC를 제어하고, 파일과 클립보드를 주고받습니다. 무료." />
   <meta name="twitter:image" content="https://onemouse.pages.dev/assets/hero-bg-generated-2.png" />
   <script type="application/ld+json">
     {
@@ -38,295 +35,269 @@
       "operatingSystem": "Windows, Android",
       "url": "https://onemouse.pages.dev/",
       "inLanguage": "ko-KR",
-      "downloadUrl": "https://onemouse.pages.dev/#download",
-      "description": "OneMouse는 PC 마우스와 키보드로 Android와 다른 Windows PC를 제어하고, 파일과 클립보드를 쉽게 주고받는 앱입니다.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "KRW"
-      }
+      "downloadUrl": "https://onemouse.pages.dev/#get",
+      "description": "OneMouse는 PC 마우스와 키보드로 Android와 다른 Windows PC를 제어하고, 파일과 클립보드를 쉽게 주고받는 무료 앱입니다.",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" }
     }
   </script>
-  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-MJ73H86TWX"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-MJ73H86TWX');
-  </script></head>
+  </script>
+</head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="./index.html" class="brand" aria-label="OneMouse 홈">
-        <span class="brand-mark">OM</span>
-        <span class="brand-copy">
-          <strong>OneMouse</strong>
-          <span>Windows와 Android를 로컬로 연결</span>
-        </span>
-      </a>
-      <nav class="top-nav" aria-label="주요 메뉴">
-        <a href="./index.html" class="is-active">소개</a>
-        <a href="./guide.html">사용 가이드</a>
+  <header class="site">
+    <div class="wrap hd">
+      <a class="brand" href="./index.html" aria-label="OneMouse 홈"><span class="om">OM</span>OneMouse</a>
+      <nav class="nav" aria-label="주요 메뉴">
+        <a href="./index.html" class="on">소개</a>
+        <a href="#use">기능</a>
+        <a href="./guide.html">사용법</a>
         <a href="./help.html">도움말</a>
-        <a href="./technical.html">기술/보안</a>
-        <a href="./pricing.html">요금/Pro</a>
-        <a href="#download" class="nav-cta">다운로드</a>
       </nav>
-      <div class="lang-switch" aria-label="언어">
-        <span class="is-active">KOR</span>
-        <a href="./en/index.html">ENG</a>
-        <a href="./ja/index.html">JPN</a>
-        <a href="./zh/index.html">CHN</a>
+      <div class="hd-right">
+        <div class="lang" aria-label="언어"><span class="on">KOR</span><a href="./en/index.html">ENG</a><a href="./ja/index.html">JPN</a><a href="./zh/index.html">CHN</a></div>
+        <a class="hd-cta" href="#get">무료 다운로드</a>
       </div>
     </div>
   </header>
 
   <main>
-    <section class="home-hero">
-      <div class="container hero-content">
-        <p class="eyebrow eyebrow-dark">2026.07 업데이트 반영</p>
-        <h1>OneMouse</h1>
-        <p class="hero-text">
-          PC 입력을 Mobile까지 끊김없이 이어갑니다.
-          마우스를 화면 끝으로 넘기고, 키보드로 입력하고, 파일은 작은 드롭존에 놓아 바로 보냅니다.
-        </p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="#download">Windows 다운로드</a>
-          <a class="button button-secondary on-dark" href="./guide.html">처음 연결하기</a>
-        </div>
-        <div class="hero-badges" aria-label="최근 핵심 기능">
-          <span>마우스 이동</span>
-          <span>키보드 입력</span>
-          <span>QR 연결</span>
-          <span>다른 PC 제어</span>
-          <span>블루투스 연결</span>
-          <span>클립보드</span>
-          <span>빠른 드롭존</span>
-        </div>
-      </div>
-    </section>
+    <!-- HERO + SIMULATOR -->
+    <section class="hero wrap" aria-label="소개">
+      <span class="tagpill">● 무료 · 설치 5분 · Windows + Android</span>
+      <h1>마우스 하나로<br><span class="flow">폰·태블릿·다른 PC까지</span> 쓱.</h1>
+      <p class="sub">영상 대신 직접 해보세요. 커서를 움직여 기기 사이를 넘나들고, 기기를 끌어 내 책상처럼 배치해 보세요.</p>
 
-    <section class="section">
-      <div class="container split-grid demo-section">
-        <div>
-          <p class="section-kicker">Overview</p>
-          <h2>마우스 하나로 PC · 폰 · 다른 PC를 넘나듭니다.</h2>
-          <p class="lead">
-            폰 원격 제어, PC 키보드로 폰 입력, 클립보드 복사, 파일 드래그까지 —
-            원마우스의 핵심 동작을 짧은 애니메이션으로 한눈에 보여줍니다.
-            (실제 앱 화면 영상은 아래 시연 영상에서 볼 수 있습니다.)
-          </p>
+      <div class="play">
+        <div class="play-head">
+          <div class="steps">
+            <span><span class="n">1</span><b>마우스를 움직여</b> 커서를 넘겨보세요</span>
+            <span><span class="n">2</span><b>기기를 끌어</b> 위치를 바꿔보세요</span>
+          </div>
+          <button class="reset" id="reset" type="button">처음 배치로</button>
         </div>
-        <div class="video-frame" aria-label="원마우스 사용 예시 영상">
-          <iframe
-            src="https://www.youtube.com/embed/dhrG9FD5ASY"
-            title="원마우스 사용 예시 영상"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-            loading="lazy"
-          ></iframe>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="section-heading">
-          <p class="section-kicker">Use Cases</p>
-          <h2>PC 앞에서 하던 일을 폰과 다른 PC까지 이어갑니다.</h2>
-          <p>
-            어려운 네트워크 설정을 먼저 이해할 필요는 없습니다.
-            자주 쓰는 작업을 기준으로 보면 OneMouse가 어디에 필요한지 바로 알 수 있습니다.
-          </p>
-        </div>
-        <div class="update-grid">
-          <article class="update-card">
-            <span class="update-label">Phone Control</span>
-            <h3>폰을 PC 옆 화면처럼 제어</h3>
-            <p>PC 모니터 가장자리로 마우스를 밀면 Android 화면으로 넘어가 클릭과 스크롤을 이어서 사용할 수 있습니다.</p>
-          </article>
-          <article class="update-card">
-            <span class="update-label">Typing</span>
-            <h3>긴 문장도 PC 키보드로 입력</h3>
-            <p>검색어, 메신저 답장, 앱 입력칸처럼 폰에서 타이핑이 필요한 순간에 PC 키보드를 그대로 씁니다.</p>
-          </article>
-          <article class="update-card">
-            <span class="update-label">Files &amp; Clipboard</span>
-            <h3>파일과 텍스트를 바로 전송</h3>
-            <p>파일을 잡아 화면 경계로 끌면 선택된 기기로 바로 보내고, 텍스트와 클립보드도 양쪽이 함께 동기화됩니다.</p>
-          </article>
-          <article class="update-card">
-            <span class="update-label">PC to PC</span>
-            <h3>다른 Windows PC도 함께 사용</h3>
-            <p>서브 PC를 배치해 두면 마우스를 넘겨 다른 PC를 제어하고 파일도 주고받을 수 있습니다.</p>
-          </article>
-          <article class="update-card">
-            <span class="update-label">Bluetooth</span>
-            <h3>Wi-Fi 없이 블루투스로 직접 연결</h3>
-            <p>공유기나 인터넷이 없는 환경에서도 블루투스로 폰과 다른 PC에 연결해 마우스·키보드·클립보드·파일을 그대로 주고받습니다.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-alt">
-      <div class="container">
-        <div class="section-heading">
-          <p class="section-kicker">Setup Flow</p>
-          <h2>처음 연결은 네 단계면 충분합니다.</h2>
-          <p>
-            PC 앱과 Android 앱 화면에 나오는 순서대로 진행하면 됩니다.
-            복잡한 네트워크 설정은 앱이 처리하므로 화면에 나오는 단계만 따라가면 됩니다.
-          </p>
-        </div>
-        <div class="feature-grid">
-          <article class="feature-card">
-            <span class="feature-number">01</span>
-            <h3>PC 앱을 실행합니다</h3>
-            <p>Windows에서 OneMouse를 켜고 화면 하단의 QR 코드 또는 6자리 코드를 확인합니다.</p>
-          </article>
-          <article class="feature-card">
-            <span class="feature-number">02</span>
-            <h3>Android 권한을 켭니다</h3>
-            <p>PC 마우스와 키보드 입력을 받기 위해 Android에서 접근성 권한을 켭니다.</p>
-          </article>
-          <article class="feature-card">
-            <span class="feature-number">03</span>
-            <h3>QR 또는 코드로 연결합니다</h3>
-            <p>같은 Wi-Fi에 있는 PC를 찾고 QR 스캔 또는 6자리 코드로 내 기기인지 확인합니다.</p>
-          </article>
-          <article class="feature-card">
-            <span class="feature-number">04</span>
-            <h3>위치를 맞추고 사용합니다</h3>
-            <p>PC 화면 가장자리에 폰이나 다른 PC를 배치한 뒤 마우스를 그 방향으로 넘깁니다.</p>
-          </article>
-        </div>
-        <details class="guide-reference">
-          <summary>
-            <span>실제 UI 페어링 흐름 보기</span>
-            <small>PC 코드 확인, 숫자 입력, QR 스캔 중 하나로 연결하는 흐름입니다.</small>
-          </summary>
-          <figure class="comic-showcase">
-            <a href="./assets/onemouse-pairing-real-ui-comic-v5.png" target="_blank" rel="noopener">
-              <img
-                src="./assets/onemouse-pairing-real-ui-comic-v5.png"
-                alt="OneMouse 페어링 방법: 준비, PC 코드 확인, 숫자 입력, QR 스캔 순서 안내"
-                loading="lazy"
-              />
-            </a>
-            <figcaption>이미지를 누르면 원본 크기로 열립니다.</figcaption>
-          </figure>
-        </details>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="section-heading">
-          <p class="section-kicker">Docs</p>
-          <h2>사용법, 문제 해결, 기술 설명을 나눠서 볼 수 있습니다.</h2>
-          <p>
-            처음 설치하는 사용자는 사용 가이드만 보면 됩니다.
-            연결이 막힐 때는 도움말로 원인을 좁히고, 권한과 데이터 처리 방식은 기술/보안 안내에서 따로 확인할 수 있습니다.
-          </p>
-        </div>
-        <div class="update-grid">
-          <article class="update-card">
-            <span class="update-label">Guide</span>
-            <h3>처음 연결과 기본 사용</h3>
-            <p>PC 앱 설치, Android 권한, QR 또는 6자리 코드 연결, 위치 배치, 파일 전송 흐름을 순서대로 확인합니다.</p>
-            <a class="button button-secondary" href="./guide.html">사용 가이드 보기</a>
-          </article>
-          <article class="update-card">
-            <span class="update-label">Help</span>
-            <h3>안 될 때 확인할 것</h3>
-            <p>PC가 보이지 않거나 입력이 들어가지 않을 때 전원, 접근성 권한, 방화벽, Wi-Fi 환경을 빠르게 점검합니다.</p>
-            <a class="button button-secondary" href="./help.html">도움말 보기</a>
-          </article>
-          <article class="update-card">
-            <span class="update-label">Technical</span>
-            <h3>권한과 데이터 처리</h3>
-            <p>로컬 네트워크 연결 구조, 접근성 서비스, 포그라운드 서비스, 파일과 클립보드 처리 방식을 설명합니다.</p>
-            <a class="button button-secondary" href="./technical.html">기술/보안 보기</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container split-grid demo-section">
-        <div>
-          <p class="section-kicker">Demo</p>
-          <h2>실제 앱 화면 녹화로 설치·연결까지 확인하세요.</h2>
-          <p class="lead">
-            PC 실행, Android 권한, 페어링, 위치 배치, 입력 전환까지 — 최신 온보딩 기준으로
-            <strong>실제 앱 화면을 녹화한</strong> 영상입니다. 설치 전에 순서를 먼저 볼 수 있습니다.
-          </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="https://youtu.be/6jFIih1dOlE" target="_blank" rel="noopener">YouTube에서 보기</a>
+        <div class="desk" id="desk">
+          <div class="stage" id="stage">
+            <div class="snapedge" id="snapedge"></div>
+            <div class="dev monitor" data-id="pc"><span class="pin">내 PC</span>
+              <div class="screen"><div class="apps" style="grid-template-columns:repeat(6,1fr);padding:12px 12px 22px">
+                <i style="background:#ffffff55"></i><i style="background:#ffd16655"></i><i style="background:#7ee0b955"></i>
+                <i style="background:#ff9e7a55"></i><i style="background:#8ab4ff55"></i><i style="background:#ffffff33"></i></div>
+                <div class="bar"><i></i><i></i><i></i></div></div></div>
+            <div class="dev tablet grab" data-id="tab"><span class="pin">갤럭시 탭</span>
+              <div class="screen"><div class="apps">
+                <i style="background:#5b8cff88"></i><i style="background:#57e0ab88"></i><i style="background:#ffcf5e88"></i><i style="background:#ff8f6b88"></i>
+                <i style="background:#ffffff33"></i><i style="background:#ffffff33"></i><i style="background:#ffffff33"></i><i style="background:#ffffff33"></i></div></div></div>
+            <div class="dev phone grab" data-id="phone"><span class="pin">폰</span>
+              <div class="screen"><div class="apps">
+                <i style="background:#57e0ab88"></i><i style="background:#ffcf5e88"></i><i style="background:#ff8f6b88"></i>
+                <i style="background:#8ab4ff88"></i><i style="background:#ffffff33"></i><i style="background:#ffffff33"></i></div></div></div>
+            <div class="dev subpc grab" data-id="subpc"><span class="pin">다른 PC</span>
+              <div class="screen"><div class="apps" style="grid-template-columns:repeat(5,1fr);padding:9px 9px 18px">
+                <i style="background:#ff9e7a55"></i><i style="background:#c7a0ff55"></i><i style="background:#8ab4ff55"></i><i style="background:#ffffff33"></i><i style="background:#ffffff22"></i></div>
+                <div class="bar"><i></i><i></i></div></div></div>
+            <div id="cursor"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 2l6.5 17 2.4-6.8L19.5 10z" fill="#fff" stroke="#241a12" stroke-width="1.3" stroke-linejoin="round"/></svg></div>
           </div>
         </div>
-        <div class="video-frame" aria-label="OneMouse 시연 영상">
-          <iframe
-            src="https://www.youtube.com/embed/6jFIih1dOlE"
-            title="OneMouse 시연 영상"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-            loading="lazy"
-          ></iframe>
+        <div class="play-foot">
+          <div id="status"><span class="dotnow"></span>지금 커서 위치 → <span class="where">내 PC</span></div>
+          <span class="hint">맞닿은 기기로 넘어갑니다 · 커서는 화면 밖으로 사라지지 않아요</span>
+        </div>
+      </div>
+
+      <div class="hero-cta">
+        <a class="btn btn-pri" href="#get">무료로 시작하기</a>
+        <a class="btn btn-sec" href="./guide.html">1분 연결 보기</a>
+      </div>
+      <p class="hero-note">위 데모는 실제 <b>기기 배치</b> 기능 그대로 — 앱에서도 이렇게 배치하고 마우스를 넘깁니다.</p>
+    </section>
+
+    <!-- USE CASES -->
+    <section id="use">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="ey">이럴 때 좋아요</p>
+          <h2 class="sec">PC 앞에서 하던 일을, 폰과 다른 PC까지.</h2>
+          <p class="sec-lead">네트워크 설정은 몰라도 됩니다. 자주 하는 일로 보면 어디에 쓰는지 바로 보입니다.</p>
+        </div>
+        <div class="cards">
+          <article class="card"><div class="card-ic" style="background:#e9f0ff;color:#3a5bd0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="6" y="3" width="12" height="18" rx="3"/><path d="M11 6h2"/></svg></div>
+            <h3>폰을 옆 화면처럼 제어</h3><p>PC 모니터 끝으로 마우스를 밀면 Android로 넘어가 클릭·스크롤·드래그까지 이어집니다.</p></article>
+          <article class="card"><div class="card-ic" style="background:#eafaf1;color:#15845f"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 10h.01M10 10h.01M14 10h.01M8 14h8"/></svg></div>
+            <h3>긴 문장도 PC 키보드로</h3><p>검색어, 메신저 답장, 앱 입력칸까지 폰에서 타이핑할 순간에 PC 키보드를 그대로 씁니다.</p></article>
+          <article class="card"><div class="card-ic" style="background:#fff0e8;color:#ff7a4d"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5h6l2 2h8v11H4z"/></svg></div>
+            <h3>파일·클립보드 바로 전송</h3><p>파일을 잡아 화면 경계로 끌면 선택한 기기로 바로 보내고, 텍스트·클립보드도 양쪽이 함께 동기화됩니다.</p></article>
+          <article class="card"><div class="card-ic" style="background:#f3ecff;color:#7a52d0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="7" width="9" height="10" rx="1.5"/><rect x="13" y="4" width="9" height="7" rx="1.5"/></svg></div>
+            <h3>다른 Windows PC도 함께</h3><p>서브 PC를 배치해 두면 마우스를 넘겨 다른 PC를 제어하고 파일도 주고받습니다.</p></article>
+          <article class="card"><div class="card-ic" style="background:#eef0f4;color:#4a5978"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 5l8 7-5 4V4l5 4-8 7"/></svg></div>
+            <h3>블루투스로도 연결돼요</h3><p>평소엔 Wi-Fi로, 공유기·인터넷이 없을 땐 블루투스로 폰·다른 PC에 직접 연결합니다.</p></article>
         </div>
       </div>
     </section>
 
-    <section class="section" id="download">
-      <div class="container">
-        <div class="section-heading">
-          <p class="section-kicker">Download</p>
-          <h2>Windows 앱과 Android 앱을 함께 준비합니다.</h2>
-          <p>
-            Windows 버튼은 최신 GitHub 릴리스의 Setup 파일로 자동 연결됩니다.
-            Android는 Google Play와 Galaxy Store 링크를 함께 제공합니다.
-            PC는 Windows 10/11 환경을 우선 지원합니다.
-          </p>
+    <!-- SETUP -->
+    <section class="section-alt" id="setup">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="ey">연결 방법</p>
+          <h2 class="sec">연결은 네 단계, 1분이면 끝.</h2>
+          <p class="sec-lead">복잡한 설정은 앱이 알아서 합니다. 화면에 나오는 순서만 따라가세요. 켤 건 접근성 권한 하나뿐입니다.</p>
         </div>
-        <div class="download-grid">
-          <article class="download-card">
-            <span class="download-icon">PC</span>
+        <div class="flow4">
+          <div class="step"><div class="badge">01</div><h4>PC 앱을 켭니다</h4><p>Windows에서 OneMouse를 켜고 화면의 QR 또는 6자리 코드를 확인합니다.</p></div>
+          <div class="step"><div class="badge">02</div><h4>Android 권한을 켭니다</h4><p>PC 마우스·키보드 입력을 받도록 접근성 권한을 한 번 켭니다.</p></div>
+          <div class="step"><div class="badge">03</div><h4>QR·코드로 연결</h4><p>같은 Wi-Fi의 PC를 찾아 QR 스캔 또는 6자리 코드로 내 기기를 확인합니다.</p></div>
+          <div class="step"><div class="badge">04</div><h4>배치하고 넘깁니다</h4><p>폰·다른 PC를 화면 가장자리에 놓고 그 방향으로 마우스를 밀면 끝.</p></div>
+        </div>
+        <details class="fold"><summary><span>실제 페어링 화면 보기</span><small>준비 → PC 코드 확인 → 숫자 입력 → QR 스캔</small></summary>
+          <div class="fold-body"><a href="./assets/onemouse-pairing-real-ui-comic-v5.png" target="_blank" rel="noopener"><img src="./assets/onemouse-pairing-real-ui-comic-v5.png" alt="OneMouse 페어링 방법: 준비, PC 코드 확인, 숫자 입력, QR 스캔 순서" loading="lazy" style="border-radius:12px" /></a></div></details>
+        <div style="margin-top:20px"><a class="btn btn-sec sm" href="./guide.html">자세한 사용 가이드 보기</a></div>
+      </div>
+    </section>
+
+    <!-- TRUST -->
+    <section id="trust">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="ey">안심하고 쓰세요</p>
+          <h2 class="sec">내 기기끼리, 내 네트워크 안에서.</h2>
+          <p class="sec-lead">OneMouse는 페어링한 내 기기 사이에서만 동작합니다. 권한도 그 기능을 쓸 때만 요청합니다.</p>
+        </div>
+        <div class="trust">
+          <div class="t"><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l7 4v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V7z"/></svg></span>
+            <div><b>서버를 거치지 않습니다</b><span>입력·파일·클립보드는 같은 네트워크의 내 PC와 기기 사이에서 오갑니다.</span></div></div>
+          <div class="t"><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span>
+            <div><b>권한은 필요할 때만</b><span>접근성만 필수, 화면 캡처·주변 Wi-Fi 등은 그 기능을 시작할 때 요청합니다.</span></div></div>
+          <div class="t"><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg></span>
+            <div><b>수집·저장하지 않습니다</b><span>접근성 데이터를 광고나 화면 수집에 쓰지 않고, 파일을 서버에 저장하지 않습니다.</span></div></div>
+        </div>
+        <div style="margin-top:20px"><a class="btn btn-sec sm" href="./technical.html">기술·보안 자세히 보기</a></div>
+      </div>
+    </section>
+
+    <!-- DOWNLOAD -->
+    <section class="section-alt" id="get">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="ey">다운로드</p>
+          <h2 class="sec">Windows 앱과 Android 앱, 함께 받으세요.</h2>
+          <p class="sec-lead">PC는 Windows 10/11을 우선 지원합니다. Android는 접근성 권한을 켠 뒤 PC와 페어링합니다.</p>
+        </div>
+        <div class="dl">
+          <article class="dcard first download-card">
+            <span class="dtag" style="background:linear-gradient(135deg,var(--blue),var(--green))">PC</span>
             <h3>Windows</h3>
             <p data-download-filename>최신 Setup 파일을 확인 중입니다.</p>
-            <a class="button button-primary" href="https://github.com/sdlckdrl/mouselink-web/releases" data-latest-windows-download>Windows 다운로드</a>
+            <a class="btn btn-pri" href="https://github.com/sdlckdrl/mouselink-web/releases/latest" data-latest-windows-download download>Windows 다운로드</a>
           </article>
-          <article class="download-card">
-            <span class="download-icon download-icon-green">APK</span>
+          <article class="dcard">
+            <span class="dtag" style="background:#15845f">GP</span>
             <h3>Google Play</h3>
-            <p>접근성 서비스를 켠 뒤 PC와 페어링합니다. 알림 권한은 연결 서비스를 시작할 때 필요한 경우에만 요청됩니다.</p>
-            <a class="button button-secondary" href="https://play.google.com/store/apps/details?id=com.mouselink.app">Google Play 보기</a>
+            <p>대부분의 Android 기기에서 설치할 수 있습니다.</p>
+            <a class="btn btn-sec" href="https://play.google.com/store/apps/details?id=com.mouselink.app">Google Play 보기</a>
           </article>
-          <article class="download-card">
-            <span class="download-icon download-icon-amber">GS</span>
+          <article class="dcard">
+            <span class="dtag" style="background:#b76a05">GS</span>
             <h3>Galaxy Store</h3>
-            <p>Galaxy Store 버전은 삼성 갤럭시 기기에서 스토어 앱으로 열어 설치할 수 있습니다.</p>
-            <a class="button button-secondary" href="https://apps.samsung.com/appquery/appDetail.as?appId=com.mouselink.app.galaxy">Galaxy Store 보기</a>
+            <p>삼성 갤럭시 기기에서 스토어로 열어 설치합니다.</p>
+            <a class="btn btn-sec" href="https://apps.samsung.com/appquery/appDetail.as?appId=com.mouselink.app.galaxy">Galaxy Store 보기</a>
           </article>
         </div>
+      </div>
+    </section>
+
+    <!-- FAQ PREVIEW -->
+    <section id="faq">
+      <div class="wrap narrow">
+        <div class="sec-head">
+          <p class="ey">자주 묻는 질문</p>
+          <h2 class="sec">연결 전에 궁금한 것들.</h2>
+        </div>
+        <div class="faq">
+          <details><summary>정말 무료인가요?</summary><div class="a">네. 마우스·키보드 제어, 폰 위치 배치 같은 핵심 기능을 무료로 씁니다.</div></details>
+          <details><summary>루팅이나 개발자 설정이 필요한가요?</summary><div class="a">아니요. Android에서 <b>접근성 권한</b> 한 번만 켜면 됩니다. USB 연결이나 ADB도 필요 없습니다.</div></details>
+          <details><summary>같은 Wi-Fi가 없어도 되나요?</summary><div class="a">됩니다. <b>블루투스</b>로 폰·다른 PC에 직접 연결해 마우스·키보드·파일을 주고받을 수 있습니다.</div></details>
+          <details><summary>연결이 자꾸 끊겨요.</summary><div class="a">대개 <b>배터리 최적화</b>나 <b>방화벽·게스트 Wi-Fi 격리</b>가 원인입니다. 도움말의 문제 해결 순서에서 단계별로 좁혀보세요.</div></details>
+        </div>
+        <div style="margin-top:20px"><a class="btn btn-sec sm" href="./help.html">도움말 전체 보기</a></div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
+  <footer class="site">
+    <div class="wrap ft">
       <span>© 2026 OneMouse</span>
-      <span class="footer-links">
-        <a href="./technical.html">기술/보안</a>
-        <a href="./pricing.html">요금/Pro</a>
+      <span class="links">
+        <a href="./technical.html">기술·보안</a>
         <a href="./privacy.html">개인정보처리방침</a>
         <a href="./terms.html">이용약관</a>
         <a href="./licenses.html">오픈소스 라이선스</a>
       </span>
     </div>
   </footer>
+
+  <script>
+  (() => {
+    const VW=760, VH=440;
+    const desk=document.getElementById('desk'), stage=document.getElementById('stage');
+    const cursorEl=document.getElementById('cursor'), statusWhere=document.querySelector('#status .where');
+    const snapedge=document.getElementById('snapedge');
+    if(!desk) return;
+    const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const HOME={
+      pc:{x:275,y:150,w:206,h:132,label:'내 PC',drag:false},
+      tab:{x:481,y:159,w:150,h:112,label:'갤럭시 탭',drag:true},
+      phone:{x:209,y:151,w:66,h:126,label:'폰',drag:true},
+      subpc:{x:295,y:40,w:170,h:110,label:'다른 PC',drag:true},
+    };
+    const devs={};
+    ['pc','tab','phone','subpc'].forEach(id=>{ devs[id]=Object.assign({},HOME[id]); devs[id].el=stage.querySelector('.dev[data-id="'+id+'"]'); });
+    let scale=1;
+    const fit=()=>{ scale=desk.clientWidth/VW; stage.style.transform='scale('+scale+')'; };
+    const layout=()=>{ for(const id in devs){ const d=devs[id]; d.el.style.left=d.x+'px'; d.el.style.top=d.y+'px'; d.el.style.width=d.w+'px'; d.el.style.height=d.h+'px'; } };
+    const rectOf=d=>({l:d.x,t:d.y,r:d.x+d.w,b:d.y+d.h});
+    const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+    function deviceAt(p){ const inside=[]; for(const id in devs){ const r=rectOf(devs[id]); if(p.x>=r.l&&p.x<=r.r&&p.y>=r.t&&p.y<=r.b) inside.push(id); }
+      if(!inside.length) return null; if(inside.length===1) return inside[0];
+      let best=inside[0],bd=Infinity; for(const id of inside){ const d=devs[id]; const dd=(d.x+d.w/2-p.x)**2+(d.y+d.h/2-p.y)**2; if(dd<bd){bd=dd;best=id;} } return best; }
+    let active='pc', cx=devs.pc.x+devs.pc.w/2, cy=devs.pc.y+devs.pc.h/2;
+    function setCursor(vx,vy){ let target=deviceAt({x:vx,y:vy});
+      if(target){ cx=vx; cy=vy; } else { const r=rectOf(devs[active]); cx=clamp(vx,r.l,r.r); cy=clamp(vy,r.t,r.b); target=active; }
+      if(target!==active){ cross(target,cx,cy); active=target; }
+      cursorEl.style.transform='translate('+cx+'px,'+cy+'px) translate(-50%,-50%)';
+      for(const id in devs) devs[id].el.classList.toggle('lit',id===active); }
+    function cross(to,x,y){ statusWhere.textContent=devs[to].label; if(reduce) return;
+      const p=document.createElement('div'); p.className='pulse'; p.style.left=x+'px'; p.style.top=y+'px'; stage.appendChild(p); setTimeout(()=>p.remove(),600);
+      cursorEl.classList.remove('squash'); void cursorEl.offsetWidth; cursorEl.classList.add('squash'); }
+    let drag=null;
+    const toV=e=>{ const rc=desk.getBoundingClientRect(); return {x:clamp((e.clientX-rc.left)/scale,0,VW), y:clamp((e.clientY-rc.top)/scale,0,VH)}; };
+    desk.addEventListener('pointerdown',e=>{ const el=e.target.closest('.dev.grab'); const p=toV(e);
+      if(el){ const id=el.dataset.id,d=devs[id]; drag={id,dx:p.x-d.x,dy:p.y-d.y}; d.el.classList.add('drag'); try{desk.setPointerCapture(e.pointerId);}catch(_){} e.preventDefault(); }
+      else setCursor(p.x,p.y); });
+    desk.addEventListener('pointermove',e=>{ const p=toV(e);
+      if(drag){ const d=devs[drag.id]; d.x=clamp(p.x-drag.dx,0,VW-d.w); d.y=clamp(p.y-drag.dy,0,VH-d.h); d.el.style.left=d.x+'px'; d.el.style.top=d.y+'px'; showSnap(d); }
+      else setCursor(p.x,p.y); });
+    function endDrag(){ if(!drag) return; const d=devs[drag.id]; d.el.classList.remove('drag'); snap(d); layout(); snapedge.style.opacity=0; drag=null; setCursor(cx,cy); }
+    desk.addEventListener('pointerup',endDrag); desk.addEventListener('pointercancel',endDrag);
+    function nearestEdge(d){ const m=devs.pc, X=d.x+d.w/2, Y=d.y+d.h/2;
+      return [['right',Math.abs(X-(m.x+m.w))],['left',Math.abs(X-m.x)],['bottom',Math.abs(Y-(m.y+m.h))],['top',Math.abs(Y-m.y)]].sort((a,b)=>a[1]-b[1])[0][0]; }
+    function snap(d){ const m=devs.pc, e=nearestEdge(d);
+      if(e==='right'||e==='left'){ d.x=e==='right'?m.x+m.w:m.x-d.w; d.y=clamp(d.y,m.y-d.h*0.35,m.y+m.h-d.h*0.65); }
+      else { d.y=e==='bottom'?m.y+m.h:m.y-d.h; d.x=clamp(d.x,m.x-d.w*0.35,m.x+m.w-d.w*0.65); }
+      d.x=clamp(d.x,0,VW-d.w); d.y=clamp(d.y,0,VH-d.h); }
+    function showSnap(d){ const m=devs.pc,e=nearestEdge(d),T=4; let s;
+      if(e==='right')s={l:m.x+m.w-T/2,t:m.y,w:T,h:m.h}; else if(e==='left')s={l:m.x-T/2,t:m.y,w:T,h:m.h};
+      else if(e==='bottom')s={l:m.x,t:m.y+m.h-T/2,w:m.w,h:T}; else s={l:m.x,t:m.y-T/2,w:m.w,h:T};
+      snapedge.style.left=s.l+'px'; snapedge.style.top=s.t+'px'; snapedge.style.width=s.w+'px'; snapedge.style.height=s.h+'px'; snapedge.style.opacity=.9; }
+    document.getElementById('reset').addEventListener('click',()=>{ for(const id in devs) Object.assign(devs[id],HOME[id]);
+      layout(); active='pc'; cx=devs.pc.x+devs.pc.w/2; cy=devs.pc.y+devs.pc.h/2; statusWhere.textContent='내 PC'; setCursor(cx,cy); });
+    addEventListener('resize',fit); fit(); layout(); setCursor(cx,cy);
+  })();
+  </script>
   <script src="./js/downloads.js"></script>
 </body>
 </html>

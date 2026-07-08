@@ -4,9 +4,11 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="naver-site-verification" content="8f3cbe8a89ca9969cc81ecf1ef5e0aae01858816" />
-  <title>OneMouse | 从 PC 控制 Android 和另一台 PC</title>
-  <meta name="description" content="OneMouse 让你用 PC 鼠标和键盘控制 Android 与另一台 Windows PC，并在设备之间移动文件和文本。" />
-  <link rel="stylesheet" href="../css/style.css" />
+  <title>OneMouse | 一套鼠标键盘，直通手机·平板·另一台电脑</title>
+  <meta name="description" content="OneMouse 是一款免费应用，让你用电脑的鼠标和键盘控制 Android 和另一台 Windows 电脑，轻松互传文件与剪贴板。把鼠标滑到屏幕边缘，就能顺势接着用。" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta name="keywords" content="OneMouse, MouseLink, share mouse, 共享鼠标, 鼠标共享, 电脑鼠标共享, Android 电脑控制, 用电脑鼠标控制手机, Android 键盘输入, PC 到 PC 鼠标, Wi-Fi 文件传输" />
+  <link rel="stylesheet" href="../css/onemouse.css" />
   <link rel="canonical" href="https://onemouse.pages.dev/zh/" />
   <link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/" />
   <link rel="alternate" hreflang="en" href="https://onemouse.pages.dev/en/" />
@@ -15,60 +17,282 @@
   <link rel="alternate" hreflang="x-default" href="https://onemouse.pages.dev/" />
   <meta property="og:site_name" content="OneMouse" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="OneMouse | 从 PC 控制 Android 和另一台 PC" />
-  <meta property="og:description" content="用 PC 鼠标和键盘控制 Android 与另一台 Windows PC，并在设备之间移动文件和文本。" />
+  <meta property="og:title" content="OneMouse | 一套鼠标键盘，直通手机·平板·另一台电脑" />
+  <meta property="og:description" content="用电脑的鼠标和键盘控制 Android 和另一台 Windows 电脑，轻松互传文件与剪贴板。免费。" />
   <meta property="og:url" content="https://onemouse.pages.dev/zh/" />
   <meta property="og:image" content="https://onemouse.pages.dev/assets/hero-bg-generated-2.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="OneMouse | 从 PC 控制 Android 和另一台 PC" />
-  <meta name="twitter:description" content="用 PC 鼠标和键盘控制 Android 与另一台 Windows PC，并在设备之间移动文件和文本。" />
+  <meta name="twitter:title" content="OneMouse | 一套鼠标键盘，直通手机·平板·另一台电脑" />
+  <meta name="twitter:description" content="用电脑的鼠标和键盘控制 Android 和另一台 Windows 电脑，互传文件与剪贴板。免费。" />
   <meta name="twitter:image" content="https://onemouse.pages.dev/assets/hero-bg-generated-2.png" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "OneMouse",
+      "alternateName": ["OneMouse", "MouseLink", "share mouse"],
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Windows, Android",
+      "url": "https://onemouse.pages.dev/zh/",
+      "inLanguage": "zh-CN",
+      "downloadUrl": "https://onemouse.pages.dev/#get",
+      "description": "OneMouse 是一款免费应用，让你用电脑的鼠标和键盘控制 Android 和另一台 Windows 电脑，轻松互传文件与剪贴板。",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" }
+    }
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MJ73H86TWX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-MJ73H86TWX');
+  </script>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="./index.html" class="brand" aria-label="OneMouse 主页">
-        <span class="brand-mark">OM</span>
-        <span class="brand-copy"><strong>OneMouse</strong><span>在本地连接 Windows 和 Android</span></span>
-      </a>
-      <nav class="top-nav" aria-label="主菜单">
-        <a href="./index.html" class="is-active">简介</a>
-        <a href="./guide.html">使用指南</a>
+  <header class="site">
+    <div class="wrap hd">
+      <a class="brand" href="./index.html" aria-label="OneMouse 主页"><span class="om">OM</span>OneMouse</a>
+      <nav class="nav" aria-label="主菜单">
+        <a href="./index.html" class="on">概览</a>
+        <a href="#use">功能</a>
+        <a href="./guide.html">使用方法</a>
         <a href="./help.html">帮助</a>
-        <a href="./technical.html">技术/安全</a>
-        <a href="./pricing.html">Free / Pro</a>
-        <a href="./index.html#download" class="nav-cta">下载</a>
       </nav>
-      <div class="lang-switch" aria-label="语言">
-        <a href="../index.html">KOR</a>
-        <a href="../en/index.html">ENG</a>
-        <a href="../ja/index.html">JPN</a>
-        <span class="is-active">CHN</span>
+      <div class="hd-right">
+        <div class="lang" aria-label="语言"><a href="../index.html">KOR</a><a href="../en/index.html">ENG</a><a href="../ja/index.html">JPN</a><span class="on">CHN</span></div>
+        <a class="hd-cta" href="#get">免费下载</a>
       </div>
     </div>
   </header>
 
   <main>
-    <section class="home-hero"><div class="container hero-content"><p class="eyebrow eyebrow-dark">2026.07 更新</p><h1>OneMouse</h1><p class="hero-text">把 PC 输入自然延伸到 Android 和另一台 Windows PC。把鼠标移过屏幕边缘，用 PC 键盘输入，把文件拖到小型投放区即可发送。</p><div class="hero-actions"><a class="button button-primary" href="#download">下载 Windows 版</a><a class="button button-secondary on-dark" href="./guide.html">开始连接</a></div><div class="hero-badges" aria-label="Key features"><span>鼠标移动</span><span>键盘输入</span><span>QR 连接</span><span>PC to PC</span><span>蓝牙连接</span><span>剪贴板</span><span>Quick Drop</span></div></div></section>
-    <section class="section"><div class="container"><div class="section-heading"><p class="section-kicker">Use Cases</p><h2>把 PC 上的操作延伸到手机和另一台 PC。</h2><p>不需要先理解复杂的连接技术。可以从日常任务开始：控制、输入、复制和发送文件。</p></div><div class="update-grid"><article class="update-card"><span class="update-label">Phone Control</span><h3>像旁边屏幕一样控制手机</h3><p>把鼠标移过 PC 屏幕边缘后，可以继续点击、滚动和控制 Android。</p></article><article class="update-card"><span class="update-label">Typing</span><h3>用 PC 键盘输入长文本</h3><p>搜索、消息和表单输入都可以用 PC 键盘完成。</p></article><article class="update-card"><span class="update-label">Files &amp; Clipboard</span><h3>文件和文本即时传输</h3><p>把文件拖到屏幕边缘即可发送到所选设备，文本和剪贴板也会在两端同步。</p></article><article class="update-card"><span class="update-label">PC to PC</span><h3>控制另一台 Windows PC</h3><p>把另一台 PC 放在屏幕边缘，继续使用鼠标并在 PC 间发送文件。</p></article><article class="update-card"><span class="update-label">Bluetooth</span><h3>无需 Wi-Fi，用蓝牙直接连接</h3><p>即使在没有路由器或互联网的环境下，也能通过蓝牙连接手机和另一台 PC，照常收发鼠标、键盘、剪贴板和文件。还可以同时连接多台设备。</p></article></div></div></section>
-    <section class="section section-alt"><div class="container"><div class="section-heading"><p class="section-kicker">Setup Flow</p><h2>首次连接只需四步。</h2><p>按照 PC 和 Android 应用界面操作即可，不需要手动设置端口或连接方式。</p></div><div class="feature-grid"><article class="feature-card"><span class="feature-number">01</span><h3>打开 PC 应用</h3><p>在 Windows 上运行 OneMouse，并确认二维码或 6 位代码。</p></article><article class="feature-card"><span class="feature-number">02</span><h3>开启 Android 权限</h3><p>开启无障碍权限，让 Android 可以接收 PC 鼠标和键盘输入。</p></article><article class="feature-card"><span class="feature-number">03</span><h3>用 QR 或代码连接</h3><p>在同一 Wi-Fi 中找到 PC，并用二维码或 6 位代码确认。</p></article><article class="feature-card"><span class="feature-number">04</span><h3>放置后使用</h3><p>把 Android 或另一台 PC 放在屏幕边缘，然后把鼠标移过去。</p></article></div></div></section>
-    <section class="section"><div class="container"><div class="section-heading"><p class="section-kicker">Docs</p><h2>使用指南、问题排查和技术说明可以分开查看。</h2><p>安装和配对请看指南，连接或传输失败请看帮助，权限、网络行为和安全范围请看技术说明。</p></div><div class="update-grid"><article class="update-card"><span class="update-label">Guide</span><h3>安装与配对</h3><p>按顺序查看 Windows 安装、Android 权限、配对、位置设置和文件传输流程。</p><a class="button button-secondary" href="./guide.html">打开指南</a></article><article class="update-card"><span class="update-label">Help</span><h3>处理常见问题</h3><p>检查 Wi-Fi 发现、无障碍权限、鼠标返回、文件传输和 Android 后台运行问题。</p><a class="button button-secondary" href="./help.html">打开帮助</a></article><article class="update-card"><span class="update-label">Technical</span><h3>查看权限和数据流</h3><p>了解为什么使用无障碍和前台服务权限，以及哪些数据只在本地网络中处理。</p><a class="button button-secondary" href="./technical.html">打开技术说明</a></article></div></div></section>
-    <section class="section"><div class="container split-grid demo-section"><div><p class="section-kicker">Demo</p><h2>观看当前引导流程。</h2><p class="lead">视频展示 PC 启动、Android 权限、配对、放置和输入切换流程。</p><div class="hero-actions"><a class="button button-primary" href="https://youtu.be/6jFIih1dOlE" target="_blank" rel="noopener">在 YouTube 观看</a></div></div><div class="video-frame" aria-label="OneMouse demo video"><iframe src="https://www.youtube.com/embed/6jFIih1dOlE" title="OneMouse demo video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe></div></div></section>
-    <section class="section" id="download"><div class="container"><div class="section-heading"><p class="section-kicker">Download</p><h2>请同时安装 Windows 应用和 Android 应用。</h2><p>目标为 Android 8.0 及以上版本，PC 端优先支持 Windows 10/11。</p></div><div class="download-grid"><article class="download-card"><span class="download-icon">PC</span><h3>Windows</h3><p data-download-filename>正在检查最新 Setup 文件。</p><a class="button button-primary" href="https://github.com/sdlckdrl/mouselink-web/releases" data-latest-windows-download>Windows</a></article><article class="download-card"><span class="download-icon download-icon-green">APK</span><h3>Android</h3><p>Enable Accessibility and notification permission, then pair with your PC.</p><a class="button button-secondary" href="https://play.google.com/store/apps/details?id=com.mouselink.app">Android</a></article></div></div></section>
+    <!-- HERO + SIMULATOR -->
+    <section class="hero wrap" aria-label="概览">
+      <span class="tagpill">● 免费 · 5 分钟装好 · Windows + Android</span>
+      <h1>一套鼠标键盘<br><span class="flow">直通手机·平板·另一台电脑</span>，一滑即达。</h1>
+      <p class="sub">别看视频，直接上手试试。移动光标在设备之间穿梭，拖动设备，像布置自己的桌面一样摆好它们。</p>
+
+      <div class="play">
+        <div class="play-head">
+          <div class="steps">
+            <span><span class="n">1</span><b>移动鼠标</b>，把光标滑过去看看</span>
+            <span><span class="n">2</span><b>拖动设备</b>，换个位置试试</span>
+          </div>
+          <button class="reset" id="reset" type="button">恢复初始布局</button>
+        </div>
+        <div class="desk" id="desk">
+          <div class="stage" id="stage">
+            <div class="snapedge" id="snapedge"></div>
+            <div class="dev monitor" data-id="pc"><span class="pin">我的电脑</span>
+              <div class="screen"><div class="apps" style="grid-template-columns:repeat(6,1fr);padding:12px 12px 22px">
+                <i style="background:#ffffff55"></i><i style="background:#ffd16655"></i><i style="background:#7ee0b955"></i>
+                <i style="background:#ff9e7a55"></i><i style="background:#8ab4ff55"></i><i style="background:#ffffff33"></i></div>
+                <div class="bar"><i></i><i></i><i></i></div></div></div>
+            <div class="dev tablet grab" data-id="tab"><span class="pin">Galaxy Tab</span>
+              <div class="screen"><div class="apps">
+                <i style="background:#5b8cff88"></i><i style="background:#57e0ab88"></i><i style="background:#ffcf5e88"></i><i style="background:#ff8f6b88"></i>
+                <i style="background:#ffffff33"></i><i style="background:#ffffff33"></i><i style="background:#ffffff33"></i><i style="background:#ffffff33"></i></div></div></div>
+            <div class="dev phone grab" data-id="phone"><span class="pin">手机</span>
+              <div class="screen"><div class="apps">
+                <i style="background:#57e0ab88"></i><i style="background:#ffcf5e88"></i><i style="background:#ff8f6b88"></i>
+                <i style="background:#8ab4ff88"></i><i style="background:#ffffff33"></i><i style="background:#ffffff33"></i></div></div></div>
+            <div class="dev subpc grab" data-id="subpc"><span class="pin">另一台电脑</span>
+              <div class="screen"><div class="apps" style="grid-template-columns:repeat(5,1fr);padding:9px 9px 18px">
+                <i style="background:#ff9e7a55"></i><i style="background:#c7a0ff55"></i><i style="background:#8ab4ff55"></i><i style="background:#ffffff33"></i><i style="background:#ffffff22"></i></div>
+                <div class="bar"><i></i><i></i></div></div></div>
+            <div id="cursor"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 2l6.5 17 2.4-6.8L19.5 10z" fill="#fff" stroke="#241a12" stroke-width="1.3" stroke-linejoin="round"/></svg></div>
+          </div>
+        </div>
+        <div class="play-foot">
+          <div id="status"><span class="dotnow"></span>当前光标位置 → <span class="where">我的电脑</span></div>
+          <span class="hint">会跳到相邻的设备 · 光标不会跑到屏幕外消失</span>
+        </div>
+      </div>
+
+      <div class="hero-cta">
+        <a class="btn btn-pri" href="#get">免费开始使用</a>
+        <a class="btn btn-sec" href="./guide.html">查看 1 分钟连接</a>
+      </div>
+      <p class="hero-note">上面的演示就是真实的<b>设备布局</b>功能——在应用里也是这样摆好、把鼠标滑过去。</p>
+    </section>
+
+    <!-- USE CASES -->
+    <section id="use">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="ey">这些场景很好用</p>
+          <h2 class="sec">在电脑前做的事，延伸到手机和另一台电脑。</h2>
+          <p class="sec-lead">不懂网络设置也没关系。从你常做的事来看，一下就明白它用在哪儿。</p>
+        </div>
+        <div class="cards">
+          <article class="card"><div class="card-ic" style="background:#e9f0ff;color:#3a5bd0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="6" y="3" width="12" height="18" rx="3"/><path d="M11 6h2"/></svg></div>
+            <h3>把手机当作旁边的屏幕来控制</h3><p>把鼠标推到电脑显示器边缘，就会跨到 Android，点击、滚动、拖拽一气呵成。</p></article>
+          <article class="card"><div class="card-ic" style="background:#eafaf1;color:#15845f"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 10h.01M10 10h.01M14 10h.01M8 14h8"/></svg></div>
+            <h3>长句子也用电脑键盘打</h3><p>搜索词、聊天回复、应用输入框，凡是要在手机上打字的时候，都能直接用电脑键盘。</p></article>
+          <article class="card"><div class="card-ic" style="background:#fff0e8;color:#ff7a4d"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5h6l2 2h8v11H4z"/></svg></div>
+            <h3>文件·剪贴板即传即到</h3><p>抓起文件拖到屏幕边界，就直接发到选定的设备；文字和剪贴板也在两端一起同步。</p></article>
+          <article class="card"><div class="card-ic" style="background:#f3ecff;color:#7a52d0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="7" width="9" height="10" rx="1.5"/><rect x="13" y="4" width="9" height="7" rx="1.5"/></svg></div>
+            <h3>另一台 Windows 电脑也能一起用</h3><p>摆好另一台电脑，就能把鼠标滑过去控制它，还能互传文件。</p></article>
+          <article class="card"><div class="card-ic" style="background:#eef0f4;color:#4a5978"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 5l8 7-5 4V4l5 4-8 7"/></svg></div>
+            <h3>用 Bluetooth 也能连</h3><p>平时用 Wi-Fi，没有 Wi-Fi 路由器或网络时，就用 Bluetooth 直接连到手机和另一台电脑。</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SETUP -->
+    <section class="section-alt" id="setup">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="ey">连接方法</p>
+          <h2 class="sec">连接四步走，1 分钟搞定。</h2>
+          <p class="sec-lead">复杂的设置交给应用自己处理。你只要跟着屏幕上的顺序走就行。要打开的只有一个无障碍服务。</p>
+        </div>
+        <div class="flow4">
+          <div class="step"><div class="badge">01</div><h4>打开电脑上的应用</h4><p>在 Windows 上打开 OneMouse，看一下屏幕上的二维码或 6 位数字码。</p></div>
+          <div class="step"><div class="badge">02</div><h4>打开 Android 权限</h4><p>为了接收电脑的鼠标和键盘输入，打开一次无障碍服务。</p></div>
+          <div class="step"><div class="badge">03</div><h4>用二维码或数字码连接</h4><p>找到同一 Wi-Fi 下的电脑，扫二维码或输入 6 位数字码确认你的设备。</p></div>
+          <div class="step"><div class="badge">04</div><h4>摆好位置再滑过去</h4><p>把手机和另一台电脑放到屏幕边缘，往那个方向推鼠标就完成了。</p></div>
+        </div>
+        <details class="fold"><summary><span>看看真实的配对画面</span><small>准备 → 确认电脑数字码 → 输入数字 → 扫二维码</small></summary>
+          <div class="fold-body"><a href="../assets/onemouse-pairing-real-ui-comic-v5.png" target="_blank" rel="noopener"><img src="../assets/onemouse-pairing-real-ui-comic-v5.png" alt="OneMouse 配对方法：准备、确认电脑数字码、输入数字、扫二维码的顺序" loading="lazy" style="border-radius:12px" /></a></div></details>
+        <div style="margin-top:20px"><a class="btn btn-sec sm" href="./guide.html">查看详细使用指南</a></div>
+      </div>
+    </section>
+
+    <!-- TRUST -->
+    <section id="trust">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="ey">放心使用</p>
+          <h2 class="sec">只在你自己的设备之间，你自己的网络内。</h2>
+          <p class="sec-lead">OneMouse 只在你配对过的自己的设备之间运行。权限也只在你用到相应功能时才请求。</p>
+        </div>
+        <div class="trust">
+          <div class="t"><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l7 4v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V7z"/></svg></span>
+            <div><b>不经过服务器</b><span>输入、文件、剪贴板都在同一网络里你自己的电脑和设备之间往来。</span></div></div>
+          <div class="t"><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span>
+            <div><b>权限只在需要时请求</b><span>只有无障碍服务是必需的，屏幕捕获、附近 Wi-Fi 等都在开始使用相应功能时才请求。</span></div></div>
+          <div class="t"><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg></span>
+            <div><b>不收集·不存储</b><span>不会把无障碍数据用于广告或屏幕收集，也不会把文件存到服务器上。</span></div></div>
+        </div>
+        <div style="margin-top:20px"><a class="btn btn-sec sm" href="./technical.html">查看技术与安全详情</a></div>
+      </div>
+    </section>
+
+    <!-- DOWNLOAD -->
+    <section class="section-alt" id="get">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="ey">下载</p>
+          <h2 class="sec">Windows 应用和 Android 应用，一起装。</h2>
+          <p class="sec-lead">电脑端优先支持 Windows 10/11。Android 打开无障碍服务后再与电脑配对。</p>
+        </div>
+        <div class="dl">
+          <article class="dcard first download-card">
+            <span class="dtag" style="background:linear-gradient(135deg,var(--blue),var(--green))">PC</span>
+            <h3>Windows</h3>
+            <p data-download-filename>正在获取最新的 Setup 文件。</p>
+            <a class="btn btn-pri" href="https://github.com/sdlckdrl/mouselink-web/releases/latest" data-latest-windows-download download>下载 Windows 版</a>
+          </article>
+          <article class="dcard">
+            <span class="dtag" style="background:#15845f">GP</span>
+            <h3>Google Play</h3>
+            <p>大多数 Android 设备都能安装。</p>
+            <a class="btn btn-sec" href="https://play.google.com/store/apps/details?id=com.mouselink.app">前往 Google Play</a>
+          </article>
+          <article class="dcard">
+            <span class="dtag" style="background:#b76a05">GS</span>
+            <h3>Galaxy Store</h3>
+            <p>在三星 Galaxy 设备上通过商店打开并安装。</p>
+            <a class="btn btn-sec" href="https://apps.samsung.com/appquery/appDetail.as?appId=com.mouselink.app.galaxy">前往 Galaxy Store</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ PREVIEW -->
+    <section id="faq">
+      <div class="wrap narrow">
+        <div class="sec-head">
+          <p class="ey">常见问题</p>
+          <h2 class="sec">连接前想弄清楚的事。</h2>
+        </div>
+        <div class="faq">
+          <details><summary>真的免费吗？</summary><div class="a">是的。鼠标键盘控制、手机位置布局等核心功能都免费使用。</div></details>
+          <details><summary>需要 root 或开发者设置吗？</summary><div class="a">不需要。在 Android 上只要打开一次<b>无障碍服务</b>就行。也不需要 USB 连接或 ADB。</div></details>
+          <details><summary>没有同一个 Wi-Fi 也可以吗？</summary><div class="a">可以。用 <b>Bluetooth</b> 直接连到手机和另一台电脑，就能互传鼠标、键盘、文件。</div></details>
+          <details><summary>连接总是断开。</summary><div class="a">多半是<b>电池优化</b>或<b>防火墙、访客 Wi-Fi 的客户端隔离</b>导致的。请按帮助里的排障步骤逐步缩小范围。</div></details>
+        </div>
+        <div style="margin-top:20px"><a class="btn btn-sec sm" href="./help.html">查看全部帮助</a></div>
+      </div>
+    </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
+  <footer class="site">
+    <div class="wrap ft">
       <span>© 2026 OneMouse</span>
-      <span class="footer-links">
-        <a href="./technical.html">技术/安全</a>
-        <a href="./pricing.html">Free / Pro</a>
-        <a href="./privacy.html">隐私政策</a>
-        <a href="./terms.html">使用条款</a>
-        <a href="./licenses.html">开源许可</a>
-      </span>
+      <span class="links"><a href="./technical.html">技术与安全</a><a href="./privacy.html">隐私政策</a><a href="./terms.html">使用条款</a><a href="./licenses.html">开源许可</a></span>
     </div>
   </footer>
+
+  <script>
+  (() => {
+    const VW=760, VH=440;
+    const desk=document.getElementById('desk'), stage=document.getElementById('stage');
+    const cursorEl=document.getElementById('cursor'), statusWhere=document.querySelector('#status .where');
+    const snapedge=document.getElementById('snapedge');
+    if(!desk) return;
+    const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const HOME={
+      pc:{x:275,y:150,w:206,h:132,label:'我的电脑',drag:false},
+      tab:{x:481,y:159,w:150,h:112,label:'Galaxy Tab',drag:true},
+      phone:{x:209,y:151,w:66,h:126,label:'手机',drag:true},
+      subpc:{x:295,y:40,w:170,h:110,label:'另一台电脑',drag:true},
+    };
+    const devs={};
+    ['pc','tab','phone','subpc'].forEach(id=>{ devs[id]=Object.assign({},HOME[id]); devs[id].el=stage.querySelector('.dev[data-id="'+id+'"]'); });
+    let scale=1;
+    const fit=()=>{ scale=desk.clientWidth/VW; stage.style.transform='scale('+scale+')'; };
+    const layout=()=>{ for(const id in devs){ const d=devs[id]; d.el.style.left=d.x+'px'; d.el.style.top=d.y+'px'; d.el.style.width=d.w+'px'; d.el.style.height=d.h+'px'; } };
+    const rectOf=d=>({l:d.x,t:d.y,r:d.x+d.w,b:d.y+d.h});
+    const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+    function deviceAt(p){ const inside=[]; for(const id in devs){ const r=rectOf(devs[id]); if(p.x>=r.l&&p.x<=r.r&&p.y>=r.t&&p.y<=r.b) inside.push(id); }
+      if(!inside.length) return null; if(inside.length===1) return inside[0];
+      let best=inside[0],bd=Infinity; for(const id of inside){ const d=devs[id]; const dd=(d.x+d.w/2-p.x)**2+(d.y+d.h/2-p.y)**2; if(dd<bd){bd=dd;best=id;} } return best; }
+    let active='pc', cx=devs.pc.x+devs.pc.w/2, cy=devs.pc.y+devs.pc.h/2;
+    function setCursor(vx,vy){ let target=deviceAt({x:vx,y:vy});
+      if(target){ cx=vx; cy=vy; } else { const r=rectOf(devs[active]); cx=clamp(vx,r.l,r.r); cy=clamp(vy,r.t,r.b); target=active; }
+      if(target!==active){ cross(target,cx,cy); active=target; }
+      cursorEl.style.transform='translate('+cx+'px,'+cy+'px) translate(-50%,-50%)';
+      for(const id in devs) devs[id].el.classList.toggle('lit',id===active); }
+    function cross(to,x,y){ statusWhere.textContent=devs[to].label; if(reduce) return;
+      const p=document.createElement('div'); p.className='pulse'; p.style.left=x+'px'; p.style.top=y+'px'; stage.appendChild(p); setTimeout(()=>p.remove(),600);
+      cursorEl.classList.remove('squash'); void cursorEl.offsetWidth; cursorEl.classList.add('squash'); }
+    let drag=null;
+    const toV=e=>{ const rc=desk.getBoundingClientRect(); return {x:clamp((e.clientX-rc.left)/scale,0,VW), y:clamp((e.clientY-rc.top)/scale,0,VH)}; };
+    desk.addEventListener('pointerdown',e=>{ const el=e.target.closest('.dev.grab'); const p=toV(e);
+      if(el){ const id=el.dataset.id,d=devs[id]; drag={id,dx:p.x-d.x,dy:p.y-d.y}; d.el.classList.add('drag'); try{desk.setPointerCapture(e.pointerId);}catch(_){} e.preventDefault(); }
+      else setCursor(p.x,p.y); });
+    desk.addEventListener('pointermove',e=>{ const p=toV(e);
+      if(drag){ const d=devs[drag.id]; d.x=clamp(p.x-drag.dx,0,VW-d.w); d.y=clamp(p.y-drag.dy,0,VH-d.h); d.el.style.left=d.x+'px'; d.el.style.top=d.y+'px'; showSnap(d); }
+      else setCursor(p.x,p.y); });
+    function endDrag(){ if(!drag) return; const d=devs[drag.id]; d.el.classList.remove('drag'); snap(d); layout(); snapedge.style.opacity=0; drag=null; setCursor(cx,cy); }
+    desk.addEventListener('pointerup',endDrag); desk.addEventListener('pointercancel',endDrag);
+    function nearestEdge(d){ const m=devs.pc, X=d.x+d.w/2, Y=d.y+d.h/2;
+      return [['right',Math.abs(X-(m.x+m.w))],['left',Math.abs(X-m.x)],['bottom',Math.abs(Y-(m.y+m.h))],['top',Math.abs(Y-m.y)]].sort((a,b)=>a[1]-b[1])[0][0]; }
+    function snap(d){ const m=devs.pc, e=nearestEdge(d);
+      if(e==='right'||e==='left'){ d.x=e==='right'?m.x+m.w:m.x-d.w; d.y=clamp(d.y,m.y-d.h*0.35,m.y+m.h-d.h*0.65); }
+      else { d.y=e==='bottom'?m.y+m.h:m.y-d.h; d.x=clamp(d.x,m.x-d.w*0.35,m.x+m.w-d.w*0.65); }
+      d.x=clamp(d.x,0,VW-d.w); d.y=clamp(d.y,0,VH-d.h); }
+    function showSnap(d){ const m=devs.pc,e=nearestEdge(d),T=4; let s;
+      if(e==='right')s={l:m.x+m.w-T/2,t:m.y,w:T,h:m.h}; else if(e==='left')s={l:m.x-T/2,t:m.y,w:T,h:m.h};
+      else if(e==='bottom')s={l:m.x,t:m.y+m.h-T/2,w:m.w,h:T}; else s={l:m.x,t:m.y-T/2,w:m.w,h:T};
+      snapedge.style.left=s.l+'px'; snapedge.style.top=s.t+'px'; snapedge.style.width=s.w+'px'; snapedge.style.height=s.h+'px'; snapedge.style.opacity=.9; }
+    document.getElementById('reset').addEventListener('click',()=>{ for(const id in devs) Object.assign(devs[id],HOME[id]);
+      layout(); active='pc'; cx=devs.pc.x+devs.pc.w/2; cy=devs.pc.y+devs.pc.h/2; statusWhere.textContent='我的电脑'; setCursor(cx,cy); });
+    addEventListener('resize',fit); fit(); layout(); setCursor(cx,cy);
+  })();
+  </script>
   <script src="../js/downloads.js"></script>
 </body>
 </html>

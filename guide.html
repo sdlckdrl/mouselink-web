@@ -3,863 +3,219 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>OneMouse(원마우스) 사용 가이드 | Android와 PC 제어 설정</title>
-  <meta
-    name="description"
-    content="OneMouse(원마우스) 최신 사용 가이드입니다. PC 마우스와 키보드로 Android와 다른 PC를 제어하고, QR 연결, 위치 배치, 파일/클립보드 전송, 모바일 화면 원격 제어, 스크린샷과 밝기 단축키를 안내합니다."
-  />
+  <title>사용 가이드 | OneMouse 원마우스 — 처음 연결부터 자주 쓰는 기능까지</title>
+  <meta name="description" content="OneMouse 사용 가이드: 처음 연결 순서, 폰 위치 배치, 모바일 원격 제어, 파일·클립보드 전송, 번호 단축키, 블루투스 연결, 다른 PC 연결, 키보드 단축키를 순서대로 안내합니다." />
   <meta name="robots" content="index,follow,max-image-preview:large" />
-  <meta name="keywords" content="OneMouse 사용법, 원마우스 가이드, share mouse, Share Mouse, 쉐어마우스, 공유마우스, 마우스 공유, PC 마우스 공유, Android PC 제어, 스마트폰 PC 마우스, Android 키보드 입력, 모바일 화면 원격 제어, 모바일 원격 제어, 모바일 스크린샷 PC" />
-  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/onemouse.css" />
   <link rel="canonical" href="https://onemouse.pages.dev/guide" />
-  <link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/guide" />
-  <link rel="alternate" hreflang="en" href="https://onemouse.pages.dev/en/guide" />
-  <link rel="alternate" hreflang="ja" href="https://onemouse.pages.dev/ja/guide" />
-  <link rel="alternate" hreflang="zh" href="https://onemouse.pages.dev/zh/guide" />
-  <link rel="alternate" hreflang="x-default" href="https://onemouse.pages.dev/guide" />
-  <meta property="og:site_name" content="OneMouse" />
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="OneMouse(원마우스) 사용 가이드" />
-  <meta property="og:description" content="PC 마우스와 키보드로 Android와 다른 PC를 제어하고, 권한, QR 연결, 위치 배치, 전송, 모바일 화면 원격 제어를 최신 흐름으로 안내합니다." />
-  <meta property="og:url" content="https://onemouse.pages.dev/guide" />
-  <meta property="og:image" content="https://onemouse.pages.dev/assets/hero-bg-generated-2.png" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="OneMouse(원마우스) 사용 가이드" />
-  <meta name="twitter:description" content="PC 마우스와 키보드로 Android와 다른 PC를 제어하고, 권한, QR 연결, 위치 배치, 전송, 모바일 화면 원격 제어를 최신 흐름으로 안내합니다." />
-  <meta name="twitter:image" content="https://onemouse.pages.dev/assets/hero-bg-generated-2.png" />
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "name": "OneMouse(원마우스) 사용 가이드",
-      "url": "https://onemouse.pages.dev/guide",
-      "inLanguage": "ko-KR",
-      "keywords": "OneMouse 사용법, 원마우스 가이드, share mouse, Share Mouse, 쉐어마우스, 공유마우스, 마우스 공유, PC 마우스 공유, Android PC 제어, 모바일 화면 원격 제어, 모바일 원격 제어, 모바일 스크린샷 PC",
-      "description": "PC 마우스와 키보드로 Android와 다른 PC를 제어하고, 권한, QR 연결, 위치 배치, 전송, 모바일 화면 원격 제어를 최신 흐름으로 안내합니다.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "name": "OneMouse",
-        "url": "https://onemouse.pages.dev/"
-      }
-    }
-  </script>
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "OneMouse 처음 연결 순서는 어떻게 되나요?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Windows에서 OneMouse PC 앱을 실행하고, Android에서 접근성 권한을 켠 뒤 같은 Wi-Fi 또는 LAN에서 PC를 검색합니다. 이후 PC 화면의 QR 코드 또는 6자리 코드로 페어링하고, 폰 위치를 PC 가장자리에 배치한 뒤 마우스를 해당 방향으로 밀어 Android를 제어합니다."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "OneMouse에서 필수 권한은 무엇인가요?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "PC 마우스와 키보드로 Android를 제어하려면 OneMouse 접근성 서비스가 필요합니다. 주변 Wi-Fi 기기, 알림, 시스템 설정 변경, 배터리 제한 예외는 기능을 사용할 때 요청되거나 안정성을 위해 권장되는 항목입니다."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "OneMouse에서 파일은 어떻게 전송하나요?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "PC에서는 빠른 드롭존에 파일을 놓아 선택된 Android 또는 서브 PC로 전송할 수 있습니다. PC-to-PC에서는 파일을 잡은 채 배치된 화면 가장자리로 넘겨 대상 PC에서 놓는 방식도 사용할 수 있습니다. Android에서는 전송 탭이나 공유 메뉴를 사용해 PC로 파일 또는 텍스트를 보낼 수 있고, 서브 PC도 페어링된 메인 PC로 파일을 보낼 수 있습니다."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "OneMouse에서 화면 밝기 단축키는 무엇인가요?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Alt + Shift + 위쪽 방향키 또는 Alt + Shift + 아래쪽 방향키로 Android 화면 밝기를 조절합니다. 볼륨은 Alt + 위쪽 방향키 또는 Alt + 아래쪽 방향키로 조절합니다."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "OneMouse에서 PC로 강제 복귀하는 단축키는 무엇인가요?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "커서가 Android 쪽에 남아 있는 느낌이면 PC에서 Ctrl + Alt + Backspace를 눌러 입력 제어를 PC로 강제 복귀합니다."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "OneMouse를 Wi-Fi 없이 블루투스로 연결할 수 있나요?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "네. Android 설정 탭에서 블루투스 모드를 켜고 Windows 블루투스 설정에서 폰을 한 번 페어링하면, PC 앱이 자동으로 연결해 마우스와 키보드 입력, 클립보드, 파일 전송을 사용할 수 있습니다. 라우터나 인터넷 연결은 필요하지 않습니다. 블루투스는 Wi-Fi 연결과 독립적으로 동작하므로, 한 기기는 Wi-Fi로 다른 기기는 블루투스로 동시에 사용할 수도 있습니다."
-          }
-        }
-      ]
-    }
-  </script>
-  <!-- Google tag (gtag.js) -->
+  <link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/guide.html" />
+  <link rel="alternate" hreflang="en" href="https://onemouse.pages.dev/en/guide.html" />
+  <link rel="alternate" hreflang="ja" href="https://onemouse.pages.dev/ja/guide.html" />
+  <link rel="alternate" hreflang="zh" href="https://onemouse.pages.dev/zh/guide.html" />
+  <link rel="alternate" hreflang="x-default" href="https://onemouse.pages.dev/guide.html" />
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-MJ73H86TWX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-MJ73H86TWX');
-  </script></head>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-MJ73H86TWX');</script>
+</head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="./index.html" class="brand" aria-label="OneMouse 홈">
-        <span class="brand-mark">OM</span>
-        <span class="brand-copy">
-          <strong>OneMouse</strong>
-          <span>Windows와 Android를 로컬로 연결</span>
-        </span>
-      </a>
-      <nav class="top-nav" aria-label="주요 메뉴">
+  <header class="site">
+    <div class="wrap hd">
+      <a class="brand" href="./index.html" aria-label="OneMouse 홈"><span class="om">OM</span>OneMouse</a>
+      <nav class="nav" aria-label="주요 메뉴">
         <a href="./index.html">소개</a>
-        <a href="./guide.html" class="is-active">사용 가이드</a>
+        <a href="./index.html#use">기능</a>
+        <a href="./guide.html" class="on">사용법</a>
         <a href="./help.html">도움말</a>
-        <a href="./technical.html">기술/보안</a>
-        <a href="./pricing.html">요금/Pro</a>
-        <a href="./index.html#download" class="nav-cta">다운로드</a>
       </nav>
-      <div class="lang-switch" aria-label="언어">
-        <span class="is-active">KOR</span>
-        <a href="./en/guide.html">ENG</a>
-        <a href="./ja/guide.html">JPN</a>
-        <a href="./zh/guide.html">CHN</a>
+      <div class="hd-right">
+        <div class="lang" aria-label="언어"><span class="on">KOR</span><a href="./en/guide.html">ENG</a><a href="./ja/guide.html">JPN</a><a href="./zh/guide.html">CHN</a></div>
+        <a class="hd-cta" href="./index.html#get">무료 다운로드</a>
       </div>
     </div>
   </header>
 
   <main>
-    <section class="page-hero">
-      <div class="container narrow">
-        <p class="section-kicker">Updated Guide</p>
-        <h1>처음 연결부터 자주 쓰는 기능까지 순서대로 봅니다.</h1>
-        <p class="page-intro">
-          OneMouse는 PC 마우스와 키보드로 Android와 다른 Windows PC를 제어하도록 돕습니다.
-          이 가이드는 설치 후 바로 필요한 연결 순서, 앱 화면에서 볼 위치, 파일 전송, 모바일 화면 원격 제어, 단축키, 다른 PC 연결 흐름만 정리했습니다.
-        </p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="#quick-start">5분 연결 순서</a>
-          <a class="button button-secondary" href="#mobile-mirror-control">원격 제어</a>
-          <a class="button button-secondary" href="#permissions">필요한 권한 보기</a>
-          <a class="button button-secondary" href="#bluetooth-connect">블루투스 연결</a>
-          <a class="button button-secondary" href="#pc-to-pc">다른 PC 연결</a>
-          <a class="button button-secondary" href="#keyboard-shortcuts">단축키 보기</a>
-          <a class="button button-secondary" href="./technical.html">기술/보안 안내</a>
-        </div>
-      </div>
+    <section class="phero wrap">
+      <p class="ey">사용 가이드</p>
+      <h1 class="page">처음 연결부터 자주 쓰는 기능까지, 순서대로.</h1>
+      <p class="lead">일반 사용자는 이 순서대로만 따라오면 됩니다. 어려운 네트워크 설명은 <a href="./technical.html" style="color:var(--coral-deep);font-weight:700">기술·보안</a>, 안 될 때는 <a href="./help.html" style="color:var(--coral-deep);font-weight:700">도움말</a>에서 따로 봅니다.</p>
+      <nav class="toc" aria-label="이 페이지 목차">
+        <a href="#start">5분 연결 순서</a>
+        <a href="#position">폰 위치 배치</a>
+        <a href="#remote">모바일 원격 제어</a>
+        <a href="#files">파일·클립보드</a>
+        <a href="#quick">번호 단축키</a>
+        <a href="#bluetooth">블루투스 연결</a>
+        <a href="#pcpc">다른 PC 연결</a>
+        <a href="#shortcuts">단축키 표</a>
+      </nav>
     </section>
 
-    <section class="section" id="quick-start">
-      <div class="container">
-        <div class="section-heading">
-          <p class="section-kicker">Quick Start</p>
-          <h2>처음 연결은 이 순서만 따라가면 됩니다.</h2>
-          <p>복잡한 네트워크 설정을 직접 만질 필요가 없습니다. PC 앱을 켜고 Android에서 PC를 찾은 뒤 QR 또는 6자리 코드로 확인합니다.</p>
-        </div>
+    <!-- QUICK START -->
+    <section id="start">
+      <div class="wrap narrow">
+        <div class="sec-head"><p class="ey">5분 연결</p><h2 class="sec">처음 연결은 이 순서만 따라가면 됩니다.</h2>
+          <p class="sec-lead">Wi-Fi(같은 공유기) 기준입니다. 켤 건 접근성 권한 하나뿐이에요.</p></div>
         <div class="timeline">
-          <article class="timeline-step">
-            <span>1</span>
-            <div>
-              <strong>PC 앱을 실행합니다</strong>
-              <p>Windows에서 OneMouse를 켜면 PC 화면에 6자리 코드와 QR 코드가 표시됩니다. 최신 Setup 파일은 다운로드 페이지에서 자동으로 연결됩니다.</p>
-            </div>
-          </article>
-          <article class="timeline-step">
-            <span>2</span>
-            <div>
-              <strong>Android에서 접근성 권한을 켭니다</strong>
-              <p>PC 마우스와 키보드로 Android를 제어하려면 OneMouse 접근성 서비스가 필요합니다. 처음 설정에서 사실상 필수로 봐야 하는 항목은 이것 하나입니다.</p>
-            </div>
-          </article>
-          <article class="timeline-step">
-            <span>3</span>
-            <div>
-              <strong>PC를 검색합니다</strong>
-              <p>PC와 Android가 같은 Wi-Fi 또는 같은 공유기 아래에 있으면 앱에서 PC를 찾을 수 있습니다. Android 13 이상에서는 이 순간에만 주변 Wi-Fi 기기 권한을 요청할 수 있습니다.</p>
-            </div>
-          </article>
-          <article class="timeline-step">
-            <span>4</span>
-            <div>
-              <strong>QR 또는 6자리 코드로 페어링합니다</strong>
-              <p>PC 화면의 QR을 스캔하거나 6자리 코드를 입력합니다. 이 단계가 끝나야 입력, 파일, 클립보드 채널을 사용할 수 있습니다.</p>
-            </div>
-          </article>
-          <article class="timeline-step">
-            <span>5</span>
-            <div>
-              <strong>폰 위치를 PC 가장자리에 배치합니다</strong>
-              <p>모니터 왼쪽, 오른쪽, 위, 아래 중 실제로 커서를 넘길 위치에 Android를 배치합니다. 이 배치가 커서 진입 방향이 됩니다.</p>
-            </div>
-          </article>
-          <article class="timeline-step">
-            <span>6</span>
-            <div>
-              <strong>입력, 전송, 모바일 화면 원격 제어를 사용합니다</strong>
-              <p>마우스를 배치 방향으로 밀면 Android 또는 서브 PC로 넘어갑니다. PC 파일은 빠른 드롭존으로 보내거나, PC-to-PC에서는 파일을 잡은 채 화면 가장자리로 넘겨 대상 PC에서 놓을 수 있습니다. 기기 관리의 원격 제어 아이콘으로 모바일 화면 원격 제어 창을 열고, Print Screen 또는 Ctrl + Alt + S로 모바일 스크린샷을 PC 기본 뷰어에 띄울 수 있습니다.</p>
-            </div>
-          </article>
+          <div class="tstep"><div class="rail"><span class="num">1</span><span class="line"></span></div><div class="body"><h4>PC 앱을 켭니다</h4><p>Windows에서 OneMouse를 실행하면 화면에 6자리 코드와 QR 코드가 나옵니다.</p></div></div>
+          <div class="tstep"><div class="rail"><span class="num">2</span><span class="line"></span></div><div class="body"><h4>Android 접근성 권한을 켭니다</h4><p>PC 마우스·키보드 입력을 받으려면 Android에서 OneMouse 접근성 서비스를 켭니다. 실질적으로 이것만 준비하면 됩니다.</p></div></div>
+          <div class="tstep"><div class="rail"><span class="num">3</span><span class="line"></span></div><div class="body"><h4>PC를 검색합니다</h4><p>같은 Wi-Fi(같은 공유기)에서 PC를 찾습니다. Android 13 이상은 이때 ‘주변 Wi-Fi 기기’ 권한을 한 번 물어볼 수 있습니다.</p></div></div>
+          <div class="tstep"><div class="rail"><span class="num">4</span><span class="line"></span></div><div class="body"><h4>QR 또는 6자리 코드로 페어링</h4><p>QR을 스캔하거나 6자리 코드를 입력해 내 기기인지 확인합니다. 페어링을 마쳐야 입력·파일·클립보드 채널이 열립니다.</p></div></div>
+          <div class="tstep"><div class="rail"><span class="num">5</span><span class="line"></span></div><div class="body"><h4>폰 위치를 맞춥니다</h4><p>PC 화면의 어느 가장자리(좌·우·상·하)로 폰이 이어질지 실제 방향에 맞춰 배치합니다. 이 가장자리가 커서 진입 방향입니다.</p></div></div>
+          <div class="tstep"><div class="rail"><span class="num">6</span></div><div class="body"><h4>넘겨 씁니다</h4><p>배치한 방향으로 마우스를 밀면 폰으로 넘어갑니다. 파일은 빠른 드롭존에 놓고, 다른 PC로는 화면 경계로 끌어 보냅니다. 화면 캡처는 Print Screen 또는 Ctrl+Alt+S.</p></div></div>
         </div>
-        <details class="guide-reference">
-          <summary>
-            <span>페어링 순서 이미지로 보기</span>
-            <small>PC 코드 확인, 숫자 입력, QR 스캔 흐름을 한 장으로 확인합니다.</small>
-          </summary>
-          <figure class="comic-showcase">
-            <a href="./assets/onemouse-pairing-real-ui-comic-v5.png" target="_blank" rel="noopener">
-              <img
-                src="./assets/onemouse-pairing-real-ui-comic-v5.png"
-                alt="OneMouse 페어링 방법: 준비, PC 코드 확인, 숫자 입력, QR 스캔 순서 안내"
-                loading="lazy"
-              />
-            </a>
-            <figcaption>이미지를 누르면 원본 크기로 열립니다.</figcaption>
-          </figure>
-        </details>
+        <details class="fold"><summary><span>실제 UI 페어링 흐름 보기</span><small>준비 → PC 코드 확인 → 숫자 입력 → QR 스캔</small></summary>
+          <div class="fold-body"><a href="./assets/onemouse-pairing-real-ui-comic-v5.png" target="_blank" rel="noopener"><img src="./assets/onemouse-pairing-real-ui-comic-v5.png" alt="OneMouse 페어링 방법: 준비, PC 코드 확인, 숫자 입력, QR 스캔 순서" loading="lazy" style="border-radius:12px" /></a></div></details>
       </div>
     </section>
 
-    <section class="section section-alt">
-      <div class="container">
-        <div class="section-heading">
-          <p class="section-kicker">Position</p>
-          <h2>연결 후에는 폰 위치만 실제 방향에 맞추면 됩니다.</h2>
-          <p>마우스를 어느 모니터 가장자리로 넘길지 정하는 단계입니다. Android를 PC의 왼쪽, 오른쪽, 위, 아래 중 실제 사용할 방향에 배치하세요.</p>
-        </div>
-        <details class="guide-reference">
-          <summary>
-            <span>폰 위치 배치 화면 보기</span>
-            <small>커서가 넘어갈 방향을 정하는 PC 화면입니다.</small>
-          </summary>
-          <div class="shot-row">
-            <figure class="shot-card shot-desktop">
-              <img src="./assets/onboarding_pc_position.png" alt="PC 위치 배치 화면" />
-              <figcaption>Android를 PC 주변 실제 방향에 놓으면 그 방향으로 커서를 넘길 수 있습니다.</figcaption>
-            </figure>
+    <!-- POSITION -->
+    <section class="section-alt" id="position">
+      <div class="wrap narrow">
+        <div class="sec-head"><p class="ey">폰 위치</p><h2 class="sec">연결 후엔 폰 위치만 실제 방향에 맞추면 됩니다.</h2></div>
+        <p class="sec-lead" style="max-width:60ch">마우스가 넘어갈 가장자리를 정하고, 실제로 폰을 놓아둔 쪽(좌·우·상·하)에 맞춰 배치합니다. 홈 화면의 배치 데모처럼, 앱에서도 폰·태블릿·다른 PC를 끌어서 배치합니다.</p>
+        <details class="fold"><summary><span>배치 화면 보기</span></summary>
+          <div class="fold-body"><a href="./assets/onboarding_pc_position.png" target="_blank" rel="noopener"><img src="./assets/onboarding_pc_position.png" alt="OneMouse 폰 위치 배치 화면" loading="lazy" style="border-radius:12px" /></a></div></details>
+      </div>
+    </section>
+
+    <!-- REMOTE CONTROL -->
+    <section id="remote">
+      <div class="wrap">
+        <div class="sec-head"><p class="ey">원격 제어</p><h2 class="sec">모바일 화면 원격 제어는 기기 관리에서 시작합니다.</h2></div>
+        <div class="split lead-left">
+          <div>
+            <p class="sec-lead" style="margin-bottom:16px">기기 관리에서 페어링된 Android 행의 원격 제어 아이콘을 누르면, 폰 화면을 보여주는 별도 창이 열립니다. 처음 열 때는 Android 화면 캡처 승인이 필요합니다.</p>
+            <div class="panel"><h3>창에서의 조작</h3>
+              <ul>
+                <li>좌클릭·드래그·휠이 그대로 전달됩니다.</li>
+                <li><b>우클릭 = 뒤로</b>, <b>휠클릭 = 홈</b>.</li>
+                <li>PC 키보드(한글 포함)는 폰의 현재 입력칸으로 갑니다.</li>
+                <li>화면이 비어 보이면 캡처 승인 팝업을 확인하고, 원격 제어를 껐다 켜세요.</li>
+              </ul></div>
           </div>
-        </details>
-      </div>
-    </section>
-
-    <section class="section" id="bluetooth-connect">
-      <div class="container split-grid">
-        <div>
-          <p class="section-kicker">Bluetooth</p>
-          <h2>공유기 없이 블루투스로도 연결할 수 있습니다.</h2>
-          <p class="lead">
-            같은 Wi-Fi가 없거나 인터넷이 끊긴 환경에서도 블루투스로 PC와 Android를, 그리고 다른 PC와도 직접 연결해
-            마우스와 키보드 입력, 클립보드, 파일 전송을 사용할 수 있습니다. 라우터나 인터넷 연결은 필요하지 않습니다.
-          </p>
-          <div class="hero-actions">
-            <a class="button button-secondary" href="#quick-start">Wi-Fi 연결 순서</a>
-            <a class="button button-secondary" href="#file-transfer">파일 전송 보기</a>
-          </div>
-        </div>
-        <div class="panel">
-          <p class="section-kicker">When To Use</p>
-          <h2>이런 때 유용합니다</h2>
-          <ul class="bullet-list">
-            <li>회의실, 외부, 차량처럼 같은 Wi-Fi에 둘 수 없는 환경</li>
-            <li>게스트 Wi-Fi나 방화벽 때문에 PC가 검색되지 않을 때</li>
-            <li>키보드 입력과 클립보드 위주로 가볍게 쓰고 싶을 때</li>
-          </ul>
-        </div>
-      </div>
-      <div class="container">
-        <div class="section-heading">
-          <p class="section-kicker">Order</p>
-          <h2>블루투스 연결은 이 순서로 합니다.</h2>
-          <p>먼저 Android에서 블루투스 모드를 켜고, Windows에서 한 번 페어링하면 PC 앱이 자동으로 연결합니다. PC에서 따로 연결 버튼을 누를 필요는 없습니다.</p>
-        </div>
-        <div class="timeline">
-          <article class="timeline-step">
-            <span>1</span>
-            <div>
-              <strong>Android 설정 탭에서 블루투스 모드를 켭니다</strong>
-              <p>OneMouse 앱의 설정 탭에 있는 블루투스 모드를 켜면 Android가 PC의 연결을 기다립니다.</p>
-            </div>
-          </article>
-          <article class="timeline-step">
-            <span>2</span>
-            <div>
-              <strong>Windows 블루투스 설정에서 폰을 페어링합니다</strong>
-              <p>Windows의 블루투스 및 기기 설정에서 폰을 추가해 한 번 페어링합니다. 페어링은 처음 한 번만 하면 됩니다.</p>
-            </div>
-          </article>
-          <article class="timeline-step">
-            <span>3</span>
-            <div>
-              <strong>PC 앱이 자동으로 연결합니다</strong>
-              <p>페어링이 끝나면 PC 앱이 블루투스 기기를 찾아 자동으로 연결합니다. 기기 관리 목록에 블루투스 기기로 표시됩니다.</p>
-            </div>
-          </article>
-          <article class="timeline-step">
-            <span>4</span>
-            <div>
-              <strong>입력, 클립보드, 파일 전송을 사용합니다</strong>
-              <p>Wi-Fi 연결과 동일하게 마우스와 키보드 입력, 양방향 클립보드, 파일 전송을 사용할 수 있습니다.</p>
-            </div>
-          </article>
-        </div>
-        <details class="guide-reference">
-          <summary>
-            <span>블루투스 화면과 데모 보기</span>
-            <small>기기 관리 표시, PC 키보드 입력, 파일 드래그를 영상으로 확인합니다.</small>
-          </summary>
-        <figure class="shot-card shot-desktop">
-          <img src="./assets/guide_bt_sub_devices.png" alt="서브 PC의 기기 관리 화면 — 블루투스로 연결된 메인 PC가 '메인 PC · 연결됨' 행으로 표시된 모습" loading="lazy" />
-          <figcaption>연결되면 기기 관리에 블루투스로 붙은 기기가 표시됩니다. (서브 PC 화면)</figcaption>
-        </figure>
-        <figure class="shot-card shot-desktop">
-          <video src="./assets/demo/bt-typing.mp4" poster="./assets/demo/bt-typing-poster.jpg" autoplay loop muted playsinline preload="metadata" style="width:100%;height:auto;display:block;border-radius:14px;">
-            <img src="./assets/demo/bt-typing.gif" alt="PC 키보드로 입력하면 블루투스로 연결된 폰 입력칸에 글자가 그대로 들어가는 모습" loading="lazy" />
-          </video>
-          <figcaption>PC 키보드로 치면 블루투스로 연결된 폰에 그대로 입력됩니다. (Wi-Fi 없이)</figcaption>
-        </figure>
-        <figure class="shot-card shot-desktop">
-          <video src="./assets/demo/bt-drag.mp4" poster="./assets/demo/bt-drag-poster.jpg" autoplay loop muted playsinline preload="metadata" style="width:100%;height:auto;display:block;border-radius:14px;">
-            <img src="./assets/demo/bt-drag.gif" alt="파일을 화면 경계로 끌어 블루투스로 연결된 다른 기기로 보내는 모습" loading="lazy" />
-          </video>
-          <figcaption>파일을 화면 경계로 끌면 블루투스로 연결된 기기로 전송됩니다. (Wi-Fi와 동일한 방식)</figcaption>
-        </figure>
-        </details>
-        <div class="panel">
-          <p class="section-kicker">Notes</p>
-          <h2>알아두면 좋은 점</h2>
-          <ul class="bullet-list">
-            <li>블루투스는 설정 탭의 토글로 켜고 끄며, Wi-Fi 연결과 독립적으로 동작합니다. 켜 두면 폰이 준비될 때 자동으로 연결되고, 폰이 없으면 점점 간격을 늘려 가볍게 재시도합니다.</li>
-            <li>다른 PC와도 블루투스로 연결됩니다. 한쪽을 메인 PC, 다른 쪽을 서브 PC로 두면 마우스·키보드를 넘기고 클립보드를 공유하며, 파일을 화면 경계로 끌어 양방향(가져가기·가져오기)으로 주고받을 수 있습니다.</li>
-            <li>블루투스 기기는 여러 대를 동시에 연결할 수 있습니다. 기기 관리의 블루투스 목록에서 각 기기를 토글로 켜고 끕니다.</li>
-            <li>블루투스는 Wi-Fi보다 느립니다. 마우스와 키보드 입력, 클립보드, 작은 파일에 적합하며 큰 파일은 Wi-Fi를 권장합니다.</li>
-            <li>모바일 화면 원격 제어는 대역폭이 큰 기능이라 블루투스에서는 권장하지 않습니다.</li>
-            <li>연결이 보이지 않으면 Android의 블루투스 모드가 켜져 있고 Windows에서 폰이 페어링되어 있는지 확인한 뒤 잠시 기다립니다. 그래도 안 되면 Windows에서 기기를 제거하고 다시 페어링합니다.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="mobile-mirror-control">
-      <div class="container split-grid">
-        <div>
-          <p class="section-kicker">Remote Control</p>
-          <h2>모바일 화면 원격 제어는 기기 관리에서 시작합니다.</h2>
-          <p class="lead">
-            페어링된 Android 행의 원격 제어 아이콘을 누르면 별도 창이 열리고 Android 화면이 PC에 표시됩니다.
-            처음 시작할 때는 Android에서 화면 캡처 권한을 승인해야 하며, 승인 후 같은 창에서 바로 조작할 수 있습니다.
-          </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#permissions">필요 권한 확인</a>
-            <a class="button button-secondary" href="#keyboard-shortcuts">관련 단축키 보기</a>
-          </div>
-        </div>
-        <div class="panel">
-          <p class="section-kicker">Controls</p>
-          <h2>원격 제어 창에서 바로 조작합니다.</h2>
-          <ul class="bullet-list">
-            <li>왼쪽 클릭, 드래그, 휠 스크롤은 Android 화면에 그대로 전달됩니다.</li>
-            <li>오른쪽 클릭은 뒤로가기, 가운데 클릭은 홈으로 동작합니다.</li>
-            <li>한글을 포함한 PC 키보드 입력은 Android의 현재 입력 칸으로 전달됩니다.</li>
-            <li>화면이 뜨지 않으면 Android 화면 캡처 승인 팝업이 앞에 떠 있는지 확인하고, 필요하면 중지 후 다시 시작합니다.</li>
-          </ul>
-        </div>
-      </div>
-      <div class="container">
-        <details class="guide-reference">
-          <summary>
-            <span>모바일 원격 제어 창 예시 보기</span>
-            <small>Android 화면을 PC 기본 창 안에서 바로 보고 조작하는 예시입니다.</small>
-          </summary>
-          <div class="shot-row remote-control-row">
-            <figure class="shot-card remote-shot">
-              <img src="./assets/guide_remote_control_devices.jpg" alt="PC 앱 기기 관리 화면에서 Android 행의 원격 제어 아이콘이 표시된 화면" loading="lazy" />
-              <figcaption>기기 관리에서 Android 행의 원격 제어 아이콘을 누르면 모바일 화면 원격 제어 창을 열 수 있습니다.</figcaption>
-            </figure>
-            <figure class="shot-card remote-shot">
-              <img src="./assets/guide_mobile_remote_control_window.jpg" alt="PC 대시보드 옆에 모바일 화면 원격 제어 창이 열려 Android 앱 화면이 표시된 화면" loading="lazy" />
-              <figcaption>열린 원격 제어 창에서 Android 화면을 보고, PC 마우스와 키보드 입력을 보낼 수 있습니다.</figcaption>
-            </figure>
-          </div>
-        </details>
-      </div>
-    </section>
-
-    <section class="section section-alt" id="permissions">
-      <div class="container">
-        <div class="section-heading">
-          <p class="section-kicker">Permissions</p>
-          <h2>사용자가 켜야 하는 항목은 기능별로 나뉩니다.</h2>
-          <p>처음부터 모두 켜는 구조가 아닙니다. 접근성은 입력 제어의 필수 조건이고, 나머지는 필요한 순간에만 요청하거나 권장합니다.</p>
-        </div>
-        <div class="permission-grid">
-          <article class="permission-card permission-required">
-            <span class="status-pill">필수</span>
-            <h3>접근성 서비스</h3>
-            <p>PC 마우스와 키보드로 Android를 제어하고, 스크린샷 요청과 원격 입력을 처리하기 위해 필요합니다.</p>
-          </article>
-          <article class="permission-card">
-            <span class="status-pill">원격 제어 시작 시</span>
-            <h3>화면 캡처 승인</h3>
-            <p>모바일 화면 원격 제어를 시작할 때 Android 시스템 팝업에서 승인합니다. 보안 화면은 표시되지 않을 수 있습니다.</p>
-          </article>
-          <article class="permission-card">
-            <span class="status-pill">연결 시</span>
-            <h3>주변 Wi-Fi 기기</h3>
-            <p>Android 13 이상에서 같은 네트워크의 PC를 찾을 때 요청될 수 있습니다. 앱 실행 직후에는 묻지 않습니다.</p>
-          </article>
-          <article class="permission-card">
-            <span class="status-pill">서비스 시작 시</span>
-            <h3>알림</h3>
-            <p>백그라운드 연결 상태를 표시할 때 사용합니다. 연결 서비스를 켤 때 필요한 경우에만 요청합니다.</p>
-          </article>
-          <article class="permission-card">
-            <span class="status-pill">밝기 사용 시</span>
-            <h3>시스템 설정 변경</h3>
-            <p>Alt + Shift + ↑ / ↓로 Android 밝기를 조절하려면 첫 사용 시 Android 설정에서 허용해야 합니다.</p>
-          </article>
-          <article class="permission-card">
-            <span class="status-pill">권장</span>
-            <h3>배터리 제한 예외</h3>
-            <p>화면이 꺼진 뒤 연결이 자주 끊길 때만 확인합니다. 안정성을 높이는 권장 설정입니다.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="file-transfer">
-      <div class="container split-grid">
-        <div>
-          <p class="section-kicker">File Transfer</p>
-          <h2>PC 파일은 전송 화면, 빠른 드롭존, PC-to-PC 드래그로 보냅니다.</h2>
-          <p class="lead">
-            전송 화면에서 파일을 고르거나, PC 화면 위 작은 드롭존에 파일을 놓으면 선택된 Android 또는 서브 PC로 전송합니다.
-            PC-to-PC에서는 파일을 잡은 상태로 대상 PC가 배치된 화면 가장자리로 넘긴 뒤 대상 PC에서 놓을 수 있습니다.
-            Android에서 PC로 보낼 때는 Android 전송 탭 또는 공유 메뉴를 사용합니다.
-          </p>
-        </div>
-        <div class="panel">
-          <p class="section-kicker">Quick Drop</p>
-          <h2>빠른 드롭존</h2>
-          <p class="lead">드롭존 위치와 활성화 상태는 PC 앱에 저장됩니다. 방해될 때는 전역 단축키로 숨기거나 다시 표시합니다.</p>
-          <div class="shortcut">Ctrl + Alt + D</div>
-          <ul class="bullet-list">
-            <li>파일 전송은 선택된 대상에 따라 PC -> Android 또는 PC -> PC 경로를 사용합니다.</li>
-            <li>PC-to-PC 파일 드래그는 대상 서브 PC가 연결되어 있고 배치판에 놓여 있을 때 사용합니다.</li>
-            <li>파일을 잡은 채 배치된 화면 가장자리로 이동하면 대상 PC로 드래그가 이어지고, 원하는 위치에서 놓으면 전송됩니다.</li>
-            <li>전송이 시작되지 않으면 Android/PC 연결 상태와 선택된 기기를 먼저 확인합니다.</li>
-          </ul>
-          <details class="guide-reference">
-            <summary>
-              <span>빠른 드롭존 화면 보기</span>
-              <small>파일을 놓는 위치와 전송 화면을 확인합니다.</small>
-            </summary>
-            <figure class="shot-card shot-desktop inline-shot">
-              <img src="./assets/guide_quick_drop_send.png" alt="PC 화면 오른쪽 아래 빠른 드롭존으로 파일을 전송하는 화면" />
-              <figcaption>파일을 드롭존 위에 놓으면 선택된 대상으로 바로 전송합니다.</figcaption>
-            </figure>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="quick-connect">
-      <div class="container split-grid">
-        <div>
-          <p class="section-kicker">Quick Connect</p>
-          <h2>기기 목록의 번호 단축키로 바로 연결합니다.</h2>
-          <p class="lead">
-            PC 앱의 기기 관리 목록에는 첫 9개 기기에 Ctrl + Alt + 1~9 단축키가 표시됩니다.
-            앱 창을 다시 찾지 않아도 자주 쓰는 Android 또는 서브 PC를 바로 연결할 수 있습니다.
-          </p>
-          <ul class="bullet-list">
-            <li>Ctrl + Alt + 1은 목록의 첫 번째 기기, Ctrl + Alt + 2는 두 번째 기기를 연결합니다.</li>
-            <li>이미 연결된 기기의 단축키를 한 번 더 누르면 해당 연결을 끊습니다.</li>
-            <li>연결되거나 끊기면 PC 화면 오른쪽 아래에 작은 알림이 잠깐 표시됩니다.</li>
-          </ul>
-        </div>
-        <div class="panel">
-          <p class="section-kicker">Auto Reconnect</p>
-          <h2>다시 보이는 기기는 자동 재연결할 수 있습니다.</h2>
-          <p class="lead">
-            자동 재연결을 켜 두면 마지막 기기가 다시 준비되거나 준비된 기기가 하나뿐일 때 PC 앱이 연결을 다시 시도합니다.
-            마우스가 기기 사이를 오갈 때는 별도 알림을 띄우지 않습니다.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-alt" id="pc-to-pc">
-      <div class="container split-grid">
-        <div>
-          <p class="section-kicker">Advanced: PC to PC</p>
-          <h2>다른 Windows PC는 설정, 기기 관리, 배치 순서로 붙입니다.</h2>
-          <p class="lead">
-            제어를 시작할 PC는 설정 화면의 PC 역할을 메인 PC로 둡니다. 제어받을 PC는 서브 PC로 실행한 뒤,
-            메인 PC의 기기 관리 화면에서 대상 PC를 검색하고 상대 PC에 표시된 6자리 코드를 입력해 페어링합니다.
-          </p>
-          <ul class="bullet-list">
-            <li>설정 화면에서 PC 역할 버튼이 메인 PC이면 Android와 서브 PC 연결을 시작할 수 있습니다.</li>
-            <li>기기 관리에서 대상 PC 행이 보이면 상대 PC의 6자리 코드를 입력하고 페어링을 누릅니다.</li>
-            <li>페어링 뒤 대상 PC 행에 연결됨이 보이면 폰 위치 / 입력 진입 방향 화면에서 배치를 조정합니다.</li>
-            <li>대상 PC 화면을 보며 조작해야 하면 연결된 대상 PC 행의 원격 제어 아이콘을 누릅니다.</li>
-          </ul>
-        </div>
-        <div class="panel">
-          <p class="section-kicker">Arrangement</p>
-          <h2>배치 화면에서 실제 진입 방향을 정합니다.</h2>
-          <ul class="bullet-list">
-            <li>대상 PC를 내 PC 왼쪽에 붙이면 왼쪽 경계로 넘길 때 대상 PC로 제어가 이동합니다.</li>
-            <li>Android도 같은 배치판에 함께 둘 수 있습니다. 대상 PC와 Android가 동시에 연결되어 있으면 각각 따로 배치합니다.</li>
-            <li>사이드바 연결 상태에는 현재 선택된 대상과 진입 방향이 표시됩니다. 방향이 다르면 배치판에서 다시 드래그합니다.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container guide-grid">
-        <article class="panel">
-          <p class="section-kicker">PC Remote Control</p>
-          <h2>서브 PC 화면도 별도 창에서 원격 제어할 수 있습니다.</h2>
-          <ul class="bullet-list">
-            <li>메인 PC의 기기 관리에서 연결된 서브 PC 행의 원격 제어 아이콘을 누르면 PC 화면 원격 제어 창이 열립니다.</li>
-            <li>창이 열리면 대상 PC 화면을 보면서 마우스 클릭, 드래그, 휠 스크롤을 바로 보낼 수 있습니다.</li>
-            <li>PC 키보드 입력도 대상 PC로 전달됩니다. 예를 들어 Ctrl + C, Ctrl + V 같은 단축키는 대상 PC에서 실행됩니다.</li>
-          </ul>
-        </article>
-        <article class="panel">
-          <p class="section-kicker">Quality</p>
-          <h2>품질은 상황에 맞게 선택하고 다시 연결합니다.</h2>
-          <ul class="bullet-list">
-            <li>빠름은 반응성을 우선하고, 표준은 기본 사용에 맞춘 설정입니다.</li>
-            <li>고화질은 화면을 더 선명하게 보고 싶을 때 사용합니다. 네트워크 상태가 좋을수록 안정적입니다.</li>
-            <li>품질을 바꾼 뒤에는 재연결해야 새 설정이 적용됩니다. 창을 닫으면 원격 제어가 중지됩니다.</li>
-          </ul>
-        </article>
-      </div>
-      <div class="container">
-        <details class="guide-reference">
-          <summary>
-            <span>PC 원격 제어 화면 예시 보기</span>
-            <small>기기 관리에서 대상 PC를 선택하고, 별도 창에서 서브 PC 화면을 조작하는 흐름입니다.</small>
-          </summary>
-          <div class="shot-row remote-control-row">
-            <figure class="shot-card remote-shot">
-              <img src="./assets/guide_remote_control_devices.jpg" alt="PC 앱 기기 관리 화면에서 Android와 대상 PC가 보이고 각 행에 원격 제어 아이콘이 표시된 화면" loading="lazy" />
-              <figcaption>연결된 대상 PC 행의 원격 제어 아이콘을 누르면 서브 PC 화면 원격 제어 창을 열 수 있습니다.</figcaption>
-            </figure>
-            <figure class="shot-card remote-shot">
-              <img src="./assets/guide_pc_remote_control_window.jpg" alt="PC 화면 원격 제어 창에서 대상 PC의 Windows 화면과 Edge 브라우저가 표시된 화면" loading="lazy" />
-              <figcaption>원격 제어 창에서는 대상 PC 화면을 보면서 마우스, 휠, 키보드 입력을 그대로 전달합니다.</figcaption>
-            </figure>
-          </div>
-        </details>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="section-heading">
-          <p class="section-kicker">PC-to-PC Screen Flow</p>
-          <h2>화면에서는 이 순서로 보면 됩니다.</h2>
-          <p>메인 PC는 연결을 시작하는 PC, 대상 PC는 마우스와 키보드를 넘겨 받을 PC입니다. 서브 PC의 페어링 코드는 화면 하단 6자리 숫자를 그대로 입력합니다.</p>
-        </div>
-        <div class="timeline">
-          <article class="timeline-step">
-            <span>1</span>
-            <div>
-              <strong>설정에서 PC 역할을 확인합니다</strong>
-              <p>제어를 시작하는 쪽은 설정 화면의 PC 역할이 메인 PC여야 합니다. 메인 PC는 Android와 대상 PC 연결을 시작할 수 있습니다.</p>
-            </div>
-          </article>
-          <article class="timeline-step">
-            <span>2</span>
-            <div>
-              <strong>서브 PC의 페어링 코드를 확인합니다</strong>
-              <p>제어받을 PC에서도 OneMouse를 실행하고, 사이드바 하단의 6자리 페어링 코드를 확인합니다. 예시는 101884처럼 보이는 숫자 코드입니다.</p>
-            </div>
-          </article>
-          <article class="timeline-step">
-            <span>3</span>
-            <div>
-              <strong>기기 관리에서 대상 PC를 페어링합니다</strong>
-              <p>메인 PC의 기기 관리 화면에서 대상 PC 행을 찾고, 상대 PC 6자리 코드 입력칸에 서브 PC 코드를 넣은 뒤 페어링을 누릅니다.</p>
-            </div>
-          </article>
-          <article class="timeline-step">
-            <span>4</span>
-            <div>
-              <strong>연결됨과 선택됨 상태를 확인합니다</strong>
-              <p>대상 PC 행이 연결됨으로 바뀌고 선택됨 배지가 붙으면 현재 마우스 진입 대상입니다. Android와 대상 PC가 함께 보이면 선택된 기기를 기준으로 동작합니다.</p>
-            </div>
-          </article>
-          <article class="timeline-step">
-            <span>5</span>
-            <div>
-              <strong>폰 위치 / 입력 진입 방향에서 배치합니다</strong>
-              <p>대상 PC 사각형을 내 PC 왼쪽, 오른쪽, 위, 아래 중 실제 놓인 방향으로 드래그합니다. Android도 같은 배치판에 함께 둘 수 있습니다.</p>
-            </div>
-          </article>
-        </div>
-        <details class="guide-reference">
-          <summary>
-            <span>PC-to-PC 화면 예시 보기</span>
-            <small>메인 PC, 서브 PC, 페어링, 연결됨, 배치 화면을 순서대로 확인합니다.</small>
-          </summary>
-          <div class="shot-row pc-flow-row">
-            <figure class="shot-card shot-desktop">
-              <img src="./assets/guide_pc_role_main.png" alt="OneMouse PC 설정 화면에서 PC 역할이 메인 PC로 표시된 화면" />
-              <figcaption>1. 연결을 시작하는 PC는 설정에서 메인 PC 역할을 사용합니다.</figcaption>
-            </figure>
-            <figure class="shot-card shot-desktop">
-              <img src="./assets/guide_pc_role_sub.png" alt="OneMouse PC 설정 화면에서 PC 역할이 서브 PC로 표시된 화면" />
-              <figcaption>2. 제어받을 PC는 서브 PC로 두고 하단 페어링 코드를 확인합니다.</figcaption>
-            </figure>
-            <figure class="shot-card shot-desktop">
-              <img src="./assets/guide_pc_target_detected.png" alt="기기 관리 화면에서 대상 PC가 페어링 필요 상태로 표시된 화면" />
-              <figcaption>3. 메인 PC의 기기 관리에서 대상 PC가 보이면 페어링을 준비합니다.</figcaption>
-            </figure>
-            <figure class="shot-card shot-desktop">
-              <img src="./assets/guide_pc_pair_code.png" alt="대상 PC 행에 상대 PC 6자리 코드를 입력한 화면" />
-              <figcaption>4. 상대 PC 6자리 코드를 입력하고 페어링을 누릅니다.</figcaption>
-            </figure>
-            <figure class="shot-card shot-desktop">
-              <img src="./assets/guide_pc_target_connected.png" alt="대상 PC와 Android가 연결됨 상태로 표시된 기기 관리 화면" />
-              <figcaption>5. 대상 PC가 연결됨과 선택됨 상태인지 확인합니다.</figcaption>
-            </figure>
-            <figure class="shot-card shot-desktop">
-              <img src="./assets/guide_pc_arrangement.png" alt="폰 위치와 입력 진입 방향 화면에서 대상 PC와 Android를 배치한 화면" />
-              <figcaption>6. 배치 화면에서 대상 PC를 내 PC 주변 실제 방향에 맞춥니다.</figcaption>
-            </figure>
-          </div>
-        </details>
-      </div>
-    </section>
-
-    <section class="section section-alt" id="keyboard-shortcuts">
-      <div class="container">
-        <div class="section-heading">
-          <p class="section-kicker">Keyboard Shortcuts</p>
-          <h2>PC 앱 전역 단축키와 Android 제어 단축키입니다.</h2>
-          <p>빠른 연결과 드롭존 단축키는 PC에서 바로 동작합니다. Android 제어 단축키는 마우스가 Android로 넘어간 상태에서 동작합니다.</p>
-        </div>
-        <div class="compare-table-wrap shortcut-table-wrap">
-          <table class="compare-table shortcut-table">
-            <thead>
-              <tr>
-                <th>단축키</th>
-                <th>동작</th>
-                <th>메모</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><span class="key-combo">Ctrl + Alt + 1~9</span></td>
-                <td>기기 목록의 첫 9개 기기를 바로 연결합니다.</td>
-                <td>이미 연결된 기기 번호를 다시 누르면 해당 연결을 끊습니다.</td>
-              </tr>
-              <tr>
-                <td><span class="key-combo">Ctrl + Alt + D</span></td>
-                <td>빠른 드롭존을 숨기거나 다시 표시합니다.</td>
-                <td>파일을 드롭존에 놓으면 선택된 Android 또는 서브 PC로 전송합니다.</td>
-              </tr>
-              <tr>
-                <td><span class="key-combo">Enter</span></td>
-                <td>검색창에서는 검색/완료를 실행합니다.</td>
-                <td>일반 줄바꿈 대신 Android IME의 검색/완료 액션을 우선 보냅니다.</td>
-              </tr>
-              <tr>
-                <td><span class="key-combo">Shift + Enter</span></td>
-                <td>입력창에 줄바꿈을 넣습니다.</td>
-                <td>채팅이나 긴 문장 입력에서 줄을 나눌 때 사용합니다.</td>
-              </tr>
-              <tr>
-                <td><span class="key-combo">Ctrl + A</span></td>
-                <td>현재 입력창의 텍스트를 전체 선택합니다.</td>
-                <td>앱이 선택 범위를 직접 노출하지 않는 경우 OneMouse가 선택 상태를 보조합니다.</td>
-              </tr>
-              <tr>
-                <td><span class="key-combo">Ctrl + C / X / V</span></td>
-                <td>복사, 잘라내기, 붙여넣기를 실행합니다.</td>
-                <td>복사와 잘라내기는 가능하면 PC 클립보드로도 바로 동기화합니다.</td>
-              </tr>
-              <tr>
-                <td><span class="key-combo">Shift + 방향키</span></td>
-                <td>텍스트 선택 범위를 확장합니다.</td>
-                <td>일부 앱은 Android 접근성 선택 동작을 제한할 수 있습니다.</td>
-              </tr>
-              <tr>
-                <td><span class="key-combo">Alt + ↑ / ↓</span></td>
-                <td>Android 미디어 볼륨을 조절합니다.</td>
-                <td>입력창 포커스가 있어도 우선 실행하며, 누르고 있으면 반복 조절됩니다.</td>
-              </tr>
-              <tr>
-                <td><span class="key-combo">Alt + Shift + ↑ / ↓</span></td>
-                <td>Android 화면 밝기를 조절합니다.</td>
-                <td>처음 사용할 때 Android의 시스템 설정 변경 권한을 허용해야 합니다.</td>
-              </tr>
-              <tr>
-                <td><span class="key-combo">Print Screen</span></td>
-                <td>Android 화면을 캡처해 PC 기본 이미지 뷰어로 엽니다.</td>
-                <td>Android 11 이상에서 접근성 스크린샷 기능을 사용합니다. 보안 화면은 캡처되지 않을 수 있습니다.</td>
-              </tr>
-              <tr>
-                <td><span class="key-combo">Ctrl + Alt + S</span></td>
-                <td>Print Screen 대신 모바일 스크린샷을 실행합니다.</td>
-                <td>노트북이나 원격 키보드에서 Print Screen 키를 쓰기 어려울 때 사용합니다.</td>
-              </tr>
-              <tr>
-                <td><span class="key-combo">Alt + Tab</span></td>
-                <td>Android 최근 앱 화면을 열고 앱을 전환합니다.</td>
-                <td>Alt를 누른 채 Tab을 반복하면 다음 앱으로 이동하고, Alt를 떼면 선택합니다.</td>
-              </tr>
-              <tr>
-                <td><span class="key-combo">Ctrl + Alt + Backspace</span></td>
-                <td>PC로 입력 제어를 강제 복귀합니다.</td>
-                <td>커서가 Android 쪽에 남아 있을 때 PC 입력으로 되돌리고, PC에 마우스 복귀 알림을 표시합니다.</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container split-grid">
-        <div>
-          <p class="section-kicker">Daily Use</p>
-          <h2>연결 후 자주 쓰는 흐름</h2>
-          <ul class="bullet-list">
-            <li>PC에서 현재 제어할 Android 또는 서브 PC를 선택하고 위치를 조정합니다.</li>
-            <li>모바일 검색창, 로그인 입력, 메시지 작성은 PC 키보드로 처리합니다.</li>
-            <li>PC 파일은 전송 화면에서 고르거나 화면 위 빠른 드롭존에 놓아 선택된 Android 또는 서브 PC로 보냅니다.</li>
-            <li>서브 PC로 보낼 때는 파일을 잡은 채 배치된 화면 가장자리로 넘겨 대상 PC에서 놓을 수도 있습니다.</li>
-            <li>텍스트를 꾹 눌러 선택한 뒤 OneMouse to PC를 누르면 PC 클립보드로 바로 보냅니다.</li>
-            <li>모바일 화면을 계속 보며 조작해야 하면 기기 관리의 원격 제어 아이콘으로 모바일 화면 원격 제어를 시작합니다.</li>
-            <li>한 장만 확인하면 Print Screen 또는 Ctrl + Alt + S로 스크린샷을 찍어 PC에서 확인합니다.</li>
-          </ul>
-        </div>
-        <div>
-          <p class="section-kicker">Recovery</p>
-          <h2>커서가 돌아오지 않을 때</h2>
-          <p class="lead">
-            Android로 넘어간 커서가 PC로 복귀하지 않으면 PC에서 Ctrl + Alt + Backspace를 누릅니다.
-            이 단축키는 마우스 입력을 PC로 되돌리고 Android에 복귀 신호를 다시 보낸 뒤 PC에 복귀 알림을 표시합니다.
-          </p>
-          <div class="shortcut">Ctrl + Alt + Backspace</div>
-          <div class="hero-actions">
-            <a class="button button-primary" href="./help.html">도움말 열기</a>
-            <a class="button button-secondary" href="./index.html">소개로 돌아가기</a>
+          <div>
+            <details class="fold" open><summary><span>기기 행과 아이콘</span></summary><div class="fold-body"><a href="./assets/guide_remote_control_devices.jpg" target="_blank" rel="noopener"><img src="./assets/guide_remote_control_devices.jpg" alt="기기 관리에서 원격 제어 아이콘" loading="lazy" style="border-radius:12px" /></a></div></details>
+            <details class="fold"><summary><span>열린 원격 제어 창</span></summary><div class="fold-body"><a href="./assets/guide_mobile_remote_control_window.jpg" target="_blank" rel="noopener"><img src="./assets/guide_mobile_remote_control_window.jpg" alt="열린 모바일 원격 제어 창" loading="lazy" style="border-radius:12px" /></a></div></details>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section section-alt">
-      <div class="container split-grid">
-        <div>
-          <p class="section-kicker">Screenshot</p>
-          <h2>모바일 스크린샷은 PC에서 바로 확인합니다.</h2>
-          <p class="lead">
-            Android 화면을 캡처하면 PC로 전송되고 Windows 기본 이미지 뷰어로 열립니다.
-            보안 정책이 걸린 화면이나 Android 접근성 스크린샷이 허용되지 않는 상태에서는 실패할 수 있습니다.
-            계속 보며 조작할 때는 모바일 화면 원격 제어를 사용하고, 한 장만 확인할 때는 스크린샷 단축키를 사용합니다.
-          </p>
-        </div>
-        <div class="panel">
-          <p class="section-kicker">When It Fails</p>
-          <h2>실패할 때 확인할 것</h2>
-          <ul class="bullet-list">
-            <li>앱 업데이트 후 OneMouse 접근성 서비스를 껐다가 다시 켭니다.</li>
-            <li>은행, DRM, 보안 키보드처럼 캡처 금지 화면인지 확인합니다.</li>
-            <li>너무 빠르게 연속 캡처했다면 잠시 기다린 뒤 다시 시도합니다.</li>
-            <li>PC와 Android 연결이 유지되어 있는지 확인합니다.</li>
-          </ul>
+    <!-- FILES -->
+    <section class="section-alt" id="files">
+      <div class="wrap">
+        <div class="sec-head"><p class="ey">파일·클립보드</p><h2 class="sec">파일은 전송 화면, 빠른 드롭존, PC-to-PC 드래그로 보냅니다.</h2></div>
+        <div class="split lead-left">
+          <div>
+            <ul class="panel" style="list-style:none;padding-left:22px">
+              <li style="margin:0 0 8px"><b>전송 화면</b> 또는 화면 위 작은 <b>드롭존</b>에 파일을 놓으면 선택한 Android나 서브 PC로 갑니다.</li>
+              <li style="margin:8px 0"><b>PC-to-PC</b>는 파일을 잡은 채 배치한 화면 경계를 넘어 대상 PC에 놓으면 전송됩니다(서브 PC가 연결·배치돼 있어야 함).</li>
+              <li style="margin:8px 0">Android → PC는 Android 전송 탭이나 공유 메뉴로 보냅니다.</li>
+              <li style="margin:8px 0 0">시작이 안 되면 연결 상태와 선택된 기기를 확인하세요.</li>
+            </ul>
+          </div>
+          <div>
+            <div class="panel tip"><h3>빠른 드롭존</h3>
+              <ul><li><b>Ctrl+Alt+D</b>로 드롭존을 숨기거나 보입니다.</li><li>위치와 상태는 PC 앱에 저장됩니다.</li></ul></div>
+            <details class="fold"><summary><span>빠른 드롭존 화면</span></summary><div class="fold-body"><a href="./assets/guide_quick_drop_send.png" target="_blank" rel="noopener"><img src="./assets/guide_quick_drop_send.png" alt="빠른 드롭존으로 파일 보내기" loading="lazy" style="border-radius:12px" /></a></div></details>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="text-to-pc">
-      <div class="container">
-        <div class="section-heading">
-          <p class="section-kicker">Text to PC</p>
-          <h2>Android에서 선택한 텍스트를 PC로 보냅니다.</h2>
-          <p>삼성 키보드와 일부 앱에서는 OneMouse to PC가 더보기 메뉴 안에 있습니다. 처음 한 번은 앱 관리에서 One Mouse를 켜야 할 수 있습니다.</p>
+    <!-- QUICK CONNECT -->
+    <section id="quick">
+      <div class="wrap narrow">
+        <div class="sec-head"><p class="ey">번호 단축키</p><h2 class="sec">기기 목록의 번호로 바로 연결합니다.</h2></div>
+        <div class="split">
+          <div class="panel"><h3>Ctrl + Alt + 1~9</h3>
+            <ul><li>기기 관리의 앞 9개 기기에 <b>Ctrl+Alt+1~9</b>가 붙습니다.</li><li>번호를 누르면 그 기기에 연결됩니다.</li><li>이미 연결된 기기의 번호를 다시 누르면 연결이 끊깁니다.</li><li>연결/해제 때 오른쪽 아래에 작은 알림이 뜹니다.</li></ul></div>
+          <div class="panel tip"><h3>자동 재연결</h3>
+            <ul><li>켜두면 마지막 기기가 다시 나타나거나 준비된 기기가 하나일 때 PC 앱이 자동으로 다시 연결합니다.</li><li>마우스가 기기 사이를 오갈 때 별도 알림은 뜨지 않습니다.</li></ul></div>
         </div>
-        <details class="guide-reference">
-          <summary>
-            <span>텍스트 전송 화면 예시 보기</span>
-            <small>Android 선택 메뉴에서 OneMouse to PC를 켜고 사용하는 순서를 확인합니다.</small>
-          </summary>
-          <div class="shot-row text-step-row">
-            <figure class="shot-card shot-phone">
-              <img src="./assets/text_to_pc_step_1.jpg" alt="Android에서 텍스트를 선택하고 더보기 메뉴를 여는 화면" />
-              <figcaption>1. 텍스트를 꾹 눌러 선택하고 더보기를 엽니다.</figcaption>
-            </figure>
-            <figure class="shot-card shot-phone">
-              <img src="./assets/text_to_pc_step_2.jpg" alt="텍스트 선택 메뉴에서 앱 관리를 누르는 화면" />
-              <figcaption>2. OneMouse to PC가 없으면 앱 관리를 누릅니다.</figcaption>
-            </figure>
-            <figure class="shot-card shot-phone">
-              <img src="./assets/text_to_pc_step_3.jpg" alt="앱 관리에서 One Mouse 항목을 켜는 화면" />
-              <figcaption>3. One Mouse 항목을 켭니다.</figcaption>
-            </figure>
-            <figure class="shot-card shot-phone">
-              <img src="./assets/text_to_pc_step_4.jpg" alt="더보기 메뉴에서 OneMouse to PC를 누르는 화면" />
-              <figcaption>4. OneMouse to PC를 눌러 PC 클립보드로 보냅니다.</figcaption>
-            </figure>
-            <figure class="shot-card shot-phone">
-              <img src="./assets/text_to_pc_step_5.jpg" alt="PC 클립보드로 보냈다는 완료 토스트가 표시된 화면" />
-              <figcaption>5. 완료 메시지가 보이면 PC에서 바로 붙여넣을 수 있습니다.</figcaption>
-            </figure>
-          </div>
-        </details>
       </div>
     </section>
 
-    <section class="section section-alt">
-      <div class="container split-grid">
-        <div>
-          <p class="section-kicker">Technical Notes</p>
-          <h2>연결 구조와 권한 설명은 별도 페이지에 모았습니다.</h2>
-          <p class="lead">
-            일반 사용자는 이 가이드의 순서대로 설치, 권한, 페어링, 위치 배치만 따라가면 됩니다.
-            로컬 네트워크 구조, 접근성 서비스, 포그라운드 서비스, 파일과 클립보드 처리 방식은 기술/보안 안내에서 확인할 수 있습니다.
-          </p>
-        </div>
-        <div class="panel">
-          <p class="section-kicker">Next Step</p>
-          <h2>문제가 생기면 도움말에서 원인을 좁힙니다.</h2>
-          <ul class="bullet-list">
-            <li>PC가 보이지 않으면 같은 Wi-Fi, 방화벽, 게스트 Wi-Fi 여부를 먼저 확인합니다.</li>
-            <li>입력이 들어가지 않으면 접근성 서비스와 앱 전원 상태를 확인합니다.</li>
-            <li>커서가 돌아오지 않으면 Ctrl + Alt + Backspace를 사용합니다.</li>
-          </ul>
-          <div class="hero-actions">
-            <a class="button button-primary" href="./help.html">도움말 보기</a>
-            <a class="button button-secondary" href="./technical.html">기술/보안 보기</a>
+    <!-- BLUETOOTH -->
+    <section class="section-alt" id="bluetooth">
+      <div class="wrap">
+        <div class="sec-head"><p class="ey">블루투스</p><h2 class="sec">공유기 없이 블루투스로도 연결할 수 있습니다.</h2>
+          <p class="sec-lead">PC↔Android, PC↔PC를 블루투스로 직접 이어 입력·클립보드·파일을 주고받습니다. 공유기나 인터넷이 없어도 됩니다.</p></div>
+        <div class="split lead-left">
+          <div>
+            <div class="panel" style="margin-bottom:14px"><h3>이럴 때 좋아요</h3>
+              <ul><li>공유 Wi-Fi가 없는 방·야외·차량</li><li>게스트 Wi-Fi나 방화벽이 기기 검색을 막을 때</li><li>가벼운 키보드·클립보드 위주 사용</li></ul></div>
+            <div class="panel tip"><h3>알아두기</h3>
+              <ul><li>Android 설정 탭에서 켜며 Wi-Fi와 독립적으로 동작(재시도 backoff 포함).</li><li>PC↔PC는 메인/서브 역할로 양방향 파일 드래그 지원.</li><li>여러 블루투스 기기를 목록에서 동시에 켤 수 있습니다.</li><li>블루투스는 Wi-Fi보다 느립니다 — 큰 파일은 Wi-Fi 권장.</li><li>모바일 원격 제어는 블루투스에서 권장하지 않습니다.</li><li>문제가 있으면 Windows 블루투스에서 다시 페어링하세요.</li></ul></div>
+          </div>
+          <div>
+            <div class="panel"><h3>연결 순서</h3>
+              <div class="timeline" style="margin-top:8px">
+                <div class="tstep"><div class="rail"><span class="num">1</span><span class="line"></span></div><div class="body" style="padding-bottom:14px"><h4>Android 설정 탭에서 블루투스 모드 켜기</h4></div></div>
+                <div class="tstep"><div class="rail"><span class="num">2</span><span class="line"></span></div><div class="body" style="padding-bottom:14px"><h4>Windows 블루투스 설정에서 폰 한 번 페어링</h4></div></div>
+                <div class="tstep"><div class="rail"><span class="num">3</span><span class="line"></span></div><div class="body" style="padding-bottom:14px"><h4>PC 앱이 자동 연결 → 기기 관리에 표시</h4></div></div>
+                <div class="tstep"><div class="rail"><span class="num">4</span></div><div class="body" style="padding-bottom:0"><h4>Wi-Fi와 똑같이 입력·클립보드·파일 사용</h4></div></div>
+              </div>
+            </div>
+            <details class="fold"><summary><span>블루투스 서브 기기 화면</span></summary><div class="fold-body"><a href="./assets/guide_bt_sub_devices.png" target="_blank" rel="noopener"><img src="./assets/guide_bt_sub_devices.png" alt="블루투스 서브 기기 목록" loading="lazy" style="border-radius:12px" /></a></div></details>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- PC TO PC -->
+    <section id="pcpc">
+      <div class="wrap">
+        <div class="sec-head"><p class="ey">다른 PC</p><h2 class="sec">다른 Windows PC는 설정 · 기기 관리 · 배치 순서로 붙입니다.</h2></div>
+        <div class="split lead-left">
+          <div>
+            <div class="panel"><h3>연결하기</h3>
+              <ul><li>제어하는 PC는 <b>메인</b>, 제어받는 PC는 <b>서브</b> 역할로 둡니다.</li><li>서브 PC를 페어링해 기기 관리에 추가합니다.</li><li>배치 편집기에서 서브 PC를 실제 위치대로 놓습니다.</li><li>그 방향으로 마우스를 넘기면 다른 PC를 제어하고, 파일도 경계 드래그로 주고받습니다.</li></ul></div>
+          </div>
+          <div>
+            <details class="fold" open><summary><span>배치 화면</span></summary><div class="fold-body"><a href="./assets/guide_pc_arrangement.png" target="_blank" rel="noopener"><img src="./assets/guide_pc_arrangement.png" alt="다른 PC 배치 편집기 화면" loading="lazy" style="border-radius:12px" /></a></div></details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PERMISSIONS (short summary + link) -->
+    <section class="section-alt" id="permissions">
+      <div class="wrap narrow">
+        <div class="sec-head"><p class="ey">권한</p><h2 class="sec">켜야 하는 건 접근성 하나, 나머지는 기능별로.</h2>
+          <p class="sec-lead">권한은 한꺼번에 요청하지 않고 그 기능을 쓸 때 물어봅니다. 항목별 자세한 설명은 기술·보안에 있습니다.</p></div>
+        <div class="panel"><ul>
+          <li><b>접근성 서비스 — 필수:</b> Android 제어와 화면 캡처·원격 입력에 필요합니다.</li>
+          <li><b>화면 캡처 승인 — 원격 제어 시작 시:</b> Android 시스템 팝업으로 승인합니다.</li>
+          <li><b>주변 Wi-Fi 기기 — 연결 시:</b> Android 13+에서 PC를 찾을 때 한 번 요청될 수 있습니다.</li>
+          <li><b>알림·시스템 설정·배터리 예외:</b> 각각 서비스 상태 표시, 밝기 조절, 화면 꺼짐 후 안정성에 필요할 때만.</li>
+        </ul></div>
+        <div style="margin-top:18px"><a class="btn btn-sec sm" href="./technical.html#permissions">권한 6가지 자세히 보기</a></div>
+      </div>
+    </section>
+
+    <!-- SHORTCUTS -->
+    <section id="shortcuts">
+      <div class="wrap narrow">
+        <div class="sec-head"><p class="ey">단축키</p><h2 class="sec">자주 쓰는 키보드 단축키.</h2></div>
+        <div class="table-wrap"><table class="kt">
+          <thead><tr><th>단축키</th><th>동작</th></tr></thead>
+          <tbody>
+            <tr><td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>1~9</kbd></td><td>목록의 해당 기기 연결 / 다시 누르면 해제</td></tr>
+            <tr><td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>D</kbd></td><td>빠른 드롭존 숨기기 / 보이기</td></tr>
+            <tr><td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>S</kbd> · <kbd>PrintScreen</kbd></td><td>모바일 화면 캡처</td></tr>
+            <tr><td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Backspace</kbd></td><td>커서를 내 PC(모니터 중앙)로 강제 복귀</td></tr>
+            <tr><td><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>↑</kbd>/<kbd>↓</kbd></td><td>모바일 화면 밝기 조절(시스템 설정 권한 필요)</td></tr>
+          </tbody>
+        </table></div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
+  <footer class="site">
+    <div class="wrap ft">
       <span>© 2026 OneMouse</span>
-      <span class="footer-links">
-        <a href="./technical.html">기술/보안</a>
-        <a href="./pricing.html">요금/Pro</a>
-        <a href="./privacy.html">개인정보처리방침</a>
-        <a href="./terms.html">이용약관</a>
-        <a href="./licenses.html">오픈소스 라이선스</a>
-      </span>
+      <span class="links"><a href="./technical.html">기술·보안</a><a href="./privacy.html">개인정보처리방침</a><a href="./terms.html">이용약관</a><a href="./licenses.html">오픈소스 라이선스</a></span>
     </div>
   </footer>
 </body>

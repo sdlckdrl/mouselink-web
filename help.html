@@ -3,337 +3,104 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>OneMouse | 도움말</title>
-  <meta
-    name="description"
-    content="OneMouse 권한, 페어링, 네트워크 검색, 배치 동기화, 클립보드와 파일 전송 문제를 해결하는 도움말입니다."
-  />
-  <link rel="stylesheet" href="./css/style.css" />
+  <title>도움말 | OneMouse 원마우스 — 연결·입력 문제 해결</title>
+  <meta name="description" content="OneMouse가 안 될 때 단계별로 원인을 좁힙니다: 앱 전원·권한·배터리·네트워크 발견·방화벽·페어링·복귀·파일 전송. 자주 묻는 질문 포함." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="stylesheet" href="./css/onemouse.css" />
   <link rel="canonical" href="https://onemouse.pages.dev/help" />
-  <link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/help" />
-  <link rel="alternate" hreflang="en" href="https://onemouse.pages.dev/en/help" />
-  <link rel="alternate" hreflang="ja" href="https://onemouse.pages.dev/ja/help" />
-  <link rel="alternate" hreflang="zh" href="https://onemouse.pages.dev/zh/help" />
-  <link rel="alternate" hreflang="x-default" href="https://onemouse.pages.dev/help" />
-  <meta property="og:site_name" content="OneMouse" />
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="OneMouse 도움말" />
-  <meta property="og:description" content="OneMouse 권한, 페어링, 네트워크 검색, 배치 동기화, 클립보드와 파일 전송 문제를 해결하는 도움말입니다." />
-  <meta property="og:url" content="https://onemouse.pages.dev/help" />
-  <meta property="og:image" content="https://onemouse.pages.dev/assets/hero-bg-generated-2.png" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="OneMouse 도움말" />
-  <meta name="twitter:description" content="OneMouse 권한, 페어링, 네트워크 검색, 배치 동기화, 클립보드와 파일 전송 문제를 해결하는 도움말입니다." />
-  <meta name="twitter:image" content="https://onemouse.pages.dev/assets/hero-bg-generated-2.png" />
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "name": "OneMouse 도움말",
-      "url": "https://onemouse.pages.dev/help",
-      "description": "OneMouse 권한, 페어링, 네트워크 검색, 배치 동기화, 클립보드와 파일 전송 문제를 해결하는 도움말입니다.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "name": "OneMouse",
-        "url": "https://onemouse.pages.dev/"
-      }
-    }
-  </script>
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "OneMouse에서 PC가 보이지 않으면 무엇을 확인해야 하나요?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "PC와 Android가 같은 Wi-Fi 또는 같은 공유기 아래에 있는지 확인하고, 게스트 Wi-Fi, 회사망 정책, 방화벽 또는 보안 프로그램이 기기 검색을 막지 않는지 확인합니다. 이후 Android 앱에서 기기 검색을 다시 실행합니다."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "연결되고 10초쯤 지나면 다시 끊기는 문제가 반복됩니다.",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "처음 연결은 됐지만 그 뒤 상태 신호가 PC에 도달하지 못하면 약 10초 뒤 끊긴 것으로 처리됩니다. 게스트·회사 Wi-Fi나 공유기의 기기 격리로 연결 후 신호가 막히는 경우, Android 배터리 최적화가 백그라운드 서비스를 종료하는 경우, Windows 방화벽이 수신을 막는 경우, 폰 화면을 끄면 Wi-Fi가 절전으로 끊기는 경우가 흔합니다. 같은 일반 Wi-Fi에서 배터리 최적화 예외와 방화벽 허용을 설정하세요. 블루투스라면 거리와 간섭을 확인합니다."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "폰에서는 PC가 보이는데 PC에서는 폰이 감지되지 않습니다.",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "대부분 Windows 방화벽의 수신 차단입니다. 폰은 PC의 신호를 받지만 PC가 폰의 신호를 받는 경로가 막힌 경우이며, Wi-Fi가 '공용(Public)' 네트워크로 잡혀 있으면 수신이 더 엄격합니다. OneMouse를 방화벽에서 허용하고(앱이 처음 실행 시 묻습니다), 네트워크를 '개인(Private)'으로 바꾸거나 최신 버전을 사용하면 공용 프로필까지 자동으로 허용됩니다. 이후 폰에서 기기 검색을 다시 실행하고, 백신·보안 프로그램의 수신 차단도 확인하세요."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "블루투스로 페어링했는데 PC가 폰을 찾지 못하면 어떻게 하나요?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Windows 블루투스 설정에서 폰을 한 번만 페어링하면 됩니다. 페어링 후 PC 앱을 실행하면 자동으로 연결됩니다. PC가 폰을 찾지 못하면 폰의 OneMouse 설정 탭에서 블루투스 모드가 켜져 있고 Windows에서 페어링되어 있는지 확인한 뒤 잠시 기다리세요. 그래도 안 되면 Windows에서 기기를 제거하고 다시 페어링하세요."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "OneMouse에서 입력이 들어가지 않을 때 가장 먼저 확인할 것은 무엇인가요?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Android 접근성 서비스가 켜져 있는지 먼저 확인합니다. 접근성 권한이 꺼져 있으면 PC가 보이거나 연결된 것처럼 보여도 실제 마우스와 키보드 입력은 Android로 전달되지 않습니다."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "화면이 꺼진 뒤 OneMouse 연결이 끊기면 어떻게 해야 하나요?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Android 설정에서 OneMouse의 배터리 제한 예외를 확인합니다. 앱 설정의 배터리 제한 항목에서 관련 Android 설정 화면으로 이동할 수 있습니다."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "커서가 Android 쪽에 남아 PC로 돌아오지 않으면 어떻게 하나요?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "PC 키보드에서 Ctrl + Alt + Backspace를 눌러 마우스 입력을 PC로 강제 복귀합니다."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "OneMouse는 USB 연결을 지원하나요?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "현재 공개 가이드는 Wi-Fi 또는 LAN 연결 기준입니다. USB 연결은 현재 지원하지 않습니다."
-          }
-        }
-      ]
-    }
-  </script>
-  <!-- Google tag (gtag.js) -->
+  <link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/help.html" />
+  <link rel="alternate" hreflang="en" href="https://onemouse.pages.dev/en/help.html" />
+  <link rel="alternate" hreflang="ja" href="https://onemouse.pages.dev/ja/help.html" />
+  <link rel="alternate" hreflang="zh" href="https://onemouse.pages.dev/zh/help.html" />
+  <link rel="alternate" hreflang="x-default" href="https://onemouse.pages.dev/help.html" />
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-MJ73H86TWX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-MJ73H86TWX');
-  </script></head>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-MJ73H86TWX');</script>
+</head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="./index.html" class="brand" aria-label="OneMouse 홈">
-        <span class="brand-mark">OM</span>
-        <span class="brand-copy">
-          <strong>OneMouse</strong>
-          <span>Windows와 Android를 로컬로 연결</span>
-        </span>
-      </a>
-      <nav class="top-nav" aria-label="주요 메뉴">
+  <header class="site">
+    <div class="wrap hd">
+      <a class="brand" href="./index.html" aria-label="OneMouse 홈"><span class="om">OM</span>OneMouse</a>
+      <nav class="nav" aria-label="주요 메뉴">
         <a href="./index.html">소개</a>
-        <a href="./guide.html">사용 가이드</a>
-        <a href="./help.html" class="is-active">도움말</a>
-        <a href="./technical.html">기술/보안</a>
-        <a href="./pricing.html">요금/Pro</a>
-        <a href="./index.html#download" class="nav-cta">다운로드</a>
+        <a href="./index.html#use">기능</a>
+        <a href="./guide.html">사용법</a>
+        <a href="./help.html" class="on">도움말</a>
       </nav>
-      <div class="lang-switch" aria-label="언어">
-        <span class="is-active">KOR</span>
-        <a href="./en/help.html">ENG</a>
-        <a href="./ja/help.html">JPN</a>
-        <a href="./zh/help.html">CHN</a>
+      <div class="hd-right">
+        <div class="lang" aria-label="언어"><span class="on">KOR</span><a href="./en/help.html">ENG</a><a href="./ja/help.html">JPN</a><a href="./zh/help.html">CHN</a></div>
+        <a class="hd-cta" href="./index.html#get">무료 다운로드</a>
       </div>
     </div>
   </header>
 
   <main>
-    <section class="page-hero">
-      <div class="container narrow">
-        <p class="section-kicker">Help</p>
-        <h1>권한, 발견, 복귀 문제를 빠르게 좁힙니다.</h1>
-        <p class="page-intro">
-          문제 원인은 앱 전원, 권한, 네트워크 검색, 페어링, 배치로 나눠 보는 편이 빠릅니다.
-          아래 순서대로 확인하면 대부분의 막힘을 좁힐 수 있습니다.
-        </p>
+    <section class="phero wrap narrow">
+      <p class="ey">도움말</p>
+      <h1 class="page">안 될 때는, 단계로 좁혀보세요.</h1>
+      <p class="lead">원인을 한 번에 찾으려 하기보다 <b>전원 → 발견 → 방화벽 → 페어링 → 입력·복귀</b> 순서로 좁히면 대부분 빠르게 잡힙니다.</p>
+    </section>
+
+    <!-- 이것부터 -->
+    <section style="padding-top:14px">
+      <div class="wrap narrow">
+        <div class="panel tip"><h3>먼저 이 두 가지</h3>
+          <ul>
+            <li><b>커서를 잃었을 때 →</b> <kbd style="font-family:var(--mono)">Ctrl+Alt+Backspace</kbd>를 누르면 커서가 내 PC(모니터 중앙)로 돌아옵니다.</li>
+            <li><b>연결은 됐는데 입력이 안 될 때 →</b> Android <b>접근성 서비스</b>가 꺼졌거나 재시작됐을 수 있습니다. 접근성에서 OneMouse를 다시 켜세요.</li>
+          </ul></div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container help-grid">
-        <article class="help-card">
-          <p class="section-kicker">Power</p>
-          <h2>앱 전원을 확인합니다</h2>
-          <p>오른쪽 위 전원이 꺼져 있으면 백그라운드 동작과 입력 수신이 중지됩니다. 연결을 시작할 때는 먼저 전원을 켜세요.</p>
-        </article>
-        <article class="help-card">
-          <p class="section-kicker">Permissions</p>
-          <h2>권한이 먼저입니다</h2>
-          <p>Android 입력 제어는 접근성 서비스가 켜져 있어야 합니다. 권한이 꺼져 있으면 PC가 보여도 실제 입력은 들어가지 않습니다.</p>
-        </article>
-        <article class="help-card">
-          <p class="section-kicker">Battery</p>
-          <h2>배터리 제한을 확인합니다</h2>
-          <p>화면이 꺼진 뒤 연결이 자주 끊기면 Android 설정의 배터리 제한 예외를 확인합니다. 앱 설정의 배터리 제한 항목에서 바로 이동할 수 있습니다.</p>
-        </article>
-        <article class="help-card">
-          <p class="section-kicker">Pairing</p>
-          <h2>QR 또는 6자리 코드</h2>
-          <p>PC 하단 QR을 스캔하거나 6자리 코드를 입력합니다. 페어링 전에는 연결 버튼이 활성화되지 않는 것이 정상입니다.</p>
-        </article>
-        <article class="help-card">
-          <p class="section-kicker">Device Search</p>
-          <h2>네트워크 검색을 확인합니다</h2>
-          <p>회사망, 게스트 Wi-Fi, 일부 공유기 설정에서는 기기 검색이 막힐 수 있습니다. 같은 공유기 아래인지 먼저 확인하세요.</p>
-        </article>
-        <article class="help-card">
-          <p class="section-kicker">Firewall</p>
-          <h2>방화벽과 네트워크를 확인합니다</h2>
-          <p>PC가 보이지 않으면 같은 Wi-Fi 또는 같은 공유기 아래인지, 게스트 Wi-Fi나 회사망 정책에 막히지 않았는지 확인합니다.</p>
-        </article>
-        <article class="help-card">
-          <p class="section-kicker">Layout</p>
-          <h2>배치가 어긋날 때</h2>
-          <p>Android 방향 전환 후에는 화면 크기와 위치가 다시 동기화됩니다. 그래도 어색하면 폰 위치를 다시 저장해 주세요.</p>
-        </article>
-        <article class="help-card">
-          <p class="section-kicker">Return</p>
-          <h2>커서 복귀 단축키</h2>
-          <p>PC로 커서가 돌아오지 않으면 Ctrl + Alt + Backspace를 눌러 마우스 입력을 PC로 되돌립니다. 복귀가 실행되면 PC에 작은 알림이 표시됩니다.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section section-alt">
-      <div class="container">
-        <div class="section-heading">
-          <p class="section-kicker">Troubleshooting</p>
-          <h2>문제 해결 순서</h2>
-          <p>어느 단계에서 막히는지 먼저 나누면 해결이 훨씬 빨라집니다.</p>
-        </div>
+    <!-- 문제 해결 순서 -->
+    <section id="order">
+      <div class="wrap narrow">
+        <div class="sec-head"><p class="ey">문제 해결 순서</p><h2 class="sec">이 순서대로 한 단계씩 확인하세요.</h2></div>
         <div class="timeline">
-          <article class="timeline-step">
-            <span>1</span>
-            <div>
-              <strong>앱과 권한 상태 확인</strong>
-              <p>PC 앱이 켜져 있고, Android 앱 전원과 접근성 권한이 켜져 있는지 확인합니다.</p>
-            </div>
-          </article>
-          <article class="timeline-step">
-            <span>2</span>
-            <div>
-              <strong>PC가 보이는지 확인</strong>
-              <p>같은 Wi-Fi 또는 같은 공유기 아래에서 기기 검색이 가능한지 확인하고, 기기 검색을 다시 실행합니다.</p>
-            </div>
-          </article>
-          <article class="timeline-step">
-            <span>3</span>
-            <div>
-              <strong>페어링 상태 확인</strong>
-              <p>PC 목록에 페어링 필요로 보이면 QR 또는 6자리 코드를 다시 사용합니다. 이미 꼬였으면 페어링을 해제하고 다시 연결합니다.</p>
-            </div>
-          </article>
-          <article class="timeline-step">
-            <span>4</span>
-            <div>
-              <strong>입력과 배치 확인</strong>
-              <p>PC에서 선택된 기기, Android 위치, 진입 방향, 화면 방향 변경 후 동기화 상태를 확인합니다.</p>
-            </div>
-          </article>
-          <article class="timeline-step">
-            <span>5</span>
-            <div>
-              <strong>복구 단축키 사용</strong>
-              <p>커서가 Android 쪽에 갇힌 느낌이면 Ctrl + Alt + Backspace로 PC 입력을 강제 복귀합니다. 강제 복귀 시 PC에 복귀 알림이 뜹니다.</p>
-            </div>
-          </article>
+          <div class="tstep"><div class="rail"><span class="num">1</span><span class="line"></span></div><div class="body"><h4>전원과 권한</h4><p>PC 앱과 Android 앱이 모두 켜져 있고, Android <b>접근성 서비스</b>가 켜져 있는지 확인합니다. 여기서 막히면 입력 자체가 안 됩니다.</p></div></div>
+          <div class="tstep"><div class="rail"><span class="num">2</span><span class="line"></span></div><div class="body"><h4>같은 네트워크·발견</h4><p>PC와 폰이 <b>같은 Wi-Fi(같은 공유기)</b>에 있는지 봅니다. 검색이 안 되면 대개 네트워크가 다르거나 검색이 막힌 경우입니다.</p></div></div>
+          <div class="tstep"><div class="rail"><span class="num">3</span><span class="line"></span></div><div class="body"><h4>방화벽·격리</h4><p>폰은 PC를 보는데 PC가 폰을 못 보면 <b>Windows 방화벽 인바운드</b>(네트워크가 ‘공용’인지 ‘개인’인지) 문제일 수 있습니다. 회사·카페 Wi-Fi는 <b>기기 간 격리</b>로 막히기도 합니다.</p></div></div>
+          <div class="tstep"><div class="rail"><span class="num">4</span><span class="line"></span></div><div class="body"><h4>페어링·연결</h4><p>QR 또는 6자리 코드 페어링이 끝났는지, 기기 관리에서 연결 상태인지 확인합니다. 페어링 전에는 입력·파일 채널이 열리지 않습니다.</p></div></div>
+          <div class="tstep"><div class="rail"><span class="num">5</span></div><div class="body"><h4>입력·복귀</h4><p>배치한 가장자리로 마우스를 밀어 넘어가는지, 안 넘어가면 위치 배치를 확인합니다. 커서가 엉뚱한 데 있으면 <kbd style="font-family:var(--mono)">Ctrl+Alt+Backspace</kbd>로 복귀시킵니다.</p></div></div>
         </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container split-grid">
-        <div>
-          <p class="section-kicker">Transfer</p>
-          <h2>파일과 클립보드가 안 될 때</h2>
-          <ul class="bullet-list">
-            <li>PC에서 어떤 Android 또는 서브 PC가 선택되어 있는지 확인합니다. PC -> Android/PC 파일은 선택된 기기로 갑니다.</li>
-            <li>텍스트 선택 메뉴에서 OneMouse to PC를 누르거나 Android 공유 메뉴에서 OneMouse를 고르면 기본 PC로 보냅니다.</li>
-            <li>서브 PC에서는 페어링된 메인 PC가 연결 대상으로 보여야 PC -> PC 파일 전송이 가능합니다.</li>
-            <li>OneMouse to PC가 보이지 않으면 더보기의 앱 관리에서 One Mouse를 켭니다. 이 설정은 보통 처음 한 번만 필요합니다.</li>
-            <li>대용량 파일은 네트워크 상태에 영향을 받으므로 연결이 안정적인지 먼저 확인합니다.</li>
-          </ul>
-        </div>
-        <figure class="shot-card">
-          <img src="./assets/onboarding_mobile_pair.jpg" alt="Android 감지된 PC 페어링 화면" />
-          <figcaption>전송이 안 되면 같은 네트워크에서 PC가 감지되는지 먼저 확인합니다.</figcaption>
-        </figure>
+    <!-- 파일·클립보드 -->
+    <section class="section-alt">
+      <div class="wrap narrow">
+        <div class="sec-head"><p class="ey">전송</p><h2 class="sec">파일과 클립보드가 안 될 때.</h2></div>
+        <div class="panel"><ul>
+          <li><b>선택된 기기</b>가 맞는지 확인 — 전송은 선택한 대상으로 갑니다.</li>
+          <li>PC-to-PC 드래그는 <b>서브 PC가 연결·배치</b>돼 있어야 합니다.</li>
+          <li>파일을 잡은 채 배치한 <b>화면 경계를 넘어</b> 대상 위에서 놓아야 전송이 시작됩니다.</li>
+          <li>클립보드가 안 넘어오면 양쪽 앱이 연결 상태인지, 화면이 꺼져 대기 상태인지 확인합니다.</li>
+          <li>블루투스는 Wi-Fi보다 느립니다 — 큰 파일은 Wi-Fi로 보내세요.</li>
+        </ul></div>
       </div>
     </section>
 
-    <section class="section section-alt">
-      <div class="container">
-        <div class="section-heading">
-          <p class="section-kicker">FAQ</p>
-          <h2>자주 묻는 질문</h2>
-          <p>최신 연결 구조를 기준으로 답변을 다시 정리했습니다.</p>
+    <!-- FAQ -->
+    <section id="faq">
+      <div class="wrap narrow">
+        <div class="sec-head"><p class="ey">자주 묻는 질문</p><h2 class="sec">가장 많이 겪는 문제들.</h2></div>
+        <div class="faq">
+          <details open><summary>10초쯤마다 계속 끊겨요.</summary><div class="a">대표 원인 네 가지입니다: <b>① 게스트/회사 Wi-Fi의 기기 간 격리</b>, <b>② 배터리 최적화</b>로 폰의 백그라운드 연결이 잘림, <b>③ Windows 방화벽 인바운드 차단</b>, <b>④ 화면이 꺼지면 Wi-Fi가 절전(슬립)</b>. 배터리 예외를 켜고, 방화벽에서 OneMouse 인바운드를 허용하고, 가능하면 개인 Wi-Fi를 쓰세요.</div></details>
+          <details><summary>폰에서는 PC가 보이는데, PC에서 폰이 안 보여요.</summary><div class="a">대개 <b>Windows 방화벽 인바운드</b> 문제입니다. 현재 네트워크가 <b>‘공용(Public)’</b>이면 인바운드가 막힐 수 있으니 <b>‘개인(Private)’</b>으로 바꾸거나, 방화벽에서 OneMouse의 인바운드를 허용하세요.</div></details>
+          <details><summary>집에서는 되는데 회사·카페 Wi-Fi에서는 안 돼요.</summary><div class="a">공용/게스트 Wi-Fi는 보안을 위해 <b>기기 간 통신을 격리(client isolation)</b>하는 경우가 많습니다. 이럴 땐 같은 Wi-Fi여도 서로를 못 찾습니다. <b>블루투스 연결</b>이나 개인 핫스팟을 이용하세요.</div></details>
+          <details><summary>연결은 됐다는데 마우스·키보드가 안 먹어요.</summary><div class="a">Android <b>접근성 서비스</b>가 꺼졌거나 시스템에 의해 재시작됐을 가능성이 큽니다. Android 설정 → 접근성에서 OneMouse를 다시 켜세요.</div></details>
+          <details><summary>커서가 폰/다른 PC에 갇혀서 안 돌아와요.</summary><div class="a"><kbd style="font-family:var(--mono)">Ctrl+Alt+Backspace</kbd>를 누르면 커서가 내 PC의 모니터 중앙으로 강제 복귀합니다.</div></details>
+          <details><summary>화면이 꺼지면 연결이 끊겨요.</summary><div class="a">화면이 꺼질 때 폰의 Wi-Fi가 절전되거나 배터리 최적화로 앱이 잠들 수 있습니다. Android에서 OneMouse를 <b>배터리 최적화 예외</b>로 두면 안정적입니다. 연결 중 화면 꺼짐 방지 옵션도 확인하세요.</div></details>
+          <details><summary>블루투스로 원격 화면 제어가 잘 안 돼요.</summary><div class="a">모바일 화면 원격 제어는 데이터가 많아 <b>블루투스에서는 권장하지 않습니다</b>. 원격 제어는 Wi-Fi로 쓰세요. 블루투스는 마우스·키보드·클립보드·파일에 적합합니다.</div></details>
         </div>
-        <div class="faq-grid">
-          <details open>
-            <summary>중간 서버를 거치나요?</summary>
-            <div class="faq-answer">기본 구조는 같은 Wi-Fi 또는 같은 공유기 아래에서 PC와 Android가 직접 연결되는 방식입니다.</div>
-          </details>
-          <details>
-            <summary>PC가 검색되지 않으면 어떻게 하나요?</summary>
-            <div class="faq-answer">PC와 Android가 같은 Wi-Fi 또는 같은 공유기 아래에 있는지 확인하고, 게스트 Wi-Fi나 회사망처럼 기기끼리 서로 보이지 않는 환경이 아닌지 확인하세요.</div>
-          </details>
-          <details>
-            <summary>연결되고 10초쯤 지나면 자꾸 끊겨요. 계속 반복돼요.</summary>
-            <div class="faq-answer">처음 연결은 됐지만 그 뒤 상태 신호가 PC에 닿지 않으면 약 10초 뒤 끊긴 것으로 처리됩니다. 보통 ① 게스트·회사 Wi-Fi나 공유기의 기기 격리로 연결 후 신호가 막히거나, ② Android 배터리 최적화가 백그라운드 서비스를 꺼버리거나(설정의 배터리 제한에서 OneMouse를 ‘제한 없음’으로), ③ Windows 방화벽이 수신을 막거나, ④ 폰 화면을 끄면 Wi-Fi가 절전으로 끊기는 경우입니다. 같은 일반 Wi-Fi에서 배터리 최적화 예외와 방화벽 허용을 해주세요. 블루투스라면 거리·간섭을 확인하세요.</div>
-          </details>
-          <details>
-            <summary>폰에서는 PC가 보이는데, PC에서는 폰이 안 잡혀요.</summary>
-            <div class="faq-answer">거의 대부분 Windows 방화벽의 ‘수신’ 차단입니다. 폰은 PC 신호를 받지만 PC가 폰 신호를 받는 경로가 막힌 경우예요. 특히 Wi-Fi가 ‘공용(Public)’ 네트워크로 잡혀 있으면 수신이 더 엄격합니다. OneMouse를 방화벽에서 허용하고(앱이 처음 실행 시 물어봅니다 — 거부했다면 다시 허용), 네트워크를 ‘개인(Private)’으로 바꾸거나 최신 버전을 쓰면 공용 프로필까지 자동 허용됩니다. 그 뒤 폰에서 기기 검색을 다시 실행하세요. 백신·보안 프로그램이 수신을 막는 경우도 확인하세요.</div>
-          </details>
-          <details>
-            <summary>집에서는 되는데 회사·카페 Wi-Fi에서는 안 돼요.</summary>
-            <div class="faq-answer">게스트 Wi-Fi나 회사망은 보안을 위해 기기끼리 서로 못 보게 막는 경우(클라이언트 격리)가 많아 검색·연결이 안 되거나 연결 후 끊깁니다. 같은 일반 Wi-Fi(공유기)를 쓰거나, 폰 핫스팟에 PC를 연결하거나, Wi-Fi가 어려운 환경에서는 블루투스 연결을 사용하세요.</div>
-          </details>
-          <details>
-            <summary>블루투스로 페어링했는데 PC에서 폰을 찾지 못해요.</summary>
-            <div class="faq-answer">Windows 블루투스 설정에서 폰을 한 번만 페어링하면 됩니다. 페어링 후 PC 앱을 실행하면 자동으로 연결됩니다. PC가 폰을 찾지 못하면 폰의 OneMouse 설정 탭에서 블루투스 모드가 켜져 있고 Windows에서 페어링되어 있는지 확인한 뒤 잠시 기다리세요. 그래도 안 되면 Windows에서 기기를 제거하고 다시 페어링하세요.</div>
-          </details>
-          <details>
-            <summary>여러 Android를 동시에 붙일 수 있나요?</summary>
-            <div class="faq-answer">가능합니다. PC에서 여러 기기를 발견하고 선택, 연결, 배치할 수 있습니다.</div>
-          </details>
-          <details>
-            <summary>다른 Windows PC도 제어할 수 있나요?</summary>
-            <div class="faq-answer">가능합니다. 메인 PC에서 대상 PC를 검색하고 6자리 코드로 페어링한 뒤, 폰 위치 / 입력 진입 방향 화면에서 대상 PC를 배치합니다.</div>
-          </details>
-          <details>
-            <summary>커서가 Android에서 PC로 안 돌아오면 어떻게 하나요?</summary>
-            <div class="faq-answer">PC에서 Ctrl + Alt + Backspace를 누르세요. 마우스 입력을 PC로 되돌리는 복구 단축키입니다.</div>
-          </details>
-          <details>
-            <summary>Android에서 PC로 텍스트나 파일을 보낼 수 있나요?</summary>
-            <div class="faq-answer">Android 공유 메뉴에서 OneMouse를 선택하거나 클립보드 동기화를 사용하면 기본 PC로 텍스트와 파일을 보낼 수 있습니다.</div>
-          </details>
-        </div>
+        <div style="margin-top:22px"><a class="btn btn-sec sm" href="./guide.html">사용 가이드로 돌아가기</a></div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
+  <footer class="site">
+    <div class="wrap ft">
       <span>© 2026 OneMouse</span>
-      <span class="footer-links">
-        <a href="./technical.html">기술/보안</a>
-        <a href="./pricing.html">요금/Pro</a>
-        <a href="./privacy.html">개인정보처리방침</a>
-        <a href="./terms.html">이용약관</a>
-        <a href="./licenses.html">오픈소스 라이선스</a>
-      </span>
+      <span class="links"><a href="./technical.html">기술·보안</a><a href="./privacy.html">개인정보처리방침</a><a href="./terms.html">이용약관</a><a href="./licenses.html">오픈소스 라이선스</a></span>
     </div>
   </footer>
 </body>

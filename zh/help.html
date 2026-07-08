@@ -3,338 +3,104 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>OneMouse | 帮助</title>
-  <meta
-    name="description"
-    content="OneMouse 帮助：解决权限、配对、网络发现、位置编排、剪贴板与文件传输问题。"
-  />
-  <link rel="stylesheet" href="../css/style.css" />
+  <title>帮助 | OneMouse — 连接与输入问题排查</title>
+  <meta name="description" content="OneMouse 用不了时，跟着一步步缩小原因：应用开关、权限、电池、网络发现、防火墙、配对、返回、文件传输。含常见问题解答。" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="stylesheet" href="../css/onemouse.css" />
   <link rel="canonical" href="https://onemouse.pages.dev/zh/help" />
-  <link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/help" />
-  <link rel="alternate" hreflang="en" href="https://onemouse.pages.dev/en/help" />
-  <link rel="alternate" hreflang="ja" href="https://onemouse.pages.dev/ja/help" />
-  <link rel="alternate" hreflang="zh" href="https://onemouse.pages.dev/zh/help" />
-  <link rel="alternate" hreflang="x-default" href="https://onemouse.pages.dev/help" />
-  <meta property="og:site_name" content="OneMouse" />
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="OneMouse 帮助" />
-  <meta property="og:description" content="OneMouse 帮助：解决权限、配对、网络发现、位置编排、剪贴板与文件传输问题。" />
-  <meta property="og:url" content="https://onemouse.pages.dev/zh/help" />
-  <meta property="og:image" content="https://onemouse.pages.dev/assets/hero-bg-generated-2.png" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="OneMouse 帮助" />
-  <meta name="twitter:description" content="OneMouse 帮助：解决权限、配对、网络发现、位置编排、剪贴板与文件传输问题。" />
-  <meta name="twitter:image" content="https://onemouse.pages.dev/assets/hero-bg-generated-2.png" />
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "name": "OneMouse 帮助",
-      "url": "https://onemouse.pages.dev/zh/help",
-      "inLanguage": "zh-CN",
-      "description": "OneMouse 帮助：解决权限、配对、网络发现、位置编排、剪贴板与文件传输问题。",
-      "isPartOf": {
-        "@type": "WebSite",
-        "name": "OneMouse",
-        "url": "https://onemouse.pages.dev/"
-      }
-    }
-  </script>
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "在 OneMouse 中看不到 PC 时应该检查什么？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "确认 PC 和 Android 是否处于同一 Wi-Fi 或同一路由器下，并检查访客 Wi-Fi、公司网络策略、防火墙或安全软件是否阻止了设备发现。之后在 Android 应用中重新执行设备搜索。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "连接成功后大约 10 秒就会断开，而且反复出现。",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "首次连接成功，但之后的状态信号如果无法到达 PC，约 10 秒后就会被判定为断开。常见原因包括：访客或公司 Wi-Fi、路由器的设备隔离在连接后阻断信号；Android 电池优化结束了后台服务；Windows 防火墙阻止入站；以及手机熄屏后 Wi-Fi 进入省电而断开。请在普通的共享 Wi-Fi 下，为 OneMouse 设置电池优化例外并在防火墙中放行。蓝牙连接则需检查距离与干扰。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "手机能看到 PC，但 PC 检测不到手机。",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "这几乎都是 Windows 防火墙的入站拦截。手机能收到 PC 的信号，但 PC 接收手机信号的通道被挡住了；如果 Wi-Fi 被识别为“公用”网络，入站会更严格。请在防火墙中放行 OneMouse（应用首次启动时会询问），把网络改为“专用”，或使用最新版本（会自动放行公用配置文件）。然后在手机上重新搜索设备，并检查杀毒/安全软件是否拦截了入站。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "通过蓝牙配对后 PC 找不到手机怎么办？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "在 Windows 蓝牙设置中将手机配对一次即可。配对后启动 PC 应用即会自动连接。如果 PC 找不到手机，请确认手机 OneMouse 设置标签页中的蓝牙模式已开启、且手机已在 Windows 中配对，然后稍等片刻；若仍然失败，请在 Windows 中删除该设备后重新配对。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "在 OneMouse 中输入不进去时，最先要检查什么？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "请先确认 Android 无障碍服务是否已开启。如果无障碍权限关闭，即使 PC 看起来已显示或已连接，实际的鼠标和键盘输入也不会传递到 Android。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "息屏后 OneMouse 连接中断时该怎么办？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "请在 Android 设置中确认 OneMouse 的电池限制例外。可以从应用设置的电池限制项目跳转到相关的 Android 设置界面。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "光标停留在 Android 一侧无法返回 PC 时怎么办？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "在 PC 键盘上按 Ctrl + Alt + Backspace，即可把鼠标输入强制返回到 PC。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "OneMouse 支持 USB 连接吗？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "目前公开指南以 Wi-Fi 或 LAN 连接为准。当前不支持 USB 连接。"
-          }
-        }
-      ]
-    }
-  </script>
-  <!-- Google tag (gtag.js) -->
+  <link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/help.html" />
+  <link rel="alternate" hreflang="en" href="https://onemouse.pages.dev/en/help.html" />
+  <link rel="alternate" hreflang="ja" href="https://onemouse.pages.dev/ja/help.html" />
+  <link rel="alternate" hreflang="zh" href="https://onemouse.pages.dev/zh/help.html" />
+  <link rel="alternate" hreflang="x-default" href="https://onemouse.pages.dev/help.html" />
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-MJ73H86TWX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-MJ73H86TWX');
-  </script></head>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-MJ73H86TWX');</script>
+</head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="./index.html" class="brand" aria-label="OneMouse 主页">
-        <span class="brand-mark">OM</span>
-        <span class="brand-copy">
-          <strong>OneMouse</strong>
-          <span>在本地连接 Windows 和 Android</span>
-        </span>
-      </a>
-      <nav class="top-nav" aria-label="主菜单">
-        <a href="./index.html">简介</a>
-        <a href="./guide.html">使用指南</a>
-        <a href="./help.html" class="is-active">帮助</a>
-        <a href="./technical.html">技术/安全</a>
-        <a href="./pricing.html">Free / Pro</a>
-        <a href="./index.html#download" class="nav-cta">下载</a>
+  <header class="site">
+    <div class="wrap hd">
+      <a class="brand" href="./index.html" aria-label="OneMouse 主页"><span class="om">OM</span>OneMouse</a>
+      <nav class="nav" aria-label="主菜单">
+        <a href="./index.html">概览</a>
+        <a href="./index.html#use">功能</a>
+        <a href="./guide.html">使用方法</a>
+        <a href="./help.html" class="on">帮助</a>
       </nav>
-      <div class="lang-switch" aria-label="语言">
-        <a href="../help.html">KOR</a>
-        <a href="../en/help.html">ENG</a>
-        <a href="../ja/help.html">JPN</a>
-        <span class="is-active">CHN</span>
+      <div class="hd-right">
+        <div class="lang" aria-label="语言"><a href="../help.html">KOR</a><a href="../en/help.html">ENG</a><a href="../ja/help.html">JPN</a><span class="on">CHN</span></div>
+        <a class="hd-cta" href="./index.html#get">免费下载</a>
       </div>
     </div>
   </header>
 
   <main>
-    <section class="page-hero">
-      <div class="container narrow">
-        <p class="section-kicker">Help</p>
-        <h1>快速缩小权限、发现和返回问题的范围。</h1>
-        <p class="page-intro">
-          把问题原因分成应用电源、权限、网络发现、配对和位置编排来排查会更快。
-          按下面的顺序逐项确认，大多数卡住的情况都能缩小范围。
-        </p>
+    <section class="phero wrap narrow">
+      <p class="ey">帮助</p>
+      <h1 class="page">用不了时，一步步缩小范围。</h1>
+      <p class="lead">与其想一次找到原因，不如按 <b>开关 → 发现 → 防火墙 → 配对 → 输入·返回</b> 的顺序逐步排查，大多数问题都能很快解决。</p>
+    </section>
+
+    <!-- 이것부터 -->
+    <section style="padding-top:14px">
+      <div class="wrap narrow">
+        <div class="panel tip"><h3>先看这两点</h3>
+          <ul>
+            <li><b>找不到光标时 →</b> 按 <kbd style="font-family:var(--mono)">Ctrl+Alt+Backspace</kbd>，光标会回到自己的电脑（显示器中央）。</li>
+            <li><b>连上了但无法输入时 →</b> Android 的<b>无障碍服务</b>可能已关闭或被重启。请在无障碍设置里重新开启 OneMouse。</li>
+          </ul></div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container help-grid">
-        <article class="help-card">
-          <p class="section-kicker">Power</p>
-          <h2>检查应用电源</h2>
-          <p>如果右上角电源关闭，后台动作和输入接收会停止。开始连接时，请先打开电源。</p>
-        </article>
-        <article class="help-card">
-          <p class="section-kicker">Permissions</p>
-          <h2>权限优先</h2>
-          <p>Android 输入控制需要开启无障碍服务。如果权限关闭，即使能看到 PC，实际输入也不会进去。</p>
-        </article>
-        <article class="help-card">
-          <p class="section-kicker">Battery</p>
-          <h2>检查电池限制</h2>
-          <p>如果息屏后经常断开连接，请在 Android 设置中确认电池限制例外。可从应用设置的电池限制项目直接跳转。</p>
-        </article>
-        <article class="help-card">
-          <p class="section-kicker">Pairing</p>
-          <h2>二维码或 6 位代码</h2>
-          <p>扫描 PC 底部的二维码或输入 6 位代码。配对前连接按钮不会激活，这是正常的。</p>
-        </article>
-        <article class="help-card">
-          <p class="section-kicker">Device Search</p>
-          <h2>检查网络发现</h2>
-          <p>在公司网络、访客 Wi-Fi 和部分路由器设置中，设备发现可能被阻止。请先确认是否处于同一路由器下。</p>
-        </article>
-        <article class="help-card">
-          <p class="section-kicker">Firewall</p>
-          <h2>检查防火墙和网络</h2>
-          <p>如果看不到 PC，请确认是否处于同一 Wi-Fi 或同一路由器下，以及是否被访客 Wi-Fi 或公司网络策略阻止。</p>
-        </article>
-        <article class="help-card">
-          <p class="section-kicker">Layout</p>
-          <h2>位置编排错位时</h2>
-          <p>Android 方向切换后，屏幕大小和位置会重新同步。如果仍然别扭，请重新保存手机位置。</p>
-        </article>
-        <article class="help-card">
-          <p class="section-kicker">Return</p>
-          <h2>光标返回快捷键</h2>
-          <p>如果光标不返回 PC，请按 Ctrl + Alt + Backspace 把鼠标输入返回到 PC。执行返回后，PC 上会显示一个小提示。</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section section-alt">
-      <div class="container">
-        <div class="section-heading">
-          <p class="section-kicker">Troubleshooting</p>
-          <h2>问题排查顺序</h2>
-          <p>先弄清在哪一步卡住，解决会快很多。</p>
-        </div>
+    <!-- 문제 해결 순서 -->
+    <section id="order">
+      <div class="wrap narrow">
+        <div class="sec-head"><p class="ey">排查顺序</p><h2 class="sec">请按这个顺序，一步步确认。</h2></div>
         <div class="timeline">
-          <article class="timeline-step">
-            <span>1</span>
-            <div>
-              <strong>确认应用和权限状态</strong>
-              <p>确认 PC 应用已开启，并且 Android 应用电源和无障碍权限都已打开。</p>
-            </div>
-          </article>
-          <article class="timeline-step">
-            <span>2</span>
-            <div>
-              <strong>确认是否能看到 PC</strong>
-              <p>确认在同一 Wi-Fi 或同一路由器下能否进行设备搜索，并重新执行设备搜索。</p>
-            </div>
-          </article>
-          <article class="timeline-step">
-            <span>3</span>
-            <div>
-              <strong>确认配对状态</strong>
-              <p>如果 PC 列表显示为需要配对，请重新使用二维码或 6 位代码。如果已经混乱，请先删除配对再重新连接。</p>
-            </div>
-          </article>
-          <article class="timeline-step">
-            <span>4</span>
-            <div>
-              <strong>确认输入和位置编排</strong>
-              <p>确认 PC 上选定的设备、Android 位置、进入方向，以及屏幕方向变更后的同步状态。</p>
-            </div>
-          </article>
-          <article class="timeline-step">
-            <span>5</span>
-            <div>
-              <strong>使用恢复快捷键</strong>
-              <p>如果感觉光标被困在 Android 一侧，请按 Ctrl + Alt + Backspace 强制把 PC 输入返回。强制返回时 PC 上会弹出返回提示。</p>
-            </div>
-          </article>
+          <div class="tstep"><div class="rail"><span class="num">1</span><span class="line"></span></div><div class="body"><h4>开关与权限</h4><p>确认 PC 应用和 Android 应用都已打开，且 Android 的<b>无障碍服务</b>已开启。这一步卡住的话，输入本身就无法进行。</p></div></div>
+          <div class="tstep"><div class="rail"><span class="num">2</span><span class="line"></span></div><div class="body"><h4>同一网络·发现</h4><p>看看电脑和手机是否在<b>同一个 Wi-Fi（同一个 Wi-Fi 路由器）</b>下。搜索不到时，多半是网络不同或搜索被拦截了。</p></div></div>
+          <div class="tstep"><div class="rail"><span class="num">3</span><span class="line"></span></div><div class="body"><h4>防火墙·隔离</h4><p>手机能看到电脑、电脑却看不到手机时，可能是 <b>Windows 防火墙入站</b>（网络是“公用”还是“专用”）的问题。公司、咖啡馆的 Wi-Fi 有时会因<b>客户端隔离</b>而被拦截。</p></div></div>
+          <div class="tstep"><div class="rail"><span class="num">4</span><span class="line"></span></div><div class="body"><h4>配对·连接</h4><p>确认 QR 或 6 位数字码配对是否已完成，在设备管理中是否处于已连接状态。配对之前，输入与文件通道不会打开。</p></div></div>
+          <div class="tstep"><div class="rail"><span class="num">5</span></div><div class="body"><h4>输入·返回</h4><p>把鼠标推向布局中设定的边缘，看是否能越过去；越不过去就检查位置布局。光标跑到别处时，用 <kbd style="font-family:var(--mono)">Ctrl+Alt+Backspace</kbd> 让它返回。</p></div></div>
         </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container split-grid">
-        <div>
-          <p class="section-kicker">Transfer</p>
-          <h2>文件和剪贴板无法使用时</h2>
-          <ul class="bullet-list">
-            <li>确认 PC 上选定的是哪个 Android 或副 PC。PC -> Android/PC 文件会发送到选定的设备。</li>
-            <li>在文本选择菜单中点击 OneMouse to PC，或在 Android 共享菜单中选择 OneMouse，即可发送到默认 PC。</li>
-            <li>在副 PC 上，需要把已配对的主 PC 显示为连接对象，才能进行 PC -> PC 文件传输。</li>
-            <li>如果看不到 OneMouse to PC，请在更多的应用管理中开启 One Mouse。此设置通常只需首次进行一次。</li>
-            <li>大文件会受网络状态影响，请先确认连接是否稳定。</li>
-          </ul>
-        </div>
-        <figure class="shot-card">
-          <img src="../assets/onboarding_mobile_pair.jpg" alt="Android 检测到 PC 的配对界面" />
-          <figcaption>如果无法传输，请先确认是否在同一网络中检测到 PC。</figcaption>
-        </figure>
+    <!-- 파일·클립보드 -->
+    <section class="section-alt">
+      <div class="wrap narrow">
+        <div class="sec-head"><p class="ey">传输</p><h2 class="sec">文件和剪贴板不工作时。</h2></div>
+        <div class="panel"><ul>
+          <li>确认<b>选中的设备</b>是否正确 —— 传输会发往你选定的目标。</li>
+          <li>PC 到 PC 的拖放，需要<b>从 PC 已连接并完成布局</b>。</li>
+          <li>要抓着文件<b>越过布局中的屏幕边界</b>，在目标上方松手，传输才会开始。</li>
+          <li>剪贴板传不过来时，确认两端应用是否都处于已连接状态，或屏幕是否已息屏进入待机。</li>
+          <li>Bluetooth 比 Wi-Fi 慢 —— 大文件请用 Wi-Fi 发送。</li>
+        </ul></div>
       </div>
     </section>
 
-    <section class="section section-alt">
-      <div class="container">
-        <div class="section-heading">
-          <p class="section-kicker">FAQ</p>
-          <h2>常见问题</h2>
-          <p>已按最新的连接结构重新整理了答案。</p>
+    <!-- FAQ -->
+    <section id="faq">
+      <div class="wrap narrow">
+        <div class="sec-head"><p class="ey">常见问题</p><h2 class="sec">大家最常遇到的问题。</h2></div>
+        <div class="faq">
+          <details open><summary>每隔 10 秒左右就一直断开。</summary><div class="a">主要有四个原因：<b>① 访客/公司 Wi-Fi 的客户端隔离</b>、<b>② 电池优化</b>切断了手机的后台连接、<b>③ Windows 防火墙拦截入站</b>、<b>④ 屏幕息屏后 Wi-Fi 进入省电（休眠）</b>。请开启电池优化例外，在防火墙中允许 OneMouse 入站，尽量使用私人 Wi-Fi。</div></details>
+          <details><summary>手机能看到电脑，但电脑看不到手机。</summary><div class="a">多半是 <b>Windows 防火墙入站</b>的问题。如果当前网络是<b>“公用（Public）”</b>，入站可能被拦截，请改为<b>“专用（Private）”</b>，或在防火墙中允许 OneMouse 的入站。</div></details>
+          <details><summary>在家能用，但在公司、咖啡馆的 Wi-Fi 用不了。</summary><div class="a">公用/访客 Wi-Fi 为了安全，常会<b>隔离设备之间的通信（客户端隔离）</b>。这种情况下，即使是同一个 Wi-Fi 也彼此找不到。请改用 <b>Bluetooth 连接</b>或个人热点。</div></details>
+          <details><summary>说是连上了，可鼠标、键盘不起作用。</summary><div class="a">很可能是 Android 的<b>无障碍服务</b>被关闭或被系统重启了。请在 Android 设置 → 无障碍中重新开启 OneMouse。</div></details>
+          <details><summary>光标卡在手机/另一台电脑上回不来。</summary><div class="a">按 <kbd style="font-family:var(--mono)">Ctrl+Alt+Backspace</kbd>，光标会强制返回到自己电脑的显示器中央。</div></details>
+          <details><summary>屏幕一息屏，连接就断了。</summary><div class="a">屏幕息屏时，手机的 Wi-Fi 可能进入省电，或应用因电池优化而休眠。在 Android 中把 OneMouse 设为<b>电池优化例外</b>会更稳定。也请查看连接期间的防止息屏选项。</div></details>
+          <details><summary>用 Bluetooth 远程控制屏幕不太顺畅。</summary><div class="a">手机屏幕的远程控制数据量大，<b>不建议在 Bluetooth 上使用</b>。远程控制请用 Wi-Fi。Bluetooth 适合鼠标、键盘、剪贴板和文件。</div></details>
         </div>
-        <div class="faq-grid">
-          <details open>
-            <summary>会经过中间服务器吗？</summary>
-            <div class="faq-answer">基本结构是在同一 Wi-Fi 或同一路由器下，PC 和 Android 直接连接的方式。</div>
-          </details>
-          <details>
-            <summary>搜索不到 PC 时该怎么办？</summary>
-            <div class="faq-answer">请确认 PC 和 Android 是否处于同一 Wi-Fi 或同一路由器下，并确认是否处于访客 Wi-Fi 或公司网络这类设备之间彼此不可见的环境。</div>
-          </details>
-          <details>
-            <summary>连接后大约 10 秒就反复断开。</summary>
-            <div class="faq-answer">首次连接成功，但之后的状态信号若无法到达 PC，约 10 秒后会被判定为断开。通常是 ① 访客/公司 Wi-Fi 或路由器的设备隔离在连接后阻断信号，② Android 电池优化结束了后台服务（在设置的电池限制中把 OneMouse 设为“无限制”），③ Windows 防火墙阻止入站，④ 手机熄屏后 Wi-Fi 省电断开。请在普通共享 Wi-Fi 下设置电池优化例外并在防火墙放行。蓝牙则检查距离与干扰。</div>
-          </details>
-          <details>
-            <summary>手机能看到 PC，但 PC 找不到手机。</summary>
-            <div class="faq-answer">几乎都是 Windows 防火墙的“入站”拦截。手机能收到 PC 信号，但 PC 接收手机信号的通道被挡住；如果 Wi-Fi 是“公用”网络，入站更严格。请在防火墙放行 OneMouse（首次启动会询问，若拒绝过请重新允许），把网络改为“专用”，或使用最新版本（会自动放行公用配置文件）。然后在手机上重新搜索设备，并检查杀毒/安全软件是否拦截入站。</div>
-          </details>
-          <details>
-            <summary>在家能用，但公司或咖啡店 Wi-Fi 不行。</summary>
-            <div class="faq-answer">访客 Wi-Fi 和公司网络出于安全常常隔离设备互访（客户端隔离），导致搜索/连接失败或连接后断开。请使用普通的共享 Wi-Fi（路由器）、把 PC 连到手机热点，或在 Wi-Fi 不便时改用蓝牙连接。</div>
-          </details>
-          <details>
-            <summary>通过蓝牙配对了，但 PC 找不到手机。</summary>
-            <div class="faq-answer">在 Windows 蓝牙设置中将手机配对一次即可。配对后启动 PC 应用即会自动连接。如果 PC 找不到手机，请确认手机 OneMouse 设置标签页中的蓝牙模式已开启、且手机已在 Windows 中配对，然后稍等片刻；若仍然失败，请在 Windows 中删除该设备后重新配对。</div>
-          </details>
-          <details>
-            <summary>可以同时连接多台 Android 吗？</summary>
-            <div class="faq-answer">可以。在 PC 上可以发现多台设备并进行选择、连接和位置编排。</div>
-          </details>
-          <details>
-            <summary>也可以控制其他 Windows PC 吗？</summary>
-            <div class="faq-answer">可以。在主 PC 上搜索目标 PC 并用 6 位代码配对后，在手机位置 / 输入进入方向界面中编排目标 PC。</div>
-          </details>
-          <details>
-            <summary>光标从 Android 无法返回 PC 时怎么办？</summary>
-            <div class="faq-answer">请在 PC 上按 Ctrl + Alt + Backspace。这是把鼠标输入返回到 PC 的恢复快捷键。</div>
-          </details>
-          <details>
-            <summary>可以从 Android 向 PC 发送文本或文件吗？</summary>
-            <div class="faq-answer">在 Android 共享菜单中选择 OneMouse，或使用剪贴板同步，即可向默认 PC 发送文本和文件。</div>
-          </details>
-        </div>
+        <div style="margin-top:22px"><a class="btn btn-sec sm" href="./guide.html">返回使用指南</a></div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
+  <footer class="site">
+    <div class="wrap ft">
       <span>© 2026 OneMouse</span>
-      <span class="footer-links">
-        <a href="./technical.html">技术/安全</a>
-        <a href="./pricing.html">Free / Pro</a>
-        <a href="./privacy.html">隐私政策</a>
-        <a href="./terms.html">使用条款</a>
-        <a href="./licenses.html">开源许可</a>
-      </span>
+      <span class="links"><a href="./technical.html">技术与安全</a><a href="./privacy.html">隐私政策</a><a href="./terms.html">使用条款</a><a href="./licenses.html">开源许可</a></span>
     </div>
   </footer>
 </body>

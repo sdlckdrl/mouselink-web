@@ -3,338 +3,104 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>OneMouse | Help</title>
-  <meta
-    name="description"
-    content="OneMouse help for troubleshooting permissions, pairing, network discovery, placement, and clipboard and file transfer issues."
-  />
-  <link rel="stylesheet" href="../css/style.css" />
+  <title>Help | OneMouse — Fix connection &amp; input problems</title>
+  <meta name="description" content="When OneMouse isn't working, narrow down the cause step by step: app power, permissions, battery, network discovery, firewall, pairing, cursor return, and file transfer. Includes frequently asked questions." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="stylesheet" href="../css/onemouse.css" />
   <link rel="canonical" href="https://onemouse.pages.dev/en/help" />
-  <link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/help" />
-  <link rel="alternate" hreflang="en" href="https://onemouse.pages.dev/en/help" />
-  <link rel="alternate" hreflang="ja" href="https://onemouse.pages.dev/ja/help" />
-  <link rel="alternate" hreflang="zh" href="https://onemouse.pages.dev/zh/help" />
-  <link rel="alternate" hreflang="x-default" href="https://onemouse.pages.dev/help" />
-  <meta property="og:site_name" content="OneMouse" />
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="OneMouse Help" />
-  <meta property="og:description" content="OneMouse help for troubleshooting permissions, pairing, network discovery, placement, and clipboard and file transfer issues." />
-  <meta property="og:url" content="https://onemouse.pages.dev/en/help" />
-  <meta property="og:image" content="https://onemouse.pages.dev/assets/hero-bg-generated-2.png" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="OneMouse Help" />
-  <meta name="twitter:description" content="OneMouse help for troubleshooting permissions, pairing, network discovery, placement, and clipboard and file transfer issues." />
-  <meta name="twitter:image" content="https://onemouse.pages.dev/assets/hero-bg-generated-2.png" />
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "name": "OneMouse Help",
-      "url": "https://onemouse.pages.dev/en/help",
-      "inLanguage": "en-US",
-      "description": "OneMouse help for troubleshooting permissions, pairing, network discovery, placement, and clipboard and file transfer issues.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "name": "OneMouse",
-        "url": "https://onemouse.pages.dev/"
-      }
-    }
-  </script>
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What should I check when the PC is not visible in OneMouse?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Make sure the PC and Android are on the same Wi-Fi or under the same router, and check that guest Wi-Fi, a company network policy, a firewall, or security software is not blocking device discovery. Then run device search again in the Android app."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "The connection keeps dropping about 10 seconds after it connects.",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The first connection succeeds, but if the status signal then fails to reach the PC, the connection is treated as lost after about 10 seconds. Common causes are guest or office Wi-Fi and router client isolation blocking the connection after connecting, Android battery optimization ending the background service, Windows Firewall blocking inbound traffic, and the phone's Wi-Fi sleeping when the screen turns off. On a normal shared Wi-Fi, set a battery-optimization exception and allow OneMouse through the firewall. For Bluetooth, check distance and interference."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "The phone can see the PC, but the PC cannot detect the phone.",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "This is almost always a Windows Firewall inbound block. The phone receives the PC's signal, but the path for the PC to receive the phone's signal is blocked, and if Wi-Fi is classified as a Public network the inbound rules are even stricter. Allow OneMouse through the firewall (the app asks on first run), switch the network to Private, or use the latest version, which also allows the Public profile automatically. Then run device search again on the phone, and check that antivirus or security software is not blocking inbound traffic."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "I paired over Bluetooth, but the PC cannot find my phone. What do I do?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Pair the phone once in Windows Bluetooth settings - that is all you need. After pairing, launching the PC app connects automatically. If the PC cannot find the phone, make sure Bluetooth mode is on in the OneMouse Settings tab on the phone and that the phone is paired in Windows, then wait a moment. If it still fails, remove the device in Windows and pair again."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What should I check first when input does not go through in OneMouse?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "First check that the Android Accessibility service is on. If the Accessibility permission is off, your mouse and keyboard input is not delivered to Android even when the PC looks visible or connected."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What should I do when the OneMouse connection drops after the screen turns off?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Check the battery limit exception for OneMouse in Android settings. You can jump to the related Android settings screen from the battery limit item in the app settings."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What do I do when the cursor is stuck on Android and does not come back to the PC?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Press Ctrl + Alt + Backspace on the PC keyboard to force mouse input back to the PC."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does OneMouse support USB connections?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The current public guide is based on Wi-Fi or LAN connections. USB connections are not supported at this time."
-          }
-        }
-      ]
-    }
-  </script>
-  <!-- Google tag (gtag.js) -->
+  <link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/help.html" />
+  <link rel="alternate" hreflang="en" href="https://onemouse.pages.dev/en/help.html" />
+  <link rel="alternate" hreflang="ja" href="https://onemouse.pages.dev/ja/help.html" />
+  <link rel="alternate" hreflang="zh" href="https://onemouse.pages.dev/zh/help.html" />
+  <link rel="alternate" hreflang="x-default" href="https://onemouse.pages.dev/help.html" />
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-MJ73H86TWX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-MJ73H86TWX');
-  </script></head>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-MJ73H86TWX');</script>
+</head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="./index.html" class="brand" aria-label="OneMouse home">
-        <span class="brand-mark">OM</span>
-        <span class="brand-copy">
-          <strong>OneMouse</strong>
-          <span>Connect Windows and Android locally</span>
-        </span>
-      </a>
-      <nav class="top-nav" aria-label="Main navigation">
+  <header class="site">
+    <div class="wrap hd">
+      <a class="brand" href="./index.html" aria-label="OneMouse home"><span class="om">OM</span>OneMouse</a>
+      <nav class="nav" aria-label="Main navigation">
         <a href="./index.html">Overview</a>
+        <a href="./index.html#use">Features</a>
         <a href="./guide.html">Guide</a>
-        <a href="./help.html" class="is-active">Help</a>
-        <a href="./technical.html">Technical/Security</a>
-        <a href="./pricing.html">Free / Pro</a>
-        <a href="./index.html#download" class="nav-cta">Download</a>
+        <a href="./help.html" class="on">Help</a>
       </nav>
-      <div class="lang-switch" aria-label="Language">
-        <a href="../help.html">KOR</a>
-        <span class="is-active">ENG</span>
-        <a href="../ja/help.html">JPN</a>
-        <a href="../zh/help.html">CHN</a>
+      <div class="hd-right">
+        <div class="lang" aria-label="Language"><a href="../help.html">KOR</a><span class="on">ENG</span><a href="../ja/help.html">JPN</a><a href="../zh/help.html">CHN</a></div>
+        <a class="hd-cta" href="./index.html#get">Free download</a>
       </div>
     </div>
   </header>
 
   <main>
-    <section class="page-hero">
-      <div class="container narrow">
-        <p class="section-kicker">Help</p>
-        <h1>Quickly narrow down permission, discovery, and return issues.</h1>
-        <p class="page-intro">
-          It is faster to split the cause into app power, permissions, network discovery, pairing, and placement.
-          Check the items below in order and you can narrow down most blockers.
-        </p>
+    <section class="phero wrap narrow">
+      <p class="ey">Help</p>
+      <h1 class="page">When it won't work, narrow it down step by step.</h1>
+      <p class="lead">Rather than trying to find the cause all at once, narrow it down in the order <b>power → discovery → firewall → pairing → input &amp; return</b> and most issues get sorted out quickly.</p>
+    </section>
+
+    <!-- 이것부터 -->
+    <section style="padding-top:14px">
+      <div class="wrap narrow">
+        <div class="panel tip"><h3>Start with these two</h3>
+          <ul>
+            <li><b>Lost your cursor? →</b> Press <kbd style="font-family:var(--mono)">Ctrl+Alt+Backspace</kbd> and the cursor returns to your own PC (center of the monitor).</li>
+            <li><b>Connected but input isn't working? →</b> The Android <b>Accessibility Service</b> may have been turned off or restarted. Re-enable OneMouse under Accessibility.</li>
+          </ul></div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container help-grid">
-        <article class="help-card">
-          <p class="section-kicker">Power</p>
-          <h2>Check the app power</h2>
-          <p>If the power in the top-right is off, background activity and input receiving stop. Turn the power on first when you start a connection.</p>
-        </article>
-        <article class="help-card">
-          <p class="section-kicker">Permissions</p>
-          <h2>Permissions come first</h2>
-          <p>Android input control requires the Accessibility service to be on. If the permission is off, real input does not go through even when the PC is visible.</p>
-        </article>
-        <article class="help-card">
-          <p class="section-kicker">Battery</p>
-          <h2>Check battery limits</h2>
-          <p>If the connection drops often after the screen turns off, check the battery limit exception in Android settings. You can jump there directly from the battery limit item in the app settings.</p>
-        </article>
-        <article class="help-card">
-          <p class="section-kicker">Pairing</p>
-          <h2>QR or 6-digit code</h2>
-          <p>Scan the QR at the bottom of the PC or enter the 6-digit code. It is normal for the connect button to stay disabled before pairing.</p>
-        </article>
-        <article class="help-card">
-          <p class="section-kicker">Device Search</p>
-          <h2>Check network discovery</h2>
-          <p>On company networks, guest Wi-Fi, and some router settings, device discovery may be blocked. First check that you are under the same router.</p>
-        </article>
-        <article class="help-card">
-          <p class="section-kicker">Firewall</p>
-          <h2>Check the firewall and network</h2>
-          <p>If the PC is not visible, check whether you are on the same Wi-Fi or under the same router, and whether a guest Wi-Fi or company network policy is blocking it.</p>
-        </article>
-        <article class="help-card">
-          <p class="section-kicker">Layout</p>
-          <h2>When the placement is off</h2>
-          <p>After an Android orientation change, the screen size and position are synced again. If it still feels off, save the phone position again.</p>
-        </article>
-        <article class="help-card">
-          <p class="section-kicker">Return</p>
-          <h2>Cursor return shortcut</h2>
-          <p>If the cursor does not come back to the PC, press Ctrl + Alt + Backspace to return mouse input to the PC. When the return runs, a small notification appears on the PC.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section section-alt">
-      <div class="container">
-        <div class="section-heading">
-          <p class="section-kicker">Troubleshooting</p>
-          <h2>Troubleshooting order</h2>
-          <p>Splitting out which step you are stuck at first makes the fix much faster.</p>
-        </div>
+    <!-- 문제 해결 순서 -->
+    <section id="order">
+      <div class="wrap narrow">
+        <div class="sec-head"><p class="ey">Troubleshooting order</p><h2 class="sec">Check one step at a time, in this order.</h2></div>
         <div class="timeline">
-          <article class="timeline-step">
-            <span>1</span>
-            <div>
-              <strong>Check the app and permission state</strong>
-              <p>Confirm the PC app is on, and that the Android app power and Accessibility permission are on.</p>
-            </div>
-          </article>
-          <article class="timeline-step">
-            <span>2</span>
-            <div>
-              <strong>Check whether the PC is visible</strong>
-              <p>Confirm that device search works under the same Wi-Fi or the same router, then run device search again.</p>
-            </div>
-          </article>
-          <article class="timeline-step">
-            <span>3</span>
-            <div>
-              <strong>Check the pairing state</strong>
-              <p>If the PC list shows pairing required, use the QR or 6-digit code again. If it is already tangled, clear the pairing and connect again.</p>
-            </div>
-          </article>
-          <article class="timeline-step">
-            <span>4</span>
-            <div>
-              <strong>Check input and placement</strong>
-              <p>On the PC, check the selected device, the Android position, the entry direction, and the sync state after a screen orientation change.</p>
-            </div>
-          </article>
-          <article class="timeline-step">
-            <span>5</span>
-            <div>
-              <strong>Use the recovery shortcut</strong>
-              <p>If the cursor feels trapped on the Android side, force PC input back with Ctrl + Alt + Backspace. On a forced return, a return notification appears on the PC.</p>
-            </div>
-          </article>
+          <div class="tstep"><div class="rail"><span class="num">1</span><span class="line"></span></div><div class="body"><h4>Power and permissions</h4><p>Make sure both the PC app and the Android app are running, and that the Android <b>Accessibility Service</b> is on. If you're blocked here, input won't work at all.</p></div></div>
+          <div class="tstep"><div class="rail"><span class="num">2</span><span class="line"></span></div><div class="body"><h4>Same network &amp; discovery</h4><p>Check that the PC and phone are on the <b>same Wi-Fi (same Wi-Fi router)</b>. If discovery fails, it's usually because they're on different networks or discovery is blocked.</p></div></div>
+          <div class="tstep"><div class="rail"><span class="num">3</span><span class="line"></span></div><div class="body"><h4>Firewall &amp; isolation</h4><p>If the phone can see the PC but the PC can't see the phone, it may be a <b>Windows firewall inbound</b> issue (whether the network is set to "Public" or "Private"). Office and café Wi-Fi can also block it with <b>client isolation</b>.</p></div></div>
+          <div class="tstep"><div class="rail"><span class="num">4</span><span class="line"></span></div><div class="body"><h4>Pairing &amp; connection</h4><p>Confirm that QR or 6-digit code pairing is finished and that the device shows as connected in Devices. Before pairing, the input and file channels don't open.</p></div></div>
+          <div class="tstep"><div class="rail"><span class="num">5</span></div><div class="body"><h4>Input &amp; return</h4><p>Push the mouse toward the arranged edge to see if it crosses over; if it doesn't, check the arrangement. If the cursor ends up somewhere odd, bring it back with <kbd style="font-family:var(--mono)">Ctrl+Alt+Backspace</kbd>.</p></div></div>
         </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container split-grid">
-        <div>
-          <p class="section-kicker">Transfer</p>
-          <h2>When files and clipboard do not work</h2>
-          <ul class="bullet-list">
-            <li>Check which Android device or Sub PC is selected on the PC. PC -> Android/PC files go to the selected device.</li>
-            <li>Press OneMouse to PC in the text selection menu, or choose OneMouse from the Android share menu, to send it to the default PC.</li>
-            <li>On a Sub PC, the paired Main PC must appear as the connection target before PC -> PC file transfer is possible.</li>
-            <li>If OneMouse to PC does not appear, turn on One Mouse in Manage apps under the More menu. This setting is usually only needed once at the start.</li>
-            <li>Large files are affected by the network state, so first check that the connection is stable.</li>
-          </ul>
-        </div>
-        <figure class="shot-card">
-          <img src="../assets/onboarding_mobile_pair.jpg" alt="The Android screen for pairing a detected PC" />
-          <figcaption>If transfer fails, first check that the PC is detected on the same network.</figcaption>
-        </figure>
+    <!-- 파일·클립보드 -->
+    <section class="section-alt">
+      <div class="wrap narrow">
+        <div class="sec-head"><p class="ey">Transfer</p><h2 class="sec">When files and clipboard won't go through.</h2></div>
+        <div class="panel"><ul>
+          <li>Confirm the <b>selected device</b> is correct — a transfer goes to the target you selected.</li>
+          <li>PC-to-PC drag requires the <b>sub PC to be connected and arranged</b>.</li>
+          <li>Keep holding the file, <b>cross the arranged screen edge</b>, and drop it on the target to start the transfer.</li>
+          <li>If the clipboard doesn't come through, check that both apps are connected and whether a screen is off and idle.</li>
+          <li>Bluetooth is slower than Wi-Fi — send large files over Wi-Fi.</li>
+        </ul></div>
       </div>
     </section>
 
-    <section class="section section-alt">
-      <div class="container">
-        <div class="section-heading">
-          <p class="section-kicker">FAQ</p>
-          <h2>Frequently asked questions</h2>
-          <p>The answers have been reorganized around the latest connection structure.</p>
+    <!-- FAQ -->
+    <section id="faq">
+      <div class="wrap narrow">
+        <div class="sec-head"><p class="ey">Frequently asked questions</p><h2 class="sec">The most common problems.</h2></div>
+        <div class="faq">
+          <details open><summary>It keeps disconnecting about every 10 seconds.</summary><div class="a">There are four common causes: <b>① client isolation on guest/office Wi-Fi</b>, <b>② battery optimization</b> cutting off the phone's background connection, <b>③ Windows firewall inbound blocking</b>, and <b>④ Wi-Fi going into power-saving (sleep) when the screen turns off</b>. Turn on the battery exception, allow OneMouse inbound in the firewall, and use a private Wi-Fi when possible.</div></details>
+          <details><summary>The phone can see the PC, but the PC can't see the phone.</summary><div class="a">This is usually a <b>Windows firewall inbound</b> issue. If the current network is set to <b>"Public"</b>, inbound may be blocked, so switch it to <b>"Private"</b> or allow OneMouse inbound in the firewall.</div></details>
+          <details><summary>It works at home but not on office or café Wi-Fi.</summary><div class="a">Public/guest Wi-Fi often <b>isolates device-to-device communication (client isolation)</b> for security. In that case, devices can't find each other even on the same Wi-Fi. Use a <b>Bluetooth connection</b> or a personal hotspot.</div></details>
+          <details><summary>It says connected, but the mouse and keyboard don't respond.</summary><div class="a">The Android <b>Accessibility Service</b> was most likely turned off or restarted by the system. Go to Android Settings → Accessibility and re-enable OneMouse.</div></details>
+          <details><summary>The cursor is stuck on the phone/another PC and won't come back.</summary><div class="a">Press <kbd style="font-family:var(--mono)">Ctrl+Alt+Backspace</kbd> to force the cursor back to the center of your own PC's monitor.</div></details>
+          <details><summary>The connection drops when the screen turns off.</summary><div class="a">When the screen turns off, the phone's Wi-Fi can go into power-saving or the app can go to sleep due to battery optimization. Setting OneMouse as a <b>battery optimization exception</b> on Android keeps it stable. Also check the keep-screen-on option while connected.</div></details>
+          <details><summary>Remote screen control over Bluetooth doesn't work well.</summary><div class="a">Mobile remote screen control moves a lot of data, so it's <b>not recommended over Bluetooth</b>. Use Wi-Fi for remote control. Bluetooth is well suited to mouse, keyboard, clipboard, and files.</div></details>
         </div>
-        <div class="faq-grid">
-          <details open>
-            <summary>Does it go through an intermediate server?</summary>
-            <div class="faq-answer">The default structure is a direct connection between the PC and Android under the same Wi-Fi or the same router.</div>
-          </details>
-          <details>
-            <summary>What do I do if the PC is not discovered?</summary>
-            <div class="faq-answer">Make sure the PC and Android are on the same Wi-Fi or under the same router, and check that you are not in an environment where devices cannot see each other, such as guest Wi-Fi or a company network.</div>
-          </details>
-          <details>
-            <summary>It keeps disconnecting about 10 seconds after connecting, every time.</summary>
-            <div class="faq-answer">The first connection works, but if the status signal then doesn't reach the PC, the connection is dropped after about 10 seconds. Usually it is (1) guest/office Wi-Fi or router client isolation blocking the connection after connecting, (2) Android battery optimization killing the background service (set OneMouse to "Unrestricted" under Settings, battery limit), (3) Windows Firewall blocking inbound, or (4) the phone's Wi-Fi sleeping when the screen turns off. On a normal shared Wi-Fi, add a battery-optimization exception and allow OneMouse through the firewall. For Bluetooth, check distance and interference.</div>
-          </details>
-          <details>
-            <summary>The phone can see the PC, but the PC can't find the phone.</summary>
-            <div class="faq-answer">It is almost always a Windows Firewall "inbound" block. The phone receives the PC's signal, but the path for the PC to receive the phone's signal is blocked, and if Wi-Fi is set as a "Public" network, inbound is even stricter. Allow OneMouse through the firewall (the app asks on first run; re-allow if you denied it), switch the network to "Private", or use the latest version, which also auto-allows the Public profile. Then re-run device search on the phone. Also check whether antivirus/security software is blocking inbound.</div>
-          </details>
-          <details>
-            <summary>It works at home but not on office or cafe Wi-Fi.</summary>
-            <div class="faq-answer">Guest Wi-Fi and corporate networks often isolate devices from each other for security (client isolation), so discovery or connection fails or drops after connecting. Use a normal shared Wi-Fi (router), connect the PC to your phone's hotspot, or use Bluetooth where Wi-Fi is difficult.</div>
-          </details>
-          <details>
-            <summary>I paired over Bluetooth, but the PC cannot find my phone.</summary>
-            <div class="faq-answer">Pair the phone once in Windows Bluetooth settings — that is all you need. After pairing, launching the PC app connects automatically. If the PC cannot find the phone, make sure Bluetooth mode is on in the OneMouse Settings tab on the phone and that the phone is paired in Windows, then wait a moment. If it still fails, remove the device in Windows and pair again.</div>
-          </details>
-          <details>
-            <summary>Can I connect several Android devices at once?</summary>
-            <div class="faq-answer">Yes. You can discover, select, connect, and place multiple devices on the PC.</div>
-          </details>
-          <details>
-            <summary>Can I control another Windows PC too?</summary>
-            <div class="faq-answer">Yes. Search for the target PC on the Main PC, pair it with the 6-digit code, then place the target PC on the Phone position / input direction screen.</div>
-          </details>
-          <details>
-            <summary>What do I do if the cursor does not return from Android to the PC?</summary>
-            <div class="faq-answer">Press Ctrl + Alt + Backspace on the PC. It is the recovery shortcut that returns mouse input to the PC.</div>
-          </details>
-          <details>
-            <summary>Can I send text or files from Android to the PC?</summary>
-            <div class="faq-answer">You can send text and files to the default PC by choosing OneMouse from the Android share menu or by using clipboard sync.</div>
-          </details>
-        </div>
+        <div style="margin-top:22px"><a class="btn btn-sec sm" href="./guide.html">Back to the guide</a></div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
+  <footer class="site">
+    <div class="wrap ft">
       <span>© 2026 OneMouse</span>
-      <span class="footer-links">
-        <a href="./technical.html">Technical/Security</a>
-        <a href="./pricing.html">Free / Pro</a>
-        <a href="./privacy.html">Privacy Policy</a>
-        <a href="./terms.html">Terms</a>
-        <a href="./licenses.html">Open Source Licenses</a>
-      </span>
+      <span class="links"><a href="./technical.html">Technical &amp; Security</a><a href="./privacy.html">Privacy Policy</a><a href="./terms.html">Terms of Service</a><a href="./licenses.html">Open-source Licenses</a></span>
     </div>
   </footer>
 </body>

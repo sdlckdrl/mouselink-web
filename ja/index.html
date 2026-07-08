@@ -4,9 +4,11 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="naver-site-verification" content="8f3cbe8a89ca9969cc81ecf1ef5e0aae01858816" />
-  <title>OneMouse | PC から Android と別の PC を操作</title>
-  <meta name="description" content="OneMouse は PC のマウスとキーボードで Android や別の Windows PC を操作し、ファイルやテキストを簡単にやり取りできるアプリです。" />
-  <link rel="stylesheet" href="../css/style.css" />
+  <title>OneMouse | マウス1つでスマホ・タブレット・別のPCまで</title>
+  <meta name="description" content="OneMouseは、PCのマウスとキーボードでAndroidや別のWindows PCを操作し、ファイルやクリップボードを手軽にやり取りできる無料アプリです。マウスを画面の端に押し込めば、そのまま次の画面へ続けて使えます。" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta name="keywords" content="OneMouse, MouseLink, share mouse, マウス共有, PC マウス 共有, Android PC 操作, PCのマウスでスマホ操作, Android キーボード入力, PC to PC マウス, Wi-Fi ファイル転送" />
+  <link rel="stylesheet" href="../css/onemouse.css" />
   <link rel="canonical" href="https://onemouse.pages.dev/ja/" />
   <link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/" />
   <link rel="alternate" hreflang="en" href="https://onemouse.pages.dev/en/" />
@@ -15,60 +17,282 @@
   <link rel="alternate" hreflang="x-default" href="https://onemouse.pages.dev/" />
   <meta property="og:site_name" content="OneMouse" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="OneMouse | PC から Android と別の PC を操作" />
-  <meta property="og:description" content="PC のマウスとキーボードで Android や別の Windows PC を操作し、ファイルやテキストを簡単にやり取りできます。" />
+  <meta property="og:title" content="OneMouse | マウス1つでスマホ・タブレット・別のPCまで" />
+  <meta property="og:description" content="PCのマウスとキーボードでAndroidや別のWindows PCを操作し、ファイルやクリップボードを手軽にやり取り。無料。" />
   <meta property="og:url" content="https://onemouse.pages.dev/ja/" />
   <meta property="og:image" content="https://onemouse.pages.dev/assets/hero-bg-generated-2.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="OneMouse | PC から Android と別の PC を操作" />
-  <meta name="twitter:description" content="PC のマウスとキーボードで Android や別の Windows PC を操作し、ファイルやテキストを簡単にやり取りできます。" />
+  <meta name="twitter:title" content="OneMouse | マウス1つでスマホ・タブレット・別のPCまで" />
+  <meta name="twitter:description" content="PCのマウスとキーボードでAndroidや別のWindows PCを操作し、ファイルやクリップボードをやり取り。無料。" />
   <meta name="twitter:image" content="https://onemouse.pages.dev/assets/hero-bg-generated-2.png" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "OneMouse",
+      "alternateName": ["OneMouse", "MouseLink", "share mouse"],
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Windows, Android",
+      "url": "https://onemouse.pages.dev/ja/",
+      "inLanguage": "ja-JP",
+      "downloadUrl": "https://onemouse.pages.dev/#get",
+      "description": "OneMouseは、PCのマウスとキーボードでAndroidや別のWindows PCを操作し、ファイルやクリップボードを手軽にやり取りできる無料アプリです。",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" }
+    }
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MJ73H86TWX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-MJ73H86TWX');
+  </script>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="./index.html" class="brand" aria-label="OneMouse ホーム">
-        <span class="brand-mark">OM</span>
-        <span class="brand-copy"><strong>OneMouse</strong><span>Windows と Android をローカル接続</span></span>
-      </a>
-      <nav class="top-nav" aria-label="メインメニュー">
-        <a href="./index.html" class="is-active">概要</a>
-        <a href="./guide.html">ガイド</a>
+  <header class="site">
+    <div class="wrap hd">
+      <a class="brand" href="./index.html" aria-label="OneMouse ホーム"><span class="om">OM</span>OneMouse</a>
+      <nav class="nav" aria-label="メインメニュー">
+        <a href="./index.html" class="on">概要</a>
+        <a href="#use">機能</a>
+        <a href="./guide.html">使い方</a>
         <a href="./help.html">ヘルプ</a>
-        <a href="./technical.html">技術/セキュリティ</a>
-        <a href="./pricing.html">Free / Pro</a>
-        <a href="./index.html#download" class="nav-cta">ダウンロード</a>
       </nav>
-      <div class="lang-switch" aria-label="言語">
-        <a href="../index.html">KOR</a>
-        <a href="../en/index.html">ENG</a>
-        <span class="is-active">JPN</span>
-        <a href="../zh/index.html">CHN</a>
+      <div class="hd-right">
+        <div class="lang" aria-label="言語"><a href="../index.html">KOR</a><a href="../en/index.html">ENG</a><span class="on">JPN</span><a href="../zh/index.html">CHN</a></div>
+        <a class="hd-cta" href="#get">無料ダウンロード</a>
       </div>
     </div>
   </header>
 
   <main>
-    <section class="home-hero"><div class="container hero-content"><p class="eyebrow eyebrow-dark">2026.07 Update</p><h1>OneMouse</h1><p class="hero-text">PC の入力を Android や別の Windows PC まで自然につなぎます。画面端へマウスを動かし、PC キーボードで入力し、ファイルは小さなドロップエリアへ置くだけです。</p><div class="hero-actions"><a class="button button-primary" href="#download">Windows ダウンロード</a><a class="button button-secondary on-dark" href="./guide.html">接続を開始</a></div><div class="hero-badges" aria-label="Key features"><span>マウス移動</span><span>キーボード入力</span><span>QR 接続</span><span>PC to PC</span><span>Bluetooth</span><span>クリップボード</span><span>Quick Drop</span></div></div></section>
-    <section class="section"><div class="container"><div class="section-heading"><p class="section-kicker">Use Cases</p><h2>PC の作業をスマートフォンと別の PC へ広げます。</h2><p>難しい接続方式を先に理解する必要はありません。操作、入力、コピー、ファイル送信という普段の作業から使えます。</p></div><div class="update-grid"><article class="update-card"><span class="update-label">Phone Control</span><h3>スマートフォンを近くの画面のように操作</h3><p>PC の画面端を越えてマウスを動かすと、Android のクリックやスクロールを続けられます。</p></article><article class="update-card"><span class="update-label">Typing</span><h3>長い文章を PC キーボードで入力</h3><p>検索、メッセージ、フォーム入力を PC キーボードで行えます。</p></article><article class="update-card"><span class="update-label">Files &amp; Clipboard</span><h3>ファイルとテキストをすぐ転送</h3><p>ファイルを画面の端へドラッグすると選んだ端末へすぐ送られ、テキストとクリップボードも双方で同期されます。</p></article><article class="update-card"><span class="update-label">PC to PC</span><h3>別の Windows PC も操作</h3><p>別の PC を画面端に配置して、マウス操作とファイル送信を続けられます。</p></article><article class="update-card"><span class="update-label">Bluetooth</span><h3>Wi‑Fi なしで Bluetooth で直接接続</h3><p>ルーターやインターネットがない環境でも、Bluetooth でスマートフォンや別の PC に接続して、マウス・キーボード・クリップボード・ファイルをそのままやり取りできます。複数のデバイスを同時に接続することもできます。</p></article></div></div></section>
-    <section class="section section-alt"><div class="container"><div class="section-heading"><p class="section-kicker">Setup Flow</p><h2>初回接続は 4 ステップです。</h2><p>PC と Android の画面に従うだけで、ポートや通信方式を手動で設定する必要はありません。</p></div><div class="feature-grid"><article class="feature-card"><span class="feature-number">01</span><h3>PC アプリを起動</h3><p>Windows で OneMouse を開き、QR または 6 桁コードを確認します。</p></article><article class="feature-card"><span class="feature-number">02</span><h3>Android 権限を有効化</h3><p>PC 入力を受け取るために Android のアクセシビリティ権限をオンにします。</p></article><article class="feature-card"><span class="feature-number">03</span><h3>QR またはコードで接続</h3><p>同じ Wi-Fi 上の PC を見つけ、QR またはコードで確認します。</p></article><article class="feature-card"><span class="feature-number">04</span><h3>配置して使う</h3><p>Android や別の PC を画面端に置き、その方向へカーソルを動かします。</p></article></div></div></section>
-    <section class="section"><div class="container"><div class="section-heading"><p class="section-kicker">Docs</p><h2>使い方、問題解決、技術説明を分けて確認できます。</h2><p>インストールとペアリングはガイド、接続や転送の問題はヘルプ、権限とローカル通信の説明は技術ページで確認できます。</p></div><div class="update-grid"><article class="update-card"><span class="update-label">Guide</span><h3>インストールと接続</h3><p>Windows インストール、Android 権限、ペアリング、配置、ファイル転送まで順番に確認します。</p><a class="button button-secondary" href="./guide.html">ガイドを見る</a></article><article class="update-card"><span class="update-label">Help</span><h3>よくある問題を確認</h3><p>Wi-Fi 検出、アクセシビリティ権限、カーソル復帰、ファイル転送、バックグラウンド動作を確認します。</p><a class="button button-secondary" href="./help.html">ヘルプを見る</a></article><article class="update-card"><span class="update-label">Technical</span><h3>権限とデータの流れ</h3><p>アクセシビリティとフォアグラウンドサービスの理由、ローカルネットワーク内で扱うデータを確認します。</p><a class="button button-secondary" href="./technical.html">技術ページを見る</a></article></div></div></section>
-    <section class="section"><div class="container split-grid demo-section"><div><p class="section-kicker">Demo</p><h2>現在のオンボーディングを動画で確認。</h2><p class="lead">PC 起動、Android 権限、ペアリング、配置、入力切り替えまでの流れを確認できます。</p><div class="hero-actions"><a class="button button-primary" href="https://youtu.be/6jFIih1dOlE" target="_blank" rel="noopener">YouTube で見る</a></div></div><div class="video-frame" aria-label="OneMouse demo video"><iframe src="https://www.youtube.com/embed/6jFIih1dOlE" title="OneMouse demo video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe></div></div></section>
-    <section class="section" id="download"><div class="container"><div class="section-heading"><p class="section-kicker">Download</p><h2>Windows アプリと Android アプリを準備してください。</h2><p>Android 8.0 以降を対象にし、PC は Windows 10/11 を優先サポートします。</p></div><div class="download-grid"><article class="download-card"><span class="download-icon">PC</span><h3>Windows</h3><p data-download-filename>最新の Setup ファイルを確認しています。</p><a class="button button-primary" href="https://github.com/sdlckdrl/mouselink-web/releases" data-latest-windows-download>Windows</a></article><article class="download-card"><span class="download-icon download-icon-green">APK</span><h3>Android</h3><p>Enable Accessibility and notification permission, then pair with your PC.</p><a class="button button-secondary" href="https://play.google.com/store/apps/details?id=com.mouselink.app">Android</a></article></div></div></section>
+    <!-- HERO + SIMULATOR -->
+    <section class="hero wrap" aria-label="概要">
+      <span class="tagpill">● 無料 · インストール5分 · Windows + Android</span>
+      <h1>マウス1つで<br><span class="flow">スマホ・タブレット・別のPCまで</span> すっと。</h1>
+      <p class="sub">動画ではなく、実際に触ってみてください。カーソルを動かしてデバイスの間を行き来し、デバイスをドラッグして自分の机のように配置してみましょう。</p>
+
+      <div class="play">
+        <div class="play-head">
+          <div class="steps">
+            <span><span class="n">1</span><b>マウスを動かして</b>カーソルを渡してみましょう</span>
+            <span><span class="n">2</span><b>デバイスをドラッグして</b>位置を変えてみましょう</span>
+          </div>
+          <button class="reset" id="reset" type="button">最初の配置に戻す</button>
+        </div>
+        <div class="desk" id="desk">
+          <div class="stage" id="stage">
+            <div class="snapedge" id="snapedge"></div>
+            <div class="dev monitor" data-id="pc"><span class="pin">このPC</span>
+              <div class="screen"><div class="apps" style="grid-template-columns:repeat(6,1fr);padding:12px 12px 22px">
+                <i style="background:#ffffff55"></i><i style="background:#ffd16655"></i><i style="background:#7ee0b955"></i>
+                <i style="background:#ff9e7a55"></i><i style="background:#8ab4ff55"></i><i style="background:#ffffff33"></i></div>
+                <div class="bar"><i></i><i></i><i></i></div></div></div>
+            <div class="dev tablet grab" data-id="tab"><span class="pin">Galaxy Tab</span>
+              <div class="screen"><div class="apps">
+                <i style="background:#5b8cff88"></i><i style="background:#57e0ab88"></i><i style="background:#ffcf5e88"></i><i style="background:#ff8f6b88"></i>
+                <i style="background:#ffffff33"></i><i style="background:#ffffff33"></i><i style="background:#ffffff33"></i><i style="background:#ffffff33"></i></div></div></div>
+            <div class="dev phone grab" data-id="phone"><span class="pin">スマホ</span>
+              <div class="screen"><div class="apps">
+                <i style="background:#57e0ab88"></i><i style="background:#ffcf5e88"></i><i style="background:#ff8f6b88"></i>
+                <i style="background:#8ab4ff88"></i><i style="background:#ffffff33"></i><i style="background:#ffffff33"></i></div></div></div>
+            <div class="dev subpc grab" data-id="subpc"><span class="pin">別のPC</span>
+              <div class="screen"><div class="apps" style="grid-template-columns:repeat(5,1fr);padding:9px 9px 18px">
+                <i style="background:#ff9e7a55"></i><i style="background:#c7a0ff55"></i><i style="background:#8ab4ff55"></i><i style="background:#ffffff33"></i><i style="background:#ffffff22"></i></div>
+                <div class="bar"><i></i><i></i></div></div></div>
+            <div id="cursor"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 2l6.5 17 2.4-6.8L19.5 10z" fill="#fff" stroke="#241a12" stroke-width="1.3" stroke-linejoin="round"/></svg></div>
+          </div>
+        </div>
+        <div class="play-foot">
+          <div id="status"><span class="dotnow"></span>今のカーソル位置 → <span class="where">このPC</span></div>
+          <span class="hint">隣り合ったデバイスへ移ります · カーソルが画面の外に消えることはありません</span>
+        </div>
+      </div>
+
+      <div class="hero-cta">
+        <a class="btn btn-pri" href="#get">無料で始める</a>
+        <a class="btn btn-sec" href="./guide.html">1分の接続を見る</a>
+      </div>
+      <p class="hero-note">上のデモは実際の<b>デバイス配置</b>機能そのまま — アプリでもこのように配置してマウスを渡します。</p>
+    </section>
+
+    <!-- USE CASES -->
+    <section id="use">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="ey">こんなときに便利</p>
+          <h2 class="sec">PCの前でしていた作業を、スマホや別のPCまで。</h2>
+          <p class="sec-lead">ネットワーク設定は知らなくても大丈夫。よくある使い方で見れば、どこで役立つかがすぐ分かります。</p>
+        </div>
+        <div class="cards">
+          <article class="card"><div class="card-ic" style="background:#e9f0ff;color:#3a5bd0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="6" y="3" width="12" height="18" rx="3"/><path d="M11 6h2"/></svg></div>
+            <h3>スマホを隣の画面のように操作</h3><p>PCモニターの端へマウスを押し込むとAndroidへ移り、クリック・スクロール・ドラッグまでそのまま続きます。</p></article>
+          <article class="card"><div class="card-ic" style="background:#eafaf1;color:#15845f"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 10h.01M10 10h.01M14 10h.01M8 14h8"/></svg></div>
+            <h3>長い文章もPCキーボードで</h3><p>検索ワード、メッセンジャーの返信、アプリの入力欄まで、スマホで打ちたい瞬間にPCのキーボードをそのまま使えます。</p></article>
+          <article class="card"><div class="card-ic" style="background:#fff0e8;color:#ff7a4d"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5h6l2 2h8v11H4z"/></svg></div>
+            <h3>ファイル・クリップボードをすぐ転送</h3><p>ファイルをつかんで画面の境界へドラッグすれば選んだデバイスへすぐ送信、テキストやクリップボードも両方でまとめて同期します。</p></article>
+          <article class="card"><div class="card-ic" style="background:#f3ecff;color:#7a52d0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="7" width="9" height="10" rx="1.5"/><rect x="13" y="4" width="9" height="7" rx="1.5"/></svg></div>
+            <h3>別のWindows PCも一緒に</h3><p>サブPCを配置しておけば、マウスを渡して別のPCを操作し、ファイルもやり取りできます。</p></article>
+          <article class="card"><div class="card-ic" style="background:#eef0f4;color:#4a5978"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 5l8 7-5 4V4l5 4-8 7"/></svg></div>
+            <h3>Bluetoothでもつながります</h3><p>ふだんはWi-Fiで、Wi-FiルーターやインターネットがないときはBluetoothでスマホや別のPCに直接つなぎます。</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SETUP -->
+    <section class="section-alt" id="setup">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="ey">接続方法</p>
+          <h2 class="sec">接続は4ステップ、1分で完了。</h2>
+          <p class="sec-lead">面倒な設定はアプリがすべて自動で行います。画面に出る順番に従うだけ。オンにするのはアクセシビリティサービス1つだけです。</p>
+        </div>
+        <div class="flow4">
+          <div class="step"><div class="badge">01</div><h4>PCアプリを起動します</h4><p>WindowsでOneMouseを起動し、画面のQRまたは6桁のコードを確認します。</p></div>
+          <div class="step"><div class="badge">02</div><h4>Androidの権限をオンにします</h4><p>PCのマウス・キーボード入力を受け取れるよう、アクセシビリティサービスを一度オンにします。</p></div>
+          <div class="step"><div class="badge">03</div><h4>QR・コードで接続</h4><p>同じWi-Fi上のPCを見つけ、QRスキャンまたは6桁のコードで自分のデバイスを確認します。</p></div>
+          <div class="step"><div class="badge">04</div><h4>配置して渡します</h4><p>スマホや別のPCを画面の端に置き、その方向へマウスを押し込めば完了。</p></div>
+        </div>
+        <details class="fold"><summary><span>実際のペアリング画面を見る</span><small>準備 → PCコード確認 → 数字入力 → QRスキャン</small></summary>
+          <div class="fold-body"><a href="../assets/onemouse-pairing-real-ui-comic-v5.png" target="_blank" rel="noopener"><img src="../assets/onemouse-pairing-real-ui-comic-v5.png" alt="OneMouseのペアリング方法：準備、PCコード確認、数字入力、QRスキャンの順" loading="lazy" style="border-radius:12px" /></a></div></details>
+        <div style="margin-top:20px"><a class="btn btn-sec sm" href="./guide.html">詳しい使い方ガイドを見る</a></div>
+      </div>
+    </section>
+
+    <!-- TRUST -->
+    <section id="trust">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="ey">安心してお使いください</p>
+          <h2 class="sec">自分のデバイス同士で、自分のネットワークの中で。</h2>
+          <p class="sec-lead">OneMouseはペアリングした自分のデバイスの間だけで動作します。権限も、その機能を使うときだけ求めます。</p>
+        </div>
+        <div class="trust">
+          <div class="t"><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l7 4v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V7z"/></svg></span>
+            <div><b>サーバーを経由しません</b><span>入力・ファイル・クリップボードは、同じネットワーク上の自分のPCとデバイスの間だけでやり取りされます。</span></div></div>
+          <div class="t"><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span>
+            <div><b>権限は必要なときだけ</b><span>アクセシビリティサービスのみ必須で、画面キャプチャや周辺のWi-Fiなどは、その機能を始めるときに求めます。</span></div></div>
+          <div class="t"><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg></span>
+            <div><b>収集・保存しません</b><span>アクセシビリティのデータを広告や画面の収集に使わず、ファイルをサーバーに保存しません。</span></div></div>
+        </div>
+        <div style="margin-top:20px"><a class="btn btn-sec sm" href="./technical.html">技術・セキュリティを詳しく見る</a></div>
+      </div>
+    </section>
+
+    <!-- DOWNLOAD -->
+    <section class="section-alt" id="get">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="ey">ダウンロード</p>
+          <h2 class="sec">WindowsアプリとAndroidアプリ、一緒に手に入れましょう。</h2>
+          <p class="sec-lead">PCはWindows 10/11を優先サポートします。AndroidはアクセシビリティサービスをオンにしてからPCとペアリングします。</p>
+        </div>
+        <div class="dl">
+          <article class="dcard first download-card">
+            <span class="dtag" style="background:linear-gradient(135deg,var(--blue),var(--green))">PC</span>
+            <h3>Windows</h3>
+            <p data-download-filename>最新のSetupファイルを確認中です。</p>
+            <a class="btn btn-pri" href="https://github.com/sdlckdrl/mouselink-web/releases/latest" data-latest-windows-download download>Windowsをダウンロード</a>
+          </article>
+          <article class="dcard">
+            <span class="dtag" style="background:#15845f">GP</span>
+            <h3>Google Play</h3>
+            <p>ほとんどのAndroidデバイスにインストールできます。</p>
+            <a class="btn btn-sec" href="https://play.google.com/store/apps/details?id=com.mouselink.app">Google Playで見る</a>
+          </article>
+          <article class="dcard">
+            <span class="dtag" style="background:#b76a05">GS</span>
+            <h3>Galaxy Store</h3>
+            <p>サムスンGalaxyデバイスでストアを開いてインストールします。</p>
+            <a class="btn btn-sec" href="https://apps.samsung.com/appquery/appDetail.as?appId=com.mouselink.app.galaxy">Galaxy Storeで見る</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ PREVIEW -->
+    <section id="faq">
+      <div class="wrap narrow">
+        <div class="sec-head">
+          <p class="ey">よくある質問</p>
+          <h2 class="sec">接続の前に気になること。</h2>
+        </div>
+        <div class="faq">
+          <details><summary>本当に無料ですか？</summary><div class="a">はい。マウス・キーボード操作、スマホの位置配置といった主な機能を無料で使えます。</div></details>
+          <details><summary>ルート化や開発者設定は必要ですか？</summary><div class="a">いいえ。Androidで<b>アクセシビリティサービス</b>を一度オンにするだけです。USB接続やADBも必要ありません。</div></details>
+          <details><summary>同じWi-Fiがなくても使えますか？</summary><div class="a">使えます。<b>Bluetooth</b>でスマホや別のPCに直接つなぎ、マウス・キーボード・ファイルをやり取りできます。</div></details>
+          <details><summary>接続がよく切れます。</summary><div class="a">多くは<b>バッテリー最適化</b>や<b>ファイアウォール・ゲストWi-Fiのクライアント分離</b>が原因です。ヘルプのトラブル解決手順に沿って、段階的に絞り込んでみてください。</div></details>
+        </div>
+        <div style="margin-top:20px"><a class="btn btn-sec sm" href="./help.html">ヘルプをすべて見る</a></div>
+      </div>
+    </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
+  <footer class="site">
+    <div class="wrap ft">
       <span>© 2026 OneMouse</span>
-      <span class="footer-links">
-        <a href="./technical.html">技術/セキュリティ</a>
-        <a href="./pricing.html">Free / Pro</a>
-        <a href="./privacy.html">プライバシー</a>
-        <a href="./terms.html">利用規約</a>
-        <a href="./licenses.html">ライセンス</a>
-      </span>
+      <span class="links"><a href="./technical.html">技術・セキュリティ</a><a href="./privacy.html">プライバシーポリシー</a><a href="./terms.html">利用規約</a><a href="./licenses.html">オープンソースライセンス</a></span>
     </div>
   </footer>
+
+  <script>
+  (() => {
+    const VW=760, VH=440;
+    const desk=document.getElementById('desk'), stage=document.getElementById('stage');
+    const cursorEl=document.getElementById('cursor'), statusWhere=document.querySelector('#status .where');
+    const snapedge=document.getElementById('snapedge');
+    if(!desk) return;
+    const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const HOME={
+      pc:{x:275,y:150,w:206,h:132,label:'このPC',drag:false},
+      tab:{x:481,y:159,w:150,h:112,label:'Galaxy Tab',drag:true},
+      phone:{x:209,y:151,w:66,h:126,label:'スマホ',drag:true},
+      subpc:{x:295,y:40,w:170,h:110,label:'別のPC',drag:true},
+    };
+    const devs={};
+    ['pc','tab','phone','subpc'].forEach(id=>{ devs[id]=Object.assign({},HOME[id]); devs[id].el=stage.querySelector('.dev[data-id="'+id+'"]'); });
+    let scale=1;
+    const fit=()=>{ scale=desk.clientWidth/VW; stage.style.transform='scale('+scale+')'; };
+    const layout=()=>{ for(const id in devs){ const d=devs[id]; d.el.style.left=d.x+'px'; d.el.style.top=d.y+'px'; d.el.style.width=d.w+'px'; d.el.style.height=d.h+'px'; } };
+    const rectOf=d=>({l:d.x,t:d.y,r:d.x+d.w,b:d.y+d.h});
+    const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+    function deviceAt(p){ const inside=[]; for(const id in devs){ const r=rectOf(devs[id]); if(p.x>=r.l&&p.x<=r.r&&p.y>=r.t&&p.y<=r.b) inside.push(id); }
+      if(!inside.length) return null; if(inside.length===1) return inside[0];
+      let best=inside[0],bd=Infinity; for(const id of inside){ const d=devs[id]; const dd=(d.x+d.w/2-p.x)**2+(d.y+d.h/2-p.y)**2; if(dd<bd){bd=dd;best=id;} } return best; }
+    let active='pc', cx=devs.pc.x+devs.pc.w/2, cy=devs.pc.y+devs.pc.h/2;
+    function setCursor(vx,vy){ let target=deviceAt({x:vx,y:vy});
+      if(target){ cx=vx; cy=vy; } else { const r=rectOf(devs[active]); cx=clamp(vx,r.l,r.r); cy=clamp(vy,r.t,r.b); target=active; }
+      if(target!==active){ cross(target,cx,cy); active=target; }
+      cursorEl.style.transform='translate('+cx+'px,'+cy+'px) translate(-50%,-50%)';
+      for(const id in devs) devs[id].el.classList.toggle('lit',id===active); }
+    function cross(to,x,y){ statusWhere.textContent=devs[to].label; if(reduce) return;
+      const p=document.createElement('div'); p.className='pulse'; p.style.left=x+'px'; p.style.top=y+'px'; stage.appendChild(p); setTimeout(()=>p.remove(),600);
+      cursorEl.classList.remove('squash'); void cursorEl.offsetWidth; cursorEl.classList.add('squash'); }
+    let drag=null;
+    const toV=e=>{ const rc=desk.getBoundingClientRect(); return {x:clamp((e.clientX-rc.left)/scale,0,VW), y:clamp((e.clientY-rc.top)/scale,0,VH)}; };
+    desk.addEventListener('pointerdown',e=>{ const el=e.target.closest('.dev.grab'); const p=toV(e);
+      if(el){ const id=el.dataset.id,d=devs[id]; drag={id,dx:p.x-d.x,dy:p.y-d.y}; d.el.classList.add('drag'); try{desk.setPointerCapture(e.pointerId);}catch(_){} e.preventDefault(); }
+      else setCursor(p.x,p.y); });
+    desk.addEventListener('pointermove',e=>{ const p=toV(e);
+      if(drag){ const d=devs[drag.id]; d.x=clamp(p.x-drag.dx,0,VW-d.w); d.y=clamp(p.y-drag.dy,0,VH-d.h); d.el.style.left=d.x+'px'; d.el.style.top=d.y+'px'; showSnap(d); }
+      else setCursor(p.x,p.y); });
+    function endDrag(){ if(!drag) return; const d=devs[drag.id]; d.el.classList.remove('drag'); snap(d); layout(); snapedge.style.opacity=0; drag=null; setCursor(cx,cy); }
+    desk.addEventListener('pointerup',endDrag); desk.addEventListener('pointercancel',endDrag);
+    function nearestEdge(d){ const m=devs.pc, X=d.x+d.w/2, Y=d.y+d.h/2;
+      return [['right',Math.abs(X-(m.x+m.w))],['left',Math.abs(X-m.x)],['bottom',Math.abs(Y-(m.y+m.h))],['top',Math.abs(Y-m.y)]].sort((a,b)=>a[1]-b[1])[0][0]; }
+    function snap(d){ const m=devs.pc, e=nearestEdge(d);
+      if(e==='right'||e==='left'){ d.x=e==='right'?m.x+m.w:m.x-d.w; d.y=clamp(d.y,m.y-d.h*0.35,m.y+m.h-d.h*0.65); }
+      else { d.y=e==='bottom'?m.y+m.h:m.y-d.h; d.x=clamp(d.x,m.x-d.w*0.35,m.x+m.w-d.w*0.65); }
+      d.x=clamp(d.x,0,VW-d.w); d.y=clamp(d.y,0,VH-d.h); }
+    function showSnap(d){ const m=devs.pc,e=nearestEdge(d),T=4; let s;
+      if(e==='right')s={l:m.x+m.w-T/2,t:m.y,w:T,h:m.h}; else if(e==='left')s={l:m.x-T/2,t:m.y,w:T,h:m.h};
+      else if(e==='bottom')s={l:m.x,t:m.y+m.h-T/2,w:m.w,h:T}; else s={l:m.x,t:m.y-T/2,w:m.w,h:T};
+      snapedge.style.left=s.l+'px'; snapedge.style.top=s.t+'px'; snapedge.style.width=s.w+'px'; snapedge.style.height=s.h+'px'; snapedge.style.opacity=.9; }
+    document.getElementById('reset').addEventListener('click',()=>{ for(const id in devs) Object.assign(devs[id],HOME[id]);
+      layout(); active='pc'; cx=devs.pc.x+devs.pc.w/2; cy=devs.pc.y+devs.pc.h/2; statusWhere.textContent='このPC'; setCursor(cx,cy); });
+    addEventListener('resize',fit); fit(); layout(); setCursor(cx,cy);
+  })();
+  </script>
   <script src="../js/downloads.js"></script>
 </body>
 </html>

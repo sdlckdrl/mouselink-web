@@ -4,12 +4,11 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="naver-site-verification" content="8f3cbe8a89ca9969cc81ecf1ef5e0aae01858816" />
-  <title>OneMouse | Control Android and another PC from your PC</title>
-  <meta
-    name="description"
-    content="OneMouse lets you control Android and another Windows PC with your PC mouse and keyboard, then move files and clipboard text between your devices."
-  />
-  <link rel="stylesheet" href="../css/style.css" />
+  <title>OneMouse | One mouse for your phone, tablet, and other PCs</title>
+  <meta name="description" content="OneMouse is a free app that lets your PC mouse and keyboard control Android and other Windows PCs, and easily share files and the clipboard. Just slide your mouse to the edge of the screen and keep going." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta name="keywords" content="OneMouse, MouseLink, share mouse, control Android from PC, PC to PC mouse, keyboard sharing, Wi-Fi file transfer, clipboard sync, Bluetooth mouse sharing" />
+  <link rel="stylesheet" href="../css/onemouse.css" />
   <link rel="canonical" href="https://onemouse.pages.dev/en/" />
   <link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/" />
   <link rel="alternate" hreflang="en" href="https://onemouse.pages.dev/en/" />
@@ -18,248 +17,282 @@
   <link rel="alternate" hreflang="x-default" href="https://onemouse.pages.dev/" />
   <meta property="og:site_name" content="OneMouse" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="OneMouse | Control Android and another PC from your PC" />
-  <meta property="og:description" content="Control Android and another Windows PC with your PC mouse and keyboard, then move files and clipboard text between devices." />
+  <meta property="og:title" content="OneMouse | One mouse for your phone, tablet, and other PCs" />
+  <meta property="og:description" content="Control Android and other Windows PCs with your PC mouse and keyboard, and easily share files and the clipboard. Free." />
   <meta property="og:url" content="https://onemouse.pages.dev/en/" />
   <meta property="og:image" content="https://onemouse.pages.dev/assets/hero-bg-generated-2.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="OneMouse | Control Android and another PC from your PC" />
-  <meta name="twitter:description" content="Control Android and another Windows PC with your PC mouse and keyboard, then move files and clipboard text between devices." />
+  <meta name="twitter:title" content="OneMouse | One mouse for your phone, tablet, and other PCs" />
+  <meta name="twitter:description" content="Control Android and other Windows PCs with your PC mouse and keyboard, and share files and the clipboard. Free." />
   <meta name="twitter:image" content="https://onemouse.pages.dev/assets/hero-bg-generated-2.png" />
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
       "name": "OneMouse",
+      "alternateName": ["OneMouse", "MouseLink", "share mouse"],
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Windows, Android",
       "url": "https://onemouse.pages.dev/en/",
-      "description": "OneMouse lets you control Android and another Windows PC with your PC mouse and keyboard, then move files and clipboard text between your devices.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "KRW"
-      }
+      "inLanguage": "en-US",
+      "downloadUrl": "https://onemouse.pages.dev/#get",
+      "description": "OneMouse is a free app that lets your PC mouse and keyboard control Android and other Windows PCs, and easily share files and the clipboard.",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" }
     }
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MJ73H86TWX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-MJ73H86TWX');
   </script>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="./index.html" class="brand" aria-label="OneMouse home">
-        <span class="brand-mark">OM</span>
-        <span class="brand-copy">
-          <strong>OneMouse</strong>
-          <span>Connect Windows and Android locally</span>
-        </span>
-      </a>
-      <nav class="top-nav" aria-label="Main navigation">
-        <a href="./index.html" class="is-active">Overview</a>
+  <header class="site">
+    <div class="wrap hd">
+      <a class="brand" href="./index.html" aria-label="OneMouse home"><span class="om">OM</span>OneMouse</a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="./index.html" class="on">Overview</a>
+        <a href="#use">Features</a>
         <a href="./guide.html">Guide</a>
         <a href="./help.html">Help</a>
-        <a href="./technical.html">Technical/Security</a>
-        <a href="./pricing.html">Free / Pro</a>
-        <a href="#download" class="nav-cta">Download</a>
       </nav>
-      <div class="lang-switch" aria-label="Language">
-        <a href="../index.html">KOR</a>
-        <span class="is-active">ENG</span>
-        <a href="../ja/index.html">JPN</a>
-        <a href="../zh/index.html">CHN</a>
+      <div class="hd-right">
+        <div class="lang" aria-label="Language"><a href="../index.html">KOR</a><span class="on">ENG</span><a href="../ja/index.html">JPN</a><a href="../zh/index.html">CHN</a></div>
+        <a class="hd-cta" href="#get">Free download</a>
       </div>
     </div>
   </header>
 
   <main>
-    <section class="home-hero">
-      <div class="container hero-content">
-        <p class="eyebrow eyebrow-dark">Updated July 2026</p>
-        <h1>OneMouse</h1>
-        <p class="hero-text">
-          Extend your PC input to mobile without breaking your flow.
-          Move the cursor across the screen edge, type with your keyboard, and drop files into a small send zone.
-        </p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="#download">Download for Windows</a>
-          <a class="button button-secondary on-dark" href="./guide.html">Start pairing</a>
-        </div>
-        <div class="hero-badges" aria-label="Key features">
-          <span>Move mouse</span>
-          <span>Keyboard input</span>
-          <span>QR setup</span>
-          <span>PC to PC</span>
-          <span>Bluetooth</span>
-          <span>Clipboard</span>
-          <span>Quick Drop</span>
-        </div>
-      </div>
-    </section>
+    <!-- HERO + SIMULATOR -->
+    <section class="hero wrap" aria-label="Overview">
+      <span class="tagpill">● Free · 5-minute setup · Windows + Android</span>
+      <h1>One mouse for<br><span class="flow">your phone, tablet, even other PCs</span> — in one glide.</h1>
+      <p class="sub">No video needed — try it yourself. Move the cursor to hop between devices, and drag the devices to arrange them just like your own desk.</p>
 
-    <section class="section">
-      <div class="container">
-        <div class="section-heading">
-          <p class="section-kicker">Use Cases</p>
-          <h2>Keep working from your PC across phone and PC screens.</h2>
-          <p>
-            You do not need to understand network details first.
-            Start with the tasks you already do every day: control, type, copy, and send files.
-          </p>
+      <div class="play">
+        <div class="play-head">
+          <div class="steps">
+            <span><span class="n">1</span><b>Move your mouse</b> to send the cursor across</span>
+            <span><span class="n">2</span><b>Drag a device</b> to move it around</span>
+          </div>
+          <button class="reset" id="reset" type="button">Reset layout</button>
         </div>
-        <div class="update-grid">
-          <article class="update-card">
-            <span class="update-label">Phone Control</span>
-            <h3>Use Android like a nearby screen</h3>
-            <p>Push the mouse past a PC screen edge and continue clicking, scrolling, and controlling Android.</p>
-          </article>
-          <article class="update-card">
-            <span class="update-label">Typing</span>
-            <h3>Type long text with your PC keyboard</h3>
-            <p>Use your PC keyboard for searches, messages, forms, and any Android field where typing on glass is slow.</p>
-          </article>
-          <article class="update-card">
-            <span class="update-label">Files &amp; Clipboard</span>
-            <h3>Send files and text instantly</h3>
-            <p>Drag a file to the screen edge to send it to the selected device, and your text and clipboard stay synced on both sides.</p>
-          </article>
-          <article class="update-card">
-            <span class="update-label">PC to PC</span>
-            <h3>Control another Windows PC</h3>
-            <p>Place a paired Windows PC on a monitor edge, move the cursor across, and send files between PCs.</p>
-          </article>
-          <article class="update-card">
-            <span class="update-label">Bluetooth</span>
-            <h3>Connect directly over Bluetooth — no Wi‑Fi</h3>
-            <p>Even without a router or internet, connect to your phone and other PCs over Bluetooth to share mouse, keyboard, clipboard, and files. You can also connect several devices at once.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-alt">
-      <div class="container">
-        <div class="section-heading">
-          <p class="section-kicker">Setup Flow</p>
-          <h2>First setup takes four clear steps.</h2>
-          <p>Follow the PC and Android screens. The app handles the network details for you.</p>
-        </div>
-        <div class="feature-grid">
-          <article class="feature-card">
-            <span class="feature-number">01</span>
-            <h3>Open the PC app</h3>
-            <p>Run OneMouse on Windows and check the QR code or 6-digit code at the bottom.</p>
-          </article>
-          <article class="feature-card">
-            <span class="feature-number">02</span>
-            <h3>Enable Android permission</h3>
-            <p>Turn on Accessibility so Android can receive mouse and keyboard input from the PC.</p>
-          </article>
-          <article class="feature-card">
-            <span class="feature-number">03</span>
-            <h3>Pair with QR or code</h3>
-            <p>Find the PC on the same Wi-Fi and confirm it with QR scan or the 6-digit code.</p>
-          </article>
-          <article class="feature-card">
-            <span class="feature-number">04</span>
-            <h3>Place and use</h3>
-            <p>Place Android or another PC on a screen edge, then move the cursor across that edge.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="section-heading">
-          <p class="section-kicker">Docs</p>
-          <h2>Use the guide, help, and technical notes separately.</h2>
-          <p>Start with the guide when installing, open help when something fails, and use technical notes for permissions, network behavior, and security scope.</p>
-        </div>
-        <div class="update-grid">
-          <article class="update-card">
-            <span class="update-label">Guide</span>
-            <h3>Install and pair</h3>
-            <p>Follow the Windows install, Android permission, pairing, placement, and file transfer flow in order.</p>
-            <a class="button button-secondary" href="./guide.html">Open guide</a>
-          </article>
-          <article class="update-card">
-            <span class="update-label">Help</span>
-            <h3>Fix common problems</h3>
-            <p>Check Wi-Fi discovery, Accessibility permission, cursor return, file transfer, and Android background behavior.</p>
-            <a class="button button-secondary" href="./help.html">Open help</a>
-          </article>
-          <article class="update-card">
-            <span class="update-label">Technical</span>
-            <h3>Review permissions and data flow</h3>
-            <p>See why Accessibility and foreground service permissions are used, and what data stays on the local network.</p>
-            <a class="button button-secondary" href="./technical.html">Open technical notes</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container split-grid demo-section">
-        <div>
-          <p class="section-kicker">Demo</p>
-          <h2>Watch the current onboarding flow.</h2>
-          <p class="lead">
-            The demo shows the real app flow: PC launch, Android permissions, pairing, placement, and moving input to Android.
-          </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="https://youtu.be/6jFIih1dOlE" target="_blank" rel="noopener">Watch on YouTube</a>
+        <div class="desk" id="desk">
+          <div class="stage" id="stage">
+            <div class="snapedge" id="snapedge"></div>
+            <div class="dev monitor" data-id="pc"><span class="pin">My PC</span>
+              <div class="screen"><div class="apps" style="grid-template-columns:repeat(6,1fr);padding:12px 12px 22px">
+                <i style="background:#ffffff55"></i><i style="background:#ffd16655"></i><i style="background:#7ee0b955"></i>
+                <i style="background:#ff9e7a55"></i><i style="background:#8ab4ff55"></i><i style="background:#ffffff33"></i></div>
+                <div class="bar"><i></i><i></i><i></i></div></div></div>
+            <div class="dev tablet grab" data-id="tab"><span class="pin">Galaxy Tab</span>
+              <div class="screen"><div class="apps">
+                <i style="background:#5b8cff88"></i><i style="background:#57e0ab88"></i><i style="background:#ffcf5e88"></i><i style="background:#ff8f6b88"></i>
+                <i style="background:#ffffff33"></i><i style="background:#ffffff33"></i><i style="background:#ffffff33"></i><i style="background:#ffffff33"></i></div></div></div>
+            <div class="dev phone grab" data-id="phone"><span class="pin">Phone</span>
+              <div class="screen"><div class="apps">
+                <i style="background:#57e0ab88"></i><i style="background:#ffcf5e88"></i><i style="background:#ff8f6b88"></i>
+                <i style="background:#8ab4ff88"></i><i style="background:#ffffff33"></i><i style="background:#ffffff33"></i></div></div></div>
+            <div class="dev subpc grab" data-id="subpc"><span class="pin">Other PC</span>
+              <div class="screen"><div class="apps" style="grid-template-columns:repeat(5,1fr);padding:9px 9px 18px">
+                <i style="background:#ff9e7a55"></i><i style="background:#c7a0ff55"></i><i style="background:#8ab4ff55"></i><i style="background:#ffffff33"></i><i style="background:#ffffff22"></i></div>
+                <div class="bar"><i></i><i></i></div></div></div>
+            <div id="cursor"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 2l6.5 17 2.4-6.8L19.5 10z" fill="#fff" stroke="#241a12" stroke-width="1.3" stroke-linejoin="round"/></svg></div>
           </div>
         </div>
-        <div class="video-frame" aria-label="OneMouse demo video">
-          <iframe
-            src="https://www.youtube.com/embed/6jFIih1dOlE"
-            title="OneMouse demo video"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-            loading="lazy"
-          ></iframe>
+        <div class="play-foot">
+          <div id="status"><span class="dotnow"></span>Cursor now on → <span class="where">My PC</span></div>
+          <span class="hint">The cursor crosses to whichever device it touches · it never disappears off-screen</span>
+        </div>
+      </div>
+
+      <div class="hero-cta">
+        <a class="btn btn-pri" href="#get">Start for free</a>
+        <a class="btn btn-sec" href="./guide.html">See the 1-minute setup</a>
+      </div>
+      <p class="hero-note">The demo above is the real <b>device arrangement</b> feature — you arrange devices and pass the mouse the same way in the app.</p>
+    </section>
+
+    <!-- USE CASES -->
+    <section id="use">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="ey">Great for moments like these</p>
+          <h2 class="sec">What you do at your PC, now on your phone and other PCs.</h2>
+          <p class="sec-lead">No networking know-how required. See it through everyday tasks and it clicks right away.</p>
+        </div>
+        <div class="cards">
+          <article class="card"><div class="card-ic" style="background:#e9f0ff;color:#3a5bd0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="6" y="3" width="12" height="18" rx="3"/><path d="M11 6h2"/></svg></div>
+            <h3>Control your phone like a second screen</h3><p>Push the mouse past the edge of your PC monitor and it crosses to Android, carrying clicks, scrolls, and drags right along.</p></article>
+          <article class="card"><div class="card-ic" style="background:#eafaf1;color:#15845f"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 10h.01M10 10h.01M14 10h.01M8 14h8"/></svg></div>
+            <h3>Type long messages with your PC keyboard</h3><p>Search terms, messenger replies, any app text field — whenever you would type on your phone, use your PC keyboard instead.</p></article>
+          <article class="card"><div class="card-ic" style="background:#fff0e8;color:#ff7a4d"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5h6l2 2h8v11H4z"/></svg></div>
+            <h3>Send files and the clipboard instantly</h3><p>Grab a file and drag it to the screen edge to send it straight to the device you chose, and text and clipboard stay in sync on both sides.</p></article>
+          <article class="card"><div class="card-ic" style="background:#f3ecff;color:#7a52d0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="7" width="9" height="10" rx="1.5"/><rect x="13" y="4" width="9" height="7" rx="1.5"/></svg></div>
+            <h3>Bring in other Windows PCs too</h3><p>Place a sub PC in your arrangement and you can pass the mouse to control it and swap files back and forth.</p></article>
+          <article class="card"><div class="card-ic" style="background:#eef0f4;color:#4a5978"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 5l8 7-5 4V4l5 4-8 7"/></svg></div>
+            <h3>It connects over Bluetooth too</h3><p>Wi-Fi for everyday use, and when there is no Wi-Fi router or internet, connect directly to your phone or another PC over Bluetooth.</p></article>
         </div>
       </div>
     </section>
 
-    <section class="section" id="download">
-      <div class="container">
-        <div class="section-heading">
-          <p class="section-kicker">Download</p>
-          <h2>Install both the Windows app and the Android app.</h2>
-          <p>
-            Android 8.0 or later is targeted. Windows 10 and Windows 11 are the primary PC environments.
-          </p>
+    <!-- SETUP -->
+    <section class="section-alt" id="setup">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="ey">How to connect</p>
+          <h2 class="sec">Four steps, done in a minute.</h2>
+          <p class="sec-lead">The app handles the tricky setup for you. Just follow the on-screen steps. The only thing you turn on is the Accessibility Service.</p>
         </div>
-        <div class="download-grid">
-          <article class="download-card">
-            <span class="download-icon">PC</span>
+        <div class="flow4">
+          <div class="step"><div class="badge">01</div><h4>Open the PC app</h4><p>Launch OneMouse on Windows and check the QR code or 6-digit code on screen.</p></div>
+          <div class="step"><div class="badge">02</div><h4>Turn on the Android permission</h4><p>Turn on the Accessibility Service once so Android can receive your PC mouse and keyboard input.</p></div>
+          <div class="step"><div class="badge">03</div><h4>Connect by QR or code</h4><p>Find the PC on the same Wi-Fi and confirm your device by scanning the QR code or entering the 6-digit code.</p></div>
+          <div class="step"><div class="badge">04</div><h4>Arrange and cross over</h4><p>Place your phone or other PC along a screen edge, push the mouse that way, and you are done.</p></div>
+        </div>
+        <details class="fold"><summary><span>See the real pairing screens</span><small>Get ready → Check the PC code → Enter the numbers → Scan the QR</small></summary>
+          <div class="fold-body"><a href="../assets/onemouse-pairing-real-ui-comic-v5.png" target="_blank" rel="noopener"><img src="../assets/onemouse-pairing-real-ui-comic-v5.png" alt="OneMouse pairing steps: get ready, check the PC code, enter the numbers, scan the QR" loading="lazy" style="border-radius:12px" /></a></div></details>
+        <div style="margin-top:20px"><a class="btn btn-sec sm" href="./guide.html">See the full guide</a></div>
+      </div>
+    </section>
+
+    <!-- TRUST -->
+    <section id="trust">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="ey">Use it with peace of mind</p>
+          <h2 class="sec">Between your own devices, inside your own network.</h2>
+          <p class="sec-lead">OneMouse works only between the devices you have paired. It asks for permissions only when you actually use a feature.</p>
+        </div>
+        <div class="trust">
+          <div class="t"><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l7 4v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V7z"/></svg></span>
+            <div><b>No server in between</b><span>Input, files, and the clipboard travel between your PC and devices on the same network.</span></div></div>
+          <div class="t"><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span>
+            <div><b>Permissions only when needed</b><span>Only Accessibility is required; things like screen capture and nearby Wi-Fi are requested when you start that feature.</span></div></div>
+          <div class="t"><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg></span>
+            <div><b>Nothing collected or stored</b><span>We do not use Accessibility data for ads or screen collection, and we never store your files on a server.</span></div></div>
+        </div>
+        <div style="margin-top:20px"><a class="btn btn-sec sm" href="./technical.html">Read more on Technical &amp; Security</a></div>
+      </div>
+    </section>
+
+    <!-- DOWNLOAD -->
+    <section class="section-alt" id="get">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="ey">Download</p>
+          <h2 class="sec">Get the Windows app and the Android app together.</h2>
+          <p class="sec-lead">On PC, Windows 10/11 comes first. On Android, turn on the Accessibility Service, then pair with your PC.</p>
+        </div>
+        <div class="dl">
+          <article class="dcard first download-card">
+            <span class="dtag" style="background:linear-gradient(135deg,var(--blue),var(--green))">PC</span>
             <h3>Windows</h3>
-            <p data-download-filename>Checking the latest setup file.</p>
-            <a class="button button-primary" href="https://github.com/sdlckdrl/mouselink-web/releases" data-latest-windows-download>Download Windows</a>
+            <p data-download-filename>Checking for the latest Setup file.</p>
+            <a class="btn btn-pri" href="https://github.com/sdlckdrl/mouselink-web/releases/latest" data-latest-windows-download download>Download for Windows</a>
           </article>
-          <article class="download-card">
-            <span class="download-icon download-icon-green">APK</span>
-            <h3>Android</h3>
-            <p>Enable Accessibility and notification permission, then pair with your PC.</p>
-            <a class="button button-secondary" href="https://play.google.com/store/apps/details?id=com.mouselink.app">Get Android</a>
+          <article class="dcard">
+            <span class="dtag" style="background:#15845f">GP</span>
+            <h3>Google Play</h3>
+            <p>Installs on most Android devices.</p>
+            <a class="btn btn-sec" href="https://play.google.com/store/apps/details?id=com.mouselink.app">View on Google Play</a>
+          </article>
+          <article class="dcard">
+            <span class="dtag" style="background:#b76a05">GS</span>
+            <h3>Galaxy Store</h3>
+            <p>Open the store on Samsung Galaxy devices to install.</p>
+            <a class="btn btn-sec" href="https://apps.samsung.com/appquery/appDetail.as?appId=com.mouselink.app.galaxy">View on Galaxy Store</a>
           </article>
         </div>
+      </div>
+    </section>
+
+    <!-- FAQ PREVIEW -->
+    <section id="faq">
+      <div class="wrap narrow">
+        <div class="sec-head">
+          <p class="ey">Frequently asked questions</p>
+          <h2 class="sec">Things you might wonder before connecting.</h2>
+        </div>
+        <div class="faq">
+          <details><summary>Is it really free?</summary><div class="a">Yes. Core features like mouse and keyboard control and arranging your phone's position are free to use.</div></details>
+          <details><summary>Do I need rooting or developer settings?</summary><div class="a">No. You just turn on the <b>Accessibility Service</b> once on Android. No USB connection or ADB required.</div></details>
+          <details><summary>Can I use it without being on the same Wi-Fi?</summary><div class="a">Yes. You can connect directly to your phone or another PC over <b>Bluetooth</b> to share mouse, keyboard, and files.</div></details>
+          <details><summary>My connection keeps dropping.</summary><div class="a">Usually the cause is <b>battery optimization</b> or a <b>firewall or guest-Wi-Fi client isolation</b>. Follow the troubleshooting order in Help to narrow it down step by step.</div></details>
+        </div>
+        <div style="margin-top:20px"><a class="btn btn-sec sm" href="./help.html">See all of Help</a></div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
+  <footer class="site">
+    <div class="wrap ft">
       <span>© 2026 OneMouse</span>
-      <span class="footer-links">
-        <a href="./technical.html">Technical/Security</a>
-        <a href="./pricing.html">Free / Pro</a>
-        <a href="./privacy.html">Privacy</a>
-        <a href="./terms.html">Terms</a>
-        <a href="./licenses.html">Licenses</a>
-      </span>
+      <span class="links"><a href="./technical.html">Technical &amp; Security</a><a href="./privacy.html">Privacy Policy</a><a href="./terms.html">Terms of Service</a><a href="./licenses.html">Open-source Licenses</a></span>
     </div>
   </footer>
+
+  <script>
+  (() => {
+    const VW=760, VH=440;
+    const desk=document.getElementById('desk'), stage=document.getElementById('stage');
+    const cursorEl=document.getElementById('cursor'), statusWhere=document.querySelector('#status .where');
+    const snapedge=document.getElementById('snapedge');
+    if(!desk) return;
+    const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const HOME={
+      pc:{x:275,y:150,w:206,h:132,label:'My PC',drag:false},
+      tab:{x:481,y:159,w:150,h:112,label:'Galaxy Tab',drag:true},
+      phone:{x:209,y:151,w:66,h:126,label:'Phone',drag:true},
+      subpc:{x:295,y:40,w:170,h:110,label:'Other PC',drag:true},
+    };
+    const devs={};
+    ['pc','tab','phone','subpc'].forEach(id=>{ devs[id]=Object.assign({},HOME[id]); devs[id].el=stage.querySelector('.dev[data-id="'+id+'"]'); });
+    let scale=1;
+    const fit=()=>{ scale=desk.clientWidth/VW; stage.style.transform='scale('+scale+')'; };
+    const layout=()=>{ for(const id in devs){ const d=devs[id]; d.el.style.left=d.x+'px'; d.el.style.top=d.y+'px'; d.el.style.width=d.w+'px'; d.el.style.height=d.h+'px'; } };
+    const rectOf=d=>({l:d.x,t:d.y,r:d.x+d.w,b:d.y+d.h});
+    const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+    function deviceAt(p){ const inside=[]; for(const id in devs){ const r=rectOf(devs[id]); if(p.x>=r.l&&p.x<=r.r&&p.y>=r.t&&p.y<=r.b) inside.push(id); }
+      if(!inside.length) return null; if(inside.length===1) return inside[0];
+      let best=inside[0],bd=Infinity; for(const id of inside){ const d=devs[id]; const dd=(d.x+d.w/2-p.x)**2+(d.y+d.h/2-p.y)**2; if(dd<bd){bd=dd;best=id;} } return best; }
+    let active='pc', cx=devs.pc.x+devs.pc.w/2, cy=devs.pc.y+devs.pc.h/2;
+    function setCursor(vx,vy){ let target=deviceAt({x:vx,y:vy});
+      if(target){ cx=vx; cy=vy; } else { const r=rectOf(devs[active]); cx=clamp(vx,r.l,r.r); cy=clamp(vy,r.t,r.b); target=active; }
+      if(target!==active){ cross(target,cx,cy); active=target; }
+      cursorEl.style.transform='translate('+cx+'px,'+cy+'px) translate(-50%,-50%)';
+      for(const id in devs) devs[id].el.classList.toggle('lit',id===active); }
+    function cross(to,x,y){ statusWhere.textContent=devs[to].label; if(reduce) return;
+      const p=document.createElement('div'); p.className='pulse'; p.style.left=x+'px'; p.style.top=y+'px'; stage.appendChild(p); setTimeout(()=>p.remove(),600);
+      cursorEl.classList.remove('squash'); void cursorEl.offsetWidth; cursorEl.classList.add('squash'); }
+    let drag=null;
+    const toV=e=>{ const rc=desk.getBoundingClientRect(); return {x:clamp((e.clientX-rc.left)/scale,0,VW), y:clamp((e.clientY-rc.top)/scale,0,VH)}; };
+    desk.addEventListener('pointerdown',e=>{ const el=e.target.closest('.dev.grab'); const p=toV(e);
+      if(el){ const id=el.dataset.id,d=devs[id]; drag={id,dx:p.x-d.x,dy:p.y-d.y}; d.el.classList.add('drag'); try{desk.setPointerCapture(e.pointerId);}catch(_){} e.preventDefault(); }
+      else setCursor(p.x,p.y); });
+    desk.addEventListener('pointermove',e=>{ const p=toV(e);
+      if(drag){ const d=devs[drag.id]; d.x=clamp(p.x-drag.dx,0,VW-d.w); d.y=clamp(p.y-drag.dy,0,VH-d.h); d.el.style.left=d.x+'px'; d.el.style.top=d.y+'px'; showSnap(d); }
+      else setCursor(p.x,p.y); });
+    function endDrag(){ if(!drag) return; const d=devs[drag.id]; d.el.classList.remove('drag'); snap(d); layout(); snapedge.style.opacity=0; drag=null; setCursor(cx,cy); }
+    desk.addEventListener('pointerup',endDrag); desk.addEventListener('pointercancel',endDrag);
+    function nearestEdge(d){ const m=devs.pc, X=d.x+d.w/2, Y=d.y+d.h/2;
+      return [['right',Math.abs(X-(m.x+m.w))],['left',Math.abs(X-m.x)],['bottom',Math.abs(Y-(m.y+m.h))],['top',Math.abs(Y-m.y)]].sort((a,b)=>a[1]-b[1])[0][0]; }
+    function snap(d){ const m=devs.pc, e=nearestEdge(d);
+      if(e==='right'||e==='left'){ d.x=e==='right'?m.x+m.w:m.x-d.w; d.y=clamp(d.y,m.y-d.h*0.35,m.y+m.h-d.h*0.65); }
+      else { d.y=e==='bottom'?m.y+m.h:m.y-d.h; d.x=clamp(d.x,m.x-d.w*0.35,m.x+m.w-d.w*0.65); }
+      d.x=clamp(d.x,0,VW-d.w); d.y=clamp(d.y,0,VH-d.h); }
+    function showSnap(d){ const m=devs.pc,e=nearestEdge(d),T=4; let s;
+      if(e==='right')s={l:m.x+m.w-T/2,t:m.y,w:T,h:m.h}; else if(e==='left')s={l:m.x-T/2,t:m.y,w:T,h:m.h};
+      else if(e==='bottom')s={l:m.x,t:m.y+m.h-T/2,w:m.w,h:T}; else s={l:m.x,t:m.y-T/2,w:m.w,h:T};
+      snapedge.style.left=s.l+'px'; snapedge.style.top=s.t+'px'; snapedge.style.width=s.w+'px'; snapedge.style.height=s.h+'px'; snapedge.style.opacity=.9; }
+    document.getElementById('reset').addEventListener('click',()=>{ for(const id in devs) Object.assign(devs[id],HOME[id]);
+      layout(); active='pc'; cx=devs.pc.x+devs.pc.w/2; cy=devs.pc.y+devs.pc.h/2; statusWhere.textContent='My PC'; setCursor(cx,cy); });
+    addEventListener('resize',fit); fit(); layout(); setCursor(cx,cy);
+  })();
+  </script>
   <script src="../js/downloads.js"></script>
 </body>
 </html>

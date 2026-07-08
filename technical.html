@@ -3,305 +3,131 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>OneMouse 기술/보안 안내 | 로컬 연결과 권한 사용</title>
-  <meta
-    name="description"
-    content="OneMouse의 로컬 네트워크 연결 구조, 접근성 서비스와 포그라운드 서비스 사용 이유, 파일·클립보드·입력 데이터 처리 방식, 보안 및 지원 범위를 안내합니다."
-  />
+  <title>기술·보안 | OneMouse 원마우스 — 연결 구조와 권한</title>
+  <meta name="description" content="OneMouse의 연결 구조와 권한 사용을 정리했습니다. 로컬 우선 동작, 서버 미경유, 권한이 필요한 이유, 데이터 처리 방식, 네트워크 조건과 지원 범위." />
   <meta name="robots" content="index,follow,max-image-preview:large" />
-  <meta name="keywords" content="OneMouse 기술 안내, 원마우스 보안, 로컬 네트워크 연결, Android 접근성 서비스, 포그라운드 서비스, 파일 전송 보안, 클립보드 전송" />
-  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/onemouse.css" />
   <link rel="canonical" href="https://onemouse.pages.dev/technical" />
-  <link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/technical" />
-  <link rel="alternate" hreflang="en" href="https://onemouse.pages.dev/en/technical" />
-  <link rel="alternate" hreflang="ja" href="https://onemouse.pages.dev/ja/technical" />
-  <link rel="alternate" hreflang="zh" href="https://onemouse.pages.dev/zh/technical" />
-  <link rel="alternate" hreflang="x-default" href="https://onemouse.pages.dev/technical" />
-  <meta property="og:site_name" content="OneMouse" />
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="OneMouse 기술/보안 안내" />
-  <meta property="og:description" content="OneMouse가 로컬 네트워크에서 PC와 Android를 연결하고, 권한과 데이터를 어떤 목적으로 사용하는지 설명합니다." />
-  <meta property="og:url" content="https://onemouse.pages.dev/technical" />
-  <meta property="og:image" content="https://onemouse.pages.dev/assets/hero-bg-generated-2.png" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="OneMouse 기술/보안 안내" />
-  <meta name="twitter:description" content="로컬 연결, 권한 사용, 데이터 처리, 보안 및 지원 범위를 한 페이지에서 확인합니다." />
-  <meta name="twitter:image" content="https://onemouse.pages.dev/assets/hero-bg-generated-2.png" />
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "name": "OneMouse 기술/보안 안내",
-      "url": "https://onemouse.pages.dev/technical",
-      "inLanguage": "ko-KR",
-      "description": "OneMouse의 로컬 네트워크 연결 구조, 접근성 서비스와 포그라운드 서비스 사용 이유, 데이터 처리 방식, 보안 및 지원 범위를 안내합니다.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "name": "OneMouse",
-        "url": "https://onemouse.pages.dev/"
-      }
-    }
-  </script>
-  <!-- Google tag (gtag.js) -->
+  <link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/technical.html" />
+  <link rel="alternate" hreflang="en" href="https://onemouse.pages.dev/en/technical.html" />
+  <link rel="alternate" hreflang="ja" href="https://onemouse.pages.dev/ja/technical.html" />
+  <link rel="alternate" hreflang="zh" href="https://onemouse.pages.dev/zh/technical.html" />
+  <link rel="alternate" hreflang="x-default" href="https://onemouse.pages.dev/technical.html" />
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-MJ73H86TWX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-MJ73H86TWX');
-  </script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-MJ73H86TWX');</script>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="./index.html" class="brand" aria-label="OneMouse 홈">
-        <span class="brand-mark">OM</span>
-        <span class="brand-copy">
-          <strong>OneMouse</strong>
-          <span>Windows와 Android를 로컬로 연결</span>
-        </span>
-      </a>
-      <nav class="top-nav" aria-label="주요 메뉴">
+  <header class="site">
+    <div class="wrap hd">
+      <a class="brand" href="./index.html" aria-label="OneMouse 홈"><span class="om">OM</span>OneMouse</a>
+      <nav class="nav" aria-label="주요 메뉴">
         <a href="./index.html">소개</a>
-        <a href="./guide.html">사용 가이드</a>
+        <a href="./index.html#use">기능</a>
+        <a href="./guide.html">사용법</a>
         <a href="./help.html">도움말</a>
-        <a href="./technical.html" class="is-active">기술/보안</a>
-        <a href="./pricing.html">요금/Pro</a>
-        <a href="./index.html#download" class="nav-cta">다운로드</a>
       </nav>
-      <div class="lang-switch" aria-label="언어">
-        <span class="is-active">KOR</span>
-        <a href="./en/technical.html">ENG</a>
-        <a href="./ja/technical.html">JPN</a>
-        <a href="./zh/technical.html">CHN</a>
+      <div class="hd-right">
+        <div class="lang" aria-label="언어"><span class="on">KOR</span><a href="./en/technical.html">ENG</a><a href="./ja/technical.html">JPN</a><a href="./zh/technical.html">CHN</a></div>
+        <a class="hd-cta" href="./index.html#get">무료 다운로드</a>
       </div>
     </div>
   </header>
 
   <main>
-    <section class="page-hero">
-      <div class="container narrow">
-        <p class="section-kicker">Technical & Security</p>
-        <h1>연결 구조와 권한 사용을 따로 정리했습니다.</h1>
-        <p class="page-intro">
-          이 페이지는 일반 사용법이 아니라 OneMouse가 어떤 방식으로 PC와 Android를 연결하고,
-          접근성 서비스, 포그라운드 서비스, 파일과 클립보드 데이터를 어떤 목적으로 처리하는지 설명합니다.
-        </p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="#data-flow">데이터 흐름</a>
-          <a class="button button-secondary" href="#permissions">권한 사용</a>
-          <a class="button button-secondary" href="#network">네트워크 조건</a>
-          <a class="button button-secondary" href="#scope">지원 범위</a>
+    <section class="phero wrap">
+      <p class="ey">기술·보안</p>
+      <h1 class="page">연결 구조와 권한을 따로 정리했습니다.</h1>
+      <p class="lead">이 페이지는 일반 사용법이 아니라 <b>연결이 어떻게 되는지</b>와 <b>권한을 왜 쓰는지</b>를 설명합니다. 사용 순서는 <a href="./guide.html" style="color:var(--coral-deep);font-weight:700">사용 가이드</a>를 보세요.</p>
+      <nav class="toc" aria-label="이 페이지 목차">
+        <a href="#data-flow">로컬 우선</a>
+        <a href="#permissions">권한 사용</a>
+        <a href="#handling">데이터 처리</a>
+        <a href="#network">네트워크 조건</a>
+        <a href="#scope">지원 범위</a>
+        <a href="#updates">업데이트 내역</a>
+      </nav>
+    </section>
+
+    <!-- LOCAL FIRST -->
+    <section id="data-flow">
+      <div class="wrap narrow">
+        <div class="sec-head"><p class="ey">Local First</p><h2 class="sec">페어링한 내 기기 사이에서만 동작합니다.</h2></div>
+        <p class="sec-lead" style="max-width:64ch">입력·파일·클립보드는 <b>같은 네트워크의 내 PC와 Android(또는 다른 PC)</b> 사이에서 오갑니다. 외부 서버를 거쳐 계정에 올리는 구조가 아닙니다. 그래서 연결의 전제 조건은 두 기기가 <b>같은 Wi-Fi(같은 공유기)</b> 아래에 있는 것(또는 블루투스로 직접 연결)입니다.</p>
+      </div>
+    </section>
+
+    <!-- PERMISSIONS -->
+    <section class="section-alt" id="permissions">
+      <div class="wrap">
+        <div class="sec-head"><p class="ey">Permissions</p><h2 class="sec">권한은 기능 제공에 필요한 범위로만.</h2>
+          <p class="sec-lead">한꺼번에 요구하지 않고, 그 기능을 시작할 때 Android에서 사용자가 직접 켭니다.</p></div>
+        <div class="cards">
+          <article class="card accent"><p class="card-lbl">필수</p><h3>접근성 서비스</h3><p>PC의 마우스·키보드로 Android를 제어하고, 원격 입력·화면 관련 동작을 처리하려면 접근성 서비스가 필요합니다. OneMouse의 핵심 기능이 여기에 의존합니다.</p></article>
+          <article class="card"><p class="card-lbl">원격 제어 시작 시</p><h3>화면 캡처 승인</h3><p>모바일 원격 제어 창을 열 때 Android 시스템 팝업으로 승인합니다. 보안 화면 등 일부는 표시되지 않을 수 있습니다.</p></article>
+          <article class="card"><p class="card-lbl">연결 시</p><h3>주변 Wi-Fi 기기</h3><p>Android 13 이상에서 PC를 찾을 때 요청될 수 있습니다. 앱 실행 시가 아니라 검색하는 순간에만 물어봅니다.</p></article>
+          <article class="card"><p class="card-lbl">서비스 시작 시</p><h3>알림</h3><p>백그라운드 연결 상태를 표시하는 데 씁니다. 필요할 때만 요청됩니다.</p></article>
+          <article class="card"><p class="card-lbl">밝기 사용 시</p><h3>시스템 설정 변경</h3><p>Alt+Shift+↑/↓로 모바일 화면 밝기를 조절할 때 처음 한 번 필요합니다.</p></article>
+          <article class="card"><p class="card-lbl">권장</p><h3>배터리 제한 예외</h3><p>화면이 꺼진 뒤 연결이 끊긴다면 안정성을 위해 권장합니다. 필수는 아닙니다.</p></article>
         </div>
       </div>
     </section>
 
-    <section class="section" id="data-flow">
-      <div class="container">
-        <div class="section-heading">
-          <p class="section-kicker">Local First</p>
-          <h2>OneMouse는 사용자가 페어링한 기기 사이에서 동작합니다.</h2>
-          <p>
-            기본 연결은 같은 Wi-Fi 또는 같은 공유기 아래의 Windows PC와 Android 기기 사이에서 이루어집니다.
-            OneMouse 운영 서버로 입력 내용, 파일, 클립보드 내용을 업로드하는 구조가 아닙니다.
-          </p>
-        </div>
-        <div class="timeline">
-          <article class="timeline-step">
-            <span>1</span>
-            <div>
-              <strong>기기 발견</strong>
-              <p>PC 앱과 Android 앱은 같은 로컬 네트워크 안에서 서로를 찾습니다. 네트워크 환경에 따라 발견이 지연될 수 있습니다.</p>
-            </div>
-          </article>
-          <article class="timeline-step">
-            <span>2</span>
-            <div>
-              <strong>사용자 확인</strong>
-              <p>PC 화면의 QR 코드 또는 6자리 코드로 사용자가 직접 페어링을 승인해야 입력과 전송 기능을 사용할 수 있습니다.</p>
-            </div>
-          </article>
-          <article class="timeline-step">
-            <span>3</span>
-            <div>
-              <strong>입력 제어</strong>
-              <p>PC의 마우스 이동, 클릭, 스크롤, 키보드 입력은 페어링된 Android 기기에 제어 이벤트로 전달됩니다.</p>
-            </div>
-          </article>
-          <article class="timeline-step">
-            <span>4</span>
-            <div>
-              <strong>파일과 텍스트 전송</strong>
-              <p>사용자가 직접 선택한 파일, 텍스트, 클립보드 내용만 페어링된 기기 사이에서 이동합니다.</p>
-            </div>
-          </article>
-        </div>
+    <!-- DATA HANDLING -->
+    <section id="handling">
+      <div class="wrap narrow">
+        <div class="sec-head"><p class="ey">Data Handling</p><h2 class="sec">입력·파일·클립보드는 사용자가 선택한 범위에서.</h2></div>
+        <div class="panel"><ul>
+          <li>원격 계정을 만들지 않습니다 — 로그인 없이 페어링으로 동작합니다.</li>
+          <li>전송한 파일을 서버에 저장하지 않습니다. 선택한 기기로 직접 보냅니다.</li>
+          <li><b>접근성 데이터를 광고나 화면 수집 용도로 사용하지 않습니다.</b> 입력 전달·원격 제어 등 명시된 기능에만 씁니다.</li>
+          <li>클립보드·파일 전송은 사용자가 대상을 선택하고 실행할 때만 일어납니다.</li>
+        </ul></div>
       </div>
     </section>
 
-    <section class="section section-alt" id="permissions">
-      <div class="container">
-        <div class="section-heading">
-          <p class="section-kicker">Permissions</p>
-          <h2>권한은 기능 제공에 필요한 범위로 사용합니다.</h2>
-          <p>
-            OneMouse는 모든 권한을 처음부터 강제로 요구하지 않습니다.
-            기능을 켜거나 사용할 때 필요한 항목을 안내하고, 사용자가 Android 설정에서 직접 허용합니다.
-          </p>
+    <!-- NETWORK -->
+    <section class="section-alt" id="network">
+      <div class="wrap narrow">
+        <div class="sec-head"><p class="ey">Network</p><h2 class="sec">연결 품질은 로컬 네트워크 조건의 영향을 받습니다.</h2></div>
+        <div class="split">
+          <div class="panel tip"><h3>권장 환경</h3><ul><li>개인 공유기의 같은 Wi-Fi(2.4/5GHz 무관)</li><li>기기 간 통신이 허용된 네트워크</li><li>Windows 방화벽에서 OneMouse 인바운드 허용</li></ul></div>
+          <div class="panel"><h3>제약 환경</h3><ul><li>게스트·회사 Wi-Fi의 기기 간 격리(client isolation)</li><li>‘공용’으로 잡힌 네트워크의 인바운드 차단</li><li>이럴 땐 블루투스 직접 연결 또는 개인 핫스팟 이용</li></ul></div>
         </div>
-        <div class="permission-grid">
-          <article class="permission-card permission-required">
-            <span class="status-pill">핵심 기능</span>
-            <h3>접근성 서비스</h3>
-            <p>가상 커서 표시, 클릭, 스크롤, 드래그, Back, Home, 키보드 입력 같은 사용자 요청 동작을 Android 화면에 적용하기 위해 사용합니다.</p>
-          </article>
-          <article class="permission-card">
-            <span class="status-pill">연결 유지</span>
-            <h3>포그라운드 서비스</h3>
-            <p>PC와 Android의 로컬 연결이 활성화되어 있을 때 상태를 유지하고, 실행 중임을 알림으로 표시하기 위해 사용합니다.</p>
-          </article>
-          <article class="permission-card">
-            <span class="status-pill">기기 발견</span>
-            <h3>주변 Wi-Fi 기기</h3>
-            <p>Android 13 이상에서 같은 네트워크의 PC를 찾기 위해 필요할 수 있습니다. 위치 추적 목적으로 사용하지 않습니다.</p>
-          </article>
-          <article class="permission-card">
-            <span class="status-pill">상태 표시</span>
-            <h3>알림</h3>
-            <p>연결 서비스가 실행 중이거나 파일 전송 상태를 알려야 할 때 사용합니다. 연결을 끄면 관련 동작도 중단됩니다.</p>
-          </article>
-          <article class="permission-card">
-            <span class="status-pill">선택 기능</span>
-            <h3>시스템 설정 변경</h3>
-            <p>PC 단축키로 Android 화면 밝기를 조절할 때만 필요합니다. 밝기 기능을 쓰지 않으면 허용하지 않아도 됩니다.</p>
-          </article>
-          <article class="permission-card">
-            <span class="status-pill">안정성</span>
-            <h3>배터리 제한 예외</h3>
-            <p>화면이 꺼진 뒤 연결이 자주 끊기는 환경에서만 권장합니다. Android 제조사별 배터리 정책의 영향을 줄이는 설정입니다.</p>
-          </article>
-        </div>
+        <p class="sec-lead" style="margin-top:16px">OneMouse는 인터넷 릴레이 서버를 거치지 않으므로, 두 기기가 서로를 직접 찾을 수 있는 환경이어야 합니다.</p>
       </div>
     </section>
 
-    <section class="section" id="security">
-      <div class="container split-grid">
-        <div>
-          <p class="section-kicker">Data Handling</p>
-          <h2>입력, 파일, 클립보드는 사용자가 선택한 범위에서 처리됩니다.</h2>
-          <p class="lead">
-            OneMouse는 사용자가 직접 페어링한 PC와 Android 사이의 작업을 돕는 도구입니다.
-            원격 서버에 계정을 만들거나 사용자의 파일을 저장하는 방식으로 동작하지 않습니다.
-          </p>
-          <ul class="bullet-list">
-            <li>마우스와 키보드 입력은 Android 제어 이벤트로 전달됩니다.</li>
-            <li>파일 전송은 사용자가 직접 고른 파일에 대해서만 시작됩니다.</li>
-            <li>클립보드와 텍스트 전송은 사용자가 기능을 사용하거나 공유 동작을 선택했을 때만 처리됩니다.</li>
-            <li>광고 분석이나 화면 내용 수집을 위해 접근성 데이터를 사용하지 않습니다.</li>
-          </ul>
-        </div>
-        <div class="panel">
-          <p class="section-kicker">Review Notes</p>
-          <h2>심사와 사용자 안내에서 중요한 점</h2>
-          <ul class="bullet-list">
-            <li>PC 앱과 Android 앱이 함께 필요합니다.</li>
-            <li>접근성 서비스는 Android 입력 제어를 위한 핵심 기능입니다.</li>
-            <li>포그라운드 서비스는 사용자 시작 연결과 전송 상태 표시를 위한 동작입니다.</li>
-            <li>기능 사용 전 PC와 Android가 같은 Wi-Fi 또는 같은 공유기 아래에 있어야 합니다.</li>
-          </ul>
-        </div>
+    <!-- SCOPE -->
+    <section id="scope">
+      <div class="wrap narrow">
+        <div class="sec-head"><p class="ey">Support Scope</p><h2 class="sec">공개 가이드는 Wi-Fi/LAN과 블루투스 연결을 기준으로 합니다.</h2></div>
+        <div class="panel"><ul>
+          <li>지원: Windows 10/11 + Android, 같은 네트워크의 <b>Wi-Fi/LAN</b> 및 <b>블루투스</b> 직접 연결.</li>
+          <li>제외: USB/ADB를 통한 연결은 공식 지원 범위가 아닙니다.</li>
+          <li>PC↔PC는 메인/서브 역할로 동작하며 양방향 파일 전송을 지원합니다.</li>
+        </ul></div>
       </div>
     </section>
 
-    <section class="section section-alt" id="network">
-      <div class="container">
-        <div class="section-heading">
-          <p class="section-kicker">Network</p>
-          <h2>연결 품질은 로컬 네트워크 조건의 영향을 받습니다.</h2>
-          <p>
-            OneMouse는 인터넷 서버를 거쳐 우회 연결하는 제품이 아닙니다.
-            같은 공유기 안에서 PC와 Android가 서로 찾고 통신할 수 있어야 안정적으로 동작합니다.
-          </p>
+    <!-- UPDATES -->
+    <section class="section-alt" id="updates">
+      <div class="wrap narrow">
+        <div class="sec-head"><p class="ey">Updates</p><h2 class="sec">최근 업데이트 내역.</h2></div>
+        <div class="log">
+          <div class="log-item"><time>2026.07</time><p><b>연결 중 화면 꺼짐 방지 · 유휴 디밍</b> — 연결 동안 폰 화면이 꺼지지 않고, 안 쓸 땐 어두워져 배터리를 아낍니다. 멀티 기기 동시 연결에서도 유지됩니다.</p></div>
+          <div class="log-item"><time>2026.07</time><p><b>모바일에서 다른 기기 위치 보기</b> · <b>체인(1열) 배치</b> — 폰에서도 연결된 다른 기기의 배치를 확인하고, PC·폰·PC를 한 줄로 이어 배치할 수 있습니다.</p></div>
+          <div class="log-item"><time>2026.07</time><p><b>경계 넘기 커서 연출</b> · <b>Ctrl+Alt+Backspace 중앙 복귀</b> — 기기 사이를 넘을 때 부드러운 연출, 커서를 잃으면 모니터 중앙으로 복귀합니다.</p></div>
+          <div class="log-item"><time>2026.07</time><p><b>메신저 엔터 전송</b> — 카톡·문자에서 PC 키보드 엔터로 전송, Shift+엔터로 줄바꿈.</p></div>
+          <div class="log-item"><time>2026.06</time><p><b>블루투스 직접 연결</b> · <b>PC↔PC 블루투스</b> — 공유기 없이 폰·다른 PC에 연결해 입력·클립보드·파일을 주고받습니다.</p></div>
         </div>
-        <div class="guide-grid">
-          <article class="panel">
-            <p class="section-kicker">권장 환경</p>
-            <h2>개인 Wi-Fi 또는 같은 공유기</h2>
-            <ul class="bullet-list">
-              <li>PC와 Android가 같은 공유기에 연결되어 있습니다.</li>
-              <li>게스트 Wi-Fi와 AP 격리가 꺼져 있습니다.</li>
-              <li>PC 방화벽에서 OneMouse 통신이 허용되어 있습니다.</li>
-              <li>보안 프로그램이 로컬 네트워크 통신을 차단하지 않습니다.</li>
-            </ul>
-          </article>
-          <article class="panel">
-            <p class="section-kicker">주의 환경</p>
-            <h2>회사망, 공용 Wi-Fi, 격리 네트워크</h2>
-            <ul class="bullet-list">
-              <li>회사 보안 정책이 기기 발견을 막을 수 있습니다.</li>
-              <li>공용 Wi-Fi는 같은 이름이어도 사용자 기기 간 통신이 차단될 수 있습니다.</li>
-              <li>VPN이나 방화벽 설정에 따라 PC가 보이지 않을 수 있습니다.</li>
-              <li>연결이 불안정하면 개인 공유기 환경에서 먼저 확인하는 것이 좋습니다.</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="scope">
-      <div class="container split-grid">
-        <div>
-          <p class="section-kicker">Support Scope</p>
-          <h2>현재 공개 가이드는 Wi-Fi/LAN 연결을 기준으로 합니다.</h2>
-          <p class="lead">
-            일반 사용자는 Windows PC와 Android를 같은 Wi-Fi 또는 같은 공유기 아래에서 연결하는 흐름을 사용합니다.
-            USB/ADB 연결은 현재 사용자용 지원 범위에 포함하지 않습니다.
-          </p>
-        </div>
-        <div class="panel">
-          <p class="section-kicker">Next Step</p>
-          <h2>설치와 사용 순서는 사용 가이드에서 확인하세요.</h2>
-          <p class="lead">
-            기술 구조를 확인했다면 실제 설치, 페어링, 위치 배치, 파일 전송 흐름은 사용자용 가이드에서 이어서 볼 수 있습니다.
-          </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="./guide.html">사용 가이드 보기</a>
-            <a class="button button-secondary" href="./help.html">문제 해결 보기</a>
-          </div>
-        </div>
-      </div>
-    </section>
-      <section class="section section-alt" id="updates">
-      <div class="container narrow">
-        <div class="section-heading">
-          <p class="section-kicker">Updates</p>
-          <h2>업데이트 내역</h2>
-          <p>최근 버전에서 추가·개선된 내용입니다.</p>
-        </div>
-        <p class="update-date">2026.07</p>
-        <ul class="bullet-list">
-          <li><strong>여러 기기를 한 줄로 이어 쓰기</strong> — 폰이나 다른 PC를 대상 PC의 옆·위·아래로 이어 배치하면, 마우스가 그 PC를 지나 다음 기기까지 이어집니다.</li>
-          <li><strong>연결 중 화면 꺼짐 방지</strong> — PC와 연결된 동안 화면이 꺼지지 않아 유휴 상태에서도 마우스·키보드 제어가 끊기지 않습니다(설정에서 끌 수 있음).</li>
-        </ul>
-        <p class="update-date">2026.06</p>
-        <ul class="bullet-list">
-          <li><strong>Wi-Fi 없이 블루투스로 직접 연결</strong> — 공유기나 인터넷이 없는 환경에서도 블루투스로 폰과 다른 PC에 연결해 마우스·키보드·클립보드·파일을 그대로 주고받습니다.</li>
-        </ul>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
+  <footer class="site">
+    <div class="wrap ft">
       <span>© 2026 OneMouse</span>
-      <span class="footer-links">
-        <a href="./technical.html">기술/보안</a>
-        <a href="./pricing.html">요금/Pro</a>
-        <a href="./privacy.html">개인정보처리방침</a>
-        <a href="./terms.html">이용약관</a>
-        <a href="./licenses.html">오픈소스 라이선스</a>
-      </span>
+      <span class="links"><a href="./technical.html">기술·보안</a><a href="./privacy.html">개인정보처리방침</a><a href="./terms.html">이용약관</a><a href="./licenses.html">오픈소스 라이선스</a></span>
     </div>
   </footer>
 </body>

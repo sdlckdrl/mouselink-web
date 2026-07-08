@@ -3,863 +3,219 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>OneMouse 使い方ガイド | Android と PC を制御する設定</title>
-  <meta
-    name="description"
-    content="OneMouse の最新使い方ガイドです。PC のマウスとキーボードで Android や他の PC を制御し、QR 接続、配置、ファイル/クリップボード転送、モバイル画面のリモート制御、スクリーンショットと明るさのショートカットを案内します。"
-  />
+  <title>使い方ガイド | OneMouse — 初回接続からよく使う機能まで</title>
+  <meta name="description" content="OneMouseの使い方ガイド：初回接続の手順、スマホの配置、モバイルのリモート操作、ファイル・クリップボード転送、番号ショートカット、Bluetooth接続、別のPCへの接続、キーボードショートカットを順番にご案内します。" />
   <meta name="robots" content="index,follow,max-image-preview:large" />
-  <meta name="keywords" content="OneMouse 使い方, OneMouse ガイド, share mouse, Share Mouse, シェアマウス, マウス共有, PC マウス共有, Android PC 制御, スマートフォン PC マウス, Android キーボード入力, モバイル画面 リモート制御, モバイル リモート制御, モバイル スクリーンショット PC" />
-  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/onemouse.css" />
   <link rel="canonical" href="https://onemouse.pages.dev/ja/guide" />
-  <link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/guide" />
-  <link rel="alternate" hreflang="en" href="https://onemouse.pages.dev/en/guide" />
-  <link rel="alternate" hreflang="ja" href="https://onemouse.pages.dev/ja/guide" />
-  <link rel="alternate" hreflang="zh" href="https://onemouse.pages.dev/zh/guide" />
-  <link rel="alternate" hreflang="x-default" href="https://onemouse.pages.dev/guide" />
-  <meta property="og:site_name" content="OneMouse" />
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="OneMouse 使い方ガイド" />
-  <meta property="og:description" content="PC のマウスとキーボードで Android や他の PC を制御し、権限、QR 接続、配置、転送、モバイル画面のリモート制御を最新の流れで案内します。" />
-  <meta property="og:url" content="https://onemouse.pages.dev/ja/guide" />
-  <meta property="og:image" content="https://onemouse.pages.dev/assets/hero-bg-generated-2.png" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="OneMouse 使い方ガイド" />
-  <meta name="twitter:description" content="PC のマウスとキーボードで Android や他の PC を制御し、権限、QR 接続、配置、転送、モバイル画面のリモート制御を最新の流れで案内します。" />
-  <meta name="twitter:image" content="https://onemouse.pages.dev/assets/hero-bg-generated-2.png" />
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "name": "OneMouse 使い方ガイド",
-      "url": "https://onemouse.pages.dev/ja/guide",
-      "inLanguage": "ja-JP",
-      "keywords": "OneMouse 使い方, OneMouse ガイド, share mouse, Share Mouse, シェアマウス, マウス共有, PC マウス共有, Android PC 制御, モバイル画面 リモート制御, モバイル リモート制御, モバイル スクリーンショット PC",
-      "description": "PC のマウスとキーボードで Android や他の PC を制御し、権限、QR 接続、配置、転送、モバイル画面のリモート制御を最新の流れで案内します。",
-      "isPartOf": {
-        "@type": "WebSite",
-        "name": "OneMouse",
-        "url": "https://onemouse.pages.dev/"
-      }
-    }
-  </script>
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "OneMouse の初回接続の順序はどうなりますか？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Windows で OneMouse PC アプリを実行し、Android でアクセシビリティ権限をオンにしてから、同じ Wi-Fi または LAN で PC を検索します。その後、PC 画面の QR コードまたは 6 桁コードでペアリングし、スマートフォンの位置を PC の端に配置してから、マウスをその方向へ動かして Android を制御します。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "OneMouse で必須の権限は何ですか？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "PC のマウスとキーボードで Android を制御するには OneMouse のアクセシビリティサービスが必要です。周辺の Wi-Fi デバイス、通知、システム設定の変更、バッテリー最適化の除外は、機能を使うときに要求されるか、安定性のために推奨される項目です。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "OneMouse でファイルはどのように転送しますか？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "PC では Quick Drop ゾーンにファイルを置いて、選択した Android またはサブ PC へ転送できます。PC-to-PC では、ファイルをつかんだまま配置した画面の端へ持っていき、対象 PC で離す方法も使えます。Android では転送タブや共有メニューを使って PC へファイルやテキストを送れます。サブ PC もペアリングされたメイン PC へファイルを送れます。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "OneMouse で画面の明るさのショートカットは何ですか？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Alt + Shift + 上方向キー、または Alt + Shift + 下方向キーで Android 画面の明るさを調整します。音量は Alt + 上方向キー、または Alt + 下方向キーで調整します。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "OneMouse で PC へ強制的に戻すショートカットは何ですか？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "カーソルが Android 側に残っている感覚があれば、PC で Ctrl + Alt + Backspace を押して入力制御を PC へ強制的に戻します。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "OneMouse を Wi-Fi なしで Bluetooth で接続できますか？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "はい。AndroidのOneMouseアプリの設定タブでBluetoothモードをオンにし、WindowsのBluetooth設定で一度ペアリングすると、PCアプリが自動的に接続します。マウスとキーボード入力、クリップボード、ファイル転送をそのまま使えます。ルーターやインターネット接続は不要です。BluetoothはWi-Fi接続とは独立して動作するため、一方のデバイスをWi-Fiで、もう一方をBluetoothで同時に使うこともできます。"
-          }
-        }
-      ]
-    }
-  </script>
-  <!-- Google tag (gtag.js) -->
+  <link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/guide.html" />
+  <link rel="alternate" hreflang="en" href="https://onemouse.pages.dev/en/guide.html" />
+  <link rel="alternate" hreflang="ja" href="https://onemouse.pages.dev/ja/guide.html" />
+  <link rel="alternate" hreflang="zh" href="https://onemouse.pages.dev/zh/guide.html" />
+  <link rel="alternate" hreflang="x-default" href="https://onemouse.pages.dev/guide.html" />
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-MJ73H86TWX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-MJ73H86TWX');
-  </script></head>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-MJ73H86TWX');</script>
+</head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="./index.html" class="brand" aria-label="OneMouse ホーム">
-        <span class="brand-mark">OM</span>
-        <span class="brand-copy">
-          <strong>OneMouse</strong>
-          <span>Windows と Android をローカル接続</span>
-        </span>
-      </a>
-      <nav class="top-nav" aria-label="メインメニュー">
+  <header class="site">
+    <div class="wrap hd">
+      <a class="brand" href="./index.html" aria-label="OneMouse ホーム"><span class="om">OM</span>OneMouse</a>
+      <nav class="nav" aria-label="メインメニュー">
         <a href="./index.html">概要</a>
-        <a href="./guide.html" class="is-active">ガイド</a>
+        <a href="./index.html#use">機能</a>
+        <a href="./guide.html" class="on">使い方</a>
         <a href="./help.html">ヘルプ</a>
-        <a href="./technical.html">技術/セキュリティ</a>
-        <a href="./pricing.html">Free / Pro</a>
-        <a href="./index.html#download" class="nav-cta">ダウンロード</a>
       </nav>
-      <div class="lang-switch" aria-label="言語">
-        <a href="../guide.html">KOR</a>
-        <a href="../en/guide.html">ENG</a>
-        <span class="is-active">JPN</span>
-        <a href="../zh/guide.html">CHN</a>
+      <div class="hd-right">
+        <div class="lang" aria-label="言語"><a href="../guide.html">KOR</a><a href="../en/guide.html">ENG</a><span class="on">JPN</span><a href="../zh/guide.html">CHN</a></div>
+        <a class="hd-cta" href="./index.html#get">無料ダウンロード</a>
       </div>
     </div>
   </header>
 
   <main>
-    <section class="page-hero">
-      <div class="container narrow">
-        <p class="section-kicker">Updated Guide</p>
-        <h1>初回接続からよく使う機能まで、順番に見ていきます。</h1>
-        <p class="page-intro">
-          OneMouse は PC のマウスとキーボードで Android や他の Windows PC を制御できるようにします。
-          このガイドは、インストール後すぐに必要な接続順序、アプリ画面で見る場所、ファイル転送、モバイル画面のリモート制御、ショートカット、他の PC への接続の流れだけをまとめています。
-        </p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="#quick-start">5分で接続</a>
-          <a class="button button-secondary" href="#mobile-mirror-control">リモート制御</a>
-          <a class="button button-secondary" href="#permissions">必要な権限</a>
-          <a class="button button-secondary" href="#bluetooth-connect">Bluetooth接続</a>
-          <a class="button button-secondary" href="#pc-to-pc">他の PC 接続</a>
-          <a class="button button-secondary" href="#keyboard-shortcuts">ショートカット</a>
-          <a class="button button-secondary" href="./technical.html">技術/セキュリティ</a>
-        </div>
-      </div>
+    <section class="phero wrap">
+      <p class="ey">使い方ガイド</p>
+      <h1 class="page">初回接続からよく使う機能まで、順番に。</h1>
+      <p class="lead">一般の方は、この順番どおりに進めるだけで大丈夫です。難しいネットワークの説明は<a href="./technical.html" style="color:var(--coral-deep);font-weight:700">技術・セキュリティ</a>、うまくいかないときは<a href="./help.html" style="color:var(--coral-deep);font-weight:700">ヘルプ</a>で別途ご確認ください。</p>
+      <nav class="toc" aria-label="このページの目次">
+        <a href="#start">5分で接続</a>
+        <a href="#position">スマホの配置</a>
+        <a href="#remote">モバイルのリモート操作</a>
+        <a href="#files">ファイル・クリップボード</a>
+        <a href="#quick">番号ショートカット</a>
+        <a href="#bluetooth">Bluetooth接続</a>
+        <a href="#pcpc">別のPCへの接続</a>
+        <a href="#shortcuts">ショートカット一覧</a>
+      </nav>
     </section>
 
-    <section class="section" id="quick-start">
-      <div class="container">
-        <div class="section-heading">
-          <p class="section-kicker">Quick Start</p>
-          <h2>初回接続はこの順序どおりに進めるだけです。</h2>
-          <p>複雑なネットワーク設定を自分でいじる必要はありません。PC アプリをオンにして Android から PC を見つけ、QR または 6 桁コードで確認します。</p>
-        </div>
+    <!-- QUICK START -->
+    <section id="start">
+      <div class="wrap narrow">
+        <div class="sec-head"><p class="ey">5分で接続</p><h2 class="sec">初回接続は、この順番どおりに進めるだけです。</h2>
+          <p class="sec-lead">Wi-Fi（同じWi-Fiルーター）を前提としています。オンにするのはアクセシビリティサービス一つだけです。</p></div>
         <div class="timeline">
-          <article class="timeline-step">
-            <span>1</span>
-            <div>
-              <strong>PC アプリを実行します</strong>
-              <p>Windows で OneMouse をオンにすると、PC 画面に 6 桁コードと QR コードが表示されます。最新の Setup ファイルはダウンロードページから自動的に取得されます。</p>
-            </div>
-          </article>
-          <article class="timeline-step">
-            <span>2</span>
-            <div>
-              <strong>Android でアクセシビリティ権限をオンにします</strong>
-              <p>PC のマウスとキーボードで Android を制御するには OneMouse のアクセシビリティサービスが必要です。初回設定で実質的に必須と考えるべき項目はこれ一つだけです。</p>
-            </div>
-          </article>
-          <article class="timeline-step">
-            <span>3</span>
-            <div>
-              <strong>PC を検索します</strong>
-              <p>PC と Android が同じ Wi-Fi または同じルーターの下にあれば、アプリから PC を見つけられます。Android 13 以上では、この瞬間にだけ周辺の Wi-Fi デバイス権限が要求されることがあります。</p>
-            </div>
-          </article>
-          <article class="timeline-step">
-            <span>4</span>
-            <div>
-              <strong>QR または 6 桁コードでペアリングします</strong>
-              <p>PC 画面の QR をスキャンするか、6 桁コードを入力します。このステップが終わって初めて、入力、ファイル、クリップボードのチャンネルを使えます。</p>
-            </div>
-          </article>
-          <article class="timeline-step">
-            <span>5</span>
-            <div>
-              <strong>スマートフォンの位置を PC の端に配置します</strong>
-              <p>モニターの左、右、上、下のうち、実際にカーソルを送る位置に Android を配置します。この配置がカーソルの進入方向になります。</p>
-            </div>
-          </article>
-          <article class="timeline-step">
-            <span>6</span>
-            <div>
-              <strong>入力、転送、モバイル画面のリモート制御を使います</strong>
-              <p>マウスを配置した方向へ動かすと Android またはサブ PC へ切り替わります。PC のファイルは Quick Drop ゾーンへ送るか、PC-to-PC ではファイルをつかんだまま画面の端へ持っていき対象 PC で離せます。デバイス管理のリモート制御アイコンでモバイル画面のリモート制御ウィンドウを開き、Print Screen または Ctrl + Alt + S でモバイルのスクリーンショットを PC の標準ビューアーに表示できます。</p>
-            </div>
-          </article>
+          <div class="tstep"><div class="rail"><span class="num">1</span><span class="line"></span></div><div class="body"><h4>PCアプリを起動します</h4><p>WindowsでOneMouseを起動すると、画面に6桁のコードとQRコードが表示されます。</p></div></div>
+          <div class="tstep"><div class="rail"><span class="num">2</span><span class="line"></span></div><div class="body"><h4>Androidのアクセシビリティサービスをオンにします</h4><p>PCのマウス・キーボード入力を受け取るには、AndroidでOneMouseのアクセシビリティサービスをオンにします。実質、準備するのはこれだけです。</p></div></div>
+          <div class="tstep"><div class="rail"><span class="num">3</span><span class="line"></span></div><div class="body"><h4>PCを検索します</h4><p>同じWi-Fi（同じWi-Fiルーター）でPCを探します。Android 13以上では、このとき「付近のWi-Fiデバイス」の権限を一度確認されることがあります。</p></div></div>
+          <div class="tstep"><div class="rail"><span class="num">4</span><span class="line"></span></div><div class="body"><h4>QRまたは6桁のコードでペアリング</h4><p>QRをスキャンするか6桁のコードを入力して、自分のデバイスかどうかを確認します。ペアリングを完了すると、入力・ファイル・クリップボードのチャンネルが開きます。</p></div></div>
+          <div class="tstep"><div class="rail"><span class="num">5</span><span class="line"></span></div><div class="body"><h4>スマホの位置を合わせます</h4><p>PC画面のどの端（左・右・上・下）へスマホをつなげるか、実際の方向に合わせて配置します。この端がカーソルの進入方向になります。</p></div></div>
+          <div class="tstep"><div class="rail"><span class="num">6</span></div><div class="body"><h4>そのまま使えます</h4><p>配置した方向へマウスを押し出すと、スマホへ移ります。ファイルはクイックドロップに置き、別のPCへは画面の境界へドラッグして送ります。画面キャプチャはPrint ScreenまたはCtrl+Alt+S。</p></div></div>
         </div>
-        <details class="guide-reference">
-          <summary>
-            <span>ペアリング手順を画像で見る</span>
-            <small>PC コードの確認、数字の入力、QR スキャンの流れを 1 枚で確認します。</small>
-          </summary>
-          <figure class="comic-showcase">
-            <a href="../assets/onemouse-pairing-real-ui-comic-v5.png" target="_blank" rel="noopener">
-              <img
-                src="../assets/onemouse-pairing-real-ui-comic-v5.png"
-                alt="OneMouse のペアリング方法: 準備、PC コードの確認、数字の入力、QR スキャンの順序を案内"
-                loading="lazy"
-              />
-            </a>
-            <figcaption>画像を押すと原寸サイズで開きます。</figcaption>
-          </figure>
-        </details>
+        <details class="fold"><summary><span>実際のUIでのペアリングの流れを見る</span><small>準備 → PCコード確認 → 数字入力 → QRスキャン</small></summary>
+          <div class="fold-body"><a href="../assets/onemouse-pairing-real-ui-comic-v5.png" target="_blank" rel="noopener"><img src="../assets/onemouse-pairing-real-ui-comic-v5.png" alt="OneMouseのペアリング方法：準備、PCコード確認、数字入力、QRスキャンの順" loading="lazy" style="border-radius:12px" /></a></div></details>
       </div>
     </section>
 
-    <section class="section section-alt">
-      <div class="container">
-        <div class="section-heading">
-          <p class="section-kicker">Position</p>
-          <h2>接続後は、スマートフォンの位置を実際の方向に合わせるだけです。</h2>
-          <p>マウスをどのモニターの端へ送るかを決めるステップです。Android を PC の左、右、上、下のうち、実際に使う方向へ配置してください。</p>
-        </div>
-        <details class="guide-reference">
-          <summary>
-            <span>スマートフォンの配置画面を見る</span>
-            <small>カーソルが進む方向を決める PC 画面です。</small>
-          </summary>
-          <div class="shot-row">
-            <figure class="shot-card shot-desktop">
-              <img src="../assets/onboarding_pc_position.png" alt="PC の配置画面" />
-              <figcaption>Android を PC 周辺の実際の方向に置くと、その方向へカーソルを送れます。</figcaption>
-            </figure>
+    <!-- POSITION -->
+    <section class="section-alt" id="position">
+      <div class="wrap narrow">
+        <div class="sec-head"><p class="ey">スマホの配置</p><h2 class="sec">接続後は、スマホの位置を実際の方向に合わせるだけです。</h2></div>
+        <p class="sec-lead" style="max-width:60ch">マウスが移る端を決め、実際にスマホを置いてある側（左・右・上・下）に合わせて配置します。ホーム画面の配置デモのように、アプリでもスマホ・タブレット・別のPCをドラッグして配置します。</p>
+        <details class="fold"><summary><span>配置画面を見る</span></summary>
+          <div class="fold-body"><a href="../assets/onboarding_pc_position.png" target="_blank" rel="noopener"><img src="../assets/onboarding_pc_position.png" alt="OneMouseのスマホ位置の配置画面" loading="lazy" style="border-radius:12px" /></a></div></details>
+      </div>
+    </section>
+
+    <!-- REMOTE CONTROL -->
+    <section id="remote">
+      <div class="wrap">
+        <div class="sec-head"><p class="ey">リモート操作</p><h2 class="sec">モバイル画面のリモート操作は、デバイス管理から始めます。</h2></div>
+        <div class="split lead-left">
+          <div>
+            <p class="sec-lead" style="margin-bottom:16px">デバイス管理でペアリング済みのAndroidの行にあるリモート操作アイコンを押すと、スマホ画面を表示する別ウィンドウが開きます。初めて開くときは、Androidの画面キャプチャの承認が必要です。</p>
+            <div class="panel"><h3>ウィンドウでの操作</h3>
+              <ul>
+                <li>左クリック・ドラッグ・ホイールがそのまま伝わります。</li>
+                <li><b>右クリック = 戻る</b>、<b>ホイールクリック = ホーム</b>。</li>
+                <li>PCキーボード（日本語入力を含む）は、スマホの現在の入力欄へ送られます。</li>
+                <li>画面が空白に見えるときは、キャプチャの承認ポップアップを確認し、リモート操作をオフにしてから再度オンにしてください。</li>
+              </ul></div>
           </div>
-        </details>
-      </div>
-    </section>
-
-    <section class="section" id="bluetooth-connect">
-      <div class="container split-grid">
-        <div>
-          <p class="section-kicker">Bluetooth</p>
-          <h2>ルーターなしでも Bluetooth で接続できます。</h2>
-          <p class="lead">
-            同じ Wi-Fi がない環境やインターネットが切れた環境でも、Bluetooth で PC と Android を、そして別の PC とも直接つないで
-            マウスとキーボード入力、クリップボード、ファイル転送を使えます。ルーターやインターネット接続は必要ありません。
-          </p>
-          <div class="hero-actions">
-            <a class="button button-secondary" href="#quick-start">Wi-Fi 接続の手順</a>
-            <a class="button button-secondary" href="#file-transfer">ファイル転送を見る</a>
-          </div>
-        </div>
-        <div class="panel">
-          <p class="section-kicker">When To Use</p>
-          <h2>こんなときに便利です</h2>
-          <ul class="bullet-list">
-            <li>会議室、外出先、車内など、同じ Wi-Fi に置けない環境</li>
-            <li>ゲスト Wi-Fi やファイアウォールのために PC が検出されないとき</li>
-            <li>キーボード入力とクリップボードを中心に手軽に使いたいとき</li>
-          </ul>
-        </div>
-      </div>
-      <div class="container">
-        <div class="section-heading">
-          <p class="section-kicker">Order</p>
-          <h2>Bluetooth 接続はこの順序で行います。</h2>
-          <p>まず Android で Bluetooth モードをオンにし、Windows で一度ペアリングすると、PC アプリが自動的に接続します。PC で別途接続ボタンを押す必要はありません。</p>
-        </div>
-        <div class="timeline">
-          <article class="timeline-step">
-            <span>1</span>
-            <div>
-              <strong>Android の設定タブで Bluetooth モードをオンにします</strong>
-              <p>OneMouse アプリの設定タブにある Bluetooth モードをオンにすると、Android が PC からの接続を待ちます。</p>
-            </div>
-          </article>
-          <article class="timeline-step">
-            <span>2</span>
-            <div>
-              <strong>Windows の Bluetooth 設定でスマートフォンをペアリングします</strong>
-              <p>Windows の Bluetooth とデバイスの設定でスマートフォンを追加し、一度ペアリングします。ペアリングは最初の一度だけで構いません。</p>
-            </div>
-          </article>
-          <article class="timeline-step">
-            <span>3</span>
-            <div>
-              <strong>PC アプリが自動的に接続します</strong>
-              <p>ペアリングが終わると、PC アプリが Bluetooth デバイスを見つけて自動的に接続します。デバイス管理の一覧に Bluetooth デバイスとして表示されます。</p>
-            </div>
-          </article>
-          <article class="timeline-step">
-            <span>4</span>
-            <div>
-              <strong>入力、クリップボード、ファイル転送を使います</strong>
-              <p>Wi-Fi 接続と同じように、マウスとキーボード入力、双方向クリップボード、ファイル転送を使えます。</p>
-            </div>
-          </article>
-        </div>
-        <details class="guide-reference">
-          <summary>
-            <span>Bluetoothの画面とデモを見る</span>
-            <small>デバイス一覧の表示、PCキーボード入力、ファイルドラッグを動画で確認します。</small>
-          </summary>
-        <figure class="shot-card shot-desktop">
-          <img src="../assets/guide_bt_sub_devices.png" alt="サブPCのデバイス管理画面 — Bluetoothで接続したメインPCが「メインPC・接続済み」の行として表示される様子" loading="lazy" />
-          <figcaption>接続すると、BluetoothでつながったPCがデバイス管理に表示されます。（サブPC画面）</figcaption>
-        </figure>
-        <figure class="shot-card shot-desktop">
-          <video src="../assets/demo/bt-typing.mp4" poster="../assets/demo/bt-typing-poster.jpg" autoplay loop muted playsinline preload="metadata" style="width:100%;height:auto;display:block;border-radius:14px;">
-            <img src="../assets/demo/bt-typing.gif" alt="PCキーボードで入力すると、Bluetoothで接続したスマホの入力欄にそのまま文字が入る様子" loading="lazy" />
-          </video>
-          <figcaption>PCキーボードで打つと、Bluetoothで接続したスマホにそのまま入力されます（Wi‑Fiなし）。</figcaption>
-        </figure>
-        <figure class="shot-card shot-desktop">
-          <video src="../assets/demo/bt-drag.mp4" poster="../assets/demo/bt-drag-poster.jpg" autoplay loop muted playsinline preload="metadata" style="width:100%;height:auto;display:block;border-radius:14px;">
-            <img src="../assets/demo/bt-drag.gif" alt="ファイルを画面の端へドラッグして、Bluetoothで接続した別の端末へ送る様子" loading="lazy" />
-          </video>
-          <figcaption>ファイルを画面の端へドラッグすると、Bluetoothで接続した端末へ送られます。（Wi‑Fiと同じ操作）</figcaption>
-        </figure>
-        </details>
-        <div class="panel">
-          <p class="section-kicker">Notes</p>
-          <h2>知っておくと便利な点</h2>
-          <ul class="bullet-list">
-            <li>Bluetooth は設定タブのトグルでオン・オフし、Wi-Fi 接続とは独立して動作します。オンにしておくと、スマートフォンが準備できた時点で自動的に接続し、スマートフォンが見つからないときは間隔を徐々に広げながら控えめに再試行します。</li>
-            <li>別の PC とも Bluetooth で接続できます。一方をメイン PC、もう一方をサブ PC にすると、マウスとキーボードを渡し、クリップボードを共有し、ファイルを画面の端へドラッグして双方向（送る・取り戻す）にやり取りできます。</li>
-            <li>Bluetooth デバイスは複数台を同時に接続できます。デバイス管理の Bluetooth 一覧で、各デバイスをトグルでオン・オフします。</li>
-            <li>Bluetooth は Wi-Fi より低速です。マウスとキーボード入力、クリップボード、小さなファイルに適しており、大きなファイルには Wi-Fi をおすすめします。</li>
-            <li>モバイル画面のリモート制御は帯域幅が大きい機能のため、Bluetooth では推奨しません。</li>
-            <li>接続が表示されない場合は、Windows でスマートフォンがペアリングされているか、Android の Bluetooth モードがオンになっているかを確認します。</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="mobile-mirror-control">
-      <div class="container split-grid">
-        <div>
-          <p class="section-kicker">Remote Control</p>
-          <h2>モバイル画面のリモート制御はデバイス管理から始めます。</h2>
-          <p class="lead">
-            ペアリングされた Android の行にあるリモート制御アイコンを押すと別のウィンドウが開き、Android の画面が PC に表示されます。
-            初めて開始するときは Android で画面キャプチャ権限を承認する必要があり、承認後は同じウィンドウですぐに操作できます。
-          </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#permissions">必要な権限を確認</a>
-            <a class="button button-secondary" href="#keyboard-shortcuts">関連ショートカットを見る</a>
-          </div>
-        </div>
-        <div class="panel">
-          <p class="section-kicker">Controls</p>
-          <h2>リモート制御ウィンドウからそのまま操作します。</h2>
-          <ul class="bullet-list">
-            <li>左クリック、ドラッグ、ホイールスクロールは Android 画面にそのまま伝わります。</li>
-            <li>右クリックは戻る、中クリックはホームとして動作します。</li>
-            <li>日本語を含む PC キーボードの入力は、Android の現在の入力欄に伝わります。</li>
-            <li>画面が表示されない場合は、Android の画面キャプチャ承認ポップアップが前面に出ているか確認し、必要なら停止してから再度開始します。</li>
-          </ul>
-        </div>
-      </div>
-      <div class="container">
-        <details class="guide-reference">
-          <summary>
-            <span>モバイルリモート制御ウィンドウの例を見る</span>
-            <small>Android 画面を PC の標準ウィンドウ内ですぐに見て操作する例です。</small>
-          </summary>
-          <div class="shot-row remote-control-row">
-            <figure class="shot-card remote-shot">
-              <img src="../assets/guide_remote_control_devices.jpg" alt="PC アプリのデバイス管理画面で、Android の行にリモート制御アイコンが表示された画面" loading="lazy" />
-              <figcaption>デバイス管理で Android の行のリモート制御アイコンを押すと、モバイル画面のリモート制御ウィンドウを開けます。</figcaption>
-            </figure>
-            <figure class="shot-card remote-shot">
-              <img src="../assets/guide_mobile_remote_control_window.jpg" alt="PC のダッシュボードの横にモバイル画面のリモート制御ウィンドウが開き、Android アプリの画面が表示された画面" loading="lazy" />
-              <figcaption>開いたリモート制御ウィンドウで Android 画面を見ながら、PC のマウスとキーボード入力を送れます。</figcaption>
-            </figure>
-          </div>
-        </details>
-      </div>
-    </section>
-
-    <section class="section section-alt" id="permissions">
-      <div class="container">
-        <div class="section-heading">
-          <p class="section-kicker">Permissions</p>
-          <h2>ユーザーがオンにする項目は機能ごとに分かれています。</h2>
-          <p>最初からすべてをオンにする仕組みではありません。アクセシビリティは入力制御の必須条件であり、それ以外は必要な瞬間にだけ要求するか推奨します。</p>
-        </div>
-        <div class="permission-grid">
-          <article class="permission-card permission-required">
-            <span class="status-pill">必須</span>
-            <h3>アクセシビリティサービス</h3>
-            <p>PC のマウスとキーボードで Android を制御し、スクリーンショット要求とリモート入力を処理するために必要です。</p>
-          </article>
-          <article class="permission-card">
-            <span class="status-pill">リモート制御の開始時</span>
-            <h3>画面キャプチャの承認</h3>
-            <p>モバイル画面のリモート制御を開始するときに、Android のシステムポップアップで承認します。セキュリティ画面は表示されないことがあります。</p>
-          </article>
-          <article class="permission-card">
-            <span class="status-pill">接続時</span>
-            <h3>周辺の Wi-Fi デバイス</h3>
-            <p>Android 13 以上で、同じネットワークの PC を見つけるときに要求されることがあります。アプリ起動直後には聞かれません。</p>
-          </article>
-          <article class="permission-card">
-            <span class="status-pill">サービスの開始時</span>
-            <h3>通知</h3>
-            <p>バックグラウンドの接続状態を表示するときに使います。接続サービスをオンにするとき、必要な場合にのみ要求します。</p>
-          </article>
-          <article class="permission-card">
-            <span class="status-pill">明るさの使用時</span>
-            <h3>システム設定の変更</h3>
-            <p>Alt + Shift + ↑ / ↓ で Android の明るさを調整するには、初回使用時に Android の設定で許可する必要があります。</p>
-          </article>
-          <article class="permission-card">
-            <span class="status-pill">推奨</span>
-            <h3>バッテリー最適化の除外</h3>
-            <p>画面が消えた後に接続がよく切れるときにだけ確認します。安定性を高める推奨設定です。</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="file-transfer">
-      <div class="container split-grid">
-        <div>
-          <p class="section-kicker">File Transfer</p>
-          <h2>PC のファイルは転送画面、Quick Drop ゾーン、PC-to-PC ドラッグで送ります。</h2>
-          <p class="lead">
-            転送画面でファイルを選ぶか、PC 画面上の小さな Quick Drop ゾーンにファイルを置くと、選択した Android またはサブ PC へ転送します。
-            PC-to-PC では、ファイルをつかんだまま対象 PC を配置した画面の端へ持っていき、対象 PC で離せます。
-            Android から PC へ送るときは、Android の転送タブまたは共有メニューを使います。
-          </p>
-        </div>
-        <div class="panel">
-          <p class="section-kicker">Quick Drop</p>
-          <h2>Quick Drop ゾーン</h2>
-          <p class="lead">ゾーンの位置と有効状態は PC アプリに保存されます。邪魔なときはグローバルショートカットで隠したり再表示したりします。</p>
-          <div class="shortcut">Ctrl + Alt + D</div>
-          <ul class="bullet-list">
-            <li>ファイル転送は、選択した対象に応じて PC -> Android または PC -> PC の経路を使います。</li>
-            <li>PC-to-PC のファイルドラッグは、対象のサブ PC が接続され、配置盤に置かれているときに使います。</li>
-            <li>ファイルをつかんだまま配置した画面の端へ移動するとドラッグが対象 PC へ続き、希望の位置で離すと転送されます。</li>
-            <li>転送が始まらない場合は、Android/PC の接続状態と選択中のデバイスをまず確認します。</li>
-          </ul>
-          <details class="guide-reference">
-            <summary>
-              <span>Quick Drop ゾーンの画面を見る</span>
-              <small>ファイルを置く位置と転送画面を確認します。</small>
-            </summary>
-            <figure class="shot-card shot-desktop inline-shot">
-              <img src="../assets/guide_quick_drop_send.png" alt="PC 画面の右下の Quick Drop ゾーンでファイルを転送する画面" />
-              <figcaption>ファイルをゾーンの上に置くと、選択した対象へすぐに転送します。</figcaption>
-            </figure>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="quick-connect">
-      <div class="container split-grid">
-        <div>
-          <p class="section-kicker">Quick Connect</p>
-          <h2>デバイス一覧の番号ショートカットですぐに接続します。</h2>
-          <p class="lead">
-            PC アプリのデバイス管理一覧では、最初の 9 個のデバイスに Ctrl + Alt + 1~9 のショートカットが表示されます。
-            アプリのウィンドウを探し直さなくても、よく使う Android やサブ PC をすぐに接続できます。
-          </p>
-          <ul class="bullet-list">
-            <li>Ctrl + Alt + 1 は一覧の 1 番目のデバイス、Ctrl + Alt + 2 は 2 番目のデバイスを接続します。</li>
-            <li>すでに接続済みのデバイスのショートカットをもう一度押すと、その接続を切断します。</li>
-            <li>接続または切断されると、PC 画面の右下に小さな通知が一瞬表示されます。</li>
-          </ul>
-        </div>
-        <div class="panel">
-          <p class="section-kicker">Auto Reconnect</p>
-          <h2>再び見えるデバイスは自動再接続できます。</h2>
-          <p class="lead">
-            自動再接続をオンにしておくと、最後のデバイスが再び準備できたとき、または準備できたデバイスが 1 台だけのときに、PC アプリが接続を再試行します。
-            マウスがデバイスの間を行き来するときは、別途の通知は表示しません。
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-alt" id="pc-to-pc">
-      <div class="container split-grid">
-        <div>
-          <p class="section-kicker">Advanced: PC to PC</p>
-          <h2>他の Windows PC は、設定、デバイス管理、配置の順でつなぎます。</h2>
-          <p class="lead">
-            制御を開始する PC は、設定画面の PC 役割をメイン PC にします。制御される PC はサブ PC として実行した後、
-            メイン PC のデバイス管理画面で対象 PC を検索し、相手 PC に表示された 6 桁コードを入力してペアリングします。
-          </p>
-          <ul class="bullet-list">
-            <li>設定画面で PC 役割ボタンがメイン PC なら、Android とサブ PC の接続を開始できます。</li>
-            <li>デバイス管理で対象 PC の行が見えたら、相手 PC の 6 桁コードを入力してペアリングを押します。</li>
-            <li>ペアリング後、対象 PC の行に接続済みが見えたら、スマートフォン位置 / 入力進入方向の画面で配置を調整します。</li>
-            <li>対象 PC の画面を見ながら操作する必要があれば、接続された対象 PC の行のリモート制御アイコンを押します。</li>
-          </ul>
-        </div>
-        <div class="panel">
-          <p class="section-kicker">Arrangement</p>
-          <h2>配置画面で実際の進入方向を決めます。</h2>
-          <ul class="bullet-list">
-            <li>対象 PC を自分の PC の左に付けると、左端へ送るときに対象 PC へ制御が移動します。</li>
-            <li>Android も同じ配置盤に一緒に置けます。対象 PC と Android が同時に接続されている場合は、それぞれ別々に配置します。</li>
-            <li>サイドバーの接続状態には、現在選択中の対象と進入方向が表示されます。方向が違う場合は配置盤で再度ドラッグします。</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container guide-grid">
-        <article class="panel">
-          <p class="section-kicker">PC Remote Control</p>
-          <h2>サブ PC の画面も別ウィンドウでリモート制御できます。</h2>
-          <ul class="bullet-list">
-            <li>メイン PC のデバイス管理で、接続済みのサブ PC の行のリモート制御アイコンを押すと、PC 画面のリモート制御ウィンドウが開きます。</li>
-            <li>ウィンドウが開くと、対象 PC の画面を見ながら、マウスのクリック、ドラッグ、ホイールスクロールをそのまま送れます。</li>
-            <li>PC のキーボード入力も対象 PC へ伝わります。たとえば Ctrl + C、Ctrl + V のようなショートカットは対象 PC で実行されます。</li>
-          </ul>
-        </article>
-        <article class="panel">
-          <p class="section-kicker">Quality</p>
-          <h2>品質は状況に合わせて選んで再接続します。</h2>
-          <ul class="bullet-list">
-            <li>高速は反応性を優先し、標準は通常の使用に合わせた設定です。</li>
-            <li>高画質は画面をより鮮明に見たいときに使います。ネットワーク状態が良いほど安定します。</li>
-            <li>品質を変えた後は再接続しないと新しい設定が適用されません。ウィンドウを閉じるとリモート制御が停止します。</li>
-          </ul>
-        </article>
-      </div>
-      <div class="container">
-        <details class="guide-reference">
-          <summary>
-            <span>PC リモート制御の画面例を見る</span>
-            <small>デバイス管理で対象 PC を選び、別ウィンドウでサブ PC の画面を操作する流れです。</small>
-          </summary>
-          <div class="shot-row remote-control-row">
-            <figure class="shot-card remote-shot">
-              <img src="../assets/guide_remote_control_devices.jpg" alt="PC アプリのデバイス管理画面で Android と対象 PC が見え、各行にリモート制御アイコンが表示された画面" loading="lazy" />
-              <figcaption>接続された対象 PC の行のリモート制御アイコンを押すと、サブ PC 画面のリモート制御ウィンドウを開けます。</figcaption>
-            </figure>
-            <figure class="shot-card remote-shot">
-              <img src="../assets/guide_pc_remote_control_window.jpg" alt="PC 画面のリモート制御ウィンドウで、対象 PC の Windows 画面と Edge ブラウザが表示された画面" loading="lazy" />
-              <figcaption>リモート制御ウィンドウでは、対象 PC の画面を見ながらマウス、ホイール、キーボード入力をそのまま伝えます。</figcaption>
-            </figure>
-          </div>
-        </details>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="section-heading">
-          <p class="section-kicker">PC-to-PC Screen Flow</p>
-          <h2>画面ではこの順序で見ていけば大丈夫です。</h2>
-          <p>メイン PC は接続を開始する PC、対象 PC はマウスとキーボードを受け取る PC です。サブ PC のペアリングコードは、画面下部の 6 桁の数字をそのまま入力します。</p>
-        </div>
-        <div class="timeline">
-          <article class="timeline-step">
-            <span>1</span>
-            <div>
-              <strong>設定で PC 役割を確認します</strong>
-              <p>制御を開始する側は、設定画面の PC 役割がメイン PC である必要があります。メイン PC は Android と対象 PC の接続を開始できます。</p>
-            </div>
-          </article>
-          <article class="timeline-step">
-            <span>2</span>
-            <div>
-              <strong>サブ PC のペアリングコードを確認します</strong>
-              <p>制御される PC でも OneMouse を実行し、サイドバー下部の 6 桁のペアリングコードを確認します。例として 101884 のように見える数字コードです。</p>
-            </div>
-          </article>
-          <article class="timeline-step">
-            <span>3</span>
-            <div>
-              <strong>デバイス管理で対象 PC をペアリングします</strong>
-              <p>メイン PC のデバイス管理画面で対象 PC の行を見つけ、相手 PC の 6 桁コード入力欄にサブ PC のコードを入れてペアリングを押します。</p>
-            </div>
-          </article>
-          <article class="timeline-step">
-            <span>4</span>
-            <div>
-              <strong>接続済みと選択済みの状態を確認します</strong>
-              <p>対象 PC の行が接続済みに変わり、選択済みバッジが付けば、現在のマウスの進入対象です。Android と対象 PC が一緒に見える場合は、選択中のデバイスを基準に動作します。</p>
-            </div>
-          </article>
-          <article class="timeline-step">
-            <span>5</span>
-            <div>
-              <strong>スマートフォン位置 / 入力進入方向で配置します</strong>
-              <p>対象 PC の四角形を、自分の PC の左、右、上、下のうち、実際に置かれている方向へドラッグします。Android も同じ配置盤に一緒に置けます。</p>
-            </div>
-          </article>
-        </div>
-        <details class="guide-reference">
-          <summary>
-            <span>PC-to-PC の画面例を見る</span>
-            <small>メイン PC、サブ PC、ペアリング、接続済み、配置の画面を順番に確認します。</small>
-          </summary>
-          <div class="shot-row pc-flow-row">
-            <figure class="shot-card shot-desktop">
-              <img src="../assets/guide_pc_role_main.png" alt="OneMouse の PC 設定画面で PC 役割がメイン PC と表示された画面" />
-              <figcaption>1. 接続を開始する PC は、設定でメイン PC 役割を使います。</figcaption>
-            </figure>
-            <figure class="shot-card shot-desktop">
-              <img src="../assets/guide_pc_role_sub.png" alt="OneMouse の PC 設定画面で PC 役割がサブ PC と表示された画面" />
-              <figcaption>2. 制御される PC はサブ PC にして、下部のペアリングコードを確認します。</figcaption>
-            </figure>
-            <figure class="shot-card shot-desktop">
-              <img src="../assets/guide_pc_target_detected.png" alt="デバイス管理画面で対象 PC がペアリング必要の状態として表示された画面" />
-              <figcaption>3. メイン PC のデバイス管理で対象 PC が見えたら、ペアリングを準備します。</figcaption>
-            </figure>
-            <figure class="shot-card shot-desktop">
-              <img src="../assets/guide_pc_pair_code.png" alt="対象 PC の行に相手 PC の 6 桁コードを入力した画面" />
-              <figcaption>4. 相手 PC の 6 桁コードを入力してペアリングを押します。</figcaption>
-            </figure>
-            <figure class="shot-card shot-desktop">
-              <img src="../assets/guide_pc_target_connected.png" alt="対象 PC と Android が接続済みの状態として表示されたデバイス管理画面" />
-              <figcaption>5. 対象 PC が接続済みと選択済みの状態か確認します。</figcaption>
-            </figure>
-            <figure class="shot-card shot-desktop">
-              <img src="../assets/guide_pc_arrangement.png" alt="スマートフォン位置と入力進入方向の画面で対象 PC と Android を配置した画面" />
-              <figcaption>6. 配置画面で対象 PC を自分の PC 周辺の実際の方向に合わせます。</figcaption>
-            </figure>
-          </div>
-        </details>
-      </div>
-    </section>
-
-    <section class="section section-alt" id="keyboard-shortcuts">
-      <div class="container">
-        <div class="section-heading">
-          <p class="section-kicker">Keyboard Shortcuts</p>
-          <h2>PC アプリのグローバルショートカットと Android 制御ショートカットです。</h2>
-          <p>クイック接続とドロップゾーンのショートカットは PC ですぐに動作します。Android 制御ショートカットは、マウスが Android へ切り替わった状態で動作します。</p>
-        </div>
-        <div class="compare-table-wrap shortcut-table-wrap">
-          <table class="compare-table shortcut-table">
-            <thead>
-              <tr>
-                <th>ショートカット</th>
-                <th>動作</th>
-                <th>メモ</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><span class="key-combo">Ctrl + Alt + 1~9</span></td>
-                <td>デバイス一覧の最初の 9 個のデバイスをすぐに接続します。</td>
-                <td>すでに接続済みのデバイス番号をもう一度押すと、その接続を切断します。</td>
-              </tr>
-              <tr>
-                <td><span class="key-combo">Ctrl + Alt + D</span></td>
-                <td>Quick Drop ゾーンを隠したり再表示したりします。</td>
-                <td>ファイルをゾーンに置くと、選択した Android またはサブ PC へ転送します。</td>
-              </tr>
-              <tr>
-                <td><span class="key-combo">Enter</span></td>
-                <td>検索欄では検索/完了を実行します。</td>
-                <td>通常の改行の代わりに、Android IME の検索/完了アクションを優先して送ります。</td>
-              </tr>
-              <tr>
-                <td><span class="key-combo">Shift + Enter</span></td>
-                <td>入力欄に改行を入れます。</td>
-                <td>チャットや長い文章の入力で行を分けるときに使います。</td>
-              </tr>
-              <tr>
-                <td><span class="key-combo">Ctrl + A</span></td>
-                <td>現在の入力欄のテキストをすべて選択します。</td>
-                <td>アプリが選択範囲を直接公開しない場合、OneMouse が選択状態を補助します。</td>
-              </tr>
-              <tr>
-                <td><span class="key-combo">Ctrl + C / X / V</span></td>
-                <td>コピー、切り取り、貼り付けを実行します。</td>
-                <td>コピーと切り取りは、可能なら PC のクリップボードへもすぐに同期します。</td>
-              </tr>
-              <tr>
-                <td><span class="key-combo">Shift + 方向キー</span></td>
-                <td>テキストの選択範囲を拡張します。</td>
-                <td>一部のアプリは Android のアクセシビリティ選択動作を制限することがあります。</td>
-              </tr>
-              <tr>
-                <td><span class="key-combo">Alt + ↑ / ↓</span></td>
-                <td>Android のメディア音量を調整します。</td>
-                <td>入力欄にフォーカスがあっても優先して実行し、押し続けると繰り返し調整されます。</td>
-              </tr>
-              <tr>
-                <td><span class="key-combo">Alt + Shift + ↑ / ↓</span></td>
-                <td>Android 画面の明るさを調整します。</td>
-                <td>初めて使うときは、Android のシステム設定変更の権限を許可する必要があります。</td>
-              </tr>
-              <tr>
-                <td><span class="key-combo">Print Screen</span></td>
-                <td>Android 画面をキャプチャして PC の標準画像ビューアーで開きます。</td>
-                <td>Android 11 以上でアクセシビリティのスクリーンショット機能を使います。セキュリティ画面はキャプチャされないことがあります。</td>
-              </tr>
-              <tr>
-                <td><span class="key-combo">Ctrl + Alt + S</span></td>
-                <td>Print Screen の代わりにモバイルのスクリーンショットを実行します。</td>
-                <td>ノートパソコンやリモートキーボードで Print Screen キーを使いにくいときに使います。</td>
-              </tr>
-              <tr>
-                <td><span class="key-combo">Alt + Tab</span></td>
-                <td>Android の最近のアプリ画面を開いてアプリを切り替えます。</td>
-                <td>Alt を押したまま Tab を繰り返すと次のアプリへ移動し、Alt を離すと選択します。</td>
-              </tr>
-              <tr>
-                <td><span class="key-combo">Ctrl + Alt + Backspace</span></td>
-                <td>入力制御を PC へ強制的に戻します。</td>
-                <td>カーソルが Android 側に残っているときに PC 入力へ戻し、PC にマウス復帰の通知を表示します。</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container split-grid">
-        <div>
-          <p class="section-kicker">Daily Use</p>
-          <h2>接続後によく使う流れ</h2>
-          <ul class="bullet-list">
-            <li>PC で、現在制御する Android またはサブ PC を選び、位置を調整します。</li>
-            <li>モバイルの検索欄、ログイン入力、メッセージ作成は PC のキーボードで処理します。</li>
-            <li>PC のファイルは転送画面で選ぶか、画面上の Quick Drop ゾーンに置いて、選択した Android またはサブ PC へ送ります。</li>
-            <li>サブ PC へ送るときは、ファイルをつかんだまま配置した画面の端へ持っていき、対象 PC で離すこともできます。</li>
-            <li>テキストを長押しして選択した後、OneMouse to PC を押すと PC のクリップボードへすぐに送ります。</li>
-            <li>モバイル画面を見続けながら操作する必要があれば、デバイス管理のリモート制御アイコンでモバイル画面のリモート制御を開始します。</li>
-            <li>1 枚だけ確認するなら、Print Screen または Ctrl + Alt + S でスクリーンショットを撮り、PC で確認します。</li>
-          </ul>
-        </div>
-        <div>
-          <p class="section-kicker">Recovery</p>
-          <h2>カーソルが戻らないとき</h2>
-          <p class="lead">
-            Android へ切り替わったカーソルが PC へ戻らない場合は、PC で Ctrl + Alt + Backspace を押します。
-            このショートカットはマウス入力を PC へ戻し、Android へ復帰信号を再送した後、PC に復帰通知を表示します。
-          </p>
-          <div class="shortcut">Ctrl + Alt + Backspace</div>
-          <div class="hero-actions">
-            <a class="button button-primary" href="./help.html">ヘルプを開く</a>
-            <a class="button button-secondary" href="./index.html">概要に戻る</a>
+          <div>
+            <details class="fold" open><summary><span>デバイスの行とアイコン</span></summary><div class="fold-body"><a href="../assets/guide_remote_control_devices.jpg" target="_blank" rel="noopener"><img src="../assets/guide_remote_control_devices.jpg" alt="デバイス管理のリモート操作アイコン" loading="lazy" style="border-radius:12px" /></a></div></details>
+            <details class="fold"><summary><span>開いたリモート操作ウィンドウ</span></summary><div class="fold-body"><a href="../assets/guide_mobile_remote_control_window.jpg" target="_blank" rel="noopener"><img src="../assets/guide_mobile_remote_control_window.jpg" alt="開いたモバイルのリモート操作ウィンドウ" loading="lazy" style="border-radius:12px" /></a></div></details>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section section-alt">
-      <div class="container split-grid">
-        <div>
-          <p class="section-kicker">Screenshot</p>
-          <h2>モバイルのスクリーンショットは PC ですぐに確認します。</h2>
-          <p class="lead">
-            Android 画面をキャプチャすると PC へ転送され、Windows の標準画像ビューアーで開きます。
-            セキュリティポリシーがかかった画面や、Android のアクセシビリティスクリーンショットが許可されていない状態では失敗することがあります。
-            見続けながら操作するときはモバイル画面のリモート制御を使い、1 枚だけ確認するときはスクリーンショットのショートカットを使います。
-          </p>
-        </div>
-        <div class="panel">
-          <p class="section-kicker">When It Fails</p>
-          <h2>失敗するときに確認すること</h2>
-          <ul class="bullet-list">
-            <li>アプリ更新後は、OneMouse のアクセシビリティサービスをオフにしてから再度オンにします。</li>
-            <li>銀行、DRM、セキュリティキーボードのようなキャプチャ禁止の画面でないか確認します。</li>
-            <li>あまりに速く連続でキャプチャした場合は、少し待ってから再度試します。</li>
-            <li>PC と Android の接続が維持されているか確認します。</li>
-          </ul>
+    <!-- FILES -->
+    <section class="section-alt" id="files">
+      <div class="wrap">
+        <div class="sec-head"><p class="ey">ファイル・クリップボード</p><h2 class="sec">ファイルは転送画面、クイックドロップ、PC-to-PCのドラッグで送ります。</h2></div>
+        <div class="split lead-left">
+          <div>
+            <ul class="panel" style="list-style:none;padding-left:22px">
+              <li style="margin:0 0 8px"><b>転送画面</b>、または画面上の小さな<b>ドロップゾーン</b>にファイルを置くと、選択したAndroidやサブPCへ送られます。</li>
+              <li style="margin:8px 0"><b>PC-to-PC</b>は、ファイルをつかんだまま配置した画面の境界を越えて対象のPCに置くと転送されます（サブPCが接続・配置されている必要があります）。</li>
+              <li style="margin:8px 0">Android → PCは、Androidの転送タブや共有メニューから送ります。</li>
+              <li style="margin:8px 0 0">開始できないときは、接続状態と選択中のデバイスを確認してください。</li>
+            </ul>
+          </div>
+          <div>
+            <div class="panel tip"><h3>クイックドロップ</h3>
+              <ul><li><b>Ctrl+Alt+D</b>でドロップゾーンを隠したり表示したりします。</li><li>位置と状態はPCアプリに保存されます。</li></ul></div>
+            <details class="fold"><summary><span>クイックドロップ画面</span></summary><div class="fold-body"><a href="../assets/guide_quick_drop_send.png" target="_blank" rel="noopener"><img src="../assets/guide_quick_drop_send.png" alt="クイックドロップでファイルを送る" loading="lazy" style="border-radius:12px" /></a></div></details>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="text-to-pc">
-      <div class="container">
-        <div class="section-heading">
-          <p class="section-kicker">Text to PC</p>
-          <h2>Android で選択したテキストを PC へ送ります。</h2>
-          <p>Samsung キーボードや一部のアプリでは、OneMouse to PC が「その他」メニューの中にあります。初回は一度だけ、アプリ管理で One Mouse をオンにする必要があることがあります。</p>
+    <!-- QUICK CONNECT -->
+    <section id="quick">
+      <div class="wrap narrow">
+        <div class="sec-head"><p class="ey">番号ショートカット</p><h2 class="sec">デバイス一覧の番号で、すぐに接続します。</h2></div>
+        <div class="split">
+          <div class="panel"><h3>Ctrl + Alt + 1~9</h3>
+            <ul><li>デバイス管理の先頭9台に<b>Ctrl+Alt+1~9</b>が割り当てられます。</li><li>番号を押すと、そのデバイスに接続します。</li><li>すでに接続中のデバイスの番号をもう一度押すと、接続が切れます。</li><li>接続/解除のときに、右下に小さな通知が表示されます。</li></ul></div>
+          <div class="panel tip"><h3>自動再接続</h3>
+            <ul><li>オンにしておくと、最後のデバイスが再び現れたときや、準備できたデバイスが一つだけのときに、PCアプリが自動で再接続します。</li><li>マウスがデバイス間を行き来するときに、別途通知は表示されません。</li></ul></div>
         </div>
-        <details class="guide-reference">
-          <summary>
-            <span>テキスト転送の画面例を見る</span>
-            <small>Android の選択メニューで OneMouse to PC をオンにして使う順序を確認します。</small>
-          </summary>
-          <div class="shot-row text-step-row">
-            <figure class="shot-card shot-phone">
-              <img src="../assets/text_to_pc_step_1.jpg" alt="Android でテキストを選択して「その他」メニューを開く画面" />
-              <figcaption>1. テキストを長押しして選択し、「その他」を開きます。</figcaption>
-            </figure>
-            <figure class="shot-card shot-phone">
-              <img src="../assets/text_to_pc_step_2.jpg" alt="テキスト選択メニューでアプリ管理を押す画面" />
-              <figcaption>2. OneMouse to PC がなければアプリ管理を押します。</figcaption>
-            </figure>
-            <figure class="shot-card shot-phone">
-              <img src="../assets/text_to_pc_step_3.jpg" alt="アプリ管理で One Mouse 項目をオンにする画面" />
-              <figcaption>3. One Mouse 項目をオンにします。</figcaption>
-            </figure>
-            <figure class="shot-card shot-phone">
-              <img src="../assets/text_to_pc_step_4.jpg" alt="「その他」メニューで OneMouse to PC を押す画面" />
-              <figcaption>4. OneMouse to PC を押して PC のクリップボードへ送ります。</figcaption>
-            </figure>
-            <figure class="shot-card shot-phone">
-              <img src="../assets/text_to_pc_step_5.jpg" alt="PC のクリップボードへ送ったという完了トーストが表示された画面" />
-              <figcaption>5. 完了メッセージが見えたら、PC ですぐに貼り付けられます。</figcaption>
-            </figure>
-          </div>
-        </details>
       </div>
     </section>
 
-    <section class="section section-alt">
-      <div class="container split-grid">
-        <div>
-          <p class="section-kicker">Technical Notes</p>
-          <h2>接続構造と権限の説明は別ページにまとめています。</h2>
-          <p class="lead">
-            一般のユーザーは、このガイドの順序どおりにインストール、権限、ペアリング、配置だけをたどれば大丈夫です。
-            ローカルネットワークの構造、アクセシビリティサービス、フォアグラウンドサービス、ファイルとクリップボードの処理方式は、技術/セキュリティ案内で確認できます。
-          </p>
-        </div>
-        <div class="panel">
-          <p class="section-kicker">Next Step</p>
-          <h2>問題が起きたらヘルプで原因を絞り込みます。</h2>
-          <ul class="bullet-list">
-            <li>PC が見えない場合は、同じ Wi-Fi、ファイアウォール、ゲスト Wi-Fi かどうかをまず確認します。</li>
-            <li>入力が入らない場合は、アクセシビリティサービスとアプリの電源状態を確認します。</li>
-            <li>カーソルが戻らない場合は、Ctrl + Alt + Backspace を使います。</li>
-          </ul>
-          <div class="hero-actions">
-            <a class="button button-primary" href="./help.html">ヘルプを見る</a>
-            <a class="button button-secondary" href="./technical.html">技術/セキュリティを見る</a>
+    <!-- BLUETOOTH -->
+    <section class="section-alt" id="bluetooth">
+      <div class="wrap">
+        <div class="sec-head"><p class="ey">Bluetooth</p><h2 class="sec">Wi-Fiルーターがなくても、Bluetoothで接続できます。</h2>
+          <p class="sec-lead">PC↔Android、PC↔PCをBluetoothで直接つなぎ、入力・クリップボード・ファイルをやり取りします。Wi-Fiルーターやインターネットがなくても大丈夫です。</p></div>
+        <div class="split lead-left">
+          <div>
+            <div class="panel" style="margin-bottom:14px"><h3>こんなときに便利</h3>
+              <ul><li>共有Wi-Fiがない部屋・屋外・車内</li><li>ゲストWi-Fiやファイアウォールがデバイス検索を妨げるとき</li><li>キーボード・クリップボード中心の手軽な利用</li></ul></div>
+            <div class="panel tip"><h3>知っておきたいこと</h3>
+              <ul><li>Androidの設定タブでオンにし、Wi-Fiとは独立して動作します（再試行のbackoffを含む）。</li><li>PC↔PCは、メイン/サブの役割で双方向のファイルドラッグに対応します。</li><li>複数のBluetoothデバイスを一覧から同時にオンにできます。</li><li>BluetoothはWi-Fiより遅いため、大きなファイルはWi-Fiをおすすめします。</li><li>モバイルのリモート操作は、Bluetoothでは推奨しません。</li><li>問題があるときは、WindowsのBluetoothで再度ペアリングしてください。</li></ul></div>
+          </div>
+          <div>
+            <div class="panel"><h3>接続の手順</h3>
+              <div class="timeline" style="margin-top:8px">
+                <div class="tstep"><div class="rail"><span class="num">1</span><span class="line"></span></div><div class="body" style="padding-bottom:14px"><h4>Androidの設定タブでBluetoothモードをオン</h4></div></div>
+                <div class="tstep"><div class="rail"><span class="num">2</span><span class="line"></span></div><div class="body" style="padding-bottom:14px"><h4>WindowsのBluetooth設定でスマホを一度ペアリング</h4></div></div>
+                <div class="tstep"><div class="rail"><span class="num">3</span><span class="line"></span></div><div class="body" style="padding-bottom:14px"><h4>PCアプリが自動接続 → デバイス管理に表示</h4></div></div>
+                <div class="tstep"><div class="rail"><span class="num">4</span></div><div class="body" style="padding-bottom:0"><h4>Wi-Fiと同じように入力・クリップボード・ファイルを利用</h4></div></div>
+              </div>
+            </div>
+            <details class="fold"><summary><span>Bluetoothのサブデバイス画面</span></summary><div class="fold-body"><a href="../assets/guide_bt_sub_devices.png" target="_blank" rel="noopener"><img src="../assets/guide_bt_sub_devices.png" alt="Bluetoothのサブデバイス一覧" loading="lazy" style="border-radius:12px" /></a></div></details>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- PC TO PC -->
+    <section id="pcpc">
+      <div class="wrap">
+        <div class="sec-head"><p class="ey">別のPC</p><h2 class="sec">別のWindows PCは、設定 · デバイス管理 · 配置の順でつなぎます。</h2></div>
+        <div class="split lead-left">
+          <div>
+            <div class="panel"><h3>接続する</h3>
+              <ul><li>操作する側のPCは<b>メイン</b>、操作される側のPCは<b>サブ</b>の役割にします。</li><li>サブPCをペアリングして、デバイス管理に追加します。</li><li>配置エディタで、サブPCを実際の位置どおりに置きます。</li><li>その方向へマウスを渡すと別のPCを操作でき、ファイルも境界へのドラッグでやり取りできます。</li></ul></div>
+          </div>
+          <div>
+            <details class="fold" open><summary><span>配置画面</span></summary><div class="fold-body"><a href="../assets/guide_pc_arrangement.png" target="_blank" rel="noopener"><img src="../assets/guide_pc_arrangement.png" alt="別のPCの配置エディタ画面" loading="lazy" style="border-radius:12px" /></a></div></details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PERMISSIONS (short summary + link) -->
+    <section class="section-alt" id="permissions">
+      <div class="wrap narrow">
+        <div class="sec-head"><p class="ey">権限</p><h2 class="sec">オンにするのはアクセシビリティ一つ、あとは機能ごとに。</h2>
+          <p class="sec-lead">権限はまとめて要求せず、その機能を使うときにお尋ねします。項目ごとの詳しい説明は技術・セキュリティにあります。</p></div>
+        <div class="panel"><ul>
+          <li><b>アクセシビリティサービス — 必須：</b>Androidの操作と画面キャプチャ・リモート入力に必要です。</li>
+          <li><b>画面キャプチャの承認 — リモート操作の開始時：</b>Androidのシステムポップアップで承認します。</li>
+          <li><b>付近のWi-Fiデバイス — 接続時：</b>Android 13+でPCを探すときに、一度要求されることがあります。</li>
+          <li><b>通知・システム設定・バッテリー除外：</b>それぞれ、サービス状態の表示、明るさ調整、画面オフ後の安定性に必要なときだけ。</li>
+        </ul></div>
+        <div style="margin-top:18px"><a class="btn btn-sec sm" href="./technical.html#permissions">6つの権限を詳しく見る</a></div>
+      </div>
+    </section>
+
+    <!-- SHORTCUTS -->
+    <section id="shortcuts">
+      <div class="wrap narrow">
+        <div class="sec-head"><p class="ey">ショートカット</p><h2 class="sec">よく使うキーボードショートカット。</h2></div>
+        <div class="table-wrap"><table class="kt">
+          <thead><tr><th>ショートカット</th><th>動作</th></tr></thead>
+          <tbody>
+            <tr><td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>1~9</kbd></td><td>一覧の該当デバイスに接続 / もう一度押すと解除</td></tr>
+            <tr><td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>D</kbd></td><td>クイックドロップを隠す / 表示する</td></tr>
+            <tr><td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>S</kbd> · <kbd>PrintScreen</kbd></td><td>モバイルの画面キャプチャ</td></tr>
+            <tr><td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Backspace</kbd></td><td>カーソルを自分のPC（モニター中央）へ強制的に戻す</td></tr>
+            <tr><td><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>↑</kbd>/<kbd>↓</kbd></td><td>モバイル画面の明るさ調整（システム設定の権限が必要）</td></tr>
+          </tbody>
+        </table></div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
+  <footer class="site">
+    <div class="wrap ft">
       <span>© 2026 OneMouse</span>
-      <span class="footer-links">
-        <a href="./technical.html">技術/セキュリティ</a>
-        <a href="./pricing.html">Free / Pro</a>
-        <a href="./privacy.html">プライバシーポリシー</a>
-        <a href="./terms.html">利用規約</a>
-        <a href="./licenses.html">オープンソースライセンス</a>
-      </span>
+      <span class="links"><a href="./technical.html">技術・セキュリティ</a><a href="./privacy.html">プライバシーポリシー</a><a href="./terms.html">利用規約</a><a href="./licenses.html">オープンソースライセンス</a></span>
     </div>
   </footer>
 </body>
