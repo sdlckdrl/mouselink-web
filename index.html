@@ -279,19 +279,28 @@
       if(el){ const id=el.dataset.id,d=devs[id]; drag={id,dx:p.x-d.x,dy:p.y-d.y}; d.el.classList.add('drag'); try{desk.setPointerCapture(e.pointerId);}catch(_){} e.preventDefault(); }
       else setCursor(p.x,p.y); });
     desk.addEventListener('pointermove',e=>{ const p=toV(e);
-      if(drag){ const d=devs[drag.id]; d.x=clamp(p.x-drag.dx,0,VW-d.w); d.y=clamp(p.y-drag.dy,0,VH-d.h); d.el.style.left=d.x+'px'; d.el.style.top=d.y+'px'; showSnap(d); }
+      if(drag){ const d=devs[drag.id]; d.x=clamp(p.x-drag.dx,0,VW-d.w); d.y=clamp(p.y-drag.dy,0,VH-d.h); d.el.style.left=d.x+'px'; d.el.style.top=d.y+'px'; showSnap(drag.id); }
       else setCursor(p.x,p.y); });
-    function endDrag(){ if(!drag) return; const d=devs[drag.id]; d.el.classList.remove('drag'); snap(d); layout(); snapedge.style.opacity=0; drag=null; setCursor(cx,cy); }
+    function endDrag(){ if(!drag) return; const d=devs[drag.id]; d.el.classList.remove('drag'); snap(drag.id); layout(); snapedge.style.opacity=0; drag=null; setCursor(cx,cy); }
     desk.addEventListener('pointerup',endDrag); desk.addEventListener('pointercancel',endDrag);
-    function nearestEdge(d){ const m=devs.pc, X=d.x+d.w/2, Y=d.y+d.h/2;
-      return [['right',Math.abs(X-(m.x+m.w))],['left',Math.abs(X-m.x)],['bottom',Math.abs(Y-(m.y+m.h))],['top',Math.abs(Y-m.y)]].sort((a,b)=>a[1]-b[1])[0][0]; }
-    function snap(d){ const m=devs.pc, e=nearestEdge(d);
-      if(e==='right'||e==='left'){ d.x=e==='right'?m.x+m.w:m.x-d.w; d.y=clamp(d.y,m.y-d.h*0.35,m.y+m.h-d.h*0.65); }
-      else { d.y=e==='bottom'?m.y+m.h:m.y-d.h; d.x=clamp(d.x,m.x-d.w*0.35,m.x+m.w-d.w*0.65); }
-      d.x=clamp(d.x,0,VW-d.w); d.y=clamp(d.y,0,VH-d.h); }
-    function showSnap(d){ const m=devs.pc,e=nearestEdge(d),T=4; let s;
-      if(e==='right')s={l:m.x+m.w-T/2,t:m.y,w:T,h:m.h}; else if(e==='left')s={l:m.x-T/2,t:m.y,w:T,h:m.h};
-      else if(e==='bottom')s={l:m.x,t:m.y+m.h-T/2,w:m.w,h:T}; else s={l:m.x,t:m.y-T/2,w:m.w,h:T};
+    function collides(id,x,y){ const d=devs[id],T=1.5;
+      for(const oid in devs){ if(oid===id) continue; const o=rectOf(devs[oid]);
+        const ox=Math.min(x+d.w,o.r)-Math.max(x,o.l), oy=Math.min(y+d.h,o.b)-Math.max(y,o.t);
+        if(ox>T&&oy>T) return true; } return false; }
+    function bestDock(id){ const d=devs[id], cx0=d.x+d.w/2, cy0=d.y+d.h/2; let best=null,bd=Infinity;
+      for(const oid in devs){ if(oid===id) continue; const a=rectOf(devs[oid]);
+        const yC=(a.t+a.b)/2-d.h/2, xC=(a.l+a.r)/2-d.w/2;
+        const cands=[{side:'right',x:a.r,y:yC,ax:oid},{side:'left',x:a.l-d.w,y:yC,ax:oid},{side:'bottom',x:xC,y:a.b,ax:oid},{side:'top',x:xC,y:a.t-d.h,ax:oid}];
+        for(let k=0;k<cands.length;k++){ const c=cands[k], x=clamp(c.x,0,VW-d.w), y=clamp(c.y,0,VH-d.h);
+          const dist=(x+d.w/2-cx0)**2+(y+d.h/2-cy0)**2+(collides(id,x,y)?1e9:0);
+          if(dist<bd){ bd=dist; best={x:x,y:y,side:c.side,ax:c.ax}; } } }
+      return best; }
+    function snap(id){ const d=devs[id], b=bestDock(id);
+      if(b){ d.x=b.x; d.y=b.y; } d.x=clamp(d.x,0,VW-d.w); d.y=clamp(d.y,0,VH-d.h); }
+    function showSnap(id){ const b=bestDock(id); if(!b){ snapedge.style.opacity=0; return; }
+      const a=rectOf(devs[b.ax]),T=4; let s;
+      if(b.side==='right')s={l:a.r-T/2,t:a.t,w:T,h:a.b-a.t}; else if(b.side==='left')s={l:a.l-T/2,t:a.t,w:T,h:a.b-a.t};
+      else if(b.side==='bottom')s={l:a.l,t:a.b-T/2,w:a.r-a.l,h:T}; else s={l:a.l,t:a.t-T/2,w:a.r-a.l,h:T};
       snapedge.style.left=s.l+'px'; snapedge.style.top=s.t+'px'; snapedge.style.width=s.w+'px'; snapedge.style.height=s.h+'px'; snapedge.style.opacity=.9; }
     document.getElementById('reset').addEventListener('click',()=>{ for(const id in devs) Object.assign(devs[id],HOME[id]);
       layout(); active='pc'; cx=devs.pc.x+devs.pc.w/2; cy=devs.pc.y+devs.pc.h/2; statusWhere.textContent='내 PC'; setCursor(cx,cy); });
