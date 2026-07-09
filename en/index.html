@@ -76,7 +76,7 @@
         <div class="play-head">
           <div class="steps">
             <span><span class="n">1</span><b>Move your mouse</b> to send the cursor across</span>
-            <span><span class="n">2</span><b>Drag a device</b> to move it around</span>
+            <span><span class="n">2</span><b>Drag a device's name tag</b> to move it around</span>
             <span><span class="n">3</span><b>Drag a file</b> to send it to another device</span>
           </div>
           <button class="reset" id="reset" type="button">Reset layout</button>
@@ -297,7 +297,7 @@
     const toV=e=>{ const rc=desk.getBoundingClientRect(); return {x:clamp((e.clientX-rc.left)/scale,0,VW), y:clamp((e.clientY-rc.top)/scale,0,VH)}; };
     desk.addEventListener('pointerdown',e=>{ const p=toV(e);
       if(e.target.closest('#filechip')){ fdrag={}; fileEl.classList.remove('settling'); fileEl.classList.add('dragging'); try{desk.setPointerCapture(e.pointerId);}catch(_){} e.preventDefault(); moveFile(p.x,p.y); return; }
-      const el=e.target.closest('.dev.grab');
+      const pinEl=e.target.closest('.pin'); const el=pinEl?pinEl.closest('.dev.grab'):null;
       if(el){ const id=el.dataset.id,d=devs[id]; drag={id,dx:p.x-d.x,dy:p.y-d.y,px:p.x,py:p.y}; d.el.classList.add('drag'); try{desk.setPointerCapture(e.pointerId);}catch(_){} e.preventDefault(); rideCursor(id,p.x,p.y); }
       else setCursor(p.x,p.y); });
     desk.addEventListener('pointermove',e=>{ const p=toV(e);
