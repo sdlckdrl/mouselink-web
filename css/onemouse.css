@@ -268,6 +268,25 @@ footer.site{ border-top:1px solid var(--line-soft); padding:30px 0; color:var(--
 #status .where{ color:var(--coral-deep); }
 .play-foot .hint{ font-size:12.5px; color:var(--muted); margin-left:auto; }
 
+/* ---------- simulator: mobile dot cursor + file-drag ---------- */
+#cursor .dot{ display:none; position:absolute; left:50%; top:50%; width:16px; height:16px; border-radius:50%; transform:translate(-50%,-50%);
+  background:radial-gradient(circle at 50% 38%, rgba(132,132,138,.92), rgba(80,80,88,.82)); border:1.5px solid rgba(255,255,255,.82); box-shadow:0 1px 4px rgba(0,0,0,.45); }
+#cursor.mobile svg{ display:none; }
+#cursor.mobile .dot{ display:block; }
+.filechip{ position:absolute; z-index:7; display:flex; align-items:center; gap:6px; padding:5px 10px 5px 7px; border-radius:10px;
+  background:var(--card); border:1px solid var(--line); box-shadow:var(--shadow-soft); font-size:11.5px; font-weight:800; color:var(--ink);
+  white-space:nowrap; cursor:grab; user-select:none; transform:translate(-50%,-50%); touch-action:none; transition:box-shadow .15s; }
+.filechip svg{ display:block; flex:0 0 auto; }
+.filechip.dragging{ cursor:grabbing; box-shadow:0 16px 28px -12px rgba(120,70,30,.55); }
+.filechip.settling{ transition:left .32s cubic-bezier(.35,1.15,.5,1), top .32s cubic-bezier(.35,1.15,.5,1), box-shadow .15s; }
+.dev.drop .screen{ box-shadow:inset 0 0 0 2px var(--green), 0 0 0 3px color-mix(in srgb,var(--green) 32%,transparent); }
+.sentbadge{ position:absolute; z-index:10; transform:translate(-50%,-50%); background:var(--green); color:#fff; font-size:11px; font-weight:800;
+  padding:4px 10px; border-radius:999px; white-space:nowrap; pointer-events:none; box-shadow:0 8px 16px -6px rgba(0,0,0,.4); }
+@media (prefers-reduced-motion:no-preference){
+  .sentbadge{ animation:sent 1.15s ease forwards; }
+  @keyframes sent{ 0%{opacity:0;transform:translate(-50%,-50%) scale(.7);} 16%{opacity:1;transform:translate(-50%,-64%) scale(1);} 78%{opacity:1;transform:translate(-50%,-78%);} 100%{opacity:0;transform:translate(-50%,-96%);} }
+}
+
 /* hero (home) */
 .hero{ padding:40px 0 8px; text-align:center; }
 .hero .tagpill{ display:inline-flex; align-items:center; gap:8px; font-size:12.5px; font-weight:700; color:var(--coral-deep);
