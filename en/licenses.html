@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>OneMouse | Open Source Licenses</title>
   <meta name="description" content="Open source libraries and third-party SDK notices used by the OneMouse PC app and Android app." />
-  <link rel="stylesheet" href="../css/style.css" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="stylesheet" href="../css/onemouse.css" />
   <link rel="canonical" href="https://onemouse.pages.dev/en/licenses" />
   <link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/licenses" />
   <link rel="alternate" hreflang="en" href="https://onemouse.pages.dev/en/licenses" />
@@ -14,50 +15,36 @@
   <link rel="alternate" hreflang="x-default" href="https://onemouse.pages.dev/licenses" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="./index.html" class="brand" aria-label="OneMouse home">
-        <span class="brand-mark">OM</span>
-        <span class="brand-copy">
-          <strong>OneMouse</strong>
-          <span>Connect Windows and Android locally</span>
-        </span>
-      </a>
-      <nav class="top-nav" aria-label="Main navigation">
+  <header class="site">
+    <div class="wrap hd">
+      <a class="brand" href="./index.html" aria-label="OneMouse home"><span class="om">OM</span>OneMouse</a>
+      <nav class="nav" aria-label="Main navigation">
         <a href="./index.html">Overview</a>
+        <a href="./index.html#use">Features</a>
         <a href="./guide.html">Guide</a>
         <a href="./help.html">Help</a>
-        <a href="./technical.html">Technical/Security</a>
-        <a href="./pricing.html">Free / Pro</a>
-        <a href="./index.html#download" class="nav-cta">Download</a>
       </nav>
-      <div class="lang-switch" aria-label="Language">
-        <a href="../licenses.html">KOR</a>
-        <span class="is-active">ENG</span>
-        <a href="../ja/licenses.html">JPN</a>
-        <a href="../zh/licenses.html">CHN</a>
+      <div class="hd-right">
+        <div class="lang" aria-label="Language"><a href="../licenses.html">KOR</a><span class="on">ENG</span><a href="../ja/licenses.html">JPN</a><a href="../zh/licenses.html">CHN</a></div>
+        <a class="hd-cta" href="./index.html#get">Free download</a>
       </div>
     </div>
   </header>
 
   <main>
-    <section class="page-hero">
-      <div class="container narrow">
-        <p class="section-kicker">Licenses</p>
-        <h1>Open Source Licenses</h1>
-        <p class="page-intro">
-          OneMouse uses open source libraries and third-party SDKs for the PC app, Android app, QR scanning, remote control streaming, billing, and ads.
-          Each component remains licensed by its original copyright holder.
-        </p>
-        <p class="policy-date">Last updated: June 19, 2026</p>
-      </div>
+    <section class="phero wrap">
+      <p class="ey">Open Source</p>
+      <h1 class="page">Open Source Licenses</h1>
+      <p class="lead">OneMouse uses open source libraries and third-party SDKs for the PC app, Android app, QR scanning, remote control streaming, billing, and ads. Each component remains licensed by its original copyright holder.</p>
+      <p class="policy-date">Last updated: June 19, 2026</p>
     </section>
 
-    <section class="section">
-      <div class="container legal-layout">
-        <article class="legal-card">
+    <section>
+      <div class="wrap narrow">
+        <div class="legal one">
+        <article class="lcard">
           <h2>Android app</h2>
-          <ul class="bullet-list">
+          <ul>
             <li><strong>AndroidX Core KTX 1.13.1</strong><br />Purpose: Android compatibility utilities and Kotlin extensions<br />License: Apache License 2.0</li>
             <li><strong>AndroidX Activity KTX 1.9.3</strong><br />Purpose: Android Activity APIs and Kotlin extensions<br />License: Apache License 2.0</li>
             <li><strong>AndroidX AppCompat 1.6.1</strong><br />Purpose: backward-compatible Android UI support<br />License: Apache License 2.0</li>
@@ -70,9 +57,9 @@
           </ul>
         </article>
 
-        <article class="legal-card">
+        <article class="lcard">
           <h2>PC app</h2>
-          <ul class="bullet-list">
+          <ul>
             <li><strong>Electron 41.3.0</strong><br />Purpose: Windows desktop UI runtime<br />License: MIT License</li>
             <li><strong>Python 3.13 runtime</strong><br />Purpose: packaged PC backend runtime<br />License: Python Software Foundation License</li>
             <li><strong>PyInstaller 6.20.0</strong><br />Purpose: backend executable packaging<br />License: GPLv2-or-later with special exception</li>
@@ -85,7 +72,7 @@
           </ul>
         </article>
 
-        <article class="legal-card">
+        <article class="lcard">
           <h2>Build and test only</h2>
           <p>
             Android Gradle Plugin, Kotlin Gradle Plugin, Gradle wrapper, JUnit, org.json, and Electron Builder are used during build or test workflows.
@@ -93,7 +80,7 @@
           </p>
         </article>
 
-        <article class="legal-card">
+        <article class="lcard">
           <h2>Notice</h2>
           <p>
             This page lists libraries and SDKs included in or used by OneMouse distributions.
@@ -102,11 +89,11 @@
           </p>
         </article>
 
-        <article class="legal-card">
+        <article class="lcard">
           <h2>License texts and copyright notices</h2>
 
           <h3>Copyright notices by component</h3>
-          <ul class="bullet-list">
+          <ul>
             <li>AndroidX (Core KTX, Activity KTX, AppCompat), Kotlin standard library — Copyright (c) The Android Open Source Project / JetBrains s.r.o. and Kotlin contributors — Apache License 2.0</li>
             <li>ZXing Android Embedded — Copyright (c) Journey Mobile, Inc.; ZXing Core — Copyright (c) ZXing authors — Apache License 2.0</li>
             <li>cryptography — Copyright (c) The Python Cryptographic Authority and individual contributors — Apache License 2.0 OR BSD 3-Clause License</li>
@@ -373,7 +360,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</pre>
 
           <h3>Licenses provided via official link</h3>
           <p>The following components have very long license texts and are noticed via their official source link; a copy is available on request.</p>
-          <ul class="bullet-list">
+          <ul>
             <li><strong>Python Software Foundation License</strong> (Python 3.13) — <a href="https://docs.python.org/3/license.html" rel="noopener" target="_blank">docs.python.org/3/license.html</a></li>
             <li><strong>GNU LGPL v3</strong> (pynput) — <a href="https://www.gnu.org/licenses/lgpl-3.0.txt" rel="noopener" target="_blank">gnu.org/licenses/lgpl-3.0.txt</a> (and GPL v3 <a href="https://www.gnu.org/licenses/gpl-3.0.txt" rel="noopener" target="_blank">text</a>)</li>
             <li><strong>GNU LGPL v2.1</strong> (zeroconf) — <a href="https://www.gnu.org/licenses/lgpl-2.1.txt" rel="noopener" target="_blank">gnu.org/licenses/lgpl-2.1.txt</a></li>
@@ -384,20 +371,15 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</pre>
             If you need a copy or additional information, contact <a href="mailto:sdlckdrl@gmail.com">sdlckdrl@gmail.com</a>.
           </p>
         </article>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <span>&copy; 2026 OneMouse</span>
-      <span class="footer-links">
-        <a href="./technical.html">Technical/Security</a>
-        <a href="./pricing.html">Free / Pro</a>
-        <a href="./privacy.html">Privacy</a>
-        <a href="./terms.html">Terms</a>
-        <a href="./licenses.html">Licenses</a>
-      </span>
+  <footer class="site">
+    <div class="wrap ft">
+      <span>© 2026 OneMouse</span>
+      <span class="links"><a href="./technical.html">Technical &amp; Security</a><a href="./privacy.html">Privacy Policy</a><a href="./terms.html">Terms of Service</a><a href="./licenses.html">Open-source Licenses</a></span>
     </div>
   </footer>
 </body>

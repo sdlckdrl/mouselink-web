@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>OneMouse | Privacy Policy</title>
   <meta name="description" content="OneMouse Privacy Policy for local network connection, Accessibility permission, file and clipboard transfer, Google Play Billing, and ads." />
-  <link rel="stylesheet" href="../css/style.css" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="stylesheet" href="../css/onemouse.css" />
   <link rel="canonical" href="https://onemouse.pages.dev/en/privacy" />
   <link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/privacy" />
   <link rel="alternate" hreflang="en" href="https://onemouse.pages.dev/en/privacy" />
@@ -14,104 +15,47 @@
   <link rel="alternate" hreflang="x-default" href="https://onemouse.pages.dev/privacy" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="./index.html" class="brand" aria-label="OneMouse home">
-        <span class="brand-mark">OM</span>
-        <span class="brand-copy">
-          <strong>OneMouse</strong>
-          <span>Connect Windows and Android locally</span>
-        </span>
-      </a>
-      <nav class="top-nav" aria-label="Main navigation">
+  <header class="site">
+    <div class="wrap hd">
+      <a class="brand" href="./index.html" aria-label="OneMouse home"><span class="om">OM</span>OneMouse</a>
+      <nav class="nav" aria-label="Main navigation">
         <a href="./index.html">Overview</a>
+        <a href="./index.html#use">Features</a>
         <a href="./guide.html">Guide</a>
         <a href="./help.html">Help</a>
-        <a href="./technical.html">Technical/Security</a>
-        <a href="./pricing.html">Free / Pro</a>
-        <a href="./index.html#download" class="nav-cta">Download</a>
       </nav>
-      <div class="lang-switch" aria-label="Language">
-        <a href="../privacy.html">KOR</a>
-        <span class="is-active">ENG</span>
-        <a href="../ja/privacy.html">JPN</a>
-        <a href="../zh/privacy.html">CHN</a>
+      <div class="hd-right">
+        <div class="lang" aria-label="Language"><a href="../privacy.html">KOR</a><span class="on">ENG</span><a href="../ja/privacy.html">JPN</a><a href="../zh/privacy.html">CHN</a></div>
+        <a class="hd-cta" href="./index.html#get">Free download</a>
       </div>
     </div>
   </header>
 
   <main>
-    <section class="page-hero">
-      <div class="container narrow">
-        <p class="section-kicker">Privacy Policy</p>
-        <h1>Privacy Policy</h1>
-        <p class="page-intro">
-          OneMouse connects a Windows PC, an Android device, and paired Windows PCs in the user's local environment.
-          This policy explains what information is processed and how ads and billing SDKs are used.
-        </p>
-        <p class="policy-date">Effective date: May 10, 2026</p>
-      </div>
+    <section class="phero wrap">
+      <p class="ey">Privacy Policy</p>
+      <h1 class="page">Privacy Policy</h1>
+      <p class="lead">OneMouse connects a Windows PC, an Android device, and paired Windows PCs in the user's local environment. This policy explains what information is processed and how ads and billing SDKs are used.</p>
+      <p class="policy-date">Effective date: May 10, 2026</p>
     </section>
 
-    <section class="section">
-      <div class="container legal-layout">
-        <article class="legal-card">
-          <h2>1. Core principle</h2>
-          <p>
-            OneMouse is built around local communication between the user's PC, Android device, and paired PCs.
-            OneMouse does not operate a separate account server that stores user files, clipboard content, or input content.
-          </p>
-        </article>
-
-        <article class="legal-card">
-          <h2>2. Information processed</h2>
-          <ul class="bullet-list">
-            <li>Device information: Android device ID, device name, PC name, PC device ID, or local network address</li>
-            <li>Connection information: pairing state, session key, selected default PC, and last connection time</li>
-            <li>Placement information: Android screen size, orientation, and phone position around the PC monitor</li>
-            <li>Transfer information: files, text, and clipboard content explicitly sent by the user</li>
-            <li>Billing information: whether Pro was purchased or restored. Google Play handles payment processing.</li>
-            <li>Advertising signals: Google Mobile Ads SDK may process advertising identifiers and related signals for Free mode ads.</li>
-          </ul>
-        </article>
-
-        <article class="legal-card">
-          <h2>3. Accessibility permission</h2>
-          <p>
-            The Android Accessibility service is used to apply mouse and keyboard input sent from the PC to the Android screen.
-            OneMouse does not use Accessibility for ad tracking, screen content collection, password collection, or remote server transmission.
-          </p>
-        </article>
-
-        <article class="legal-card">
-          <h2>4. Files and clipboard</h2>
-          <p>
-            Files and clipboard content move only when the user sends them or enables the relevant sync feature.
-            They are transferred between the user's own PC, Android device, and paired PCs and are not uploaded to OneMouse servers.
-          </p>
-        </article>
-
-        <article class="legal-card">
-          <h2>5. Ads and billing</h2>
-          <p>
-            Free mode banner ads use Google Mobile Ads SDK. Pro purchases and purchase restoration use Google Play Billing.
-            Google's own terms and privacy policies may apply to those services.
-          </p>
-        </article>
+    <section>
+      <div class="wrap">
+        <div class="legal">
+          <article class="lcard"><p class="num">01</p><h2>Core principle</h2><p>OneMouse is built around local communication between the user's PC, Android device, and paired PCs. OneMouse does not operate a separate account server that stores user files, clipboard content, or input content.</p></article>
+          <article class="lcard"><p class="num">02</p><h2>Information processed</h2><ul><li>Device information: Android device ID, device name, PC name, PC device ID, or local network address</li><li>Connection information: pairing state, session key, selected default PC, and last connection time</li><li>Placement information: Android screen size, orientation, and phone position around the PC monitor</li><li>Transfer information: files, text, and clipboard content explicitly sent by the user</li><li>Billing information: whether Pro was purchased or restored. Google Play handles payment processing.</li><li>Advertising signals: Google Mobile Ads SDK may process advertising identifiers and related signals for Free mode ads.</li></ul></article>
+          <article class="lcard"><p class="num">03</p><h2>Accessibility permission</h2><p>The Android Accessibility service is used to apply mouse and keyboard input sent from the PC to the Android screen. OneMouse does not use Accessibility for ad tracking, screen content collection, password collection, or remote server transmission.</p></article>
+          <article class="lcard"><p class="num">04</p><h2>Files and clipboard</h2><p>Files and clipboard content move only when the user sends them or enables the relevant sync feature. They are transferred between the user's own PC, Android device, and paired PCs and are not uploaded to OneMouse servers.</p></article>
+          <article class="lcard"><p class="num">05</p><h2>Ads and billing</h2><p>Free mode banner ads use Google Mobile Ads SDK. Pro purchases and purchase restoration use Google Play Billing. Google's own terms and privacy policies may apply to those services.</p></article>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
+  <footer class="site">
+    <div class="wrap ft">
       <span>© 2026 OneMouse</span>
-      <span class="footer-links">
-        <a href="./technical.html">Technical/Security</a>
-        <a href="./pricing.html">Free / Pro</a>
-        <a href="./privacy.html">Privacy</a>
-        <a href="./terms.html">Terms</a>
-        <a href="./licenses.html">Licenses</a>
-      </span>
+      <span class="links"><a href="./technical.html">Technical &amp; Security</a><a href="./privacy.html">Privacy Policy</a><a href="./terms.html">Terms of Service</a><a href="./licenses.html">Open-source Licenses</a></span>
     </div>
   </footer>
 </body>

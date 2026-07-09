@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>OneMouse | 开源许可</title>
   <meta name="description" content="OneMouse PC 应用和 Android 应用使用的开源库与第三方 SDK 声明。" />
-  <link rel="stylesheet" href="../css/style.css" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="stylesheet" href="../css/onemouse.css" />
   <link rel="canonical" href="https://onemouse.pages.dev/zh/licenses" />
   <link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/licenses" />
   <link rel="alternate" hreflang="en" href="https://onemouse.pages.dev/en/licenses" />
@@ -14,47 +15,36 @@
   <link rel="alternate" hreflang="x-default" href="https://onemouse.pages.dev/licenses" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="./index.html" class="brand" aria-label="OneMouse 首页">
-        <span class="brand-mark">OM</span>
-        <span class="brand-copy"><strong>OneMouse</strong><span>本地连接 Windows 与 Android</span></span>
-      </a>
-      <nav class="top-nav" aria-label="主导航">
+  <header class="site">
+    <div class="wrap hd">
+      <a class="brand" href="./index.html" aria-label="OneMouse 主页"><span class="om">OM</span>OneMouse</a>
+      <nav class="nav" aria-label="主菜单">
         <a href="./index.html">概览</a>
-        <a href="./guide.html">指南</a>
+        <a href="./index.html#use">功能</a>
+        <a href="./guide.html">使用方法</a>
         <a href="./help.html">帮助</a>
-        <a href="./technical.html">技术/安全</a>
-        <a href="./pricing.html">Free / Pro</a>
-        <a href="./index.html#download" class="nav-cta">下载</a>
       </nav>
-      <div class="lang-switch" aria-label="语言">
-        <a href="../licenses.html">KOR</a>
-        <a href="../en/licenses.html">ENG</a>
-        <a href="../ja/licenses.html">JPN</a>
-        <span class="is-active">CHN</span>
+      <div class="hd-right">
+        <div class="lang" aria-label="语言"><a href="../licenses.html">KOR</a><a href="../en/licenses.html">ENG</a><a href="../ja/licenses.html">JPN</a><span class="on">CHN</span></div>
+        <a class="hd-cta" href="./index.html#get">免费下载</a>
       </div>
     </div>
   </header>
 
   <main>
-    <section class="page-hero">
-      <div class="container narrow">
-        <p class="section-kicker">Licenses</p>
-        <h1>开源许可</h1>
-        <p class="page-intro">
-          OneMouse 为 PC 应用、Android 应用、二维码扫描、远程控制串流、结算和广告功能使用开源库与第三方 SDK。
-          每个组件的版权和许可条件均以原始发布方的声明为准。
-        </p>
-        <p class="policy-date">最后更新: 2026年6月19日</p>
-      </div>
+    <section class="phero wrap">
+      <p class="ey">Open Source</p>
+      <h1 class="page">开源许可</h1>
+      <p class="lead">OneMouse 为 PC 应用、Android 应用、二维码扫描、远程控制串流、结算和广告功能使用开源库与第三方 SDK。 每个组件的版权和许可条件均以原始发布方的声明为准。</p>
+      <p class="policy-date">最后更新: 2026年6月19日</p>
     </section>
 
-    <section class="section">
-      <div class="container legal-layout">
-        <article class="legal-card">
+    <section>
+      <div class="wrap narrow">
+        <div class="legal one">
+        <article class="lcard">
           <h2>Android 应用</h2>
-          <ul class="bullet-list">
+          <ul>
             <li><strong>AndroidX Core KTX 1.13.1</strong><br />用途: Android 兼容工具与 Kotlin 扩展<br />许可: Apache License 2.0</li>
             <li><strong>AndroidX Activity KTX 1.9.3</strong><br />用途: Android Activity API 与 Kotlin 扩展<br />许可: Apache License 2.0</li>
             <li><strong>AndroidX AppCompat 1.6.1</strong><br />用途: 兼容旧 Android 版本的 UI 支持<br />许可: Apache License 2.0</li>
@@ -67,9 +57,9 @@
           </ul>
         </article>
 
-        <article class="legal-card">
+        <article class="lcard">
           <h2>PC 应用</h2>
-          <ul class="bullet-list">
+          <ul>
             <li><strong>Electron 41.3.0</strong><br />用途: Windows 桌面 UI 运行时<br />许可: MIT License</li>
             <li><strong>Python 3.13 runtime</strong><br />用途: PC 后端运行环境<br />许可: Python Software Foundation License</li>
             <li><strong>PyInstaller 6.20.0</strong><br />用途: 后端可执行文件打包<br />许可: GPLv2-or-later with special exception</li>
@@ -82,7 +72,7 @@
           </ul>
         </article>
 
-        <article class="legal-card">
+        <article class="lcard">
           <h2>仅用于构建和测试</h2>
           <p>
             Android Gradle Plugin、Kotlin Gradle Plugin、Gradle wrapper、JUnit、org.json 和 Electron Builder 用于构建或测试流程。
@@ -90,7 +80,7 @@
           </p>
         </article>
 
-        <article class="legal-card">
+        <article class="lcard">
           <h2>声明标准</h2>
           <p>
             本页面声明 OneMouse 分发包中包含或主要功能使用的库和 SDK。
@@ -99,11 +89,11 @@
           </p>
         </article>
 
-        <article class="legal-card">
+        <article class="lcard">
           <h2>许可证全文及版权声明</h2>
 
           <h3>各组件版权声明</h3>
-          <ul class="bullet-list">
+          <ul>
             <li>AndroidX (Core KTX, Activity KTX, AppCompat), Kotlin standard library — Copyright (c) The Android Open Source Project / JetBrains s.r.o. and Kotlin contributors — Apache License 2.0</li>
             <li>ZXing Android Embedded — Copyright (c) Journey Mobile, Inc.; ZXing Core — Copyright (c) ZXing authors — Apache License 2.0</li>
             <li>cryptography — Copyright (c) The Python Cryptographic Authority and individual contributors — Apache License 2.0 OR BSD 3-Clause License</li>
@@ -370,7 +360,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</pre>
 
           <h3>通过官方链接声明的许可证</h3>
           <p>以下组件许可证全文较长，通过官方链接声明，副本可应请求提供。</p>
-          <ul class="bullet-list">
+          <ul>
             <li><strong>Python Software Foundation License</strong> (Python 3.13) — <a href="https://docs.python.org/3/license.html" rel="noopener" target="_blank">docs.python.org/3/license.html</a></li>
             <li><strong>GNU LGPL v3</strong> (pynput) — <a href="https://www.gnu.org/licenses/lgpl-3.0.txt" rel="noopener" target="_blank">gnu.org/licenses/lgpl-3.0.txt</a>（及 GPL v3 <a href="https://www.gnu.org/licenses/gpl-3.0.txt" rel="noopener" target="_blank">原文</a>）</li>
             <li><strong>GNU LGPL v2.1</strong> (zeroconf) — <a href="https://www.gnu.org/licenses/lgpl-2.1.txt" rel="noopener" target="_blank">gnu.org/licenses/lgpl-2.1.txt</a></li>
@@ -381,20 +371,15 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</pre>
             如需副本或更多信息，请联系 <a href="mailto:sdlckdrl@gmail.com">sdlckdrl@gmail.com</a>。
           </p>
         </article>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <span>&copy; 2026 OneMouse</span>
-      <span class="footer-links">
-        <a href="./technical.html">技术/安全</a>
-        <a href="./pricing.html">Free / Pro</a>
-        <a href="./privacy.html">隐私</a>
-        <a href="./terms.html">使用条款</a>
-        <a href="./licenses.html">开源许可</a>
-      </span>
+  <footer class="site">
+    <div class="wrap ft">
+      <span>© 2026 OneMouse</span>
+      <span class="links"><a href="./technical.html">技术与安全</a><a href="./privacy.html">隐私政策</a><a href="./terms.html">使用条款</a><a href="./licenses.html">开源许可</a></span>
     </div>
   </footer>
 </body>

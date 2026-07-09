@@ -185,6 +185,37 @@ footer.site{ border-top:1px solid var(--line-soft); padding:30px 0; color:var(--
 .ft .links{ margin-left:auto; display:flex; gap:16px; flex-wrap:wrap; }
 .ft a:hover{ color:var(--ink); }
 
+/* ---------- legal / policy pages (terms · privacy · licenses) ---------- */
+.policy-date{ display:inline-block; margin-top:16px; font-family:var(--mono); font-size:12px; letter-spacing:.03em;
+  color:var(--muted); background:var(--card); border:1px solid var(--line); padding:7px 14px; border-radius:999px; }
+.legal{ display:grid; grid-template-columns:repeat(2,1fr); gap:16px; align-items:start; }
+.legal.one{ grid-template-columns:1fr; }
+@media (max-width:760px){ .legal{ grid-template-columns:1fr; } }
+.lcard{ background:var(--card); border:1px solid var(--line); border-radius:18px; padding:22px 24px; box-shadow:var(--shadow-soft); }
+.lcard.span{ grid-column:1/-1; }
+.lcard .num{ font-family:var(--mono); font-size:11.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--coral-deep); font-weight:700; }
+.lcard h2{ margin:7px 0 11px; font-size:18px; letter-spacing:-.01em; }
+.lcard h3{ margin:18px 0 9px; font-size:14.5px; }
+.lcard p{ margin:0 0 11px; color:var(--muted); font-size:14.5px; }
+.lcard ul{ margin:0 0 11px; padding-left:18px; color:var(--muted); font-size:14.5px; }
+.lcard li{ margin:7px 0; }
+.lcard>*:last-child{ margin-bottom:0; }
+.lcard b,.lcard strong{ color:var(--ink); font-weight:700; }
+.lcard a{ color:var(--coral-deep); font-weight:600; }
+.lcard a:hover{ text-decoration:underline; }
+.license-text{ font-family:var(--mono); font-size:11.5px; line-height:1.55; white-space:pre; overflow:auto; max-height:340px;
+  background:color-mix(in srgb,var(--paper2) 55%,var(--card)); border:1px solid var(--line-soft); border-radius:12px;
+  padding:14px 16px; margin:10px 0 0; color:var(--muted); }
+.lic-note{ font-size:13px; color:var(--muted); margin:8px 0 0; }
+/* collapsible license-text blocks inside a legal card (reuses existing <details><summary><pre>) */
+.lcard details{ margin-top:12px; border:1px solid var(--line); border-radius:12px; overflow:hidden; background:color-mix(in srgb,var(--paper2) 35%,var(--card)); }
+.lcard summary{ cursor:pointer; list-style:none; padding:13px 16px; font-weight:700; font-size:13.5px; color:var(--ink); display:flex; align-items:center; gap:8px; }
+.lcard summary::-webkit-details-marker{ display:none; }
+.lcard summary::after{ content:"+"; margin-left:auto; font-family:var(--mono); color:var(--coral-deep); font-size:17px; line-height:1; }
+.lcard details[open]>summary::after{ content:"–"; }
+.lcard details>p{ margin:0; padding:0 16px 10px; font-size:12.5px; color:var(--muted); }
+.lcard details .license-text{ margin:0 14px 14px; max-height:320px; }
+
 /* =========================================================
    Interactive device-arrangement simulator (home hero)
    ========================================================= */

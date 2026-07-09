@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>OneMouse | Terms</title>
   <meta name="description" content="OneMouse Terms of Use for local connection, Free and Pro policy, ads, Google Play Billing, and device control features." />
-  <link rel="stylesheet" href="../css/style.css" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="stylesheet" href="../css/onemouse.css" />
   <link rel="canonical" href="https://onemouse.pages.dev/en/terms" />
   <link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/terms" />
   <link rel="alternate" hreflang="en" href="https://onemouse.pages.dev/en/terms" />
@@ -14,97 +15,47 @@
   <link rel="alternate" hreflang="x-default" href="https://onemouse.pages.dev/terms" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="./index.html" class="brand" aria-label="OneMouse home">
-        <span class="brand-mark">OM</span>
-        <span class="brand-copy">
-          <strong>OneMouse</strong>
-          <span>Connect Windows and Android locally</span>
-        </span>
-      </a>
-      <nav class="top-nav" aria-label="Main navigation">
+  <header class="site">
+    <div class="wrap hd">
+      <a class="brand" href="./index.html" aria-label="OneMouse home"><span class="om">OM</span>OneMouse</a>
+      <nav class="nav" aria-label="Main navigation">
         <a href="./index.html">Overview</a>
+        <a href="./index.html#use">Features</a>
         <a href="./guide.html">Guide</a>
         <a href="./help.html">Help</a>
-        <a href="./technical.html">Technical/Security</a>
-        <a href="./pricing.html">Free / Pro</a>
-        <a href="./index.html#download" class="nav-cta">Download</a>
       </nav>
-      <div class="lang-switch" aria-label="Language">
-        <a href="../terms.html">KOR</a>
-        <span class="is-active">ENG</span>
-        <a href="../ja/terms.html">JPN</a>
-        <a href="../zh/terms.html">CHN</a>
+      <div class="hd-right">
+        <div class="lang" aria-label="Language"><a href="../terms.html">KOR</a><span class="on">ENG</span><a href="../ja/terms.html">JPN</a><a href="../zh/terms.html">CHN</a></div>
+        <a class="hd-cta" href="./index.html#get">Free download</a>
       </div>
     </div>
   </header>
 
   <main>
-    <section class="page-hero">
-      <div class="container narrow">
-        <p class="section-kicker">Terms</p>
-        <h1>Terms of Use</h1>
-        <p class="page-intro">These terms describe the basic conditions for using the OneMouse app and website.</p>
-      </div>
+    <section class="phero wrap">
+      <p class="ey">Terms</p>
+      <h1 class="page">Terms of Use</h1>
+      <p class="lead">These terms describe the basic conditions for using the OneMouse app and website.</p>
     </section>
 
-    <section class="section">
-      <div class="container legal-layout">
-        <article class="legal-card">
-          <h2>1. Service summary</h2>
-          <p>
-            OneMouse connects a Windows PC, Android device, and paired Windows PCs over a local network for input control, file transfer, and clipboard features.
-          </p>
-        </article>
-        <article class="legal-card">
-          <h2>2. Local network requirements</h2>
-          <p>
-            The app generally requires the PC, Android device, and paired PCs to be on the same local network.
-            Guest Wi-Fi, AP isolation, company security policy, firewalls, and antivirus software may prevent connection.
-          </p>
-        </article>
-        <article class="legal-card">
-          <h2>3. Free / Pro</h2>
-          <p>
-            Free mode keeps the basic connection flow. Pro unlocks repeated-use limits such as ads, transfer limits, saved PCs, and advanced input.
-            Pro purchases are handled by Google Play Billing in the Android app.
-          </p>
-        </article>
-        <article class="legal-card">
-          <h2>4. Ads and billing</h2>
-          <p>
-            Free mode ads are displayed through Google Mobile Ads SDK. Google Play Billing is used for Pro purchases and purchase restoration.
-          </p>
-        </article>
-        <article class="legal-card">
-          <h2>5. Support scope</h2>
-          <p>
-            OneMouse is provided for Windows PC, Android, and paired PC connections on the same Wi-Fi or local network.
-            USB/ADB connection is not included in the user-facing support scope.
-          </p>
-        </article>
-        <article class="legal-card">
-          <h2>6. Limitations</h2>
-          <p>
-            OneMouse depends on network state, operating system permissions, security software, and device manufacturer behavior.
-            Continuous connection and transfer cannot be guaranteed in every environment.
-          </p>
-        </article>
+    <section>
+      <div class="wrap">
+        <div class="legal">
+          <article class="lcard"><p class="num">01</p><h2>Service summary</h2><p>OneMouse connects a Windows PC, Android device, and paired Windows PCs over a local network for input control, file transfer, and clipboard features.</p></article>
+          <article class="lcard"><p class="num">02</p><h2>Local network requirements</h2><p>The app generally requires the PC, Android device, and paired PCs to be on the same local network. Guest Wi-Fi, AP isolation, company security policy, firewalls, and antivirus software may prevent connection.</p></article>
+          <article class="lcard"><p class="num">03</p><h2>Free / Pro</h2><p>Free mode keeps the basic connection flow. Pro unlocks repeated-use limits such as ads, transfer limits, saved PCs, and advanced input. Pro purchases are handled by Google Play Billing in the Android app.</p></article>
+          <article class="lcard"><p class="num">04</p><h2>Ads and billing</h2><p>Free mode ads are displayed through Google Mobile Ads SDK. Google Play Billing is used for Pro purchases and purchase restoration.</p></article>
+          <article class="lcard"><p class="num">05</p><h2>Support scope</h2><p>OneMouse is provided for Windows PC, Android, and paired PC connections on the same Wi-Fi or local network. USB/ADB connection is not included in the user-facing support scope.</p></article>
+          <article class="lcard"><p class="num">06</p><h2>Limitations</h2><p>OneMouse depends on network state, operating system permissions, security software, and device manufacturer behavior. Continuous connection and transfer cannot be guaranteed in every environment.</p></article>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
+  <footer class="site">
+    <div class="wrap ft">
       <span>© 2026 OneMouse</span>
-      <span class="footer-links">
-        <a href="./technical.html">Technical/Security</a>
-        <a href="./pricing.html">Free / Pro</a>
-        <a href="./privacy.html">Privacy</a>
-        <a href="./terms.html">Terms</a>
-        <a href="./licenses.html">Licenses</a>
-      </span>
+      <span class="links"><a href="./technical.html">Technical &amp; Security</a><a href="./privacy.html">Privacy Policy</a><a href="./terms.html">Terms of Service</a><a href="./licenses.html">Open-source Licenses</a></span>
     </div>
   </footer>
 </body>

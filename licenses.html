@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>OneMouse | 오픈소스 라이선스</title>
   <meta name="description" content="OneMouse PC 앱과 Android 앱에서 사용하는 오픈소스 라이브러리 및 서드파티 SDK 고지입니다." />
-  <link rel="stylesheet" href="./css/style.css" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="stylesheet" href="./css/onemouse.css" />
   <link rel="canonical" href="https://onemouse.pages.dev/licenses" />
   <link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/licenses" />
   <link rel="alternate" hreflang="en" href="https://onemouse.pages.dev/en/licenses" />
@@ -43,50 +44,36 @@
   </script>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="./index.html" class="brand" aria-label="OneMouse 홈">
-        <span class="brand-mark">OM</span>
-        <span class="brand-copy">
-          <strong>OneMouse</strong>
-          <span>Windows와 Android를 로컬로 연결</span>
-        </span>
-      </a>
-      <nav class="top-nav" aria-label="주요 메뉴">
+  <header class="site">
+    <div class="wrap hd">
+      <a class="brand" href="./index.html" aria-label="OneMouse 홈"><span class="om">OM</span>OneMouse</a>
+      <nav class="nav" aria-label="주요 메뉴">
         <a href="./index.html">소개</a>
-        <a href="./guide.html">사용 가이드</a>
+        <a href="./index.html#use">기능</a>
+        <a href="./guide.html">사용법</a>
         <a href="./help.html">도움말</a>
-        <a href="./technical.html">기술/보안</a>
-        <a href="./pricing.html">요금/Pro</a>
-        <a href="./index.html#download" class="nav-cta">다운로드</a>
       </nav>
-      <div class="lang-switch" aria-label="언어">
-        <span class="is-active">KOR</span>
-        <a href="./en/licenses.html">ENG</a>
-        <a href="./ja/licenses.html">JPN</a>
-        <a href="./zh/licenses.html">CHN</a>
+      <div class="hd-right">
+        <div class="lang" aria-label="언어"><span class="on">KOR</span><a href="./en/licenses.html">ENG</a><a href="./ja/licenses.html">JPN</a><a href="./zh/licenses.html">CHN</a></div>
+        <a class="hd-cta" href="./index.html#get">무료 다운로드</a>
       </div>
     </div>
   </header>
 
   <main>
-    <section class="page-hero">
-      <div class="container narrow">
-        <p class="section-kicker">Open Source</p>
-        <h1>오픈소스 라이선스</h1>
-        <p class="page-intro">
-          OneMouse는 PC 앱, Android 앱, QR 스캔, 원격 제어 스트리밍, 결제, 광고 기능을 위해 오픈소스 라이브러리와 서드파티 SDK를 사용합니다.
-          각 구성요소의 저작권과 라이선스 조건은 원 배포처의 고지를 따릅니다.
-        </p>
-        <p class="policy-date">최종 업데이트: 2026년 6월 19일</p>
-      </div>
+    <section class="phero wrap">
+      <p class="ey">Open Source</p>
+      <h1 class="page">오픈소스 라이선스</h1>
+      <p class="lead">OneMouse는 PC 앱, Android 앱, QR 스캔, 원격 제어 스트리밍, 결제, 광고 기능을 위해 오픈소스 라이브러리와 서드파티 SDK를 사용합니다. 각 구성요소의 저작권과 라이선스 조건은 원 배포처의 고지를 따릅니다.</p>
+      <p class="policy-date">최종 업데이트: 2026년 6월 19일</p>
     </section>
 
-    <section class="section">
-      <div class="container legal-layout">
-        <article class="legal-card">
+    <section>
+      <div class="wrap narrow">
+        <div class="legal one">
+        <article class="lcard">
           <h2>Android 앱</h2>
-          <ul class="bullet-list">
+          <ul>
             <li><strong>AndroidX Core KTX 1.13.1</strong><br />용도: Android 호환성 유틸리티와 Kotlin 확장 기능<br />라이선스: Apache License 2.0</li>
             <li><strong>AndroidX Activity KTX 1.9.3</strong><br />용도: Android Activity API와 Kotlin 확장 기능<br />라이선스: Apache License 2.0</li>
             <li><strong>AndroidX AppCompat 1.6.1</strong><br />용도: 하위 Android 버전 호환 UI 구성<br />라이선스: Apache License 2.0</li>
@@ -99,9 +86,9 @@
           </ul>
         </article>
 
-        <article class="legal-card">
+        <article class="lcard">
           <h2>PC 앱</h2>
-          <ul class="bullet-list">
+          <ul>
             <li><strong>Electron 41.3.0</strong><br />용도: Windows 데스크톱 UI 런타임<br />라이선스: MIT License</li>
             <li><strong>Python 3.13 runtime</strong><br />용도: PC 백엔드 실행 환경<br />라이선스: Python Software Foundation License</li>
             <li><strong>PyInstaller 6.20.0</strong><br />용도: PC 백엔드 실행 파일 패키징<br />라이선스: GPLv2-or-later with special exception</li>
@@ -114,7 +101,7 @@
           </ul>
         </article>
 
-        <article class="legal-card">
+        <article class="lcard">
           <h2>빌드와 테스트 전용</h2>
           <p>
             Android Gradle Plugin, Kotlin Gradle Plugin, Gradle wrapper, JUnit, org.json, Electron Builder 등은 빌드나 테스트 과정에 사용됩니다.
@@ -122,7 +109,7 @@
           </p>
         </article>
 
-        <article class="legal-card">
+        <article class="lcard">
           <h2>고지 기준</h2>
           <p>
             이 페이지는 OneMouse 배포판에 포함되거나 주요 기능 제공에 사용되는 라이브러리와 SDK를 사용자에게 알리기 위한 고지입니다.
@@ -131,11 +118,11 @@
           </p>
         </article>
 
-        <article class="legal-card">
+        <article class="lcard">
           <h2>라이선스 전문 및 저작권 고지</h2>
 
           <h3>구성요소별 저작권 표시</h3>
-          <ul class="bullet-list">
+          <ul>
             <li>AndroidX (Core KTX, Activity KTX, AppCompat), Kotlin standard library — Copyright (c) The Android Open Source Project / JetBrains s.r.o. and Kotlin contributors — Apache License 2.0</li>
             <li>ZXing Android Embedded — Copyright (c) Journey Mobile, Inc.; ZXing Core — Copyright (c) ZXing authors — Apache License 2.0</li>
             <li>cryptography — Copyright (c) The Python Cryptographic Authority and individual contributors — Apache License 2.0 OR BSD 3-Clause License</li>
@@ -402,7 +389,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</pre>
 
           <h3>원문 링크로 고지하는 라이선스</h3>
           <p>아래 구성요소는 라이선스 전문이 매우 길어 공식 원문 링크로 고지하며, 사본은 요청 시 제공합니다.</p>
-          <ul class="bullet-list">
+          <ul>
             <li><strong>Python Software Foundation License</strong> (Python 3.13) — <a href="https://docs.python.org/3/license.html" rel="noopener" target="_blank">docs.python.org/3/license.html</a></li>
             <li><strong>GNU LGPL v3</strong> (pynput) — <a href="https://www.gnu.org/licenses/lgpl-3.0.txt" rel="noopener" target="_blank">gnu.org/licenses/lgpl-3.0.txt</a> (및 GPL v3 <a href="https://www.gnu.org/licenses/gpl-3.0.txt" rel="noopener" target="_blank">원문</a>)</li>
             <li><strong>GNU LGPL v2.1</strong> (zeroconf) — <a href="https://www.gnu.org/licenses/lgpl-2.1.txt" rel="noopener" target="_blank">gnu.org/licenses/lgpl-2.1.txt</a></li>
@@ -413,20 +400,15 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</pre>
             관련 사본이나 추가 정보가 필요하면 <a href="mailto:sdlckdrl@gmail.com">sdlckdrl@gmail.com</a> 으로 요청해 주세요.
           </p>
         </article>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <span>&copy; 2026 OneMouse</span>
-      <span class="footer-links">
-        <a href="./technical.html">기술/보안</a>
-        <a href="./pricing.html">요금/Pro</a>
-        <a href="./privacy.html">개인정보처리방침</a>
-        <a href="./terms.html">이용약관</a>
-        <a href="./licenses.html">오픈소스 라이선스</a>
-      </span>
+  <footer class="site">
+    <div class="wrap ft">
+      <span>© 2026 OneMouse</span>
+      <span class="links"><a href="./technical.html">기술·보안</a><a href="./privacy.html">개인정보처리방침</a><a href="./terms.html">이용약관</a><a href="./licenses.html">오픈소스 라이선스</a></span>
     </div>
   </footer>
 </body>
