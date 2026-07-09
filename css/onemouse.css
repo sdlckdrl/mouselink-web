@@ -7,6 +7,8 @@
   --shadow:0 22px 40px -24px rgba(120,70,30,.5); --shadow-soft:0 12px 26px -18px rgba(120,70,30,.4);
   --sans:-apple-system,"Segoe UI","Pretendard","Noto Sans KR",system-ui,sans-serif;
   --mono:"SF Mono",ui-monospace,"Cascadia Code",monospace; --max:1040px; --narrow:820px;
+  /* 시뮬레이터: 두 손가락으로 잡는 커서(포인터 위쪽에 그려져 회색 점을 가리지 않음) */
+  --cur-grab:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2230%22%20height%3D%2230%22%20viewBox%3D%220%200%2030%2030%22%3E%3Cg%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%3E%3Cpath%20d%3D%22M9%202%20L11%2018%22%20stroke%3D%22%2320202a%22%20stroke-width%3D%226%22%2F%3E%3Cpath%20d%3D%22M21%202%20L19%2018%22%20stroke%3D%22%2320202a%22%20stroke-width%3D%226%22%2F%3E%3Cpath%20d%3D%22M9%202%20L11%2018%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%223.3%22%2F%3E%3Cpath%20d%3D%22M21%202%20L19%2018%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%223.3%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") 15 28; --cur-grabbing:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2230%22%20height%3D%2230%22%20viewBox%3D%220%200%2030%2030%22%3E%3Cg%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%3E%3Cpath%20d%3D%22M10%204%20L14%2017%22%20stroke%3D%22%2320202a%22%20stroke-width%3D%226%22%2F%3E%3Cpath%20d%3D%22M20%204%20L16%2017%22%20stroke%3D%22%2320202a%22%20stroke-width%3D%226%22%2F%3E%3Cpath%20d%3D%22M10%204%20L14%2017%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%223.3%22%2F%3E%3Cpath%20d%3D%22M20%204%20L16%2017%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%223.3%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") 15 28;
 }
 @media (prefers-color-scheme:dark){
   :root{ --paper:#1a140f; --paper2:#211812; --card:#241b14; --ink:#f6ede2; --muted:#b9a892;
@@ -234,7 +236,7 @@ footer.site{ border-top:1px solid var(--line-soft); padding:30px 0; color:var(--
 .dev{ position:absolute; border-radius:14px; user-select:none; }
 .dev .screen{ position:absolute; inset:7px; border-radius:9px; overflow:hidden; }
 .dev .pin{ position:absolute; top:-11px; left:50%; transform:translateX(-50%); font-size:10.5px; font-weight:800; white-space:nowrap; padding:3px 9px; border-radius:999px; color:#fff; box-shadow:0 6px 14px -6px rgba(0,0,0,.4); }
-.dev.grab{ cursor:grab; } .dev.grab:active{ cursor:grabbing; }
+.dev.grab{ cursor:var(--cur-grab), grab; } .dev.grab:active{ cursor:var(--cur-grabbing), grabbing; }
 .dev.drag{ z-index:6; filter:drop-shadow(0 18px 26px rgba(120,70,30,.4)); }
 .dev.lit .screen{ box-shadow:inset 0 0 0 2px color-mix(in srgb,var(--coral) 70%,transparent); }
 .monitor{ background:#26313f; box-shadow:0 14px 26px -16px rgba(20,30,45,.7); }
@@ -275,9 +277,9 @@ footer.site{ border-top:1px solid var(--line-soft); padding:30px 0; color:var(--
 #cursor.mobile .dot{ display:block; }
 .filechip{ position:absolute; z-index:7; display:flex; align-items:center; gap:6px; padding:5px 10px 5px 7px; border-radius:10px;
   background:var(--card); border:1px solid var(--line); box-shadow:var(--shadow-soft); font-size:11.5px; font-weight:800; color:var(--ink);
-  white-space:nowrap; cursor:grab; user-select:none; transform:translate(-50%,-50%); touch-action:none; transition:box-shadow .15s; }
+  white-space:nowrap; cursor:var(--cur-grab), grab; user-select:none; transform:translate(-50%,-50%); touch-action:none; transition:box-shadow .15s; }
 .filechip svg{ display:block; flex:0 0 auto; }
-.filechip.dragging{ cursor:grabbing; box-shadow:0 16px 28px -12px rgba(120,70,30,.55); }
+.filechip.dragging{ cursor:var(--cur-grabbing), grabbing; box-shadow:0 16px 28px -12px rgba(120,70,30,.55); }
 .filechip.settling{ transition:left .32s cubic-bezier(.35,1.15,.5,1), top .32s cubic-bezier(.35,1.15,.5,1), box-shadow .15s; }
 .dev.drop .screen{ box-shadow:inset 0 0 0 2px var(--green), 0 0 0 3px color-mix(in srgb,var(--green) 32%,transparent); }
 .sentbadge{ position:absolute; z-index:10; transform:translate(-50%,-50%); background:var(--green); color:#fff; font-size:11px; font-weight:800;
