@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>OneMouse | Open Source Licenses</title>
-  <meta name="description" content="Open source libraries and third-party SDK notices used by the OneMouse PC app and Android app." />
+  <meta name="description" content="Open source libraries and third-party SDK notices used by the OneMouse PC, Android, and macOS apps." />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <link rel="stylesheet" href="../css/onemouse.css" />
   <link rel="canonical" href="https://onemouse.pages.dev/en/licenses" />
@@ -35,8 +35,8 @@
     <section class="phero wrap">
       <p class="ey">Open Source</p>
       <h1 class="page">Open Source Licenses</h1>
-      <p class="lead">OneMouse uses open source libraries and third-party SDKs for the PC app, Android app, QR scanning, remote control streaming, billing, and ads. Each component remains licensed by its original copyright holder.</p>
-      <p class="policy-date">Last updated: June 19, 2026</p>
+      <p class="lead">OneMouse uses open source libraries and third-party SDKs for the PC, Android, and macOS apps, QR scanning, remote control streaming, billing, and ads. Each component remains licensed by its original copyright holder.</p>
+      <p class="policy-date">Last updated: July 26, 2026</p>
     </section>
 
     <section>
@@ -54,6 +54,8 @@
             <li><strong>Google Mobile Ads SDK 25.0.0</strong><br />Purpose: Free mode banner ads<br />Terms: Google SDK terms</li>
             <li><strong>Google Play App Update SDK 2.1.0</strong><br />Purpose: Android app update checks<br />Terms: Google SDK terms</li>
             <li><strong>WebRTC Android SDK 144.7559.05</strong><br />Purpose: video streaming for mobile screen remote control<br />License: BSD 3-Clause License</li>
+            <li><strong>LazySodium Android 5.2.0 / libsodium 1.0.20</strong><br />Purpose: Argon2id and Edwards25519 operations for SPAKE2 pairing<br />License: Mozilla Public License 2.0 / ISC License</li>
+            <li><strong>Java Native Access (JNA) 5.17.0</strong><br />Purpose: Android access to the bundled libsodium runtime<br />License: Apache License 2.0 (selected from its dual license)</li>
           </ul>
         </article>
 
@@ -63,12 +65,20 @@
             <li><strong>Electron 41.3.0</strong><br />Purpose: Windows desktop UI runtime<br />License: MIT License</li>
             <li><strong>Python 3.13 runtime</strong><br />Purpose: packaged PC backend runtime<br />License: Python Software Foundation License</li>
             <li><strong>PyInstaller 6.20.0</strong><br />Purpose: backend executable packaging<br />License: GPLv2-or-later with special exception</li>
-            <li><strong>cryptography 47.0.0</strong><br />Purpose: secure pairing and session encryption support<br />License: Apache License 2.0 OR BSD 3-Clause License</li>
+            <li><strong>cryptography 47.0.0</strong><br />Purpose: session, input, file, and screen-stream encryption<br />License: Apache License 2.0 OR BSD 3-Clause License</li>
+            <li><strong>PyNaCl 1.6.2 / bundled libsodium</strong><br />Purpose: Argon2id and Edwards25519 operations for SPAKE2 pairing<br />License: Apache License 2.0 / ISC License</li>
             <li><strong>pynput 1.7.6</strong><br />Purpose: keyboard and mouse input hooks<br />License: GNU Lesser General Public License v3</li>
             <li><strong>zeroconf 0.148.0</strong><br />Purpose: mDNS discovery<br />License: GNU Lesser General Public License v2.1 or later</li>
             <li><strong>pyserial 3.5</strong><br />Purpose: serial port communication for Bluetooth connection<br />License: BSD 3-Clause License</li>
             <li><strong>winsdk 1.0.0b10</strong><br />Purpose: Bluetooth (RFCOMM/SPP) direct socket connection via WinRT<br />License: MIT License</li>
             <li><strong>cffi 2.0.0, pycparser 3.0, six 1.17.0</strong><br />Purpose: Python support dependencies<br />License: MIT License or BSD 3-Clause License</li>
+          </ul>
+        </article>
+
+        <article class="lcard">
+          <h2>macOS app</h2>
+          <ul>
+            <li><strong>Swift Sodium 0.11.0 / libsodium 1.0.22</strong><br />Purpose: Argon2id and Edwards25519 operations for SPAKE2 pairing<br />License: ISC License</li>
           </ul>
         </article>
 
@@ -97,6 +107,10 @@
             <li>AndroidX (Core KTX, Activity KTX, AppCompat), Kotlin standard library — Copyright (c) The Android Open Source Project / JetBrains s.r.o. and Kotlin contributors — Apache License 2.0</li>
             <li>ZXing Android Embedded — Copyright (c) Journey Mobile, Inc.; ZXing Core — Copyright (c) ZXing authors — Apache License 2.0</li>
             <li>cryptography — Copyright (c) The Python Cryptographic Authority and individual contributors — Apache License 2.0 OR BSD 3-Clause License</li>
+            <li>PyNaCl — Copyright (c) The PyNaCl developers — Apache License 2.0</li>
+            <li>LazySodium Android — Copyright (c) Terl Tech Ltd — Mozilla Public License 2.0</li>
+            <li>Java Native Access (JNA) — Copyright (c) JNA contributors — Apache License 2.0</li>
+            <li>Swift Sodium and libsodium — Copyright (c) Frank Denis — ISC License</li>
             <li>WebRTC — Copyright (c) The WebRTC project authors — BSD 3-Clause License</li>
             <li>Electron — Copyright (c) GitHub Inc. and Electron contributors — MIT License</li>
             <li>cffi — Copyright (c) Armin Rigo, Maciej Fijalkowski — MIT License</li>
@@ -112,7 +126,7 @@
 
           <details>
             <summary>Apache License 2.0 — full text</summary>
-            <p>Applies to: AndroidX, Kotlin standard library, ZXing, cryptography</p>
+            <p>Applies to: AndroidX, Kotlin standard library, ZXing, cryptography, PyNaCl, JNA</p>
             <pre class="license-text">                                 Apache License
                            Version 2.0, January 2004
                         http://www.apache.org/licenses/
@@ -304,6 +318,27 @@
           </details>
 
           <details>
+            <summary>ISC License — full text</summary>
+            <p>Applies to: libsodium and Swift Sodium</p>
+            <pre class="license-text">ISC License
+
+Copyright (c) 2013-2026, Frank Denis &lt;j at pureftpd dot org&gt;
+Copyright (c) 2014-2026, Frank Denis &lt;j at pureftpd dot org&gt;
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION
+OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
+CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.</pre>
+          </details>
+
+          <details>
             <summary>MIT License — full text</summary>
             <p>Applies to: Electron, cffi, six, winsdk</p>
             <pre class="license-text">MIT License
@@ -365,6 +400,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</pre>
             <li><strong>GNU LGPL v3</strong> (pynput) — <a href="https://www.gnu.org/licenses/lgpl-3.0.txt" rel="noopener" target="_blank">gnu.org/licenses/lgpl-3.0.txt</a> (and GPL v3 <a href="https://www.gnu.org/licenses/gpl-3.0.txt" rel="noopener" target="_blank">text</a>)</li>
             <li><strong>GNU LGPL v2.1</strong> (zeroconf) — <a href="https://www.gnu.org/licenses/lgpl-2.1.txt" rel="noopener" target="_blank">gnu.org/licenses/lgpl-2.1.txt</a></li>
             <li><strong>GPLv2 with bootloader exception</strong> (PyInstaller) — <a href="https://github.com/pyinstaller/pyinstaller/blob/develop/COPYING.txt" rel="noopener" target="_blank">PyInstaller COPYING.txt</a></li>
+            <li><strong>Mozilla Public License 2.0</strong> (LazySodium Android) — <a href="https://www.mozilla.org/MPL/2.0/" rel="noopener" target="_blank">mozilla.org/MPL/2.0</a>; source: <a href="https://github.com/terl/lazysodium-android" rel="noopener" target="_blank">github.com/terl/lazysodium-android</a></li>
           </ul>
           <p>
             The LGPL components (pynput, zeroconf) are used dynamically as separate modules, and you may replace or relink them to the extent permitted by the LGPL.

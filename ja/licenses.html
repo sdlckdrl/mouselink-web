@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>OneMouse | オープンソースライセンス</title>
-  <meta name="description" content="OneMouse の PC アプリと Android アプリで使用するオープンソースライブラリとサードパーティ SDK の通知です。" />
+  <meta name="description" content="OneMouse の PC、Android、macOS アプリで使用するオープンソースライブラリとサードパーティ SDK の通知です。" />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <link rel="stylesheet" href="../css/onemouse.css" />
   <link rel="canonical" href="https://onemouse.pages.dev/ja/licenses" />
@@ -35,8 +35,8 @@
     <section class="phero wrap">
       <p class="ey">Open Source</p>
       <h1 class="page">オープンソースライセンス</h1>
-      <p class="lead">OneMouse は PC アプリ、Android アプリ、QR スキャン、リモート制御ストリーミング、課金、広告のためにオープンソースライブラリとサードパーティ SDK を使用します。 各コンポーネントの著作権とライセンス条件は、元の配布元の通知に従います。</p>
-      <p class="policy-date">最終更新日: 2026年6月19日</p>
+      <p class="lead">OneMouse は PC、Android、macOS アプリ、QR スキャン、リモート制御ストリーミング、課金、広告のためにオープンソースライブラリとサードパーティ SDK を使用します。 各コンポーネントの著作権とライセンス条件は、元の配布元の通知に従います。</p>
+      <p class="policy-date">最終更新日: 2026年7月26日</p>
     </section>
 
     <section>
@@ -54,6 +54,8 @@
             <li><strong>Google Mobile Ads SDK 25.0.0</strong><br />用途: Free モードのバナー広告<br />条件: Google SDK terms</li>
             <li><strong>Google Play App Update SDK 2.1.0</strong><br />用途: Android アプリの更新確認<br />条件: Google SDK terms</li>
             <li><strong>WebRTC Android SDK 144.7559.05</strong><br />用途: モバイル画面リモート制御の映像ストリーミング<br />ライセンス: BSD 3-Clause License</li>
+            <li><strong>LazySodium Android 5.2.0 / libsodium 1.0.20</strong><br />用途: SPAKE2 ペアリングの Argon2id および Edwards25519 演算<br />ライセンス: Mozilla Public License 2.0 / ISC License</li>
+            <li><strong>Java Native Access (JNA) 5.17.0</strong><br />用途: Android から同梱 libsodium ランタイムへのアクセス<br />ライセンス: Apache License 2.0（デュアルライセンスから選択）</li>
           </ul>
         </article>
 
@@ -63,12 +65,20 @@
             <li><strong>Electron 41.3.0</strong><br />用途: Windows デスクトップ UI ランタイム<br />ライセンス: MIT License</li>
             <li><strong>Python 3.13 runtime</strong><br />用途: PC バックエンド実行環境<br />ライセンス: Python Software Foundation License</li>
             <li><strong>PyInstaller 6.20.0</strong><br />用途: バックエンド実行ファイルのパッケージング<br />ライセンス: GPLv2-or-later with special exception</li>
-            <li><strong>cryptography 47.0.0</strong><br />用途: 安全なペアリングとセッション暗号化<br />ライセンス: Apache License 2.0 OR BSD 3-Clause License</li>
+            <li><strong>cryptography 47.0.0</strong><br />用途: セッション、入力、ファイル、画面ストリームの暗号化<br />ライセンス: Apache License 2.0 OR BSD 3-Clause License</li>
+            <li><strong>PyNaCl 1.6.2 / 同梱 libsodium</strong><br />用途: SPAKE2 ペアリングの Argon2id および Edwards25519 演算<br />ライセンス: Apache License 2.0 / ISC License</li>
             <li><strong>pynput 1.7.6</strong><br />用途: キーボードとマウス入力フック<br />ライセンス: GNU Lesser General Public License v3</li>
             <li><strong>zeroconf 0.148.0</strong><br />用途: mDNS デバイス検出<br />ライセンス: GNU Lesser General Public License v2.1 or later</li>
             <li><strong>pyserial 3.5</strong><br />用途: Bluetooth接続のシリアルポート通信<br />ライセンス: BSD 3-Clause License</li>
             <li><strong>winsdk 1.0.0b10</strong><br />用途: WinRT による Bluetooth（RFCOMM/SPP）ダイレクトソケット接続<br />ライセンス: MIT License</li>
             <li><strong>cffi 2.0.0, pycparser 3.0, six 1.17.0</strong><br />用途: Python ライブラリの補助依存関係<br />ライセンス: MIT License または BSD 3-Clause License</li>
+          </ul>
+        </article>
+
+        <article class="lcard">
+          <h2>macOS アプリ</h2>
+          <ul>
+            <li><strong>Swift Sodium 0.11.0 / libsodium 1.0.22</strong><br />用途: SPAKE2 ペアリングの Argon2id および Edwards25519 演算<br />ライセンス: ISC License</li>
           </ul>
         </article>
 
@@ -97,6 +107,10 @@
             <li>AndroidX (Core KTX, Activity KTX, AppCompat), Kotlin standard library — Copyright (c) The Android Open Source Project / JetBrains s.r.o. and Kotlin contributors — Apache License 2.0</li>
             <li>ZXing Android Embedded — Copyright (c) Journey Mobile, Inc.; ZXing Core — Copyright (c) ZXing authors — Apache License 2.0</li>
             <li>cryptography — Copyright (c) The Python Cryptographic Authority and individual contributors — Apache License 2.0 OR BSD 3-Clause License</li>
+            <li>PyNaCl — Copyright (c) The PyNaCl developers — Apache License 2.0</li>
+            <li>LazySodium Android — Copyright (c) Terl Tech Ltd — Mozilla Public License 2.0</li>
+            <li>Java Native Access (JNA) — Copyright (c) JNA contributors — Apache License 2.0</li>
+            <li>Swift Sodium and libsodium — Copyright (c) Frank Denis — ISC License</li>
             <li>WebRTC — Copyright (c) The WebRTC project authors — BSD 3-Clause License</li>
             <li>Electron — Copyright (c) GitHub Inc. and Electron contributors — MIT License</li>
             <li>cffi — Copyright (c) Armin Rigo, Maciej Fijalkowski — MIT License</li>
@@ -112,7 +126,7 @@
 
           <details>
             <summary>Apache License 2.0 — 全文を表示</summary>
-            <p>該当コンポーネント: AndroidX, Kotlin standard library, ZXing, cryptography</p>
+            <p>該当コンポーネント: AndroidX, Kotlin standard library, ZXing, cryptography, PyNaCl, JNA</p>
             <pre class="license-text">                                 Apache License
                            Version 2.0, January 2004
                         http://www.apache.org/licenses/
@@ -304,6 +318,27 @@
           </details>
 
           <details>
+            <summary>ISC License — 全文を表示</summary>
+            <p>該当コンポーネント: libsodium, Swift Sodium</p>
+            <pre class="license-text">ISC License
+
+Copyright (c) 2013-2026, Frank Denis &lt;j at pureftpd dot org&gt;
+Copyright (c) 2014-2026, Frank Denis &lt;j at pureftpd dot org&gt;
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION
+OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
+CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.</pre>
+          </details>
+
+          <details>
             <summary>MIT License — 全文を表示</summary>
             <p>該当コンポーネント: Electron, cffi, six, winsdk</p>
             <pre class="license-text">MIT License
@@ -365,6 +400,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</pre>
             <li><strong>GNU LGPL v3</strong> (pynput) — <a href="https://www.gnu.org/licenses/lgpl-3.0.txt" rel="noopener" target="_blank">gnu.org/licenses/lgpl-3.0.txt</a>（および GPL v3 <a href="https://www.gnu.org/licenses/gpl-3.0.txt" rel="noopener" target="_blank">本文</a>）</li>
             <li><strong>GNU LGPL v2.1</strong> (zeroconf) — <a href="https://www.gnu.org/licenses/lgpl-2.1.txt" rel="noopener" target="_blank">gnu.org/licenses/lgpl-2.1.txt</a></li>
             <li><strong>GPLv2 with bootloader exception</strong> (PyInstaller) — <a href="https://github.com/pyinstaller/pyinstaller/blob/develop/COPYING.txt" rel="noopener" target="_blank">PyInstaller COPYING.txt</a></li>
+            <li><strong>Mozilla Public License 2.0</strong> (LazySodium Android) — <a href="https://www.mozilla.org/MPL/2.0/" rel="noopener" target="_blank">mozilla.org/MPL/2.0</a>; ソース: <a href="https://github.com/terl/lazysodium-android" rel="noopener" target="_blank">github.com/terl/lazysodium-android</a></li>
           </ul>
           <p>
             LGPL コンポーネント（pynput, zeroconf）は別モジュールとして動的に使用され、LGPL が許可する範囲で置換・再リンクが可能です。
