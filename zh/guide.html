@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>使用指南 | OneMouse 一鼠 — 从首次连接到常用功能</title>
-  <meta name="description" content="OneMouse 使用指南：按顺序为你讲解首次连接步骤、手机位置布局、移动端远程控制、文件与剪贴板传输、数字快捷键、Bluetooth 连接、连接另一台 PC 以及键盘快捷键。" />
+  <meta name="description" content="OneMouse 使用指南：介绍 Android 与另一台 Windows PC 的连接，并预览仅作为辅助设备的 macOS 13+ Mac；Mac 公证安装包与真机验证仍在进行。" />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <link rel="stylesheet" href="../css/onemouse.css" />
   <link rel="canonical" href="https://onemouse.pages.dev/zh/guide" />
@@ -37,7 +37,7 @@
     <section class="phero wrap">
       <p class="ey">使用指南</p>
       <h1 class="page">从首次连接到常用功能，按顺序来。</h1>
-      <p class="lead">普通用户只要照着这个顺序做就行。复杂的网络说明请看<a href="./technical.html" style="color:var(--coral-deep);font-weight:700">技术与安全</a>，遇到用不了的情况请到<a href="./help.html" style="color:var(--coral-deep);font-weight:700">帮助</a>单独查看。</p>
+      <p class="lead">Windows 始终作为主设备。Android 与另一台 Windows PC 已作为辅助设备使用；Mac 辅助设备源码及配套支持已准备，但公开公证安装包与真机验证仍在进行。</p>
       <nav class="toc" aria-label="本页目录">
         <a href="#start">5 分钟连接步骤</a>
         <a href="#position">手机位置布局</a>
@@ -46,6 +46,7 @@
         <a href="#quick">数字快捷键</a>
         <a href="#bluetooth">Bluetooth 连接</a>
         <a href="#pcpc">连接另一台 PC</a>
+        <a href="#mac">连接 Mac 辅助设备</a>
         <a href="#shortcuts">快捷键表</a>
       </nav>
     </section>
@@ -54,7 +55,7 @@
     <section id="start">
       <div class="wrap narrow">
         <div class="sec-head"><p class="ey">5 分钟连接</p><h2 class="sec">首次连接只要照着这个顺序做就行。</h2>
-          <p class="sec-lead">以 Wi-Fi（同一台 Wi-Fi 路由器）为准。需要打开的只有无障碍服务这一项。</p></div>
+          <p class="sec-lead">以下是 Android 的首次连接流程，以 Wi-Fi（同一台 Wi-Fi 路由器）为准。Mac 的独立步骤是公开公证版发布后使用的预览流程。</p></div>
         <div class="timeline">
           <div class="tstep"><div class="rail"><span class="num">1</span><span class="line"></span></div><div class="body"><h4>打开 PC 应用</h4><p>在 Windows 上运行 OneMouse，屏幕上会显示 6 位数字代码和二维码。</p></div></div>
           <div class="tstep"><div class="rail"><span class="num">2</span><span class="line"></span></div><div class="body"><h4>打开 Android 无障碍服务</h4><p>要接收 PC 的鼠标和键盘输入，需要在 Android 上打开 OneMouse 无障碍服务。实际上只要准备好这一项就够了。</p></div></div>
@@ -72,7 +73,7 @@
     <section class="section-alt" id="position">
       <div class="wrap narrow">
         <div class="sec-head"><p class="ey">手机位置</p><h2 class="sec">连接后，只要把手机位置对准实际方向就行。</h2></div>
-        <p class="sec-lead" style="max-width:60ch">确定鼠标要越过的边缘，按手机实际摆放的一侧（左、右、上、下）来布置。就像主页上的布局演示一样，在应用里也可以拖动手机、平板、另一台 PC 来布置。</p>
+        <p class="sec-lead" style="max-width:60ch">确定鼠标要越过的边缘，按设备实际摆放的一侧（左、右、上、下）来布置。当前可拖动手机、平板和另一台 Windows PC；Mac 公开版发布后将以辅助设备加入布局。</p>
         <details class="fold"><summary><span>查看布局界面</span></summary>
           <div class="fold-body"><a href="../assets/onboarding_pc_position.png" target="_blank" rel="noopener"><img src="../assets/onboarding_pc_position.png" alt="OneMouse 手机位置布局界面" loading="lazy" style="border-radius:12px" /></a></div></details>
       </div>
@@ -165,7 +166,7 @@
     <section class="section-alt" id="bluetooth">
       <div class="wrap">
         <div class="sec-head"><p class="ey">Bluetooth</p><h2 class="sec">没有 Wi-Fi 路由器，也能用 Bluetooth 连接。</h2>
-          <p class="sec-lead">通过 Bluetooth 把 PC↔Android、PC↔PC 直接连起来，互传输入、剪贴板和文件。不需要 Wi-Fi 路由器或互联网。</p></div>
+          <p class="sec-lead">目前可通过 Bluetooth 把 Windows 主设备与 Android 或另一台 Windows PC 直接连接。Mac Bluetooth 支持已写入源码，但公开公证安装包与真机验证仍在进行。</p></div>
         <div class="split lead-left">
           <div>
             <div class="panel" style="margin-bottom:14px"><h3>这些情况很好用</h3>
@@ -204,18 +205,35 @@
       </div>
     </section>
 
-    <!-- PERMISSIONS (short summary + link) -->
-    <section class="section-alt" id="permissions">
+    <!-- MAC AUXILIARY DEVICE -->
+    <section class="section-alt" id="mac">
       <div class="wrap narrow">
-        <div class="sec-head"><p class="ey">权限</p><h2 class="sec">必须打开的只有无障碍一项，其余按功能而定。</h2>
-          <p class="sec-lead">权限不会一次性全部申请，而是在使用该功能时才询问。各项的详细说明在技术与安全中。</p></div>
+        <div class="sec-head"><p class="ey">Mac 辅助设备 · 预览</p><h2 class="sec">公开版发布后，从 Windows 选择 Mac，再输入 Mac 上显示的 6 位代码。</h2>
+          <p class="sec-lead">以下 5 步是公开公证版发布后使用的流程。Mac 源码及配套支持已准备，但公开公证安装包与 Windows+Mac 真机验证仍在进行，尚不能视为正式发布或验证完成。</p></div>
+        <div class="timeline">
+          <div class="tstep"><div class="rail"><span class="num">1</span><span class="line"></span></div><div class="body"><h4>在 Windows 和 Mac 上打开公开版 OneMouse</h4><p>发布后，让 Windows 主设备与 macOS 13+ Mac 连接到同一个本地网络，并在两端运行 OneMouse。</p></div></div>
+          <div class="tstep"><div class="rail"><span class="num">2</span><span class="line"></span></div><div class="body"><h4>在 Mac 上允许必要权限</h4><p>“辅助功能”是接收 Windows 鼠标和键盘输入所必需的。macOS 15+ 还需允许“本地网络”；macOS 13/14 可能不会显示该项目。</p></div></div>
+          <div class="tstep"><div class="rail"><span class="num">3</span><span class="line"></span></div><div class="body"><h4>在 Windows 上选择找到的 Mac</h4><p>打开 Windows OneMouse 的设备管理，从发现列表中选择这台 Mac。请勿在 Mac 上把它设为主设备。</p></div></div>
+          <div class="tstep"><div class="rail"><span class="num">4</span><span class="line"></span></div><div class="body"><h4>在 Windows 输入 Mac 显示的 6 位代码</h4><p>查看 Mac OneMouse 窗口中的 6 位配对代码，并把该代码输入 Windows。配对完成后，Mac 会作为辅助设备出现在设备管理中。</p></div></div>
+          <div class="tstep"><div class="rail"><span class="num">5</span></div><div class="body"><h4>布置位置并开始使用</h4><p>公开版发布后，在 Windows 的布局编辑器中把 Mac 放到实际方向，随后把鼠标移过对应边缘。只有要在 Windows 查看 Mac 屏幕或窗口时，才需要在 Mac 额外允许“屏幕录制”。</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PERMISSIONS (short summary + link) -->
+    <section id="permissions">
+      <div class="wrap narrow">
+        <div class="sec-head"><p class="ey">权限</p><h2 class="sec">Android 与 Mac 所需的权限不同。</h2>
+          <p class="sec-lead">权限不会一次性全部申请，而是在连接或使用相应功能时才询问。各项的详细说明在技术与安全中。</p></div>
         <div class="panel"><ul>
-          <li><b>无障碍服务 — 必需：</b>控制 Android，以及屏幕捕获、远程输入都需要它。</li>
-          <li><b>屏幕捕获授权 — 启动远程控制时：</b>通过 Android 系统弹窗授权。</li>
-          <li><b>附近 Wi-Fi 设备 — 连接时：</b>在 Android 13+ 查找 PC 时可能会请求一次。</li>
-          <li><b>通知、系统设置、电池优化例外：</b>仅在分别需要显示服务状态、调节亮度、息屏后保持稳定时才用到。</li>
+          <li><b>Android 无障碍服务 — 必需：</b>用于接收 Windows 的鼠标和键盘输入。</li>
+          <li><b>Android 屏幕捕获与附近 Wi-Fi 设备：</b>分别在启动远程控制、Android 13+ 查找 PC 时请求。</li>
+          <li><b>Mac“辅助功能” — 接收输入时必需：</b>用于接收 Windows 主设备的鼠标和键盘输入。</li>
+          <li><b>Mac“本地网络” — macOS 15+：</b>使用 LAN 发现时需要允许；macOS 13/14 可能不会显示该项目。</li>
+          <li><b>Mac“屏幕录制” — 可选：</b>公开版发布后，只有从 Windows 查看 Mac 屏幕或窗口时才需要。</li>
+          <li><b>Bluetooth：</b>仅在选择 Bluetooth 连接时使用相应系统权限；Mac 支持仍处于公证包发布和真机验证阶段。</li>
         </ul></div>
-        <div style="margin-top:18px"><a class="btn btn-sec sm" href="./technical.html#permissions">查看 6 种权限详情</a></div>
+        <div style="margin-top:18px"><a class="btn btn-sec sm" href="./technical.html#permissions">查看权限详情</a></div>
       </div>
     </section>
 

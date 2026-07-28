@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>技術・セキュリティ | OneMouse ワンマウス — 接続の仕組みと権限</title>
-  <meta name="description" content="OneMouseの接続の仕組みと権限の使い方をまとめました。ローカル優先で動作しサーバーを経由しない仕組み、権限が必要な理由、データの扱い方、ネットワーク条件とサポート範囲について。" />
+  <meta name="description" content="OneMouseのWindows・Android接続と、公開配布・実機検証を準備中のmacOS 13以降サブ版について、役割、権限、データの扱い、サポート範囲を説明します。" />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <link rel="stylesheet" href="../css/onemouse.css" />
   <link rel="canonical" href="https://onemouse.pages.dev/ja/technical" />
@@ -40,6 +40,7 @@
       <p class="lead">このページは一般的な使い方ではなく、<b>どうやって接続されるのか</b>と<b>なぜ権限を使うのか</b>を説明します。使う順番は<a href="./guide.html" style="color:var(--coral-deep);font-weight:700">使い方ガイド</a>をご覧ください。</p>
       <nav class="toc" aria-label="このページの目次">
         <a href="#data-flow">ローカル優先</a>
+        <a href="#roles">デバイスの役割</a>
         <a href="#permissions">権限の使い方</a>
         <a href="#handling">データの扱い</a>
         <a href="#network">ネットワーク条件</a>
@@ -52,22 +53,40 @@
     <section id="data-flow">
       <div class="wrap narrow">
         <div class="sec-head"><p class="ey">Local First</p><h2 class="sec">ペアリングした自分のデバイス同士でだけ動作します。</h2></div>
-        <p class="sec-lead" style="max-width:64ch">入力・ファイル・クリップボードは、<b>同じネットワーク上の自分のPCとAndroid（または別のPC）</b>の間でやり取りされます。外部サーバーを経由してアカウントにアップロードする仕組みではありません。そのため接続の前提条件は、2台のデバイスが<b>同じWi-Fi（同じWi-Fiルーター）</b>の下にあること（またはBluetoothで直接つなぐこと）です。</p>
+        <p class="sec-lead" style="max-width:64ch">入力・ファイル・クリップボードは、<b>WindowsメインPCと、ペアリングしたAndroid・Windows PC・Mac</b>の間でやり取りされます。外部サーバーを経由してアカウントにアップロードする仕組みではありません。Wi-Fi/LANでは、2台のデバイスがお互いを直接見つけられる同じローカルネットワークが必要です。</p>
+      </div>
+    </section>
+
+    <!-- デバイスの役割 -->
+    <section class="section-alt" id="roles">
+      <div class="wrap">
+        <div class="sec-head"><p class="ey">デバイスの役割</p><h2 class="sec">Windowsがメイン、接続先はサブデバイスです。</h2>
+          <p class="sec-lead">メインは入力と接続を開始する側、サブは入力を受け取る側です。準備中のMac版はサブ専用です。</p></div>
+        <div class="cards">
+          <article class="card accent"><p class="card-lbl">メイン</p><h3>Windows 10/11</h3><p>マウス・キーボード入力を取得し、デバイス管理で接続先を選び、配置した画面境界から入力を送ります。</p></article>
+          <article class="card"><p class="card-lbl">サブ</p><h3>Android</h3><p>Windowsから届いた入力をアクセシビリティサービスで受け取り、ファイルとクリップボードをやり取りします。</p></article>
+          <article class="card"><p class="card-lbl">サブ</p><h3>別のWindows PC</h3><p>メイン/サブの役割を設定し、サブ側で入力を受け取ります。コンピューター間でファイルも転送できます。</p></article>
+          <article class="card"><p class="card-lbl">サブ専用 · 公開準備中</p><h3>macOS 13以降</h3><p>ソースはWindows側から6桁コードで接続するサブ専用です。署名・公証済み配布と実機検証はまだ完了していません。</p></article>
+        </div>
       </div>
     </section>
 
     <!-- PERMISSIONS -->
-    <section class="section-alt" id="permissions">
+    <section id="permissions">
       <div class="wrap">
         <div class="sec-head"><p class="ey">Permissions</p><h2 class="sec">権限は機能の提供に必要な範囲だけに。</h2>
-          <p class="sec-lead">一度にまとめて求めるのではなく、その機能を始めるときにAndroid上でユーザー自身がオンにします。</p></div>
+          <p class="sec-lead">一度にまとめて求めるのではなく、その機能を始めるときにAndroidまたは準備中のMac版上でユーザー自身が許可します。</p></div>
         <div class="cards">
-          <article class="card accent"><p class="card-lbl">必須</p><h3>アクセシビリティサービス</h3><p>PCのマウス・キーボードでAndroidを操作し、リモート入力や画面関連の動作を処理するにはアクセシビリティサービスが必要です。OneMouseの中核となる機能がこれに依存しています。</p></article>
-          <article class="card"><p class="card-lbl">リモート操作の開始時</p><h3>画面キャプチャの承認</h3><p>モバイルのリモート操作ウィンドウを開くときに、Androidのシステムポップアップで承認します。保護された画面など一部は表示されない場合があります。</p></article>
+          <article class="card accent"><p class="card-lbl">Android・必須</p><h3>アクセシビリティサービス</h3><p>Windowsのマウス・キーボード入力をAndroidへ適用するために使います。入力内容を広告や画面収集には使いません。</p></article>
+          <article class="card"><p class="card-lbl">Android・リモート操作時</p><h3>画面キャプチャの承認</h3><p>モバイルのリモート操作ウィンドウを開くときに、Androidのシステムポップアップで承認します。保護された画面など一部は表示されない場合があります。</p></article>
           <article class="card"><p class="card-lbl">接続時</p><h3>付近のWi-Fiデバイス</h3><p>Android 13以降でPCを探すときに求められることがあります。アプリ起動時ではなく、検索するその瞬間にだけ確認します。</p></article>
           <article class="card"><p class="card-lbl">サービス開始時</p><h3>通知</h3><p>バックグラウンドの接続状態を表示するために使います。必要なときにだけ求められます。</p></article>
           <article class="card"><p class="card-lbl">明るさ調整時</p><h3>システム設定の変更</h3><p>Alt+Shift+↑/↓でモバイル画面の明るさを調節するとき、最初に一度だけ必要です。</p></article>
           <article class="card"><p class="card-lbl">推奨</p><h3>バッテリー最適化の除外</h3><p>画面がオフになったあとに接続が切れる場合は、安定性のために推奨します。必須ではありません。</p></article>
+          <article class="card accent"><p class="card-lbl">Mac・macOS 15以降</p><h3>ローカルネットワーク</h3><p>WindowsメインPCの検出に使います。macOS 13/14では表示されない場合があり、ランタイムは不要として扱います。</p></article>
+          <article class="card accent"><p class="card-lbl">Mac・必須</p><h3>アクセシビリティ</h3><p>Windowsから受け取ったマウス・キーボード入力をMac上で実行するために必要です。</p></article>
+          <article class="card"><p class="card-lbl">Mac・画面共有時のみ</p><h3>画面収録</h3><p>LANでMacの画面やウィンドウをWindowsに表示するときだけ必要です。Bluetoothでは画面共有を提供しません。</p></article>
+          <article class="card"><p class="card-lbl">Mac・Bluetooth接続時</p><h3>Bluetooth</h3><p>システムでペアリングしたBluetooth接続を使うときに要求します。</p></article>
         </div>
       </div>
     </section>
@@ -81,6 +100,7 @@
           <li>送信したファイルをサーバーに保存しません。選んだデバイスへ直接送ります。</li>
           <li><b>アクセシビリティのデータを広告や画面収集の目的で使いません。</b>入力の伝達やリモート操作など、明示された機能にだけ使います。</li>
           <li>クリップボード・ファイルの送信は、ユーザーが相手を選んで実行するときにだけ行われます。</li>
+          <li>Macのアクセシビリティ、画面収録、Bluetoothと、macOS 15以降のローカルネットワーク許可状態は、接続準備と機能の利用可否を表示するためにMac上で確認します。</li>
         </ul></div>
       </div>
     </section>
@@ -93,18 +113,20 @@
           <div class="panel tip"><h3>推奨環境</h3><ul><li>個人のWi-Fiルーターの同じWi-Fi（2.4/5GHzは問いません）</li><li>デバイス間の通信が許可されたネットワーク</li><li>WindowsファイアウォールでOneMouseの受信（インバウンド）を許可</li></ul></div>
           <div class="panel"><h3>制約のある環境</h3><ul><li>ゲスト・社内Wi-Fiのクライアント分離（client isolation）</li><li>「パブリック」と判定されたネットワークの受信ブロック</li><li>その場合はBluetoothの直接接続または個人用ホットスポットを利用</li></ul></div>
         </div>
-        <p class="sec-lead" style="margin-top:16px">OneMouseはインターネットのリレーサーバーを経由しないため、2台のデバイスがお互いを直接見つけられる環境である必要があります。</p>
+        <p class="sec-lead" style="margin-top:16px">OneMouseはインターネットのリレーサーバーを経由しないため、WindowsメインPCとAndroid、別のWindows PC、Macがお互いを直接見つけられる環境である必要があります。</p>
       </div>
     </section>
 
     <!-- SCOPE -->
     <section id="scope">
       <div class="wrap narrow">
-        <div class="sec-head"><p class="ey">Support Scope</p><h2 class="sec">公開ガイドは、Wi-Fi/LANとBluetooth接続を基準にしています。</h2></div>
+        <div class="sec-head"><p class="ey">Support Scope</p><h2 class="sec">Macは配布と実機検証の完了後に正式サポートへ移行します。</h2></div>
         <div class="panel"><ul>
-          <li>サポート：Windows 10/11 + Android、同じネットワーク上の<b>Wi-Fi/LAN</b>および<b>Bluetooth</b>の直接接続。</li>
+          <li>メイン：<b>Windows 10/11</b>。入力と接続を開始し、サブデバイスを選択・配置します。</li>
+          <li>サブ：現在はAndroidと別のWindows PC。<b>macOS 13以降のMac</b>はサブ専用のソース実装済みですが、公証済み配布版と実機検証は準備中です。</li>
+          <li>Macの入力・ファイル・境界ドラッグ・Bluetoothは実機検証中です。Mac画面・ウィンドウ共有はLAN専用です。</li>
           <li>対象外：USB/ADBを介した接続は公式のサポート範囲ではありません。</li>
-          <li>PC↔PCはメイン / サブの役割で動作し、双方向のファイル転送に対応します。</li>
+          <li>コンピューター間はメイン / サブの役割で動作し、ファイルとクリップボードを直接やり取りします。</li>
         </ul></div>
       </div>
     </section>

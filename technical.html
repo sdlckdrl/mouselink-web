@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>기술·보안 | OneMouse 원마우스 — 연결 구조와 권한</title>
-  <meta name="description" content="OneMouse의 연결 구조와 권한 사용을 정리했습니다. 로컬 우선 동작, 서버 미경유, 권한이 필요한 이유, 데이터 처리 방식, 네트워크 조건과 지원 범위." />
+  <meta name="description" content="OneMouse 기술·보안 안내: Windows, Android, macOS 13+ 보조 기기의 로컬 연결 구조, 플랫폼별 권한, 데이터 처리 방식과 지원 범위." />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <link rel="stylesheet" href="./css/onemouse.css" />
   <link rel="canonical" href="https://onemouse.pages.dev/technical" />
@@ -52,7 +52,7 @@
     <section id="data-flow">
       <div class="wrap narrow">
         <div class="sec-head"><p class="ey">Local First</p><h2 class="sec">페어링한 내 기기 사이에서만 동작합니다.</h2></div>
-        <p class="sec-lead" style="max-width:64ch">입력·파일·클립보드는 <b>같은 네트워크의 내 PC와 Android(또는 다른 PC)</b> 사이에서 오갑니다. 외부 서버를 거쳐 계정에 올리는 구조가 아닙니다. 그래서 연결의 전제 조건은 두 기기가 <b>같은 Wi-Fi(같은 공유기)</b> 아래에 있는 것(또는 블루투스로 직접 연결)입니다.</p>
+        <p class="sec-lead" style="max-width:64ch">입력·파일·클립보드는 <b>같은 네트워크의 Windows 메인 PC와 Android, 다른 Windows PC 또는 보조 Mac</b> 사이에서 오갑니다. 외부 서버를 거쳐 계정에 올리는 구조가 아닙니다. 그래서 연결의 전제 조건은 두 기기가 <b>같은 Wi-Fi(같은 공유기)</b> 아래에 있는 것(또는 블루투스로 직접 연결)입니다.</p>
       </div>
     </section>
 
@@ -60,7 +60,7 @@
     <section class="section-alt" id="permissions">
       <div class="wrap">
         <div class="sec-head"><p class="ey">Permissions</p><h2 class="sec">권한은 기능 제공에 필요한 범위로만.</h2>
-          <p class="sec-lead">한꺼번에 요구하지 않고, 그 기능을 시작할 때 Android에서 사용자가 직접 켭니다.</p></div>
+          <p class="sec-lead">한꺼번에 요구하지 않고, Android와 공개 준비 중인 Mac에서 해당 기능을 시작할 때 사용자가 직접 켭니다.</p></div>
         <div class="cards">
           <article class="card accent"><p class="card-lbl">필수</p><h3>접근성 서비스</h3><p>PC의 마우스·키보드로 Android를 제어하고, 원격 입력·화면 관련 동작을 처리하려면 접근성 서비스가 필요합니다. OneMouse의 핵심 기능이 여기에 의존합니다.</p></article>
           <article class="card"><p class="card-lbl">원격 제어 시작 시</p><h3>화면 캡처 승인</h3><p>모바일 원격 제어 창을 열 때 Android 시스템 팝업으로 승인합니다. 보안 화면 등 일부는 표시되지 않을 수 있습니다.</p></article>
@@ -68,6 +68,10 @@
           <article class="card"><p class="card-lbl">서비스 시작 시</p><h3>알림</h3><p>백그라운드 연결 상태를 표시하는 데 씁니다. 필요할 때만 요청됩니다.</p></article>
           <article class="card"><p class="card-lbl">밝기 사용 시</p><h3>시스템 설정 변경</h3><p>Alt+Shift+↑/↓로 모바일 화면 밝기를 조절할 때 처음 한 번 필요합니다.</p></article>
           <article class="card"><p class="card-lbl">권장</p><h3>배터리 제한 예외</h3><p>화면이 꺼진 뒤 연결이 끊긴다면 안정성을 위해 권장합니다. 필수는 아닙니다.</p></article>
+          <article class="card accent"><p class="card-lbl">Mac 연결·입력 · 공개 준비 중</p><h3>손쉬운 사용·로컬 네트워크</h3><p>Windows 입력을 적용하려면 손쉬운 사용이 필요합니다. 로컬 네트워크 권한은 macOS 15+에서 기기 검색에 사용되며, macOS 13/14에서는 표시되지 않을 수 있습니다.</p></article>
+          <article class="card"><p class="card-lbl">Mac 화면 공유 시</p><h3>화면 녹화</h3><p>Windows에서 Mac 화면이나 창을 볼 때만 필요합니다. 기본 입력과 파일·클립보드 전송에는 요구하지 않습니다.</p></article>
+          <article class="card"><p class="card-lbl">Mac Bluetooth 연결 시</p><h3>Bluetooth</h3><p>시스템에서 페어링한 Bluetooth 연결을 사용할 때 요청합니다. Mac 화면·창 공유는 Bluetooth에서 지원하지 않고 LAN 전용입니다.</p></article>
+          <article class="card"><p class="card-lbl">Mac 페어링 정보</p><h3>Keychain</h3><p>서명된 배포 앱은 페어링 세션 키를 macOS Keychain에 보관합니다. 페어링을 해제하면 해당 연결 정보를 삭제할 수 있습니다.</p></article>
         </div>
       </div>
     </section>
@@ -81,6 +85,7 @@
           <li>전송한 파일을 서버에 저장하지 않습니다. 선택한 기기로 직접 보냅니다.</li>
           <li><b>접근성 데이터를 광고나 화면 수집 용도로 사용하지 않습니다.</b> 입력 전달·원격 제어 등 명시된 기능에만 씁니다.</li>
           <li>클립보드·파일 전송은 사용자가 대상을 선택하고 실행할 때만 일어납니다.</li>
+          <li>Mac 화면·창 공유 데이터는 사용자가 시작한 로컬 세션에서 Windows로 직접 전송되며 운영 서버에 저장하지 않습니다.</li>
         </ul></div>
       </div>
     </section>
@@ -100,11 +105,19 @@
     <!-- SCOPE -->
     <section id="scope">
       <div class="wrap narrow">
-        <div class="sec-head"><p class="ey">Support Scope</p><h2 class="sec">공개 가이드는 Wi-Fi/LAN과 블루투스 연결을 기준으로 합니다.</h2></div>
-        <div class="panel"><ul>
-          <li>지원: Windows 10/11 + Android, 같은 네트워크의 <b>Wi-Fi/LAN</b> 및 <b>블루투스</b> 직접 연결.</li>
-          <li>제외: USB/ADB를 통한 연결은 공식 지원 범위가 아닙니다.</li>
-          <li>PC↔PC는 메인/서브 역할로 동작하며 양방향 파일 전송을 지원합니다.</li>
+        <div class="sec-head"><p class="ey">Support Scope</p><h2 class="sec">Mac은 배포·실기기 검증이 끝난 뒤 공식 지원으로 전환합니다.</h2></div>
+        <div class="table-wrap"><table class="kt">
+          <thead><tr><th>플랫폼</th><th>역할</th><th>기본 권한</th><th>연결</th></tr></thead>
+          <tbody>
+            <tr><td>Windows 10/11</td><td>메인 또는 보조</td><td>방화벽 허용</td><td>LAN / Bluetooth</td></tr>
+            <tr><td>Android</td><td>보조 기기</td><td>접근성</td><td>LAN / Bluetooth</td></tr>
+            <tr><td>macOS 13+</td><td><b>보조 전용 · 준비 중</b></td><td>손쉬운 사용 · 로컬 네트워크(15+)</td><td>LAN / Bluetooth 검증 중</td></tr>
+          </tbody>
+        </table></div>
+        <div class="panel" style="margin-top:16px"><ul>
+          <li>Mac 화면·창을 Windows에서 볼 때만 화면 녹화 권한이 추가로 필요하며, 이 기능은 LAN 전용입니다.</li>
+          <li>Mac 소스 구현은 준비됐지만 실제 Mac 권한·입력·파일·경계 드래그·화면 공유·Bluetooth 검증과 Developer ID 서명·공증 배포는 아직 완료되지 않았습니다.</li>
+          <li>USB/ADB를 통한 연결은 공식 지원 범위가 아닙니다.</li>
         </ul></div>
       </div>
     </section>

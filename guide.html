@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>사용 가이드 | OneMouse 원마우스 — 처음 연결부터 자주 쓰는 기능까지</title>
-  <meta name="description" content="OneMouse 사용 가이드: 처음 연결 순서, 폰 위치 배치, 모바일 원격 제어, 파일·클립보드 전송, 번호 단축키, 블루투스 연결, 다른 PC 연결, 키보드 단축키를 순서대로 안내합니다." />
+  <meta name="description" content="OneMouse 사용 가이드: Android와 다른 Windows PC 연결, 파일·클립보드, 원격 제어, Bluetooth 사용법과 공개 준비 중인 macOS 13+ 보조 기기 절차를 안내합니다." />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <link rel="stylesheet" href="./css/onemouse.css" />
   <link rel="canonical" href="https://onemouse.pages.dev/guide" />
@@ -39,14 +39,15 @@
       <h1 class="page">처음 연결부터 자주 쓰는 기능까지, 순서대로.</h1>
       <p class="lead">일반 사용자는 이 순서대로만 따라오면 됩니다. 어려운 네트워크 설명은 <a href="./technical.html" style="color:var(--coral-deep);font-weight:700">기술·보안</a>, 안 될 때는 <a href="./help.html" style="color:var(--coral-deep);font-weight:700">도움말</a>에서 따로 봅니다.</p>
       <nav class="toc" aria-label="이 페이지 목차">
-        <a href="#start">5분 연결 순서</a>
+        <a href="#start">Android 연결</a>
         <a href="#position">폰 위치 배치</a>
         <a href="#remote">모바일 원격 제어</a>
         <a href="#files">파일·클립보드</a>
         <a href="#text-to-pc">모바일 → PC 전송</a>
         <a href="#quick">번호 단축키</a>
         <a href="#bluetooth">블루투스 연결</a>
-        <a href="#pcpc">다른 PC 연결</a>
+        <a href="#pcpc">Windows 보조 PC</a>
+        <a href="#mac">Mac 보조 기기</a>
         <a href="#shortcuts">단축키 표</a>
       </nav>
     </section>
@@ -54,8 +55,8 @@
     <!-- QUICK START -->
     <section id="start">
       <div class="wrap narrow">
-        <div class="sec-head"><p class="ey">5분 연결</p><h2 class="sec">처음 연결은 이 순서만 따라가면 됩니다.</h2>
-          <p class="sec-lead">Wi-Fi(같은 공유기) 기준입니다. 켤 건 접근성 권한 하나뿐이에요.</p></div>
+        <div class="sec-head"><p class="ey">Android 연결</p><h2 class="sec">Android 첫 연결은 이 순서만 따라가면 됩니다.</h2>
+          <p class="sec-lead">Wi-Fi(같은 공유기) 기준입니다. Android 제어에는 접근성 권한이 필요합니다. Mac은 아래의 <a href="#mac" style="color:var(--coral-deep);font-weight:700">Mac 보조 기기 연결</a>을 따라가세요.</p></div>
         <div class="timeline">
           <div class="tstep"><div class="rail"><span class="num">1</span><span class="line"></span></div><div class="body"><h4>PC 앱을 켭니다</h4><p>Windows에서 OneMouse를 실행하면 화면에 6자리 코드와 QR 코드가 나옵니다.</p></div></div>
           <div class="tstep"><div class="rail"><span class="num">2</span><span class="line"></span></div><div class="body"><h4>Android 접근성 권한을 켭니다</h4><p>PC 마우스·키보드 입력을 받으려면 Android에서 OneMouse 접근성 서비스를 켭니다. 실질적으로 이것만 준비하면 됩니다.</p></div></div>
@@ -72,8 +73,8 @@
     <!-- POSITION -->
     <section class="section-alt" id="position">
       <div class="wrap narrow">
-        <div class="sec-head"><p class="ey">폰 위치</p><h2 class="sec">연결 후엔 폰 위치만 실제 방향에 맞추면 됩니다.</h2></div>
-        <p class="sec-lead" style="max-width:60ch">마우스가 넘어갈 가장자리를 정하고, 실제로 폰을 놓아둔 쪽(좌·우·상·하)에 맞춰 배치합니다. 홈 화면의 배치 데모처럼, 앱에서도 폰·태블릿·다른 PC를 끌어서 배치합니다.</p>
+        <div class="sec-head"><p class="ey">기기 위치</p><h2 class="sec">연결 후엔 보조 기기를 실제 방향에 맞추면 됩니다.</h2></div>
+        <p class="sec-lead" style="max-width:60ch">마우스가 넘어갈 가장자리를 정하고 실제 기기 방향에 맞춰 배치합니다. 앱에서는 폰·태블릿·다른 PC를 끌어 배치하며, Mac 배치는 공개 빌드에서 제공할 예정입니다.</p>
         <details class="fold"><summary><span>배치 화면 보기</span></summary>
           <div class="fold-body"><a href="./assets/onboarding_pc_position.png" target="_blank" rel="noopener"><img src="./assets/onboarding_pc_position.png" alt="OneMouse 폰 위치 배치 화면" loading="lazy" style="border-radius:12px" /></a></div></details>
       </div>
@@ -105,12 +106,12 @@
     <!-- FILES -->
     <section class="section-alt" id="files">
       <div class="wrap">
-        <div class="sec-head"><p class="ey">파일·클립보드</p><h2 class="sec">파일은 전송 화면, 빠른 드롭존, PC-to-PC 드래그로 보냅니다.</h2></div>
+        <div class="sec-head"><p class="ey">파일·클립보드</p><h2 class="sec">파일은 전송 화면, 빠른 드롭존, 기기 경계 드래그로 보냅니다.</h2></div>
         <div class="split lead-left">
           <div>
             <ul class="panel" style="list-style:none;padding-left:22px">
-              <li style="margin:0 0 8px"><b>전송 화면</b> 또는 화면 위 작은 <b>드롭존</b>에 파일을 놓으면 선택한 Android나 서브 PC로 갑니다.</li>
-              <li style="margin:8px 0"><b>PC-to-PC</b>는 파일을 잡은 채 배치한 화면 경계를 넘어 대상 PC에 놓으면 전송됩니다(서브 PC가 연결·배치돼 있어야 함).</li>
+              <li style="margin:0 0 8px"><b>전송 화면</b> 또는 작은 <b>드롭존</b>에 파일을 놓으면 선택한 Android나 Windows 보조 PC로 갑니다. Mac 전송은 실기기 검증 중입니다.</li>
+              <li style="margin:8px 0"><b>Windows 보조 기기</b>는 파일을 잡은 채 배치한 화면 경계를 넘어 놓으면 전송됩니다. Mac 경계 드래그는 공개 전 검증 대상입니다.</li>
               <li style="margin:8px 0">Android → PC는 Android 전송 탭이나 공유 메뉴로 보냅니다.</li>
               <li style="margin:8px 0 0">시작이 안 되면 연결 상태와 선택된 기기를 확인하세요.</li>
             </ul>
@@ -166,13 +167,13 @@
     <section class="section-alt" id="bluetooth">
       <div class="wrap">
         <div class="sec-head"><p class="ey">블루투스</p><h2 class="sec">공유기 없이 블루투스로도 연결할 수 있습니다.</h2>
-          <p class="sec-lead">PC↔Android, PC↔PC를 블루투스로 직접 이어 입력·클립보드·파일을 주고받습니다. 공유기나 인터넷이 없어도 됩니다.</p></div>
+          <p class="sec-lead">Windows↔Android와 Windows↔Windows는 블루투스로 직접 이어 입력·클립보드·파일을 주고받습니다. Windows↔Mac 블루투스는 공개 전 실기기 검증 중입니다.</p></div>
         <div class="split lead-left">
           <div>
             <div class="panel" style="margin-bottom:14px"><h3>이럴 때 좋아요</h3>
               <ul><li>공유 Wi-Fi가 없는 방·야외·차량</li><li>게스트 Wi-Fi나 방화벽이 기기 검색을 막을 때</li><li>가벼운 키보드·클립보드 위주 사용</li></ul></div>
             <div class="panel tip"><h3>알아두기</h3>
-              <ul><li>Android 설정 탭에서 켜며 Wi-Fi와 독립적으로 동작(재시도 backoff 포함).</li><li>PC↔PC는 메인/서브 역할로 양방향 파일 드래그 지원.</li><li>여러 블루투스 기기를 목록에서 동시에 켤 수 있습니다.</li><li>블루투스는 Wi-Fi보다 느립니다 — 큰 파일은 Wi-Fi 권장.</li><li>모바일 원격 제어는 블루투스에서 권장하지 않습니다.</li><li>문제가 있으면 Windows 블루투스에서 다시 페어링하세요.</li></ul></div>
+              <ul><li>Android 설정 탭에서 켜며 Wi-Fi와 독립적으로 동작(재시도 backoff 포함).</li><li>Windows 보조 기기는 양방향 파일 드래그를 지원합니다.</li><li>Mac Bluetooth와 경계 파일 드래그는 공개 전 실기기 검증 중입니다.</li><li>여러 블루투스 기기를 목록에서 동시에 켤 수 있습니다.</li><li>블루투스는 Wi-Fi보다 느립니다 — 큰 파일은 LAN을 권장하며, Mac 화면·창 공유는 LAN에서만 제공합니다.</li><li>문제가 있으면 두 기기의 시스템 Bluetooth에서 삭제 후 다시 페어링하세요.</li></ul></div>
           </div>
           <div>
             <div class="panel"><h3>연결 순서</h3>
@@ -205,18 +206,42 @@
       </div>
     </section>
 
+    <!-- MAC SUB DEVICE -->
+    <section class="section-alt" id="mac">
+      <div class="wrap">
+        <div class="sec-head"><p class="ey">macOS 13+ · 공개 준비 중</p><h2 class="sec">Mac 보조 기기의 예정 연결 절차입니다.</h2>
+          <p class="sec-lead">소스 구현은 보조 전용이며, 서명·공증 배포와 Mac 실기기 검증은 아직 진행 중입니다. 아래 5단계는 공개 빌드에서 사용할 예정 절차입니다.</p></div>
+        <div class="split lead-left">
+          <div class="timeline">
+            <div class="tstep"><div class="rail"><span class="num">1</span><span class="line"></span></div><div class="body"><h4>Windows와 Mac에서 OneMouse 실행</h4><p>Windows를 메인으로 두고 macOS 13 이상에서 Mac 보조 앱을 엽니다.</p></div></div>
+            <div class="tstep"><div class="rail"><span class="num">2</span><span class="line"></span></div><div class="body"><h4>Mac 권한 허용</h4><p>입력 수신을 위한 <b>손쉬운 사용</b>을 허용합니다. macOS 15+에서는 기기 검색을 위한 <b>로컬 네트워크</b>도 허용하며, macOS 13/14에는 이 항목이 표시되지 않을 수 있습니다.</p></div></div>
+            <div class="tstep"><div class="rail"><span class="num">3</span><span class="line"></span></div><div class="body"><h4>Windows에서 Mac 선택</h4><p>Windows OneMouse의 기기 관리에서 검색된 Mac을 선택합니다.</p></div></div>
+            <div class="tstep"><div class="rail"><span class="num">4</span><span class="line"></span></div><div class="body"><h4>Mac의 6자리 코드 입력</h4><p>Mac에 표시된 페어링 코드를 Windows에 입력해 내 기기인지 확인합니다.</p></div></div>
+            <div class="tstep"><div class="rail"><span class="num">5</span></div><div class="body"><h4>배치하고 경계로 이동</h4><p>Windows 배치 화면에서 Mac 위치를 정한 뒤 그 방향으로 마우스를 밀어 제어합니다.</p></div></div>
+          </div>
+          <div>
+            <div class="panel tip"><h3>공개 전 검증 중인 범위</h3><ul><li>마우스·키보드·스크롤·드래그 입력</li><li>텍스트 클립보드와 파일·폴더 양방향 전송</li><li>화면 경계를 넘는 파일 드래그</li><li>LAN 또는 Bluetooth 연결</li></ul></div>
+            <div class="panel" style="margin-top:14px"><h3>화면 녹화 권한은 선택 사항</h3><p style="margin:0;color:var(--muted);font-size:14px">Windows에서 Mac 화면·창을 볼 때만 허용합니다. 기본 마우스·키보드 입력에는 필요하지 않습니다. Mac 화면·창 공유는 Bluetooth에서 지원하지 않고 LAN에서만 제공합니다.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- PERMISSIONS (short summary + link) -->
-    <section class="section-alt" id="permissions">
+    <section id="permissions">
       <div class="wrap narrow">
-        <div class="sec-head"><p class="ey">권한</p><h2 class="sec">켜야 하는 건 접근성 하나, 나머지는 기능별로.</h2>
+        <div class="sec-head"><p class="ey">권한</p><h2 class="sec">플랫폼과 기능에 필요한 권한만 켭니다.</h2>
           <p class="sec-lead">권한은 한꺼번에 요청하지 않고 그 기능을 쓸 때 물어봅니다. 항목별 자세한 설명은 기술·보안에 있습니다.</p></div>
         <div class="panel"><ul>
           <li><b>접근성 서비스 — 필수:</b> Android 제어와 화면 캡처·원격 입력에 필요합니다.</li>
           <li><b>화면 캡처 승인 — 원격 제어 시작 시:</b> Android 시스템 팝업으로 승인합니다.</li>
           <li><b>주변 Wi-Fi 기기 — 연결 시:</b> Android 13+에서 PC를 찾을 때 한 번 요청될 수 있습니다.</li>
           <li><b>알림·시스템 설정·배터리 예외:</b> 각각 서비스 상태 표시, 밝기 조절, 화면 꺼짐 후 안정성에 필요할 때만.</li>
+          <li><b>Mac 손쉬운 사용 — 입력에 필수:</b> Windows에서 받은 입력을 적용합니다. <b>로컬 네트워크</b>는 macOS 15+에서 기기 검색 시 허용하며, macOS 13/14에는 표시되지 않을 수 있습니다.</li>
+          <li><b>Mac 화면 녹화 — 화면·창 공유 시:</b> Windows에서 Mac 화면을 볼 때만 필요합니다.</li>
+          <li><b>Mac Bluetooth — Bluetooth 연결 시:</b> 시스템 페어링 뒤 OneMouse의 Bluetooth 접근을 허용합니다. 화면·창 공유는 LAN 전용입니다.</li>
         </ul></div>
-        <div style="margin-top:18px"><a class="btn btn-sec sm" href="./technical.html#permissions">권한 6가지 자세히 보기</a></div>
+        <div style="margin-top:18px"><a class="btn btn-sec sm" href="./technical.html#permissions">플랫폼별 권한 자세히 보기</a></div>
       </div>
     </section>
 

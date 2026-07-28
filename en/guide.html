@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Guide | OneMouse — From first connection to the features you use every day</title>
-  <meta name="description" content="OneMouse guide: set up your first connection, place your phone by direction, control your mobile screen remotely, send files and clipboard, use number shortcuts, connect over Bluetooth, link another PC, and learn the keyboard shortcuts — step by step." />
+  <title>Guide | OneMouse — Android, Windows PCs, and the planned Mac flow</title>
+  <meta name="description" content="Set up OneMouse for Android and another Windows PC, and preview the planned macOS 13+ secondary-device flow while public distribution and real-Mac validation are in progress." />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <link rel="stylesheet" href="../css/onemouse.css" />
   <link rel="canonical" href="https://onemouse.pages.dev/en/guide" />
@@ -47,6 +47,7 @@
         <a href="#quick">Number shortcuts</a>
         <a href="#bluetooth">Bluetooth connection</a>
         <a href="#pcpc">Connect another PC</a>
+        <a href="#mac">Connect a Mac</a>
         <a href="#shortcuts">Shortcut table</a>
       </nav>
     </section>
@@ -54,8 +55,8 @@
     <!-- QUICK START -->
     <section id="start">
       <div class="wrap narrow">
-        <div class="sec-head"><p class="ey">5-minute setup</p><h2 class="sec">For your first connection, just follow this order.</h2>
-          <p class="sec-lead">This assumes Wi-Fi (the same router). The only thing you need to turn on is the Accessibility Service.</p></div>
+        <div class="sec-head"><p class="ey">Android setup</p><h2 class="sec">For your first Android connection, just follow this order.</h2>
+          <p class="sec-lead">This assumes Wi-Fi (the same router). Android needs its Accessibility Service; for Mac, use the separate five-step flow below.</p></div>
         <div class="timeline">
           <div class="tstep"><div class="rail"><span class="num">1</span><span class="line"></span></div><div class="body"><h4>Open the PC app</h4><p>Run OneMouse on Windows and a 6-digit code and a QR code appear on screen.</p></div></div>
           <div class="tstep"><div class="rail"><span class="num">2</span><span class="line"></span></div><div class="body"><h4>Turn on the Android Accessibility Service</h4><p>To receive mouse and keyboard input from the PC, turn on the OneMouse Accessibility Service on Android. In practice, this is the only thing you need to set up.</p></div></div>
@@ -73,7 +74,7 @@
     <section class="section-alt" id="position">
       <div class="wrap narrow">
         <div class="sec-head"><p class="ey">Phone position</p><h2 class="sec">After connecting, just match your phone's position to where it really is.</h2></div>
-        <p class="sec-lead" style="max-width:60ch">Decide which edge the mouse crosses over, then arrange it on the side where the phone actually sits (left, right, top, or bottom). Just like the arrangement demo on the home page, you drag your phone, tablet, or another PC into place in the app.</p>
+        <p class="sec-lead" style="max-width:60ch">Decide which edge the mouse crosses over, then arrange each currently supported device where it really sits. The Mac placement shown in the home demo previews the planned public build.</p>
         <details class="fold"><summary><span>See the arrangement screen</span></summary>
           <div class="fold-body"><a href="../assets/onboarding_pc_position.png" target="_blank" rel="noopener"><img src="../assets/onboarding_pc_position.png" alt="OneMouse phone position arrangement screen" loading="lazy" style="border-radius:12px" /></a></div></details>
       </div>
@@ -105,12 +106,12 @@
     <!-- FILES -->
     <section class="section-alt" id="files">
       <div class="wrap">
-        <div class="sec-head"><p class="ey">Files &amp; clipboard</p><h2 class="sec">Send files from the transfer screen, the Quick Drop zone, or a PC-to-PC drag.</h2></div>
+        <div class="sec-head"><p class="ey">Files &amp; clipboard</p><h2 class="sec">Send files from the transfer screen, the Quick Drop zone, or a desktop-to-desktop drag.</h2></div>
         <div class="split lead-left">
           <div>
             <ul class="panel" style="list-style:none;padding-left:22px">
-              <li style="margin:0 0 8px">Drop files on the <b>transfer screen</b> or the small <b>drop zone</b> on top of your screen, and they go to the selected Android or sub PC.</li>
-              <li style="margin:8px 0"><b>PC-to-PC</b>: hold a file, drag it across the screen boundary you arranged, and drop it on the target PC to send it (the sub PC must be connected and arranged).</li>
+              <li style="margin:0 0 8px">Drop files on the <b>transfer screen</b> or small <b>drop zone</b> to send them to the selected Android or secondary Windows PC. Mac transfer is still awaiting real-device validation.</li>
+              <li style="margin:8px 0"><b>Windows-to-Windows</b>: hold a file, drag it across the arranged screen boundary, and drop it on the target. Mac edge drag remains a pre-release validation item.</li>
               <li style="margin:8px 0">Android → PC: send from the Android transfer tab or the share menu.</li>
               <li style="margin:8px 0 0">If it won't start, check the connection status and the selected device.</li>
             </ul>
@@ -166,13 +167,13 @@
     <section class="section-alt" id="bluetooth">
       <div class="wrap">
         <div class="sec-head"><p class="ey">Bluetooth</p><h2 class="sec">You can also connect over Bluetooth, without a router.</h2>
-          <p class="sec-lead">Link PC↔Android and PC↔PC directly over Bluetooth to exchange input, clipboard, and files. No Wi-Fi router or internet required.</p></div>
+          <p class="sec-lead">Windows↔Android and Windows↔Windows can exchange input, clipboard, and files directly over Bluetooth. Windows↔Mac Bluetooth is still awaiting real-device validation.</p></div>
         <div class="split lead-left">
           <div>
             <div class="panel" style="margin-bottom:14px"><h3>Great when</h3>
               <ul><li>You're in a room, outdoors, or in a car with no shared Wi-Fi</li><li>Guest Wi-Fi or a firewall blocks device discovery</li><li>You mostly do light keyboard and clipboard work</li></ul></div>
             <div class="panel tip"><h3>Good to know</h3>
-              <ul><li>Turn it on from the Android settings tab; it works independently of Wi-Fi (with retry backoff).</li><li>PC↔PC supports two-way file drag with main / sub roles.</li><li>You can turn on several Bluetooth devices from the list at once.</li><li>Bluetooth is slower than Wi-Fi — for large files, use Wi-Fi.</li><li>Mobile remote control is not recommended over Bluetooth.</li><li>If you run into trouble, pair again from Windows Bluetooth.</li></ul></div>
+              <ul><li>Turn it on from the Android settings tab; it works independently of Wi-Fi (with retry backoff).</li><li>Windows↔Windows supports two-way file drag; the corresponding Mac flow is still being validated.</li><li>Pair Windows and Mac once in both systems' Bluetooth settings before connecting.</li><li>You can turn on several Bluetooth devices from the list at once.</li><li>Bluetooth is slower than Wi-Fi — for large files, use Wi-Fi.</li><li>Mac screen and window sharing is not supported over Bluetooth; it is LAN-only.</li><li>If you run into trouble, pair again from Windows Bluetooth.</li></ul></div>
           </div>
           <div>
             <div class="panel"><h3>Connection order</h3>
@@ -205,18 +206,44 @@
       </div>
     </section>
 
+    <!-- MAC -->
+    <section class="section-alt" id="mac">
+      <div class="wrap">
+        <div class="sec-head"><p class="ey">Secondary Mac · In preparation</p><h2 class="sec">Planned connection flow for a macOS 13+ secondary Mac.</h2>
+          <p class="sec-lead">The source is secondary-only, but signed distribution and real-Mac validation are still in progress. These five steps describe the intended public build.</p></div>
+        <div class="split lead-left">
+          <div class="timeline">
+            <div class="tstep"><div class="rail"><span class="num">1</span><span class="line"></span></div><div class="body"><h4>Open OneMouse on Windows and Mac</h4><p>Run the Windows app on the main PC and the macOS app on the secondary Mac.</p></div></div>
+            <div class="tstep"><div class="rail"><span class="num">2</span><span class="line"></span></div><div class="body"><h4>Allow the Mac permissions</h4><p>Allow <b>Accessibility</b> so the Mac can perform received mouse and keyboard input. On macOS 15+, also allow <b>Local Network</b> for discovery; macOS 13/14 may not show this item.</p></div></div>
+            <div class="tstep"><div class="rail"><span class="num">3</span><span class="line"></span></div><div class="body"><h4>Select the Mac in Windows</h4><p>Open Devices on the Windows main PC and select the detected Mac.</p></div></div>
+            <div class="tstep"><div class="rail"><span class="num">4</span><span class="line"></span></div><div class="body"><h4>Enter the Mac's 6-digit code</h4><p>Enter in Windows the 6-digit pairing code displayed by the Mac, then confirm the pairing.</p></div></div>
+            <div class="tstep"><div class="rail"><span class="num">5</span></div><div class="body"><h4>Arrange the Mac and cross over</h4><p>Place the Mac beside the Windows display in the arrangement editor. Move the cursor across that edge to control it and exchange files and clipboard content in both directions.</p></div></div>
+          </div>
+          <div>
+            <div class="panel tip"><h3>Planned capability · validation pending</h3>
+              <p>Screen &amp; System Audio Recording permission is needed only when you choose to view or control the Mac's display from Windows. OneMouse does not capture system audio.</p></div>
+            <div class="panel" style="margin-top:14px"><h3>Bluetooth alternative</h3>
+              <p>When a shared local network is unavailable, pair the two computers in Windows and macOS Bluetooth settings first. Mac screen and window sharing is not supported over Bluetooth and remains LAN-only.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- PERMISSIONS (short summary + link) -->
-    <section class="section-alt" id="permissions">
+    <section id="permissions">
       <div class="wrap narrow">
-        <div class="sec-head"><p class="ey">Permissions</p><h2 class="sec">Only Accessibility is required; the rest are per feature.</h2>
+        <div class="sec-head"><p class="ey">Permissions</p><h2 class="sec">Each platform asks only for the permissions its features need.</h2>
           <p class="sec-lead">Permissions aren't all requested at once — they're asked for when you use the feature. Detailed notes on each item are in Technical &amp; Security.</p></div>
         <div class="panel"><ul>
           <li><b>Accessibility Service — required:</b> needed for Android control and for screen capture and remote input.</li>
           <li><b>Screen capture approval — when remote control starts:</b> approved through an Android system pop-up.</li>
           <li><b>Nearby Wi-Fi devices — when connecting:</b> may be requested once on Android 13+ while finding the PC.</li>
           <li><b>Notifications, system settings, battery exception:</b> only when needed — for showing service status, adjusting brightness, and stability after the screen turns off, respectively.</li>
+          <li><b>Mac Accessibility — required for input:</b> performs input received from Windows. <b>Local Network</b> is allowed for discovery on macOS 15+; macOS 13/14 may not show it.</li>
+          <li><b>Mac Screen Recording — optional:</b> used only when sharing the Mac's display with Windows.</li>
+          <li><b>Mac Bluetooth — when using Bluetooth:</b> requested after system pairing. Mac screen and window sharing is LAN-only.</li>
         </ul></div>
-        <div style="margin-top:18px"><a class="btn btn-sec sm" href="./technical.html#permissions">See all 6 permissions in detail</a></div>
+        <div style="margin-top:18px"><a class="btn btn-sec sm" href="./technical.html#permissions">See platform permissions in detail</a></div>
       </div>
     </section>
 

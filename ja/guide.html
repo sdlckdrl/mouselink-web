@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>使い方ガイド | OneMouse — 初回接続からよく使う機能まで</title>
-  <meta name="description" content="OneMouseの使い方ガイド：初回接続の手順、スマホの配置、モバイルのリモート操作、ファイル・クリップボード転送、番号ショートカット、Bluetooth接続、別のPCへの接続、キーボードショートカットを順番にご案内します。" />
+  <meta name="description" content="OneMouseのAndroid・Windows接続手順と、公開配布・実機検証を準備中のmacOS 13以降サブ版の予定接続手順をご案内します。" />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <link rel="stylesheet" href="../css/onemouse.css" />
   <link rel="canonical" href="https://onemouse.pages.dev/ja/guide" />
@@ -37,7 +37,7 @@
     <section class="phero wrap">
       <p class="ey">使い方ガイド</p>
       <h1 class="page">初回接続からよく使う機能まで、順番に。</h1>
-      <p class="lead">一般の方は、この順番どおりに進めるだけで大丈夫です。難しいネットワークの説明は<a href="./technical.html" style="color:var(--coral-deep);font-weight:700">技術・セキュリティ</a>、うまくいかないときは<a href="./help.html" style="color:var(--coral-deep);font-weight:700">ヘルプ</a>で別途ご確認ください。</p>
+      <p class="lead">Windows 10/11をメインにAndroidと別のWindows PCを接続します。macOS 13以降のサブ専用版は公開配布と実機検証を準備中で、下のMac手順は公開後の予定フローです。</p>
       <nav class="toc" aria-label="このページの目次">
         <a href="#start">5分で接続</a>
         <a href="#position">スマホの配置</a>
@@ -46,6 +46,7 @@
         <a href="#quick">番号ショートカット</a>
         <a href="#bluetooth">Bluetooth接続</a>
         <a href="#pcpc">別のPCへの接続</a>
+        <a href="#mac">Macへの接続</a>
         <a href="#shortcuts">ショートカット一覧</a>
       </nav>
     </section>
@@ -53,8 +54,8 @@
     <!-- QUICK START -->
     <section id="start">
       <div class="wrap narrow">
-        <div class="sec-head"><p class="ey">5分で接続</p><h2 class="sec">初回接続は、この順番どおりに進めるだけです。</h2>
-          <p class="sec-lead">Wi-Fi（同じWi-Fiルーター）を前提としています。オンにするのはアクセシビリティサービス一つだけです。</p></div>
+        <div class="sec-head"><p class="ey">Androidを5分で接続</p><h2 class="sec">Androidとの初回接続は、この順番どおりに進めるだけです。</h2>
+          <p class="sec-lead">WindowsメインPCとAndroidが同じWi-Fi（同じWi-Fiルーター）にあることを前提としています。</p></div>
         <div class="timeline">
           <div class="tstep"><div class="rail"><span class="num">1</span><span class="line"></span></div><div class="body"><h4>PCアプリを起動します</h4><p>WindowsでOneMouseを起動すると、画面に6桁のコードとQRコードが表示されます。</p></div></div>
           <div class="tstep"><div class="rail"><span class="num">2</span><span class="line"></span></div><div class="body"><h4>Androidのアクセシビリティサービスをオンにします</h4><p>PCのマウス・キーボード入力を受け取るには、AndroidでOneMouseのアクセシビリティサービスをオンにします。実質、準備するのはこれだけです。</p></div></div>
@@ -72,7 +73,7 @@
     <section class="section-alt" id="position">
       <div class="wrap narrow">
         <div class="sec-head"><p class="ey">スマホの配置</p><h2 class="sec">接続後は、スマホの位置を実際の方向に合わせるだけです。</h2></div>
-        <p class="sec-lead" style="max-width:60ch">マウスが移る端を決め、実際にスマホを置いてある側（左・右・上・下）に合わせて配置します。ホーム画面の配置デモのように、アプリでもスマホ・タブレット・別のPCをドラッグして配置します。</p>
+        <p class="sec-lead" style="max-width:60ch">マウスが移る端を決め、実際の方向に合わせて配置します。現在はスマホ・タブレット・別のWindows PCを配置でき、Macは公開版で追加する予定です。</p>
         <details class="fold"><summary><span>配置画面を見る</span></summary>
           <div class="fold-body"><a href="../assets/onboarding_pc_position.png" target="_blank" rel="noopener"><img src="../assets/onboarding_pc_position.png" alt="OneMouseのスマホ位置の配置画面" loading="lazy" style="border-radius:12px" /></a></div></details>
       </div>
@@ -108,8 +109,8 @@
         <div class="split lead-left">
           <div>
             <ul class="panel" style="list-style:none;padding-left:22px">
-              <li style="margin:0 0 8px"><b>転送画面</b>、または画面上の小さな<b>ドロップゾーン</b>にファイルを置くと、選択したAndroidやサブPCへ送られます。</li>
-              <li style="margin:8px 0"><b>PC-to-PC</b>は、ファイルをつかんだまま配置した画面の境界を越えて対象のPCに置くと転送されます（サブPCが接続・配置されている必要があります）。</li>
+              <li style="margin:0 0 8px"><b>転送画面</b>、または画面上の小さな<b>ドロップゾーン</b>にファイルを置くと、選択したAndroidやサブPCへ送られます。Mac転送は実機検証中です。</li>
+              <li style="margin:8px 0"><b>Windows PC間</b>では、ファイルをつかんだまま配置した画面の境界を越えて対象へ置くと転送されます。Macの境界ドラッグは公開前の検証対象です。</li>
               <li style="margin:8px 0">Android → PCは、Androidの転送タブや共有メニューから送ります。</li>
               <li style="margin:8px 0 0">開始できないときは、接続状態と選択中のデバイスを確認してください。</li>
             </ul>
@@ -191,11 +192,11 @@
     <!-- PC TO PC -->
     <section id="pcpc">
       <div class="wrap">
-        <div class="sec-head"><p class="ey">別のPC</p><h2 class="sec">別のWindows PCは、設定 · デバイス管理 · 配置の順でつなぎます。</h2></div>
+        <div class="sec-head"><p class="ey">別のWindows PC</p><h2 class="sec">Windows PC同士は、設定 · デバイス管理 · 配置の順でつなぎます。</h2></div>
         <div class="split lead-left">
           <div>
             <div class="panel"><h3>接続する</h3>
-              <ul><li>操作する側のPCは<b>メイン</b>、操作される側のPCは<b>サブ</b>の役割にします。</li><li>サブPCをペアリングして、デバイス管理に追加します。</li><li>配置エディタで、サブPCを実際の位置どおりに置きます。</li><li>その方向へマウスを渡すと別のPCを操作でき、ファイルも境界へのドラッグでやり取りできます。</li></ul></div>
+              <ul><li>操作する側のWindows PCは<b>メイン</b>、操作される側のWindows PCは<b>サブ</b>の役割にします。</li><li>サブPCをペアリングして、デバイス管理に追加します。</li><li>配置エディタで、サブPCを実際の位置どおりに置きます。</li><li>その方向へマウスを渡すと別のPCを操作でき、ファイルも境界へのドラッグでやり取りできます。</li></ul></div>
           </div>
           <div>
             <details class="fold" open><summary><span>配置画面</span></summary><div class="fold-body"><a href="../assets/guide_pc_arrangement.png" target="_blank" rel="noopener"><img src="../assets/guide_pc_arrangement.png" alt="別のPCの配置エディタ画面" loading="lazy" style="border-radius:12px" /></a></div></details>
@@ -204,18 +205,36 @@
       </div>
     </section>
 
-    <!-- PERMISSIONS (short summary + link) -->
-    <section class="section-alt" id="permissions">
+    <!-- Macサブデバイス -->
+    <section class="section-alt" id="mac">
       <div class="wrap narrow">
-        <div class="sec-head"><p class="ey">権限</p><h2 class="sec">オンにするのはアクセシビリティ一つ、あとは機能ごとに。</h2>
+        <div class="sec-head"><p class="ey">Mac（サブ専用）· 公開準備中</p><h2 class="sec">macOS 13以降のMac版で予定している接続手順です。</h2>
+          <p class="sec-lead">ソースはサブ専用ですが、署名・公証済み配布とMac実機検証はまだ進行中です。以下の5ステップは公開ビルドで使う予定です。</p></div>
+        <div class="timeline">
+          <div class="tstep"><div class="rail"><span class="num">1</span><span class="line"></span></div><div class="body"><h4>WindowsとMacを同じローカルネットワークにつなぎます</h4><p>Windows 10/11のメインPCとmacOS 13以降のMacでOneMouseを起動し、同じWi-FiまたはLANに接続します。</p></div></div>
+          <div class="tstep"><div class="rail"><span class="num">2</span><span class="line"></span></div><div class="body"><h4>Macで必要な権限を許可します</h4><p>入力には<b>アクセシビリティ</b>を許可します。macOS 15以降では検出のため<b>ローカルネットワーク</b>も許可し、macOS 13/14ではこの項目が表示されない場合があります。</p></div></div>
+          <div class="tstep"><div class="rail"><span class="num">3</span><span class="line"></span></div><div class="body"><h4>Windowsのデバイス管理でMacを選びます</h4><p>検出されたMacの名前とmacOS表示を確認し、Windows側からペアリングを開始します。</p></div></div>
+          <div class="tstep"><div class="rail"><span class="num">4</span><span class="line"></span></div><div class="body"><h4>Macに表示された6桁コードをWindowsへ入力します</h4><p>Macに表示中の6桁コードをWindowsの入力欄へ入れて、ペアリングを完了します。</p></div></div>
+          <div class="tstep"><div class="rail"><span class="num">5</span></div><div class="body"><h4>WindowsでMacを配置して操作します</h4><p>配置エディタでMacを実際の方向に置き、その画面境界へマウスを押し出します。Macはサブ専用のため、Macをメインにして接続を開始することはできません。</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PERMISSIONS (short summary + link) -->
+    <section id="permissions">
+      <div class="wrap narrow">
+        <div class="sec-head"><p class="ey">権限</p><h2 class="sec">接続先と使う機能に必要な権限だけをオンにします。</h2>
           <p class="sec-lead">権限はまとめて要求せず、その機能を使うときにお尋ねします。項目ごとの詳しい説明は技術・セキュリティにあります。</p></div>
         <div class="panel"><ul>
-          <li><b>アクセシビリティサービス — 必須：</b>Androidの操作と画面キャプチャ・リモート入力に必要です。</li>
+          <li><b>Androidのアクセシビリティサービス — 必須：</b>Androidへのマウス・キーボード入力に必要です。</li>
           <li><b>画面キャプチャの承認 — リモート操作の開始時：</b>Androidのシステムポップアップで承認します。</li>
           <li><b>付近のWi-Fiデバイス — 接続時：</b>Android 13+でPCを探すときに、一度要求されることがあります。</li>
           <li><b>通知・システム設定・バッテリー除外：</b>それぞれ、サービス状態の表示、明るさ調整、画面オフ後の安定性に必要なときだけ。</li>
+          <li><b>Macのアクセシビリティ — 入力に必須：</b>Windowsから受け取った入力を実行します。<b>ローカルネットワーク</b>はmacOS 15以降で検出時に許可し、macOS 13/14では表示されない場合があります。</li>
+          <li><b>Macの画面収録 — 任意：</b>LANでMacの画面やウィンドウをWindowsに表示するときだけ必要です。Bluetoothでは画面共有を提供しません。</li>
+          <li><b>MacのBluetooth — Bluetooth接続時：</b>システムでペアリングした後、OneMouseのBluetoothアクセスを許可します。</li>
         </ul></div>
-        <div style="margin-top:18px"><a class="btn btn-sec sm" href="./technical.html#permissions">6つの権限を詳しく見る</a></div>
+        <div style="margin-top:18px"><a class="btn btn-sec sm" href="./technical.html#permissions">権限を詳しく見る</a></div>
       </div>
     </section>
 

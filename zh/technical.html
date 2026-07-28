@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>技术与安全 | OneMouse 原鼠标 — 连接结构与权限</title>
-  <meta name="description" content="OneMouse 的连接结构与权限使用一目了然。本地优先、不经过服务器、为什么需要这些权限、数据如何处理，以及网络条件与支持范围。" />
+  <meta name="description" content="OneMouse 的连接结构、主辅设备角色和权限说明。Mac 仅规划为 macOS 13+ 辅助设备；源码已准备，公开公证安装包与真机验证仍在进行。" />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <link rel="stylesheet" href="../css/onemouse.css" />
   <link rel="canonical" href="https://onemouse.pages.dev/zh/technical" />
@@ -40,6 +40,7 @@
       <p class="lead">本页不讲一般用法，而是说明<b>连接是怎么建立的</b>以及<b>为什么要用这些权限</b>。使用步骤请查看<a href="./guide.html" style="color:var(--coral-deep);font-weight:700">使用指南</a>。</p>
       <nav class="toc" aria-label="本页目录">
         <a href="#data-flow">本地优先</a>
+        <a href="#roles">设备角色</a>
         <a href="#permissions">权限使用</a>
         <a href="#handling">数据处理</a>
         <a href="#network">网络条件</a>
@@ -52,22 +53,38 @@
     <section id="data-flow">
       <div class="wrap narrow">
         <div class="sec-head"><p class="ey">Local First</p><h2 class="sec">只在你配对过的设备之间运行。</h2></div>
-        <p class="sec-lead" style="max-width:64ch">输入、文件和剪贴板，只在<b>同一网络下你自己的 PC 与 Android（或另一台 PC）</b>之间往来。它不会经过外部服务器上传到某个账号。因此连接的前提是两台设备处在<b>同一 Wi-Fi（同一 Wi-Fi 路由器）</b>之下（或通过 Bluetooth 直接连接）。</p>
+        <p class="sec-lead" style="max-width:64ch">输入、文件和剪贴板，只在<b>你自己的 Windows 主设备与已配对的辅助设备</b>之间往来，不会经过外部服务器上传到某个账号。Mac 的相同本地传输结构已在源码中准备，但公开公证安装包与真机验证仍在进行。</p>
+      </div>
+    </section>
+
+    <!-- DEVICE ROLES -->
+    <section class="section-alt" id="roles">
+      <div class="wrap">
+        <div class="sec-head"><p class="ey">Device Roles</p><h2 class="sec">Windows 负责控制；Mac 支持公开后也只接收控制。</h2>
+          <p class="sec-lead">角色不是对等的。Mac 源码及配套支持已准备，但其公开公证安装包与 Windows+Mac 真机验证仍在进行。</p></div>
+        <div class="split">
+          <div class="panel tip"><h3>主设备</h3><ul><li>仅支持 Windows 10/11。</li><li>负责设备发现、选择目标、布局和发送鼠标与键盘输入。</li><li>Mac 公开版发布后，配对时在 Windows 输入 Mac 上显示的 6 位代码。</li></ul></div>
+          <div class="panel"><h3>辅助设备</h3><ul><li>当前公开支持 Android 与另一台 Windows PC。</li><li>macOS 13+ Mac 的源码实现仅包含辅助设备角色，不能切换为主设备。</li><li>Mac 的文件与剪贴板功能尚待公开公证安装包和真机验证，不应视为已正式验证。</li></ul></div>
+        </div>
       </div>
     </section>
 
     <!-- PERMISSIONS -->
-    <section class="section-alt" id="permissions">
+    <section id="permissions">
       <div class="wrap">
         <div class="sec-head"><p class="ey">Permissions</p><h2 class="sec">权限只用于提供功能所需的范围。</h2>
-          <p class="sec-lead">不会一次性全部索取，而是在你开始使用某项功能时，由你在 Android 上亲自开启。</p></div>
+          <p class="sec-lead">Android 权限在使用相应功能时请求。以下 Mac 权限是源码设计和公开版发布后的要求，仍待公证安装包与真机验证。</p></div>
         <div class="cards">
-          <article class="card accent"><p class="card-lbl">必需</p><h3>无障碍服务</h3><p>要用 PC 的鼠标和键盘控制 Android，并处理远程输入及屏幕相关操作，就需要无障碍服务。OneMouse 的核心功能都依赖于它。</p></article>
-          <article class="card"><p class="card-lbl">开始远程控制时</p><h3>屏幕捕获授权</h3><p>打开手机远程控制窗口时，通过 Android 系统弹窗进行授权。安全屏幕等部分内容可能无法显示。</p></article>
-          <article class="card"><p class="card-lbl">连接时</p><h3>附近的 Wi-Fi 设备</h3><p>在 Android 13 及以上查找 PC 时可能会请求。不是在启动应用时，而只在搜索的那一刻才询问。</p></article>
+          <article class="card accent"><p class="card-lbl">Android · 必需</p><h3>无障碍服务</h3><p>要用 Windows 的鼠标和键盘控制 Android，并处理远程输入及屏幕相关操作，就需要无障碍服务。</p></article>
+          <article class="card"><p class="card-lbl">Android · 开始远程控制时</p><h3>屏幕捕获授权</h3><p>打开手机远程控制窗口时，通过 Android 系统弹窗进行授权。安全屏幕等部分内容可能无法显示。</p></article>
+          <article class="card"><p class="card-lbl">Android · 连接时</p><h3>附近的 Wi-Fi 设备</h3><p>在 Android 13 及以上查找 Windows 时可能会请求。不是在启动应用时，而只在搜索的那一刻才询问。</p></article>
           <article class="card"><p class="card-lbl">启动服务时</p><h3>通知</h3><p>用于显示后台连接状态。只在需要时才请求。</p></article>
           <article class="card"><p class="card-lbl">使用亮度调节时</p><h3>修改系统设置</h3><p>用 Alt+Shift+↑/↓ 调节手机屏幕亮度时，首次需要一次。</p></article>
           <article class="card"><p class="card-lbl">推荐</p><h3>电池优化例外</h3><p>如果息屏后连接会中断，为了稳定性建议开启。并非必需。</p></article>
+          <article class="card"><p class="card-lbl">Mac 预览 · macOS 15+</p><h3>本地网络</h3><p>公开版通过 LAN 发现 Windows 时需要允许。macOS 13/14 可能不会显示该权限项目，源码会将其视为无需单独授权。</p></article>
+          <article class="card accent"><p class="card-lbl">Mac 预览 · 输入必需</p><h3>辅助功能</h3><p>用于把 Windows 发送的鼠标和键盘输入应用到 Mac。公开版发布后，没有该权限时 Mac 会保持未就绪状态。</p></article>
+          <article class="card"><p class="card-lbl">Mac 预览 · 共享画面时</p><h3>屏幕录制</h3><p>公开版发布后，只有从 Windows 查看 Mac 屏幕或窗口时才需要。一般输入、文件和剪贴板功能不需要该权限。</p></article>
+          <article class="card"><p class="card-lbl">Mac 预览 · Bluetooth</p><h3>Bluetooth</h3><p>源码支持通过已完成系统配对的链路交换输入、剪贴板或文件，但仍待公开公证安装包和真机验证。Mac 画面共享设计为使用 LAN。</p></article>
         </div>
       </div>
     </section>
@@ -90,7 +107,7 @@
       <div class="wrap narrow">
         <div class="sec-head"><p class="ey">Network</p><h2 class="sec">连接质量会受本地网络条件的影响。</h2></div>
         <div class="split">
-          <div class="panel tip"><h3>推荐环境</h3><ul><li>个人 Wi-Fi 路由器下的同一 Wi-Fi（2.4/5GHz 均可）</li><li>允许设备间通信的网络</li><li>在 Windows 防火墙中允许 OneMouse 的入站连接</li></ul></div>
+          <div class="panel tip"><h3>推荐环境</h3><ul><li>Windows 主设备与辅助设备位于个人路由器下的同一 Wi-Fi（2.4/5GHz 均可）</li><li>允许设备间通信的网络</li><li>在 Windows 防火墙中允许 OneMouse 的入站连接</li><li>Mac 公开版发布后，查看 Mac 屏幕或窗口时使用 LAN</li></ul></div>
           <div class="panel"><h3>受限环境</h3><ul><li>访客或公司 Wi-Fi 中的客户端隔离（client isolation）</li><li>被识别为“公用”的网络会阻止入站连接</li><li>此时请改用 Bluetooth 直接连接或个人热点</li></ul></div>
         </div>
         <p class="sec-lead" style="margin-top:16px">OneMouse 不经过互联网中继服务器，因此需要两台设备能够彼此直接找到的环境。</p>
@@ -102,9 +119,13 @@
       <div class="wrap narrow">
         <div class="sec-head"><p class="ey">Support Scope</p><h2 class="sec">公开指南以 Wi-Fi/LAN 和 Bluetooth 连接为准。</h2></div>
         <div class="panel"><ul>
-          <li>支持：Windows 10/11 + Android，同一网络下的 <b>Wi-Fi/LAN</b> 以及 <b>Bluetooth</b> 直接连接。</li>
+          <li><b>主设备：</b>Windows 10/11。设备发现、布局和输入发送均从 Windows 进行。</li>
+          <li><b>当前公开辅助设备：</b>Android 与另一台 Windows PC。</li>
+          <li><b>Mac 预览：</b>macOS 13+ Mac 的源码及配套支持已准备，且仅包含辅助设备角色；公开 Developer ID 公证安装包与真机验证仍在进行。</li>
+          <li><b>Mac 权限：</b>“辅助功能”是接收输入所必需的；macOS 15+ 使用 LAN 发现时需允许“本地网络”，macOS 13/14 可能不会显示该项目。</li>
+          <li><b>连接：</b>当前公开功能支持同一网络下的 Wi-Fi/LAN 和受支持设备间的 Bluetooth。Mac 连接与画面共享仍属于待公开、待真机验证范围。</li>
           <li>不含：通过 USB/ADB 的连接不在官方支持范围内。</li>
-          <li>PC↔PC 以主/从角色运行，并支持双向文件传输。</li>
+          <li>Windows↔Windows 以主/从角色运行。Mac 公开版发布后固定为 Windows 主设备、Mac 辅助设备；双向文件传输仍需真机验证。</li>
         </ul></div>
       </div>
     </section>

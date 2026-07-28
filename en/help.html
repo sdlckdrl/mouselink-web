@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Help | OneMouse — Fix connection &amp; input problems</title>
-  <meta name="description" content="When OneMouse isn't working, narrow down the cause step by step: app power, permissions, battery, network discovery, firewall, pairing, cursor return, and file transfer. Includes frequently asked questions." />
+  <title>Help | OneMouse — Android and Windows troubleshooting, planned Mac checks</title>
+  <meta name="description" content="Troubleshoot OneMouse on Android and Windows, and preview planned Mac checks while signed distribution and real-Mac validation are still in progress." />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <link rel="stylesheet" href="../css/onemouse.css" />
   <link rel="canonical" href="https://onemouse.pages.dev/en/help" />
@@ -37,7 +37,7 @@
     <section class="phero wrap narrow">
       <p class="ey">Help</p>
       <h1 class="page">When it won't work, narrow it down step by step.</h1>
-      <p class="lead">Rather than trying to find the cause all at once, narrow it down in the order <b>power → discovery → firewall → pairing → input &amp; return</b> and most issues get sorted out quickly.</p>
+      <p class="lead">Narrow it down in the order <b>power → discovery → firewall → pairing → input &amp; return</b>. Mac items are advance guidance for a build still awaiting signed distribution and real-Mac validation.</p>
     </section>
 
     <!-- 이것부터 -->
@@ -46,7 +46,7 @@
         <div class="panel tip"><h3>Start with these two</h3>
           <ul>
             <li><b>Lost your cursor? →</b> Press <kbd style="font-family:var(--mono)">Ctrl+Alt+Backspace</kbd> and the cursor returns to your own PC (center of the monitor).</li>
-            <li><b>Connected but input isn't working? →</b> The Android <b>Accessibility Service</b> may have been turned off or restarted. Re-enable OneMouse under Accessibility.</li>
+            <li><b>Connected but input isn't working? →</b> Re-enable OneMouse under Android <b>Accessibility</b>. After the Mac build is public, allow <b>Accessibility</b> on the secondary Mac.</li>
           </ul></div>
       </div>
     </section>
@@ -56,10 +56,10 @@
       <div class="wrap narrow">
         <div class="sec-head"><p class="ey">Troubleshooting order</p><h2 class="sec">Check one step at a time, in this order.</h2></div>
         <div class="timeline">
-          <div class="tstep"><div class="rail"><span class="num">1</span><span class="line"></span></div><div class="body"><h4>Power and permissions</h4><p>Make sure both the PC app and the Android app are running, and that the Android <b>Accessibility Service</b> is on. If you're blocked here, input won't work at all.</p></div></div>
-          <div class="tstep"><div class="rail"><span class="num">2</span><span class="line"></span></div><div class="body"><h4>Same network &amp; discovery</h4><p>Check that the PC and phone are on the <b>same Wi-Fi (same Wi-Fi router)</b>. If discovery fails, it's usually because they're on different networks or discovery is blocked.</p></div></div>
+          <div class="tstep"><div class="rail"><span class="num">1</span><span class="line"></span></div><div class="body"><h4>Power and permissions</h4><p>Make sure the Windows main app and the target app are running. Android needs its <b>Accessibility Service</b>; a secondary Mac needs <b>Accessibility</b> for input. Local Network appears on macOS 15+, while macOS 13/14 may not show it.</p></div></div>
+          <div class="tstep"><div class="rail"><span class="num">2</span><span class="line"></span></div><div class="body"><h4>Same network &amp; discovery</h4><p>Check that Windows and the phone or Mac are on the <b>same Wi-Fi or LAN</b>. On macOS 15+, confirm OneMouse has Local Network access; on macOS 13/14, that settings item may not exist.</p></div></div>
           <div class="tstep"><div class="rail"><span class="num">3</span><span class="line"></span></div><div class="body"><h4>Firewall &amp; isolation</h4><p>If the phone can see the PC but the PC can't see the phone, it may be a <b>Windows firewall inbound</b> issue (whether the network is set to "Public" or "Private"). Office and café Wi-Fi can also block it with <b>client isolation</b>.</p></div></div>
-          <div class="tstep"><div class="rail"><span class="num">4</span><span class="line"></span></div><div class="body"><h4>Pairing &amp; connection</h4><p>Confirm that QR or 6-digit code pairing is finished and that the device shows as connected in Devices. Before pairing, the input and file channels don't open.</p></div></div>
+          <div class="tstep"><div class="rail"><span class="num">4</span><span class="line"></span></div><div class="body"><h4>Pairing &amp; connection</h4><p>Confirm that pairing is finished and that the device shows as connected in Devices. For Mac, select the Mac in Windows and enter the <b>6-digit code displayed by the Mac</b>. Before pairing, the input and file channels don't open.</p></div></div>
           <div class="tstep"><div class="rail"><span class="num">5</span></div><div class="body"><h4>Input &amp; return</h4><p>Push the mouse toward the arranged edge to see if it crosses over; if it doesn't, check the arrangement. If the cursor ends up somewhere odd, bring it back with <kbd style="font-family:var(--mono)">Ctrl+Alt+Backspace</kbd>.</p></div></div>
         </div>
       </div>
@@ -71,11 +71,26 @@
         <div class="sec-head"><p class="ey">Transfer</p><h2 class="sec">When files and clipboard won't go through.</h2></div>
         <div class="panel"><ul>
           <li>Confirm the <b>selected device</b> is correct — a transfer goes to the target you selected.</li>
-          <li>PC-to-PC drag requires the <b>sub PC to be connected and arranged</b>.</li>
+          <li>Desktop-to-desktop drag requires the <b>secondary Windows PC to be connected and arranged</b>. Mac edge drag is still awaiting real-device validation.</li>
           <li>Keep holding the file, <b>cross the arranged screen edge</b>, and drop it on the target to start the transfer.</li>
           <li>If the clipboard doesn't come through, check that both apps are connected and whether a screen is off and idle.</li>
           <li>Bluetooth is slower than Wi-Fi — send large files over Wi-Fi.</li>
         </ul></div>
+      </div>
+    </section>
+
+    <!-- MAC -->
+    <section id="mac">
+      <div class="wrap narrow">
+        <div class="sec-head"><p class="ey">Secondary Mac · In preparation</p><h2 class="sec">Planned checks for the public Mac build.</h2>
+          <p class="sec-lead">The source is secondary-only, but signed distribution and real-Mac validation are still in progress.</p></div>
+        <div class="faq">
+          <details open><summary>The Mac does not appear in Windows Devices.</summary><div class="a">Put both computers on the same Wi-Fi or LAN. On macOS 15+, allow OneMouse under <b>Privacy &amp; Security → Local Network</b>; macOS 13/14 may not show this item. Return to OneMouse and refresh Devices in Windows.</div></details>
+          <details><summary>The Mac is connected, but mouse and keyboard input do not work.</summary><div class="a">Allow OneMouse under macOS <b>Privacy &amp; Security → Accessibility</b>, then return to the app so it can recheck the permission. Basic input receiving does not require Input Monitoring.</div></details>
+          <details><summary>The Mac screen is blank in the Windows remote-control window.</summary><div class="a">Allow OneMouse under macOS <b>Privacy &amp; Security → Screen &amp; System Audio Recording</b>. This optional feature is LAN-only and is not provided over Bluetooth; OneMouse does not capture system audio.</div></details>
+          <details><summary>Windows and Mac do not connect over Bluetooth.</summary><div class="a">Pair the two computers once in both Windows and macOS Bluetooth settings, then enable the OneMouse Bluetooth connection. Use LAN for remote screen control and large transfers.</div></details>
+          <details><summary>I cannot select the Mac as the main computer.</summary><div class="a">That is expected. The planned macOS 13+ app is a <b>secondary device only</b>; the main controller must be Windows 10/11.</div></details>
+        </div>
       </div>
     </section>
 
@@ -88,7 +103,7 @@
           <details><summary>The phone can see the PC, but the PC can't see the phone.</summary><div class="a">This is usually a <b>Windows firewall inbound</b> issue. If the current network is set to <b>"Public"</b>, inbound may be blocked, so switch it to <b>"Private"</b> or allow OneMouse inbound in the firewall.</div></details>
           <details><summary>It works at home but not on office or café Wi-Fi.</summary><div class="a">Public/guest Wi-Fi often <b>isolates device-to-device communication (client isolation)</b> for security. In that case, devices can't find each other even on the same Wi-Fi. Use a <b>Bluetooth connection</b> or a personal hotspot.</div></details>
           <details><summary>It says connected, but the mouse and keyboard don't respond.</summary><div class="a">The Android <b>Accessibility Service</b> was most likely turned off or restarted by the system. Go to Android Settings → Accessibility and re-enable OneMouse.</div></details>
-          <details><summary>The cursor is stuck on the phone/another PC and won't come back.</summary><div class="a">Press <kbd style="font-family:var(--mono)">Ctrl+Alt+Backspace</kbd> to force the cursor back to the center of your own PC's monitor.</div></details>
+          <details><summary>The cursor is stuck on the phone, another PC, or Mac and won't come back.</summary><div class="a">Press <kbd style="font-family:var(--mono)">Ctrl+Alt+Backspace</kbd> to force the cursor back to the center of your own PC's monitor.</div></details>
           <details><summary>The connection drops when the screen turns off.</summary><div class="a">When the screen turns off, the phone's Wi-Fi can go into power-saving or the app can go to sleep due to battery optimization. Setting OneMouse as a <b>battery optimization exception</b> on Android keeps it stable. Also check the keep-screen-on option while connected.</div></details>
           <details><summary>Remote screen control over Bluetooth doesn't work well.</summary><div class="a">Mobile remote screen control moves a lot of data, so it's <b>not recommended over Bluetooth</b>. Use Wi-Fi for remote control. Bluetooth is well suited to mouse, keyboard, clipboard, and files.</div></details>
         </div>

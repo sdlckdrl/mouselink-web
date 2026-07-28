@@ -1,9 +1,10 @@
 (function () {
   var repo = "sdlckdrl/mouselink-web";
   var releasesUrl = "https://github.com/" + repo + "/releases";
-  var apiUrl = "https://api.github.com/repos/" + repo + "/releases?per_page=1";
+  var apiUrl = "https://api.github.com/repos/" + repo + "/releases?per_page=20";
   var cacheKey = "onemouse_latest_windows_download";
   var cacheTtlMs = 60 * 60 * 1000;
+  var requestTimeoutMs = 8000;
   var links = document.querySelectorAll("[data-latest-windows-download]");
 
   if (!links.length || !window.fetch) {
@@ -69,6 +70,32 @@
     });
   }
 
+  function fetchJsonWithTimeout(url, options) {
+    return new Promise(function (resolve, reject) {
+      var timer = setTimeout(function () {
+        reject(new Error("Download request timed out"));
+      }, requestTimeoutMs);
+
+      fetch(url, options)
+        .then(function (response) {
+          if (!response.ok) {
+            throw new Error("Download request failed");
+          }
+          return response.json();
+        })
+        .then(
+          function (payload) {
+            clearTimeout(timer);
+            resolve(payload);
+          },
+          function (error) {
+            clearTimeout(timer);
+            reject(error);
+          }
+        );
+    });
+  }
+
   function resolveDownload() {
     var cached = readCache();
     if (cached && cached.url) {
@@ -76,20 +103,20 @@
       return Promise.resolve(cached.url);
     }
 
-    return fetch(apiUrl, {
+    return fetchJsonWithTimeout(apiUrl, {
       headers: {
         Accept: "application/vnd.github+json"
       }
     })
-      .then(function (response) {
-        if (!response.ok) {
-          throw new Error("GitHub releases request failed");
-        }
-        return response.json();
-      })
       .then(function (releases) {
-        var release = Array.isArray(releases) ? releases[0] : null;
-        var asset = pickSetupAsset(release);
+        var asset = (Array.isArray(releases) ? releases : [])
+          .filter(function (release) {
+            return release && !release.draft && !release.prerelease;
+          })
+          .map(pickSetupAsset)
+          .find(function (candidate) {
+            return candidate && candidate.browser_download_url;
+          });
         if (!asset || !asset.browser_download_url) {
           throw new Error("No Windows setup asset found");
         }
@@ -122,4 +149,96 @@
       });
     });
   });
+})();
+
+(function () {
+  var links = document.querySelectorAll("[data-latest-macos-download]");
+  var requestTimeoutMs = 8000;
+  if (!links.length || !window.fetch) {
+    return;
+  }
+
+  var script = document.currentScript;
+  var manifestUrl = new URL("../downloads.json", script && script.src ? script.src : window.location.href).href;
+
+  function asHttpsUrl(value) {
+    if (typeof value !== "string" || !/^https:\/\//i.test(value)) {
+      return null;
+    }
+
+    try {
+      var parsed = new URL(value);
+      return parsed.protocol === "https:" ? parsed.href : null;
+    } catch (error) {
+      return null;
+    }
+  }
+
+  function pickMacDownload(macos) {
+    var assets = macos && Array.isArray(macos.assets) ? macos.assets : [];
+    var universal = assets.find(function (asset) {
+      return asset.arch === "universal" && asHttpsUrl(asset.url);
+    });
+
+    if (universal) {
+      return {
+        url: asHttpsUrl(universal.url)
+      };
+    }
+
+    var downloadPageUrl = macos && asHttpsUrl(macos.downloadPageUrl);
+    if (downloadPageUrl) {
+      return {
+        url: downloadPageUrl
+      };
+    }
+
+    return null;
+  }
+
+  function fetchJsonWithTimeout(url, options) {
+    return new Promise(function (resolve, reject) {
+      var timer = setTimeout(function () {
+        reject(new Error("Download manifest request timed out"));
+      }, requestTimeoutMs);
+
+      fetch(url, options)
+        .then(function (response) {
+          if (!response.ok) {
+            throw new Error("Download manifest request failed");
+          }
+          return response.json();
+        })
+        .then(
+          function (payload) {
+            clearTimeout(timer);
+            resolve(payload);
+          },
+          function (error) {
+            clearTimeout(timer);
+            reject(error);
+          }
+        );
+    });
+  }
+
+  fetchJsonWithTimeout(manifestUrl, { cache: "no-cache" })
+    .then(function (manifest) {
+      var macos = manifest && manifest.macos;
+      var asset = macos && macos.status === "released" ? pickMacDownload(macos) : null;
+      if (!asset) {
+        return;
+      }
+
+      links.forEach(function (link) {
+        link.href = asset.url;
+        link.classList.remove("btn-disabled");
+        link.classList.add("btn-sec");
+        link.removeAttribute("aria-disabled");
+        link.textContent = link.dataset.readyLabel || "Download for Mac";
+      });
+    })
+    .catch(function () {
+      // Keep the explicit coming-soon state when the manifest is unavailable.
+    });
 })();

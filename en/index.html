@@ -4,10 +4,10 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="naver-site-verification" content="8f3cbe8a89ca9969cc81ecf1ef5e0aae01858816" />
-  <title>OneMouse | One mouse for your phone, tablet, and other PCs</title>
-  <meta name="description" content="OneMouse is a free app that lets your PC mouse and keyboard control Android and other Windows PCs, and easily share files and the clipboard. Just slide your mouse to the edge of the screen and keep going." />
+  <title>OneMouse | Control Android and Windows PCs; Mac support in preparation</title>
+  <meta name="description" content="OneMouse lets a Windows main PC control Android and other Windows PCs. macOS 13+ secondary-device support is awaiting public distribution and real-Mac validation." />
   <meta name="robots" content="index,follow,max-image-preview:large" />
-  <meta name="keywords" content="OneMouse, MouseLink, share mouse, control Android from PC, PC to PC mouse, keyboard sharing, Wi-Fi file transfer, clipboard sync, Bluetooth mouse sharing" />
+  <meta name="keywords" content="OneMouse, MouseLink, share mouse, control Android from PC, control Mac from Windows, Windows Mac mouse sharing, PC to PC mouse, keyboard sharing, Wi-Fi file transfer, clipboard sync, Bluetooth mouse sharing" />
   <link rel="stylesheet" href="../css/onemouse.css" />
   <link rel="canonical" href="https://onemouse.pages.dev/en/" />
   <link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/" />
@@ -17,13 +17,13 @@
   <link rel="alternate" hreflang="x-default" href="https://onemouse.pages.dev/" />
   <meta property="og:site_name" content="OneMouse" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="OneMouse | One mouse for your phone, tablet, and other PCs" />
-  <meta property="og:description" content="Control Android and other Windows PCs with your PC mouse and keyboard, and easily share files and the clipboard. Free." />
+  <meta property="og:title" content="OneMouse | Control Android and Windows PCs; Mac support in preparation" />
+  <meta property="og:description" content="Use a Windows main PC to control Android and other Windows PCs. macOS 13+ secondary support is still being prepared and validated." />
   <meta property="og:url" content="https://onemouse.pages.dev/en/" />
   <meta property="og:image" content="https://onemouse.pages.dev/assets/hero-bg-generated-2.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="OneMouse | One mouse for your phone, tablet, and other PCs" />
-  <meta name="twitter:description" content="Control Android and other Windows PCs with your PC mouse and keyboard, and share files and the clipboard. Free." />
+  <meta name="twitter:title" content="OneMouse | Control Android and Windows PCs; Mac support in preparation" />
+  <meta name="twitter:description" content="Use a Windows main PC to control Android and other Windows PCs. macOS 13+ secondary support is still being prepared and validated." />
   <meta name="twitter:image" content="https://onemouse.pages.dev/assets/hero-bg-generated-2.png" />
   <script type="application/ld+json">
     {
@@ -32,11 +32,11 @@
       "name": "OneMouse",
       "alternateName": ["OneMouse", "MouseLink", "share mouse"],
       "applicationCategory": "UtilitiesApplication",
-      "operatingSystem": "Windows, Android",
+      "operatingSystem": "Windows 10, Windows 11, Android",
       "url": "https://onemouse.pages.dev/en/",
       "inLanguage": "en-US",
-      "downloadUrl": "https://onemouse.pages.dev/#get",
-      "description": "OneMouse is a free app that lets your PC mouse and keyboard control Android and other Windows PCs, and easily share files and the clipboard.",
+      "downloadUrl": "https://onemouse.pages.dev/en/#get",
+      "description": "OneMouse lets a Windows main PC control Android and other Windows PCs. macOS 13+ secondary-device support is awaiting public distribution and real-Mac validation.",
       "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" }
     }
   </script>
@@ -68,9 +68,23 @@
   <main>
     <!-- HERO + SIMULATOR -->
     <section class="hero wrap" aria-label="Overview">
-      <span class="tagpill">● Free · 5-minute setup · Windows + Android</span>
-      <h1>One mouse for<br><span class="flow">your phone, tablet, even other PCs</span> — in one glide.</h1>
-      <p class="sub">No video needed — try it yourself. Glide the cursor between devices, rearrange them, and drag a file to another device to send it.</p>
+      <span class="tagpill">● Free · Windows main · Android / Windows secondary · Mac preview</span>
+      <h1>One mouse for<br><span class="flow">your phone, tablet, other PCs, and Mac</span> — in one glide.</h1>
+      <p class="sub">Try the device arrangement below. The Mac in this demo previews secondary-device support; a public signed build and real-Mac validation are still in progress.</p>
+
+      <div class="hero-cta">
+        <a class="btn btn-pri" href="#get">Get the Windows app</a>
+        <a class="btn btn-sec" href="./guide.html">See how to connect</a>
+      </div>
+      <div class="role-map" aria-label="Supported device roles">
+        <div class="role-main"><span>Main</span><strong>Windows 10/11</strong></div>
+        <span class="role-link" aria-hidden="true">→</span>
+        <div class="role-targets">
+          <span><b>Android</b> Secondary</span>
+          <span><b>Windows</b> Secondary</span>
+          <span class="mac-role"><b>macOS 13+</b> Secondary only · In preparation</span>
+        </div>
+      </div>
 
       <div class="play">
         <div class="play-head">
@@ -101,6 +115,10 @@
               <div class="screen"><div class="apps" style="grid-template-columns:repeat(5,1fr);padding:9px 9px 18px">
                 <i style="background:#ff9e7a55"></i><i style="background:#c7a0ff55"></i><i style="background:#8ab4ff55"></i><i style="background:#ffffff33"></i><i style="background:#ffffff22"></i></div>
                 <div class="bar"><i></i><i></i></div></div></div>
+            <div class="dev mac grab" data-id="mac"><span class="pin">Mac · Secondary</span>
+              <div class="screen"><div class="apps" style="grid-template-columns:repeat(5,1fr);padding:10px 10px 20px">
+                <i style="background:#ff7f7755"></i><i style="background:#ffd45c55"></i><i style="background:#65d69e55"></i><i style="background:#60a5fa55"></i><i style="background:#b394f755"></i></div>
+                <div class="bar"><i></i><i></i><i></i></div></div></div>
             <div id="cursor"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 2l6.5 17 2.4-6.8L19.5 10z" fill="#fff" stroke="#241a12" stroke-width="1.3" stroke-linejoin="round"/></svg><span class="dot"></span></div>
             <div class="filechip" id="filechip"><svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z" fill="#e9f0ff" stroke="#3a5bd0" stroke-width="1.6" stroke-linejoin="round"/><path d="M13 2v7h7" fill="none" stroke="#3a5bd0" stroke-width="1.6" stroke-linejoin="round"/></svg><span>photo.jpg</span></div>
           </div>
@@ -111,10 +129,6 @@
         </div>
       </div>
 
-      <div class="hero-cta">
-        <a class="btn btn-pri" href="#get">Start for free</a>
-        <a class="btn btn-sec" href="./guide.html">See the 1-minute setup</a>
-      </div>
       <p class="hero-note">The demo above is the real <b>device arrangement</b> feature — you arrange devices and pass the mouse the same way in the app.</p>
     </section>
 
@@ -123,7 +137,7 @@
       <div class="wrap">
         <div class="sec-head">
           <p class="ey">Great for moments like these</p>
-          <h2 class="sec">What you do at your PC, now on your phone and other PCs.</h2>
+          <h2 class="sec">What you do at your Windows PC, now on your phone, other PCs, and Mac.</h2>
           <p class="sec-lead">No networking know-how required. See it through everyday tasks and it clicks right away.</p>
         </div>
         <div class="cards">
@@ -135,8 +149,10 @@
             <h3>Send files and the clipboard instantly</h3><p>Grab a file and drag it to the screen edge to send it straight to the device you chose, and text and clipboard stay in sync on both sides.</p></article>
           <article class="card"><div class="card-ic" style="background:#f3ecff;color:#7a52d0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="7" width="9" height="10" rx="1.5"/><rect x="13" y="4" width="9" height="7" rx="1.5"/></svg></div>
             <h3>Bring in other Windows PCs too</h3><p>Place a sub PC in your arrangement and you can pass the mouse to control it and swap files back and forth.</p></article>
+          <article class="card"><div class="card-ic" style="background:#eef2f6;color:#536273"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M1.5 20h21M9 17l-1 3m7-3 1 3"/></svg></div>
+            <h3>Mac secondary support is in preparation</h3><p>Cursor crossing, input, files, and clipboard transfer will be offered after public distribution and real-Mac validation are complete.</p></article>
           <article class="card"><div class="card-ic" style="background:#eef0f4;color:#4a5978"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 5l8 7-5 4V4l5 4-8 7"/></svg></div>
-            <h3>It connects over Bluetooth too</h3><p>Wi-Fi for everyday use, and when there is no Wi-Fi router or internet, connect directly to your phone or another PC over Bluetooth.</p></article>
+            <h3>It connects over Bluetooth too</h3><p>Wi-Fi for everyday use, and when there is no router or internet, connect directly to Android or another Windows PC. Mac Bluetooth is still being validated.</p></article>
         </div>
       </div>
     </section>
@@ -146,14 +162,14 @@
       <div class="wrap">
         <div class="sec-head">
           <p class="ey">How to connect</p>
-          <h2 class="sec">Four steps, done in a minute.</h2>
-          <p class="sec-lead">The app handles the tricky setup for you. Just follow the on-screen steps. The only thing you turn on is the Accessibility Service.</p>
+          <h2 class="sec">Android takes four quick steps.</h2>
+          <p class="sec-lead">These steps are for Android. The guide also previews the planned five-step Mac flow for the build now awaiting distribution and hardware validation.</p>
         </div>
         <div class="flow4">
           <div class="step"><div class="badge">01</div><h4>Open the PC app</h4><p>Launch OneMouse on Windows and check the QR code or 6-digit code on screen.</p></div>
           <div class="step"><div class="badge">02</div><h4>Turn on the Android permission</h4><p>Turn on the Accessibility Service once so Android can receive your PC mouse and keyboard input.</p></div>
           <div class="step"><div class="badge">03</div><h4>Connect by QR or code</h4><p>Find the PC on the same Wi-Fi and confirm your device by scanning the QR code or entering the 6-digit code.</p></div>
-          <div class="step"><div class="badge">04</div><h4>Arrange and cross over</h4><p>Place your phone or other PC along a screen edge, push the mouse that way, and you are done.</p></div>
+          <div class="step"><div class="badge">04</div><h4>Arrange and cross over</h4><p>Place your phone along a screen edge, push the mouse that way, and you are done.</p></div>
         </div>
         <details class="fold"><summary><span>See the real pairing screens</span><small>Get ready → Check the PC code → Enter the numbers → Scan the QR</small></summary>
           <div class="fold-body"><a href="../assets/onemouse-pairing-real-ui-comic-v5.png" target="_blank" rel="noopener"><img src="../assets/onemouse-pairing-real-ui-comic-v5.png" alt="OneMouse pairing steps: get ready, check the PC code, enter the numbers, scan the QR" loading="lazy" style="border-radius:12px" /></a></div></details>
@@ -173,7 +189,7 @@
           <div class="t"><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l7 4v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V7z"/></svg></span>
             <div><b>No server in between</b><span>Input, files, and the clipboard travel between your PC and devices on the same network.</span></div></div>
           <div class="t"><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span>
-            <div><b>Permissions only when needed</b><span>Only Accessibility is required; things like screen capture and nearby Wi-Fi are requested when you start that feature.</span></div></div>
+            <div><b>Permissions only when needed</b><span>Android uses Accessibility. A secondary Mac uses Accessibility; Local Network appears on macOS 15+, while macOS 13/14 may not show that permission.</span></div></div>
           <div class="t"><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg></span>
             <div><b>Nothing collected or stored</b><span>We do not use Accessibility data for ads or screen collection, and we never store your files on a server.</span></div></div>
         </div>
@@ -186,27 +202,30 @@
       <div class="wrap">
         <div class="sec-head">
           <p class="ey">Download</p>
-          <h2 class="sec">Get the Windows app and the Android app together.</h2>
-          <p class="sec-lead">On PC, Windows 10/11 comes first. On Android, turn on the Accessibility Service, then pair with your PC.</p>
+          <h2 class="sec">Install OneMouse on your Windows main PC and each secondary device.</h2>
+          <p class="sec-lead">Windows 10/11 is the main controller. Android is available now; macOS 13+ secondary support is awaiting signed distribution and real-Mac validation.</p>
         </div>
         <div class="dl">
           <article class="dcard first download-card">
             <span class="dtag" style="background:linear-gradient(135deg,var(--blue),var(--green))">PC</span>
             <h3>Windows</h3>
             <p data-download-filename>Checking for the latest Setup file.</p>
-            <a class="btn btn-pri" href="https://github.com/sdlckdrl/mouselink-web/releases/latest" data-latest-windows-download download>Download for Windows</a>
+            <a class="btn btn-pri" href="https://github.com/sdlckdrl/mouselink-web/releases" data-latest-windows-download download>Download for Windows</a>
           </article>
           <article class="dcard">
-            <span class="dtag" style="background:#15845f">GP</span>
-            <h3>Google Play</h3>
-            <p>Installs on most Android devices.</p>
-            <a class="btn btn-sec" href="https://play.google.com/store/apps/details?id=com.mouselink.app">View on Google Play</a>
+            <span class="dtag" style="background:#15845f">AND</span>
+            <h3>Android</h3>
+            <p>Install from Google Play or Galaxy Store, then enable Accessibility and pair with Windows.</p>
+            <div class="store-actions">
+              <a class="btn btn-sec" href="https://play.google.com/store/apps/details?id=com.mouselink.app">View on Google Play</a>
+              <a class="btn btn-sec" href="https://apps.samsung.com/appquery/appDetail.as?appId=com.mouselink.app.galaxy">View on Galaxy Store</a>
+            </div>
           </article>
-          <article class="dcard">
-            <span class="dtag" style="background:#b76a05">GS</span>
-            <h3>Galaxy Store</h3>
-            <p>Open the store on Samsung Galaxy devices to install.</p>
-            <a class="btn btn-sec" href="https://apps.samsung.com/appquery/appDetail.as?appId=com.mouselink.app.galaxy">View on Galaxy Store</a>
+          <article class="dcard mac-download-card">
+            <span class="dtag" style="background:#536273">MAC</span>
+            <h3>macOS</h3>
+            <p data-macos-download-filename>macOS 13+ · Secondary device only</p>
+            <a class="btn btn-disabled" data-latest-macos-download data-ready-label="Download for Mac" aria-disabled="true">Coming soon</a>
           </article>
         </div>
       </div>
@@ -222,7 +241,8 @@
         <div class="faq">
           <details><summary>Is it really free?</summary><div class="a">Yes. Core features like mouse and keyboard control and arranging your phone's position are free to use.</div></details>
           <details><summary>Do I need rooting or developer settings?</summary><div class="a">No. You just turn on the <b>Accessibility Service</b> once on Android. No USB connection or ADB required.</div></details>
-          <details><summary>Can I use it without being on the same Wi-Fi?</summary><div class="a">Yes. You can connect directly to your phone or another PC over <b>Bluetooth</b> to share mouse, keyboard, and files.</div></details>
+          <details><summary>Can I use it without being on the same Wi-Fi?</summary><div class="a">Yes for Android and another Windows PC over <b>Bluetooth</b>. Mac Bluetooth is still awaiting real-device validation.</div></details>
+          <details><summary>Can my Mac act as the main computer?</summary><div class="a">No. The Mac build in preparation is a <b>secondary device only</b>; Windows 10/11 remains the main controller.</div></details>
           <details><summary>My connection keeps dropping.</summary><div class="a">Usually the cause is <b>battery optimization</b> or a <b>firewall or guest-Wi-Fi client isolation</b>. Follow the troubleshooting order in Help to narrow it down step by step.</div></details>
         </div>
         <div style="margin-top:20px"><a class="btn btn-sec sm" href="./help.html">See all of Help</a></div>
@@ -250,9 +270,10 @@
       tab:{x:481,y:159,w:150,h:112,label:'Galaxy Tab',drag:true},
       phone:{x:209,y:151,w:66,h:126,label:'Phone',drag:true},
       subpc:{x:295,y:40,w:170,h:110,label:'Other PC',drag:true},
+      mac:{x:130,y:38,w:155,h:100,label:'Mac',drag:true},
     };
     const devs={};
-    ['pc','tab','phone','subpc'].forEach(id=>{ devs[id]=Object.assign({},HOME[id]); devs[id].el=stage.querySelector('.dev[data-id="'+id+'"]'); });
+    ['pc','tab','phone','subpc','mac'].forEach(id=>{ devs[id]=Object.assign({},HOME[id]); devs[id].el=stage.querySelector('.dev[data-id="'+id+'"]'); });
     let scale=1;
     const fit=()=>{ scale=desk.clientWidth/VW; stage.style.transform='scale('+scale+')'; };
     const layout=()=>{ for(const id in devs){ const d=devs[id]; d.el.style.left=d.x+'px'; d.el.style.top=d.y+'px'; d.el.style.width=d.w+'px'; d.el.style.height=d.h+'px'; } };
