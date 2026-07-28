@@ -1,377 +1,995 @@
 <!doctype html>
 <html lang="zh">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="naver-site-verification" content="8f3cbe8a89ca9969cc81ecf1ef5e0aae01858816" />
-  <title>OneMouse | Windows 控制 Android 与另一台电脑，Mac 支持准备中</title>
-  <meta name="description" content="OneMouse 由 Windows 端发起并管理连接，可控制 Android 和另一台 Windows 电脑。macOS 13+ 支持源码已准备，公开公证安装包与真机验证仍在进行。" />
-  <meta name="robots" content="index,follow,max-image-preview:large" />
-  <meta name="keywords" content="OneMouse, MouseLink, share mouse, 共享鼠标, 鼠标共享, 电脑鼠标共享, Android 电脑控制, 用电脑鼠标控制手机, Windows 控制 Mac, macOS 鼠标共享, Android 键盘输入, PC 到 PC 鼠标, Wi-Fi 文件传输" />
-  <link rel="stylesheet" href="../css/onemouse.css" />
-  <link rel="canonical" href="https://onemouse.pages.dev/zh/" />
-  <link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/" />
-  <link rel="alternate" hreflang="en" href="https://onemouse.pages.dev/en/" />
-  <link rel="alternate" hreflang="ja" href="https://onemouse.pages.dev/ja/" />
-  <link rel="alternate" hreflang="zh" href="https://onemouse.pages.dev/zh/" />
-  <link rel="alternate" hreflang="x-default" href="https://onemouse.pages.dev/" />
-  <meta property="og:site_name" content="OneMouse" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="OneMouse | Windows 控制 Android 与另一台电脑，Mac 支持准备中" />
-  <meta property="og:description" content="Windows 端发起并管理与 Android、另一台 Windows 电脑和 Mac 的连接。Mac 公开公证安装包与真机验证仍在进行。" />
-  <meta property="og:url" content="https://onemouse.pages.dev/zh/" />
-  <meta property="og:image" content="https://onemouse.pages.dev/assets/hero-bg-generated-2.png" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="OneMouse | Windows 控制 Android 与另一台电脑，Mac 支持准备中" />
-  <meta name="twitter:description" content="macOS 13+ 支持源码已准备；连接由 Windows 端发起并管理，公开公证安装包与真机验证仍在进行。" />
-  <meta name="twitter:image" content="https://onemouse.pages.dev/assets/hero-bg-generated-2.png" />
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "OneMouse",
-      "alternateName": ["OneMouse", "MouseLink", "share mouse"],
-      "applicationCategory": "UtilitiesApplication",
-      "operatingSystem": "Windows 10, Windows 11, Android",
-      "url": "https://onemouse.pages.dev/zh/",
-      "inLanguage": "zh-CN",
-      "downloadUrl": "https://onemouse.pages.dev/zh/#get",
-      "description": "OneMouse 由 Windows 端发起并管理连接，可控制 Android 和另一台 Windows 电脑。macOS 13+ 支持源码已准备，公开公证安装包与真机验证仍在进行。",
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" }
-    }
-  </script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MJ73H86TWX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-MJ73H86TWX');
-  </script>
-</head>
-<body>
-  <header class="site">
-    <div class="wrap hd">
-      <a class="brand" href="./index.html" aria-label="OneMouse 主页"><span class="om">OM</span>OneMouse</a>
-      <nav class="nav" aria-label="主菜单">
-        <a href="./index.html" class="on">概览</a>
-        <a href="#use">功能</a>
-        <a href="./guide.html">使用方法</a>
-        <a href="./help.html">帮助</a>
-      </nav>
-      <div class="hd-right">
-        <div class="lang" aria-label="语言"><a href="../index.html">KOR</a><a href="../en/index.html">ENG</a><a href="../ja/index.html">JPN</a><span class="on">CHN</span></div>
-        <a class="hd-cta" href="#get">免费下载</a>
-      </div>
-    </div>
-  </header>
-
-  <main>
-    <!-- HERO + SIMULATOR -->
-    <section class="hero wrap" aria-label="概览">
-      <span class="tagpill">● 免费 · Android 与 Windows 互联 · macOS 准备中</span>
-      <h1>一只 Windows 鼠标，<br class="hero-break"> <span class="flow">轻松操控手机、平板与 Mac</span>。</h1>
-      <p class="sub">像摆放屏幕一样连接 Android 与另一台 Windows PC。macOS 13+ 支持正在准备公开公证版并进行真机验证。</p>
-
-      <div class="hero-cta">
-        <a class="btn btn-pri" href="#get">下载 Windows 版</a>
-        <a class="btn btn-sec" href="./guide.html">查看连接方法</a>
-      </div>
-      <div class="role-map" aria-label="支持的设备">
-        <div class="role-main"><span>连接发起端</span><strong>Windows 10/11</strong></div>
-        <span class="role-link" aria-hidden="true">→</span>
-        <div class="role-targets">
-          <span><b>Android</b> 已支持</span>
-          <span><b>另一台 Windows PC</b> 已支持</span>
-          <span class="mac-role"><b>macOS 13+</b> 准备中</span>
-        </div>
-      </div>
-
-      <div class="play">
-        <div class="play-head">
-          <div class="steps">
-            <span><span class="n">1</span><b>移动鼠标</b>，把光标滑过去看看</span>
-            <span><span class="n">2</span><b>拖动设备名牌</b>，换个位置试试</span>
-            <span><span class="n">3</span><b>拖动文件</b>发送到其他设备</span>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="naver-site-verification" content="8f3cbe8a89ca9969cc81ecf1ef5e0aae01858816" />
+    <title>OneMouse | Windows 控制 Android 与另一台电脑，Mac 支持准备中</title>
+    <meta
+      name="description"
+      content="OneMouse 由 Windows 端发起并管理连接，可控制 Android 和另一台 Windows 电脑。macOS 13+ 支持源码已准备，公开公证安装包与真机验证仍在进行。"
+    />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <meta
+      name="keywords"
+      content="OneMouse, MouseLink, share mouse, 共享鼠标, 鼠标共享, 电脑鼠标共享, Android 电脑控制, 用电脑鼠标控制手机, Windows 控制 Mac, macOS 鼠标共享, Android 键盘输入, PC 到 PC 鼠标, Wi-Fi 文件传输"
+    />
+    <link rel="stylesheet" href="../css/onemouse.css" />
+    <link rel="canonical" href="https://onemouse.pages.dev/zh/" />
+    <link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/" />
+    <link rel="alternate" hreflang="en" href="https://onemouse.pages.dev/en/" />
+    <link rel="alternate" hreflang="ja" href="https://onemouse.pages.dev/ja/" />
+    <link rel="alternate" hreflang="zh" href="https://onemouse.pages.dev/zh/" />
+    <link rel="alternate" hreflang="x-default" href="https://onemouse.pages.dev/" />
+    <meta property="og:site_name" content="OneMouse" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="OneMouse | Windows 控制 Android 与另一台电脑，Mac 支持准备中"
+    />
+    <meta
+      property="og:description"
+      content="Windows 端发起并管理与 Android、另一台 Windows 电脑和 Mac 的连接。Mac 公开公证安装包与真机验证仍在进行。"
+    />
+    <meta property="og:url" content="https://onemouse.pages.dev/zh/" />
+    <meta property="og:image" content="https://onemouse.pages.dev/assets/hero-bg-generated-2.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="OneMouse | Windows 控制 Android 与另一台电脑，Mac 支持准备中"
+    />
+    <meta
+      name="twitter:description"
+      content="macOS 13+ 支持源码已准备；连接由 Windows 端发起并管理，公开公证安装包与真机验证仍在进行。"
+    />
+    <meta
+      name="twitter:image"
+      content="https://onemouse.pages.dev/assets/hero-bg-generated-2.png"
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "OneMouse",
+        "alternateName": ["OneMouse", "MouseLink", "share mouse"],
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Windows 10, Windows 11, Android",
+        "url": "https://onemouse.pages.dev/zh/",
+        "inLanguage": "zh-CN",
+        "downloadUrl": "https://onemouse.pages.dev/zh/#get",
+        "description": "OneMouse 由 Windows 端发起并管理连接，可控制 Android 和另一台 Windows 电脑。macOS 13+ 支持源码已准备，公开公证安装包与真机验证仍在进行。",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" }
+      }
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MJ73H86TWX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-MJ73H86TWX');
+    </script>
+  </head>
+  <body>
+    <header class="site">
+      <div class="wrap hd">
+        <a class="brand" href="./index.html" aria-label="OneMouse 主页"
+          ><span class="om">OM</span>OneMouse</a
+        >
+        <nav class="nav" aria-label="主菜单">
+          <a href="./index.html" class="on">概览</a>
+          <a href="#use">功能</a>
+          <a href="./guide.html">使用方法</a>
+          <a href="./help.html">帮助</a>
+        </nav>
+        <div class="hd-right">
+          <div class="lang" aria-label="语言">
+            <a href="../index.html">KOR</a><a href="../en/index.html">ENG</a
+            ><a href="../ja/index.html">JPN</a><span class="on">CHN</span>
           </div>
-          <button class="reset" id="reset" type="button">恢复初始布局</button>
+          <a class="hd-cta" href="#get">免费下载</a>
         </div>
-        <div class="desk" id="desk">
-          <div class="stage" id="stage">
-            <div class="snapedge" id="snapedge"></div>
-            <div class="dev monitor" data-id="pc"><span class="pin">我的电脑</span>
-              <div class="screen"><div class="apps" style="grid-template-columns:repeat(6,1fr);padding:12px 12px 22px">
-                <i style="background:#ffffff55"></i><i style="background:#ffd16655"></i><i style="background:#7ee0b955"></i>
-                <i style="background:#ff9e7a55"></i><i style="background:#8ab4ff55"></i><i style="background:#ffffff33"></i></div>
-                <div class="bar"><i></i><i></i><i></i></div></div></div>
-            <div class="dev tablet grab" data-id="tab"><span class="pin">Galaxy Tab</span>
-              <div class="screen"><div class="apps">
-                <i style="background:#5b8cff88"></i><i style="background:#57e0ab88"></i><i style="background:#ffcf5e88"></i><i style="background:#ff8f6b88"></i>
-                <i style="background:#ffffff33"></i><i style="background:#ffffff33"></i><i style="background:#ffffff33"></i><i style="background:#ffffff33"></i></div></div></div>
-            <div class="dev phone grab" data-id="phone"><span class="pin">手机</span>
-              <div class="screen"><div class="apps">
-                <i style="background:#57e0ab88"></i><i style="background:#ffcf5e88"></i><i style="background:#ff8f6b88"></i>
-                <i style="background:#8ab4ff88"></i><i style="background:#ffffff33"></i><i style="background:#ffffff33"></i></div></div></div>
-            <div class="dev subpc grab" data-id="subpc"><span class="pin">另一台电脑</span>
-              <div class="screen"><div class="apps" style="grid-template-columns:repeat(5,1fr);padding:9px 9px 18px">
-                <i style="background:#ff9e7a55"></i><i style="background:#c7a0ff55"></i><i style="background:#8ab4ff55"></i><i style="background:#ffffff33"></i><i style="background:#ffffff22"></i></div>
-                <div class="bar"><i></i><i></i></div></div></div>
-            <div class="dev mac grab" data-id="mac"><span class="pin">Mac</span>
-              <div class="screen"><div class="apps" style="grid-template-columns:repeat(5,1fr);padding:9px 9px 18px">
-                <i style="background:#8ab4ff66"></i><i style="background:#7ee0b966"></i><i style="background:#ffffff55"></i><i style="background:#ffd16655"></i><i style="background:#c7a0ff55"></i></div>
-                <div class="bar"><i></i><i></i><i></i></div></div></div>
-            <div id="cursor"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 2l6.5 17 2.4-6.8L19.5 10z" fill="#fff" stroke="#241a12" stroke-width="1.3" stroke-linejoin="round"/></svg><span class="dot"></span></div>
-            <div class="filechip" id="filechip"><svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z" fill="#e9f0ff" stroke="#3a5bd0" stroke-width="1.6" stroke-linejoin="round"/><path d="M13 2v7h7" fill="none" stroke="#3a5bd0" stroke-width="1.6" stroke-linejoin="round"/></svg><span>照片.jpg</span></div>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO + SIMULATOR -->
+      <section class="hero wrap" aria-label="概览">
+        <span class="tagpill">● 免费 · Android 与 Windows 互联 · macOS 准备中</span>
+        <h1>
+          一只 Windows 鼠标，<br class="hero-break" />
+          <span class="flow">轻松操控手机、平板与 Mac</span>。
+        </h1>
+        <p class="sub">
+          像摆放屏幕一样连接 Android 与另一台 Windows PC。macOS 13+
+          支持正在准备公开公证版并进行真机验证。
+        </p>
+
+        <div class="hero-cta">
+          <a class="btn btn-pri" href="#get">下载 Windows 版</a>
+          <a class="btn btn-sec" href="./guide.html">查看连接方法</a>
+        </div>
+        <div class="role-map" aria-label="支持的设备">
+          <div class="role-main"><span>连接发起端</span><strong>Windows 10/11</strong></div>
+          <span class="role-link" aria-hidden="true">→</span>
+          <div class="role-targets">
+            <span><b>Android</b> 已支持</span>
+            <span><b>另一台 Windows PC</b> 已支持</span>
+            <span class="mac-role"><b>macOS 13+</b> 准备中</span>
           </div>
         </div>
-        <div class="play-foot">
-          <div id="status"><span class="dotnow"></span>当前光标位置 → <span class="where">我的电脑</span></div>
-          <span class="hint">会跳到相邻的设备 · 光标不会跑到屏幕外消失</span>
-        </div>
-      </div>
 
-      <p class="hero-note">上面的演示就是真实的<b>设备布局</b>功能——在应用里也是这样摆好、把鼠标滑过去。</p>
-    </section>
-
-    <!-- USE CASES -->
-    <section id="use">
-      <div class="wrap">
-        <div class="sec-head">
-          <p class="ey">这些场景很好用</p>
-          <h2 class="sec">在 Windows 前做的事，延伸到手机和另一台电脑；Mac 支持正在准备。</h2>
-          <p class="sec-lead">不懂网络设置也没关系。从你常做的事来看，一下就明白它用在哪儿。</p>
-        </div>
-        <div class="cards">
-          <article class="card"><div class="card-ic" style="background:#e9f0ff;color:#3a5bd0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="6" y="3" width="12" height="18" rx="3"/><path d="M11 6h2"/></svg></div>
-            <h3>把手机当作旁边的屏幕来控制</h3><p>把鼠标推到电脑显示器边缘，就会跨到 Android，点击、滚动、拖拽一气呵成。</p></article>
-          <article class="card"><div class="card-ic" style="background:#eafaf1;color:#15845f"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 10h.01M10 10h.01M14 10h.01M8 14h8"/></svg></div>
-            <h3>长句子也用电脑键盘打</h3><p>搜索词、聊天回复、应用输入框，凡是要在手机上打字的时候，都能直接用电脑键盘。</p></article>
-          <article class="card"><div class="card-ic" style="background:#fff0e8;color:#ff7a4d"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5h6l2 2h8v11H4z"/></svg></div>
-            <h3>文件·剪贴板即传即到</h3><p>抓起文件拖到屏幕边界，就直接发到选定的设备；文字和剪贴板也在两端一起同步。</p></article>
-          <article class="card"><div class="card-ic" style="background:#f3ecff;color:#7a52d0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="7" width="9" height="10" rx="1.5"/><rect x="13" y="4" width="9" height="7" rx="1.5"/></svg></div>
-            <h3>另一台 Windows 电脑也能一起用</h3><p>摆好另一台电脑，就能把鼠标滑过去控制它，还能互传文件。</p></article>
-          <article class="card"><div class="card-ic" style="background:#edf1f7;color:#52627a"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
-            <h3>Mac 连接支持准备中</h3><p>macOS 13+ 连接目标的源码及配套支持已准备，连接由 Windows 端发起并管理；公开公证安装包与真机验证仍在进行。</p></article>
-          <article class="card"><div class="card-ic" style="background:#eef0f4;color:#4a5978"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 5l8 7-5 4V4l5 4-8 7"/></svg></div>
-            <h3>用 Bluetooth 也能连</h3><p>平时用 Wi-Fi，没有 Wi-Fi 路由器或网络时，就用 Bluetooth 直接连到手机和另一台电脑。</p></article>
-        </div>
-      </div>
-    </section>
-
-    <!-- SETUP -->
-    <section class="section-alt" id="setup">
-      <div class="wrap">
-        <div class="sec-head">
-          <p class="ey">连接方法</p>
-          <h2 class="sec">Android 连接四步走，1 分钟搞定。</h2>
-          <p class="sec-lead">以下是 Android 的连接流程。Mac 公开公证版发布后，连接仍由 Windows 端发起并管理，具体请参阅<a href="./guide.html#mac">Mac 连接指南</a>。</p>
-        </div>
-        <div class="flow4">
-          <div class="step"><div class="badge">01</div><h4>打开电脑上的应用</h4><p>在 Windows 上打开 OneMouse，看一下屏幕上的二维码或 6 位数字码。</p></div>
-          <div class="step"><div class="badge">02</div><h4>打开 Android 权限</h4><p>为了接收电脑的鼠标和键盘输入，打开一次无障碍服务。</p></div>
-          <div class="step"><div class="badge">03</div><h4>用二维码或数字码连接</h4><p>找到同一 Wi-Fi 下的电脑，扫二维码或输入 6 位数字码确认你的设备。</p></div>
-          <div class="step"><div class="badge">04</div><h4>摆好位置再滑过去</h4><p>把手机或另一台 Windows 电脑放到屏幕边缘；Mac 公开版发布后也会作为连接目标加入布局。</p></div>
-        </div>
-        <details class="fold"><summary><span>看看真实的配对画面</span><small>准备 → 确认电脑数字码 → 输入数字 → 扫二维码</small></summary>
-          <div class="fold-body"><a href="../assets/onemouse-pairing-real-ui-comic-v5.png" target="_blank" rel="noopener"><img src="../assets/onemouse-pairing-real-ui-comic-v5.png" alt="OneMouse 配对方法：准备、确认电脑数字码、输入数字、扫二维码的顺序" loading="lazy" style="border-radius:12px" /></a></div></details>
-        <div style="margin-top:20px"><a class="btn btn-sec sm" href="./guide.html">查看详细使用指南</a></div>
-      </div>
-    </section>
-
-    <!-- TRUST -->
-    <section id="trust">
-      <div class="wrap">
-        <div class="sec-head">
-          <p class="ey">放心使用</p>
-          <h2 class="sec">只在你自己的设备之间，你自己的网络内。</h2>
-          <p class="sec-lead">OneMouse 只在你配对过的自己的设备之间运行。权限也只在你用到相应功能时才请求。</p>
-        </div>
-        <div class="trust">
-          <div class="t"><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l7 4v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V7z"/></svg></span>
-            <div><b>不经过服务器</b><span>输入、文件、剪贴板都在同一网络里你自己的电脑和设备之间往来。</span></div></div>
-          <div class="t"><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span>
-            <div><b>权限只在需要时请求</b><span>Mac 公开版发布后，“辅助功能”是接收输入所必需的；macOS 15+ 需允许“本地网络”，macOS 13/14 可能不会显示该项目。</span></div></div>
-          <div class="t"><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg></span>
-            <div><b>不收集·不存储</b><span>不会把无障碍数据用于广告或屏幕收集，也不会把文件存到服务器上。</span></div></div>
-        </div>
-        <div style="margin-top:20px"><a class="btn btn-sec sm" href="./technical.html">查看技术与安全详情</a></div>
-      </div>
-    </section>
-
-    <!-- DOWNLOAD -->
-    <section class="section-alt" id="get">
-      <div class="wrap">
-        <div class="sec-head">
-          <p class="ey">下载</p>
-          <h2 class="sec">先在 Windows 上开始，再为要连接的设备安装对应版本。</h2>
-          <p class="sec-lead">Windows 10/11 负责发起并管理连接，Android 可立即安装。Mac 客户端源码及配套支持已准备，但公开公证安装包与真机验证仍在进行。</p>
-        </div>
-        <div class="panel tip" style="margin-bottom:16px"><h3>macOS 发布状态</h3><p>Mac 尚未作为已公开、已完成真机验证的功能提供。页面中的 Mac 演示与说明展示的是准备中的 macOS 13+ 连接支持。</p></div>
-        <div class="dl">
-          <article class="dcard first download-card">
-            <span class="dtag" style="background:linear-gradient(135deg,var(--blue),var(--green))">PC</span>
-            <h3>Windows</h3>
-            <p data-download-filename>正在获取最新的 Setup 文件。</p>
-            <a class="btn btn-pri" href="https://github.com/sdlckdrl/mouselink-web/releases" data-latest-windows-download download>下载 Windows 版</a>
-          </article>
-          <article class="dcard">
-            <span class="dtag" style="background:#15845f">A</span>
-            <h3>Android</h3>
-            <p>选择适合设备的商店，将 Android 添加为连接目标。</p>
-            <div class="store-actions">
-              <a class="btn btn-sec" href="https://play.google.com/store/apps/details?id=com.mouselink.app">Google Play</a>
-              <a class="btn btn-sec" href="https://apps.samsung.com/appquery/appDetail.as?appId=com.mouselink.app.galaxy">Galaxy Store</a>
+        <div class="play">
+          <div class="play-head">
+            <div class="steps">
+              <span><span class="n">1</span><b>移动鼠标</b>，把光标滑过去看看</span>
+              <span><span class="n">2</span><b>拖动设备名牌</b>，换个位置试试</span>
+              <span><span class="n">3</span><b>拖动文件</b>发送到其他设备</span>
             </div>
-          </article>
-          <article class="dcard mac-download-card">
-            <span class="dtag" style="background:#52627a">Mac</span>
-            <h3>macOS</h3>
-            <p data-macos-download-filename>macOS 13+ · 由 Windows 发起连接</p>
-            <a class="btn btn-disabled" data-latest-macos-download data-ready-label="下载 Mac 版" aria-disabled="true">即将推出</a>
-          </article>
+            <button class="reset" id="reset" type="button">恢复初始布局</button>
+          </div>
+          <div class="desk" id="desk">
+            <div class="stage" id="stage">
+              <div class="snapedge" id="snapedge"></div>
+              <div class="dev monitor" data-id="pc">
+                <span class="pin">我的电脑</span>
+                <div class="screen">
+                  <div
+                    class="apps"
+                    style="grid-template-columns: repeat(6, 1fr); padding: 12px 12px 22px"
+                  >
+                    <i style="background: #ffffff55"></i><i style="background: #ffd16655"></i
+                    ><i style="background: #7ee0b955"></i> <i style="background: #ff9e7a55"></i
+                    ><i style="background: #8ab4ff55"></i><i style="background: #ffffff33"></i>
+                  </div>
+                  <div class="bar"><i></i><i></i><i></i></div>
+                </div>
+              </div>
+              <div class="dev tablet grab" data-id="tab">
+                <span class="pin">Galaxy Tab</span>
+                <div class="screen">
+                  <div class="apps">
+                    <i style="background: #5b8cff88"></i><i style="background: #57e0ab88"></i
+                    ><i style="background: #ffcf5e88"></i><i style="background: #ff8f6b88"></i>
+                    <i style="background: #ffffff33"></i><i style="background: #ffffff33"></i
+                    ><i style="background: #ffffff33"></i><i style="background: #ffffff33"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="dev phone grab" data-id="phone">
+                <span class="pin">手机</span>
+                <div class="screen">
+                  <div class="apps">
+                    <i style="background: #57e0ab88"></i><i style="background: #ffcf5e88"></i
+                    ><i style="background: #ff8f6b88"></i> <i style="background: #8ab4ff88"></i
+                    ><i style="background: #ffffff33"></i><i style="background: #ffffff33"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="dev subpc grab" data-id="subpc">
+                <span class="pin">另一台电脑</span>
+                <div class="screen">
+                  <div
+                    class="apps"
+                    style="grid-template-columns: repeat(5, 1fr); padding: 9px 9px 18px"
+                  >
+                    <i style="background: #ff9e7a55"></i><i style="background: #c7a0ff55"></i
+                    ><i style="background: #8ab4ff55"></i><i style="background: #ffffff33"></i
+                    ><i style="background: #ffffff22"></i>
+                  </div>
+                  <div class="bar"><i></i><i></i></div>
+                </div>
+              </div>
+              <div class="dev mac grab" data-id="mac">
+                <span class="pin">Mac</span>
+                <div class="screen">
+                  <div
+                    class="apps"
+                    style="grid-template-columns: repeat(5, 1fr); padding: 9px 9px 18px"
+                  >
+                    <i style="background: #8ab4ff66"></i><i style="background: #7ee0b966"></i
+                    ><i style="background: #ffffff55"></i><i style="background: #ffd16655"></i
+                    ><i style="background: #c7a0ff55"></i>
+                  </div>
+                  <div class="bar"><i></i><i></i><i></i></div>
+                </div>
+              </div>
+              <div id="cursor">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M4 2l6.5 17 2.4-6.8L19.5 10z"
+                    fill="#fff"
+                    stroke="#241a12"
+                    stroke-width="1.3"
+                    stroke-linejoin="round"
+                  /></svg
+                ><span class="dot"></span>
+              </div>
+              <div class="filechip" id="filechip">
+                <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true">
+                  <path
+                    d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"
+                    fill="#e9f0ff"
+                    stroke="#3a5bd0"
+                    stroke-width="1.6"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M13 2v7h7"
+                    fill="none"
+                    stroke="#3a5bd0"
+                    stroke-width="1.6"
+                    stroke-linejoin="round"
+                  /></svg
+                ><span>照片.jpg</span>
+              </div>
+            </div>
+          </div>
+          <div class="play-foot">
+            <div id="status">
+              <span class="dotnow"></span>当前光标位置 → <span class="where">我的电脑</span>
+            </div>
+            <span class="hint">会跳到相邻的设备 · 光标不会跑到屏幕外消失</span>
+          </div>
         </div>
+
+        <p class="hero-note">
+          上面的演示就是真实的<b>设备布局</b>功能——在应用里也是这样摆好、把鼠标滑过去。
+        </p>
+      </section>
+
+      <!-- USE CASES -->
+      <section id="use">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="ey">这些场景很好用</p>
+            <h2 class="sec">在 Windows 前做的事，延伸到手机和另一台电脑；Mac 支持正在准备。</h2>
+            <p class="sec-lead">不懂网络设置也没关系。从你常做的事来看，一下就明白它用在哪儿。</p>
+          </div>
+          <div class="cards">
+            <article class="card">
+              <div class="card-ic" style="background: #e9f0ff; color: #3a5bd0">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                >
+                  <rect x="6" y="3" width="12" height="18" rx="3" />
+                  <path d="M11 6h2" />
+                </svg>
+              </div>
+              <h3>把手机当作旁边的屏幕来控制</h3>
+              <p>把鼠标推到电脑显示器边缘，就会跨到 Android，点击、滚动、拖拽一气呵成。</p>
+            </article>
+            <article class="card">
+              <div class="card-ic" style="background: #eafaf1; color: #15845f">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                >
+                  <rect x="2" y="6" width="20" height="12" rx="2" />
+                  <path d="M6 10h.01M10 10h.01M14 10h.01M8 14h8" />
+                </svg>
+              </div>
+              <h3>长句子也用电脑键盘打</h3>
+              <p>搜索词、聊天回复、应用输入框，凡是要在手机上打字的时候，都能直接用电脑键盘。</p>
+            </article>
+            <article class="card">
+              <div class="card-ic" style="background: #fff0e8; color: #ff7a4d">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                >
+                  <path d="M4 5h6l2 2h8v11H4z" />
+                </svg>
+              </div>
+              <h3>文件·剪贴板即传即到</h3>
+              <p>抓起文件拖到屏幕边界，就直接发到选定的设备；文字和剪贴板也在两端一起同步。</p>
+            </article>
+            <article class="card">
+              <div class="card-ic" style="background: #f3ecff; color: #7a52d0">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                >
+                  <rect x="2" y="7" width="9" height="10" rx="1.5" />
+                  <rect x="13" y="4" width="9" height="7" rx="1.5" />
+                </svg>
+              </div>
+              <h3>另一台 Windows 电脑也能一起用</h3>
+              <p>摆好另一台电脑，就能把鼠标滑过去控制它，还能互传文件。</p>
+            </article>
+            <article class="card">
+              <div class="card-ic" style="background: #edf1f7; color: #52627a">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                >
+                  <rect x="3" y="4" width="18" height="13" rx="2" />
+                  <path d="M8 21h8M12 17v4" />
+                </svg>
+              </div>
+              <h3>Mac 连接支持准备中</h3>
+              <p>
+                macOS 13+ 连接目标的源码及配套支持已准备，连接由 Windows
+                端发起并管理；公开公证安装包与真机验证仍在进行。
+              </p>
+            </article>
+            <article class="card">
+              <div class="card-ic" style="background: #eef0f4; color: #4a5978">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                >
+                  <path d="M8 5l8 7-5 4V4l5 4-8 7" />
+                </svg>
+              </div>
+              <h3>用 Bluetooth 也能连</h3>
+              <p>
+                平时用 Wi-Fi，没有 Wi-Fi 路由器或网络时，就用 Bluetooth 直接连到手机和另一台电脑。
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- SETUP -->
+      <section class="section-alt" id="setup">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="ey">连接方法</p>
+            <h2 class="sec">Android 连接四步走，1 分钟搞定。</h2>
+            <p class="sec-lead">
+              以下是 Android 的连接流程。Mac 公开公证版发布后，连接仍由 Windows
+              端发起并管理，具体请参阅<a href="./guide.html#mac">Mac 连接指南</a>。
+            </p>
+          </div>
+          <div class="flow4">
+            <div class="step">
+              <div class="badge">01</div>
+              <h4>打开电脑上的应用</h4>
+              <p>在 Windows 上打开 OneMouse，看一下屏幕上的二维码或 6 位数字码。</p>
+            </div>
+            <div class="step">
+              <div class="badge">02</div>
+              <h4>打开 Android 权限</h4>
+              <p>为了接收电脑的鼠标和键盘输入，打开一次无障碍服务。</p>
+            </div>
+            <div class="step">
+              <div class="badge">03</div>
+              <h4>用二维码或数字码连接</h4>
+              <p>找到同一 Wi-Fi 下的电脑，扫二维码或输入 6 位数字码确认你的设备。</p>
+            </div>
+            <div class="step">
+              <div class="badge">04</div>
+              <h4>摆好位置再滑过去</h4>
+              <p>
+                把手机或另一台 Windows 电脑放到屏幕边缘；Mac 公开版发布后也会作为连接目标加入布局。
+              </p>
+            </div>
+          </div>
+          <details class="fold">
+            <summary>
+              <span>看看真实的配对画面</span
+              ><small>准备 → 确认电脑数字码 → 输入数字 → 扫二维码</small>
+            </summary>
+            <div class="fold-body">
+              <a
+                href="../assets/onemouse-pairing-real-ui-comic-v5.png"
+                target="_blank"
+                rel="noopener"
+                ><img
+                  src="../assets/onemouse-pairing-real-ui-comic-v5.png"
+                  alt="OneMouse 配对方法：准备、确认电脑数字码、输入数字、扫二维码的顺序"
+                  loading="lazy"
+                  style="border-radius: 12px"
+              /></a>
+            </div>
+          </details>
+          <div style="margin-top: 20px">
+            <a class="btn btn-sec sm" href="./guide.html">查看详细使用指南</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- TRUST -->
+      <section id="trust">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="ey">放心使用</p>
+            <h2 class="sec">只在你自己的设备之间，你自己的网络内。</h2>
+            <p class="sec-lead">
+              OneMouse 只在你配对过的自己的设备之间运行。权限也只在你用到相应功能时才请求。
+            </p>
+          </div>
+          <div class="trust">
+            <div class="t">
+              <span class="ic"
+                ><svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M12 3l7 4v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V7z" /></svg
+              ></span>
+              <div>
+                <b>不经过服务器</b
+                ><span>输入、文件、剪贴板都在同一网络里你自己的电脑和设备之间往来。</span>
+              </div>
+            </div>
+            <div class="t">
+              <span class="ic"
+                ><svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <rect x="4" y="10" width="16" height="10" rx="2" />
+                  <path d="M8 10V7a4 4 0 0 1 8 0v3" /></svg
+              ></span>
+              <div>
+                <b>权限只在需要时请求</b
+                ><span
+                  >Mac 公开版发布后，“辅助功能”是接收输入所必需的；macOS 15+ 需允许“本地网络”，macOS
+                  13/14 可能不会显示该项目。</span
+                >
+              </div>
+            </div>
+            <div class="t">
+              <span class="ic"
+                ><svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M5 13l4 4L19 7" /></svg
+              ></span>
+              <div>
+                <b>不收集·不存储</b
+                ><span>不会把无障碍数据用于广告或屏幕收集，也不会把文件存到服务器上。</span>
+              </div>
+            </div>
+          </div>
+          <div style="margin-top: 20px">
+            <a class="btn btn-sec sm" href="./technical.html">查看技术与安全详情</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- DOWNLOAD -->
+      <section class="section-alt" id="get">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="ey">下载</p>
+            <h2 class="sec">先在 Windows 上开始，再为要连接的设备安装对应版本。</h2>
+            <p class="sec-lead">
+              Windows 10/11 负责发起并管理连接，Android 可立即安装。Mac
+              客户端源码及配套支持已准备，但公开公证安装包与真机验证仍在进行。
+            </p>
+          </div>
+          <div class="panel tip" style="margin-bottom: 16px">
+            <h3>macOS 发布状态</h3>
+            <p>
+              Mac 尚未作为已公开、已完成真机验证的功能提供。页面中的 Mac 演示与说明展示的是准备中的
+              macOS 13+ 连接支持。
+            </p>
+          </div>
+          <div class="dl">
+            <article class="dcard first download-card">
+              <span
+                class="dtag"
+                style="background: linear-gradient(135deg, var(--blue), var(--green))"
+                >PC</span
+              >
+              <h3>Windows</h3>
+              <p data-download-filename>正在获取最新的 Setup 文件。</p>
+              <a
+                class="btn btn-pri"
+                href="https://github.com/sdlckdrl/mouselink-web/releases"
+                data-latest-windows-download
+                download
+                >下载 Windows 版</a
+              >
+            </article>
+            <article class="dcard">
+              <span class="dtag" style="background: #15845f">A</span>
+              <h3>Android</h3>
+              <p>选择适合设备的商店，将 Android 添加为连接目标。</p>
+              <div class="store-actions">
+                <a
+                  class="btn btn-sec"
+                  href="https://play.google.com/store/apps/details?id=com.mouselink.app"
+                  >Google Play</a
+                >
+                <a
+                  class="btn btn-sec"
+                  href="https://apps.samsung.com/appquery/appDetail.as?appId=com.mouselink.app.galaxy"
+                  >Galaxy Store</a
+                >
+              </div>
+            </article>
+            <article class="dcard mac-download-card">
+              <span class="dtag" style="background: #52627a">Mac</span>
+              <h3>macOS</h3>
+              <p data-macos-download-filename>macOS 13+ · 由 Windows 发起连接</p>
+              <a
+                class="btn btn-disabled"
+                data-latest-macos-download
+                data-ready-label="下载 Mac 版"
+                aria-disabled="true"
+                >即将推出</a
+              >
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ PREVIEW -->
+      <section id="faq">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">常见问题</p>
+            <h2 class="sec">连接前想弄清楚的事。</h2>
+          </div>
+          <div class="faq">
+            <details>
+              <summary>真的免费吗？</summary>
+              <div class="a">是的。鼠标键盘控制、手机位置布局等核心功能都免费使用。</div>
+            </details>
+            <details>
+              <summary>需要 root 或开发者设置吗？</summary>
+              <div class="a">
+                不需要。在 Android 上只要打开一次<b>无障碍服务</b>就行。也不需要 USB 连接或 ADB。
+              </div>
+            </details>
+            <details>
+              <summary>没有同一个 Wi-Fi 也可以吗？</summary>
+              <div class="a">
+                可以。用 <b>Bluetooth</b> 直接连到手机和另一台电脑，就能互传鼠标、键盘、文件。
+              </div>
+            </details>
+            <details>
+              <summary>Mac 连接由哪一端发起？</summary>
+              <div class="a">
+                连接由 <b>Windows 10/11 端发起并管理</b>，Mac 是与 Android、另一台 Windows PC
+                同组的连接目标。目前公开公证安装包与真机验证仍在进行。
+              </div>
+            </details>
+            <details>
+              <summary>连接总是断开。</summary>
+              <div class="a">
+                多半是<b>电池优化</b>或<b>防火墙、访客 Wi-Fi 的客户端隔离</b
+                >导致的。请按帮助里的排障步骤逐步缩小范围。
+              </div>
+            </details>
+          </div>
+          <div style="margin-top: 20px">
+            <a class="btn btn-sec sm" href="./help.html">查看全部帮助</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site">
+      <div class="wrap ft">
+        <span>© 2026 OneMouse</span>
+        <span class="links"
+          ><a href="./technical.html">技术与安全</a><a href="./privacy.html">隐私政策</a
+          ><a href="./terms.html">使用条款</a><a href="./licenses.html">开源许可</a></span
+        >
       </div>
-    </section>
+    </footer>
 
-    <!-- FAQ PREVIEW -->
-    <section id="faq">
-      <div class="wrap narrow">
-        <div class="sec-head">
-          <p class="ey">常见问题</p>
-          <h2 class="sec">连接前想弄清楚的事。</h2>
-        </div>
-        <div class="faq">
-          <details><summary>真的免费吗？</summary><div class="a">是的。鼠标键盘控制、手机位置布局等核心功能都免费使用。</div></details>
-          <details><summary>需要 root 或开发者设置吗？</summary><div class="a">不需要。在 Android 上只要打开一次<b>无障碍服务</b>就行。也不需要 USB 连接或 ADB。</div></details>
-          <details><summary>没有同一个 Wi-Fi 也可以吗？</summary><div class="a">可以。用 <b>Bluetooth</b> 直接连到手机和另一台电脑，就能互传鼠标、键盘、文件。</div></details>
-          <details><summary>Mac 连接由哪一端发起？</summary><div class="a">连接由 <b>Windows 10/11 端发起并管理</b>，Mac 是与 Android、另一台 Windows PC 同组的连接目标。目前公开公证安装包与真机验证仍在进行。</div></details>
-          <details><summary>连接总是断开。</summary><div class="a">多半是<b>电池优化</b>或<b>防火墙、访客 Wi-Fi 的客户端隔离</b>导致的。请按帮助里的排障步骤逐步缩小范围。</div></details>
-        </div>
-        <div style="margin-top:20px"><a class="btn btn-sec sm" href="./help.html">查看全部帮助</a></div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site">
-    <div class="wrap ft">
-      <span>© 2026 OneMouse</span>
-      <span class="links"><a href="./technical.html">技术与安全</a><a href="./privacy.html">隐私政策</a><a href="./terms.html">使用条款</a><a href="./licenses.html">开源许可</a></span>
-    </div>
-  </footer>
-
-  <script>
-  (() => {
-    const VW=760, VH=440;
-    const desk=document.getElementById('desk'), stage=document.getElementById('stage');
-    const cursorEl=document.getElementById('cursor'), statusWhere=document.querySelector('#status .where');
-    const snapedge=document.getElementById('snapedge');
-    if(!desk) return;
-    const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const HOME={
-      pc:{x:250,y:150,w:206,h:132,label:'我的电脑',drag:false},
-      tab:{x:456,y:160,w:150,h:112,label:'Galaxy Tab',drag:true},
-      phone:{x:606,y:153,w:66,h:126,label:'手机',drag:true},
-      subpc:{x:268,y:40,w:170,h:110,label:'另一台电脑',drag:true},
-      mac:{x:95,y:166,w:155,h:100,label:'Mac',drag:true},
-    };
-    const devs={};
-    ['pc','tab','phone','subpc','mac'].forEach(id=>{ devs[id]=Object.assign({},HOME[id]); devs[id].el=stage.querySelector('.dev[data-id="'+id+'"]'); });
-    let scale=1;
-    const fit=()=>{ scale=desk.clientWidth/VW; stage.style.transform='scale('+scale+')'; };
-    const layout=()=>{ for(const id in devs){ const d=devs[id]; d.el.style.left=d.x+'px'; d.el.style.top=d.y+'px'; d.el.style.width=d.w+'px'; d.el.style.height=d.h+'px'; } };
-    const rectOf=d=>({l:d.x,t:d.y,r:d.x+d.w,b:d.y+d.h});
-    const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
-    function deviceAt(p){ const inside=[]; for(const id in devs){ const r=rectOf(devs[id]); if(p.x>=r.l&&p.x<=r.r&&p.y>=r.t&&p.y<=r.b) inside.push(id); }
-      if(!inside.length) return null; if(inside.length===1) return inside[0];
-      let best=inside[0],bd=Infinity; for(const id of inside){ const d=devs[id]; const dd=(d.x+d.w/2-p.x)**2+(d.y+d.h/2-p.y)**2; if(dd<bd){bd=dd;best=id;} } return best; }
-    let active='pc', cx=devs.pc.x+devs.pc.w/2, cy=devs.pc.y+devs.pc.h/2;
-    function paint(){ cursorEl.style.transform='translate('+cx+'px,'+cy+'px) translate(-50%,-50%)';
-      cursorEl.classList.toggle('mobile', active==='phone'||active==='tab');
-      for(const id in devs) devs[id].el.classList.toggle('lit',id===active); }
-    function setCursor(vx,vy){ let target=deviceAt({x:vx,y:vy});
-      if(target){ cx=vx; cy=vy; } else { const r=rectOf(devs[active]); cx=clamp(vx,r.l,r.r); cy=clamp(vy,r.t,r.b); target=active; }
-      if(target!==active){ cross(target,cx,cy); active=target; }
-      paint(); }
-    /* 드래그 중엔 커서를 잡고 있는 기기에 붙여 함께 움직인다. 커서가 제자리에 얼어붙었다가 놓는 순간 튀는 것을 막는다. */
-    function rideCursor(id,vx,vy){ const r=rectOf(devs[id]);
-      cx=clamp(vx,r.l,r.r); cy=clamp(vy,r.t,r.b);
-      if(id!==active){ cross(id,cx,cy); active=id; }
-      paint(); }
-    function cross(to,x,y){ statusWhere.textContent=devs[to].label; if(reduce) return;
-      const p=document.createElement('div'); p.className='pulse'; p.style.left=x+'px'; p.style.top=y+'px'; stage.appendChild(p); setTimeout(()=>p.remove(),600);
-      cursorEl.classList.remove('squash'); void cursorEl.offsetWidth; cursorEl.classList.add('squash'); }
-    /* 文件传输演示：把文件卡片拖到其他设备即可"发送"。拖到手机上时光标会变成圆点。 */
-    let fileOwner='pc', fdrag=null;
-    const fileEl=document.getElementById('filechip');
-    function renderFile(){ const d=devs[fileOwner]; fileEl.style.left=(d.x+d.w/2)+'px'; fileEl.style.top=(d.y+d.h/2)+'px'; }
-    function moveFile(vx,vy){ cx=vx; cy=vy; fileEl.style.left=vx+'px'; fileEl.style.top=vy+'px';
-      const over=deviceAt({x:vx,y:vy});
-      for(const id in devs) devs[id].el.classList.toggle('drop', over===id && id!==fileOwner);
-      if(over && over!==active){ active=over; statusWhere.textContent=devs[over].label; }
-      paint(); }
-    function sentBadge(id){ const d=devs[id], b=document.createElement('div');
-      b.className='sentbadge'; b.textContent='✓ 已发送到 '+devs[id].label; b.style.left=(d.x+d.w/2)+'px'; b.style.top=d.y+'px';
-      stage.appendChild(b); setTimeout(()=>b.remove(), reduce?900:1200); }
-    function endFileDrag(){ if(!fdrag) return; fdrag=null; fileEl.classList.remove('dragging');
-      const over=deviceAt({x:cx,y:cy}); for(const id in devs) devs[id].el.classList.remove('drop');
-      if(over && over!==fileOwner){ fileOwner=over; sentBadge(over); statusWhere.textContent=devs[over].label; }
-      fileEl.classList.add('settling'); renderFile(); setTimeout(()=>fileEl.classList.remove('settling'),340); }
-    let drag=null;
-    const toV=e=>{ const rc=desk.getBoundingClientRect(); return {x:clamp((e.clientX-rc.left)/scale,0,VW), y:clamp((e.clientY-rc.top)/scale,0,VH)}; };
-    desk.addEventListener('pointerdown',e=>{ const p=toV(e);
-      if(e.target.closest('#filechip')){ fdrag={}; fileEl.classList.remove('settling'); fileEl.classList.add('dragging'); try{desk.setPointerCapture(e.pointerId);}catch(_){} e.preventDefault(); moveFile(p.x,p.y); return; }
-      const pinEl=e.target.closest('.pin'); const el=pinEl?pinEl.closest('.dev.grab'):null;
-      if(el){ const id=el.dataset.id,d=devs[id]; drag={id,dx:p.x-d.x,dy:p.y-d.y,px:p.x,py:p.y}; d.el.classList.add('drag'); try{desk.setPointerCapture(e.pointerId);}catch(_){} e.preventDefault(); rideCursor(id,p.x,p.y); }
-      else setCursor(p.x,p.y); });
-    desk.addEventListener('pointermove',e=>{ const p=toV(e);
-      if(fdrag){ moveFile(p.x,p.y); return; }
-      if(drag){ const d=devs[drag.id]; drag.px=p.x; drag.py=p.y; d.x=clamp(p.x-drag.dx,0,VW-d.w); d.y=clamp(p.y-drag.dy,0,VH-d.h); d.el.style.left=d.x+'px'; d.el.style.top=d.y+'px'; showSnap(drag.id); rideCursor(drag.id,p.x,p.y); if(drag.id===fileOwner) renderFile(); }
-      else setCursor(p.x,p.y); });
-    /* pointercancel은 좌표가 없을 수 있으므로 마지막 pointermove 좌표를 쓴다. */
-    function endDrag(){ if(!drag) return; const id=drag.id, px=drag.px, py=drag.py, d=devs[id];
-      d.el.classList.remove('drag'); snap(id); layout(); renderFile(); snapedge.style.opacity=0; drag=null;
-      active=id; setCursor(px,py); }
-    desk.addEventListener('pointerup',()=>{ if(fdrag) endFileDrag(); else endDrag(); }); desk.addEventListener('pointercancel',()=>{ if(fdrag) endFileDrag(); else endDrag(); });
-    function collides(id,x,y){ const d=devs[id],T=1.5;
-      for(const oid in devs){ if(oid===id) continue; const o=rectOf(devs[oid]);
-        const ox=Math.min(x+d.w,o.r)-Math.max(x,o.l), oy=Math.min(y+d.h,o.b)-Math.max(y,o.t);
-        if(ox>T&&oy>T) return true; } return false; }
-    function bestDock(id){ const d=devs[id], cx0=d.x+d.w/2, cy0=d.y+d.h/2; let best=null,bd=Infinity;
-      for(const oid in devs){ if(oid===id) continue; const a=rectOf(devs[oid]);
-        const yC=(a.t+a.b)/2-d.h/2, xC=(a.l+a.r)/2-d.w/2;
-        const cands=[{side:'right',x:a.r,y:yC,ax:oid},{side:'left',x:a.l-d.w,y:yC,ax:oid},{side:'bottom',x:xC,y:a.b,ax:oid},{side:'top',x:xC,y:a.t-d.h,ax:oid}];
-        for(let k=0;k<cands.length;k++){ const c=cands[k], x=clamp(c.x,0,VW-d.w), y=clamp(c.y,0,VH-d.h);
-          const dist=(x+d.w/2-cx0)**2+(y+d.h/2-cy0)**2+(collides(id,x,y)?1e9:0);
-          if(dist<bd){ bd=dist; best={x:x,y:y,side:c.side,ax:c.ax}; } } }
-      return best; }
-    function inRow(id){ const d=devs[id], p=devs.pc, dc=d.y+d.h/2; return dc>p.y-24 && dc<p.y+p.h+24; }
-    function placeRow(id){ const p=devs.pc, cy=p.y+p.h/2, sx=devs[id].x+devs[id].w/2;
-      const cenX=oid=>oid===id?sx:(oid==='pc'?p.x+p.w/2:devs[oid].x+devs[oid].w/2);
-      const row=['pc'];
-      for(const oid in devs){ if(oid===id||oid==='pc') continue; const m=devs[oid];
-        if(m.y+m.h/2>p.y-24 && m.y+m.h/2<p.y+p.h+24) row.push(oid); }
-      row.push(id); row.sort((a,b)=>cenX(a)-cenX(b));
-      let total=0; for(const oid of row) total+=devs[oid].w;
-      if(total>VW) return false;
-      let before=0; for(const oid of row){ if(oid==='pc') break; before+=devs[oid].w; }
-      let x=clamp(p.x-before,0,VW-total);
-      for(const oid of row){ const m=devs[oid]; m.x=x; m.y=clamp(cy-m.h/2,0,VH-m.h); x+=m.w; }
-      return true; }
-    function snap(id){ const d=devs[id];
-      if(!(inRow(id) && placeRow(id))){ const b=bestDock(id); if(b){ d.x=b.x; d.y=b.y; } }
-      d.x=clamp(d.x,0,VW-d.w); d.y=clamp(d.y,0,VH-d.h); }
-    function showSnap(id){ const d=devs[id], p=devs.pc;
-      if(inRow(id)){ const T=4, x=clamp(d.x+d.w/2,p.x-140,p.x+p.w+140);
-        snapedge.style.left=(x-T/2)+'px'; snapedge.style.top=p.y+'px'; snapedge.style.width=T+'px'; snapedge.style.height=p.h+'px'; snapedge.style.opacity=.9; return; }
-      const b=bestDock(id); if(!b){ snapedge.style.opacity=0; return; }
-      const a=rectOf(devs[b.ax]),T=4; let s;
-      if(b.side==='right')s={l:a.r-T/2,t:a.t,w:T,h:a.b-a.t}; else if(b.side==='left')s={l:a.l-T/2,t:a.t,w:T,h:a.b-a.t};
-      else if(b.side==='bottom')s={l:a.l,t:a.b-T/2,w:a.r-a.l,h:T}; else s={l:a.l,t:a.t-T/2,w:a.r-a.l,h:T};
-      snapedge.style.left=s.l+'px'; snapedge.style.top=s.t+'px'; snapedge.style.width=s.w+'px'; snapedge.style.height=s.h+'px'; snapedge.style.opacity=.9; }
-    document.getElementById('reset').addEventListener('click',()=>{ for(const id in devs) Object.assign(devs[id],HOME[id]);
-      fileOwner='pc'; layout(); renderFile(); active='pc'; cx=devs.pc.x+devs.pc.w/2; cy=devs.pc.y+devs.pc.h/2; statusWhere.textContent='我的电脑'; setCursor(cx,cy); });
-    addEventListener('resize',fit); fit(); layout(); renderFile(); setCursor(cx,cy);
-  })();
-  </script>
-  <script src="../js/downloads.js"></script>
-</body>
+    <script>
+      (() => {
+        const VW = 760,
+          VH = 440;
+        const desk = document.getElementById('desk'),
+          stage = document.getElementById('stage');
+        const cursorEl = document.getElementById('cursor'),
+          statusWhere = document.querySelector('#status .where');
+        const snapedge = document.getElementById('snapedge');
+        if (!desk) return;
+        const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const HOME = {
+          pc: { x: 250, y: 150, w: 206, h: 132, label: '我的电脑', drag: false },
+          tab: { x: 456, y: 160, w: 150, h: 112, label: 'Galaxy Tab', drag: true },
+          phone: { x: 606, y: 153, w: 66, h: 126, label: '手机', drag: true },
+          subpc: { x: 268, y: 40, w: 170, h: 110, label: '另一台电脑', drag: true },
+          mac: { x: 95, y: 166, w: 155, h: 100, label: 'Mac', drag: true },
+        };
+        const devs = {};
+        ['pc', 'tab', 'phone', 'subpc', 'mac'].forEach((id) => {
+          devs[id] = Object.assign({}, HOME[id]);
+          devs[id].el = stage.querySelector('.dev[data-id="' + id + '"]');
+        });
+        let scale = 1;
+        const fit = () => {
+          scale = desk.clientWidth / VW;
+          stage.style.transform = 'scale(' + scale + ')';
+        };
+        const layout = () => {
+          for (const id in devs) {
+            const d = devs[id];
+            d.el.style.left = d.x + 'px';
+            d.el.style.top = d.y + 'px';
+            d.el.style.width = d.w + 'px';
+            d.el.style.height = d.h + 'px';
+          }
+        };
+        const rectOf = (d) => ({ l: d.x, t: d.y, r: d.x + d.w, b: d.y + d.h });
+        const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
+        function deviceAt(p) {
+          const inside = [];
+          for (const id in devs) {
+            const r = rectOf(devs[id]);
+            if (p.x >= r.l && p.x <= r.r && p.y >= r.t && p.y <= r.b) inside.push(id);
+          }
+          if (!inside.length) return null;
+          if (inside.length === 1) return inside[0];
+          let best = inside[0],
+            bd = Infinity;
+          for (const id of inside) {
+            const d = devs[id];
+            const dd = (d.x + d.w / 2 - p.x) ** 2 + (d.y + d.h / 2 - p.y) ** 2;
+            if (dd < bd) {
+              bd = dd;
+              best = id;
+            }
+          }
+          return best;
+        }
+        let active = 'pc',
+          cx = devs.pc.x + devs.pc.w / 2,
+          cy = devs.pc.y + devs.pc.h / 2;
+        function paint() {
+          cursorEl.style.transform = 'translate(' + cx + 'px,' + cy + 'px) translate(-50%,-50%)';
+          cursorEl.classList.toggle('mobile', active === 'phone' || active === 'tab');
+          for (const id in devs) devs[id].el.classList.toggle('lit', id === active);
+        }
+        function setCursor(vx, vy) {
+          let target = deviceAt({ x: vx, y: vy });
+          if (target) {
+            cx = vx;
+            cy = vy;
+          } else {
+            const r = rectOf(devs[active]);
+            cx = clamp(vx, r.l, r.r);
+            cy = clamp(vy, r.t, r.b);
+            target = active;
+          }
+          if (target !== active) {
+            cross(target, cx, cy);
+            active = target;
+          }
+          paint();
+        }
+        /* 드래그 중엔 커서를 잡고 있는 기기에 붙여 함께 움직인다. 커서가 제자리에 얼어붙었다가 놓는 순간 튀는 것을 막는다. */
+        function rideCursor(id, vx, vy) {
+          const r = rectOf(devs[id]);
+          cx = clamp(vx, r.l, r.r);
+          cy = clamp(vy, r.t, r.b);
+          if (id !== active) {
+            cross(id, cx, cy);
+            active = id;
+          }
+          paint();
+        }
+        function cross(to, x, y) {
+          statusWhere.textContent = devs[to].label;
+          if (reduce) return;
+          const p = document.createElement('div');
+          p.className = 'pulse';
+          p.style.left = x + 'px';
+          p.style.top = y + 'px';
+          stage.appendChild(p);
+          setTimeout(() => p.remove(), 600);
+          cursorEl.classList.remove('squash');
+          void cursorEl.offsetWidth;
+          cursorEl.classList.add('squash');
+        }
+        /* 文件传输演示：把文件卡片拖到其他设备即可"发送"。拖到手机上时光标会变成圆点。 */
+        let fileOwner = 'pc',
+          fdrag = null;
+        const fileEl = document.getElementById('filechip');
+        function renderFile() {
+          const d = devs[fileOwner];
+          fileEl.style.left = d.x + d.w / 2 + 'px';
+          fileEl.style.top = d.y + d.h / 2 + 'px';
+        }
+        function moveFile(vx, vy) {
+          cx = vx;
+          cy = vy;
+          fileEl.style.left = vx + 'px';
+          fileEl.style.top = vy + 'px';
+          const over = deviceAt({ x: vx, y: vy });
+          for (const id in devs)
+            devs[id].el.classList.toggle('drop', over === id && id !== fileOwner);
+          if (over && over !== active) {
+            active = over;
+            statusWhere.textContent = devs[over].label;
+          }
+          paint();
+        }
+        function sentBadge(id) {
+          const d = devs[id],
+            b = document.createElement('div');
+          b.className = 'sentbadge';
+          b.textContent = '✓ 已发送到 ' + devs[id].label;
+          b.style.left = d.x + d.w / 2 + 'px';
+          b.style.top = d.y + 'px';
+          stage.appendChild(b);
+          setTimeout(() => b.remove(), reduce ? 900 : 1200);
+        }
+        function endFileDrag() {
+          if (!fdrag) return;
+          fdrag = null;
+          fileEl.classList.remove('dragging');
+          const over = deviceAt({ x: cx, y: cy });
+          for (const id in devs) devs[id].el.classList.remove('drop');
+          if (over && over !== fileOwner) {
+            fileOwner = over;
+            sentBadge(over);
+            statusWhere.textContent = devs[over].label;
+          }
+          fileEl.classList.add('settling');
+          renderFile();
+          setTimeout(() => fileEl.classList.remove('settling'), 340);
+        }
+        let drag = null;
+        const toV = (e) => {
+          const rc = desk.getBoundingClientRect();
+          return {
+            x: clamp((e.clientX - rc.left) / scale, 0, VW),
+            y: clamp((e.clientY - rc.top) / scale, 0, VH),
+          };
+        };
+        desk.addEventListener('pointerdown', (e) => {
+          const p = toV(e);
+          if (e.target.closest('#filechip')) {
+            fdrag = {};
+            fileEl.classList.remove('settling');
+            fileEl.classList.add('dragging');
+            try {
+              desk.setPointerCapture(e.pointerId);
+            } catch (_) {}
+            e.preventDefault();
+            moveFile(p.x, p.y);
+            return;
+          }
+          const pinEl = e.target.closest('.pin');
+          const el = pinEl ? pinEl.closest('.dev.grab') : null;
+          if (el) {
+            const id = el.dataset.id,
+              d = devs[id];
+            drag = { id, dx: p.x - d.x, dy: p.y - d.y, px: p.x, py: p.y };
+            d.el.classList.add('drag');
+            try {
+              desk.setPointerCapture(e.pointerId);
+            } catch (_) {}
+            e.preventDefault();
+            rideCursor(id, p.x, p.y);
+          } else setCursor(p.x, p.y);
+        });
+        desk.addEventListener('pointermove', (e) => {
+          const p = toV(e);
+          if (fdrag) {
+            moveFile(p.x, p.y);
+            return;
+          }
+          if (drag) {
+            const d = devs[drag.id];
+            drag.px = p.x;
+            drag.py = p.y;
+            d.x = clamp(p.x - drag.dx, 0, VW - d.w);
+            d.y = clamp(p.y - drag.dy, 0, VH - d.h);
+            d.el.style.left = d.x + 'px';
+            d.el.style.top = d.y + 'px';
+            showSnap(drag.id);
+            rideCursor(drag.id, p.x, p.y);
+            if (drag.id === fileOwner) renderFile();
+          } else setCursor(p.x, p.y);
+        });
+        /* pointercancel은 좌표가 없을 수 있으므로 마지막 pointermove 좌표를 쓴다. */
+        function endDrag() {
+          if (!drag) return;
+          const id = drag.id,
+            px = drag.px,
+            py = drag.py,
+            d = devs[id];
+          d.el.classList.remove('drag');
+          snap(id);
+          layout();
+          renderFile();
+          snapedge.style.opacity = 0;
+          drag = null;
+          active = id;
+          setCursor(px, py);
+        }
+        desk.addEventListener('pointerup', () => {
+          if (fdrag) endFileDrag();
+          else endDrag();
+        });
+        desk.addEventListener('pointercancel', () => {
+          if (fdrag) endFileDrag();
+          else endDrag();
+        });
+        function collides(id, x, y) {
+          const d = devs[id],
+            T = 1.5;
+          for (const oid in devs) {
+            if (oid === id) continue;
+            const o = rectOf(devs[oid]);
+            const ox = Math.min(x + d.w, o.r) - Math.max(x, o.l),
+              oy = Math.min(y + d.h, o.b) - Math.max(y, o.t);
+            if (ox > T && oy > T) return true;
+          }
+          return false;
+        }
+        function bestDock(id) {
+          const d = devs[id],
+            cx0 = d.x + d.w / 2,
+            cy0 = d.y + d.h / 2;
+          let best = null,
+            bd = Infinity;
+          for (const oid in devs) {
+            if (oid === id) continue;
+            const a = rectOf(devs[oid]);
+            const yC = (a.t + a.b) / 2 - d.h / 2,
+              xC = (a.l + a.r) / 2 - d.w / 2;
+            const cands = [
+              { side: 'right', x: a.r, y: yC, ax: oid },
+              { side: 'left', x: a.l - d.w, y: yC, ax: oid },
+              { side: 'bottom', x: xC, y: a.b, ax: oid },
+              { side: 'top', x: xC, y: a.t - d.h, ax: oid },
+            ];
+            for (let k = 0; k < cands.length; k++) {
+              const c = cands[k],
+                x = clamp(c.x, 0, VW - d.w),
+                y = clamp(c.y, 0, VH - d.h);
+              const dist =
+                (x + d.w / 2 - cx0) ** 2 +
+                (y + d.h / 2 - cy0) ** 2 +
+                (collides(id, x, y) ? 1e9 : 0);
+              if (dist < bd) {
+                bd = dist;
+                best = { x: x, y: y, side: c.side, ax: c.ax };
+              }
+            }
+          }
+          return best;
+        }
+        function inRow(id) {
+          const d = devs[id],
+            p = devs.pc,
+            dc = d.y + d.h / 2;
+          return dc > p.y - 24 && dc < p.y + p.h + 24;
+        }
+        function placeRow(id) {
+          const p = devs.pc,
+            cy = p.y + p.h / 2,
+            sx = devs[id].x + devs[id].w / 2;
+          const cenX = (oid) =>
+            oid === id ? sx : oid === 'pc' ? p.x + p.w / 2 : devs[oid].x + devs[oid].w / 2;
+          const row = ['pc'];
+          for (const oid in devs) {
+            if (oid === id || oid === 'pc') continue;
+            const m = devs[oid];
+            if (m.y + m.h / 2 > p.y - 24 && m.y + m.h / 2 < p.y + p.h + 24) row.push(oid);
+          }
+          row.push(id);
+          row.sort((a, b) => cenX(a) - cenX(b));
+          let total = 0;
+          for (const oid of row) total += devs[oid].w;
+          if (total > VW) return false;
+          let before = 0;
+          for (const oid of row) {
+            if (oid === 'pc') break;
+            before += devs[oid].w;
+          }
+          let x = clamp(p.x - before, 0, VW - total);
+          for (const oid of row) {
+            const m = devs[oid];
+            m.x = x;
+            m.y = clamp(cy - m.h / 2, 0, VH - m.h);
+            x += m.w;
+          }
+          return true;
+        }
+        function snap(id) {
+          const d = devs[id];
+          if (!(inRow(id) && placeRow(id))) {
+            const b = bestDock(id);
+            if (b) {
+              d.x = b.x;
+              d.y = b.y;
+            }
+          }
+          d.x = clamp(d.x, 0, VW - d.w);
+          d.y = clamp(d.y, 0, VH - d.h);
+        }
+        function showSnap(id) {
+          const d = devs[id],
+            p = devs.pc;
+          if (inRow(id)) {
+            const T = 4,
+              x = clamp(d.x + d.w / 2, p.x - 140, p.x + p.w + 140);
+            snapedge.style.left = x - T / 2 + 'px';
+            snapedge.style.top = p.y + 'px';
+            snapedge.style.width = T + 'px';
+            snapedge.style.height = p.h + 'px';
+            snapedge.style.opacity = 0.9;
+            return;
+          }
+          const b = bestDock(id);
+          if (!b) {
+            snapedge.style.opacity = 0;
+            return;
+          }
+          const a = rectOf(devs[b.ax]),
+            T = 4;
+          let s;
+          if (b.side === 'right') s = { l: a.r - T / 2, t: a.t, w: T, h: a.b - a.t };
+          else if (b.side === 'left') s = { l: a.l - T / 2, t: a.t, w: T, h: a.b - a.t };
+          else if (b.side === 'bottom') s = { l: a.l, t: a.b - T / 2, w: a.r - a.l, h: T };
+          else s = { l: a.l, t: a.t - T / 2, w: a.r - a.l, h: T };
+          snapedge.style.left = s.l + 'px';
+          snapedge.style.top = s.t + 'px';
+          snapedge.style.width = s.w + 'px';
+          snapedge.style.height = s.h + 'px';
+          snapedge.style.opacity = 0.9;
+        }
+        document.getElementById('reset').addEventListener('click', () => {
+          for (const id in devs) Object.assign(devs[id], HOME[id]);
+          fileOwner = 'pc';
+          layout();
+          renderFile();
+          active = 'pc';
+          cx = devs.pc.x + devs.pc.w / 2;
+          cy = devs.pc.y + devs.pc.h / 2;
+          statusWhere.textContent = '我的电脑';
+          setCursor(cx, cy);
+        });
+        addEventListener('resize', fit);
+        fit();
+        layout();
+        renderFile();
+        setCursor(cx, cy);
+      })();
+    </script>
+    <script src="../js/downloads.js"></script>
+  </body>
 </html>

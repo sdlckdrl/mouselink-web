@@ -1,121 +1,299 @@
 <!doctype html>
 <html lang="ja">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ヘルプ | OneMouse ワンマウス — 接続・入力トラブルの解決</title>
-  <meta name="description" content="OneMouseのAndroid・Windows接続の問題解決と、公開配布・実機検証を準備中のmacOS 13以降版の確認項目を案内します。" />
-  <meta name="robots" content="index,follow,max-image-preview:large" />
-  <link rel="stylesheet" href="../css/onemouse.css" />
-  <link rel="canonical" href="https://onemouse.pages.dev/ja/help" />
-  <link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/help.html" />
-  <link rel="alternate" hreflang="en" href="https://onemouse.pages.dev/en/help.html" />
-  <link rel="alternate" hreflang="ja" href="https://onemouse.pages.dev/ja/help.html" />
-  <link rel="alternate" hreflang="zh" href="https://onemouse.pages.dev/zh/help.html" />
-  <link rel="alternate" hreflang="x-default" href="https://onemouse.pages.dev/help.html" />
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MJ73H86TWX"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-MJ73H86TWX');</script>
-</head>
-<body>
-  <header class="site">
-    <div class="wrap hd">
-      <a class="brand" href="./index.html" aria-label="OneMouse ホーム"><span class="om">OM</span>OneMouse</a>
-      <nav class="nav" aria-label="メインメニュー">
-        <a href="./index.html">概要</a>
-        <a href="./index.html#use">機能</a>
-        <a href="./guide.html">使い方</a>
-        <a href="./help.html" class="on">ヘルプ</a>
-      </nav>
-      <div class="hd-right">
-        <div class="lang" aria-label="言語"><a href="../help.html">KOR</a><a href="../en/help.html">ENG</a><span class="on">JPN</span><a href="../zh/help.html">CHN</a></div>
-        <a class="hd-cta" href="./index.html#get">無料ダウンロード</a>
-      </div>
-    </div>
-  </header>
-
-  <main>
-    <section class="phero wrap narrow">
-      <p class="ey">ヘルプ</p>
-      <h1 class="page">うまくいかないときは、段階で絞り込みましょう。</h1>
-      <p class="lead">Androidと別のWindows PCは<b>起動 → 権限 → 検出 → ファイアウォール → ペアリング → 入力・復帰</b>の順で確認します。Mac項目は公開配布と実機検証を準備中のビルド向け事前案内です。</p>
-    </section>
-
-    <!-- 이것부터 -->
-    <section style="padding-top:14px">
-      <div class="wrap narrow">
-        <div class="panel tip"><h3>まずはこの3つ</h3>
-          <ul>
-            <li><b>カーソルを見失ったとき →</b> <kbd style="font-family:var(--mono)">Ctrl+Alt+Backspace</kbd>を押すと、カーソルが自分のPC（モニターの中央）に戻ります。</li>
-            <li><b>接続はできたのに入力できないとき →</b> Androidの<b>アクセシビリティサービス</b>がオフになったか、再起動された可能性があります。アクセシビリティでOneMouseを再度オンにしてください。</li>
-            <li><b>公開後のMacで入力できないとき →</b> Macの<b>システム設定 → プライバシーとセキュリティ → アクセシビリティ</b>でOneMouseを許可してください。</li>
-          </ul></div>
-      </div>
-    </section>
-
-    <!-- 문제 해결 순서 -->
-    <section id="order">
-      <div class="wrap narrow">
-        <div class="sec-head"><p class="ey">トラブル解決の手順</p><h2 class="sec">この順番で一段階ずつ確認してください。</h2></div>
-        <div class="timeline">
-          <div class="tstep"><div class="rail"><span class="num">1</span><span class="line"></span></div><div class="body"><h4>起動と権限</h4><p>Windowsと接続先のアプリが起動しているか確認します。Androidは<b>アクセシビリティサービス</b>、Macは入力用の<b>アクセシビリティ</b>が必要です。ローカルネットワークはmacOS 15以降で表示され、macOS 13/14では項目がない場合があります。</p></div></div>
-          <div class="tstep"><div class="rail"><span class="num">2</span><span class="line"></span></div><div class="body"><h4>同じネットワーク・検出</h4><p>WindowsとAndroidまたはMacが<b>同じWi-Fi/LAN</b>にあるか確認します。検索できない場合は、ネットワークが違うか、ローカル通信がブロックされています。</p></div></div>
-          <div class="tstep"><div class="rail"><span class="num">3</span><span class="line"></span></div><div class="body"><h4>ファイアウォール・分離</h4><p>スマホからはPCが見えるのにPCからスマホが見えない場合は、<b>Windowsファイアウォールの受信（インバウンド）</b>（ネットワークが「パブリック」か「プライベート」か）の問題かもしれません。会社やカフェのWi-Fiは<b>クライアント分離</b>でブロックされることもあります。</p></div></div>
-          <div class="tstep"><div class="rail"><span class="num">4</span><span class="line"></span></div><div class="body"><h4>ペアリング・接続</h4><p>ペアリングが完了し、デバイス管理で接続状態になっているか確認します。MacはWindows側でMacを選び、Macに表示された6桁コードをWindowsへ入力します。</p></div></div>
-          <div class="tstep"><div class="rail"><span class="num">5</span></div><div class="body"><h4>入力・復帰</h4><p>配置した端へマウスを押し当てて越えられるか、越えられない場合は位置の配置を確認します。カーソルが変な場所にあるときは<kbd style="font-family:var(--mono)">Ctrl+Alt+Backspace</kbd>で復帰させます。</p></div></div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ヘルプ | OneMouse ワンマウス — 接続・入力トラブルの解決</title>
+    <meta
+      name="description"
+      content="OneMouseのAndroid・Windows接続の問題解決と、公開配布・実機検証を準備中のmacOS 13以降版の確認項目を案内します。"
+    />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <link rel="stylesheet" href="../css/onemouse.css" />
+    <link rel="canonical" href="https://onemouse.pages.dev/ja/help" />
+    <link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/help.html" />
+    <link rel="alternate" hreflang="en" href="https://onemouse.pages.dev/en/help.html" />
+    <link rel="alternate" hreflang="ja" href="https://onemouse.pages.dev/ja/help.html" />
+    <link rel="alternate" hreflang="zh" href="https://onemouse.pages.dev/zh/help.html" />
+    <link rel="alternate" hreflang="x-default" href="https://onemouse.pages.dev/help.html" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MJ73H86TWX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-MJ73H86TWX');
+    </script>
+  </head>
+  <body>
+    <header class="site">
+      <div class="wrap hd">
+        <a class="brand" href="./index.html" aria-label="OneMouse ホーム"
+          ><span class="om">OM</span>OneMouse</a
+        >
+        <nav class="nav" aria-label="メインメニュー">
+          <a href="./index.html">概要</a>
+          <a href="./index.html#use">機能</a>
+          <a href="./guide.html">使い方</a>
+          <a href="./help.html" class="on">ヘルプ</a>
+        </nav>
+        <div class="hd-right">
+          <div class="lang" aria-label="言語">
+            <a href="../help.html">KOR</a><a href="../en/help.html">ENG</a
+            ><span class="on">JPN</span><a href="../zh/help.html">CHN</a>
+          </div>
+          <a class="hd-cta" href="./index.html#get">無料ダウンロード</a>
         </div>
       </div>
-    </section>
+    </header>
 
-    <!-- 파일·클립보드 -->
-    <section class="section-alt">
-      <div class="wrap narrow">
-        <div class="sec-head"><p class="ey">送信</p><h2 class="sec">ファイルとクリップボードがうまくいかないとき。</h2></div>
-        <div class="panel"><ul>
-          <li><b>選択中のデバイス</b>が合っているか確認 — 送信は選択した相手に送られます。</li>
-          <li>Windows PC間のドラッグには、<b>サブPCが接続・配置</b>されている必要があります。Mac境界ドラッグは公開前の実機検証中です。</li>
-          <li>ファイルをつかんだまま配置した<b>画面の境界を越えて</b>、相手の上で放すと送信が始まります。</li>
-          <li>クリップボードが渡ってこない場合は、両方のアプリが接続状態か、画面がオフで待機状態になっていないか確認します。</li>
-          <li>BluetoothはWi-Fiより遅いです — 大きなファイルはWi-Fiで送ってください。</li>
-        </ul></div>
-      </div>
-    </section>
+    <main>
+      <section class="phero wrap narrow">
+        <p class="ey">ヘルプ</p>
+        <h1 class="page">うまくいかないときは、段階で絞り込みましょう。</h1>
+        <p class="lead">
+          Androidと別のWindows PCは<b
+            >起動 → 権限 → 検出 → ファイアウォール → ペアリング → 入力・復帰</b
+          >の順で確認します。Mac項目は公開配布と実機検証を準備中のビルド向け事前案内です。
+        </p>
+      </section>
 
-    <!-- Macのトラブル -->
-    <section id="mac">
-      <div class="wrap narrow">
-        <div class="sec-head"><p class="ey">Macのトラブル · 公開準備中</p><h2 class="sec">公開後のMac版で想定する確認項目です。</h2>
-          <p class="sec-lead">現在は署名・公証済み配布と実機検証中です。接続はAndroidと同様にWindowsから開始・管理します。</p></div>
-        <div class="split">
-          <div class="panel"><h3>WindowsにMacが表示されない</h3><ul><li>WindowsとMacを同じWi-Fi/LANにつなぎます。</li><li>macOS 15以降ではOneMouseの<b>ローカルネットワーク</b>を許可します。macOS 13/14ではこの項目がない場合があります。</li><li>両方のOneMouseを再起動し、Windowsのデバイス一覧を更新します。</li><li>ゲストWi-Fiや社内Wi-Fiのクライアント分離も確認します。</li></ul></div>
-          <div class="panel tip"><h3>接続済みでも入力・画面が動かない</h3><ul><li>入力できない場合は、Macの<b>アクセシビリティ</b>許可を確認し、変更後にOneMouseへ戻ります。</li><li>Mac画面が表示されない場合だけ<b>画面収録</b>を許可します。通常の入力には不要です。</li><li>Macに表示された現在の6桁コードをWindowsへ入力したか確認します。</li><li>カーソルが移らない場合は、Windowsの配置エディタでMacの位置を確認します。</li></ul></div>
+      <!-- 이것부터 -->
+      <section style="padding-top: 14px">
+        <div class="wrap narrow">
+          <div class="panel tip">
+            <h3>まずはこの3つ</h3>
+            <ul>
+              <li>
+                <b>カーソルを見失ったとき →</b>
+                <kbd style="font-family: var(--mono)">Ctrl+Alt+Backspace</kbd
+                >を押すと、カーソルが自分のPC（モニターの中央）に戻ります。
+              </li>
+              <li>
+                <b>接続はできたのに入力できないとき →</b>
+                Androidの<b>アクセシビリティサービス</b>がオフになったか、再起動された可能性があります。アクセシビリティでOneMouseを再度オンにしてください。
+              </li>
+              <li>
+                <b>公開後のMacで入力できないとき →</b> Macの<b
+                  >システム設定 → プライバシーとセキュリティ → アクセシビリティ</b
+                >でOneMouseを許可してください。
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- FAQ -->
-    <section id="faq">
-      <div class="wrap narrow">
-        <div class="sec-head"><p class="ey">よくある質問</p><h2 class="sec">最もよく起こる問題。</h2></div>
-        <div class="faq">
-          <details open><summary>10秒おきくらいに切れ続けます。</summary><div class="a">代表的な原因は4つです: <b>① ゲスト/会社Wi-Fiのクライアント分離</b>、<b>② バッテリー最適化</b>でスマホのバックグラウンド接続が切られる、<b>③ Windowsファイアウォールの受信ブロック</b>、<b>④ 画面がオフになるとWi-Fiが省電力（スリープ）になる</b>。バッテリー最適化の除外をオンにし、ファイアウォールでOneMouseの受信を許可し、可能ならプライベートなWi-Fiを使ってください。</div></details>
-          <details><summary>スマホではPCが見えるのに、PCからスマホが見えません。</summary><div class="a">たいていは<b>Windowsファイアウォールの受信（インバウンド）</b>の問題です。現在のネットワークが<b>「パブリック（Public）」</b>だと受信がブロックされることがあるので、<b>「プライベート（Private）」</b>に変えるか、ファイアウォールでOneMouseの受信を許可してください。</div></details>
-          <details><summary>家では使えるのに、会社やカフェのWi-Fiでは使えません。</summary><div class="a">パブリック/ゲストWi-Fiは、セキュリティのために<b>デバイス間の通信を分離（client isolation）</b>していることがよくあります。この場合、同じWi-Fiでもお互いを見つけられません。<b>Bluetooth接続</b>や個人のテザリング（ホットスポット）を利用してください。</div></details>
-          <details><summary>接続はできたはずなのに、マウス・キーボードが効きません。</summary><div class="a">Androidの<b>アクセシビリティサービス</b>がオフになったか、システムによって再起動された可能性が高いです。Androidの設定 → アクセシビリティでOneMouseを再度オンにしてください。</div></details>
-          <details><summary>Macとの接続はどこから始めますか？</summary><div class="a">接続は<b>Windows 10/11から開始・管理</b>します。Macに表示された6桁コードをWindowsへ入力し、Windowsの配置エディタでMacの位置を設定します。</div></details>
-          <details><summary>カーソルがスマホ/別のPCに閉じ込められて戻ってきません。</summary><div class="a"><kbd style="font-family:var(--mono)">Ctrl+Alt+Backspace</kbd>を押すと、カーソルが自分のPCのモニター中央へ強制的に復帰します。</div></details>
-          <details><summary>画面がオフになると接続が切れます。</summary><div class="a">画面がオフになるとき、スマホのWi-Fiが省電力になったり、バッテリー最適化でアプリがスリープしたりすることがあります。AndroidでOneMouseを<b>バッテリー最適化の除外</b>にしておくと安定します。接続中の画面オフ防止オプションも確認してください。</div></details>
-          <details><summary>Bluetoothでのリモート画面操作がうまくいきません。</summary><div class="a">モバイル画面のリモート操作はデータ量が多いため、<b>Bluetoothでは推奨しません</b>。リモート操作はWi-Fiで使ってください。Bluetoothはマウス・キーボード・クリップボード・ファイルに向いています。</div></details>
+      <!-- 문제 해결 순서 -->
+      <section id="order">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">トラブル解決の手順</p>
+            <h2 class="sec">この順番で一段階ずつ確認してください。</h2>
+          </div>
+          <div class="timeline">
+            <div class="tstep">
+              <div class="rail"><span class="num">1</span><span class="line"></span></div>
+              <div class="body">
+                <h4>起動と権限</h4>
+                <p>
+                  Windowsと接続先のアプリが起動しているか確認します。Androidは<b>アクセシビリティサービス</b>、Macは入力用の<b>アクセシビリティ</b>が必要です。ローカルネットワークはmacOS
+                  15以降で表示され、macOS 13/14では項目がない場合があります。
+                </p>
+              </div>
+            </div>
+            <div class="tstep">
+              <div class="rail"><span class="num">2</span><span class="line"></span></div>
+              <div class="body">
+                <h4>同じネットワーク・検出</h4>
+                <p>
+                  WindowsとAndroidまたはMacが<b>同じWi-Fi/LAN</b>にあるか確認します。検索できない場合は、ネットワークが違うか、ローカル通信がブロックされています。
+                </p>
+              </div>
+            </div>
+            <div class="tstep">
+              <div class="rail"><span class="num">3</span><span class="line"></span></div>
+              <div class="body">
+                <h4>ファイアウォール・分離</h4>
+                <p>
+                  スマホからはPCが見えるのにPCからスマホが見えない場合は、<b>Windowsファイアウォールの受信（インバウンド）</b>（ネットワークが「パブリック」か「プライベート」か）の問題かもしれません。会社やカフェのWi-Fiは<b>クライアント分離</b>でブロックされることもあります。
+                </p>
+              </div>
+            </div>
+            <div class="tstep">
+              <div class="rail"><span class="num">4</span><span class="line"></span></div>
+              <div class="body">
+                <h4>ペアリング・接続</h4>
+                <p>
+                  ペアリングが完了し、デバイス管理で接続状態になっているか確認します。MacはWindows側でMacを選び、Macに表示された6桁コードをWindowsへ入力します。
+                </p>
+              </div>
+            </div>
+            <div class="tstep">
+              <div class="rail"><span class="num">5</span></div>
+              <div class="body">
+                <h4>入力・復帰</h4>
+                <p>
+                  配置した端へマウスを押し当てて越えられるか、越えられない場合は位置の配置を確認します。カーソルが変な場所にあるときは<kbd
+                    style="font-family: var(--mono)"
+                    >Ctrl+Alt+Backspace</kbd
+                  >で復帰させます。
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div style="margin-top:22px"><a class="btn btn-sec sm" href="./guide.html">使い方ガイドに戻る</a></div>
-      </div>
-    </section>
-  </main>
+      </section>
 
-  <footer class="site">
-    <div class="wrap ft">
-      <span>© 2026 OneMouse</span>
-      <span class="links"><a href="./technical.html">技術・セキュリティ</a><a href="./privacy.html">プライバシーポリシー</a><a href="./terms.html">利用規約</a><a href="./licenses.html">オープンソースライセンス</a></span>
-    </div>
-  </footer>
-</body>
+      <!-- 파일·클립보드 -->
+      <section class="section-alt">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">送信</p>
+            <h2 class="sec">ファイルとクリップボードがうまくいかないとき。</h2>
+          </div>
+          <div class="panel">
+            <ul>
+              <li><b>選択中のデバイス</b>が合っているか確認 — 送信は選択した相手に送られます。</li>
+              <li>
+                Windows
+                PC間のドラッグには、<b>サブPCが接続・配置</b>されている必要があります。Mac境界ドラッグは公開前の実機検証中です。
+              </li>
+              <li>
+                ファイルをつかんだまま配置した<b>画面の境界を越えて</b>、相手の上で放すと送信が始まります。
+              </li>
+              <li>
+                クリップボードが渡ってこない場合は、両方のアプリが接続状態か、画面がオフで待機状態になっていないか確認します。
+              </li>
+              <li>BluetoothはWi-Fiより遅いです — 大きなファイルはWi-Fiで送ってください。</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Macのトラブル -->
+      <section id="mac">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">Macのトラブル · 公開準備中</p>
+            <h2 class="sec">公開後のMac版で想定する確認項目です。</h2>
+            <p class="sec-lead">
+              現在は署名・公証済み配布と実機検証中です。接続はAndroidと同様にWindowsから開始・管理します。
+            </p>
+          </div>
+          <div class="split">
+            <div class="panel">
+              <h3>WindowsにMacが表示されない</h3>
+              <ul>
+                <li>WindowsとMacを同じWi-Fi/LANにつなぎます。</li>
+                <li>
+                  macOS 15以降ではOneMouseの<b>ローカルネットワーク</b>を許可します。macOS
+                  13/14ではこの項目がない場合があります。
+                </li>
+                <li>両方のOneMouseを再起動し、Windowsのデバイス一覧を更新します。</li>
+                <li>ゲストWi-Fiや社内Wi-Fiのクライアント分離も確認します。</li>
+              </ul>
+            </div>
+            <div class="panel tip">
+              <h3>接続済みでも入力・画面が動かない</h3>
+              <ul>
+                <li>
+                  入力できない場合は、Macの<b>アクセシビリティ</b>許可を確認し、変更後にOneMouseへ戻ります。
+                </li>
+                <li>
+                  Mac画面が表示されない場合だけ<b>画面収録</b>を許可します。通常の入力には不要です。
+                </li>
+                <li>Macに表示された現在の6桁コードをWindowsへ入力したか確認します。</li>
+                <li>カーソルが移らない場合は、Windowsの配置エディタでMacの位置を確認します。</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">よくある質問</p>
+            <h2 class="sec">最もよく起こる問題。</h2>
+          </div>
+          <div class="faq">
+            <details open>
+              <summary>10秒おきくらいに切れ続けます。</summary>
+              <div class="a">
+                代表的な原因は4つです: <b>① ゲスト/会社Wi-Fiのクライアント分離</b>、<b
+                  >② バッテリー最適化</b
+                >でスマホのバックグラウンド接続が切られる、<b
+                  >③ Windowsファイアウォールの受信ブロック</b
+                >、<b>④ 画面がオフになるとWi-Fiが省電力（スリープ）になる</b
+                >。バッテリー最適化の除外をオンにし、ファイアウォールでOneMouseの受信を許可し、可能ならプライベートなWi-Fiを使ってください。
+              </div>
+            </details>
+            <details>
+              <summary>スマホではPCが見えるのに、PCからスマホが見えません。</summary>
+              <div class="a">
+                たいていは<b>Windowsファイアウォールの受信（インバウンド）</b>の問題です。現在のネットワークが<b>「パブリック（Public）」</b>だと受信がブロックされることがあるので、<b>「プライベート（Private）」</b>に変えるか、ファイアウォールでOneMouseの受信を許可してください。
+              </div>
+            </details>
+            <details>
+              <summary>家では使えるのに、会社やカフェのWi-Fiでは使えません。</summary>
+              <div class="a">
+                パブリック/ゲストWi-Fiは、セキュリティのために<b
+                  >デバイス間の通信を分離（client isolation）</b
+                >していることがよくあります。この場合、同じWi-Fiでもお互いを見つけられません。<b>Bluetooth接続</b>や個人のテザリング（ホットスポット）を利用してください。
+              </div>
+            </details>
+            <details>
+              <summary>接続はできたはずなのに、マウス・キーボードが効きません。</summary>
+              <div class="a">
+                Androidの<b>アクセシビリティサービス</b>がオフになったか、システムによって再起動された可能性が高いです。Androidの設定
+                → アクセシビリティでOneMouseを再度オンにしてください。
+              </div>
+            </details>
+            <details>
+              <summary>Macとの接続はどこから始めますか？</summary>
+              <div class="a">
+                接続は<b>Windows 10/11から開始・管理</b
+                >します。Macに表示された6桁コードをWindowsへ入力し、Windowsの配置エディタでMacの位置を設定します。
+              </div>
+            </details>
+            <details>
+              <summary>カーソルがスマホ/別のPCに閉じ込められて戻ってきません。</summary>
+              <div class="a">
+                <kbd style="font-family: var(--mono)">Ctrl+Alt+Backspace</kbd
+                >を押すと、カーソルが自分のPCのモニター中央へ強制的に復帰します。
+              </div>
+            </details>
+            <details>
+              <summary>画面がオフになると接続が切れます。</summary>
+              <div class="a">
+                画面がオフになるとき、スマホのWi-Fiが省電力になったり、バッテリー最適化でアプリがスリープしたりすることがあります。AndroidでOneMouseを<b>バッテリー最適化の除外</b>にしておくと安定します。接続中の画面オフ防止オプションも確認してください。
+              </div>
+            </details>
+            <details>
+              <summary>Bluetoothでのリモート画面操作がうまくいきません。</summary>
+              <div class="a">
+                モバイル画面のリモート操作はデータ量が多いため、<b>Bluetoothでは推奨しません</b>。リモート操作はWi-Fiで使ってください。Bluetoothはマウス・キーボード・クリップボード・ファイルに向いています。
+              </div>
+            </details>
+          </div>
+          <div style="margin-top: 22px">
+            <a class="btn btn-sec sm" href="./guide.html">使い方ガイドに戻る</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site">
+      <div class="wrap ft">
+        <span>© 2026 OneMouse</span>
+        <span class="links"
+          ><a href="./technical.html">技術・セキュリティ</a
+          ><a href="./privacy.html">プライバシーポリシー</a><a href="./terms.html">利用規約</a
+          ><a href="./licenses.html">オープンソースライセンス</a></span
+        >
+      </div>
+    </footer>
+  </body>
 </html>

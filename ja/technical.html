@@ -1,157 +1,369 @@
 <!doctype html>
 <html lang="ja">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>技術・セキュリティ | OneMouse ワンマウス — 接続の仕組みと権限</title>
-  <meta name="description" content="OneMouseでWindowsからAndroid・別のWindows PCへの接続を開始・管理する仕組みと、公開配布・実機検証を準備中のmacOS 13以降版の権限、データ、サポート範囲を説明します。" />
-  <meta name="robots" content="index,follow,max-image-preview:large" />
-  <link rel="stylesheet" href="../css/onemouse.css" />
-  <link rel="canonical" href="https://onemouse.pages.dev/ja/technical" />
-  <link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/technical.html" />
-  <link rel="alternate" hreflang="en" href="https://onemouse.pages.dev/en/technical.html" />
-  <link rel="alternate" hreflang="ja" href="https://onemouse.pages.dev/ja/technical.html" />
-  <link rel="alternate" hreflang="zh" href="https://onemouse.pages.dev/zh/technical.html" />
-  <link rel="alternate" hreflang="x-default" href="https://onemouse.pages.dev/technical.html" />
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MJ73H86TWX"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-MJ73H86TWX');</script>
-</head>
-<body>
-  <header class="site">
-    <div class="wrap hd">
-      <a class="brand" href="./index.html" aria-label="OneMouse ホーム"><span class="om">OM</span>OneMouse</a>
-      <nav class="nav" aria-label="メインメニュー">
-        <a href="./index.html">概要</a>
-        <a href="./index.html#use">機能</a>
-        <a href="./guide.html">使い方</a>
-        <a href="./help.html">ヘルプ</a>
-      </nav>
-      <div class="hd-right">
-        <div class="lang" aria-label="言語"><a href="../technical.html">KOR</a><a href="../en/technical.html">ENG</a><span class="on">JPN</span><a href="../zh/technical.html">CHN</a></div>
-        <a class="hd-cta" href="./index.html#get">無料ダウンロード</a>
-      </div>
-    </div>
-  </header>
-
-  <main>
-    <section class="phero wrap">
-      <p class="ey">技術・セキュリティ</p>
-      <h1 class="page">接続の仕組みと権限を、別ページにまとめました。</h1>
-      <p class="lead">このページは一般的な使い方ではなく、<b>どうやって接続されるのか</b>と<b>なぜ権限を使うのか</b>を説明します。使う順番は<a href="./guide.html" style="color:var(--coral-deep);font-weight:700">使い方ガイド</a>をご覧ください。</p>
-      <nav class="toc" aria-label="このページの目次">
-        <a href="#data-flow">ローカル優先</a>
-        <a href="#roles">デバイスの役割</a>
-        <a href="#permissions">権限の使い方</a>
-        <a href="#handling">データの扱い</a>
-        <a href="#network">ネットワーク条件</a>
-        <a href="#scope">サポート範囲</a>
-        <a href="#updates">更新履歴</a>
-      </nav>
-    </section>
-
-    <!-- LOCAL FIRST -->
-    <section id="data-flow">
-      <div class="wrap narrow">
-        <div class="sec-head"><p class="ey">Local First</p><h2 class="sec">ペアリングした自分のデバイス同士でだけ動作します。</h2></div>
-        <p class="sec-lead" style="max-width:64ch">現在、入力・ファイル・クリップボードは、<b>Windowsと、ペアリングしたAndroidまたは別のWindows PC</b>の間で直接やり取りされます。Macにも同じローカル接続構造を実装していますが、公開配布とMac実機検証は進行中です。外部サーバーを経由してアカウントにアップロードする仕組みではありません。</p>
-      </div>
-    </section>
-
-    <!-- デバイスの役割 -->
-    <section class="section-alt" id="roles">
-      <div class="wrap">
-        <div class="sec-head"><p class="ey">接続の方向</p><h2 class="sec">接続はWindowsから開始・管理します。</h2>
-          <p class="sec-lead">Android、別のWindows PC、macOS 13以降のMacを接続先として同じ並びで扱います。Mac版は公開配布と実機検証を準備中です。</p></div>
-        <div class="cards">
-          <article class="card accent"><p class="card-lbl">接続を開始・管理</p><h3>Windows 10/11</h3><p>マウス・キーボード入力を取得し、デバイス管理で接続先を選び、配置した画面境界から入力を送ります。</p></article>
-          <article class="card"><p class="card-lbl">接続先</p><h3>Android</h3><p>Windowsから届いた入力をアクセシビリティサービスで受け取り、ファイルとクリップボードをやり取りします。</p></article>
-          <article class="card"><p class="card-lbl">接続先</p><h3>別のWindows PC</h3><p>Windowsのデバイス管理で選択・配置し、入力を受け取ります。コンピューター間でファイルも転送できます。</p></article>
-          <article class="card"><p class="card-lbl">接続先 · 公開準備中</p><h3>macOS 13以降</h3><p>Androidと同様にWindows側から選択し、Macに表示された6桁コードを入力する実装です。署名・公証済み配布と実機検証はまだ完了していません。</p></article>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>技術・セキュリティ | OneMouse ワンマウス — 接続の仕組みと権限</title>
+    <meta
+      name="description"
+      content="OneMouseでWindowsからAndroid・別のWindows PCへの接続を開始・管理する仕組みと、公開配布・実機検証を準備中のmacOS 13以降版の権限、データ、サポート範囲を説明します。"
+    />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <link rel="stylesheet" href="../css/onemouse.css" />
+    <link rel="canonical" href="https://onemouse.pages.dev/ja/technical" />
+    <link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/technical.html" />
+    <link rel="alternate" hreflang="en" href="https://onemouse.pages.dev/en/technical.html" />
+    <link rel="alternate" hreflang="ja" href="https://onemouse.pages.dev/ja/technical.html" />
+    <link rel="alternate" hreflang="zh" href="https://onemouse.pages.dev/zh/technical.html" />
+    <link rel="alternate" hreflang="x-default" href="https://onemouse.pages.dev/technical.html" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MJ73H86TWX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-MJ73H86TWX');
+    </script>
+  </head>
+  <body>
+    <header class="site">
+      <div class="wrap hd">
+        <a class="brand" href="./index.html" aria-label="OneMouse ホーム"
+          ><span class="om">OM</span>OneMouse</a
+        >
+        <nav class="nav" aria-label="メインメニュー">
+          <a href="./index.html">概要</a>
+          <a href="./index.html#use">機能</a>
+          <a href="./guide.html">使い方</a>
+          <a href="./help.html">ヘルプ</a>
+        </nav>
+        <div class="hd-right">
+          <div class="lang" aria-label="言語">
+            <a href="../technical.html">KOR</a><a href="../en/technical.html">ENG</a
+            ><span class="on">JPN</span><a href="../zh/technical.html">CHN</a>
+          </div>
+          <a class="hd-cta" href="./index.html#get">無料ダウンロード</a>
         </div>
       </div>
-    </section>
+    </header>
 
-    <!-- PERMISSIONS -->
-    <section id="permissions">
-      <div class="wrap">
-        <div class="sec-head"><p class="ey">Permissions</p><h2 class="sec">権限は機能の提供に必要な範囲だけに。</h2>
-          <p class="sec-lead">一度にまとめて求めるのではなく、その機能を始めるときにAndroidまたは準備中のMac版上でユーザー自身が許可します。</p></div>
-        <div class="cards">
-          <article class="card accent"><p class="card-lbl">Android・必須</p><h3>アクセシビリティサービス</h3><p>Windowsのマウス・キーボード入力をAndroidへ適用するために使います。入力内容を広告や画面収集には使いません。</p></article>
-          <article class="card"><p class="card-lbl">Android・リモート操作時</p><h3>画面キャプチャの承認</h3><p>モバイルのリモート操作ウィンドウを開くときに、Androidのシステムポップアップで承認します。保護された画面など一部は表示されない場合があります。</p></article>
-          <article class="card"><p class="card-lbl">接続時</p><h3>付近のWi-Fiデバイス</h3><p>Android 13以降でPCを探すときに求められることがあります。アプリ起動時ではなく、検索するその瞬間にだけ確認します。</p></article>
-          <article class="card"><p class="card-lbl">サービス開始時</p><h3>通知</h3><p>バックグラウンドの接続状態を表示するために使います。必要なときにだけ求められます。</p></article>
-          <article class="card"><p class="card-lbl">明るさ調整時</p><h3>システム設定の変更</h3><p>Alt+Shift+↑/↓でモバイル画面の明るさを調節するとき、最初に一度だけ必要です。</p></article>
-          <article class="card"><p class="card-lbl">推奨</p><h3>バッテリー最適化の除外</h3><p>画面がオフになったあとに接続が切れる場合は、安定性のために推奨します。必須ではありません。</p></article>
-          <article class="card accent"><p class="card-lbl">Mac・macOS 15以降</p><h3>ローカルネットワーク</h3><p>Windowsの検出に使います。macOS 13/14では表示されない場合があり、ランタイムは不要として扱います。</p></article>
-          <article class="card accent"><p class="card-lbl">Mac・必須</p><h3>アクセシビリティ</h3><p>Windowsから受け取ったマウス・キーボード入力をMac上で実行するために必要です。</p></article>
-          <article class="card"><p class="card-lbl">Mac・画面共有時のみ</p><h3>画面収録</h3><p>LANでMacの画面やウィンドウをWindowsに表示するときだけ必要です。Bluetoothでは画面共有を提供しません。</p></article>
-          <article class="card"><p class="card-lbl">Mac・Bluetooth接続時</p><h3>Bluetooth</h3><p>システムでペアリングしたBluetooth接続を使うときに要求します。</p></article>
+    <main>
+      <section class="phero wrap">
+        <p class="ey">技術・セキュリティ</p>
+        <h1 class="page">接続の仕組みと権限を、別ページにまとめました。</h1>
+        <p class="lead">
+          このページは一般的な使い方ではなく、<b>どうやって接続されるのか</b>と<b>なぜ権限を使うのか</b>を説明します。使う順番は<a
+            href="./guide.html"
+            style="color: var(--coral-deep); font-weight: 700"
+            >使い方ガイド</a
+          >をご覧ください。
+        </p>
+        <nav class="toc" aria-label="このページの目次">
+          <a href="#data-flow">ローカル優先</a>
+          <a href="#roles">デバイスの役割</a>
+          <a href="#permissions">権限の使い方</a>
+          <a href="#handling">データの扱い</a>
+          <a href="#network">ネットワーク条件</a>
+          <a href="#scope">サポート範囲</a>
+          <a href="#updates">更新履歴</a>
+        </nav>
+      </section>
+
+      <!-- LOCAL FIRST -->
+      <section id="data-flow">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">Local First</p>
+            <h2 class="sec">ペアリングした自分のデバイス同士でだけ動作します。</h2>
+          </div>
+          <p class="sec-lead" style="max-width: 64ch">
+            現在、入力・ファイル・クリップボードは、<b
+              >Windowsと、ペアリングしたAndroidまたは別のWindows PC</b
+            >の間で直接やり取りされます。Macにも同じローカル接続構造を実装していますが、公開配布とMac実機検証は進行中です。外部サーバーを経由してアカウントにアップロードする仕組みではありません。
+          </p>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- DATA HANDLING -->
-    <section id="handling">
-      <div class="wrap narrow">
-        <div class="sec-head"><p class="ey">Data Handling</p><h2 class="sec">入力・ファイル・クリップボードは、ユーザーが選んだ範囲で。</h2></div>
-        <div class="panel"><ul>
-          <li>リモート用のアカウントを作りません — ログインなしでペアリングだけで動作します。</li>
-          <li>送信したファイルをサーバーに保存しません。選んだデバイスへ直接送ります。</li>
-          <li><b>アクセシビリティのデータを広告や画面収集の目的で使いません。</b>入力の伝達やリモート操作など、明示された機能にだけ使います。</li>
-          <li>クリップボード・ファイルの送信は、ユーザーが相手を選んで実行するときにだけ行われます。</li>
-          <li>Macのアクセシビリティ、画面収録、Bluetoothと、macOS 15以降のローカルネットワーク許可状態は、接続準備と機能の利用可否を表示するためにMac上で確認します。</li>
-        </ul></div>
-      </div>
-    </section>
-
-    <!-- NETWORK -->
-    <section class="section-alt" id="network">
-      <div class="wrap narrow">
-        <div class="sec-head"><p class="ey">Network</p><h2 class="sec">接続品質は、ローカルネットワークの条件の影響を受けます。</h2></div>
-        <div class="split">
-          <div class="panel tip"><h3>推奨環境</h3><ul><li>個人のWi-Fiルーターの同じWi-Fi（2.4/5GHzは問いません）</li><li>デバイス間の通信が許可されたネットワーク</li><li>WindowsファイアウォールでOneMouseの受信（インバウンド）を許可</li></ul></div>
-          <div class="panel"><h3>制約のある環境</h3><ul><li>ゲスト・社内Wi-Fiのクライアント分離（client isolation）</li><li>「パブリック」と判定されたネットワークの受信ブロック</li><li>その場合はBluetoothの直接接続または個人用ホットスポットを利用</li></ul></div>
+      <!-- デバイスの役割 -->
+      <section class="section-alt" id="roles">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="ey">接続の方向</p>
+            <h2 class="sec">接続はWindowsから開始・管理します。</h2>
+            <p class="sec-lead">
+              Android、別のWindows PC、macOS
+              13以降のMacを接続先として同じ並びで扱います。Mac版は公開配布と実機検証を準備中です。
+            </p>
+          </div>
+          <div class="cards">
+            <article class="card accent">
+              <p class="card-lbl">接続を開始・管理</p>
+              <h3>Windows 10/11</h3>
+              <p>
+                マウス・キーボード入力を取得し、デバイス管理で接続先を選び、配置した画面境界から入力を送ります。
+              </p>
+            </article>
+            <article class="card">
+              <p class="card-lbl">接続先</p>
+              <h3>Android</h3>
+              <p>
+                Windowsから届いた入力をアクセシビリティサービスで受け取り、ファイルとクリップボードをやり取りします。
+              </p>
+            </article>
+            <article class="card">
+              <p class="card-lbl">接続先</p>
+              <h3>別のWindows PC</h3>
+              <p>
+                Windowsのデバイス管理で選択・配置し、入力を受け取ります。コンピューター間でファイルも転送できます。
+              </p>
+            </article>
+            <article class="card">
+              <p class="card-lbl">接続先 · 公開準備中</p>
+              <h3>macOS 13以降</h3>
+              <p>
+                Androidと同様にWindows側から選択し、Macに表示された6桁コードを入力する実装です。署名・公証済み配布と実機検証はまだ完了していません。
+              </p>
+            </article>
+          </div>
         </div>
-        <p class="sec-lead" style="margin-top:16px">OneMouseはインターネットのリレーサーバーを経由しないため、Windowsと接続先のAndroid、別のWindows PC、Macがお互いを直接見つけられる環境である必要があります。</p>
-      </div>
-    </section>
+      </section>
 
-    <!-- SCOPE -->
-    <section id="scope">
-      <div class="wrap narrow">
-        <div class="sec-head"><p class="ey">Support Scope</p><h2 class="sec">Macは配布と実機検証の完了後に正式サポートへ移行します。</h2></div>
-        <div class="panel"><ul>
-          <li><b>接続の開始・管理：</b>Windows 10/11で接続先を選択・配置し、入力を送ります。</li>
-          <li><b>接続先：</b>現在はAndroidと別のWindows PC。macOS 13以降のMacも同じ接続先として実装済みですが、公証済み配布版と実機検証は準備中です。</li>
-          <li>Macの入力・ファイル・境界ドラッグ・Bluetoothは実機検証中です。Mac画面・ウィンドウ共有はLAN専用です。</li>
-          <li>対象外：USB/ADBを介した接続は公式のサポート範囲ではありません。</li>
-          <li>Windows PC同士ではメイン / サブの役割を設定し、ファイルとクリップボードを直接やり取りします。</li>
-        </ul></div>
-      </div>
-    </section>
-
-    <!-- UPDATES -->
-    <section class="section-alt" id="updates">
-      <div class="wrap narrow">
-        <div class="sec-head"><p class="ey">Updates</p><h2 class="sec">最近の更新履歴。</h2></div>
-        <div class="log">
-          <div class="log-item"><time>2026.07</time><p><b>デバイス配置の編集を改善</b>・<b>サブPCでも全体の配置を表示</b> — デバイス同士が重ならず、2台のあいだにドラッグするとその位置に割り込みます。基準のデバイスを動かすと残りはメインPCへ磁石のように吸着し、Bluetooth・Wi-Fiで接続した別のPCでもメインPCの配置をそのまま確認できます。</p></div>
-          <div class="log-item"><time>2026.07</time><p><b>接続中の画面オフ防止・アイドル時のディミング</b> — 接続している間はスマホの画面がオフにならず、使っていないときは暗くしてバッテリーを節約します。複数デバイスの同時接続でも維持されます。</p></div>
-          <div class="log-item"><time>2026.07</time><p><b>モバイルで他のデバイスの配置を見る</b>・<b>チェーン（1列）配置</b> — スマホからでも接続中の他のデバイスの配置を確認でき、PC・スマホ・PCを一列につなげて配置できます。</p></div>
-          <div class="log-item"><time>2026.07</time><p><b>境界を越えるカーソル演出</b>・<b>Ctrl+Alt+Backspaceで中央へ復帰</b> — デバイス間を越えるときのなめらかな演出、カーソルを見失ったらモニターの中央へ戻します。</p></div>
-          <div class="log-item"><time>2026.07</time><p><b>メッセンジャーのエンターで送信</b> — カカオトーク・SMSでPCキーボードのエンターで送信、Shift+エンターで改行。</p></div>
-          <div class="log-item"><time>2026.06</time><p><b>Bluetoothの直接接続</b>・<b>PC↔PCのBluetooth</b> — Wi-Fiルーターなしでスマホや別のPCに接続し、入力・クリップボード・ファイルをやり取りします。</p></div>
+      <!-- PERMISSIONS -->
+      <section id="permissions">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="ey">Permissions</p>
+            <h2 class="sec">権限は機能の提供に必要な範囲だけに。</h2>
+            <p class="sec-lead">
+              一度にまとめて求めるのではなく、その機能を始めるときにAndroidまたは準備中のMac版上でユーザー自身が許可します。
+            </p>
+          </div>
+          <div class="cards">
+            <article class="card accent">
+              <p class="card-lbl">Android・必須</p>
+              <h3>アクセシビリティサービス</h3>
+              <p>
+                Windowsのマウス・キーボード入力をAndroidへ適用するために使います。入力内容を広告や画面収集には使いません。
+              </p>
+            </article>
+            <article class="card">
+              <p class="card-lbl">Android・リモート操作時</p>
+              <h3>画面キャプチャの承認</h3>
+              <p>
+                モバイルのリモート操作ウィンドウを開くときに、Androidのシステムポップアップで承認します。保護された画面など一部は表示されない場合があります。
+              </p>
+            </article>
+            <article class="card">
+              <p class="card-lbl">接続時</p>
+              <h3>付近のWi-Fiデバイス</h3>
+              <p>
+                Android
+                13以降でPCを探すときに求められることがあります。アプリ起動時ではなく、検索するその瞬間にだけ確認します。
+              </p>
+            </article>
+            <article class="card">
+              <p class="card-lbl">サービス開始時</p>
+              <h3>通知</h3>
+              <p>
+                バックグラウンドの接続状態を表示するために使います。必要なときにだけ求められます。
+              </p>
+            </article>
+            <article class="card">
+              <p class="card-lbl">明るさ調整時</p>
+              <h3>システム設定の変更</h3>
+              <p>Alt+Shift+↑/↓でモバイル画面の明るさを調節するとき、最初に一度だけ必要です。</p>
+            </article>
+            <article class="card">
+              <p class="card-lbl">推奨</p>
+              <h3>バッテリー最適化の除外</h3>
+              <p>
+                画面がオフになったあとに接続が切れる場合は、安定性のために推奨します。必須ではありません。
+              </p>
+            </article>
+            <article class="card accent">
+              <p class="card-lbl">Mac・macOS 15以降</p>
+              <h3>ローカルネットワーク</h3>
+              <p>
+                Windowsの検出に使います。macOS
+                13/14では表示されない場合があり、ランタイムは不要として扱います。
+              </p>
+            </article>
+            <article class="card accent">
+              <p class="card-lbl">Mac・必須</p>
+              <h3>アクセシビリティ</h3>
+              <p>Windowsから受け取ったマウス・キーボード入力をMac上で実行するために必要です。</p>
+            </article>
+            <article class="card">
+              <p class="card-lbl">Mac・画面共有時のみ</p>
+              <h3>画面収録</h3>
+              <p>
+                LANでMacの画面やウィンドウをWindowsに表示するときだけ必要です。Bluetoothでは画面共有を提供しません。
+              </p>
+            </article>
+            <article class="card">
+              <p class="card-lbl">Mac・Bluetooth接続時</p>
+              <h3>Bluetooth</h3>
+              <p>システムでペアリングしたBluetooth接続を使うときに要求します。</p>
+            </article>
+          </div>
         </div>
-      </div>
-    </section>
-  </main>
+      </section>
 
-  <footer class="site">
-    <div class="wrap ft">
-      <span>© 2026 OneMouse</span>
-      <span class="links"><a href="./technical.html">技術・セキュリティ</a><a href="./privacy.html">プライバシーポリシー</a><a href="./terms.html">利用規約</a><a href="./licenses.html">オープンソースライセンス</a></span>
-    </div>
-  </footer>
-</body>
+      <!-- DATA HANDLING -->
+      <section id="handling">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">Data Handling</p>
+            <h2 class="sec">入力・ファイル・クリップボードは、ユーザーが選んだ範囲で。</h2>
+          </div>
+          <div class="panel">
+            <ul>
+              <li>
+                リモート用のアカウントを作りません — ログインなしでペアリングだけで動作します。
+              </li>
+              <li>送信したファイルをサーバーに保存しません。選んだデバイスへ直接送ります。</li>
+              <li>
+                <b>アクセシビリティのデータを広告や画面収集の目的で使いません。</b
+                >入力の伝達やリモート操作など、明示された機能にだけ使います。
+              </li>
+              <li>
+                クリップボード・ファイルの送信は、ユーザーが相手を選んで実行するときにだけ行われます。
+              </li>
+              <li>
+                Macのアクセシビリティ、画面収録、Bluetoothと、macOS
+                15以降のローカルネットワーク許可状態は、接続準備と機能の利用可否を表示するためにMac上で確認します。
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- NETWORK -->
+      <section class="section-alt" id="network">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">Network</p>
+            <h2 class="sec">接続品質は、ローカルネットワークの条件の影響を受けます。</h2>
+          </div>
+          <div class="split">
+            <div class="panel tip">
+              <h3>推奨環境</h3>
+              <ul>
+                <li>個人のWi-Fiルーターの同じWi-Fi（2.4/5GHzは問いません）</li>
+                <li>デバイス間の通信が許可されたネットワーク</li>
+                <li>WindowsファイアウォールでOneMouseの受信（インバウンド）を許可</li>
+              </ul>
+            </div>
+            <div class="panel">
+              <h3>制約のある環境</h3>
+              <ul>
+                <li>ゲスト・社内Wi-Fiのクライアント分離（client isolation）</li>
+                <li>「パブリック」と判定されたネットワークの受信ブロック</li>
+                <li>その場合はBluetoothの直接接続または個人用ホットスポットを利用</li>
+              </ul>
+            </div>
+          </div>
+          <p class="sec-lead" style="margin-top: 16px">
+            OneMouseはインターネットのリレーサーバーを経由しないため、Windowsと接続先のAndroid、別のWindows
+            PC、Macがお互いを直接見つけられる環境である必要があります。
+          </p>
+        </div>
+      </section>
+
+      <!-- SCOPE -->
+      <section id="scope">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">Support Scope</p>
+            <h2 class="sec">Macは配布と実機検証の完了後に正式サポートへ移行します。</h2>
+          </div>
+          <div class="panel">
+            <ul>
+              <li>
+                <b>接続の開始・管理：</b>Windows 10/11で接続先を選択・配置し、入力を送ります。
+              </li>
+              <li>
+                <b>接続先：</b>現在はAndroidと別のWindows PC。macOS
+                13以降のMacも同じ接続先として実装済みですが、公証済み配布版と実機検証は準備中です。
+              </li>
+              <li>
+                Macの入力・ファイル・境界ドラッグ・Bluetoothは実機検証中です。Mac画面・ウィンドウ共有はLAN専用です。
+              </li>
+              <li>対象外：USB/ADBを介した接続は公式のサポート範囲ではありません。</li>
+              <li>
+                Windows PC同士ではメイン /
+                サブの役割を設定し、ファイルとクリップボードを直接やり取りします。
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- UPDATES -->
+      <section class="section-alt" id="updates">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">Updates</p>
+            <h2 class="sec">最近の更新履歴。</h2>
+          </div>
+          <div class="log">
+            <div class="log-item">
+              <time>2026.07</time>
+              <p>
+                <b>デバイス配置の編集を改善</b>・<b>サブPCでも全体の配置を表示</b> —
+                デバイス同士が重ならず、2台のあいだにドラッグするとその位置に割り込みます。基準のデバイスを動かすと残りはメインPCへ磁石のように吸着し、Bluetooth・Wi-Fiで接続した別のPCでもメインPCの配置をそのまま確認できます。
+              </p>
+            </div>
+            <div class="log-item">
+              <time>2026.07</time>
+              <p>
+                <b>接続中の画面オフ防止・アイドル時のディミング</b> —
+                接続している間はスマホの画面がオフにならず、使っていないときは暗くしてバッテリーを節約します。複数デバイスの同時接続でも維持されます。
+              </p>
+            </div>
+            <div class="log-item">
+              <time>2026.07</time>
+              <p>
+                <b>モバイルで他のデバイスの配置を見る</b>・<b>チェーン（1列）配置</b> —
+                スマホからでも接続中の他のデバイスの配置を確認でき、PC・スマホ・PCを一列につなげて配置できます。
+              </p>
+            </div>
+            <div class="log-item">
+              <time>2026.07</time>
+              <p>
+                <b>境界を越えるカーソル演出</b>・<b>Ctrl+Alt+Backspaceで中央へ復帰</b> —
+                デバイス間を越えるときのなめらかな演出、カーソルを見失ったらモニターの中央へ戻します。
+              </p>
+            </div>
+            <div class="log-item">
+              <time>2026.07</time>
+              <p>
+                <b>メッセンジャーのエンターで送信</b> —
+                カカオトーク・SMSでPCキーボードのエンターで送信、Shift+エンターで改行。
+              </p>
+            </div>
+            <div class="log-item">
+              <time>2026.06</time>
+              <p>
+                <b>Bluetoothの直接接続</b>・<b>PC↔PCのBluetooth</b> —
+                Wi-Fiルーターなしでスマホや別のPCに接続し、入力・クリップボード・ファイルをやり取りします。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site">
+      <div class="wrap ft">
+        <span>© 2026 OneMouse</span>
+        <span class="links"
+          ><a href="./technical.html">技術・セキュリティ</a
+          ><a href="./privacy.html">プライバシーポリシー</a><a href="./terms.html">利用規約</a
+          ><a href="./licenses.html">オープンソースライセンス</a></span
+        >
+      </div>
+    </footer>
+  </body>
 </html>

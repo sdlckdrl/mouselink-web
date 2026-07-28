@@ -26,7 +26,7 @@ html {
 body {
   margin: 0;
   color: var(--text);
-  font-family: "Segoe UI", "Noto Sans KR", Arial, sans-serif;
+  font-family: 'Segoe UI', 'Noto Sans KR', Arial, sans-serif;
   background: var(--bg);
   overflow-x: hidden;
 }
@@ -38,7 +38,7 @@ a {
 
 /* Paid plan copy is intentionally hidden while OneMouse is operated as free.
    Remove this block when Free / Pro messaging is ready to be shown again. */
-a[href$="pricing.html"],
+a[href$='pricing.html'],
 section:has(.plan-preview),
 body:has(.pricing-hero) main,
 .paid-plan-copy,
@@ -208,8 +208,13 @@ figure {
   align-items: center;
   border-bottom: 1px solid #18233a;
   background:
-    linear-gradient(90deg, rgba(8, 16, 32, 0.86) 0%, rgba(8, 16, 32, 0.68) 44%, rgba(8, 16, 32, 0.2) 100%),
-    url("../assets/hero-bg-generated-2.png") center / cover no-repeat;
+    linear-gradient(
+      90deg,
+      rgba(8, 16, 32, 0.86) 0%,
+      rgba(8, 16, 32, 0.68) 44%,
+      rgba(8, 16, 32, 0.2) 100%
+    ),
+    url('../assets/hero-bg-generated-2.png') center / cover no-repeat;
 }
 
 .hero-content {
@@ -716,7 +721,7 @@ figure {
 }
 
 .guide-reference summary::after {
-  content: "+";
+  content: '+';
   grid-column: 2;
   grid-row: 1 / span 2;
   align-self: center;
@@ -727,7 +732,7 @@ figure {
 }
 
 .guide-reference[open] summary::after {
-  content: "-";
+  content: '-';
 }
 
 .guide-reference summary span {
@@ -803,7 +808,7 @@ figure {
 .pricing-hero {
   background:
     linear-gradient(90deg, rgba(232, 239, 255, 0.96), rgba(245, 247, 251, 0.84)),
-    url("../assets/onboarding_pc_position.png") right center / 56% auto no-repeat;
+    url('../assets/onboarding_pc_position.png') right center / 56% auto no-repeat;
 }
 
 .plan-preview,
@@ -1058,14 +1063,14 @@ figure {
 }
 
 .faq-grid summary::after {
-  content: "+";
+  content: '+';
   color: var(--muted);
   font-size: 20px;
   line-height: 1;
 }
 
 .faq-grid details[open] summary::after {
-  content: "-";
+  content: '-';
 }
 
 .faq-answer {
@@ -1208,8 +1213,13 @@ figure {
   .home-hero {
     min-height: 560px;
     background:
-      linear-gradient(180deg, rgba(8, 16, 32, 0.9) 0%, rgba(8, 16, 32, 0.74) 58%, rgba(8, 16, 32, 0.48) 100%),
-      url("../assets/hero-bg-generated-2.png") center / cover no-repeat;
+      linear-gradient(
+        180deg,
+        rgba(8, 16, 32, 0.9) 0%,
+        rgba(8, 16, 32, 0.74) 58%,
+        rgba(8, 16, 32, 0.48) 100%
+      ),
+      url('../assets/hero-bg-generated-2.png') center / cover no-repeat;
   }
 
   .hero-content {

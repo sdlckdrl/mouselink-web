@@ -1,266 +1,694 @@
 <!doctype html>
 <html lang="zh">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>使用指南 | OneMouse 一鼠 — 从首次连接到常用功能</title>
-  <meta name="description" content="OneMouse 使用指南：介绍 Android、另一台 Windows PC 与 macOS 13+ Mac 的连接流程；Mac 公证安装包与真机验证仍在进行。" />
-  <meta name="robots" content="index,follow,max-image-preview:large" />
-  <link rel="stylesheet" href="../css/onemouse.css" />
-  <link rel="canonical" href="https://onemouse.pages.dev/zh/guide" />
-  <link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/guide.html" />
-  <link rel="alternate" hreflang="en" href="https://onemouse.pages.dev/en/guide.html" />
-  <link rel="alternate" hreflang="ja" href="https://onemouse.pages.dev/ja/guide.html" />
-  <link rel="alternate" hreflang="zh" href="https://onemouse.pages.dev/zh/guide.html" />
-  <link rel="alternate" hreflang="x-default" href="https://onemouse.pages.dev/guide.html" />
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MJ73H86TWX"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-MJ73H86TWX');</script>
-</head>
-<body>
-  <header class="site">
-    <div class="wrap hd">
-      <a class="brand" href="./index.html" aria-label="OneMouse 主页"><span class="om">OM</span>OneMouse</a>
-      <nav class="nav" aria-label="主菜单">
-        <a href="./index.html">概览</a>
-        <a href="./index.html#use">功能</a>
-        <a href="./guide.html" class="on">使用方法</a>
-        <a href="./help.html">帮助</a>
-      </nav>
-      <div class="hd-right">
-        <div class="lang" aria-label="语言"><a href="../guide.html">KOR</a><a href="../en/guide.html">ENG</a><a href="../ja/guide.html">JPN</a><span class="on">CHN</span></div>
-        <a class="hd-cta" href="./index.html#get">免费下载</a>
-      </div>
-    </div>
-  </header>
-
-  <main>
-    <section class="phero wrap">
-      <p class="ey">使用指南</p>
-      <h1 class="page">从首次连接到常用功能，按顺序来。</h1>
-      <p class="lead">连接由 Windows 端发起并管理。Android 与另一台 Windows PC 已可作为连接目标；Mac 版源码及配套支持已准备，但公开公证安装包与真机验证仍在进行。</p>
-      <nav class="toc" aria-label="本页目录">
-        <a href="#start">5 分钟连接步骤</a>
-        <a href="#position">手机位置布局</a>
-        <a href="#remote">移动端远程控制</a>
-        <a href="#files">文件与剪贴板</a>
-        <a href="#quick">数字快捷键</a>
-        <a href="#bluetooth">Bluetooth 连接</a>
-        <a href="#pcpc">连接另一台 PC</a>
-        <a href="#mac">连接 Mac</a>
-        <a href="#shortcuts">快捷键表</a>
-      </nav>
-    </section>
-
-    <!-- QUICK START -->
-    <section id="start">
-      <div class="wrap narrow">
-        <div class="sec-head"><p class="ey">5 分钟连接</p><h2 class="sec">首次连接只要照着这个顺序做就行。</h2>
-          <p class="sec-lead">以下是 Android 的首次连接流程，以 Wi-Fi（同一台 Wi-Fi 路由器）为准。Mac 的独立步骤是公开公证版发布后使用的预览流程。</p></div>
-        <div class="timeline">
-          <div class="tstep"><div class="rail"><span class="num">1</span><span class="line"></span></div><div class="body"><h4>打开 PC 应用</h4><p>在 Windows 上运行 OneMouse，屏幕上会显示 6 位数字代码和二维码。</p></div></div>
-          <div class="tstep"><div class="rail"><span class="num">2</span><span class="line"></span></div><div class="body"><h4>打开 Android 无障碍服务</h4><p>要接收 PC 的鼠标和键盘输入，需要在 Android 上打开 OneMouse 无障碍服务。实际上只要准备好这一项就够了。</p></div></div>
-          <div class="tstep"><div class="rail"><span class="num">3</span><span class="line"></span></div><div class="body"><h4>搜索 PC</h4><p>在同一 Wi-Fi（同一台 Wi-Fi 路由器）下查找 PC。Android 13 及以上系统此时可能会询问一次“附近 Wi-Fi 设备”权限。</p></div></div>
-          <div class="tstep"><div class="rail"><span class="num">4</span><span class="line"></span></div><div class="body"><h4>用二维码或 6 位代码配对</h4><p>扫描二维码或输入 6 位代码，确认是自己的设备。完成配对后，输入、文件、剪贴板通道才会开启。</p></div></div>
-          <div class="tstep"><div class="rail"><span class="num">5</span><span class="line"></span></div><div class="body"><h4>对准手机位置</h4><p>按实际方向布置手机会从 PC 屏幕的哪个边缘（左、右、上、下）延伸出去。这个边缘就是光标的进入方向。</p></div></div>
-          <div class="tstep"><div class="rail"><span class="num">6</span></div><div class="body"><h4>移过去使用</h4><p>朝布置好的方向推动鼠标，就会切换到手机上。文件放到快速拖放区，发到另一台 PC 则拖过屏幕边界。屏幕捕获用 Print Screen 或 Ctrl+Alt+S。</p></div></div>
-        </div>
-        <details class="fold"><summary><span>查看实际 UI 配对流程</span><small>准备 → 确认 PC 代码 → 输入数字 → 扫描二维码</small></summary>
-          <div class="fold-body"><a href="../assets/onemouse-pairing-real-ui-comic-v5.png" target="_blank" rel="noopener"><img src="../assets/onemouse-pairing-real-ui-comic-v5.png" alt="OneMouse 配对方法：准备、确认 PC 代码、输入数字、扫描二维码的顺序" loading="lazy" style="border-radius:12px" /></a></div></details>
-      </div>
-    </section>
-
-    <!-- POSITION -->
-    <section class="section-alt" id="position">
-      <div class="wrap narrow">
-        <div class="sec-head"><p class="ey">手机位置</p><h2 class="sec">连接后，只要把手机位置对准实际方向就行。</h2></div>
-        <p class="sec-lead" style="max-width:60ch">确定鼠标要越过的边缘，按设备实际摆放的一侧（左、右、上、下）来布置。当前可拖动手机、平板和另一台 Windows PC；Mac 公开版发布后将作为连接目标加入布局。</p>
-        <details class="fold"><summary><span>查看布局界面</span></summary>
-          <div class="fold-body"><a href="../assets/onboarding_pc_position.png" target="_blank" rel="noopener"><img src="../assets/onboarding_pc_position.png" alt="OneMouse 手机位置布局界面" loading="lazy" style="border-radius:12px" /></a></div></details>
-      </div>
-    </section>
-
-    <!-- REMOTE CONTROL -->
-    <section id="remote">
-      <div class="wrap">
-        <div class="sec-head"><p class="ey">远程控制</p><h2 class="sec">移动端屏幕远程控制从设备管理开始。</h2></div>
-        <div class="split lead-left">
-          <div>
-            <p class="sec-lead" style="margin-bottom:16px">在设备管理中，点击已配对 Android 那一行的远程控制图标，就会打开一个显示手机画面的独立窗口。首次打开时需要授权 Android 屏幕捕获。</p>
-            <div class="panel"><h3>窗口中的操作</h3>
-              <ul>
-                <li>左键点击、拖动、滚轮会被原样传递。</li>
-                <li><b>右键 = 返回</b>，<b>滚轮点击 = 主屏</b>。</li>
-                <li>PC 键盘（含中文）会输入到手机当前的输入框。</li>
-                <li>如果画面看起来是空的，请确认捕获授权弹窗，并把远程控制关掉再打开。</li>
-              </ul></div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>使用指南 | OneMouse 一鼠 — 从首次连接到常用功能</title>
+    <meta
+      name="description"
+      content="OneMouse 使用指南：介绍 Android、另一台 Windows PC 与 macOS 13+ Mac 的连接流程；Mac 公证安装包与真机验证仍在进行。"
+    />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <link rel="stylesheet" href="../css/onemouse.css" />
+    <link rel="canonical" href="https://onemouse.pages.dev/zh/guide" />
+    <link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/guide.html" />
+    <link rel="alternate" hreflang="en" href="https://onemouse.pages.dev/en/guide.html" />
+    <link rel="alternate" hreflang="ja" href="https://onemouse.pages.dev/ja/guide.html" />
+    <link rel="alternate" hreflang="zh" href="https://onemouse.pages.dev/zh/guide.html" />
+    <link rel="alternate" hreflang="x-default" href="https://onemouse.pages.dev/guide.html" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MJ73H86TWX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-MJ73H86TWX');
+    </script>
+  </head>
+  <body>
+    <header class="site">
+      <div class="wrap hd">
+        <a class="brand" href="./index.html" aria-label="OneMouse 主页"
+          ><span class="om">OM</span>OneMouse</a
+        >
+        <nav class="nav" aria-label="主菜单">
+          <a href="./index.html">概览</a>
+          <a href="./index.html#use">功能</a>
+          <a href="./guide.html" class="on">使用方法</a>
+          <a href="./help.html">帮助</a>
+        </nav>
+        <div class="hd-right">
+          <div class="lang" aria-label="语言">
+            <a href="../guide.html">KOR</a><a href="../en/guide.html">ENG</a
+            ><a href="../ja/guide.html">JPN</a><span class="on">CHN</span>
           </div>
-          <div>
-            <details class="fold" open><summary><span>设备行与图标</span></summary><div class="fold-body"><a href="../assets/guide_remote_control_devices.jpg" target="_blank" rel="noopener"><img src="../assets/guide_remote_control_devices.jpg" alt="设备管理中的远程控制图标" loading="lazy" style="border-radius:12px" /></a></div></details>
-            <details class="fold"><summary><span>已打开的远程控制窗口</span></summary><div class="fold-body"><a href="../assets/guide_mobile_remote_control_window.jpg" target="_blank" rel="noopener"><img src="../assets/guide_mobile_remote_control_window.jpg" alt="已打开的移动端远程控制窗口" loading="lazy" style="border-radius:12px" /></a></div></details>
-          </div>
+          <a class="hd-cta" href="./index.html#get">免费下载</a>
         </div>
       </div>
-    </section>
+    </header>
 
-    <!-- FILES -->
-    <section class="section-alt" id="files">
-      <div class="wrap">
-        <div class="sec-head"><p class="ey">文件与剪贴板</p><h2 class="sec">文件可通过传输界面、快速拖放区、PC-to-PC 拖动来发送。</h2></div>
-        <div class="split lead-left">
-          <div>
-            <ul class="panel" style="list-style:none;padding-left:22px">
-              <li style="margin:0 0 8px">把文件放到<b>传输界面</b>或屏幕上的小<b>拖放区</b>，就会发送到选定的 Android 或另一台 PC。</li>
-              <li style="margin:8px 0"><b>PC-to-PC</b> 是拖着文件越过布置好的屏幕边界，放到目标 PC 上即可传输（需要另一台 PC 已连接并已布置）。</li>
-              <li style="margin:8px 0">Android → PC 通过 Android 传输标签页或分享菜单发送。</li>
-              <li style="margin:8px 0 0">如果无法开始，请检查连接状态和所选的设备。</li>
-            </ul>
-          </div>
-          <div>
-            <div class="panel tip"><h3>快速拖放区</h3>
-              <ul><li>用 <b>Ctrl+Alt+D</b> 隐藏或显示拖放区。</li><li>位置和状态会保存在 PC 应用中。</li></ul></div>
-            <details class="fold"><summary><span>快速拖放区界面</span></summary><div class="fold-body"><a href="../assets/guide_quick_drop_send.png" target="_blank" rel="noopener"><img src="../assets/guide_quick_drop_send.png" alt="用快速拖放区发送文件" loading="lazy" style="border-radius:12px" /></a></div></details>
-          </div>
-        </div>
-      </div>
-    </section>
+    <main>
+      <section class="phero wrap">
+        <p class="ey">使用指南</p>
+        <h1 class="page">从首次连接到常用功能，按顺序来。</h1>
+        <p class="lead">
+          连接由 Windows 端发起并管理。Android 与另一台 Windows PC 已可作为连接目标；Mac
+          版源码及配套支持已准备，但公开公证安装包与真机验证仍在进行。
+        </p>
+        <nav class="toc" aria-label="本页目录">
+          <a href="#start">5 分钟连接步骤</a>
+          <a href="#position">手机位置布局</a>
+          <a href="#remote">移动端远程控制</a>
+          <a href="#files">文件与剪贴板</a>
+          <a href="#quick">数字快捷键</a>
+          <a href="#bluetooth">Bluetooth 连接</a>
+          <a href="#pcpc">连接另一台 PC</a>
+          <a href="#mac">连接 Mac</a>
+          <a href="#shortcuts">快捷键表</a>
+        </nav>
+      </section>
 
-    <!-- MOBILE TO PC -->
-    <section id="text-to-pc">
-      <div class="wrap">
-        <div class="sec-head"><p class="ey">手机 → PC</p><h2 class="sec">把手机中选好的文件和文本发送到 PC。</h2>
-          <p class="sec-lead">请先确认手机已与 PC 配对并连接。文件可从传输标签或 Android 分享菜单发送；文本可从选择菜单中的 OneMouse to PC 发送。</p></div>
-        <div class="split lead-left">
-          <div class="panel"><h3>发送文件</h3>
-            <ol><li>在移动应用的<b>传输</b>标签中，点击<b>选择文件并发送到 PC</b>。</li><li>选择要发送的文件后，会发送到当前选中的 PC。</li><li>在照片或文档应用中，也可以点击<b>分享</b>并选择 OneMouse。</li></ol>
+      <!-- QUICK START -->
+      <section id="start">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">5 分钟连接</p>
+            <h2 class="sec">首次连接只要照着这个顺序做就行。</h2>
+            <p class="sec-lead">
+              以下是 Android 的首次连接流程，以 Wi-Fi（同一台 Wi-Fi 路由器）为准。Mac
+              的独立步骤是公开公证版发布后使用的预览流程。
+            </p>
           </div>
-          <div class="panel"><h3>发送文本</h3>
-            <ol><li>在 Android 中长按并选择文本，然后打开<b>更多</b>。</li><li>点击<b>OneMouse to PC</b>，文本会发送到 PC 剪贴板。</li><li>若第一次没有显示，请先在应用管理中启用一次 OneMouse，再重新选择。</li></ol>
-          </div>
-        </div>
-        <details class="fold"><summary><span>查看文本发送界面</span><small>在 Android 选择菜单中启用并使用 OneMouse to PC 的步骤。</small></summary>
-          <div class="fold-body" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px">
-            <figure><img src="../assets/text_to_pc_step_1.jpg" alt="选择文本并打开更多菜单" loading="lazy" style="border-radius:12px" /><figcaption>1. 选择文本</figcaption></figure>
-            <figure><img src="../assets/text_to_pc_step_2.jpg" alt="从文本选择菜单打开应用管理" loading="lazy" style="border-radius:12px" /><figcaption>2. 打开应用管理</figcaption></figure>
-            <figure><img src="../assets/text_to_pc_step_3.jpg" alt="在应用管理中启用 OneMouse" loading="lazy" style="border-radius:12px" /><figcaption>3. 启用 OneMouse</figcaption></figure>
-            <figure><img src="../assets/text_to_pc_step_4.jpg" alt="从更多菜单选择 OneMouse to PC" loading="lazy" style="border-radius:12px" /><figcaption>4. 发送到 PC</figcaption></figure>
-            <figure><img src="../assets/text_to_pc_step_5.jpg" alt="已成功发送到 PC 剪贴板" loading="lazy" style="border-radius:12px" /><figcaption>5. 在 PC 粘贴</figcaption></figure>
-          </div>
-        </details>
-      </div>
-    </section>
-
-    <!-- QUICK CONNECT -->
-    <section id="quick">
-      <div class="wrap narrow">
-        <div class="sec-head"><p class="ey">数字快捷键</p><h2 class="sec">用设备列表的编号直接连接。</h2></div>
-        <div class="split">
-          <div class="panel"><h3>Ctrl + Alt + 1~9</h3>
-            <ul><li>设备管理中前 9 个设备会绑定 <b>Ctrl+Alt+1~9</b>。</li><li>按下编号就会连接到对应设备。</li><li>对已连接的设备再次按下其编号即可断开连接。</li><li>连接／断开时，右下角会弹出一个小提示。</li></ul></div>
-          <div class="panel tip"><h3>自动重连</h3>
-            <ul><li>开启后，当上次的设备再次出现，或只有一个已就绪的设备时，PC 应用会自动重新连接。</li><li>鼠标在设备之间来回移动时不会另外弹出提示。</li></ul></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- BLUETOOTH -->
-    <section class="section-alt" id="bluetooth">
-      <div class="wrap">
-        <div class="sec-head"><p class="ey">Bluetooth</p><h2 class="sec">没有 Wi-Fi 路由器，也能用 Bluetooth 连接。</h2>
-          <p class="sec-lead">目前可通过 Bluetooth 把 Windows 端与 Android 或另一台 Windows PC 直接连接。Mac Bluetooth 支持已写入源码，但公开公证安装包与真机验证仍在进行。</p></div>
-        <div class="split lead-left">
-          <div>
-            <div class="panel" style="margin-bottom:14px"><h3>这些情况很好用</h3>
-              <ul><li>没有共享 Wi-Fi 的房间、户外、车里</li><li>访客 Wi-Fi 或防火墙挡住设备搜索时</li><li>以键盘、剪贴板为主的轻度使用</li></ul></div>
-            <div class="panel tip"><h3>须知</h3>
-              <ul><li>在 Android 设置标签页开启，独立于 Wi-Fi 运行（含重试 backoff）。</li><li>PC↔PC 以主／从角色支持双向文件拖动。</li><li>可以在列表中同时开启多个 Bluetooth 设备。</li><li>Bluetooth 比 Wi-Fi 慢 —— 大文件建议用 Wi-Fi。</li><li>移动端远程控制不建议在 Bluetooth 下使用。</li><li>如遇问题，请在 Windows Bluetooth 中重新配对。</li></ul></div>
-          </div>
-          <div>
-            <div class="panel"><h3>连接步骤</h3>
-              <div class="timeline" style="margin-top:8px">
-                <div class="tstep"><div class="rail"><span class="num">1</span><span class="line"></span></div><div class="body" style="padding-bottom:14px"><h4>在 Android 设置标签页开启 Bluetooth 模式</h4></div></div>
-                <div class="tstep"><div class="rail"><span class="num">2</span><span class="line"></span></div><div class="body" style="padding-bottom:14px"><h4>在 Windows Bluetooth 设置中配对一次手机</h4></div></div>
-                <div class="tstep"><div class="rail"><span class="num">3</span><span class="line"></span></div><div class="body" style="padding-bottom:14px"><h4>PC 应用自动连接 → 在设备管理中显示</h4></div></div>
-                <div class="tstep"><div class="rail"><span class="num">4</span></div><div class="body" style="padding-bottom:0"><h4>和 Wi-Fi 一样使用输入、剪贴板、文件</h4></div></div>
+          <div class="timeline">
+            <div class="tstep">
+              <div class="rail"><span class="num">1</span><span class="line"></span></div>
+              <div class="body">
+                <h4>打开 PC 应用</h4>
+                <p>在 Windows 上运行 OneMouse，屏幕上会显示 6 位数字代码和二维码。</p>
               </div>
             </div>
-            <details class="fold"><summary><span>Bluetooth 从设备界面</span></summary><div class="fold-body"><a href="../assets/guide_bt_sub_devices.png" target="_blank" rel="noopener"><img src="../assets/guide_bt_sub_devices.png" alt="Bluetooth 从设备列表" loading="lazy" style="border-radius:12px" /></a></div></details>
+            <div class="tstep">
+              <div class="rail"><span class="num">2</span><span class="line"></span></div>
+              <div class="body">
+                <h4>打开 Android 无障碍服务</h4>
+                <p>
+                  要接收 PC 的鼠标和键盘输入，需要在 Android 上打开 OneMouse
+                  无障碍服务。实际上只要准备好这一项就够了。
+                </p>
+              </div>
+            </div>
+            <div class="tstep">
+              <div class="rail"><span class="num">3</span><span class="line"></span></div>
+              <div class="body">
+                <h4>搜索 PC</h4>
+                <p>
+                  在同一 Wi-Fi（同一台 Wi-Fi 路由器）下查找 PC。Android 13
+                  及以上系统此时可能会询问一次“附近 Wi-Fi 设备”权限。
+                </p>
+              </div>
+            </div>
+            <div class="tstep">
+              <div class="rail"><span class="num">4</span><span class="line"></span></div>
+              <div class="body">
+                <h4>用二维码或 6 位代码配对</h4>
+                <p>
+                  扫描二维码或输入 6
+                  位代码，确认是自己的设备。完成配对后，输入、文件、剪贴板通道才会开启。
+                </p>
+              </div>
+            </div>
+            <div class="tstep">
+              <div class="rail"><span class="num">5</span><span class="line"></span></div>
+              <div class="body">
+                <h4>对准手机位置</h4>
+                <p>
+                  按实际方向布置手机会从 PC
+                  屏幕的哪个边缘（左、右、上、下）延伸出去。这个边缘就是光标的进入方向。
+                </p>
+              </div>
+            </div>
+            <div class="tstep">
+              <div class="rail"><span class="num">6</span></div>
+              <div class="body">
+                <h4>移过去使用</h4>
+                <p>
+                  朝布置好的方向推动鼠标，就会切换到手机上。文件放到快速拖放区，发到另一台 PC
+                  则拖过屏幕边界。屏幕捕获用 Print Screen 或 Ctrl+Alt+S。
+                </p>
+              </div>
+            </div>
+          </div>
+          <details class="fold">
+            <summary>
+              <span>查看实际 UI 配对流程</span
+              ><small>准备 → 确认 PC 代码 → 输入数字 → 扫描二维码</small>
+            </summary>
+            <div class="fold-body">
+              <a
+                href="../assets/onemouse-pairing-real-ui-comic-v5.png"
+                target="_blank"
+                rel="noopener"
+                ><img
+                  src="../assets/onemouse-pairing-real-ui-comic-v5.png"
+                  alt="OneMouse 配对方法：准备、确认 PC 代码、输入数字、扫描二维码的顺序"
+                  loading="lazy"
+                  style="border-radius: 12px"
+              /></a>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <!-- POSITION -->
+      <section class="section-alt" id="position">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">手机位置</p>
+            <h2 class="sec">连接后，只要把手机位置对准实际方向就行。</h2>
+          </div>
+          <p class="sec-lead" style="max-width: 60ch">
+            确定鼠标要越过的边缘，按设备实际摆放的一侧（左、右、上、下）来布置。当前可拖动手机、平板和另一台
+            Windows PC；Mac 公开版发布后将作为连接目标加入布局。
+          </p>
+          <details class="fold">
+            <summary><span>查看布局界面</span></summary>
+            <div class="fold-body">
+              <a href="../assets/onboarding_pc_position.png" target="_blank" rel="noopener"
+                ><img
+                  src="../assets/onboarding_pc_position.png"
+                  alt="OneMouse 手机位置布局界面"
+                  loading="lazy"
+                  style="border-radius: 12px"
+              /></a>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <!-- REMOTE CONTROL -->
+      <section id="remote">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="ey">远程控制</p>
+            <h2 class="sec">移动端屏幕远程控制从设备管理开始。</h2>
+          </div>
+          <div class="split lead-left">
+            <div>
+              <p class="sec-lead" style="margin-bottom: 16px">
+                在设备管理中，点击已配对 Android
+                那一行的远程控制图标，就会打开一个显示手机画面的独立窗口。首次打开时需要授权 Android
+                屏幕捕获。
+              </p>
+              <div class="panel">
+                <h3>窗口中的操作</h3>
+                <ul>
+                  <li>左键点击、拖动、滚轮会被原样传递。</li>
+                  <li><b>右键 = 返回</b>，<b>滚轮点击 = 主屏</b>。</li>
+                  <li>PC 键盘（含中文）会输入到手机当前的输入框。</li>
+                  <li>如果画面看起来是空的，请确认捕获授权弹窗，并把远程控制关掉再打开。</li>
+                </ul>
+              </div>
+            </div>
+            <div>
+              <details class="fold" open>
+                <summary><span>设备行与图标</span></summary>
+                <div class="fold-body">
+                  <a
+                    href="../assets/guide_remote_control_devices.jpg"
+                    target="_blank"
+                    rel="noopener"
+                    ><img
+                      src="../assets/guide_remote_control_devices.jpg"
+                      alt="设备管理中的远程控制图标"
+                      loading="lazy"
+                      style="border-radius: 12px"
+                  /></a>
+                </div>
+              </details>
+              <details class="fold">
+                <summary><span>已打开的远程控制窗口</span></summary>
+                <div class="fold-body">
+                  <a
+                    href="../assets/guide_mobile_remote_control_window.jpg"
+                    target="_blank"
+                    rel="noopener"
+                    ><img
+                      src="../assets/guide_mobile_remote_control_window.jpg"
+                      alt="已打开的移动端远程控制窗口"
+                      loading="lazy"
+                      style="border-radius: 12px"
+                  /></a>
+                </div>
+              </details>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- PC TO PC -->
-    <section id="pcpc">
-      <div class="wrap">
-        <div class="sec-head"><p class="ey">另一台 PC</p><h2 class="sec">另一台 Windows PC 按设置 · 设备管理 · 布局的顺序接入。</h2></div>
-        <div class="split lead-left">
-          <div>
-            <div class="panel"><h3>建立连接</h3>
-              <ul><li>进行控制的 PC 设为<b>主</b>，被控制的 PC 设为<b>从</b>角色。</li><li>配对从 PC 并添加到设备管理。</li><li>在布局编辑器中按实际位置摆放从 PC。</li><li>朝那个方向移过鼠标就能控制另一台 PC，文件也可通过边界拖动来互传。</li></ul></div>
+      <!-- FILES -->
+      <section class="section-alt" id="files">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="ey">文件与剪贴板</p>
+            <h2 class="sec">文件可通过传输界面、快速拖放区、PC-to-PC 拖动来发送。</h2>
           </div>
-          <div>
-            <details class="fold" open><summary><span>布局界面</span></summary><div class="fold-body"><a href="../assets/guide_pc_arrangement.png" target="_blank" rel="noopener"><img src="../assets/guide_pc_arrangement.png" alt="另一台 PC 的布局编辑器界面" loading="lazy" style="border-radius:12px" /></a></div></details>
+          <div class="split lead-left">
+            <div>
+              <ul class="panel" style="list-style: none; padding-left: 22px">
+                <li style="margin: 0 0 8px">
+                  把文件放到<b>传输界面</b>或屏幕上的小<b>拖放区</b>，就会发送到选定的 Android
+                  或另一台 PC。
+                </li>
+                <li style="margin: 8px 0">
+                  <b>PC-to-PC</b> 是拖着文件越过布置好的屏幕边界，放到目标 PC 上即可传输（需要另一台
+                  PC 已连接并已布置）。
+                </li>
+                <li style="margin: 8px 0">Android → PC 通过 Android 传输标签页或分享菜单发送。</li>
+                <li style="margin: 8px 0 0">如果无法开始，请检查连接状态和所选的设备。</li>
+              </ul>
+            </div>
+            <div>
+              <div class="panel tip">
+                <h3>快速拖放区</h3>
+                <ul>
+                  <li>用 <b>Ctrl+Alt+D</b> 隐藏或显示拖放区。</li>
+                  <li>位置和状态会保存在 PC 应用中。</li>
+                </ul>
+              </div>
+              <details class="fold">
+                <summary><span>快速拖放区界面</span></summary>
+                <div class="fold-body">
+                  <a href="../assets/guide_quick_drop_send.png" target="_blank" rel="noopener"
+                    ><img
+                      src="../assets/guide_quick_drop_send.png"
+                      alt="用快速拖放区发送文件"
+                      loading="lazy"
+                      style="border-radius: 12px"
+                  /></a>
+                </div>
+              </details>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- MAC CONNECTION TARGET -->
-    <section class="section-alt" id="mac">
-      <div class="wrap narrow">
-        <div class="sec-head"><p class="ey">Mac 连接目标 · 预览</p><h2 class="sec">公开版发布后，从 Windows 选择 Mac，再输入 Mac 上显示的 6 位代码。</h2>
-          <p class="sec-lead">以下 5 步是公开公证版发布后使用的流程。Mac 源码及配套支持已准备，但公开公证安装包与 Windows+Mac 真机验证仍在进行，尚不能视为正式发布或验证完成。</p></div>
-        <div class="timeline">
-          <div class="tstep"><div class="rail"><span class="num">1</span><span class="line"></span></div><div class="body"><h4>在 Windows 和 Mac 上打开公开版 OneMouse</h4><p>发布后，让 Windows 端与 macOS 13+ Mac 连接到同一个本地网络，并在两端运行 OneMouse。</p></div></div>
-          <div class="tstep"><div class="rail"><span class="num">2</span><span class="line"></span></div><div class="body"><h4>在 Mac 上允许必要权限</h4><p>“辅助功能”是接收 Windows 鼠标和键盘输入所必需的。macOS 15+ 还需允许“本地网络”；macOS 13/14 可能不会显示该项目。</p></div></div>
-          <div class="tstep"><div class="rail"><span class="num">3</span><span class="line"></span></div><div class="body"><h4>在 Windows 上选择找到的 Mac</h4><p>连接由 Windows 端发起并管理；请在 Windows OneMouse 的设备管理中从发现列表选择这台 Mac。</p></div></div>
-          <div class="tstep"><div class="rail"><span class="num">4</span><span class="line"></span></div><div class="body"><h4>在 Windows 输入 Mac 显示的 6 位代码</h4><p>查看 Mac OneMouse 窗口中的 6 位配对代码，并把该代码输入 Windows。配对完成后，Mac 会作为连接目标出现在设备管理中。</p></div></div>
-          <div class="tstep"><div class="rail"><span class="num">5</span></div><div class="body"><h4>布置位置并开始使用</h4><p>公开版发布后，在 Windows 的布局编辑器中把 Mac 放到实际方向，随后把鼠标移过对应边缘。只有要在 Windows 查看 Mac 屏幕或窗口时，才需要在 Mac 额外允许“屏幕录制”。</p></div></div>
+      <!-- MOBILE TO PC -->
+      <section id="text-to-pc">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="ey">手机 → PC</p>
+            <h2 class="sec">把手机中选好的文件和文本发送到 PC。</h2>
+            <p class="sec-lead">
+              请先确认手机已与 PC 配对并连接。文件可从传输标签或 Android
+              分享菜单发送；文本可从选择菜单中的 OneMouse to PC 发送。
+            </p>
+          </div>
+          <div class="split lead-left">
+            <div class="panel">
+              <h3>发送文件</h3>
+              <ol>
+                <li>在移动应用的<b>传输</b>标签中，点击<b>选择文件并发送到 PC</b>。</li>
+                <li>选择要发送的文件后，会发送到当前选中的 PC。</li>
+                <li>在照片或文档应用中，也可以点击<b>分享</b>并选择 OneMouse。</li>
+              </ol>
+            </div>
+            <div class="panel">
+              <h3>发送文本</h3>
+              <ol>
+                <li>在 Android 中长按并选择文本，然后打开<b>更多</b>。</li>
+                <li>点击<b>OneMouse to PC</b>，文本会发送到 PC 剪贴板。</li>
+                <li>若第一次没有显示，请先在应用管理中启用一次 OneMouse，再重新选择。</li>
+              </ol>
+            </div>
+          </div>
+          <details class="fold">
+            <summary>
+              <span>查看文本发送界面</span
+              ><small>在 Android 选择菜单中启用并使用 OneMouse to PC 的步骤。</small>
+            </summary>
+            <div
+              class="fold-body"
+              style="
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 12px;
+              "
+            >
+              <figure>
+                <img
+                  src="../assets/text_to_pc_step_1.jpg"
+                  alt="选择文本并打开更多菜单"
+                  loading="lazy"
+                  style="border-radius: 12px"
+                />
+                <figcaption>1. 选择文本</figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="../assets/text_to_pc_step_2.jpg"
+                  alt="从文本选择菜单打开应用管理"
+                  loading="lazy"
+                  style="border-radius: 12px"
+                />
+                <figcaption>2. 打开应用管理</figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="../assets/text_to_pc_step_3.jpg"
+                  alt="在应用管理中启用 OneMouse"
+                  loading="lazy"
+                  style="border-radius: 12px"
+                />
+                <figcaption>3. 启用 OneMouse</figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="../assets/text_to_pc_step_4.jpg"
+                  alt="从更多菜单选择 OneMouse to PC"
+                  loading="lazy"
+                  style="border-radius: 12px"
+                />
+                <figcaption>4. 发送到 PC</figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="../assets/text_to_pc_step_5.jpg"
+                  alt="已成功发送到 PC 剪贴板"
+                  loading="lazy"
+                  style="border-radius: 12px"
+                />
+                <figcaption>5. 在 PC 粘贴</figcaption>
+              </figure>
+            </div>
+          </details>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- PERMISSIONS (short summary + link) -->
-    <section id="permissions">
-      <div class="wrap narrow">
-        <div class="sec-head"><p class="ey">权限</p><h2 class="sec">Android 与 Mac 所需的权限不同。</h2>
-          <p class="sec-lead">权限不会一次性全部申请，而是在连接或使用相应功能时才询问。各项的详细说明在技术与安全中。</p></div>
-        <div class="panel"><ul>
-          <li><b>Android 无障碍服务 — 必需：</b>用于接收 Windows 的鼠标和键盘输入。</li>
-          <li><b>Android 屏幕捕获与附近 Wi-Fi 设备：</b>分别在启动远程控制、Android 13+ 查找 PC 时请求。</li>
-          <li><b>Mac“辅助功能” — 接收输入时必需：</b>用于接收 Windows 端的鼠标和键盘输入。</li>
-          <li><b>Mac“本地网络” — macOS 15+：</b>使用 LAN 发现时需要允许；macOS 13/14 可能不会显示该项目。</li>
-          <li><b>Mac“屏幕录制” — 可选：</b>公开版发布后，只有从 Windows 查看 Mac 屏幕或窗口时才需要。</li>
-          <li><b>Bluetooth：</b>仅在选择 Bluetooth 连接时使用相应系统权限；Mac 支持仍处于公证包发布和真机验证阶段。</li>
-        </ul></div>
-        <div style="margin-top:18px"><a class="btn btn-sec sm" href="./technical.html#permissions">查看权限详情</a></div>
-      </div>
-    </section>
+      <!-- QUICK CONNECT -->
+      <section id="quick">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">数字快捷键</p>
+            <h2 class="sec">用设备列表的编号直接连接。</h2>
+          </div>
+          <div class="split">
+            <div class="panel">
+              <h3>Ctrl + Alt + 1~9</h3>
+              <ul>
+                <li>设备管理中前 9 个设备会绑定 <b>Ctrl+Alt+1~9</b>。</li>
+                <li>按下编号就会连接到对应设备。</li>
+                <li>对已连接的设备再次按下其编号即可断开连接。</li>
+                <li>连接／断开时，右下角会弹出一个小提示。</li>
+              </ul>
+            </div>
+            <div class="panel tip">
+              <h3>自动重连</h3>
+              <ul>
+                <li>
+                  开启后，当上次的设备再次出现，或只有一个已就绪的设备时，PC 应用会自动重新连接。
+                </li>
+                <li>鼠标在设备之间来回移动时不会另外弹出提示。</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
 
-    <!-- SHORTCUTS -->
-    <span id="keyboard-shortcuts" aria-hidden="true"></span>
-    <section id="shortcuts">
-      <div class="wrap narrow">
-        <div class="sec-head"><p class="ey">快捷键</p><h2 class="sec">常用键盘快捷键。</h2></div>
-        <div class="table-wrap"><table class="kt">
-          <thead><tr><th>快捷键</th><th>动作</th></tr></thead>
-          <tbody>
-            <tr><td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>1~9</kbd></td><td>连接列表中对应的设备 / 再次按下则断开</td></tr>
-            <tr><td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>D</kbd></td><td>隐藏 / 显示快速拖放区</td></tr>
-            <tr><td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>S</kbd> · <kbd>PrintScreen</kbd></td><td>移动端屏幕捕获</td></tr>
-            <tr><td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Backspace</kbd></td><td>把光标强制返回到本机 PC（显示器中央）</td></tr>
-            <tr><td><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>↑</kbd>/<kbd>↓</kbd></td><td>调节移动端屏幕亮度（需要系统设置权限）</td></tr>
-          </tbody>
-        </table></div>
-      </div>
-    </section>
-  </main>
+      <!-- BLUETOOTH -->
+      <section class="section-alt" id="bluetooth">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="ey">Bluetooth</p>
+            <h2 class="sec">没有 Wi-Fi 路由器，也能用 Bluetooth 连接。</h2>
+            <p class="sec-lead">
+              目前可通过 Bluetooth 把 Windows 端与 Android 或另一台 Windows PC 直接连接。Mac
+              Bluetooth 支持已写入源码，但公开公证安装包与真机验证仍在进行。
+            </p>
+          </div>
+          <div class="split lead-left">
+            <div>
+              <div class="panel" style="margin-bottom: 14px">
+                <h3>这些情况很好用</h3>
+                <ul>
+                  <li>没有共享 Wi-Fi 的房间、户外、车里</li>
+                  <li>访客 Wi-Fi 或防火墙挡住设备搜索时</li>
+                  <li>以键盘、剪贴板为主的轻度使用</li>
+                </ul>
+              </div>
+              <div class="panel tip">
+                <h3>须知</h3>
+                <ul>
+                  <li>在 Android 设置标签页开启，独立于 Wi-Fi 运行（含重试 backoff）。</li>
+                  <li>PC↔PC 以主／从角色支持双向文件拖动。</li>
+                  <li>可以在列表中同时开启多个 Bluetooth 设备。</li>
+                  <li>Bluetooth 比 Wi-Fi 慢 —— 大文件建议用 Wi-Fi。</li>
+                  <li>移动端远程控制不建议在 Bluetooth 下使用。</li>
+                  <li>如遇问题，请在 Windows Bluetooth 中重新配对。</li>
+                </ul>
+              </div>
+            </div>
+            <div>
+              <div class="panel">
+                <h3>连接步骤</h3>
+                <div class="timeline" style="margin-top: 8px">
+                  <div class="tstep">
+                    <div class="rail"><span class="num">1</span><span class="line"></span></div>
+                    <div class="body" style="padding-bottom: 14px">
+                      <h4>在 Android 设置标签页开启 Bluetooth 模式</h4>
+                    </div>
+                  </div>
+                  <div class="tstep">
+                    <div class="rail"><span class="num">2</span><span class="line"></span></div>
+                    <div class="body" style="padding-bottom: 14px">
+                      <h4>在 Windows Bluetooth 设置中配对一次手机</h4>
+                    </div>
+                  </div>
+                  <div class="tstep">
+                    <div class="rail"><span class="num">3</span><span class="line"></span></div>
+                    <div class="body" style="padding-bottom: 14px">
+                      <h4>PC 应用自动连接 → 在设备管理中显示</h4>
+                    </div>
+                  </div>
+                  <div class="tstep">
+                    <div class="rail"><span class="num">4</span></div>
+                    <div class="body" style="padding-bottom: 0">
+                      <h4>和 Wi-Fi 一样使用输入、剪贴板、文件</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <details class="fold">
+                <summary><span>Bluetooth 从设备界面</span></summary>
+                <div class="fold-body">
+                  <a href="../assets/guide_bt_sub_devices.png" target="_blank" rel="noopener"
+                    ><img
+                      src="../assets/guide_bt_sub_devices.png"
+                      alt="Bluetooth 从设备列表"
+                      loading="lazy"
+                      style="border-radius: 12px"
+                  /></a>
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+      </section>
 
-  <footer class="site">
-    <div class="wrap ft">
-      <span>© 2026 OneMouse</span>
-      <span class="links"><a href="./technical.html">技术与安全</a><a href="./privacy.html">隐私政策</a><a href="./terms.html">使用条款</a><a href="./licenses.html">开源许可</a></span>
-    </div>
-  </footer>
-</body>
+      <!-- PC TO PC -->
+      <section id="pcpc">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="ey">另一台 PC</p>
+            <h2 class="sec">另一台 Windows PC 按设置 · 设备管理 · 布局的顺序接入。</h2>
+          </div>
+          <div class="split lead-left">
+            <div>
+              <div class="panel">
+                <h3>建立连接</h3>
+                <ul>
+                  <li>进行控制的 PC 设为<b>主</b>，被控制的 PC 设为<b>从</b>角色。</li>
+                  <li>配对从 PC 并添加到设备管理。</li>
+                  <li>在布局编辑器中按实际位置摆放从 PC。</li>
+                  <li>朝那个方向移过鼠标就能控制另一台 PC，文件也可通过边界拖动来互传。</li>
+                </ul>
+              </div>
+            </div>
+            <div>
+              <details class="fold" open>
+                <summary><span>布局界面</span></summary>
+                <div class="fold-body">
+                  <a href="../assets/guide_pc_arrangement.png" target="_blank" rel="noopener"
+                    ><img
+                      src="../assets/guide_pc_arrangement.png"
+                      alt="另一台 PC 的布局编辑器界面"
+                      loading="lazy"
+                      style="border-radius: 12px"
+                  /></a>
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MAC CONNECTION TARGET -->
+      <section class="section-alt" id="mac">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">Mac 连接目标 · 预览</p>
+            <h2 class="sec">公开版发布后，从 Windows 选择 Mac，再输入 Mac 上显示的 6 位代码。</h2>
+            <p class="sec-lead">
+              以下 5 步是公开公证版发布后使用的流程。Mac 源码及配套支持已准备，但公开公证安装包与
+              Windows+Mac 真机验证仍在进行，尚不能视为正式发布或验证完成。
+            </p>
+          </div>
+          <div class="timeline">
+            <div class="tstep">
+              <div class="rail"><span class="num">1</span><span class="line"></span></div>
+              <div class="body">
+                <h4>在 Windows 和 Mac 上打开公开版 OneMouse</h4>
+                <p>
+                  发布后，让 Windows 端与 macOS 13+ Mac 连接到同一个本地网络，并在两端运行
+                  OneMouse。
+                </p>
+              </div>
+            </div>
+            <div class="tstep">
+              <div class="rail"><span class="num">2</span><span class="line"></span></div>
+              <div class="body">
+                <h4>在 Mac 上允许必要权限</h4>
+                <p>
+                  “辅助功能”是接收 Windows 鼠标和键盘输入所必需的。macOS 15+
+                  还需允许“本地网络”；macOS 13/14 可能不会显示该项目。
+                </p>
+              </div>
+            </div>
+            <div class="tstep">
+              <div class="rail"><span class="num">3</span><span class="line"></span></div>
+              <div class="body">
+                <h4>在 Windows 上选择找到的 Mac</h4>
+                <p>
+                  连接由 Windows 端发起并管理；请在 Windows OneMouse 的设备管理中从发现列表选择这台
+                  Mac。
+                </p>
+              </div>
+            </div>
+            <div class="tstep">
+              <div class="rail"><span class="num">4</span><span class="line"></span></div>
+              <div class="body">
+                <h4>在 Windows 输入 Mac 显示的 6 位代码</h4>
+                <p>
+                  查看 Mac OneMouse 窗口中的 6 位配对代码，并把该代码输入 Windows。配对完成后，Mac
+                  会作为连接目标出现在设备管理中。
+                </p>
+              </div>
+            </div>
+            <div class="tstep">
+              <div class="rail"><span class="num">5</span></div>
+              <div class="body">
+                <h4>布置位置并开始使用</h4>
+                <p>
+                  公开版发布后，在 Windows 的布局编辑器中把 Mac
+                  放到实际方向，随后把鼠标移过对应边缘。只有要在 Windows 查看 Mac
+                  屏幕或窗口时，才需要在 Mac 额外允许“屏幕录制”。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PERMISSIONS (short summary + link) -->
+      <section id="permissions">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">权限</p>
+            <h2 class="sec">Android 与 Mac 所需的权限不同。</h2>
+            <p class="sec-lead">
+              权限不会一次性全部申请，而是在连接或使用相应功能时才询问。各项的详细说明在技术与安全中。
+            </p>
+          </div>
+          <div class="panel">
+            <ul>
+              <li><b>Android 无障碍服务 — 必需：</b>用于接收 Windows 的鼠标和键盘输入。</li>
+              <li>
+                <b>Android 屏幕捕获与附近 Wi-Fi 设备：</b>分别在启动远程控制、Android 13+ 查找 PC
+                时请求。
+              </li>
+              <li><b>Mac“辅助功能” — 接收输入时必需：</b>用于接收 Windows 端的鼠标和键盘输入。</li>
+              <li>
+                <b>Mac“本地网络” — macOS 15+：</b>使用 LAN 发现时需要允许；macOS 13/14
+                可能不会显示该项目。
+              </li>
+              <li>
+                <b>Mac“屏幕录制” — 可选：</b>公开版发布后，只有从 Windows 查看 Mac
+                屏幕或窗口时才需要。
+              </li>
+              <li>
+                <b>Bluetooth：</b>仅在选择 Bluetooth 连接时使用相应系统权限；Mac
+                支持仍处于公证包发布和真机验证阶段。
+              </li>
+            </ul>
+          </div>
+          <div style="margin-top: 18px">
+            <a class="btn btn-sec sm" href="./technical.html#permissions">查看权限详情</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- SHORTCUTS -->
+      <span id="keyboard-shortcuts" aria-hidden="true"></span>
+      <section id="shortcuts">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">快捷键</p>
+            <h2 class="sec">常用键盘快捷键。</h2>
+          </div>
+          <div class="table-wrap">
+            <table class="kt">
+              <thead>
+                <tr>
+                  <th>快捷键</th>
+                  <th>动作</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>1~9</kbd></td>
+                  <td>连接列表中对应的设备 / 再次按下则断开</td>
+                </tr>
+                <tr>
+                  <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>D</kbd></td>
+                  <td>隐藏 / 显示快速拖放区</td>
+                </tr>
+                <tr>
+                  <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>S</kbd> · <kbd>PrintScreen</kbd></td>
+                  <td>移动端屏幕捕获</td>
+                </tr>
+                <tr>
+                  <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Backspace</kbd></td>
+                  <td>把光标强制返回到本机 PC（显示器中央）</td>
+                </tr>
+                <tr>
+                  <td><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>↑</kbd>/<kbd>↓</kbd></td>
+                  <td>调节移动端屏幕亮度（需要系统设置权限）</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site">
+      <div class="wrap ft">
+        <span>© 2026 OneMouse</span>
+        <span class="links"
+          ><a href="./technical.html">技术与安全</a><a href="./privacy.html">隐私政策</a
+          ><a href="./terms.html">使用条款</a><a href="./licenses.html">开源许可</a></span
+        >
+      </div>
+    </footer>
+  </body>
 </html>

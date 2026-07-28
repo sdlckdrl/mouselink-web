@@ -1,376 +1,1037 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="naver-site-verification" content="8f3cbe8a89ca9969cc81ecf1ef5e0aae01858816" />
-  <title>OneMouse | Control Android and Windows PCs; Mac support in preparation</title>
-  <meta name="description" content="OneMouse lets a Windows PC control Android and another Windows PC. macOS 13+ Mac support is awaiting public distribution and real-Mac validation." />
-  <meta name="robots" content="index,follow,max-image-preview:large" />
-  <meta name="keywords" content="OneMouse, MouseLink, share mouse, control Android from PC, control Mac from Windows, Windows Mac mouse sharing, PC to PC mouse, keyboard sharing, Wi-Fi file transfer, clipboard sync, Bluetooth mouse sharing" />
-  <link rel="stylesheet" href="../css/onemouse.css" />
-  <link rel="canonical" href="https://onemouse.pages.dev/en/" />
-  <link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/" />
-  <link rel="alternate" hreflang="en" href="https://onemouse.pages.dev/en/" />
-  <link rel="alternate" hreflang="ja" href="https://onemouse.pages.dev/ja/" />
-  <link rel="alternate" hreflang="zh" href="https://onemouse.pages.dev/zh/" />
-  <link rel="alternate" hreflang="x-default" href="https://onemouse.pages.dev/" />
-  <meta property="og:site_name" content="OneMouse" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="OneMouse | Control Android and Windows PCs; Mac support in preparation" />
-  <meta property="og:description" content="Use a Windows PC to control Android and another Windows PC. macOS 13+ Mac support is still being prepared and validated." />
-  <meta property="og:url" content="https://onemouse.pages.dev/en/" />
-  <meta property="og:image" content="https://onemouse.pages.dev/assets/hero-bg-generated-2.png" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="OneMouse | Control Android and Windows PCs; Mac support in preparation" />
-  <meta name="twitter:description" content="Use a Windows PC to control Android and another Windows PC. macOS 13+ Mac support is still being prepared and validated." />
-  <meta name="twitter:image" content="https://onemouse.pages.dev/assets/hero-bg-generated-2.png" />
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "OneMouse",
-      "alternateName": ["OneMouse", "MouseLink", "share mouse"],
-      "applicationCategory": "UtilitiesApplication",
-      "operatingSystem": "Windows 10, Windows 11, Android",
-      "url": "https://onemouse.pages.dev/en/",
-      "inLanguage": "en-US",
-      "downloadUrl": "https://onemouse.pages.dev/en/#get",
-      "description": "OneMouse lets a Windows PC control Android and another Windows PC. macOS 13+ Mac support is awaiting public distribution and real-Mac validation.",
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" }
-    }
-  </script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MJ73H86TWX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-MJ73H86TWX');
-  </script>
-</head>
-<body>
-  <header class="site">
-    <div class="wrap hd">
-      <a class="brand" href="./index.html" aria-label="OneMouse home"><span class="om">OM</span>OneMouse</a>
-      <nav class="nav" aria-label="Main navigation">
-        <a href="./index.html" class="on">Overview</a>
-        <a href="#use">Features</a>
-        <a href="./guide.html">Guide</a>
-        <a href="./help.html">Help</a>
-      </nav>
-      <div class="hd-right">
-        <div class="lang" aria-label="Language"><a href="../index.html">KOR</a><span class="on">ENG</span><a href="../ja/index.html">JPN</a><a href="../zh/index.html">CHN</a></div>
-        <a class="hd-cta" href="#get">Free download</a>
-      </div>
-    </div>
-  </header>
-
-  <main>
-    <!-- HERO + SIMULATOR -->
-    <section class="hero wrap" aria-label="Overview">
-      <span class="tagpill">● Free · Android &amp; Windows connected · macOS in preparation</span>
-      <h1>One Windows mouse for<br class="hero-break"> <span class="flow">phone, tablet, and Mac.</span></h1>
-      <p class="sub">Connect Android and another Windows PC like screens side by side. macOS 13+ support is in preparation.</p>
-
-      <div class="hero-cta">
-        <a class="btn btn-pri" href="#get">Get the Windows app</a>
-        <a class="btn btn-sec" href="./guide.html">See how to connect</a>
-      </div>
-      <div class="role-map" aria-label="Supported devices">
-        <div class="role-main"><span>Start on</span><strong>Windows 10/11</strong></div>
-        <span class="role-link" aria-hidden="true">→</span>
-        <div class="role-targets">
-          <span><b>Android</b> Available</span>
-          <span><b>Another Windows PC</b> Available</span>
-          <span class="mac-role"><b>macOS 13+</b> In preparation</span>
-        </div>
-      </div>
-
-      <div class="play">
-        <div class="play-head">
-          <div class="steps">
-            <span><span class="n">1</span><b>Move your mouse</b> to send the cursor across</span>
-            <span><span class="n">2</span><b>Drag a device's name tag</b> to move it around</span>
-            <span><span class="n">3</span><b>Drag a file</b> to send it to another device</span>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="naver-site-verification" content="8f3cbe8a89ca9969cc81ecf1ef5e0aae01858816" />
+    <title>OneMouse | Control Android and Windows PCs; Mac support in preparation</title>
+    <meta
+      name="description"
+      content="OneMouse lets a Windows PC control Android and another Windows PC. macOS 13+ Mac support is awaiting public distribution and real-Mac validation."
+    />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <meta
+      name="keywords"
+      content="OneMouse, MouseLink, share mouse, control Android from PC, control Mac from Windows, Windows Mac mouse sharing, PC to PC mouse, keyboard sharing, Wi-Fi file transfer, clipboard sync, Bluetooth mouse sharing"
+    />
+    <link rel="stylesheet" href="../css/onemouse.css" />
+    <link rel="canonical" href="https://onemouse.pages.dev/en/" />
+    <link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/" />
+    <link rel="alternate" hreflang="en" href="https://onemouse.pages.dev/en/" />
+    <link rel="alternate" hreflang="ja" href="https://onemouse.pages.dev/ja/" />
+    <link rel="alternate" hreflang="zh" href="https://onemouse.pages.dev/zh/" />
+    <link rel="alternate" hreflang="x-default" href="https://onemouse.pages.dev/" />
+    <meta property="og:site_name" content="OneMouse" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="OneMouse | Control Android and Windows PCs; Mac support in preparation"
+    />
+    <meta
+      property="og:description"
+      content="Use a Windows PC to control Android and another Windows PC. macOS 13+ Mac support is still being prepared and validated."
+    />
+    <meta property="og:url" content="https://onemouse.pages.dev/en/" />
+    <meta property="og:image" content="https://onemouse.pages.dev/assets/hero-bg-generated-2.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="OneMouse | Control Android and Windows PCs; Mac support in preparation"
+    />
+    <meta
+      name="twitter:description"
+      content="Use a Windows PC to control Android and another Windows PC. macOS 13+ Mac support is still being prepared and validated."
+    />
+    <meta
+      name="twitter:image"
+      content="https://onemouse.pages.dev/assets/hero-bg-generated-2.png"
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "OneMouse",
+        "alternateName": ["OneMouse", "MouseLink", "share mouse"],
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Windows 10, Windows 11, Android",
+        "url": "https://onemouse.pages.dev/en/",
+        "inLanguage": "en-US",
+        "downloadUrl": "https://onemouse.pages.dev/en/#get",
+        "description": "OneMouse lets a Windows PC control Android and another Windows PC. macOS 13+ Mac support is awaiting public distribution and real-Mac validation.",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" }
+      }
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MJ73H86TWX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-MJ73H86TWX');
+    </script>
+  </head>
+  <body>
+    <header class="site">
+      <div class="wrap hd">
+        <a class="brand" href="./index.html" aria-label="OneMouse home"
+          ><span class="om">OM</span>OneMouse</a
+        >
+        <nav class="nav" aria-label="Main navigation">
+          <a href="./index.html" class="on">Overview</a>
+          <a href="#use">Features</a>
+          <a href="./guide.html">Guide</a>
+          <a href="./help.html">Help</a>
+        </nav>
+        <div class="hd-right">
+          <div class="lang" aria-label="Language">
+            <a href="../index.html">KOR</a><span class="on">ENG</span
+            ><a href="../ja/index.html">JPN</a><a href="../zh/index.html">CHN</a>
           </div>
-          <button class="reset" id="reset" type="button">Reset layout</button>
+          <a class="hd-cta" href="#get">Free download</a>
         </div>
-        <div class="desk" id="desk">
-          <div class="stage" id="stage">
-            <div class="snapedge" id="snapedge"></div>
-            <div class="dev monitor" data-id="pc"><span class="pin">My PC</span>
-              <div class="screen"><div class="apps" style="grid-template-columns:repeat(6,1fr);padding:12px 12px 22px">
-                <i style="background:#ffffff55"></i><i style="background:#ffd16655"></i><i style="background:#7ee0b955"></i>
-                <i style="background:#ff9e7a55"></i><i style="background:#8ab4ff55"></i><i style="background:#ffffff33"></i></div>
-                <div class="bar"><i></i><i></i><i></i></div></div></div>
-            <div class="dev tablet grab" data-id="tab"><span class="pin">Galaxy Tab</span>
-              <div class="screen"><div class="apps">
-                <i style="background:#5b8cff88"></i><i style="background:#57e0ab88"></i><i style="background:#ffcf5e88"></i><i style="background:#ff8f6b88"></i>
-                <i style="background:#ffffff33"></i><i style="background:#ffffff33"></i><i style="background:#ffffff33"></i><i style="background:#ffffff33"></i></div></div></div>
-            <div class="dev phone grab" data-id="phone"><span class="pin">Phone</span>
-              <div class="screen"><div class="apps">
-                <i style="background:#57e0ab88"></i><i style="background:#ffcf5e88"></i><i style="background:#ff8f6b88"></i>
-                <i style="background:#8ab4ff88"></i><i style="background:#ffffff33"></i><i style="background:#ffffff33"></i></div></div></div>
-            <div class="dev subpc grab" data-id="subpc"><span class="pin">Other PC</span>
-              <div class="screen"><div class="apps" style="grid-template-columns:repeat(5,1fr);padding:9px 9px 18px">
-                <i style="background:#ff9e7a55"></i><i style="background:#c7a0ff55"></i><i style="background:#8ab4ff55"></i><i style="background:#ffffff33"></i><i style="background:#ffffff22"></i></div>
-                <div class="bar"><i></i><i></i></div></div></div>
-            <div class="dev mac grab" data-id="mac"><span class="pin">Mac</span>
-              <div class="screen"><div class="apps" style="grid-template-columns:repeat(5,1fr);padding:10px 10px 20px">
-                <i style="background:#ff7f7755"></i><i style="background:#ffd45c55"></i><i style="background:#65d69e55"></i><i style="background:#60a5fa55"></i><i style="background:#b394f755"></i></div>
-                <div class="bar"><i></i><i></i><i></i></div></div></div>
-            <div id="cursor"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 2l6.5 17 2.4-6.8L19.5 10z" fill="#fff" stroke="#241a12" stroke-width="1.3" stroke-linejoin="round"/></svg><span class="dot"></span></div>
-            <div class="filechip" id="filechip"><svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z" fill="#e9f0ff" stroke="#3a5bd0" stroke-width="1.6" stroke-linejoin="round"/><path d="M13 2v7h7" fill="none" stroke="#3a5bd0" stroke-width="1.6" stroke-linejoin="round"/></svg><span>photo.jpg</span></div>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO + SIMULATOR -->
+      <section class="hero wrap" aria-label="Overview">
+        <span class="tagpill">● Free · Android &amp; Windows connected · macOS in preparation</span>
+        <h1>
+          One Windows mouse for<br class="hero-break" />
+          <span class="flow">phone, tablet, and Mac.</span>
+        </h1>
+        <p class="sub">
+          Connect Android and another Windows PC like screens side by side. macOS 13+ support is in
+          preparation.
+        </p>
+
+        <div class="hero-cta">
+          <a class="btn btn-pri" href="#get">Get the Windows app</a>
+          <a class="btn btn-sec" href="./guide.html">See how to connect</a>
+        </div>
+        <div class="role-map" aria-label="Supported devices">
+          <div class="role-main"><span>Start on</span><strong>Windows 10/11</strong></div>
+          <span class="role-link" aria-hidden="true">→</span>
+          <div class="role-targets">
+            <span><b>Android</b> Available</span>
+            <span><b>Another Windows PC</b> Available</span>
+            <span class="mac-role"><b>macOS 13+</b> In preparation</span>
           </div>
         </div>
-        <div class="play-foot">
-          <div id="status"><span class="dotnow"></span>Cursor now on → <span class="where">My PC</span></div>
-          <span class="hint">The cursor crosses to whichever device it touches · it never disappears off-screen</span>
-        </div>
-      </div>
 
-      <p class="hero-note">The demo above is the real <b>device arrangement</b> feature — you arrange devices and pass the mouse the same way in the app.</p>
-    </section>
-
-    <!-- USE CASES -->
-    <section id="use">
-      <div class="wrap">
-        <div class="sec-head">
-          <p class="ey">Great for moments like these</p>
-          <h2 class="sec">What you do at your Windows PC, now on your phone, other PCs, and Mac.</h2>
-          <p class="sec-lead">No networking know-how required. See it through everyday tasks and it clicks right away.</p>
-        </div>
-        <div class="cards">
-          <article class="card"><div class="card-ic" style="background:#e9f0ff;color:#3a5bd0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="6" y="3" width="12" height="18" rx="3"/><path d="M11 6h2"/></svg></div>
-            <h3>Control your phone like a second screen</h3><p>Push the mouse past the edge of your PC monitor and it crosses to Android, carrying clicks, scrolls, and drags right along.</p></article>
-          <article class="card"><div class="card-ic" style="background:#eafaf1;color:#15845f"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 10h.01M10 10h.01M14 10h.01M8 14h8"/></svg></div>
-            <h3>Type long messages with your PC keyboard</h3><p>Search terms, messenger replies, any app text field — whenever you would type on your phone, use your PC keyboard instead.</p></article>
-          <article class="card"><div class="card-ic" style="background:#fff0e8;color:#ff7a4d"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5h6l2 2h8v11H4z"/></svg></div>
-            <h3>Send files and the clipboard instantly</h3><p>Grab a file and drag it to the screen edge to send it straight to the device you chose, and text and clipboard stay in sync on both sides.</p></article>
-          <article class="card"><div class="card-ic" style="background:#f3ecff;color:#7a52d0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="7" width="9" height="10" rx="1.5"/><rect x="13" y="4" width="9" height="7" rx="1.5"/></svg></div>
-            <h3>Bring in other Windows PCs too</h3><p>Place another Windows PC in your arrangement and you can pass the mouse to control it and swap files back and forth.</p></article>
-          <article class="card"><div class="card-ic" style="background:#eef2f6;color:#536273"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M1.5 20h21M9 17l-1 3m7-3 1 3"/></svg></div>
-            <h3>Mac support is in preparation</h3><p>Cursor crossing, input, files, and clipboard transfer will be offered after public distribution and real-Mac validation are complete.</p></article>
-          <article class="card"><div class="card-ic" style="background:#eef0f4;color:#4a5978"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 5l8 7-5 4V4l5 4-8 7"/></svg></div>
-            <h3>It connects over Bluetooth too</h3><p>Wi-Fi for everyday use, and when there is no router or internet, connect directly to Android or another Windows PC. Mac Bluetooth is still being validated.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <!-- SETUP -->
-    <section class="section-alt" id="setup">
-      <div class="wrap">
-        <div class="sec-head">
-          <p class="ey">How to connect</p>
-          <h2 class="sec">Android takes four quick steps.</h2>
-          <p class="sec-lead">These steps are for Android. The guide also previews the planned five-step Mac flow for the build now awaiting distribution and hardware validation.</p>
-        </div>
-        <div class="flow4">
-          <div class="step"><div class="badge">01</div><h4>Open the PC app</h4><p>Launch OneMouse on Windows and check the QR code or 6-digit code on screen.</p></div>
-          <div class="step"><div class="badge">02</div><h4>Turn on the Android permission</h4><p>Turn on the Accessibility Service once so Android can receive your PC mouse and keyboard input.</p></div>
-          <div class="step"><div class="badge">03</div><h4>Connect by QR or code</h4><p>Find the PC on the same Wi-Fi and confirm your device by scanning the QR code or entering the 6-digit code.</p></div>
-          <div class="step"><div class="badge">04</div><h4>Arrange and cross over</h4><p>Place your phone along a screen edge, push the mouse that way, and you are done.</p></div>
-        </div>
-        <details class="fold"><summary><span>See the real pairing screens</span><small>Get ready → Check the PC code → Enter the numbers → Scan the QR</small></summary>
-          <div class="fold-body"><a href="../assets/onemouse-pairing-real-ui-comic-v5.png" target="_blank" rel="noopener"><img src="../assets/onemouse-pairing-real-ui-comic-v5.png" alt="OneMouse pairing steps: get ready, check the PC code, enter the numbers, scan the QR" loading="lazy" style="border-radius:12px" /></a></div></details>
-        <div style="margin-top:20px"><a class="btn btn-sec sm" href="./guide.html">See the full guide</a></div>
-      </div>
-    </section>
-
-    <!-- TRUST -->
-    <section id="trust">
-      <div class="wrap">
-        <div class="sec-head">
-          <p class="ey">Use it with peace of mind</p>
-          <h2 class="sec">Between your own devices, inside your own network.</h2>
-          <p class="sec-lead">OneMouse works only between the devices you have paired. It asks for permissions only when you actually use a feature.</p>
-        </div>
-        <div class="trust">
-          <div class="t"><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l7 4v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V7z"/></svg></span>
-            <div><b>No server in between</b><span>Input, files, and the clipboard travel between your PC and devices on the same network.</span></div></div>
-          <div class="t"><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span>
-            <div><b>Permissions only when needed</b><span>Android uses Accessibility. A Mac receiving input from Windows uses Accessibility; Local Network appears on macOS 15+, while macOS 13/14 may not show that permission.</span></div></div>
-          <div class="t"><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg></span>
-            <div><b>Nothing collected or stored</b><span>We do not use Accessibility data for ads or screen collection, and we never store your files on a server.</span></div></div>
-        </div>
-        <div style="margin-top:20px"><a class="btn btn-sec sm" href="./technical.html">Read more on Technical &amp; Security</a></div>
-      </div>
-    </section>
-
-    <!-- DOWNLOAD -->
-    <section class="section-alt" id="get">
-      <div class="wrap">
-        <div class="sec-head">
-          <p class="ey">Download</p>
-          <h2 class="sec">Install OneMouse on Windows and each device you want to connect.</h2>
-          <p class="sec-lead">Connections are started and managed from Windows 10/11. Android is available now; macOS 13+ support is awaiting signed distribution and real-Mac validation.</p>
-        </div>
-        <div class="dl">
-          <article class="dcard first download-card">
-            <span class="dtag" style="background:linear-gradient(135deg,var(--blue),var(--green))">PC</span>
-            <h3>Windows</h3>
-            <p data-download-filename>Checking for the latest Setup file.</p>
-            <a class="btn btn-pri" href="https://github.com/sdlckdrl/mouselink-web/releases" data-latest-windows-download download>Download for Windows</a>
-          </article>
-          <article class="dcard">
-            <span class="dtag" style="background:#15845f">AND</span>
-            <h3>Android</h3>
-            <p>Install from Google Play or Galaxy Store, then enable Accessibility and pair with Windows.</p>
-            <div class="store-actions">
-              <a class="btn btn-sec" href="https://play.google.com/store/apps/details?id=com.mouselink.app">View on Google Play</a>
-              <a class="btn btn-sec" href="https://apps.samsung.com/appquery/appDetail.as?appId=com.mouselink.app.galaxy">View on Galaxy Store</a>
+        <div class="play">
+          <div class="play-head">
+            <div class="steps">
+              <span><span class="n">1</span><b>Move your mouse</b> to send the cursor across</span>
+              <span><span class="n">2</span><b>Drag a device's name tag</b> to move it around</span>
+              <span><span class="n">3</span><b>Drag a file</b> to send it to another device</span>
             </div>
-          </article>
-          <article class="dcard mac-download-card">
-            <span class="dtag" style="background:#536273">MAC</span>
-            <h3>macOS</h3>
-            <p data-macos-download-filename>macOS 13+ · Connect from Windows</p>
-            <a class="btn btn-disabled" data-latest-macos-download data-ready-label="Download for Mac" aria-disabled="true">Coming soon</a>
-          </article>
+            <button class="reset" id="reset" type="button">Reset layout</button>
+          </div>
+          <div class="desk" id="desk">
+            <div class="stage" id="stage">
+              <div class="snapedge" id="snapedge"></div>
+              <div class="dev monitor" data-id="pc">
+                <span class="pin">My PC</span>
+                <div class="screen">
+                  <div
+                    class="apps"
+                    style="grid-template-columns: repeat(6, 1fr); padding: 12px 12px 22px"
+                  >
+                    <i style="background: #ffffff55"></i><i style="background: #ffd16655"></i
+                    ><i style="background: #7ee0b955"></i> <i style="background: #ff9e7a55"></i
+                    ><i style="background: #8ab4ff55"></i><i style="background: #ffffff33"></i>
+                  </div>
+                  <div class="bar"><i></i><i></i><i></i></div>
+                </div>
+              </div>
+              <div class="dev tablet grab" data-id="tab">
+                <span class="pin">Galaxy Tab</span>
+                <div class="screen">
+                  <div class="apps">
+                    <i style="background: #5b8cff88"></i><i style="background: #57e0ab88"></i
+                    ><i style="background: #ffcf5e88"></i><i style="background: #ff8f6b88"></i>
+                    <i style="background: #ffffff33"></i><i style="background: #ffffff33"></i
+                    ><i style="background: #ffffff33"></i><i style="background: #ffffff33"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="dev phone grab" data-id="phone">
+                <span class="pin">Phone</span>
+                <div class="screen">
+                  <div class="apps">
+                    <i style="background: #57e0ab88"></i><i style="background: #ffcf5e88"></i
+                    ><i style="background: #ff8f6b88"></i> <i style="background: #8ab4ff88"></i
+                    ><i style="background: #ffffff33"></i><i style="background: #ffffff33"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="dev subpc grab" data-id="subpc">
+                <span class="pin">Other PC</span>
+                <div class="screen">
+                  <div
+                    class="apps"
+                    style="grid-template-columns: repeat(5, 1fr); padding: 9px 9px 18px"
+                  >
+                    <i style="background: #ff9e7a55"></i><i style="background: #c7a0ff55"></i
+                    ><i style="background: #8ab4ff55"></i><i style="background: #ffffff33"></i
+                    ><i style="background: #ffffff22"></i>
+                  </div>
+                  <div class="bar"><i></i><i></i></div>
+                </div>
+              </div>
+              <div class="dev mac grab" data-id="mac">
+                <span class="pin">Mac</span>
+                <div class="screen">
+                  <div
+                    class="apps"
+                    style="grid-template-columns: repeat(5, 1fr); padding: 10px 10px 20px"
+                  >
+                    <i style="background: #ff7f7755"></i><i style="background: #ffd45c55"></i
+                    ><i style="background: #65d69e55"></i><i style="background: #60a5fa55"></i
+                    ><i style="background: #b394f755"></i>
+                  </div>
+                  <div class="bar"><i></i><i></i><i></i></div>
+                </div>
+              </div>
+              <div id="cursor">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M4 2l6.5 17 2.4-6.8L19.5 10z"
+                    fill="#fff"
+                    stroke="#241a12"
+                    stroke-width="1.3"
+                    stroke-linejoin="round"
+                  /></svg
+                ><span class="dot"></span>
+              </div>
+              <div class="filechip" id="filechip">
+                <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true">
+                  <path
+                    d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"
+                    fill="#e9f0ff"
+                    stroke="#3a5bd0"
+                    stroke-width="1.6"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M13 2v7h7"
+                    fill="none"
+                    stroke="#3a5bd0"
+                    stroke-width="1.6"
+                    stroke-linejoin="round"
+                  /></svg
+                ><span>photo.jpg</span>
+              </div>
+            </div>
+          </div>
+          <div class="play-foot">
+            <div id="status">
+              <span class="dotnow"></span>Cursor now on → <span class="where">My PC</span>
+            </div>
+            <span class="hint"
+              >The cursor crosses to whichever device it touches · it never disappears
+              off-screen</span
+            >
+          </div>
         </div>
+
+        <p class="hero-note">
+          The demo above is the real <b>device arrangement</b> feature — you arrange devices and
+          pass the mouse the same way in the app.
+        </p>
+      </section>
+
+      <!-- USE CASES -->
+      <section id="use">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="ey">Great for moments like these</p>
+            <h2 class="sec">
+              What you do at your Windows PC, now on your phone, other PCs, and Mac.
+            </h2>
+            <p class="sec-lead">
+              No networking know-how required. See it through everyday tasks and it clicks right
+              away.
+            </p>
+          </div>
+          <div class="cards">
+            <article class="card">
+              <div class="card-ic" style="background: #e9f0ff; color: #3a5bd0">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                >
+                  <rect x="6" y="3" width="12" height="18" rx="3" />
+                  <path d="M11 6h2" />
+                </svg>
+              </div>
+              <h3>Control your phone like a second screen</h3>
+              <p>
+                Push the mouse past the edge of your PC monitor and it crosses to Android, carrying
+                clicks, scrolls, and drags right along.
+              </p>
+            </article>
+            <article class="card">
+              <div class="card-ic" style="background: #eafaf1; color: #15845f">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                >
+                  <rect x="2" y="6" width="20" height="12" rx="2" />
+                  <path d="M6 10h.01M10 10h.01M14 10h.01M8 14h8" />
+                </svg>
+              </div>
+              <h3>Type long messages with your PC keyboard</h3>
+              <p>
+                Search terms, messenger replies, any app text field — whenever you would type on
+                your phone, use your PC keyboard instead.
+              </p>
+            </article>
+            <article class="card">
+              <div class="card-ic" style="background: #fff0e8; color: #ff7a4d">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                >
+                  <path d="M4 5h6l2 2h8v11H4z" />
+                </svg>
+              </div>
+              <h3>Send files and the clipboard instantly</h3>
+              <p>
+                Grab a file and drag it to the screen edge to send it straight to the device you
+                chose, and text and clipboard stay in sync on both sides.
+              </p>
+            </article>
+            <article class="card">
+              <div class="card-ic" style="background: #f3ecff; color: #7a52d0">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                >
+                  <rect x="2" y="7" width="9" height="10" rx="1.5" />
+                  <rect x="13" y="4" width="9" height="7" rx="1.5" />
+                </svg>
+              </div>
+              <h3>Bring in other Windows PCs too</h3>
+              <p>
+                Place another Windows PC in your arrangement and you can pass the mouse to control
+                it and swap files back and forth.
+              </p>
+            </article>
+            <article class="card">
+              <div class="card-ic" style="background: #eef2f6; color: #536273">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                >
+                  <rect x="3" y="4" width="18" height="13" rx="2" />
+                  <path d="M1.5 20h21M9 17l-1 3m7-3 1 3" />
+                </svg>
+              </div>
+              <h3>Mac support is in preparation</h3>
+              <p>
+                Cursor crossing, input, files, and clipboard transfer will be offered after public
+                distribution and real-Mac validation are complete.
+              </p>
+            </article>
+            <article class="card">
+              <div class="card-ic" style="background: #eef0f4; color: #4a5978">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                >
+                  <path d="M8 5l8 7-5 4V4l5 4-8 7" />
+                </svg>
+              </div>
+              <h3>It connects over Bluetooth too</h3>
+              <p>
+                Wi-Fi for everyday use, and when there is no router or internet, connect directly to
+                Android or another Windows PC. Mac Bluetooth is still being validated.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- SETUP -->
+      <section class="section-alt" id="setup">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="ey">How to connect</p>
+            <h2 class="sec">Android takes four quick steps.</h2>
+            <p class="sec-lead">
+              These steps are for Android. The guide also previews the planned five-step Mac flow
+              for the build now awaiting distribution and hardware validation.
+            </p>
+          </div>
+          <div class="flow4">
+            <div class="step">
+              <div class="badge">01</div>
+              <h4>Open the PC app</h4>
+              <p>Launch OneMouse on Windows and check the QR code or 6-digit code on screen.</p>
+            </div>
+            <div class="step">
+              <div class="badge">02</div>
+              <h4>Turn on the Android permission</h4>
+              <p>
+                Turn on the Accessibility Service once so Android can receive your PC mouse and
+                keyboard input.
+              </p>
+            </div>
+            <div class="step">
+              <div class="badge">03</div>
+              <h4>Connect by QR or code</h4>
+              <p>
+                Find the PC on the same Wi-Fi and confirm your device by scanning the QR code or
+                entering the 6-digit code.
+              </p>
+            </div>
+            <div class="step">
+              <div class="badge">04</div>
+              <h4>Arrange and cross over</h4>
+              <p>
+                Place your phone along a screen edge, push the mouse that way, and you are done.
+              </p>
+            </div>
+          </div>
+          <details class="fold">
+            <summary>
+              <span>See the real pairing screens</span
+              ><small>Get ready → Check the PC code → Enter the numbers → Scan the QR</small>
+            </summary>
+            <div class="fold-body">
+              <a
+                href="../assets/onemouse-pairing-real-ui-comic-v5.png"
+                target="_blank"
+                rel="noopener"
+                ><img
+                  src="../assets/onemouse-pairing-real-ui-comic-v5.png"
+                  alt="OneMouse pairing steps: get ready, check the PC code, enter the numbers, scan the QR"
+                  loading="lazy"
+                  style="border-radius: 12px"
+              /></a>
+            </div>
+          </details>
+          <div style="margin-top: 20px">
+            <a class="btn btn-sec sm" href="./guide.html">See the full guide</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- TRUST -->
+      <section id="trust">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="ey">Use it with peace of mind</p>
+            <h2 class="sec">Between your own devices, inside your own network.</h2>
+            <p class="sec-lead">
+              OneMouse works only between the devices you have paired. It asks for permissions only
+              when you actually use a feature.
+            </p>
+          </div>
+          <div class="trust">
+            <div class="t">
+              <span class="ic"
+                ><svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M12 3l7 4v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V7z" /></svg
+              ></span>
+              <div>
+                <b>No server in between</b
+                ><span
+                  >Input, files, and the clipboard travel between your PC and devices on the same
+                  network.</span
+                >
+              </div>
+            </div>
+            <div class="t">
+              <span class="ic"
+                ><svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <rect x="4" y="10" width="16" height="10" rx="2" />
+                  <path d="M8 10V7a4 4 0 0 1 8 0v3" /></svg
+              ></span>
+              <div>
+                <b>Permissions only when needed</b
+                ><span
+                  >Android uses Accessibility. A Mac receiving input from Windows uses
+                  Accessibility; Local Network appears on macOS 15+, while macOS 13/14 may not show
+                  that permission.</span
+                >
+              </div>
+            </div>
+            <div class="t">
+              <span class="ic"
+                ><svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M5 13l4 4L19 7" /></svg
+              ></span>
+              <div>
+                <b>Nothing collected or stored</b
+                ><span
+                  >We do not use Accessibility data for ads or screen collection, and we never store
+                  your files on a server.</span
+                >
+              </div>
+            </div>
+          </div>
+          <div style="margin-top: 20px">
+            <a class="btn btn-sec sm" href="./technical.html"
+              >Read more on Technical &amp; Security</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- DOWNLOAD -->
+      <section class="section-alt" id="get">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="ey">Download</p>
+            <h2 class="sec">Install OneMouse on Windows and each device you want to connect.</h2>
+            <p class="sec-lead">
+              Connections are started and managed from Windows 10/11. Android is available now;
+              macOS 13+ support is awaiting signed distribution and real-Mac validation.
+            </p>
+          </div>
+          <div class="dl">
+            <article class="dcard first download-card">
+              <span
+                class="dtag"
+                style="background: linear-gradient(135deg, var(--blue), var(--green))"
+                >PC</span
+              >
+              <h3>Windows</h3>
+              <p data-download-filename>Checking for the latest Setup file.</p>
+              <a
+                class="btn btn-pri"
+                href="https://github.com/sdlckdrl/mouselink-web/releases"
+                data-latest-windows-download
+                download
+                >Download for Windows</a
+              >
+            </article>
+            <article class="dcard">
+              <span class="dtag" style="background: #15845f">AND</span>
+              <h3>Android</h3>
+              <p>
+                Install from Google Play or Galaxy Store, then enable Accessibility and pair with
+                Windows.
+              </p>
+              <div class="store-actions">
+                <a
+                  class="btn btn-sec"
+                  href="https://play.google.com/store/apps/details?id=com.mouselink.app"
+                  >View on Google Play</a
+                >
+                <a
+                  class="btn btn-sec"
+                  href="https://apps.samsung.com/appquery/appDetail.as?appId=com.mouselink.app.galaxy"
+                  >View on Galaxy Store</a
+                >
+              </div>
+            </article>
+            <article class="dcard mac-download-card">
+              <span class="dtag" style="background: #536273">MAC</span>
+              <h3>macOS</h3>
+              <p data-macos-download-filename>macOS 13+ · Connect from Windows</p>
+              <a
+                class="btn btn-disabled"
+                data-latest-macos-download
+                data-ready-label="Download for Mac"
+                aria-disabled="true"
+                >Coming soon</a
+              >
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ PREVIEW -->
+      <section id="faq">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">Frequently asked questions</p>
+            <h2 class="sec">Things you might wonder before connecting.</h2>
+          </div>
+          <div class="faq">
+            <details>
+              <summary>Is it really free?</summary>
+              <div class="a">
+                Yes. Core features like mouse and keyboard control and arranging your phone's
+                position are free to use.
+              </div>
+            </details>
+            <details>
+              <summary>Do I need rooting or developer settings?</summary>
+              <div class="a">
+                No. You just turn on the <b>Accessibility Service</b> once on Android. No USB
+                connection or ADB required.
+              </div>
+            </details>
+            <details>
+              <summary>Can I use it without being on the same Wi-Fi?</summary>
+              <div class="a">
+                Yes for Android and another Windows PC over <b>Bluetooth</b>. Mac Bluetooth is still
+                awaiting real-device validation.
+              </div>
+            </details>
+            <details>
+              <summary>Where do I start a Mac connection?</summary>
+              <div class="a">
+                After the public Mac build is available, connections will be started and managed
+                from OneMouse on Windows 10/11. Select the Mac in Windows Devices and enter the
+                6-digit code shown on the Mac.
+              </div>
+            </details>
+            <details>
+              <summary>My connection keeps dropping.</summary>
+              <div class="a">
+                Usually the cause is <b>battery optimization</b> or a
+                <b>firewall or guest-Wi-Fi client isolation</b>. Follow the troubleshooting order in
+                Help to narrow it down step by step.
+              </div>
+            </details>
+          </div>
+          <div style="margin-top: 20px">
+            <a class="btn btn-sec sm" href="./help.html">See all of Help</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site">
+      <div class="wrap ft">
+        <span>© 2026 OneMouse</span>
+        <span class="links"
+          ><a href="./technical.html">Technical &amp; Security</a
+          ><a href="./privacy.html">Privacy Policy</a><a href="./terms.html">Terms of Service</a
+          ><a href="./licenses.html">Open-source Licenses</a></span
+        >
       </div>
-    </section>
+    </footer>
 
-    <!-- FAQ PREVIEW -->
-    <section id="faq">
-      <div class="wrap narrow">
-        <div class="sec-head">
-          <p class="ey">Frequently asked questions</p>
-          <h2 class="sec">Things you might wonder before connecting.</h2>
-        </div>
-        <div class="faq">
-          <details><summary>Is it really free?</summary><div class="a">Yes. Core features like mouse and keyboard control and arranging your phone's position are free to use.</div></details>
-          <details><summary>Do I need rooting or developer settings?</summary><div class="a">No. You just turn on the <b>Accessibility Service</b> once on Android. No USB connection or ADB required.</div></details>
-          <details><summary>Can I use it without being on the same Wi-Fi?</summary><div class="a">Yes for Android and another Windows PC over <b>Bluetooth</b>. Mac Bluetooth is still awaiting real-device validation.</div></details>
-          <details><summary>Where do I start a Mac connection?</summary><div class="a">After the public Mac build is available, connections will be started and managed from OneMouse on Windows 10/11. Select the Mac in Windows Devices and enter the 6-digit code shown on the Mac.</div></details>
-          <details><summary>My connection keeps dropping.</summary><div class="a">Usually the cause is <b>battery optimization</b> or a <b>firewall or guest-Wi-Fi client isolation</b>. Follow the troubleshooting order in Help to narrow it down step by step.</div></details>
-        </div>
-        <div style="margin-top:20px"><a class="btn btn-sec sm" href="./help.html">See all of Help</a></div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site">
-    <div class="wrap ft">
-      <span>© 2026 OneMouse</span>
-      <span class="links"><a href="./technical.html">Technical &amp; Security</a><a href="./privacy.html">Privacy Policy</a><a href="./terms.html">Terms of Service</a><a href="./licenses.html">Open-source Licenses</a></span>
-    </div>
-  </footer>
-
-  <script>
-  (() => {
-    const VW=760, VH=440;
-    const desk=document.getElementById('desk'), stage=document.getElementById('stage');
-    const cursorEl=document.getElementById('cursor'), statusWhere=document.querySelector('#status .where');
-    const snapedge=document.getElementById('snapedge');
-    if(!desk) return;
-    const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const HOME={
-      pc:{x:250,y:150,w:206,h:132,label:'My PC',drag:false},
-      tab:{x:456,y:160,w:150,h:112,label:'Galaxy Tab',drag:true},
-      phone:{x:606,y:153,w:66,h:126,label:'Phone',drag:true},
-      subpc:{x:268,y:40,w:170,h:110,label:'Other PC',drag:true},
-      mac:{x:95,y:166,w:155,h:100,label:'Mac',drag:true},
-    };
-    const devs={};
-    ['pc','tab','phone','subpc','mac'].forEach(id=>{ devs[id]=Object.assign({},HOME[id]); devs[id].el=stage.querySelector('.dev[data-id="'+id+'"]'); });
-    let scale=1;
-    const fit=()=>{ scale=desk.clientWidth/VW; stage.style.transform='scale('+scale+')'; };
-    const layout=()=>{ for(const id in devs){ const d=devs[id]; d.el.style.left=d.x+'px'; d.el.style.top=d.y+'px'; d.el.style.width=d.w+'px'; d.el.style.height=d.h+'px'; } };
-    const rectOf=d=>({l:d.x,t:d.y,r:d.x+d.w,b:d.y+d.h});
-    const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
-    function deviceAt(p){ const inside=[]; for(const id in devs){ const r=rectOf(devs[id]); if(p.x>=r.l&&p.x<=r.r&&p.y>=r.t&&p.y<=r.b) inside.push(id); }
-      if(!inside.length) return null; if(inside.length===1) return inside[0];
-      let best=inside[0],bd=Infinity; for(const id of inside){ const d=devs[id]; const dd=(d.x+d.w/2-p.x)**2+(d.y+d.h/2-p.y)**2; if(dd<bd){bd=dd;best=id;} } return best; }
-    let active='pc', cx=devs.pc.x+devs.pc.w/2, cy=devs.pc.y+devs.pc.h/2;
-    function paint(){ cursorEl.style.transform='translate('+cx+'px,'+cy+'px) translate(-50%,-50%)';
-      cursorEl.classList.toggle('mobile', active==='phone'||active==='tab');
-      for(const id in devs) devs[id].el.classList.toggle('lit',id===active); }
-    function setCursor(vx,vy){ let target=deviceAt({x:vx,y:vy});
-      if(target){ cx=vx; cy=vy; } else { const r=rectOf(devs[active]); cx=clamp(vx,r.l,r.r); cy=clamp(vy,r.t,r.b); target=active; }
-      if(target!==active){ cross(target,cx,cy); active=target; }
-      paint(); }
-    /* 드래그 중엔 커서를 잡고 있는 기기에 붙여 함께 움직인다. 커서가 제자리에 얼어붙었다가 놓는 순간 튀는 것을 막는다. */
-    function rideCursor(id,vx,vy){ const r=rectOf(devs[id]);
-      cx=clamp(vx,r.l,r.r); cy=clamp(vy,r.t,r.b);
-      if(id!==active){ cross(id,cx,cy); active=id; }
-      paint(); }
-    function cross(to,x,y){ statusWhere.textContent=devs[to].label; if(reduce) return;
-      const p=document.createElement('div'); p.className='pulse'; p.style.left=x+'px'; p.style.top=y+'px'; stage.appendChild(p); setTimeout(()=>p.remove(),600);
-      cursorEl.classList.remove('squash'); void cursorEl.offsetWidth; cursorEl.classList.add('squash'); }
-    /* File-transfer demo: drag the file chip onto another device to "send" it. Dragging over the phone turns the cursor into a dot. */
-    let fileOwner='pc', fdrag=null;
-    const fileEl=document.getElementById('filechip');
-    function renderFile(){ const d=devs[fileOwner]; fileEl.style.left=(d.x+d.w/2)+'px'; fileEl.style.top=(d.y+d.h/2)+'px'; }
-    function moveFile(vx,vy){ cx=vx; cy=vy; fileEl.style.left=vx+'px'; fileEl.style.top=vy+'px';
-      const over=deviceAt({x:vx,y:vy});
-      for(const id in devs) devs[id].el.classList.toggle('drop', over===id && id!==fileOwner);
-      if(over && over!==active){ active=over; statusWhere.textContent=devs[over].label; }
-      paint(); }
-    function sentBadge(id){ const d=devs[id], b=document.createElement('div');
-      b.className='sentbadge'; b.textContent='✓ Sent to '+devs[id].label; b.style.left=(d.x+d.w/2)+'px'; b.style.top=d.y+'px';
-      stage.appendChild(b); setTimeout(()=>b.remove(), reduce?900:1200); }
-    function endFileDrag(){ if(!fdrag) return; fdrag=null; fileEl.classList.remove('dragging');
-      const over=deviceAt({x:cx,y:cy}); for(const id in devs) devs[id].el.classList.remove('drop');
-      if(over && over!==fileOwner){ fileOwner=over; sentBadge(over); statusWhere.textContent=devs[over].label; }
-      fileEl.classList.add('settling'); renderFile(); setTimeout(()=>fileEl.classList.remove('settling'),340); }
-    let drag=null;
-    const toV=e=>{ const rc=desk.getBoundingClientRect(); return {x:clamp((e.clientX-rc.left)/scale,0,VW), y:clamp((e.clientY-rc.top)/scale,0,VH)}; };
-    desk.addEventListener('pointerdown',e=>{ const p=toV(e);
-      if(e.target.closest('#filechip')){ fdrag={}; fileEl.classList.remove('settling'); fileEl.classList.add('dragging'); try{desk.setPointerCapture(e.pointerId);}catch(_){} e.preventDefault(); moveFile(p.x,p.y); return; }
-      const pinEl=e.target.closest('.pin'); const el=pinEl?pinEl.closest('.dev.grab'):null;
-      if(el){ const id=el.dataset.id,d=devs[id]; drag={id,dx:p.x-d.x,dy:p.y-d.y,px:p.x,py:p.y}; d.el.classList.add('drag'); try{desk.setPointerCapture(e.pointerId);}catch(_){} e.preventDefault(); rideCursor(id,p.x,p.y); }
-      else setCursor(p.x,p.y); });
-    desk.addEventListener('pointermove',e=>{ const p=toV(e);
-      if(fdrag){ moveFile(p.x,p.y); return; }
-      if(drag){ const d=devs[drag.id]; drag.px=p.x; drag.py=p.y; d.x=clamp(p.x-drag.dx,0,VW-d.w); d.y=clamp(p.y-drag.dy,0,VH-d.h); d.el.style.left=d.x+'px'; d.el.style.top=d.y+'px'; showSnap(drag.id); rideCursor(drag.id,p.x,p.y); if(drag.id===fileOwner) renderFile(); }
-      else setCursor(p.x,p.y); });
-    /* pointercancel은 좌표가 없을 수 있으므로 마지막 pointermove 좌표를 쓴다. */
-    function endDrag(){ if(!drag) return; const id=drag.id, px=drag.px, py=drag.py, d=devs[id];
-      d.el.classList.remove('drag'); snap(id); layout(); renderFile(); snapedge.style.opacity=0; drag=null;
-      active=id; setCursor(px,py); }
-    desk.addEventListener('pointerup',()=>{ if(fdrag) endFileDrag(); else endDrag(); }); desk.addEventListener('pointercancel',()=>{ if(fdrag) endFileDrag(); else endDrag(); });
-    function collides(id,x,y){ const d=devs[id],T=1.5;
-      for(const oid in devs){ if(oid===id) continue; const o=rectOf(devs[oid]);
-        const ox=Math.min(x+d.w,o.r)-Math.max(x,o.l), oy=Math.min(y+d.h,o.b)-Math.max(y,o.t);
-        if(ox>T&&oy>T) return true; } return false; }
-    function bestDock(id){ const d=devs[id], cx0=d.x+d.w/2, cy0=d.y+d.h/2; let best=null,bd=Infinity;
-      for(const oid in devs){ if(oid===id) continue; const a=rectOf(devs[oid]);
-        const yC=(a.t+a.b)/2-d.h/2, xC=(a.l+a.r)/2-d.w/2;
-        const cands=[{side:'right',x:a.r,y:yC,ax:oid},{side:'left',x:a.l-d.w,y:yC,ax:oid},{side:'bottom',x:xC,y:a.b,ax:oid},{side:'top',x:xC,y:a.t-d.h,ax:oid}];
-        for(let k=0;k<cands.length;k++){ const c=cands[k], x=clamp(c.x,0,VW-d.w), y=clamp(c.y,0,VH-d.h);
-          const dist=(x+d.w/2-cx0)**2+(y+d.h/2-cy0)**2+(collides(id,x,y)?1e9:0);
-          if(dist<bd){ bd=dist; best={x:x,y:y,side:c.side,ax:c.ax}; } } }
-      return best; }
-    function inRow(id){ const d=devs[id], p=devs.pc, dc=d.y+d.h/2; return dc>p.y-24 && dc<p.y+p.h+24; }
-    function placeRow(id){ const p=devs.pc, cy=p.y+p.h/2, sx=devs[id].x+devs[id].w/2;
-      const cenX=oid=>oid===id?sx:(oid==='pc'?p.x+p.w/2:devs[oid].x+devs[oid].w/2);
-      const row=['pc'];
-      for(const oid in devs){ if(oid===id||oid==='pc') continue; const m=devs[oid];
-        if(m.y+m.h/2>p.y-24 && m.y+m.h/2<p.y+p.h+24) row.push(oid); }
-      row.push(id); row.sort((a,b)=>cenX(a)-cenX(b));
-      let total=0; for(const oid of row) total+=devs[oid].w;
-      if(total>VW) return false;
-      let before=0; for(const oid of row){ if(oid==='pc') break; before+=devs[oid].w; }
-      let x=clamp(p.x-before,0,VW-total);
-      for(const oid of row){ const m=devs[oid]; m.x=x; m.y=clamp(cy-m.h/2,0,VH-m.h); x+=m.w; }
-      return true; }
-    function snap(id){ const d=devs[id];
-      if(!(inRow(id) && placeRow(id))){ const b=bestDock(id); if(b){ d.x=b.x; d.y=b.y; } }
-      d.x=clamp(d.x,0,VW-d.w); d.y=clamp(d.y,0,VH-d.h); }
-    function showSnap(id){ const d=devs[id], p=devs.pc;
-      if(inRow(id)){ const T=4, x=clamp(d.x+d.w/2,p.x-140,p.x+p.w+140);
-        snapedge.style.left=(x-T/2)+'px'; snapedge.style.top=p.y+'px'; snapedge.style.width=T+'px'; snapedge.style.height=p.h+'px'; snapedge.style.opacity=.9; return; }
-      const b=bestDock(id); if(!b){ snapedge.style.opacity=0; return; }
-      const a=rectOf(devs[b.ax]),T=4; let s;
-      if(b.side==='right')s={l:a.r-T/2,t:a.t,w:T,h:a.b-a.t}; else if(b.side==='left')s={l:a.l-T/2,t:a.t,w:T,h:a.b-a.t};
-      else if(b.side==='bottom')s={l:a.l,t:a.b-T/2,w:a.r-a.l,h:T}; else s={l:a.l,t:a.t-T/2,w:a.r-a.l,h:T};
-      snapedge.style.left=s.l+'px'; snapedge.style.top=s.t+'px'; snapedge.style.width=s.w+'px'; snapedge.style.height=s.h+'px'; snapedge.style.opacity=.9; }
-    document.getElementById('reset').addEventListener('click',()=>{ for(const id in devs) Object.assign(devs[id],HOME[id]);
-      fileOwner='pc'; layout(); renderFile(); active='pc'; cx=devs.pc.x+devs.pc.w/2; cy=devs.pc.y+devs.pc.h/2; statusWhere.textContent='My PC'; setCursor(cx,cy); });
-    addEventListener('resize',fit); fit(); layout(); renderFile(); setCursor(cx,cy);
-  })();
-  </script>
-  <script src="../js/downloads.js"></script>
-</body>
+    <script>
+      (() => {
+        const VW = 760,
+          VH = 440;
+        const desk = document.getElementById('desk'),
+          stage = document.getElementById('stage');
+        const cursorEl = document.getElementById('cursor'),
+          statusWhere = document.querySelector('#status .where');
+        const snapedge = document.getElementById('snapedge');
+        if (!desk) return;
+        const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const HOME = {
+          pc: { x: 250, y: 150, w: 206, h: 132, label: 'My PC', drag: false },
+          tab: { x: 456, y: 160, w: 150, h: 112, label: 'Galaxy Tab', drag: true },
+          phone: { x: 606, y: 153, w: 66, h: 126, label: 'Phone', drag: true },
+          subpc: { x: 268, y: 40, w: 170, h: 110, label: 'Other PC', drag: true },
+          mac: { x: 95, y: 166, w: 155, h: 100, label: 'Mac', drag: true },
+        };
+        const devs = {};
+        ['pc', 'tab', 'phone', 'subpc', 'mac'].forEach((id) => {
+          devs[id] = Object.assign({}, HOME[id]);
+          devs[id].el = stage.querySelector('.dev[data-id="' + id + '"]');
+        });
+        let scale = 1;
+        const fit = () => {
+          scale = desk.clientWidth / VW;
+          stage.style.transform = 'scale(' + scale + ')';
+        };
+        const layout = () => {
+          for (const id in devs) {
+            const d = devs[id];
+            d.el.style.left = d.x + 'px';
+            d.el.style.top = d.y + 'px';
+            d.el.style.width = d.w + 'px';
+            d.el.style.height = d.h + 'px';
+          }
+        };
+        const rectOf = (d) => ({ l: d.x, t: d.y, r: d.x + d.w, b: d.y + d.h });
+        const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
+        function deviceAt(p) {
+          const inside = [];
+          for (const id in devs) {
+            const r = rectOf(devs[id]);
+            if (p.x >= r.l && p.x <= r.r && p.y >= r.t && p.y <= r.b) inside.push(id);
+          }
+          if (!inside.length) return null;
+          if (inside.length === 1) return inside[0];
+          let best = inside[0],
+            bd = Infinity;
+          for (const id of inside) {
+            const d = devs[id];
+            const dd = (d.x + d.w / 2 - p.x) ** 2 + (d.y + d.h / 2 - p.y) ** 2;
+            if (dd < bd) {
+              bd = dd;
+              best = id;
+            }
+          }
+          return best;
+        }
+        let active = 'pc',
+          cx = devs.pc.x + devs.pc.w / 2,
+          cy = devs.pc.y + devs.pc.h / 2;
+        function paint() {
+          cursorEl.style.transform = 'translate(' + cx + 'px,' + cy + 'px) translate(-50%,-50%)';
+          cursorEl.classList.toggle('mobile', active === 'phone' || active === 'tab');
+          for (const id in devs) devs[id].el.classList.toggle('lit', id === active);
+        }
+        function setCursor(vx, vy) {
+          let target = deviceAt({ x: vx, y: vy });
+          if (target) {
+            cx = vx;
+            cy = vy;
+          } else {
+            const r = rectOf(devs[active]);
+            cx = clamp(vx, r.l, r.r);
+            cy = clamp(vy, r.t, r.b);
+            target = active;
+          }
+          if (target !== active) {
+            cross(target, cx, cy);
+            active = target;
+          }
+          paint();
+        }
+        /* 드래그 중엔 커서를 잡고 있는 기기에 붙여 함께 움직인다. 커서가 제자리에 얼어붙었다가 놓는 순간 튀는 것을 막는다. */
+        function rideCursor(id, vx, vy) {
+          const r = rectOf(devs[id]);
+          cx = clamp(vx, r.l, r.r);
+          cy = clamp(vy, r.t, r.b);
+          if (id !== active) {
+            cross(id, cx, cy);
+            active = id;
+          }
+          paint();
+        }
+        function cross(to, x, y) {
+          statusWhere.textContent = devs[to].label;
+          if (reduce) return;
+          const p = document.createElement('div');
+          p.className = 'pulse';
+          p.style.left = x + 'px';
+          p.style.top = y + 'px';
+          stage.appendChild(p);
+          setTimeout(() => p.remove(), 600);
+          cursorEl.classList.remove('squash');
+          void cursorEl.offsetWidth;
+          cursorEl.classList.add('squash');
+        }
+        /* File-transfer demo: drag the file chip onto another device to "send" it. Dragging over the phone turns the cursor into a dot. */
+        let fileOwner = 'pc',
+          fdrag = null;
+        const fileEl = document.getElementById('filechip');
+        function renderFile() {
+          const d = devs[fileOwner];
+          fileEl.style.left = d.x + d.w / 2 + 'px';
+          fileEl.style.top = d.y + d.h / 2 + 'px';
+        }
+        function moveFile(vx, vy) {
+          cx = vx;
+          cy = vy;
+          fileEl.style.left = vx + 'px';
+          fileEl.style.top = vy + 'px';
+          const over = deviceAt({ x: vx, y: vy });
+          for (const id in devs)
+            devs[id].el.classList.toggle('drop', over === id && id !== fileOwner);
+          if (over && over !== active) {
+            active = over;
+            statusWhere.textContent = devs[over].label;
+          }
+          paint();
+        }
+        function sentBadge(id) {
+          const d = devs[id],
+            b = document.createElement('div');
+          b.className = 'sentbadge';
+          b.textContent = '✓ Sent to ' + devs[id].label;
+          b.style.left = d.x + d.w / 2 + 'px';
+          b.style.top = d.y + 'px';
+          stage.appendChild(b);
+          setTimeout(() => b.remove(), reduce ? 900 : 1200);
+        }
+        function endFileDrag() {
+          if (!fdrag) return;
+          fdrag = null;
+          fileEl.classList.remove('dragging');
+          const over = deviceAt({ x: cx, y: cy });
+          for (const id in devs) devs[id].el.classList.remove('drop');
+          if (over && over !== fileOwner) {
+            fileOwner = over;
+            sentBadge(over);
+            statusWhere.textContent = devs[over].label;
+          }
+          fileEl.classList.add('settling');
+          renderFile();
+          setTimeout(() => fileEl.classList.remove('settling'), 340);
+        }
+        let drag = null;
+        const toV = (e) => {
+          const rc = desk.getBoundingClientRect();
+          return {
+            x: clamp((e.clientX - rc.left) / scale, 0, VW),
+            y: clamp((e.clientY - rc.top) / scale, 0, VH),
+          };
+        };
+        desk.addEventListener('pointerdown', (e) => {
+          const p = toV(e);
+          if (e.target.closest('#filechip')) {
+            fdrag = {};
+            fileEl.classList.remove('settling');
+            fileEl.classList.add('dragging');
+            try {
+              desk.setPointerCapture(e.pointerId);
+            } catch (_) {}
+            e.preventDefault();
+            moveFile(p.x, p.y);
+            return;
+          }
+          const pinEl = e.target.closest('.pin');
+          const el = pinEl ? pinEl.closest('.dev.grab') : null;
+          if (el) {
+            const id = el.dataset.id,
+              d = devs[id];
+            drag = { id, dx: p.x - d.x, dy: p.y - d.y, px: p.x, py: p.y };
+            d.el.classList.add('drag');
+            try {
+              desk.setPointerCapture(e.pointerId);
+            } catch (_) {}
+            e.preventDefault();
+            rideCursor(id, p.x, p.y);
+          } else setCursor(p.x, p.y);
+        });
+        desk.addEventListener('pointermove', (e) => {
+          const p = toV(e);
+          if (fdrag) {
+            moveFile(p.x, p.y);
+            return;
+          }
+          if (drag) {
+            const d = devs[drag.id];
+            drag.px = p.x;
+            drag.py = p.y;
+            d.x = clamp(p.x - drag.dx, 0, VW - d.w);
+            d.y = clamp(p.y - drag.dy, 0, VH - d.h);
+            d.el.style.left = d.x + 'px';
+            d.el.style.top = d.y + 'px';
+            showSnap(drag.id);
+            rideCursor(drag.id, p.x, p.y);
+            if (drag.id === fileOwner) renderFile();
+          } else setCursor(p.x, p.y);
+        });
+        /* pointercancel은 좌표가 없을 수 있으므로 마지막 pointermove 좌표를 쓴다. */
+        function endDrag() {
+          if (!drag) return;
+          const id = drag.id,
+            px = drag.px,
+            py = drag.py,
+            d = devs[id];
+          d.el.classList.remove('drag');
+          snap(id);
+          layout();
+          renderFile();
+          snapedge.style.opacity = 0;
+          drag = null;
+          active = id;
+          setCursor(px, py);
+        }
+        desk.addEventListener('pointerup', () => {
+          if (fdrag) endFileDrag();
+          else endDrag();
+        });
+        desk.addEventListener('pointercancel', () => {
+          if (fdrag) endFileDrag();
+          else endDrag();
+        });
+        function collides(id, x, y) {
+          const d = devs[id],
+            T = 1.5;
+          for (const oid in devs) {
+            if (oid === id) continue;
+            const o = rectOf(devs[oid]);
+            const ox = Math.min(x + d.w, o.r) - Math.max(x, o.l),
+              oy = Math.min(y + d.h, o.b) - Math.max(y, o.t);
+            if (ox > T && oy > T) return true;
+          }
+          return false;
+        }
+        function bestDock(id) {
+          const d = devs[id],
+            cx0 = d.x + d.w / 2,
+            cy0 = d.y + d.h / 2;
+          let best = null,
+            bd = Infinity;
+          for (const oid in devs) {
+            if (oid === id) continue;
+            const a = rectOf(devs[oid]);
+            const yC = (a.t + a.b) / 2 - d.h / 2,
+              xC = (a.l + a.r) / 2 - d.w / 2;
+            const cands = [
+              { side: 'right', x: a.r, y: yC, ax: oid },
+              { side: 'left', x: a.l - d.w, y: yC, ax: oid },
+              { side: 'bottom', x: xC, y: a.b, ax: oid },
+              { side: 'top', x: xC, y: a.t - d.h, ax: oid },
+            ];
+            for (let k = 0; k < cands.length; k++) {
+              const c = cands[k],
+                x = clamp(c.x, 0, VW - d.w),
+                y = clamp(c.y, 0, VH - d.h);
+              const dist =
+                (x + d.w / 2 - cx0) ** 2 +
+                (y + d.h / 2 - cy0) ** 2 +
+                (collides(id, x, y) ? 1e9 : 0);
+              if (dist < bd) {
+                bd = dist;
+                best = { x: x, y: y, side: c.side, ax: c.ax };
+              }
+            }
+          }
+          return best;
+        }
+        function inRow(id) {
+          const d = devs[id],
+            p = devs.pc,
+            dc = d.y + d.h / 2;
+          return dc > p.y - 24 && dc < p.y + p.h + 24;
+        }
+        function placeRow(id) {
+          const p = devs.pc,
+            cy = p.y + p.h / 2,
+            sx = devs[id].x + devs[id].w / 2;
+          const cenX = (oid) =>
+            oid === id ? sx : oid === 'pc' ? p.x + p.w / 2 : devs[oid].x + devs[oid].w / 2;
+          const row = ['pc'];
+          for (const oid in devs) {
+            if (oid === id || oid === 'pc') continue;
+            const m = devs[oid];
+            if (m.y + m.h / 2 > p.y - 24 && m.y + m.h / 2 < p.y + p.h + 24) row.push(oid);
+          }
+          row.push(id);
+          row.sort((a, b) => cenX(a) - cenX(b));
+          let total = 0;
+          for (const oid of row) total += devs[oid].w;
+          if (total > VW) return false;
+          let before = 0;
+          for (const oid of row) {
+            if (oid === 'pc') break;
+            before += devs[oid].w;
+          }
+          let x = clamp(p.x - before, 0, VW - total);
+          for (const oid of row) {
+            const m = devs[oid];
+            m.x = x;
+            m.y = clamp(cy - m.h / 2, 0, VH - m.h);
+            x += m.w;
+          }
+          return true;
+        }
+        function snap(id) {
+          const d = devs[id];
+          if (!(inRow(id) && placeRow(id))) {
+            const b = bestDock(id);
+            if (b) {
+              d.x = b.x;
+              d.y = b.y;
+            }
+          }
+          d.x = clamp(d.x, 0, VW - d.w);
+          d.y = clamp(d.y, 0, VH - d.h);
+        }
+        function showSnap(id) {
+          const d = devs[id],
+            p = devs.pc;
+          if (inRow(id)) {
+            const T = 4,
+              x = clamp(d.x + d.w / 2, p.x - 140, p.x + p.w + 140);
+            snapedge.style.left = x - T / 2 + 'px';
+            snapedge.style.top = p.y + 'px';
+            snapedge.style.width = T + 'px';
+            snapedge.style.height = p.h + 'px';
+            snapedge.style.opacity = 0.9;
+            return;
+          }
+          const b = bestDock(id);
+          if (!b) {
+            snapedge.style.opacity = 0;
+            return;
+          }
+          const a = rectOf(devs[b.ax]),
+            T = 4;
+          let s;
+          if (b.side === 'right') s = { l: a.r - T / 2, t: a.t, w: T, h: a.b - a.t };
+          else if (b.side === 'left') s = { l: a.l - T / 2, t: a.t, w: T, h: a.b - a.t };
+          else if (b.side === 'bottom') s = { l: a.l, t: a.b - T / 2, w: a.r - a.l, h: T };
+          else s = { l: a.l, t: a.t - T / 2, w: a.r - a.l, h: T };
+          snapedge.style.left = s.l + 'px';
+          snapedge.style.top = s.t + 'px';
+          snapedge.style.width = s.w + 'px';
+          snapedge.style.height = s.h + 'px';
+          snapedge.style.opacity = 0.9;
+        }
+        document.getElementById('reset').addEventListener('click', () => {
+          for (const id in devs) Object.assign(devs[id], HOME[id]);
+          fileOwner = 'pc';
+          layout();
+          renderFile();
+          active = 'pc';
+          cx = devs.pc.x + devs.pc.w / 2;
+          cy = devs.pc.y + devs.pc.h / 2;
+          statusWhere.textContent = 'My PC';
+          setCursor(cx, cy);
+        });
+        addEventListener('resize', fit);
+        fit();
+        layout();
+        renderFile();
+        setCursor(cx, cy);
+      })();
+    </script>
+    <script src="../js/downloads.js"></script>
+  </body>
 </html>

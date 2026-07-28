@@ -1,73 +1,139 @@
 <!doctype html>
 <html lang="ja">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>OneMouse | プライバシーポリシー</title>
-  <meta name="description" content="OneMouseのWindows・Android接続と、公開準備中のmacOS 13以降版における権限、ファイル・クリップボード、広告と決済の方針です。" />
-  <meta name="robots" content="index,follow,max-image-preview:large" />
-  <link rel="stylesheet" href="../css/onemouse.css" />
-  <link rel="canonical" href="https://onemouse.pages.dev/ja/privacy" />
-  <link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/privacy" />
-  <link rel="alternate" hreflang="en" href="https://onemouse.pages.dev/en/privacy" />
-  <link rel="alternate" hreflang="ja" href="https://onemouse.pages.dev/ja/privacy" />
-  <link rel="alternate" hreflang="zh" href="https://onemouse.pages.dev/zh/privacy" />
-  <link rel="alternate" hreflang="x-default" href="https://onemouse.pages.dev/privacy" />
-  <meta property="og:site_name" content="OneMouse" />
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="OneMouse | プライバシーポリシー" />
-  <meta property="og:description" content="Windows・Android接続と、公開準備中のmacOS 13以降版における権限、ファイル・クリップボード、広告と決済の方針です。" />
-  <meta property="og:url" content="https://onemouse.pages.dev/ja/privacy" />
-  <meta property="og:image" content="https://onemouse.pages.dev/assets/hero-bg-generated-2.png" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="OneMouse | プライバシーポリシー" />
-  <meta name="twitter:description" content="Windows・Android接続と、公開準備中のmacOS 13以降版における権限、ファイル・クリップボード、広告と決済の方針です。" />
-  <meta name="twitter:image" content="https://onemouse.pages.dev/assets/hero-bg-generated-2.png" />
-</head>
-<body>
-  <header class="site">
-    <div class="wrap hd">
-      <a class="brand" href="./index.html" aria-label="OneMouse ホーム"><span class="om">OM</span>OneMouse</a>
-      <nav class="nav" aria-label="メインメニュー">
-        <a href="./index.html">概要</a>
-        <a href="./index.html#use">機能</a>
-        <a href="./guide.html">使い方</a>
-        <a href="./help.html">ヘルプ</a>
-      </nav>
-      <div class="hd-right">
-        <div class="lang" aria-label="言語"><a href="../privacy.html">KOR</a><a href="../en/privacy.html">ENG</a><span class="on">JPN</span><a href="../zh/privacy.html">CHN</a></div>
-        <a class="hd-cta" href="./index.html#get">無料ダウンロード</a>
-      </div>
-    </div>
-  </header>
-
-  <main>
-    <section class="phero wrap">
-      <p class="ey">Privacy Policy</p>
-      <h1 class="page">プライバシーポリシー</h1>
-      <p class="lead">OneMouseはWindowsからAndroid・別のWindows PCへの接続を開始・管理します。macOS 13以降のMacも同じ接続先として公開配布と実機検証を準備中で、本方針はその予定処理も説明します。</p>
-      <p class="policy-date">施行日: 2026年7月28日</p>
-    </section>
-
-    <section>
-      <div class="wrap">
-        <div class="legal">
-          <article class="lcard"><p class="num">01</p><h2>基本方針</h2><p>OneMouseは現在WindowsとAndroid・ペアリング済みWindows PC間のローカル通信を中心に動作します。予定しているMac版も同じ原則に従い、専用アカウントサーバーへファイル、クリップボード、入力内容を保存しません。</p></article>
-          <article class="lcard"><p class="num">02</p><h2>処理する情報</h2><p>デバイス情報、OSと役割、接続・ペアリング情報、配置情報、権限の準備状態、ユーザーが明示的に送信したファイル・テキスト・クリップボード内容、Androidアプリの購入状態と広告シグナルを必要に応じて処理します。</p></article>
-          <article class="lcard"><p class="num">03</p><h2>Androidのアクセシビリティ</h2><p>Androidのアクセシビリティサービスは、Windowsから送られたマウスとキーボード入力をAndroid画面へ適用するために使います。広告や画面収集のためには使いません。</p></article>
-          <article class="lcard"><p class="num">04</p><h2>Macとの接続と権限</h2><p>macOS 13以降のMacはAndroidと同じ接続先として公開準備中で、接続はWindowsから開始・管理します。アクセシビリティは受け取った入力に、macOS 15以降のローカルネットワークは検出に使います。macOS 13/14では後者が表示されない場合があります。BluetoothアクセスはBluetooth接続時、画面収録はLANで画面やウィンドウを共有するときだけ使います。</p></article>
-          <article class="lcard"><p class="num">05</p><h2>ファイルとクリップボード</h2><p>現在対応するデバイス間では、ユーザーが送信または同期を有効にした場合だけ移動します。予定しているMac版も同じ直接転送の原則に従い、外部サーバーにはアップロードしません。</p></article>
-          <article class="lcard"><p class="num">06</p><h2>広告と決済</h2><p>Google Mobile Ads SDKとGoogle Play BillingはAndroidアプリでのみ使用します。Windowsと予定しているMac版はAndroidの広告シグナル、購入状態、Google SDKを処理しません。</p></article>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>OneMouse | プライバシーポリシー</title>
+    <meta
+      name="description"
+      content="OneMouseのWindows・Android接続と、公開準備中のmacOS 13以降版における権限、ファイル・クリップボード、広告と決済の方針です。"
+    />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <link rel="stylesheet" href="../css/onemouse.css" />
+    <link rel="canonical" href="https://onemouse.pages.dev/ja/privacy" />
+    <link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/privacy" />
+    <link rel="alternate" hreflang="en" href="https://onemouse.pages.dev/en/privacy" />
+    <link rel="alternate" hreflang="ja" href="https://onemouse.pages.dev/ja/privacy" />
+    <link rel="alternate" hreflang="zh" href="https://onemouse.pages.dev/zh/privacy" />
+    <link rel="alternate" hreflang="x-default" href="https://onemouse.pages.dev/privacy" />
+    <meta property="og:site_name" content="OneMouse" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="OneMouse | プライバシーポリシー" />
+    <meta
+      property="og:description"
+      content="Windows・Android接続と、公開準備中のmacOS 13以降版における権限、ファイル・クリップボード、広告と決済の方針です。"
+    />
+    <meta property="og:url" content="https://onemouse.pages.dev/ja/privacy" />
+    <meta property="og:image" content="https://onemouse.pages.dev/assets/hero-bg-generated-2.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="OneMouse | プライバシーポリシー" />
+    <meta
+      name="twitter:description"
+      content="Windows・Android接続と、公開準備中のmacOS 13以降版における権限、ファイル・クリップボード、広告と決済の方針です。"
+    />
+    <meta
+      name="twitter:image"
+      content="https://onemouse.pages.dev/assets/hero-bg-generated-2.png"
+    />
+  </head>
+  <body>
+    <header class="site">
+      <div class="wrap hd">
+        <a class="brand" href="./index.html" aria-label="OneMouse ホーム"
+          ><span class="om">OM</span>OneMouse</a
+        >
+        <nav class="nav" aria-label="メインメニュー">
+          <a href="./index.html">概要</a>
+          <a href="./index.html#use">機能</a>
+          <a href="./guide.html">使い方</a>
+          <a href="./help.html">ヘルプ</a>
+        </nav>
+        <div class="hd-right">
+          <div class="lang" aria-label="言語">
+            <a href="../privacy.html">KOR</a><a href="../en/privacy.html">ENG</a
+            ><span class="on">JPN</span><a href="../zh/privacy.html">CHN</a>
+          </div>
+          <a class="hd-cta" href="./index.html#get">無料ダウンロード</a>
         </div>
       </div>
-    </section>
-  </main>
+    </header>
 
-  <footer class="site">
-    <div class="wrap ft">
-      <span>© 2026 OneMouse</span>
-      <span class="links"><a href="./technical.html">技術・セキュリティ</a><a href="./privacy.html">プライバシーポリシー</a><a href="./terms.html">利用規約</a><a href="./licenses.html">オープンソースライセンス</a></span>
-    </div>
-  </footer>
-</body>
+    <main>
+      <section class="phero wrap">
+        <p class="ey">Privacy Policy</p>
+        <h1 class="page">プライバシーポリシー</h1>
+        <p class="lead">
+          OneMouseはWindowsからAndroid・別のWindows PCへの接続を開始・管理します。macOS
+          13以降のMacも同じ接続先として公開配布と実機検証を準備中で、本方針はその予定処理も説明します。
+        </p>
+        <p class="policy-date">施行日: 2026年7月28日</p>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <div class="legal">
+            <article class="lcard">
+              <p class="num">01</p>
+              <h2>基本方針</h2>
+              <p>
+                OneMouseは現在WindowsとAndroid・ペアリング済みWindows
+                PC間のローカル通信を中心に動作します。予定しているMac版も同じ原則に従い、専用アカウントサーバーへファイル、クリップボード、入力内容を保存しません。
+              </p>
+            </article>
+            <article class="lcard">
+              <p class="num">02</p>
+              <h2>処理する情報</h2>
+              <p>
+                デバイス情報、OSと役割、接続・ペアリング情報、配置情報、権限の準備状態、ユーザーが明示的に送信したファイル・テキスト・クリップボード内容、Androidアプリの購入状態と広告シグナルを必要に応じて処理します。
+              </p>
+            </article>
+            <article class="lcard">
+              <p class="num">03</p>
+              <h2>Androidのアクセシビリティ</h2>
+              <p>
+                Androidのアクセシビリティサービスは、Windowsから送られたマウスとキーボード入力をAndroid画面へ適用するために使います。広告や画面収集のためには使いません。
+              </p>
+            </article>
+            <article class="lcard">
+              <p class="num">04</p>
+              <h2>Macとの接続と権限</h2>
+              <p>
+                macOS
+                13以降のMacはAndroidと同じ接続先として公開準備中で、接続はWindowsから開始・管理します。アクセシビリティは受け取った入力に、macOS
+                15以降のローカルネットワークは検出に使います。macOS
+                13/14では後者が表示されない場合があります。BluetoothアクセスはBluetooth接続時、画面収録はLANで画面やウィンドウを共有するときだけ使います。
+              </p>
+            </article>
+            <article class="lcard">
+              <p class="num">05</p>
+              <h2>ファイルとクリップボード</h2>
+              <p>
+                現在対応するデバイス間では、ユーザーが送信または同期を有効にした場合だけ移動します。予定しているMac版も同じ直接転送の原則に従い、外部サーバーにはアップロードしません。
+              </p>
+            </article>
+            <article class="lcard">
+              <p class="num">06</p>
+              <h2>広告と決済</h2>
+              <p>
+                Google Mobile Ads SDKとGoogle Play
+                BillingはAndroidアプリでのみ使用します。Windowsと予定しているMac版はAndroidの広告シグナル、購入状態、Google
+                SDKを処理しません。
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site">
+      <div class="wrap ft">
+        <span>© 2026 OneMouse</span>
+        <span class="links"
+          ><a href="./technical.html">技術・セキュリティ</a
+          ><a href="./privacy.html">プライバシーポリシー</a><a href="./terms.html">利用規約</a
+          ><a href="./licenses.html">オープンソースライセンス</a></span
+        >
+      </div>
+    </footer>
+  </body>
 </html>

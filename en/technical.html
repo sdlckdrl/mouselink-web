@@ -1,143 +1,357 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Technical &amp; Security | OneMouse for Android, Windows, and Mac</title>
-  <meta name="description" content="How OneMouse connects Windows, Android, another Windows PC, and the planned macOS 13+ build, including permissions and pending validation scope." />
-  <meta name="robots" content="index,follow,max-image-preview:large" />
-  <link rel="stylesheet" href="../css/onemouse.css" />
-  <link rel="canonical" href="https://onemouse.pages.dev/en/technical" />
-  <link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/technical.html" />
-  <link rel="alternate" hreflang="en" href="https://onemouse.pages.dev/en/technical.html" />
-  <link rel="alternate" hreflang="ja" href="https://onemouse.pages.dev/ja/technical.html" />
-  <link rel="alternate" hreflang="zh" href="https://onemouse.pages.dev/zh/technical.html" />
-  <link rel="alternate" hreflang="x-default" href="https://onemouse.pages.dev/technical.html" />
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MJ73H86TWX"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-MJ73H86TWX');</script>
-</head>
-<body>
-  <header class="site">
-    <div class="wrap hd">
-      <a class="brand" href="./index.html" aria-label="OneMouse home"><span class="om">OM</span>OneMouse</a>
-      <nav class="nav" aria-label="Main navigation">
-        <a href="./index.html">Overview</a>
-        <a href="./index.html#use">Features</a>
-        <a href="./guide.html">Guide</a>
-        <a href="./help.html">Help</a>
-      </nav>
-      <div class="hd-right">
-        <div class="lang" aria-label="Language"><a href="../technical.html">KOR</a><span class="on">ENG</span><a href="../ja/technical.html">JPN</a><a href="../zh/technical.html">CHN</a></div>
-        <a class="hd-cta" href="./index.html#get">Free download</a>
-      </div>
-    </div>
-  </header>
-
-  <main>
-    <section class="phero wrap">
-      <p class="ey">Technical &amp; Security</p>
-      <h1 class="page">How it connects and which permissions it uses — laid out separately.</h1>
-      <p class="lead">This page isn't the everyday how-to. It explains <b>how the connection works</b> and <b>why each permission is used</b>. For step-by-step usage, see the <a href="./guide.html" style="color:var(--coral-deep);font-weight:700">User Guide</a>.</p>
-      <nav class="toc" aria-label="On this page">
-        <a href="#data-flow">Local first</a>
-        <a href="#permissions">Permissions</a>
-        <a href="#handling">Data handling</a>
-        <a href="#network">Network</a>
-        <a href="#scope">Support scope</a>
-        <a href="#updates">Update log</a>
-      </nav>
-    </section>
-
-    <!-- LOCAL FIRST -->
-    <section id="data-flow">
-      <div class="wrap narrow">
-        <div class="sec-head"><p class="ey">Local First</p><h2 class="sec">It works only between your own paired devices.</h2></div>
-        <p class="sec-lead" style="max-width:64ch">Input, files, and clipboard currently travel directly between <b>your Windows PC and Android or another Windows PC</b>. The same local connection model is implemented for Mac, while public distribution and real-Mac validation are still in progress. Nothing is uploaded to an account through an outside server.</p>
-      </div>
-    </section>
-
-    <!-- PERMISSIONS -->
-    <section class="section-alt" id="permissions">
-      <div class="wrap">
-        <div class="sec-head"><p class="ey">Permissions</p><h2 class="sec">Only what a feature actually needs.</h2>
-          <p class="sec-lead">Nothing is requested all at once. Android and the Mac build in preparation ask for each permission when the related feature starts.</p></div>
-        <div class="cards">
-          <article class="card accent"><p class="card-lbl">Required</p><h3>Accessibility Service</h3><p>To control Android with your PC's mouse and keyboard and to handle remote input and screen-related actions, the Accessibility Service is required. OneMouse's core features depend on it.</p></article>
-          <article class="card"><p class="card-lbl">When starting remote control</p><h3>Screen capture approval</h3><p>Approved through an Android system prompt when you open the mobile remote control window. Some content, such as secure screens, may not appear.</p></article>
-          <article class="card"><p class="card-lbl">When connecting</p><h3>Nearby Wi-Fi devices</h3><p>May be requested on Android 13 and later when finding your PC. It's asked the moment you search, not when the app launches.</p></article>
-          <article class="card"><p class="card-lbl">When the service starts</p><h3>Notifications</h3><p>Used to show the background connection status. Requested only when needed.</p></article>
-          <article class="card"><p class="card-lbl">When using brightness</p><h3>Modify system settings</h3><p>Needed once the first time you adjust the mobile screen brightness with Alt+Shift+↑/↓.</p></article>
-          <article class="card"><p class="card-lbl">Recommended</p><h3>Battery optimization exception</h3><p>Recommended for stability if the connection drops after the screen turns off. It isn't required.</p></article>
-          <article class="card accent"><p class="card-lbl">Mac · macOS 15+ only</p><h3>Local Network</h3><p>Allows the Mac to discover the Windows PC on macOS 15+. macOS 13/14 may not show this permission and the runtime treats it as not required.</p></article>
-          <article class="card accent"><p class="card-lbl">Required on Mac</p><h3>Accessibility</h3><p>Allows the Mac to perform mouse and keyboard input received from Windows. Basic input receiving does not require Input Monitoring.</p></article>
-          <article class="card"><p class="card-lbl">Mac screen sharing only</p><h3>Screen &amp; System Audio Recording</h3><p>Used only when sharing the Mac's display with Windows. OneMouse does not capture system audio.</p></article>
-          <article class="card"><p class="card-lbl">When using Mac Bluetooth</p><h3>Bluetooth</h3><p>Requested when using the system-paired Bluetooth transport. Mac screen and window sharing is not available over Bluetooth and is LAN-only.</p></article>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Technical &amp; Security | OneMouse for Android, Windows, and Mac</title>
+    <meta
+      name="description"
+      content="How OneMouse connects Windows, Android, another Windows PC, and the planned macOS 13+ build, including permissions and pending validation scope."
+    />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <link rel="stylesheet" href="../css/onemouse.css" />
+    <link rel="canonical" href="https://onemouse.pages.dev/en/technical" />
+    <link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/technical.html" />
+    <link rel="alternate" hreflang="en" href="https://onemouse.pages.dev/en/technical.html" />
+    <link rel="alternate" hreflang="ja" href="https://onemouse.pages.dev/ja/technical.html" />
+    <link rel="alternate" hreflang="zh" href="https://onemouse.pages.dev/zh/technical.html" />
+    <link rel="alternate" hreflang="x-default" href="https://onemouse.pages.dev/technical.html" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MJ73H86TWX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-MJ73H86TWX');
+    </script>
+  </head>
+  <body>
+    <header class="site">
+      <div class="wrap hd">
+        <a class="brand" href="./index.html" aria-label="OneMouse home"
+          ><span class="om">OM</span>OneMouse</a
+        >
+        <nav class="nav" aria-label="Main navigation">
+          <a href="./index.html">Overview</a>
+          <a href="./index.html#use">Features</a>
+          <a href="./guide.html">Guide</a>
+          <a href="./help.html">Help</a>
+        </nav>
+        <div class="hd-right">
+          <div class="lang" aria-label="Language">
+            <a href="../technical.html">KOR</a><span class="on">ENG</span
+            ><a href="../ja/technical.html">JPN</a><a href="../zh/technical.html">CHN</a>
+          </div>
+          <a class="hd-cta" href="./index.html#get">Free download</a>
         </div>
       </div>
-    </section>
+    </header>
 
-    <!-- DATA HANDLING -->
-    <section id="handling">
-      <div class="wrap narrow">
-        <div class="sec-head"><p class="ey">Data Handling</p><h2 class="sec">Input, files, and clipboard — only within the scope you choose.</h2></div>
-        <div class="panel"><ul>
-          <li>No remote account is created — it works through pairing, with no sign-in.</li>
-          <li>Files you send aren't stored on a server. They go straight to the device you pick.</li>
-          <li><b>Accessibility data is never used for advertising or screen collection.</b> It's used only for the stated features, such as passing input and remote control.</li>
-          <li>Clipboard and file transfers happen only when you choose a target and start them yourself.</li>
-          <li>A released Mac build stores its paired session key in the macOS Keychain. Clearing pairing removes the trusted connection.</li>
-        </ul></div>
-      </div>
-    </section>
+    <main>
+      <section class="phero wrap">
+        <p class="ey">Technical &amp; Security</p>
+        <h1 class="page">How it connects and which permissions it uses — laid out separately.</h1>
+        <p class="lead">
+          This page isn't the everyday how-to. It explains <b>how the connection works</b> and
+          <b>why each permission is used</b>. For step-by-step usage, see the
+          <a href="./guide.html" style="color: var(--coral-deep); font-weight: 700">User Guide</a>.
+        </p>
+        <nav class="toc" aria-label="On this page">
+          <a href="#data-flow">Local first</a>
+          <a href="#permissions">Permissions</a>
+          <a href="#handling">Data handling</a>
+          <a href="#network">Network</a>
+          <a href="#scope">Support scope</a>
+          <a href="#updates">Update log</a>
+        </nav>
+      </section>
 
-    <!-- NETWORK -->
-    <section class="section-alt" id="network">
-      <div class="wrap narrow">
-        <div class="sec-head"><p class="ey">Network</p><h2 class="sec">Connection quality depends on your local network conditions.</h2></div>
-        <div class="split">
-          <div class="panel tip"><h3>Recommended setup</h3><ul><li>The same Wi-Fi on a personal Wi-Fi router (2.4 or 5 GHz, either is fine)</li><li>A network that allows device-to-device communication</li><li>OneMouse allowed inbound in the Windows firewall</li><li>On macOS 15+, Local Network access allowed for OneMouse on the Mac</li></ul></div>
-          <div class="panel"><h3>Limited setup</h3><ul><li>Client isolation on guest or corporate Wi-Fi</li><li>Inbound blocked on a network marked as "Public"</li><li>In these cases, use a direct Bluetooth connection or a personal hotspot</li></ul></div>
+      <!-- LOCAL FIRST -->
+      <section id="data-flow">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">Local First</p>
+            <h2 class="sec">It works only between your own paired devices.</h2>
+          </div>
+          <p class="sec-lead" style="max-width: 64ch">
+            Input, files, and clipboard currently travel directly between
+            <b>your Windows PC and Android or another Windows PC</b>. The same local connection
+            model is implemented for Mac, while public distribution and real-Mac validation are
+            still in progress. Nothing is uploaded to an account through an outside server.
+          </p>
         </div>
-        <p class="sec-lead" style="margin-top:16px">OneMouse doesn't go through an internet relay server, so the two devices need to be able to find each other directly.</p>
-      </div>
-    </section>
+      </section>
 
-    <!-- SCOPE -->
-    <section id="scope">
-      <div class="wrap narrow">
-        <div class="sec-head"><p class="ey">Support Scope</p><h2 class="sec">Mac becomes an officially supported target after distribution and hardware validation.</h2></div>
-        <div class="panel"><ul>
-          <li><b>Windows 10/11:</b> connections are started and managed here; another Windows PC can also be a connection target.</li>
-          <li><b>Android:</b> connects as a target over same-network <b>Wi-Fi/LAN</b> or direct <b>Bluetooth</b>.</li>
-          <li><b>macOS 13 or later:</b> the source accepts connections initiated from Windows. The signed public build and real-Mac input, file, edge-drag, screen-sharing, and Bluetooth validation are still pending.</li>
-          <li>Not included: connecting over USB/ADB is outside the official support scope.</li>
-          <li>Windows-to-Windows supports two-way file, folder, and clipboard transfer. The same Windows-to-Mac flows remain planned until Mac validation is complete.</li>
-        </ul></div>
-      </div>
-    </section>
-
-    <!-- UPDATES -->
-    <section class="section-alt" id="updates">
-      <div class="wrap narrow">
-        <div class="sec-head"><p class="ey">Updates</p><h2 class="sec">Recent update log.</h2></div>
-        <div class="log">
-          <div class="log-item"><time>2026.07</time><p><b>macOS 13+ support preparation</b> — the source and public documentation now define the Windows-to-Mac flow. Signed distribution and real-Mac validation remain before public support.</p></div>
-          <div class="log-item"><time>2026.07</time><p><b>Smarter device arrangement</b> · <b>See the full layout on another PC</b> — devices no longer overlap, and dragging one between two others wedges it into place. Move the anchor device and the rest magnet-snap back to the Windows PC, and a second PC connected over Bluetooth or Wi-Fi now shows the Windows PC's full arrangement too.</p></div>
-          <div class="log-item"><time>2026.07</time><p><b>Keep screen on while connected · idle dimming</b> — the phone screen stays on during a connection and dims when idle to save battery. It holds even with several devices connected at once.</p></div>
-          <div class="log-item"><time>2026.07</time><p><b>See other devices' positions from mobile</b> · <b>chain (single-row) arrangement</b> — from your phone you can check how the other connected devices are arranged, and line up PC, phone, and PC in a single row.</p></div>
-          <div class="log-item"><time>2026.07</time><p><b>Cursor crossing effect between devices</b> · <b>Ctrl+Alt+Backspace to recenter</b> — a smooth effect as the cursor crosses between devices; if it gets lost, it returns to the center of the monitor.</p></div>
-          <div class="log-item"><time>2026.07</time><p><b>Enter to send in messengers</b> — in messaging apps, press Enter on the PC keyboard to send, and Shift+Enter for a new line.</p></div>
-          <div class="log-item"><time>2026.06</time><p><b>Direct Bluetooth connection</b> · <b>PC-to-PC Bluetooth</b> — connect to your phone or another PC without a Wi-Fi router to exchange input, clipboard, and files.</p></div>
+      <!-- PERMISSIONS -->
+      <section class="section-alt" id="permissions">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="ey">Permissions</p>
+            <h2 class="sec">Only what a feature actually needs.</h2>
+            <p class="sec-lead">
+              Nothing is requested all at once. Android and the Mac build in preparation ask for
+              each permission when the related feature starts.
+            </p>
+          </div>
+          <div class="cards">
+            <article class="card accent">
+              <p class="card-lbl">Required</p>
+              <h3>Accessibility Service</h3>
+              <p>
+                To control Android with your PC's mouse and keyboard and to handle remote input and
+                screen-related actions, the Accessibility Service is required. OneMouse's core
+                features depend on it.
+              </p>
+            </article>
+            <article class="card">
+              <p class="card-lbl">When starting remote control</p>
+              <h3>Screen capture approval</h3>
+              <p>
+                Approved through an Android system prompt when you open the mobile remote control
+                window. Some content, such as secure screens, may not appear.
+              </p>
+            </article>
+            <article class="card">
+              <p class="card-lbl">When connecting</p>
+              <h3>Nearby Wi-Fi devices</h3>
+              <p>
+                May be requested on Android 13 and later when finding your PC. It's asked the moment
+                you search, not when the app launches.
+              </p>
+            </article>
+            <article class="card">
+              <p class="card-lbl">When the service starts</p>
+              <h3>Notifications</h3>
+              <p>Used to show the background connection status. Requested only when needed.</p>
+            </article>
+            <article class="card">
+              <p class="card-lbl">When using brightness</p>
+              <h3>Modify system settings</h3>
+              <p>
+                Needed once the first time you adjust the mobile screen brightness with
+                Alt+Shift+↑/↓.
+              </p>
+            </article>
+            <article class="card">
+              <p class="card-lbl">Recommended</p>
+              <h3>Battery optimization exception</h3>
+              <p>
+                Recommended for stability if the connection drops after the screen turns off. It
+                isn't required.
+              </p>
+            </article>
+            <article class="card accent">
+              <p class="card-lbl">Mac · macOS 15+ only</p>
+              <h3>Local Network</h3>
+              <p>
+                Allows the Mac to discover the Windows PC on macOS 15+. macOS 13/14 may not show
+                this permission and the runtime treats it as not required.
+              </p>
+            </article>
+            <article class="card accent">
+              <p class="card-lbl">Required on Mac</p>
+              <h3>Accessibility</h3>
+              <p>
+                Allows the Mac to perform mouse and keyboard input received from Windows. Basic
+                input receiving does not require Input Monitoring.
+              </p>
+            </article>
+            <article class="card">
+              <p class="card-lbl">Mac screen sharing only</p>
+              <h3>Screen &amp; System Audio Recording</h3>
+              <p>
+                Used only when sharing the Mac's display with Windows. OneMouse does not capture
+                system audio.
+              </p>
+            </article>
+            <article class="card">
+              <p class="card-lbl">When using Mac Bluetooth</p>
+              <h3>Bluetooth</h3>
+              <p>
+                Requested when using the system-paired Bluetooth transport. Mac screen and window
+                sharing is not available over Bluetooth and is LAN-only.
+              </p>
+            </article>
+          </div>
         </div>
-      </div>
-    </section>
-  </main>
+      </section>
 
-  <footer class="site">
-    <div class="wrap ft">
-      <span>© 2026 OneMouse</span>
-      <span class="links"><a href="./technical.html">Technical &amp; Security</a><a href="./privacy.html">Privacy Policy</a><a href="./terms.html">Terms of Service</a><a href="./licenses.html">Open-source Licenses</a></span>
-    </div>
-  </footer>
-</body>
+      <!-- DATA HANDLING -->
+      <section id="handling">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">Data Handling</p>
+            <h2 class="sec">Input, files, and clipboard — only within the scope you choose.</h2>
+          </div>
+          <div class="panel">
+            <ul>
+              <li>No remote account is created — it works through pairing, with no sign-in.</li>
+              <li>
+                Files you send aren't stored on a server. They go straight to the device you pick.
+              </li>
+              <li>
+                <b>Accessibility data is never used for advertising or screen collection.</b> It's
+                used only for the stated features, such as passing input and remote control.
+              </li>
+              <li>
+                Clipboard and file transfers happen only when you choose a target and start them
+                yourself.
+              </li>
+              <li>
+                A released Mac build stores its paired session key in the macOS Keychain. Clearing
+                pairing removes the trusted connection.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- NETWORK -->
+      <section class="section-alt" id="network">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">Network</p>
+            <h2 class="sec">Connection quality depends on your local network conditions.</h2>
+          </div>
+          <div class="split">
+            <div class="panel tip">
+              <h3>Recommended setup</h3>
+              <ul>
+                <li>The same Wi-Fi on a personal Wi-Fi router (2.4 or 5 GHz, either is fine)</li>
+                <li>A network that allows device-to-device communication</li>
+                <li>OneMouse allowed inbound in the Windows firewall</li>
+                <li>On macOS 15+, Local Network access allowed for OneMouse on the Mac</li>
+              </ul>
+            </div>
+            <div class="panel">
+              <h3>Limited setup</h3>
+              <ul>
+                <li>Client isolation on guest or corporate Wi-Fi</li>
+                <li>Inbound blocked on a network marked as "Public"</li>
+                <li>In these cases, use a direct Bluetooth connection or a personal hotspot</li>
+              </ul>
+            </div>
+          </div>
+          <p class="sec-lead" style="margin-top: 16px">
+            OneMouse doesn't go through an internet relay server, so the two devices need to be able
+            to find each other directly.
+          </p>
+        </div>
+      </section>
+
+      <!-- SCOPE -->
+      <section id="scope">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">Support Scope</p>
+            <h2 class="sec">
+              Mac becomes an officially supported target after distribution and hardware validation.
+            </h2>
+          </div>
+          <div class="panel">
+            <ul>
+              <li>
+                <b>Windows 10/11:</b> connections are started and managed here; another Windows PC
+                can also be a connection target.
+              </li>
+              <li>
+                <b>Android:</b> connects as a target over same-network <b>Wi-Fi/LAN</b> or direct
+                <b>Bluetooth</b>.
+              </li>
+              <li>
+                <b>macOS 13 or later:</b> the source accepts connections initiated from Windows. The
+                signed public build and real-Mac input, file, edge-drag, screen-sharing, and
+                Bluetooth validation are still pending.
+              </li>
+              <li>Not included: connecting over USB/ADB is outside the official support scope.</li>
+              <li>
+                Windows-to-Windows supports two-way file, folder, and clipboard transfer. The same
+                Windows-to-Mac flows remain planned until Mac validation is complete.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- UPDATES -->
+      <section class="section-alt" id="updates">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">Updates</p>
+            <h2 class="sec">Recent update log.</h2>
+          </div>
+          <div class="log">
+            <div class="log-item">
+              <time>2026.07</time>
+              <p>
+                <b>macOS 13+ support preparation</b> — the source and public documentation now
+                define the Windows-to-Mac flow. Signed distribution and real-Mac validation remain
+                before public support.
+              </p>
+            </div>
+            <div class="log-item">
+              <time>2026.07</time>
+              <p>
+                <b>Smarter device arrangement</b> · <b>See the full layout on another PC</b> —
+                devices no longer overlap, and dragging one between two others wedges it into place.
+                Move the anchor device and the rest magnet-snap back to the Windows PC, and a second
+                PC connected over Bluetooth or Wi-Fi now shows the Windows PC's full arrangement
+                too.
+              </p>
+            </div>
+            <div class="log-item">
+              <time>2026.07</time>
+              <p>
+                <b>Keep screen on while connected · idle dimming</b> — the phone screen stays on
+                during a connection and dims when idle to save battery. It holds even with several
+                devices connected at once.
+              </p>
+            </div>
+            <div class="log-item">
+              <time>2026.07</time>
+              <p>
+                <b>See other devices' positions from mobile</b> ·
+                <b>chain (single-row) arrangement</b> — from your phone you can check how the other
+                connected devices are arranged, and line up PC, phone, and PC in a single row.
+              </p>
+            </div>
+            <div class="log-item">
+              <time>2026.07</time>
+              <p>
+                <b>Cursor crossing effect between devices</b> ·
+                <b>Ctrl+Alt+Backspace to recenter</b> — a smooth effect as the cursor crosses
+                between devices; if it gets lost, it returns to the center of the monitor.
+              </p>
+            </div>
+            <div class="log-item">
+              <time>2026.07</time>
+              <p>
+                <b>Enter to send in messengers</b> — in messaging apps, press Enter on the PC
+                keyboard to send, and Shift+Enter for a new line.
+              </p>
+            </div>
+            <div class="log-item">
+              <time>2026.06</time>
+              <p>
+                <b>Direct Bluetooth connection</b> · <b>PC-to-PC Bluetooth</b> — connect to your
+                phone or another PC without a Wi-Fi router to exchange input, clipboard, and files.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site">
+      <div class="wrap ft">
+        <span>© 2026 OneMouse</span>
+        <span class="links"
+          ><a href="./technical.html">Technical &amp; Security</a
+          ><a href="./privacy.html">Privacy Policy</a><a href="./terms.html">Terms of Service</a
+          ><a href="./licenses.html">Open-source Licenses</a></span
+        >
+      </div>
+    </footer>
+  </body>
 </html>
