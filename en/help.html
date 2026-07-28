@@ -37,7 +37,7 @@
     <section class="phero wrap narrow">
       <p class="ey">Help</p>
       <h1 class="page">When it won't work, narrow it down step by step.</h1>
-      <p class="lead">Narrow it down in the order <b>power → discovery → firewall → pairing → input &amp; return</b>. Mac items are advance guidance for a build still awaiting signed distribution and real-Mac validation.</p>
+      <p class="lead">Narrow it down in the order <b>power → discovery → firewall → pairing → input &amp; return</b>. Mac items are pre-release guidance for a build still awaiting signed distribution and real-Mac validation.</p>
     </section>
 
     <!-- 이것부터 -->
@@ -46,7 +46,7 @@
         <div class="panel tip"><h3>Start with these two</h3>
           <ul>
             <li><b>Lost your cursor? →</b> Press <kbd style="font-family:var(--mono)">Ctrl+Alt+Backspace</kbd> and the cursor returns to your own PC (center of the monitor).</li>
-            <li><b>Connected but input isn't working? →</b> Re-enable OneMouse under Android <b>Accessibility</b>. After the Mac build is public, allow <b>Accessibility</b> on the secondary Mac.</li>
+            <li><b>Connected but input isn't working? →</b> Re-enable OneMouse under Android <b>Accessibility</b>. After the Mac build is public, allow <b>Accessibility</b> on the Mac.</li>
           </ul></div>
       </div>
     </section>
@@ -56,7 +56,7 @@
       <div class="wrap narrow">
         <div class="sec-head"><p class="ey">Troubleshooting order</p><h2 class="sec">Check one step at a time, in this order.</h2></div>
         <div class="timeline">
-          <div class="tstep"><div class="rail"><span class="num">1</span><span class="line"></span></div><div class="body"><h4>Power and permissions</h4><p>Make sure the Windows main app and the target app are running. Android needs its <b>Accessibility Service</b>; a secondary Mac needs <b>Accessibility</b> for input. Local Network appears on macOS 15+, while macOS 13/14 may not show it.</p></div></div>
+          <div class="tstep"><div class="rail"><span class="num">1</span><span class="line"></span></div><div class="body"><h4>Power and permissions</h4><p>Make sure OneMouse is running on Windows and on the target device. Android needs its <b>Accessibility Service</b>; a Mac receiving input from Windows needs <b>Accessibility</b>. Local Network appears on macOS 15+, while macOS 13/14 may not show it.</p></div></div>
           <div class="tstep"><div class="rail"><span class="num">2</span><span class="line"></span></div><div class="body"><h4>Same network &amp; discovery</h4><p>Check that Windows and the phone or Mac are on the <b>same Wi-Fi or LAN</b>. On macOS 15+, confirm OneMouse has Local Network access; on macOS 13/14, that settings item may not exist.</p></div></div>
           <div class="tstep"><div class="rail"><span class="num">3</span><span class="line"></span></div><div class="body"><h4>Firewall &amp; isolation</h4><p>If the phone can see the PC but the PC can't see the phone, it may be a <b>Windows firewall inbound</b> issue (whether the network is set to "Public" or "Private"). Office and café Wi-Fi can also block it with <b>client isolation</b>.</p></div></div>
           <div class="tstep"><div class="rail"><span class="num">4</span><span class="line"></span></div><div class="body"><h4>Pairing &amp; connection</h4><p>Confirm that pairing is finished and that the device shows as connected in Devices. For Mac, select the Mac in Windows and enter the <b>6-digit code displayed by the Mac</b>. Before pairing, the input and file channels don't open.</p></div></div>
@@ -71,7 +71,7 @@
         <div class="sec-head"><p class="ey">Transfer</p><h2 class="sec">When files and clipboard won't go through.</h2></div>
         <div class="panel"><ul>
           <li>Confirm the <b>selected device</b> is correct — a transfer goes to the target you selected.</li>
-          <li>Desktop-to-desktop drag requires the <b>secondary Windows PC to be connected and arranged</b>. Mac edge drag is still awaiting real-device validation.</li>
+          <li>Desktop-to-desktop drag requires the <b>other Windows PC to be connected and arranged</b>. Mac edge drag is still awaiting real-device validation.</li>
           <li>Keep holding the file, <b>cross the arranged screen edge</b>, and drop it on the target to start the transfer.</li>
           <li>If the clipboard doesn't come through, check that both apps are connected and whether a screen is off and idle.</li>
           <li>Bluetooth is slower than Wi-Fi — send large files over Wi-Fi.</li>
@@ -82,14 +82,14 @@
     <!-- MAC -->
     <section id="mac">
       <div class="wrap narrow">
-        <div class="sec-head"><p class="ey">Secondary Mac · In preparation</p><h2 class="sec">Planned checks for the public Mac build.</h2>
-          <p class="sec-lead">The source is secondary-only, but signed distribution and real-Mac validation are still in progress.</p></div>
+        <div class="sec-head"><p class="ey">Mac · In preparation</p><h2 class="sec">Planned checks for the public Mac build.</h2>
+          <p class="sec-lead">The Mac app accepts connections initiated from Windows. Signed distribution and real-Mac validation are still in progress.</p></div>
         <div class="faq">
           <details open><summary>The Mac does not appear in Windows Devices.</summary><div class="a">Put both computers on the same Wi-Fi or LAN. On macOS 15+, allow OneMouse under <b>Privacy &amp; Security → Local Network</b>; macOS 13/14 may not show this item. Return to OneMouse and refresh Devices in Windows.</div></details>
           <details><summary>The Mac is connected, but mouse and keyboard input do not work.</summary><div class="a">Allow OneMouse under macOS <b>Privacy &amp; Security → Accessibility</b>, then return to the app so it can recheck the permission. Basic input receiving does not require Input Monitoring.</div></details>
           <details><summary>The Mac screen is blank in the Windows remote-control window.</summary><div class="a">Allow OneMouse under macOS <b>Privacy &amp; Security → Screen &amp; System Audio Recording</b>. This optional feature is LAN-only and is not provided over Bluetooth; OneMouse does not capture system audio.</div></details>
           <details><summary>Windows and Mac do not connect over Bluetooth.</summary><div class="a">Pair the two computers once in both Windows and macOS Bluetooth settings, then enable the OneMouse Bluetooth connection. Use LAN for remote screen control and large transfers.</div></details>
-          <details><summary>I cannot select the Mac as the main computer.</summary><div class="a">That is expected. The planned macOS 13+ app is a <b>secondary device only</b>; the main controller must be Windows 10/11.</div></details>
+          <details><summary>Where do I start a Mac connection?</summary><div class="a">After the public Mac build is available, connections will be started and managed from OneMouse on Windows 10/11. Select the Mac in Windows Devices and enter the 6-digit code shown on the Mac.</div></details>
         </div>
       </div>
     </section>

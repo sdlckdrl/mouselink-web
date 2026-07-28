@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>ヘルプ | OneMouse ワンマウス — 接続・入力トラブルの解決</title>
-  <meta name="description" content="OneMouseのAndroid・Windows問題解決と、公開配布・実機検証を準備中のmacOS 13以降サブ版の予定確認項目を案内します。" />
+  <meta name="description" content="OneMouseのAndroid・Windows接続の問題解決と、公開配布・実機検証を準備中のmacOS 13以降版の確認項目を案内します。" />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <link rel="stylesheet" href="../css/onemouse.css" />
   <link rel="canonical" href="https://onemouse.pages.dev/ja/help" />
@@ -57,8 +57,8 @@
       <div class="wrap narrow">
         <div class="sec-head"><p class="ey">トラブル解決の手順</p><h2 class="sec">この順番で一段階ずつ確認してください。</h2></div>
         <div class="timeline">
-          <div class="tstep"><div class="rail"><span class="num">1</span><span class="line"></span></div><div class="body"><h4>起動と権限</h4><p>WindowsメインPCと対象のアプリが起動しているか確認します。Androidは<b>アクセシビリティサービス</b>、Macは入力用の<b>アクセシビリティ</b>が必要です。ローカルネットワークはmacOS 15以降で表示され、macOS 13/14では項目がない場合があります。</p></div></div>
-          <div class="tstep"><div class="rail"><span class="num">2</span><span class="line"></span></div><div class="body"><h4>同じネットワーク・検出</h4><p>WindowsメインPCとAndroidまたはMacが<b>同じWi-Fi/LAN</b>にあるか確認します。検索できない場合は、ネットワークが違うか、ローカル通信がブロックされています。</p></div></div>
+          <div class="tstep"><div class="rail"><span class="num">1</span><span class="line"></span></div><div class="body"><h4>起動と権限</h4><p>Windowsと接続先のアプリが起動しているか確認します。Androidは<b>アクセシビリティサービス</b>、Macは入力用の<b>アクセシビリティ</b>が必要です。ローカルネットワークはmacOS 15以降で表示され、macOS 13/14では項目がない場合があります。</p></div></div>
+          <div class="tstep"><div class="rail"><span class="num">2</span><span class="line"></span></div><div class="body"><h4>同じネットワーク・検出</h4><p>WindowsとAndroidまたはMacが<b>同じWi-Fi/LAN</b>にあるか確認します。検索できない場合は、ネットワークが違うか、ローカル通信がブロックされています。</p></div></div>
           <div class="tstep"><div class="rail"><span class="num">3</span><span class="line"></span></div><div class="body"><h4>ファイアウォール・分離</h4><p>スマホからはPCが見えるのにPCからスマホが見えない場合は、<b>Windowsファイアウォールの受信（インバウンド）</b>（ネットワークが「パブリック」か「プライベート」か）の問題かもしれません。会社やカフェのWi-Fiは<b>クライアント分離</b>でブロックされることもあります。</p></div></div>
           <div class="tstep"><div class="rail"><span class="num">4</span><span class="line"></span></div><div class="body"><h4>ペアリング・接続</h4><p>ペアリングが完了し、デバイス管理で接続状態になっているか確認します。MacはWindows側でMacを選び、Macに表示された6桁コードをWindowsへ入力します。</p></div></div>
           <div class="tstep"><div class="rail"><span class="num">5</span></div><div class="body"><h4>入力・復帰</h4><p>配置した端へマウスを押し当てて越えられるか、越えられない場合は位置の配置を確認します。カーソルが変な場所にあるときは<kbd style="font-family:var(--mono)">Ctrl+Alt+Backspace</kbd>で復帰させます。</p></div></div>
@@ -83,8 +83,8 @@
     <!-- Macのトラブル -->
     <section id="mac">
       <div class="wrap narrow">
-        <div class="sec-head"><p class="ey">Macのトラブル · 公開準備中</p><h2 class="sec">公開後のMacサブ版で想定する確認項目です。</h2>
-          <p class="sec-lead">現在は署名・公証済み配布と実機検証中です。Macは公開後もWindowsから操作されるサブ専用です。</p></div>
+        <div class="sec-head"><p class="ey">Macのトラブル · 公開準備中</p><h2 class="sec">公開後のMac版で想定する確認項目です。</h2>
+          <p class="sec-lead">現在は署名・公証済み配布と実機検証中です。接続はAndroidと同様にWindowsから開始・管理します。</p></div>
         <div class="split">
           <div class="panel"><h3>WindowsにMacが表示されない</h3><ul><li>WindowsとMacを同じWi-Fi/LANにつなぎます。</li><li>macOS 15以降ではOneMouseの<b>ローカルネットワーク</b>を許可します。macOS 13/14ではこの項目がない場合があります。</li><li>両方のOneMouseを再起動し、Windowsのデバイス一覧を更新します。</li><li>ゲストWi-Fiや社内Wi-Fiのクライアント分離も確認します。</li></ul></div>
           <div class="panel tip"><h3>接続済みでも入力・画面が動かない</h3><ul><li>入力できない場合は、Macの<b>アクセシビリティ</b>許可を確認し、変更後にOneMouseへ戻ります。</li><li>Mac画面が表示されない場合だけ<b>画面収録</b>を許可します。通常の入力には不要です。</li><li>Macに表示された現在の6桁コードをWindowsへ入力したか確認します。</li><li>カーソルが移らない場合は、Windowsの配置エディタでMacの位置を確認します。</li></ul></div>
@@ -101,7 +101,7 @@
           <details><summary>スマホではPCが見えるのに、PCからスマホが見えません。</summary><div class="a">たいていは<b>Windowsファイアウォールの受信（インバウンド）</b>の問題です。現在のネットワークが<b>「パブリック（Public）」</b>だと受信がブロックされることがあるので、<b>「プライベート（Private）」</b>に変えるか、ファイアウォールでOneMouseの受信を許可してください。</div></details>
           <details><summary>家では使えるのに、会社やカフェのWi-Fiでは使えません。</summary><div class="a">パブリック/ゲストWi-Fiは、セキュリティのために<b>デバイス間の通信を分離（client isolation）</b>していることがよくあります。この場合、同じWi-Fiでもお互いを見つけられません。<b>Bluetooth接続</b>や個人のテザリング（ホットスポット）を利用してください。</div></details>
           <details><summary>接続はできたはずなのに、マウス・キーボードが効きません。</summary><div class="a">Androidの<b>アクセシビリティサービス</b>がオフになったか、システムによって再起動された可能性が高いです。Androidの設定 → アクセシビリティでOneMouseを再度オンにしてください。</div></details>
-          <details><summary>MacをメインにしてWindowsを操作できますか？</summary><div class="a">いいえ。準備中のMac版は<b>macOS 13以降のサブ専用</b>です。公開後もWindows 10/11をメインにします。</div></details>
+          <details><summary>Macとの接続はどこから始めますか？</summary><div class="a">接続は<b>Windows 10/11から開始・管理</b>します。Macに表示された6桁コードをWindowsへ入力し、Windowsの配置エディタでMacの位置を設定します。</div></details>
           <details><summary>カーソルがスマホ/別のPCに閉じ込められて戻ってきません。</summary><div class="a"><kbd style="font-family:var(--mono)">Ctrl+Alt+Backspace</kbd>を押すと、カーソルが自分のPCのモニター中央へ強制的に復帰します。</div></details>
           <details><summary>画面がオフになると接続が切れます。</summary><div class="a">画面がオフになるとき、スマホのWi-Fiが省電力になったり、バッテリー最適化でアプリがスリープしたりすることがあります。AndroidでOneMouseを<b>バッテリー最適化の除外</b>にしておくと安定します。接続中の画面オフ防止オプションも確認してください。</div></details>
           <details><summary>Bluetoothでのリモート画面操作がうまくいきません。</summary><div class="a">モバイル画面のリモート操作はデータ量が多いため、<b>Bluetoothでは推奨しません</b>。リモート操作はWi-Fiで使ってください。Bluetoothはマウス・キーボード・クリップボード・ファイルに向いています。</div></details>

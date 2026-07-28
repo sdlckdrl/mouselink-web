@@ -6,7 +6,6 @@
     "status": "coming_soon",
     "version": "0.1.1",
     "minimumOs": "13.0",
-    "role": "sub",
     "distribution": "architecture_specific",
     "downloadPageUrl": null,
     "assets": []

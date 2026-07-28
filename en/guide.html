@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Guide | OneMouse — Android, Windows PCs, and the planned Mac flow</title>
-  <meta name="description" content="Set up OneMouse for Android and another Windows PC, and preview the planned macOS 13+ secondary-device flow while public distribution and real-Mac validation are in progress." />
+  <meta name="description" content="Set up OneMouse for Android and another Windows PC, and preview the planned macOS 13+ connection flow while public distribution and real-Mac validation are in progress." />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <link rel="stylesheet" href="../css/onemouse.css" />
   <link rel="canonical" href="https://onemouse.pages.dev/en/guide" />
@@ -110,7 +110,7 @@
         <div class="split lead-left">
           <div>
             <ul class="panel" style="list-style:none;padding-left:22px">
-              <li style="margin:0 0 8px">Drop files on the <b>transfer screen</b> or small <b>drop zone</b> to send them to the selected Android or secondary Windows PC. Mac transfer is still awaiting real-device validation.</li>
+              <li style="margin:0 0 8px">Drop files on the <b>transfer screen</b> or small <b>drop zone</b> to send them to the selected Android or another Windows PC. Mac transfer is still awaiting real-device validation.</li>
               <li style="margin:8px 0"><b>Windows-to-Windows</b>: hold a file, drag it across the arranged screen boundary, and drop it on the target. Mac edge drag remains a pre-release validation item.</li>
               <li style="margin:8px 0">Android → PC: send from the Android transfer tab or the share menu.</li>
               <li style="margin:8px 0 0">If it won't start, check the connection status and the selected device.</li>
@@ -184,7 +184,7 @@
                 <div class="tstep"><div class="rail"><span class="num">4</span></div><div class="body" style="padding-bottom:0"><h4>Use input, clipboard, and files just like Wi-Fi</h4></div></div>
               </div>
             </div>
-            <details class="fold"><summary><span>The Bluetooth sub device screen</span></summary><div class="fold-body"><a href="../assets/guide_bt_sub_devices.png" target="_blank" rel="noopener"><img src="../assets/guide_bt_sub_devices.png" alt="The Bluetooth sub device list" loading="lazy" style="border-radius:12px" /></a></div></details>
+            <details class="fold"><summary><span>The Bluetooth target device screen</span></summary><div class="fold-body"><a href="../assets/guide_bt_sub_devices.png" target="_blank" rel="noopener"><img src="../assets/guide_bt_sub_devices.png" alt="The Bluetooth target device list" loading="lazy" style="border-radius:12px" /></a></div></details>
           </div>
         </div>
       </div>
@@ -197,7 +197,7 @@
         <div class="split lead-left">
           <div>
             <div class="panel"><h3>Connecting</h3>
-              <ul><li>The controlling PC is the <b>main</b>, and the controlled PC is the <b>sub</b>.</li><li>Pair the sub PC to add it to Devices.</li><li>In the layout editor, place the sub PC where it really sits.</li><li>Move the mouse in that direction to control the other PC, and exchange files by dragging across the boundary.</li></ul></div>
+              <ul><li>Choose the Windows PC that will start and manage the connection.</li><li>Pair the other Windows PC to add it to Devices.</li><li>In the layout editor, place the other PC where it really sits.</li><li>Move the mouse in that direction to control the other PC, and exchange files by dragging across the boundary.</li></ul></div>
           </div>
           <div>
             <details class="fold" open><summary><span>The arrangement screen</span></summary><div class="fold-body"><a href="../assets/guide_pc_arrangement.png" target="_blank" rel="noopener"><img src="../assets/guide_pc_arrangement.png" alt="The layout editor screen for another PC" loading="lazy" style="border-radius:12px" /></a></div></details>
@@ -209,13 +209,13 @@
     <!-- MAC -->
     <section class="section-alt" id="mac">
       <div class="wrap">
-        <div class="sec-head"><p class="ey">Secondary Mac · In preparation</p><h2 class="sec">Planned connection flow for a macOS 13+ secondary Mac.</h2>
-          <p class="sec-lead">The source is secondary-only, but signed distribution and real-Mac validation are still in progress. These five steps describe the intended public build.</p></div>
+        <div class="sec-head"><p class="ey">Mac · In preparation</p><h2 class="sec">Planned connection flow for macOS 13+.</h2>
+          <p class="sec-lead">The Mac app accepts connections initiated from Windows. Signed distribution and real-Mac validation are still in progress. These five steps describe the intended public build.</p></div>
         <div class="split lead-left">
           <div class="timeline">
-            <div class="tstep"><div class="rail"><span class="num">1</span><span class="line"></span></div><div class="body"><h4>Open OneMouse on Windows and Mac</h4><p>Run the Windows app on the main PC and the macOS app on the secondary Mac.</p></div></div>
+            <div class="tstep"><div class="rail"><span class="num">1</span><span class="line"></span></div><div class="body"><h4>Open OneMouse on Windows and Mac</h4><p>Run OneMouse on Windows 10/11 and on the Mac. Connections are started and managed from Windows.</p></div></div>
             <div class="tstep"><div class="rail"><span class="num">2</span><span class="line"></span></div><div class="body"><h4>Allow the Mac permissions</h4><p>Allow <b>Accessibility</b> so the Mac can perform received mouse and keyboard input. On macOS 15+, also allow <b>Local Network</b> for discovery; macOS 13/14 may not show this item.</p></div></div>
-            <div class="tstep"><div class="rail"><span class="num">3</span><span class="line"></span></div><div class="body"><h4>Select the Mac in Windows</h4><p>Open Devices on the Windows main PC and select the detected Mac.</p></div></div>
+            <div class="tstep"><div class="rail"><span class="num">3</span><span class="line"></span></div><div class="body"><h4>Select the Mac in Windows</h4><p>Open Devices in the Windows app and select the detected Mac.</p></div></div>
             <div class="tstep"><div class="rail"><span class="num">4</span><span class="line"></span></div><div class="body"><h4>Enter the Mac's 6-digit code</h4><p>Enter in Windows the 6-digit pairing code displayed by the Mac, then confirm the pairing.</p></div></div>
             <div class="tstep"><div class="rail"><span class="num">5</span></div><div class="body"><h4>Arrange the Mac and cross over</h4><p>Place the Mac beside the Windows display in the arrangement editor. Move the cursor across that edge to control it and exchange files and clipboard content in both directions.</p></div></div>
           </div>
@@ -239,7 +239,7 @@
           <li><b>Screen capture approval — when remote control starts:</b> approved through an Android system pop-up.</li>
           <li><b>Nearby Wi-Fi devices — when connecting:</b> may be requested once on Android 13+ while finding the PC.</li>
           <li><b>Notifications, system settings, battery exception:</b> only when needed — for showing service status, adjusting brightness, and stability after the screen turns off, respectively.</li>
-          <li><b>Mac Accessibility — required for input:</b> performs input received from Windows. <b>Local Network</b> is allowed for discovery on macOS 15+; macOS 13/14 may not show it.</li>
+          <li><b>Mac Accessibility — required for input:</b> allows the Mac to perform input received from Windows. <b>Local Network</b> is allowed for discovery on macOS 15+; macOS 13/14 may not show it.</li>
           <li><b>Mac Screen Recording — optional:</b> used only when sharing the Mac's display with Windows.</li>
           <li><b>Mac Bluetooth — when using Bluetooth:</b> requested after system pairing. Mac screen and window sharing is LAN-only.</li>
         </ul></div>

@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Technical &amp; Security | OneMouse for Android, Windows, and Mac</title>
-  <meta name="description" content="How OneMouse connects Windows, Android, and another Windows PC, plus the role, permissions, and pending validation scope of the planned macOS 13+ secondary build." />
+  <meta name="description" content="How OneMouse connects Windows, Android, another Windows PC, and the planned macOS 13+ build, including permissions and pending validation scope." />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <link rel="stylesheet" href="../css/onemouse.css" />
   <link rel="canonical" href="https://onemouse.pages.dev/en/technical" />
@@ -52,7 +52,7 @@
     <section id="data-flow">
       <div class="wrap narrow">
         <div class="sec-head"><p class="ey">Local First</p><h2 class="sec">It works only between your own paired devices.</h2></div>
-        <p class="sec-lead" style="max-width:64ch">Input, files, and clipboard travel directly between <b>your Windows main PC and Android, another Windows PC, or a secondary Mac</b>. Nothing is uploaded to an account through an outside server. The devices must be able to reach each other on the same Wi-Fi/LAN, or connect directly over Bluetooth.</p>
+        <p class="sec-lead" style="max-width:64ch">Input, files, and clipboard currently travel directly between <b>your Windows PC and Android or another Windows PC</b>. The same local connection model is implemented for Mac, while public distribution and real-Mac validation are still in progress. Nothing is uploaded to an account through an outside server.</p>
       </div>
     </section>
 
@@ -68,8 +68,8 @@
           <article class="card"><p class="card-lbl">When the service starts</p><h3>Notifications</h3><p>Used to show the background connection status. Requested only when needed.</p></article>
           <article class="card"><p class="card-lbl">When using brightness</p><h3>Modify system settings</h3><p>Needed once the first time you adjust the mobile screen brightness with Alt+Shift+↑/↓.</p></article>
           <article class="card"><p class="card-lbl">Recommended</p><h3>Battery optimization exception</h3><p>Recommended for stability if the connection drops after the screen turns off. It isn't required.</p></article>
-          <article class="card accent"><p class="card-lbl">Mac · macOS 15+ only</p><h3>Local Network</h3><p>Allows discovery of the Windows main PC on macOS 15+. macOS 13/14 may not show this permission and the runtime treats it as not required.</p></article>
-          <article class="card accent"><p class="card-lbl">Required on Mac</p><h3>Accessibility</h3><p>Allows the secondary Mac to perform mouse and keyboard input received from Windows. Basic input receiving does not require Input Monitoring.</p></article>
+          <article class="card accent"><p class="card-lbl">Mac · macOS 15+ only</p><h3>Local Network</h3><p>Allows the Mac to discover the Windows PC on macOS 15+. macOS 13/14 may not show this permission and the runtime treats it as not required.</p></article>
+          <article class="card accent"><p class="card-lbl">Required on Mac</p><h3>Accessibility</h3><p>Allows the Mac to perform mouse and keyboard input received from Windows. Basic input receiving does not require Input Monitoring.</p></article>
           <article class="card"><p class="card-lbl">Mac screen sharing only</p><h3>Screen &amp; System Audio Recording</h3><p>Used only when sharing the Mac's display with Windows. OneMouse does not capture system audio.</p></article>
           <article class="card"><p class="card-lbl">When using Mac Bluetooth</p><h3>Bluetooth</h3><p>Requested when using the system-paired Bluetooth transport. Mac screen and window sharing is not available over Bluetooth and is LAN-only.</p></article>
         </div>
@@ -95,7 +95,7 @@
       <div class="wrap narrow">
         <div class="sec-head"><p class="ey">Network</p><h2 class="sec">Connection quality depends on your local network conditions.</h2></div>
         <div class="split">
-          <div class="panel tip"><h3>Recommended setup</h3><ul><li>The same Wi-Fi on a personal Wi-Fi router (2.4 or 5 GHz, either is fine)</li><li>A network that allows device-to-device communication</li><li>OneMouse allowed inbound in the Windows firewall</li><li>On macOS 15+, Local Network access allowed for OneMouse on the secondary Mac</li></ul></div>
+          <div class="panel tip"><h3>Recommended setup</h3><ul><li>The same Wi-Fi on a personal Wi-Fi router (2.4 or 5 GHz, either is fine)</li><li>A network that allows device-to-device communication</li><li>OneMouse allowed inbound in the Windows firewall</li><li>On macOS 15+, Local Network access allowed for OneMouse on the Mac</li></ul></div>
           <div class="panel"><h3>Limited setup</h3><ul><li>Client isolation on guest or corporate Wi-Fi</li><li>Inbound blocked on a network marked as "Public"</li><li>In these cases, use a direct Bluetooth connection or a personal hotspot</li></ul></div>
         </div>
         <p class="sec-lead" style="margin-top:16px">OneMouse doesn't go through an internet relay server, so the two devices need to be able to find each other directly.</p>
@@ -107,9 +107,9 @@
       <div class="wrap narrow">
         <div class="sec-head"><p class="ey">Support Scope</p><h2 class="sec">Mac becomes an officially supported target after distribution and hardware validation.</h2></div>
         <div class="panel"><ul>
-          <li><b>Windows 10/11:</b> the main controller; another Windows PC may also connect as a secondary device.</li>
-          <li><b>Android:</b> connects as a secondary device over same-network <b>Wi-Fi/LAN</b> or direct <b>Bluetooth</b>.</li>
-          <li><b>macOS 13 or later:</b> the source implements a <b>secondary-device-only</b> role. The signed public build and real-Mac input, file, edge-drag, screen-sharing, and Bluetooth validation are still pending.</li>
+          <li><b>Windows 10/11:</b> connections are started and managed here; another Windows PC can also be a connection target.</li>
+          <li><b>Android:</b> connects as a target over same-network <b>Wi-Fi/LAN</b> or direct <b>Bluetooth</b>.</li>
+          <li><b>macOS 13 or later:</b> the source accepts connections initiated from Windows. The signed public build and real-Mac input, file, edge-drag, screen-sharing, and Bluetooth validation are still pending.</li>
           <li>Not included: connecting over USB/ADB is outside the official support scope.</li>
           <li>Windows-to-Windows supports two-way file, folder, and clipboard transfer. The same Windows-to-Mac flows remain planned until Mac validation is complete.</li>
         </ul></div>
@@ -121,8 +121,8 @@
       <div class="wrap narrow">
         <div class="sec-head"><p class="ey">Updates</p><h2 class="sec">Recent update log.</h2></div>
         <div class="log">
-          <div class="log-item"><time>2026.07</time><p><b>macOS 13+ secondary-device preparation</b> — the source and public documentation now define the Windows-main/Mac-secondary flow. Signed distribution and real-Mac validation remain before public support.</p></div>
-          <div class="log-item"><time>2026.07</time><p><b>Smarter device arrangement</b> · <b>See the full layout on a sub PC</b> — devices no longer overlap, and dragging one between two others wedges it into place. Move the anchor device and the rest magnet-snap back to the main PC, and a second PC connected over Bluetooth or Wi-Fi now shows the main PC's full arrangement too.</p></div>
+          <div class="log-item"><time>2026.07</time><p><b>macOS 13+ support preparation</b> — the source and public documentation now define the Windows-to-Mac flow. Signed distribution and real-Mac validation remain before public support.</p></div>
+          <div class="log-item"><time>2026.07</time><p><b>Smarter device arrangement</b> · <b>See the full layout on another PC</b> — devices no longer overlap, and dragging one between two others wedges it into place. Move the anchor device and the rest magnet-snap back to the Windows PC, and a second PC connected over Bluetooth or Wi-Fi now shows the Windows PC's full arrangement too.</p></div>
           <div class="log-item"><time>2026.07</time><p><b>Keep screen on while connected · idle dimming</b> — the phone screen stays on during a connection and dims when idle to save battery. It holds even with several devices connected at once.</p></div>
           <div class="log-item"><time>2026.07</time><p><b>See other devices' positions from mobile</b> · <b>chain (single-row) arrangement</b> — from your phone you can check how the other connected devices are arranged, and line up PC, phone, and PC in a single row.</p></div>
           <div class="log-item"><time>2026.07</time><p><b>Cursor crossing effect between devices</b> · <b>Ctrl+Alt+Backspace to recenter</b> — a smooth effect as the cursor crosses between devices; if it gets lost, it returns to the center of the monitor.</p></div>

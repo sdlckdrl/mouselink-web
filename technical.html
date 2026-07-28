@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>기술·보안 | OneMouse 원마우스 — 연결 구조와 권한</title>
-  <meta name="description" content="OneMouse 기술·보안 안내: Windows, Android, macOS 13+ 보조 기기의 로컬 연결 구조, 플랫폼별 권한, 데이터 처리 방식과 지원 범위." />
+  <meta name="description" content="OneMouse 기술·보안 안내: Windows, Android, macOS 13+의 로컬 연결 구조, 플랫폼별 권한, 데이터 처리 방식과 지원 범위." />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <link rel="stylesheet" href="./css/onemouse.css" />
   <link rel="canonical" href="https://onemouse.pages.dev/technical" />
@@ -52,7 +52,7 @@
     <section id="data-flow">
       <div class="wrap narrow">
         <div class="sec-head"><p class="ey">Local First</p><h2 class="sec">페어링한 내 기기 사이에서만 동작합니다.</h2></div>
-        <p class="sec-lead" style="max-width:64ch">입력·파일·클립보드는 <b>같은 네트워크의 Windows 메인 PC와 Android, 다른 Windows PC 또는 보조 Mac</b> 사이에서 오갑니다. 외부 서버를 거쳐 계정에 올리는 구조가 아닙니다. 그래서 연결의 전제 조건은 두 기기가 <b>같은 Wi-Fi(같은 공유기)</b> 아래에 있는 것(또는 블루투스로 직접 연결)입니다.</p>
+        <p class="sec-lead" style="max-width:64ch">현재 입력·파일·클립보드는 <b>Windows PC와 Android 또는 다른 Windows PC</b> 사이에서 직접 오갑니다. Mac도 같은 로컬 연결 구조로 구현되어 있지만 공개 배포와 실기기 검증은 진행 중입니다. 외부 서버를 거쳐 계정에 올리는 구조가 아니며, LAN에서는 두 기기가 <b>같은 Wi-Fi(같은 공유기)</b>에 있어야 합니다.</p>
       </div>
     </section>
 
@@ -109,9 +109,9 @@
         <div class="table-wrap"><table class="kt">
           <thead><tr><th>플랫폼</th><th>역할</th><th>기본 권한</th><th>연결</th></tr></thead>
           <tbody>
-            <tr><td>Windows 10/11</td><td>메인 또는 보조</td><td>방화벽 허용</td><td>LAN / Bluetooth</td></tr>
-            <tr><td>Android</td><td>보조 기기</td><td>접근성</td><td>LAN / Bluetooth</td></tr>
-            <tr><td>macOS 13+</td><td><b>보조 전용 · 준비 중</b></td><td>손쉬운 사용 · 로컬 네트워크(15+)</td><td>LAN / Bluetooth 검증 중</td></tr>
+            <tr><td>Windows 10/11</td><td>연결 시작 또는 대상</td><td>방화벽 허용</td><td>LAN / Bluetooth</td></tr>
+            <tr><td>Android</td><td>Windows에서 연결</td><td>접근성</td><td>LAN / Bluetooth</td></tr>
+            <tr><td>macOS 13+</td><td><b>Windows에서 연결 · 준비 중</b></td><td>손쉬운 사용 · 로컬 네트워크(15+)</td><td>LAN / Bluetooth 검증 중</td></tr>
           </tbody>
         </table></div>
         <div class="panel" style="margin-top:16px"><ul>

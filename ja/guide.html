@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>使い方ガイド | OneMouse — 初回接続からよく使う機能まで</title>
-  <meta name="description" content="OneMouseのAndroid・Windows接続手順と、公開配布・実機検証を準備中のmacOS 13以降サブ版の予定接続手順をご案内します。" />
+  <meta name="description" content="OneMouseでWindowsからAndroid・別のWindows PCへの接続を開始・管理する手順と、公開配布・実機検証を準備中のmacOS 13以降版をご案内します。" />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <link rel="stylesheet" href="../css/onemouse.css" />
   <link rel="canonical" href="https://onemouse.pages.dev/ja/guide" />
@@ -37,7 +37,7 @@
     <section class="phero wrap">
       <p class="ey">使い方ガイド</p>
       <h1 class="page">初回接続からよく使う機能まで、順番に。</h1>
-      <p class="lead">Windows 10/11をメインにAndroidと別のWindows PCを接続します。macOS 13以降のサブ専用版は公開配布と実機検証を準備中で、下のMac手順は公開後の予定フローです。</p>
+      <p class="lead">接続はWindows 10/11から開始・管理します。Android、別のWindows PC、macOS 13以降のMacを接続先として扱い、Mac版は公開配布と実機検証を準備中です。</p>
       <nav class="toc" aria-label="このページの目次">
         <a href="#start">5分で接続</a>
         <a href="#position">スマホの配置</a>
@@ -55,7 +55,7 @@
     <section id="start">
       <div class="wrap narrow">
         <div class="sec-head"><p class="ey">Androidを5分で接続</p><h2 class="sec">Androidとの初回接続は、この順番どおりに進めるだけです。</h2>
-          <p class="sec-lead">WindowsメインPCとAndroidが同じWi-Fi（同じWi-Fiルーター）にあることを前提としています。</p></div>
+          <p class="sec-lead">WindowsとAndroidが同じWi-Fi（同じWi-Fiルーター）にあることを前提としています。</p></div>
         <div class="timeline">
           <div class="tstep"><div class="rail"><span class="num">1</span><span class="line"></span></div><div class="body"><h4>PCアプリを起動します</h4><p>WindowsでOneMouseを起動すると、画面に6桁のコードとQRコードが表示されます。</p></div></div>
           <div class="tstep"><div class="rail"><span class="num">2</span><span class="line"></span></div><div class="body"><h4>Androidのアクセシビリティサービスをオンにします</h4><p>PCのマウス・キーボード入力を受け取るには、AndroidでOneMouseのアクセシビリティサービスをオンにします。実質、準備するのはこれだけです。</p></div></div>
@@ -109,7 +109,7 @@
         <div class="split lead-left">
           <div>
             <ul class="panel" style="list-style:none;padding-left:22px">
-              <li style="margin:0 0 8px"><b>転送画面</b>、または画面上の小さな<b>ドロップゾーン</b>にファイルを置くと、選択したAndroidやサブPCへ送られます。Mac転送は実機検証中です。</li>
+              <li style="margin:0 0 8px"><b>転送画面</b>、または画面上の小さな<b>ドロップゾーン</b>にファイルを置くと、選択したAndroidや別のWindows PCへ送られます。Mac転送は実機検証中です。</li>
               <li style="margin:8px 0"><b>Windows PC間</b>では、ファイルをつかんだまま配置した画面の境界を越えて対象へ置くと転送されます。Macの境界ドラッグは公開前の検証対象です。</li>
               <li style="margin:8px 0">Android → PCは、Androidの転送タブや共有メニューから送ります。</li>
               <li style="margin:8px 0 0">開始できないときは、接続状態と選択中のデバイスを確認してください。</li>
@@ -205,17 +205,17 @@
       </div>
     </section>
 
-    <!-- Macサブデバイス -->
+    <!-- Mac -->
     <section class="section-alt" id="mac">
       <div class="wrap narrow">
-        <div class="sec-head"><p class="ey">Mac（サブ専用）· 公開準備中</p><h2 class="sec">macOS 13以降のMac版で予定している接続手順です。</h2>
-          <p class="sec-lead">ソースはサブ専用ですが、署名・公証済み配布とMac実機検証はまだ進行中です。以下の5ステップは公開ビルドで使う予定です。</p></div>
+        <div class="sec-head"><p class="ey">Mac · 公開準備中</p><h2 class="sec">macOS 13以降のMacを接続先にする予定手順です。</h2>
+          <p class="sec-lead">接続はAndroidと同様にWindowsから開始・管理します。署名・公証済み配布とMac実機検証は進行中で、以下の5ステップは公開ビルドで使う予定です。</p></div>
         <div class="timeline">
-          <div class="tstep"><div class="rail"><span class="num">1</span><span class="line"></span></div><div class="body"><h4>WindowsとMacを同じローカルネットワークにつなぎます</h4><p>Windows 10/11のメインPCとmacOS 13以降のMacでOneMouseを起動し、同じWi-FiまたはLANに接続します。</p></div></div>
+          <div class="tstep"><div class="rail"><span class="num">1</span><span class="line"></span></div><div class="body"><h4>WindowsとMacを同じローカルネットワークにつなぎます</h4><p>Windows 10/11とmacOS 13以降のMacでOneMouseを起動し、同じWi-FiまたはLANに接続します。</p></div></div>
           <div class="tstep"><div class="rail"><span class="num">2</span><span class="line"></span></div><div class="body"><h4>Macで必要な権限を許可します</h4><p>入力には<b>アクセシビリティ</b>を許可します。macOS 15以降では検出のため<b>ローカルネットワーク</b>も許可し、macOS 13/14ではこの項目が表示されない場合があります。</p></div></div>
           <div class="tstep"><div class="rail"><span class="num">3</span><span class="line"></span></div><div class="body"><h4>Windowsのデバイス管理でMacを選びます</h4><p>検出されたMacの名前とmacOS表示を確認し、Windows側からペアリングを開始します。</p></div></div>
           <div class="tstep"><div class="rail"><span class="num">4</span><span class="line"></span></div><div class="body"><h4>Macに表示された6桁コードをWindowsへ入力します</h4><p>Macに表示中の6桁コードをWindowsの入力欄へ入れて、ペアリングを完了します。</p></div></div>
-          <div class="tstep"><div class="rail"><span class="num">5</span></div><div class="body"><h4>WindowsでMacを配置して操作します</h4><p>配置エディタでMacを実際の方向に置き、その画面境界へマウスを押し出します。Macはサブ専用のため、Macをメインにして接続を開始することはできません。</p></div></div>
+          <div class="tstep"><div class="rail"><span class="num">5</span></div><div class="body"><h4>WindowsでMacを配置して操作します</h4><p>配置エディタでMacを実際の方向に置き、その画面境界へマウスを押し出します。以後の接続と配置もWindowsから管理します。</p></div></div>
         </div>
       </div>
     </section>

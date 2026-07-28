@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>技術・セキュリティ | OneMouse ワンマウス — 接続の仕組みと権限</title>
-  <meta name="description" content="OneMouseのWindows・Android接続と、公開配布・実機検証を準備中のmacOS 13以降サブ版について、役割、権限、データの扱い、サポート範囲を説明します。" />
+  <meta name="description" content="OneMouseでWindowsからAndroid・別のWindows PCへの接続を開始・管理する仕組みと、公開配布・実機検証を準備中のmacOS 13以降版の権限、データ、サポート範囲を説明します。" />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <link rel="stylesheet" href="../css/onemouse.css" />
   <link rel="canonical" href="https://onemouse.pages.dev/ja/technical" />
@@ -53,20 +53,20 @@
     <section id="data-flow">
       <div class="wrap narrow">
         <div class="sec-head"><p class="ey">Local First</p><h2 class="sec">ペアリングした自分のデバイス同士でだけ動作します。</h2></div>
-        <p class="sec-lead" style="max-width:64ch">入力・ファイル・クリップボードは、<b>WindowsメインPCと、ペアリングしたAndroid・Windows PC・Mac</b>の間でやり取りされます。外部サーバーを経由してアカウントにアップロードする仕組みではありません。Wi-Fi/LANでは、2台のデバイスがお互いを直接見つけられる同じローカルネットワークが必要です。</p>
+        <p class="sec-lead" style="max-width:64ch">現在、入力・ファイル・クリップボードは、<b>Windowsと、ペアリングしたAndroidまたは別のWindows PC</b>の間で直接やり取りされます。Macにも同じローカル接続構造を実装していますが、公開配布とMac実機検証は進行中です。外部サーバーを経由してアカウントにアップロードする仕組みではありません。</p>
       </div>
     </section>
 
     <!-- デバイスの役割 -->
     <section class="section-alt" id="roles">
       <div class="wrap">
-        <div class="sec-head"><p class="ey">デバイスの役割</p><h2 class="sec">Windowsがメイン、接続先はサブデバイスです。</h2>
-          <p class="sec-lead">メインは入力と接続を開始する側、サブは入力を受け取る側です。準備中のMac版はサブ専用です。</p></div>
+        <div class="sec-head"><p class="ey">接続の方向</p><h2 class="sec">接続はWindowsから開始・管理します。</h2>
+          <p class="sec-lead">Android、別のWindows PC、macOS 13以降のMacを接続先として同じ並びで扱います。Mac版は公開配布と実機検証を準備中です。</p></div>
         <div class="cards">
-          <article class="card accent"><p class="card-lbl">メイン</p><h3>Windows 10/11</h3><p>マウス・キーボード入力を取得し、デバイス管理で接続先を選び、配置した画面境界から入力を送ります。</p></article>
-          <article class="card"><p class="card-lbl">サブ</p><h3>Android</h3><p>Windowsから届いた入力をアクセシビリティサービスで受け取り、ファイルとクリップボードをやり取りします。</p></article>
-          <article class="card"><p class="card-lbl">サブ</p><h3>別のWindows PC</h3><p>メイン/サブの役割を設定し、サブ側で入力を受け取ります。コンピューター間でファイルも転送できます。</p></article>
-          <article class="card"><p class="card-lbl">サブ専用 · 公開準備中</p><h3>macOS 13以降</h3><p>ソースはWindows側から6桁コードで接続するサブ専用です。署名・公証済み配布と実機検証はまだ完了していません。</p></article>
+          <article class="card accent"><p class="card-lbl">接続を開始・管理</p><h3>Windows 10/11</h3><p>マウス・キーボード入力を取得し、デバイス管理で接続先を選び、配置した画面境界から入力を送ります。</p></article>
+          <article class="card"><p class="card-lbl">接続先</p><h3>Android</h3><p>Windowsから届いた入力をアクセシビリティサービスで受け取り、ファイルとクリップボードをやり取りします。</p></article>
+          <article class="card"><p class="card-lbl">接続先</p><h3>別のWindows PC</h3><p>Windowsのデバイス管理で選択・配置し、入力を受け取ります。コンピューター間でファイルも転送できます。</p></article>
+          <article class="card"><p class="card-lbl">接続先 · 公開準備中</p><h3>macOS 13以降</h3><p>Androidと同様にWindows側から選択し、Macに表示された6桁コードを入力する実装です。署名・公証済み配布と実機検証はまだ完了していません。</p></article>
         </div>
       </div>
     </section>
@@ -83,7 +83,7 @@
           <article class="card"><p class="card-lbl">サービス開始時</p><h3>通知</h3><p>バックグラウンドの接続状態を表示するために使います。必要なときにだけ求められます。</p></article>
           <article class="card"><p class="card-lbl">明るさ調整時</p><h3>システム設定の変更</h3><p>Alt+Shift+↑/↓でモバイル画面の明るさを調節するとき、最初に一度だけ必要です。</p></article>
           <article class="card"><p class="card-lbl">推奨</p><h3>バッテリー最適化の除外</h3><p>画面がオフになったあとに接続が切れる場合は、安定性のために推奨します。必須ではありません。</p></article>
-          <article class="card accent"><p class="card-lbl">Mac・macOS 15以降</p><h3>ローカルネットワーク</h3><p>WindowsメインPCの検出に使います。macOS 13/14では表示されない場合があり、ランタイムは不要として扱います。</p></article>
+          <article class="card accent"><p class="card-lbl">Mac・macOS 15以降</p><h3>ローカルネットワーク</h3><p>Windowsの検出に使います。macOS 13/14では表示されない場合があり、ランタイムは不要として扱います。</p></article>
           <article class="card accent"><p class="card-lbl">Mac・必須</p><h3>アクセシビリティ</h3><p>Windowsから受け取ったマウス・キーボード入力をMac上で実行するために必要です。</p></article>
           <article class="card"><p class="card-lbl">Mac・画面共有時のみ</p><h3>画面収録</h3><p>LANでMacの画面やウィンドウをWindowsに表示するときだけ必要です。Bluetoothでは画面共有を提供しません。</p></article>
           <article class="card"><p class="card-lbl">Mac・Bluetooth接続時</p><h3>Bluetooth</h3><p>システムでペアリングしたBluetooth接続を使うときに要求します。</p></article>
@@ -113,7 +113,7 @@
           <div class="panel tip"><h3>推奨環境</h3><ul><li>個人のWi-Fiルーターの同じWi-Fi（2.4/5GHzは問いません）</li><li>デバイス間の通信が許可されたネットワーク</li><li>WindowsファイアウォールでOneMouseの受信（インバウンド）を許可</li></ul></div>
           <div class="panel"><h3>制約のある環境</h3><ul><li>ゲスト・社内Wi-Fiのクライアント分離（client isolation）</li><li>「パブリック」と判定されたネットワークの受信ブロック</li><li>その場合はBluetoothの直接接続または個人用ホットスポットを利用</li></ul></div>
         </div>
-        <p class="sec-lead" style="margin-top:16px">OneMouseはインターネットのリレーサーバーを経由しないため、WindowsメインPCとAndroid、別のWindows PC、Macがお互いを直接見つけられる環境である必要があります。</p>
+        <p class="sec-lead" style="margin-top:16px">OneMouseはインターネットのリレーサーバーを経由しないため、Windowsと接続先のAndroid、別のWindows PC、Macがお互いを直接見つけられる環境である必要があります。</p>
       </div>
     </section>
 
@@ -122,11 +122,11 @@
       <div class="wrap narrow">
         <div class="sec-head"><p class="ey">Support Scope</p><h2 class="sec">Macは配布と実機検証の完了後に正式サポートへ移行します。</h2></div>
         <div class="panel"><ul>
-          <li>メイン：<b>Windows 10/11</b>。入力と接続を開始し、サブデバイスを選択・配置します。</li>
-          <li>サブ：現在はAndroidと別のWindows PC。<b>macOS 13以降のMac</b>はサブ専用のソース実装済みですが、公証済み配布版と実機検証は準備中です。</li>
+          <li><b>接続の開始・管理：</b>Windows 10/11で接続先を選択・配置し、入力を送ります。</li>
+          <li><b>接続先：</b>現在はAndroidと別のWindows PC。macOS 13以降のMacも同じ接続先として実装済みですが、公証済み配布版と実機検証は準備中です。</li>
           <li>Macの入力・ファイル・境界ドラッグ・Bluetoothは実機検証中です。Mac画面・ウィンドウ共有はLAN専用です。</li>
           <li>対象外：USB/ADBを介した接続は公式のサポート範囲ではありません。</li>
-          <li>コンピューター間はメイン / サブの役割で動作し、ファイルとクリップボードを直接やり取りします。</li>
+          <li>Windows PC同士ではメイン / サブの役割を設定し、ファイルとクリップボードを直接やり取りします。</li>
         </ul></div>
       </div>
     </section>
