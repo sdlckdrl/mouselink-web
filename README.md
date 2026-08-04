@@ -1,10 +1,10 @@
 # OneMouse (원마우스)
 
-**Windows 마우스와 키보드 하나로 Android와 다른 Windows PC를 제어하고, Mac 지원을 준비 중인 로컬 연결 도구**
+**Windows 마우스와 키보드 하나로 Android, 다른 Windows PC, Apple Silicon Mac을 제어하는 로컬 연결 도구**
 
-마우스를 화면 끝으로 넘기면 커서가 폰이나 옆 Windows PC로 이어지고 키보드 입력·파일·클립보드도 따라갑니다. macOS 13+ 앱은 소스 구현 후 서명·공증 배포와 실기기 검증을 준비 중입니다.
+마우스를 화면 끝으로 넘기면 커서가 폰이나 옆 Windows PC, Mac으로 이어지고 키보드 입력·파일·클립보드도 따라갑니다. macOS 13+ Apple Silicon용 서명·공증 DMG를 제공합니다.
 
-> OneMouse lets a Windows PC control Android and another Windows PC. macOS 13+ support is awaiting signed distribution and real-Mac validation. [English site](https://onemouse.pages.dev/en/)
+> OneMouse lets a Windows PC control Android, another Windows PC, and Apple Silicon Macs running macOS 13+. [English site](https://onemouse.pages.dev/en/)
 
 🌐 **공식 사이트**: [onemouse.pages.dev](https://onemouse.pages.dev/)
 
@@ -37,7 +37,7 @@
 - **키보드 입력** — 한글을 포함한 PC 키보드 입력이 Android의 입력 칸으로 그대로 전달됩니다.
 - **모바일 화면 원격 제어** — PC 창에서 Android 화면을 보면서 클릭·드래그·스크롤·키 입력을 보냅니다.
 - **PC-to-PC 제어** — 서브 PC를 페어링하면 한 세트의 마우스/키보드로 여러 PC를 오가며 작업합니다.
-- **Windows-to-Mac 제어 준비** — macOS 13+ 소스는 구현됐으며 입력·파일·경계 드래그·화면 공유·Bluetooth 실기기 검증과 배포가 남아 있습니다.
+- **Windows-to-Mac 제어** — macOS 13+ Apple Silicon Mac으로 커서·키보드·파일·클립보드 입력을 이어서 사용합니다.
 - **파일 전송** — 빠른 드롭존에 파일을 놓아 보내거나, 파일을 잡은 채 화면 가장자리로 드래그해 다른 PC에 바로 놓습니다.
 - **클립보드 동기화** — PC와 Android 사이에서 복사한 텍스트·파일을 이어서 붙여넣습니다.
 - **QR / 6자리 코드 페어링** — 페어링된 기기만 연결되며, 전송 구간은 세션 키로 암호화됩니다.
@@ -55,9 +55,9 @@
 
 자세한 단계별 안내는 [사용 가이드](https://onemouse.pages.dev/guide)에서 확인할 수 있습니다.
 
-### Mac 연결 · 공개 준비 중
+### Mac 연결
 
-아래는 서명·공증 빌드가 공개된 뒤 사용할 예정 절차입니다.
+Apple Silicon용 DMG를 설치한 뒤 다음 순서로 연결합니다.
 
 1. Windows 앱과 macOS 13+ Mac 앱을 실행합니다.
 2. Mac에서 손쉬운 사용 권한을 허용합니다. macOS 15+에서는 로컬 네트워크 권한도 허용하며, macOS 13/14에는 해당 항목이 표시되지 않을 수 있습니다.
@@ -72,26 +72,25 @@ Bluetooth 접근은 Bluetooth 연결을 켤 때 필요합니다. 화면 녹화 �
 
 | 플랫폼 | 링크 |
 | --- | --- |
-| Windows PC | [최신 Setup 다운로드](https://github.com/sdlckdrl/mouselink-web/releases) |
+| Windows PC | [Setup 1.2.70 다운로드](https://github.com/sdlckdrl/mouselink-web/releases/download/v1.2.70/OneMouse-Setup-1.2.70-x64.exe) |
 | Android | [Google Play](https://play.google.com/store/apps/details?id=com.mouselink.app) |
-| macOS 13+ | Windows에서 연결 · 서명/공증 배포 준비 중 |
+| macOS 13+ (Apple Silicon) | [DMG 0.1.1 다운로드](https://github.com/sdlckdrl/mouselink-web/releases/download/mac-v0.1.1/OneMouse-macOS-0.1.1-Apple-Silicon.dmg) |
 
 Mac 다운로드는 `downloads.json`의 `macos.status`가 `released`이고, 서명·공증된
-`universal` 자산 또는 Apple Silicon/Intel 빌드를 고를 수 있는 `downloadPageUrl`이
-있을 때만 활성화됩니다. 아키텍처별 단일 파일을 공용 버튼에 직접 연결하지 않습니다.
+`universal` 자산, 단일 아키텍처 자산 또는 아키텍처 선택용 `downloadPageUrl`이 있을 때
+활성화됩니다. 단일 아키텍처 자산은 홈페이지 버튼에도 해당 아키텍처를 명시합니다.
 
 ```json
 {
   "status": "released",
-  "downloadPageUrl": "https://github.com/example/releases/tag/macos-v0.1.1",
+  "downloadPageUrl": "https://github.com/example/releases/tag/mac-v0.1.1",
   "assets": [
-    { "arch": "arm64", "url": "https://example.invalid/OneMouse-arm64.zip", "filename": "OneMouse-arm64.zip" },
-    { "arch": "x86_64", "url": "https://example.invalid/OneMouse-x86_64.zip", "filename": "OneMouse-x86_64.zip" }
+    { "arch": "arm64", "url": "https://example.invalid/OneMouse-arm64.dmg", "filename": "OneMouse-arm64.dmg" }
   ]
 }
 ```
 
-단일 universal 배포라면 `assets`에 `{"arch":"universal","url":"https://...","filename":"..."}`를 넣고 `downloadPageUrl`은 생략할 수 있습니다. 모든 활성화 URL은 절대 `https://` 주소여야 합니다.
+단일 universal 또는 아키텍처별 배포라면 `assets`에 직접 다운로드 URL을 넣을 수 있습니다. 여러 아키텍처 중 사용자가 골라야 할 때는 `downloadPageUrl`을 함께 제공합니다. 모든 활성화 URL은 절대 `https://` 주소여야 합니다.
 
 ---
 

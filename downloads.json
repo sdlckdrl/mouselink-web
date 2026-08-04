@@ -3,11 +3,18 @@
     "source": "github-latest-release"
   },
   "macos": {
-    "status": "coming_soon",
+    "status": "released",
     "version": "0.1.1",
     "minimumOs": "13.0",
     "distribution": "architecture_specific",
-    "downloadPageUrl": null,
-    "assets": []
+    "downloadPageUrl": "https://github.com/sdlckdrl/mouselink-web/releases/tag/mac-v0.1.1",
+    "assets": [
+      {
+        "arch": "arm64",
+        "url": "https://github.com/sdlckdrl/mouselink-web/releases/download/mac-v0.1.1/OneMouse-macOS-0.1.1-Apple-Silicon.dmg",
+        "filename": "OneMouse-macOS-0.1.1-Apple-Silicon.dmg",
+        "sha256": "07932fa8b96f3cb0192658abc5716f96867315eec23a4f405eacc3bcffc7dc0a"
+      }
+    ]
   }
 }

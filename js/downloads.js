@@ -1,7 +1,8 @@
 (function () {
   var repo = 'sdlckdrl/mouselink-web';
-  var releasesUrl = 'https://github.com/' + repo + '/releases';
-  var apiUrl = 'https://api.github.com/repos/' + repo + '/releases?per_page=20';
+  var windowsFallbackUrl =
+    'https://github.com/sdlckdrl/mouselink-web/releases/download/v1.2.70/OneMouse-Setup-1.2.70-x64.exe';
+  var apiUrl = 'https://api.github.com/repos/' + repo + '/releases?per_page=100';
   var cacheKey = 'onemouse_latest_windows_download';
   var cacheTtlMs = 60 * 60 * 1000;
   var requestTimeoutMs = 8000;
@@ -131,7 +132,7 @@
         return download.url;
       })
       .catch(function () {
-        return releasesUrl;
+        return windowsFallbackUrl;
       });
   }
 
@@ -145,7 +146,7 @@
 
       event.preventDefault();
       downloadPromise.then(function (url) {
-        window.location.href = url || releasesUrl;
+        window.location.href = url || windowsFallbackUrl;
       });
     });
   });
@@ -186,6 +187,17 @@
     if (universal) {
       return {
         url: asHttpsUrl(universal.url),
+        name: universal.filename || null,
+      };
+    }
+
+    var downloadableAssets = assets.filter(function (asset) {
+      return asHttpsUrl(asset.url);
+    });
+    if (downloadableAssets.length === 1) {
+      return {
+        url: asHttpsUrl(downloadableAssets[0].url),
+        name: downloadableAssets[0].filename || null,
       };
     }
 
@@ -238,10 +250,17 @@
         link.classList.remove('btn-disabled');
         link.classList.add('btn-sec');
         link.removeAttribute('aria-disabled');
+        link.removeAttribute('download');
         link.textContent = link.dataset.readyLabel || 'Download for Mac';
+
+        var card = link.closest('.mac-download-card');
+        var label = card && card.querySelector('[data-macos-download-filename]');
+        if (label && asset.name) {
+          label.textContent = asset.name;
+        }
       });
     })
     .catch(function () {
-      // Keep the explicit coming-soon state when the manifest is unavailable.
+      // The page keeps its current direct-download fallback when the manifest is unavailable.
     });
 })();
