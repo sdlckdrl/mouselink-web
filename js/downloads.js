@@ -1,9 +1,9 @@
 (function () {
   var repo = 'sdlckdrl/mouselink-web';
   var windowsFallbackUrl =
-    'https://github.com/sdlckdrl/mouselink-web/releases/download/v1.2.70/OneMouse-Setup-1.2.70-x64.exe';
+    'https://github.com/sdlckdrl/mouselink-web/releases/download/v1.3.1/OneMouse-Setup-1.3.1-x64.exe';
   var apiUrl = 'https://api.github.com/repos/' + repo + '/releases?per_page=100';
-  var cacheKey = 'onemouse_latest_windows_download';
+  var cacheKey = 'onemouse_latest_windows_download_v1_3_1';
   var cacheTtlMs = 60 * 60 * 1000;
   var requestTimeoutMs = 8000;
   var links = document.querySelectorAll('[data-latest-windows-download]');
