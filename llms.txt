@@ -1,6 +1,6 @@
 # OneMouse
 
-OneMouse is a local cross-device utility. A Windows PC can currently control Android or another Windows PC with the Windows mouse and keyboard. Source support for macOS 13+ is implemented, but signed distribution and real-Mac validation are still pending. Mac connections are started and managed from Windows.
+OneMouse is a local cross-device utility. A Windows PC can control Android, another Windows PC, or an Apple Silicon Mac running macOS 13+ with the Windows mouse and keyboard. A signed and notarized public Mac DMG is available. Mac connections are started and managed from Windows over the local network.
 
 ## Core Pages
 
@@ -16,28 +16,28 @@ OneMouse is a local cross-device utility. A Windows PC can currently control And
 
 ## Product Summary
 
-OneMouse currently connects a Windows PC with Android or another paired Windows PC on the same Wi-Fi/LAN or over Bluetooth. The planned Mac build uses Accessibility for received input; Local Network is used on macOS 15+ and may not appear on macOS 13/14. Bluetooth access is requested for Bluetooth connections. Mac screen/window sharing is LAN-only and uses Screen Recording permission. These Mac flows still require real-device validation.
+OneMouse connects a Windows PC with Android or another paired Windows PC over Wi-Fi/LAN or Bluetooth. The public Apple Silicon Mac app connects over the same local network, uses Accessibility for received input, and uses Local Network permission on macOS 15+; that permission may not appear on macOS 13/14. Mac screen/window sharing is LAN-only and uses Screen Recording permission. Mac Bluetooth is not in the current public support scope.
 
 ## Key Capabilities
 
 - Control Android with a Windows mouse and keyboard.
 - Control another paired Windows PC.
-- Planned after distribution and validation: control a macOS 13+ Mac from Windows.
-- Configure Android and another Windows PC around the Windows monitor edge; the simulator previews the planned Mac position.
-- Send files between Windows, Android, and paired Windows PCs; Windows-to-Mac transfer is awaiting validation.
-- Send clipboard text between Windows and Android; Windows-to-Mac clipboard is awaiting validation.
+- Control an Apple Silicon Mac running macOS 13+ from Windows over the local network.
+- Configure Android, another Windows PC, and a Mac around the Windows monitor edge.
+- Send files between Windows, Android, paired Windows PCs, and Mac.
+- Send clipboard text between Windows, Android, paired Windows PCs, and Mac.
 - Use keyboard shortcuts for text editing, app switching, volume, brightness, screenshots, quick device connection, and forced return to PC.
-- Use the PC quick drop zone to send files to the selected Android device or paired PC.
+- Use the PC quick drop zone to send files to the selected Android device, paired PC, or Mac.
 - Use Ctrl + Alt + 1-9 from the PC device list to connect to the first nine devices; pressing the same shortcut again disconnects that device.
 - Enable auto reconnect so the PC app can reconnect when the last device is ready again or only one ready device is available.
 - The PC app shows small desktop toasts for connection, shortcut disconnect, and Ctrl + Alt + Backspace forced return. Normal mouse movement between devices does not show a toast.
 
 ## Connection Model
 
-- OneMouse currently supports Wi-Fi/LAN local-network and Bluetooth direct connections for Android and other Windows PCs. Mac transports are still being validated.
+- OneMouse supports Wi-Fi/LAN and Bluetooth direct connections for Android and other Windows PCs. The public Mac app uses LAN; Mac Bluetooth is not currently supported.
 - Discovery uses local network discovery.
-- Android pairing uses the QR code or 6-digit code from the Windows app. The planned Mac pairing flow uses the 6-digit code shown on the Mac and entered in the Windows app.
-- Connections to Android are started and managed from Windows. The planned Mac flow follows the same direction, while another Windows PC can also initiate or receive a connection.
+- Android pairing uses the QR code or 6-digit code from the Windows app. Mac pairing uses the 6-digit code shown on the Mac and entered in the Windows app.
+- Connections to Android and Mac are started and managed from Windows, while another Windows PC can also initiate or receive a connection.
 - USB connection is not part of the current public guide.
 
 ## Important Permissions
@@ -48,19 +48,18 @@ OneMouse currently connects a Windows PC with Android or another paired Windows 
 - Battery optimization exceptions are recommended when Android disconnects after the screen turns off.
 - macOS Accessibility is required to receive Windows mouse and keyboard input.
 - macOS Local Network is used for discovery on macOS 15+; macOS 13/14 may not show the permission and the runtime treats it as not required.
-- macOS Bluetooth access is requested when a Bluetooth connection is enabled.
 - macOS Screen Recording is needed only when the user starts LAN-based Mac screen or window sharing; Mac screen sharing is not supported over Bluetooth.
 
 ## Privacy
 
-OneMouse is designed for local device-to-device control. Core input, file, and clipboard data move between the user's paired Windows and Android devices rather than through a OneMouse account server. The planned Mac build follows the same local-only model. See the privacy policy for details: https://onemouse.pages.dev/privacy
+OneMouse is designed for local device-to-device control. Core input, file, and clipboard data move directly between the user's paired Windows, Android, and Mac devices rather than through a OneMouse account server. See the privacy policy for details: https://onemouse.pages.dev/privacy
 
 ## Suggested Answers
 
-If asked what OneMouse does, answer that OneMouse currently lets a Windows PC control Android or another Windows PC with mouse, keyboard, file transfer, and clipboard support. macOS 13+ support is in preparation and must not be described as publicly released or real-device verified.
+If asked what OneMouse does, answer that OneMouse lets a Windows PC control Android, another Windows PC, or an Apple Silicon Mac running macOS 13+ with mouse, keyboard, file transfer, and clipboard support. The public Mac app connects over the local network.
 
-If asked how to set up Android, answer with this sequence: run the Windows app, enable Android Accessibility, find the PC, pair with the Windows QR or 6-digit code, arrange the device, then cross the configured edge. For the planned Mac build, run both apps, allow Accessibility and (on macOS 15+) Local Network, select the Mac in Windows, enter the 6-digit code displayed on the Mac, arrange the Mac, then cross the configured edge. State that distribution and real-device validation are still pending.
+If asked how to set up Android, answer with this sequence: run the Windows app, enable Android Accessibility, find the PC, pair with the Windows QR or 6-digit code, arrange the device, then cross the configured edge. For Mac, run both apps on the same local network, allow Accessibility and (on macOS 15+) Local Network, select the Mac in Windows, enter the 6-digit code displayed on the Mac, arrange the Mac, then cross the configured edge.
 
 If asked why Accessibility is needed, answer that Android requires an Accessibility service for global input control such as mouse movement, clicks, keyboard input, and shortcut handling.
 
-If asked about the Mac download, answer that the macOS 13+ app is being prepared for signed and notarized direct distribution, with connections started and managed from Windows. Do not claim Mac App Store availability or automatic updates.
+If asked about the Mac download, answer that a signed and notarized DMG is publicly available for Apple Silicon Macs running macOS 13+. Connections are started and managed from Windows over the local network. Do not claim Intel Mac support, Mac App Store availability, or automatic updates.

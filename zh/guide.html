@@ -6,16 +6,16 @@
     <title>使用指南 | OneMouse 一鼠 — 从首次连接到常用功能</title>
     <meta
       name="description"
-      content="OneMouse 使用指南：介绍 Android、另一台 Windows PC 与 macOS 13+ Mac 的连接流程；Mac 公证安装包与真机验证仍在进行。"
+      content="OneMouse 使用指南：介绍从 Windows 连接 Android、另一台 Windows PC 与 macOS 13+ Apple 芯片 Mac 的配对、布局、文件传输和权限设置。"
     />
     <meta name="robots" content="index,follow,max-image-preview:large" />
     <link rel="stylesheet" href="../css/onemouse.css" />
     <link rel="canonical" href="https://onemouse.pages.dev/zh/guide" />
-    <link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/guide.html" />
-    <link rel="alternate" hreflang="en" href="https://onemouse.pages.dev/en/guide.html" />
-    <link rel="alternate" hreflang="ja" href="https://onemouse.pages.dev/ja/guide.html" />
-    <link rel="alternate" hreflang="zh" href="https://onemouse.pages.dev/zh/guide.html" />
-    <link rel="alternate" hreflang="x-default" href="https://onemouse.pages.dev/guide.html" />
+    <link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/guide" />
+    <link rel="alternate" hreflang="en" href="https://onemouse.pages.dev/en/guide" />
+    <link rel="alternate" hreflang="ja" href="https://onemouse.pages.dev/ja/guide" />
+    <link rel="alternate" hreflang="zh" href="https://onemouse.pages.dev/zh/guide" />
+    <link rel="alternate" hreflang="x-default" href="https://onemouse.pages.dev/guide" />
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MJ73H86TWX"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -48,13 +48,13 @@
       </div>
     </header>
 
-    <main>
+    <main class="main-grid-aligned">
       <section class="phero wrap">
         <p class="ey">使用指南</p>
         <h1 class="page">从首次连接到常用功能，按顺序来。</h1>
         <p class="lead">
-          连接由 Windows 端发起并管理。Android 与另一台 Windows PC 已可作为连接目标；Mac
-          版源码及配套支持已准备，但公开公证安装包与真机验证仍在进行。
+          连接由 Windows 端发起并管理。Android、另一台 Windows PC 与 macOS 13+ Apple 芯片 Mac
+          均可作为连接目标；Mac 的当前公开支持使用 LAN。
         </p>
         <nav class="toc" aria-label="本页目录">
           <a href="#start">5 分钟连接步骤</a>
@@ -77,7 +77,7 @@
             <h2 class="sec">首次连接只要照着这个顺序做就行。</h2>
             <p class="sec-lead">
               以下是 Android 的首次连接流程，以 Wi-Fi（同一台 Wi-Fi 路由器）为准。Mac
-              的独立步骤是公开公证版发布后使用的预览流程。
+              请使用下方独立的 LAN 连接步骤。
             </p>
           </div>
           <div class="timeline">
@@ -168,8 +168,8 @@
             <h2 class="sec">连接后，只要把手机位置对准实际方向就行。</h2>
           </div>
           <p class="sec-lead" style="max-width: 60ch">
-            确定鼠标要越过的边缘，按设备实际摆放的一侧（左、右、上、下）来布置。当前可拖动手机、平板和另一台
-            Windows PC；Mac 公开版发布后将作为连接目标加入布局。
+            确定鼠标要越过的边缘，按设备实际摆放的一侧（左、右、上、下）来布置。手机、平板、另一台
+            Windows PC 与受支持的 Mac 都可加入布局。
           </p>
           <details class="fold">
             <summary><span>查看布局界面</span></summary>
@@ -251,18 +251,18 @@
         <div class="wrap">
           <div class="sec-head">
             <p class="ey">文件与剪贴板</p>
-            <h2 class="sec">文件可通过传输界面、快速拖放区、PC-to-PC 拖动来发送。</h2>
+            <h2 class="sec">文件可通过传输界面、快速拖放区或电脑间边界拖动来发送。</h2>
           </div>
           <div class="split lead-left">
             <div>
               <ul class="panel" style="list-style: none; padding-left: 22px">
                 <li style="margin: 0 0 8px">
-                  把文件放到<b>传输界面</b>或屏幕上的小<b>拖放区</b>，就会发送到选定的 Android
-                  或另一台 PC。
+                  把文件放到<b>传输界面</b>或屏幕上的小<b>拖放区</b>，就会发送到选定的
+                  Android、Windows PC 或 Mac。
                 </li>
                 <li style="margin: 8px 0">
-                  <b>PC-to-PC</b> 是拖着文件越过布置好的屏幕边界，放到目标 PC 上即可传输（需要另一台
-                  PC 已连接并已布置）。
+                  <b>Windows PC 之间或 Windows 与 Mac 的 LAN 连接</b
+                  >可拖着文件越过布置好的屏幕边界，放到目标设备上即可传输（目标需已连接并完成布局）。
                 </li>
                 <li style="margin: 8px 0">Android → PC 通过 Android 传输标签页或分享菜单发送。</li>
                 <li style="margin: 8px 0 0">如果无法开始，请检查连接状态和所选的设备。</li>
@@ -423,7 +423,7 @@
             <h2 class="sec">没有 Wi-Fi 路由器，也能用 Bluetooth 连接。</h2>
             <p class="sec-lead">
               目前可通过 Bluetooth 把 Windows 端与 Android 或另一台 Windows PC 直接连接。Mac
-              Bluetooth 支持已写入源码，但公开公证安装包与真机验证仍在进行。
+              当前公开版不支持 Bluetooth 连接；连接 Mac 请使用 LAN。
             </p>
           </div>
           <div class="split lead-left">
@@ -536,11 +536,11 @@
       <section class="section-alt" id="mac">
         <div class="wrap narrow">
           <div class="sec-head">
-            <p class="ey">Mac 连接目标 · 预览</p>
-            <h2 class="sec">公开版发布后，从 Windows 选择 Mac，再输入 Mac 上显示的 6 位代码。</h2>
+            <p class="ey">Mac 连接目标 · 公开支持</p>
+            <h2 class="sec">从 Windows 选择 Mac，再输入 Mac 上显示的 6 位代码。</h2>
             <p class="sec-lead">
-              以下 5 步是公开公证版发布后使用的流程。Mac 源码及配套支持已准备，但公开公证安装包与
-              Windows+Mac 真机验证仍在进行，尚不能视为正式发布或验证完成。
+              在 Apple 芯片 Mac 上安装公开 DMG，再从 Windows OneMouse 发起并管理 LAN 连接。按以下 5
+              步完成设置。
             </p>
           </div>
           <div class="timeline">
@@ -549,7 +549,7 @@
               <div class="body">
                 <h4>在 Windows 和 Mac 上打开公开版 OneMouse</h4>
                 <p>
-                  发布后，让 Windows 端与 macOS 13+ Mac 连接到同一个本地网络，并在两端运行
+                  让 Windows 端与 macOS 13+ Apple 芯片 Mac 连接到同一个本地网络，并在两端运行
                   OneMouse。
                 </p>
               </div>
@@ -589,9 +589,8 @@
               <div class="body">
                 <h4>布置位置并开始使用</h4>
                 <p>
-                  公开版发布后，在 Windows 的布局编辑器中把 Mac
-                  放到实际方向，随后把鼠标移过对应边缘。只有要在 Windows 查看 Mac
-                  屏幕或窗口时，才需要在 Mac 额外允许“屏幕录制”。
+                  在 Windows 的布局编辑器中把 Mac 放到实际方向，随后把鼠标移过对应边缘。只有要在
+                  Windows 查看 Mac 屏幕或窗口时，才需要在 Mac 额外允许“屏幕录制”。
                 </p>
               </div>
             </div>
@@ -622,12 +621,12 @@
                 可能不会显示该项目。
               </li>
               <li>
-                <b>Mac“屏幕录制” — 可选：</b>公开版发布后，只有从 Windows 查看 Mac
-                屏幕或窗口时才需要。
+                <b>Mac“屏幕录制” — 可选：</b>只有从 Windows 查看 Mac
+                屏幕或窗口时才需要，画面共享仅支持 LAN。
               </li>
               <li>
-                <b>Bluetooth：</b>仅在选择 Bluetooth 连接时使用相应系统权限；Mac
-                支持仍处于公证包发布和真机验证阶段。
+                <b>Mac Bluetooth — 当前公开支持范围外：</b>当前公开版不支持。Mac
+                输入、文件、剪贴板和画面共享请使用 LAN。
               </li>
             </ul>
           </div>

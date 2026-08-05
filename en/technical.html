@@ -6,16 +6,16 @@
     <title>Technical &amp; Security | OneMouse for Android, Windows, and Mac</title>
     <meta
       name="description"
-      content="How OneMouse connects Windows, Android, another Windows PC, and the planned macOS 13+ build, including permissions and pending validation scope."
+      content="How OneMouse connects Windows, Android, another Windows PC, and Apple Silicon Macs running macOS 13+, including permissions, local data flow, and support scope."
     />
     <meta name="robots" content="index,follow,max-image-preview:large" />
     <link rel="stylesheet" href="../css/onemouse.css" />
     <link rel="canonical" href="https://onemouse.pages.dev/en/technical" />
-    <link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/technical.html" />
-    <link rel="alternate" hreflang="en" href="https://onemouse.pages.dev/en/technical.html" />
-    <link rel="alternate" hreflang="ja" href="https://onemouse.pages.dev/ja/technical.html" />
-    <link rel="alternate" hreflang="zh" href="https://onemouse.pages.dev/zh/technical.html" />
-    <link rel="alternate" hreflang="x-default" href="https://onemouse.pages.dev/technical.html" />
+    <link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/technical" />
+    <link rel="alternate" hreflang="en" href="https://onemouse.pages.dev/en/technical" />
+    <link rel="alternate" hreflang="ja" href="https://onemouse.pages.dev/ja/technical" />
+    <link rel="alternate" hreflang="zh" href="https://onemouse.pages.dev/zh/technical" />
+    <link rel="alternate" hreflang="x-default" href="https://onemouse.pages.dev/technical" />
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MJ73H86TWX"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -48,7 +48,7 @@
       </div>
     </header>
 
-    <main>
+    <main class="main-grid-aligned">
       <section class="phero wrap">
         <p class="ey">Technical &amp; Security</p>
         <h1 class="page">How it connects and which permissions it uses — laid out separately.</h1>
@@ -75,10 +75,9 @@
             <h2 class="sec">It works only between your own paired devices.</h2>
           </div>
           <p class="sec-lead" style="max-width: 64ch">
-            Input, files, and clipboard currently travel directly between
-            <b>your Windows PC and Android or another Windows PC</b>. The same local connection
-            model is implemented for Mac, while public distribution and real-Mac validation are
-            still in progress. Nothing is uploaded to an account through an outside server.
+            Input, files, and clipboard travel directly between
+            <b>your Windows PC and a paired Android device, Windows PC, or Mac</b>. Nothing is
+            uploaded to an account through an outside server.
           </p>
         </div>
       </section>
@@ -90,8 +89,8 @@
             <p class="ey">Permissions</p>
             <h2 class="sec">Only what a feature actually needs.</h2>
             <p class="sec-lead">
-              Nothing is requested all at once. Android and the Mac build in preparation ask for
-              each permission when the related feature starts.
+              Nothing is requested all at once. Android and Mac ask for each permission when the
+              related feature starts.
             </p>
           </div>
           <div class="cards">
@@ -166,11 +165,11 @@
               </p>
             </article>
             <article class="card">
-              <p class="card-lbl">When using Mac Bluetooth</p>
+              <p class="card-lbl">Mac Bluetooth · not publicly supported</p>
               <h3>Bluetooth</h3>
               <p>
-                Requested when using the system-paired Bluetooth transport. Mac screen and window
-                sharing is not available over Bluetooth and is LAN-only.
+                Mac Bluetooth is not supported in the current public build. Use LAN to connect a Mac
+                and share its screen or windows.
               </p>
             </article>
           </div>
@@ -199,8 +198,8 @@
                 yourself.
               </li>
               <li>
-                A released Mac build stores its paired session key in the macOS Keychain. Clearing
-                pairing removes the trusted connection.
+                The Mac app stores its paired session key in the macOS Keychain. Clearing pairing
+                removes the trusted connection.
               </li>
             </ul>
           </div>
@@ -245,9 +244,7 @@
         <div class="wrap narrow">
           <div class="sec-head">
             <p class="ey">Support Scope</p>
-            <h2 class="sec">
-              Mac becomes an officially supported target after distribution and hardware validation.
-            </h2>
+            <h2 class="sec">Apple Silicon Macs are supported as LAN connection targets.</h2>
           </div>
           <div class="panel">
             <ul>
@@ -260,14 +257,15 @@
                 <b>Bluetooth</b>.
               </li>
               <li>
-                <b>macOS 13 or later:</b> the source accepts connections initiated from Windows. The
-                signed public build and real-Mac input, file, edge-drag, screen-sharing, and
-                Bluetooth validation are still pending.
+                <b>macOS 13 or later:</b> the public Apple Silicon build accepts LAN connections
+                initiated and managed from Windows. Input, file and clipboard transfer, edge drag,
+                and screen sharing are supported over LAN. Mac Bluetooth is not supported in the
+                current public build; use LAN.
               </li>
               <li>Not included: connecting over USB/ADB is outside the official support scope.</li>
               <li>
-                Windows-to-Windows supports two-way file, folder, and clipboard transfer. The same
-                Windows-to-Mac flows remain planned until Mac validation is complete.
+                Windows-to-Windows supports two-way file, folder, and clipboard transfer.
+                Windows-to-Mac file and clipboard flows are available over LAN.
               </li>
             </ul>
           </div>
@@ -283,15 +281,38 @@
           </div>
           <div class="log">
             <div class="log-item">
-              <time>2026.07</time>
+              <time datetime="2026-08">2026.08</time>
               <p>
-                <b>macOS 13+ support preparation</b> — the source and public documentation now
-                define the Windows-to-Mac flow. Signed distribution and real-Mac validation remain
-                before public support.
+                <b>Public macOS 13+ support</b> — a public DMG is now available for Apple Silicon
+                Macs. Connect and arrange a Mac from Windows to continue using mouse and keyboard
+                input, files, and clipboard.
               </p>
             </div>
             <div class="log-item">
-              <time>2026.07</time>
+              <time datetime="2026-08">2026.08</time>
+              <p>
+                <b
+                  >Coming in the next Windows release: more reliable file dragging and return
+                  trips</b
+                >
+                — carrying a file across PC and Mac boundaries, returning before drop, completing
+                the transfer, or cancelling will keep the cursor and drag state in sync.
+              </p>
+            </div>
+            <div class="log-item">
+              <time datetime="2026-08">2026.08</time>
+              <p>
+                <b
+                  >Coming in the next Windows and Android releases: stable phone orientation and
+                  multi-device handoffs</b
+                >
+                — a single phone will no longer alternate between landscape and portrait in the
+                device layout, and cursor position and connection state will remain stable during
+                repeated handoffs across several devices.
+              </p>
+            </div>
+            <div class="log-item">
+              <time datetime="2026-07">2026.07</time>
               <p>
                 <b>Smarter device arrangement</b> · <b>See the full layout on another PC</b> —
                 devices no longer overlap, and dragging one between two others wedges it into place.
@@ -301,7 +322,7 @@
               </p>
             </div>
             <div class="log-item">
-              <time>2026.07</time>
+              <time datetime="2026-07">2026.07</time>
               <p>
                 <b>Keep screen on while connected · idle dimming</b> — the phone screen stays on
                 during a connection and dims when idle to save battery. It holds even with several
@@ -309,7 +330,7 @@
               </p>
             </div>
             <div class="log-item">
-              <time>2026.07</time>
+              <time datetime="2026-07">2026.07</time>
               <p>
                 <b>See other devices' positions from mobile</b> ·
                 <b>chain (single-row) arrangement</b> — from your phone you can check how the other
@@ -317,7 +338,7 @@
               </p>
             </div>
             <div class="log-item">
-              <time>2026.07</time>
+              <time datetime="2026-07">2026.07</time>
               <p>
                 <b>Cursor crossing effect between devices</b> ·
                 <b>Ctrl+Alt+Backspace to recenter</b> — a smooth effect as the cursor crosses
@@ -325,14 +346,14 @@
               </p>
             </div>
             <div class="log-item">
-              <time>2026.07</time>
+              <time datetime="2026-07">2026.07</time>
               <p>
                 <b>Enter to send in messengers</b> — in messaging apps, press Enter on the PC
                 keyboard to send, and Shift+Enter for a new line.
               </p>
             </div>
             <div class="log-item">
-              <time>2026.06</time>
+              <time datetime="2026-06">2026.06</time>
               <p>
                 <b>Direct Bluetooth connection</b> · <b>PC-to-PC Bluetooth</b> — connect to your
                 phone or another PC without a Wi-Fi router to exchange input, clipboard, and files.

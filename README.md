@@ -59,12 +59,12 @@
 
 Apple Silicon용 DMG를 설치한 뒤 다음 순서로 연결합니다.
 
-1. Windows 앱과 macOS 13+ Mac 앱을 실행합니다.
+1. Windows 앱과 macOS 13+ Apple Silicon Mac 앱을 실행합니다.
 2. Mac에서 손쉬운 사용 권한을 허용합니다. macOS 15+에서는 로컬 네트워크 권한도 허용하며, macOS 13/14에는 해당 항목이 표시되지 않을 수 있습니다.
 3. Windows 기기 관리에서 Mac을 선택하고 Mac에 표시된 6자리 코드를 입력합니다.
 4. Windows 배치 화면에서 Mac 위치를 지정하고 화면 경계로 마우스를 넘깁니다.
 
-Bluetooth 접근은 Bluetooth 연결을 켤 때 필요합니다. 화면 녹화 권한은 LAN에서 Windows로 Mac 화면·창을 볼 때만 필요하며, Mac 화면 공유는 Bluetooth를 지원하지 않습니다.
+Mac은 현재 공개 버전에서 Bluetooth 연결을 지원하지 않으므로 LAN으로 연결합니다. 화면 녹화 권한은 LAN에서 Windows로 Mac 화면·창을 볼 때만 필요합니다.
 
 ---
 

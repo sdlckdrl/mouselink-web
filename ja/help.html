@@ -6,16 +6,16 @@
     <title>ヘルプ | OneMouse ワンマウス — 接続・入力トラブルの解決</title>
     <meta
       name="description"
-      content="OneMouseのAndroid・Windows接続の問題解決と、公開配布・実機検証を準備中のmacOS 13以降版の確認項目を案内します。"
+      content="OneMouseでWindowsからAndroid・別のWindows PC・macOS 13以降のApple Silicon Macへ接続するときの、検出、ペアリング、入力、ファイル転送の確認項目を案内します。"
     />
     <meta name="robots" content="index,follow,max-image-preview:large" />
     <link rel="stylesheet" href="../css/onemouse.css" />
     <link rel="canonical" href="https://onemouse.pages.dev/ja/help" />
-    <link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/help.html" />
-    <link rel="alternate" hreflang="en" href="https://onemouse.pages.dev/en/help.html" />
-    <link rel="alternate" hreflang="ja" href="https://onemouse.pages.dev/ja/help.html" />
-    <link rel="alternate" hreflang="zh" href="https://onemouse.pages.dev/zh/help.html" />
-    <link rel="alternate" hreflang="x-default" href="https://onemouse.pages.dev/help.html" />
+    <link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/help" />
+    <link rel="alternate" hreflang="en" href="https://onemouse.pages.dev/en/help" />
+    <link rel="alternate" hreflang="ja" href="https://onemouse.pages.dev/ja/help" />
+    <link rel="alternate" hreflang="zh" href="https://onemouse.pages.dev/zh/help" />
+    <link rel="alternate" hreflang="x-default" href="https://onemouse.pages.dev/help" />
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MJ73H86TWX"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -55,7 +55,7 @@
         <p class="lead">
           Androidと別のWindows PCは<b
             >起動 → 権限 → 検出 → ファイアウォール → ペアリング → 入力・復帰</b
-          >の順で確認します。Mac項目は公開配布と実機検証を準備中のビルド向け事前案内です。
+          >の順で確認します。MacはWindowsと同じローカルネットワークを使う公開LAN接続を確認します。
         </p>
       </section>
 
@@ -75,7 +75,7 @@
                 Androidの<b>アクセシビリティサービス</b>がオフになったか、再起動された可能性があります。アクセシビリティでOneMouseを再度オンにしてください。
               </li>
               <li>
-                <b>公開後のMacで入力できないとき →</b> Macの<b
+                <b>Macで入力できないとき →</b> Macの<b
                   >システム設定 → プライバシーとセキュリティ → アクセシビリティ</b
                 >でOneMouseを許可してください。
               </li>
@@ -157,7 +157,7 @@
               <li><b>選択中のデバイス</b>が合っているか確認 — 送信は選択した相手に送られます。</li>
               <li>
                 Windows
-                PC間のドラッグには、<b>サブPCが接続・配置</b>されている必要があります。Mac境界ドラッグは公開前の実機検証中です。
+                PC間またはWindowsとMacのドラッグには、対象のPC・Macが<b>接続・配置</b>されている必要があります。Macの境界ドラッグはLAN接続を使用します。
               </li>
               <li>
                 ファイルをつかんだまま配置した<b>画面の境界を越えて</b>、相手の上で放すと送信が始まります。
@@ -175,10 +175,11 @@
       <section id="mac">
         <div class="wrap narrow">
           <div class="sec-head">
-            <p class="ey">Macのトラブル · 公開準備中</p>
-            <h2 class="sec">公開後のMac版で想定する確認項目です。</h2>
+            <p class="ey">Macのトラブル</p>
+            <h2 class="sec">公開中のmacOS 13以降版で確認する項目です。</h2>
             <p class="sec-lead">
-              現在は署名・公証済み配布と実機検証中です。接続はAndroidと同様にWindowsから開始・管理します。
+              Apple Silicon
+              Mac向け公開版をインストールし、LAN接続をWindowsから開始・管理します。MacのBluetooth接続は現在の公開サポート対象外です。
             </p>
           </div>
           <div class="split">

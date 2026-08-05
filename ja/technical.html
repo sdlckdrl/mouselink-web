@@ -6,16 +6,16 @@
     <title>技術・セキュリティ | OneMouse ワンマウス — 接続の仕組みと権限</title>
     <meta
       name="description"
-      content="OneMouseでWindowsからAndroid・別のWindows PCへの接続を開始・管理する仕組みと、公開配布・実機検証を準備中のmacOS 13以降版の権限、データ、サポート範囲を説明します。"
+      content="OneMouseでWindowsからAndroid・別のWindows PC・macOS 13以降のApple Silicon Macへの接続を開始・管理する仕組みと、権限、データ、サポート範囲を説明します。"
     />
     <meta name="robots" content="index,follow,max-image-preview:large" />
     <link rel="stylesheet" href="../css/onemouse.css" />
     <link rel="canonical" href="https://onemouse.pages.dev/ja/technical" />
-    <link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/technical.html" />
-    <link rel="alternate" hreflang="en" href="https://onemouse.pages.dev/en/technical.html" />
-    <link rel="alternate" hreflang="ja" href="https://onemouse.pages.dev/ja/technical.html" />
-    <link rel="alternate" hreflang="zh" href="https://onemouse.pages.dev/zh/technical.html" />
-    <link rel="alternate" hreflang="x-default" href="https://onemouse.pages.dev/technical.html" />
+    <link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/technical" />
+    <link rel="alternate" hreflang="en" href="https://onemouse.pages.dev/en/technical" />
+    <link rel="alternate" hreflang="ja" href="https://onemouse.pages.dev/ja/technical" />
+    <link rel="alternate" hreflang="zh" href="https://onemouse.pages.dev/zh/technical" />
+    <link rel="alternate" hreflang="x-default" href="https://onemouse.pages.dev/technical" />
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MJ73H86TWX"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -48,7 +48,7 @@
       </div>
     </header>
 
-    <main>
+    <main class="main-grid-aligned">
       <section class="phero wrap">
         <p class="ey">技術・セキュリティ</p>
         <h1 class="page">接続の仕組みと権限を、別ページにまとめました。</h1>
@@ -78,9 +78,9 @@
             <h2 class="sec">ペアリングした自分のデバイス同士でだけ動作します。</h2>
           </div>
           <p class="sec-lead" style="max-width: 64ch">
-            現在、入力・ファイル・クリップボードは、<b
-              >Windowsと、ペアリングしたAndroidまたは別のWindows PC</b
-            >の間で直接やり取りされます。Macにも同じローカル接続構造を実装していますが、公開配布とMac実機検証は進行中です。外部サーバーを経由してアカウントにアップロードする仕組みではありません。
+            入力・ファイル・クリップボードは、<b
+              >Windowsと、ペアリングしたAndroid・Windows PC・Mac</b
+            >の間で直接やり取りされます。MacはLANで接続します。外部サーバーを経由してアカウントにアップロードする仕組みではありません。
           </p>
         </div>
       </section>
@@ -92,8 +92,8 @@
             <p class="ey">接続の方向</p>
             <h2 class="sec">接続はWindowsから開始・管理します。</h2>
             <p class="sec-lead">
-              Android、別のWindows PC、macOS
-              13以降のMacを接続先として同じ並びで扱います。Mac版は公開配布と実機検証を準備中です。
+              Android、別のWindows PC、macOS 13以降のApple Silicon
+              Macを接続先として同じ並びで扱います。Macの公開サポートはLAN接続が対象です。
             </p>
           </div>
           <div class="cards">
@@ -119,10 +119,11 @@
               </p>
             </article>
             <article class="card">
-              <p class="card-lbl">接続先 · 公開準備中</p>
+              <p class="card-lbl">接続先 · LANで公開サポート</p>
               <h3>macOS 13以降</h3>
               <p>
-                Androidと同様にWindows側から選択し、Macに表示された6桁コードを入力する実装です。署名・公証済み配布と実機検証はまだ完了していません。
+                Apple Silicon
+                Mac向けの公開版です。Windows側から選択し、Macに表示された6桁コードを入力してLANで接続します。
               </p>
             </article>
           </div>
@@ -136,7 +137,7 @@
             <p class="ey">Permissions</p>
             <h2 class="sec">権限は機能の提供に必要な範囲だけに。</h2>
             <p class="sec-lead">
-              一度にまとめて求めるのではなく、その機能を始めるときにAndroidまたは準備中のMac版上でユーザー自身が許可します。
+              一度にまとめて求めるのではなく、その機能を始めるときにAndroidまたはMac上でユーザー自身が許可します。
             </p>
           </div>
           <div class="cards">
@@ -202,9 +203,11 @@
               </p>
             </article>
             <article class="card">
-              <p class="card-lbl">Mac・Bluetooth接続時</p>
+              <p class="card-lbl">Mac・公開サポート対象外</p>
               <h3>Bluetooth</h3>
-              <p>システムでペアリングしたBluetooth接続を使うときに要求します。</p>
+              <p>
+                現在の公開版ではMacのBluetooth接続をサポートしていません。Macとの接続にはLANを使用します。
+              </p>
             </article>
           </div>
         </div>
@@ -231,7 +234,7 @@
                 クリップボード・ファイルの送信は、ユーザーが相手を選んで実行するときにだけ行われます。
               </li>
               <li>
-                Macのアクセシビリティ、画面収録、Bluetoothと、macOS
+                Macのアクセシビリティ、画面収録と、macOS
                 15以降のローカルネットワーク許可状態は、接続準備と機能の利用可否を表示するためにMac上で確認します。
               </li>
             </ul>
@@ -276,7 +279,7 @@
         <div class="wrap narrow">
           <div class="sec-head">
             <p class="ey">Support Scope</p>
-            <h2 class="sec">Macは配布と実機検証の完了後に正式サポートへ移行します。</h2>
+            <h2 class="sec">Apple Silicon MacをLANの接続先として公開サポートします。</h2>
           </div>
           <div class="panel">
             <ul>
@@ -284,11 +287,11 @@
                 <b>接続の開始・管理：</b>Windows 10/11で接続先を選択・配置し、入力を送ります。
               </li>
               <li>
-                <b>接続先：</b>現在はAndroidと別のWindows PC。macOS
-                13以降のMacも同じ接続先として実装済みですが、公証済み配布版と実機検証は準備中です。
+                <b>接続先：</b>Android、別のWindows PC、macOS 13以降のApple Silicon
+                Mac。Macへの接続はWindowsから開始・管理し、LANを使用します。
               </li>
               <li>
-                Macの入力・ファイル・境界ドラッグ・Bluetoothは実機検証中です。Mac画面・ウィンドウ共有はLAN専用です。
+                Macの入力・ファイル・境界ドラッグ・画面共有はLANで利用できます。現在の公開版ではMacのBluetooth接続をサポートしていません。Mac画面・ウィンドウ共有はLAN専用です。
               </li>
               <li>対象外：USB/ADBを介した接続は公式のサポート範囲ではありません。</li>
               <li>
@@ -309,42 +312,63 @@
           </div>
           <div class="log">
             <div class="log-item">
-              <time>2026.07</time>
+              <time datetime="2026-08">2026.08</time>
+              <p>
+                <b>macOS 13以降向け公開版を提供</b> — Apple Silicon
+                Mac向けの公開DMGを提供開始。WindowsからMacを接続・配置し、マウス・キーボード入力、ファイル、クリップボードを引き継いで使えます。
+              </p>
+            </div>
+            <div class="log-item">
+              <time datetime="2026-08">2026.08</time>
+              <p>
+                <b>次回のWindows版：ファイルドラッグの移動・復帰を安定化</b> —
+                PCとMacの境界をファイルをつかんだまま越え、ドロップ前に戻る、転送を完了する、またはキャンセルするときも、カーソルとドラッグ状態がずれないよう改善します。
+              </p>
+            </div>
+            <div class="log-item">
+              <time datetime="2026-08">2026.08</time>
+              <p>
+                <b>次回のWindows・Android版：スマホの画面方向・複数デバイス間の移動を安定化</b> —
+                1台のスマホがデバイス配置上で横向き・縦向きに交互に表示される問題を修正し、複数デバイスを連続して移動するときのカーソル位置と接続状態を安定化します。
+              </p>
+            </div>
+            <div class="log-item">
+              <time datetime="2026-07">2026.07</time>
               <p>
                 <b>デバイス配置の編集を改善</b>・<b>サブPCでも全体の配置を表示</b> —
                 デバイス同士が重ならず、2台のあいだにドラッグするとその位置に割り込みます。基準のデバイスを動かすと残りはメインPCへ磁石のように吸着し、Bluetooth・Wi-Fiで接続した別のPCでもメインPCの配置をそのまま確認できます。
               </p>
             </div>
             <div class="log-item">
-              <time>2026.07</time>
+              <time datetime="2026-07">2026.07</time>
               <p>
                 <b>接続中の画面オフ防止・アイドル時のディミング</b> —
                 接続している間はスマホの画面がオフにならず、使っていないときは暗くしてバッテリーを節約します。複数デバイスの同時接続でも維持されます。
               </p>
             </div>
             <div class="log-item">
-              <time>2026.07</time>
+              <time datetime="2026-07">2026.07</time>
               <p>
                 <b>モバイルで他のデバイスの配置を見る</b>・<b>チェーン（1列）配置</b> —
                 スマホからでも接続中の他のデバイスの配置を確認でき、PC・スマホ・PCを一列につなげて配置できます。
               </p>
             </div>
             <div class="log-item">
-              <time>2026.07</time>
+              <time datetime="2026-07">2026.07</time>
               <p>
                 <b>境界を越えるカーソル演出</b>・<b>Ctrl+Alt+Backspaceで中央へ復帰</b> —
                 デバイス間を越えるときのなめらかな演出、カーソルを見失ったらモニターの中央へ戻します。
               </p>
             </div>
             <div class="log-item">
-              <time>2026.07</time>
+              <time datetime="2026-07">2026.07</time>
               <p>
                 <b>メッセンジャーのエンターで送信</b> —
                 カカオトーク・SMSでPCキーボードのエンターで送信、Shift+エンターで改行。
               </p>
             </div>
             <div class="log-item">
-              <time>2026.06</time>
+              <time datetime="2026-06">2026.06</time>
               <p>
                 <b>Bluetoothの直接接続</b>・<b>PC↔PCのBluetooth</b> —
                 Wi-Fiルーターなしでスマホや別のPCに接続し、入力・クリップボード・ファイルをやり取りします。

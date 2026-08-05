@@ -6,16 +6,16 @@
     <title>使い方ガイド | OneMouse — 初回接続からよく使う機能まで</title>
     <meta
       name="description"
-      content="OneMouseでWindowsからAndroid・別のWindows PCへの接続を開始・管理する手順と、公開配布・実機検証を準備中のmacOS 13以降版をご案内します。"
+      content="OneMouseでWindowsからAndroid・別のWindows PC・macOS 13以降のApple Silicon Macへの接続を開始・管理する手順をご案内します。"
     />
     <meta name="robots" content="index,follow,max-image-preview:large" />
     <link rel="stylesheet" href="../css/onemouse.css" />
     <link rel="canonical" href="https://onemouse.pages.dev/ja/guide" />
-    <link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/guide.html" />
-    <link rel="alternate" hreflang="en" href="https://onemouse.pages.dev/en/guide.html" />
-    <link rel="alternate" hreflang="ja" href="https://onemouse.pages.dev/ja/guide.html" />
-    <link rel="alternate" hreflang="zh" href="https://onemouse.pages.dev/zh/guide.html" />
-    <link rel="alternate" hreflang="x-default" href="https://onemouse.pages.dev/guide.html" />
+    <link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/guide" />
+    <link rel="alternate" hreflang="en" href="https://onemouse.pages.dev/en/guide" />
+    <link rel="alternate" hreflang="ja" href="https://onemouse.pages.dev/ja/guide" />
+    <link rel="alternate" hreflang="zh" href="https://onemouse.pages.dev/zh/guide" />
+    <link rel="alternate" hreflang="x-default" href="https://onemouse.pages.dev/guide" />
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MJ73H86TWX"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -48,13 +48,13 @@
       </div>
     </header>
 
-    <main>
+    <main class="main-grid-aligned">
       <section class="phero wrap">
         <p class="ey">使い方ガイド</p>
         <h1 class="page">初回接続からよく使う機能まで、順番に。</h1>
         <p class="lead">
-          接続はWindows 10/11から開始・管理します。Android、別のWindows PC、macOS
-          13以降のMacを接続先として扱い、Mac版は公開配布と実機検証を準備中です。
+          接続はWindows 10/11から開始・管理します。Android、別のWindows PC、macOS 13以降のApple
+          Silicon Macを接続先として扱います。Macの公開サポートはLAN接続が対象です。
         </p>
         <nav class="toc" aria-label="このページの目次">
           <a href="#start">5分で接続</a>
@@ -164,8 +164,8 @@
             <h2 class="sec">接続後は、スマホの位置を実際の方向に合わせるだけです。</h2>
           </div>
           <p class="sec-lead" style="max-width: 60ch">
-            マウスが移る端を決め、実際の方向に合わせて配置します。現在はスマホ・タブレット・別のWindows
-            PCを配置でき、Macは公開版で追加する予定です。
+            マウスが移る端を決め、実際の方向に合わせて配置します。スマホ・タブレット・別のWindows
+            PC・対応するMacをWindows画面の周囲に配置できます。
           </p>
           <details class="fold">
             <summary><span>配置画面を見る</span></summary>
@@ -256,12 +256,12 @@
               <ul class="panel" style="list-style: none; padding-left: 22px">
                 <li style="margin: 0 0 8px">
                   <b>転送画面</b
-                  >、または画面上の小さな<b>ドロップゾーン</b>にファイルを置くと、選択したAndroidや別のWindows
-                  PCへ送られます。Mac転送は実機検証中です。
+                  >、または画面上の小さな<b>ドロップゾーン</b>にファイルを置くと、選択したAndroid、Windows
+                  PC、Macへ送られます。
                 </li>
                 <li style="margin: 8px 0">
-                  <b>Windows PC間</b
-                  >では、ファイルをつかんだまま配置した画面の境界を越えて対象へ置くと転送されます。Macの境界ドラッグは公開前の検証対象です。
+                  <b>Windows PC間、またはWindowsとMacのLAN接続</b
+                  >では、ファイルをつかんだまま配置した画面の境界を越えて対象へ置くと転送されます。
                 </li>
                 <li style="margin: 8px 0">
                   Android → PCは、Androidの転送タブや共有メニューから送ります。
@@ -429,7 +429,7 @@
             <p class="ey">Bluetooth</p>
             <h2 class="sec">Wi-Fiルーターがなくても、Bluetoothで接続できます。</h2>
             <p class="sec-lead">
-              PC↔Android、PC↔PCをBluetoothで直接つなぎ、入力・クリップボード・ファイルをやり取りします。Wi-Fiルーターやインターネットがなくても大丈夫です。
+              PC↔Android、PC↔PCをBluetoothで直接つなぎ、入力・クリップボード・ファイルをやり取りします。現在の公開版ではMacのBluetooth接続をサポートしていません。MacにはLANを使用します。
             </p>
           </div>
           <div class="split lead-left">
@@ -549,10 +549,10 @@
       <section class="section-alt" id="mac">
         <div class="wrap narrow">
           <div class="sec-head">
-            <p class="ey">Mac · 公開準備中</p>
-            <h2 class="sec">macOS 13以降のMacを接続先にする予定手順です。</h2>
+            <p class="ey">Mac · 公開サポート</p>
+            <h2 class="sec">macOS 13以降のApple Silicon MacをWindowsから接続します。</h2>
             <p class="sec-lead">
-              接続はAndroidと同様にWindowsから開始・管理します。署名・公証済み配布とMac実機検証は進行中で、以下の5ステップは公開ビルドで使う予定です。
+              Macに公開DMGをインストールし、OneMouseのLAN接続をWindowsから開始・管理します。以下の5ステップで接続できます。
             </p>
           </div>
           <div class="timeline">
@@ -642,8 +642,8 @@
                 >LANでMacの画面やウィンドウをWindowsに表示するときだけ必要です。Bluetoothでは画面共有を提供しません。
               </li>
               <li>
-                <b>MacのBluetooth — Bluetooth接続時：</b
-                >システムでペアリングした後、OneMouseのBluetoothアクセスを許可します。
+                <b>MacのBluetooth — 公開サポート対象外：</b
+                >現在の公開版ではサポートしていません。Macの入力、ファイル、クリップボード、画面共有にはLANを使用します。
               </li>
             </ul>
           </div>

@@ -3,19 +3,19 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Help | OneMouse — Android and Windows troubleshooting, planned Mac checks</title>
+    <title>Help | OneMouse — Android, Windows, and Mac troubleshooting</title>
     <meta
       name="description"
-      content="Troubleshoot OneMouse on Android and Windows, and preview planned Mac checks while signed distribution and real-Mac validation are still in progress."
+      content="Troubleshoot OneMouse connections from Windows to Android, another Windows PC, or an Apple Silicon Mac running macOS 13+, including discovery, pairing, input, and file transfer."
     />
     <meta name="robots" content="index,follow,max-image-preview:large" />
     <link rel="stylesheet" href="../css/onemouse.css" />
     <link rel="canonical" href="https://onemouse.pages.dev/en/help" />
-    <link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/help.html" />
-    <link rel="alternate" hreflang="en" href="https://onemouse.pages.dev/en/help.html" />
-    <link rel="alternate" hreflang="ja" href="https://onemouse.pages.dev/ja/help.html" />
-    <link rel="alternate" hreflang="zh" href="https://onemouse.pages.dev/zh/help.html" />
-    <link rel="alternate" hreflang="x-default" href="https://onemouse.pages.dev/help.html" />
+    <link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/help" />
+    <link rel="alternate" hreflang="en" href="https://onemouse.pages.dev/en/help" />
+    <link rel="alternate" hreflang="ja" href="https://onemouse.pages.dev/ja/help" />
+    <link rel="alternate" hreflang="zh" href="https://onemouse.pages.dev/zh/help" />
+    <link rel="alternate" hreflang="x-default" href="https://onemouse.pages.dev/help" />
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MJ73H86TWX"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -54,9 +54,8 @@
         <h1 class="page">When it won't work, narrow it down step by step.</h1>
         <p class="lead">
           Narrow it down in the order
-          <b>power → discovery → firewall → pairing → input &amp; return</b>. Mac items are
-          pre-release guidance for a build still awaiting signed distribution and real-Mac
-          validation.
+          <b>power → discovery → firewall → pairing → input &amp; return</b>. For Mac, the current
+          public support path uses the same local Wi-Fi or LAN.
         </p>
       </section>
 
@@ -73,8 +72,7 @@
               </li>
               <li>
                 <b>Connected but input isn't working? →</b> Re-enable OneMouse under Android
-                <b>Accessibility</b>. After the Mac build is public, allow <b>Accessibility</b> on
-                the Mac.
+                <b>Accessibility</b>, or allow <b>Accessibility</b> for OneMouse on the Mac.
               </li>
             </ul>
           </div>
@@ -164,9 +162,8 @@
                 selected.
               </li>
               <li>
-                Desktop-to-desktop drag requires the
-                <b>other Windows PC to be connected and arranged</b>. Mac edge drag is still
-                awaiting real-device validation.
+                Desktop-to-desktop drag requires the target Windows PC or Mac to be
+                <b>connected and arranged</b>. Mac edge drag currently uses LAN.
               </li>
               <li>
                 Keep holding the file, <b>cross the arranged screen edge</b>, and drop it on the
@@ -186,11 +183,11 @@
       <section id="mac">
         <div class="wrap narrow">
           <div class="sec-head">
-            <p class="ey">Mac · In preparation</p>
-            <h2 class="sec">Planned checks for the public Mac build.</h2>
+            <p class="ey">Mac · Troubleshooting</p>
+            <h2 class="sec">Checks for the public macOS 13+ app.</h2>
             <p class="sec-lead">
-              The Mac app accepts connections initiated from Windows. Signed distribution and
-              real-Mac validation are still in progress.
+              Install the public Apple Silicon build and start the LAN connection from OneMouse on
+              Windows.
             </p>
           </div>
           <div class="faq">
@@ -220,19 +217,17 @@
               </div>
             </details>
             <details>
-              <summary>Windows and Mac do not connect over Bluetooth.</summary>
+              <summary>Can Windows and Mac connect over Bluetooth?</summary>
               <div class="a">
-                Pair the two computers once in both Windows and macOS Bluetooth settings, then
-                enable the OneMouse Bluetooth connection. Use LAN for remote screen control and
-                large transfers.
+                Mac Bluetooth is not supported in the current public build. Connect Windows and Mac
+                over the same Wi-Fi or LAN. Mac screen and window sharing is LAN-only.
               </div>
             </details>
             <details>
               <summary>Where do I start a Mac connection?</summary>
               <div class="a">
-                After the public Mac build is available, connections will be started and managed
-                from OneMouse on Windows 10/11. Select the Mac in Windows Devices and enter the
-                6-digit code shown on the Mac.
+                Connections are started and managed from OneMouse on Windows 10/11. Select the Mac
+                in Windows Devices and enter the 6-digit code shown on the Mac.
               </div>
             </details>
           </div>

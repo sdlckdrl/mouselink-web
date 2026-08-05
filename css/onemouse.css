@@ -92,12 +92,22 @@ h4 {
 [lang='ja'] h4 {
   word-break: normal;
 }
+[lang='zh'] h1,
+[lang='zh'] h2,
+[lang='zh'] h3,
+[lang='zh'] h4 {
+  word-break: normal;
+}
 .wrap {
   width: min(var(--max), calc(100% - 36px));
   margin: 0 auto;
 }
 .wrap.narrow {
   max-width: var(--narrow);
+}
+.main-grid-aligned > section > .wrap.narrow {
+  margin-left: max(18px, calc((100% - var(--max)) / 2));
+  margin-right: auto;
 }
 .om {
   display: grid;

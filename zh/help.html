@@ -6,16 +6,16 @@
     <title>帮助 | OneMouse — 连接与输入问题排查</title>
     <meta
       name="description"
-      content="OneMouse 的 Android、Windows 问题排查，以及仍在准备公证发布与真机验证的 macOS 13+ Mac 版预备检查项。"
+      content="排查 OneMouse 从 Windows 连接 Android、另一台 Windows PC 或 macOS 13+ Apple 芯片 Mac 时的发现、配对、输入与文件传输问题。"
     />
     <meta name="robots" content="index,follow,max-image-preview:large" />
     <link rel="stylesheet" href="../css/onemouse.css" />
     <link rel="canonical" href="https://onemouse.pages.dev/zh/help" />
-    <link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/help.html" />
-    <link rel="alternate" hreflang="en" href="https://onemouse.pages.dev/en/help.html" />
-    <link rel="alternate" hreflang="ja" href="https://onemouse.pages.dev/ja/help.html" />
-    <link rel="alternate" hreflang="zh" href="https://onemouse.pages.dev/zh/help.html" />
-    <link rel="alternate" hreflang="x-default" href="https://onemouse.pages.dev/help.html" />
+    <link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/help" />
+    <link rel="alternate" hreflang="en" href="https://onemouse.pages.dev/en/help" />
+    <link rel="alternate" hreflang="ja" href="https://onemouse.pages.dev/ja/help" />
+    <link rel="alternate" hreflang="zh" href="https://onemouse.pages.dev/zh/help" />
+    <link rel="alternate" hreflang="x-default" href="https://onemouse.pages.dev/help" />
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MJ73H86TWX"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -54,7 +54,7 @@
         <h1 class="page">用不了时，一步步缩小范围。</h1>
         <p class="lead">
           请按 <b>开关 → 发现 → 防火墙 → 配对 → 输入·返回</b> 的顺序逐步排查。Mac
-          相关内容是仍在准备公证发布与真机验证的 Mac 版预备指南。
+          的当前公开支持使用与 Windows 相同的本地 Wi-Fi 或 LAN。
         </p>
       </section>
 
@@ -74,8 +74,8 @@
                 的<b>无障碍服务</b>可能已关闭或被重启。请在无障碍设置里重新开启 OneMouse。
               </li>
               <li>
-                <b>公开后的 Mac 无法输入时 →</b> 在 Mac 的系统设置 → 隐私与安全性 →
-                <b>辅助功能</b>中允许 OneMouse。
+                <b>Mac 无法输入时 →</b> 在 Mac 的系统设置 → 隐私与安全性 → <b>辅助功能</b>中允许
+                OneMouse。
               </li>
             </ul>
           </div>
@@ -127,7 +127,7 @@
               <div class="body">
                 <h4>配对·连接</h4>
                 <p>
-                  Android 请确认 QR 或 6 位代码配对。Mac 公开版发布后，将在 Windows 设备管理中输入<b
+                  Android 请确认 QR 或 6 位代码配对。Mac 请在 Windows 设备管理中输入<b
                     >Mac 上显示的 6 位代码</b
                   >。
                 </p>
@@ -158,8 +158,8 @@
             <ul>
               <li>确认<b>选中的设备</b>是否正确 —— 传输会发往你选定的目标。</li>
               <li>
-                Windows PC 之间的边界拖放需要<b>另一台 Windows PC 已连接并完成布局</b>；Mac
-                边界拖放仍在公开前真机验证中。
+                Windows PC 之间或 Windows 与 Mac 的边界拖放需要<b>目标电脑已连接并完成布局</b>；Mac
+                边界拖放使用 LAN。
               </li>
               <li>要抓着文件<b>越过布局中的屏幕边界</b>，在目标上方松手，传输才会开始。</li>
               <li>
@@ -175,9 +175,11 @@
       <section id="mac">
         <div class="wrap narrow">
           <div class="sec-head">
-            <p class="ey">Mac 排查 · 发布准备中</p>
-            <h2 class="sec">公开版推出后使用的预备检查项。</h2>
-            <p class="sec-lead">公证安装包与 Mac 真机验证尚未完成。</p>
+            <p class="ey">Mac 排查</p>
+            <h2 class="sec">适用于公开 macOS 13+ 版本的检查项。</h2>
+            <p class="sec-lead">
+              请安装 Apple 芯片 Mac 公开版，并从 Windows OneMouse 发起和管理 LAN 连接。
+            </p>
           </div>
           <div class="faq">
             <details open>
@@ -211,10 +213,10 @@
               </div>
             </details>
             <details>
-              <summary>为什么 Mac 下载按钮显示“即将推出”？</summary>
+              <summary>Windows 与 Mac 可以通过 Bluetooth 连接吗？</summary>
               <div class="a">
-                macOS 13+ 客户端的连接由 Windows 端发起并管理，Developer ID
-                公证安装包尚未公开。请勿把开发构建当作正式发布版。
+                当前公开版不支持 Mac Bluetooth。请让 Windows 与 Mac 连接到同一个 Wi-Fi 或 LAN；Mac
+                屏幕与窗口共享仅支持 LAN。
               </div>
             </details>
           </div>
