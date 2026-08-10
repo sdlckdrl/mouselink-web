@@ -72,7 +72,7 @@ Mac은 현재 공개 버전에서 Bluetooth 연결을 지원하지 않으므로 
 
 | 플랫폼 | 링크 |
 | --- | --- |
-| Windows PC | [Setup 1.2.70 다운로드](https://github.com/sdlckdrl/mouselink-web/releases/download/v1.2.70/OneMouse-Setup-1.2.70-x64.exe) |
+| Windows PC | [Setup 1.3.2 다운로드](https://github.com/sdlckdrl/mouselink-web/releases/download/v1.3.2/OneMouse-Setup-1.3.2-x64.exe) |
 | Android | [Google Play](https://play.google.com/store/apps/details?id=com.mouselink.app) |
 | macOS 13+ (Apple Silicon) | [DMG 0.1.1 다운로드](https://github.com/sdlckdrl/mouselink-web/releases/download/mac-v0.1.1/OneMouse-macOS-0.1.1-Apple-Silicon.dmg) |
 
