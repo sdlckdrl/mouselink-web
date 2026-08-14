@@ -74,7 +74,7 @@ Mac 블루투스는 베타로 제공됩니다(Mac 앱 설정에서 켜기, 기�
 | --- | --- |
 | Windows PC | [Setup 1.3.3 다운로드](https://github.com/sdlckdrl/mouselink-web/releases/download/v1.3.3/OneMouse-Setup-1.3.3-x64.exe) |
 | Android | [Google Play](https://play.google.com/store/apps/details?id=com.mouselink.app) |
-| macOS 13+ (Apple Silicon) | [DMG 0.1.1 다운로드](https://github.com/sdlckdrl/mouselink-web/releases/download/mac-v0.1.1/OneMouse-macOS-0.1.1-Apple-Silicon.dmg) |
+| macOS 13+ (Apple Silicon) | [DMG 0.1.3 다운로드](https://github.com/sdlckdrl/mouselink-web/releases/download/mac-v0.1.3/OneMouse-macOS-0.1.3-Apple-Silicon.dmg) |
 
 Mac 다운로드는 `downloads.json`의 `macos.status`가 `released`이고, 서명·공증된
 `universal` 자산, 단일 아키텍처 자산 또는 아키텍처 선택용 `downloadPageUrl`이 있을 때
