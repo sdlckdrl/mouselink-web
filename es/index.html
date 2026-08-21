@@ -1,21 +1,21 @@
 <!doctype html>
-<html lang="zh">
+<html lang="es">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="naver-site-verification" content="8f3cbe8a89ca9969cc81ecf1ef5e0aae01858816" />
-    <title>OneMouse | Windows 控制 Android、另一台电脑与 Mac</title>
+    <title>OneMouse | Controla Android, PC con Windows y Mac desde Windows</title>
     <meta
       name="description"
-      content="OneMouse 由 Windows 端发起并管理连接，可控制 Android、另一台 Windows 电脑和 Apple 芯片 Mac。现已提供 macOS 13+ 公开 DMG。"
+      content="OneMouse permite que un PC con Windows controle Android, otro PC con Windows y Mac con Apple Silicon. Hay un DMG público para macOS 13 o posterior."
     />
     <meta name="robots" content="index,follow,max-image-preview:large" />
     <meta
       name="keywords"
-      content="OneMouse, MouseLink, share mouse, 共享鼠标, 鼠标共享, 电脑鼠标共享, Android 电脑控制, 用电脑鼠标控制手机, Windows 控制 Mac, macOS 鼠标共享, Android 键盘输入, PC 到 PC 鼠标, Wi-Fi 文件传输"
+      content="OneMouse, MouseLink, share mouse, compartir ratón, controlar Android desde el PC, controlar Mac desde Windows, compartir ratón entre Windows y Mac, ratón entre PC y PC, compartir teclado, transferencia de archivos por Wi-Fi, sincronizar portapapeles, compartir ratón por Bluetooth"
     />
     <link rel="stylesheet" href="../css/onemouse.css" />
-    <link rel="canonical" href="https://onemouse.pages.dev/zh/" />
+    <link rel="canonical" href="https://onemouse.pages.dev/es/" />
     <link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/" />
     <link rel="alternate" hreflang="en" href="https://onemouse.pages.dev/en/" />
     <link rel="alternate" hreflang="ja" href="https://onemouse.pages.dev/ja/" />
@@ -24,18 +24,24 @@
     <link rel="alternate" hreflang="x-default" href="https://onemouse.pages.dev/" />
     <meta property="og:site_name" content="OneMouse" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="OneMouse | Windows 控制 Android、另一台电脑与 Mac" />
+    <meta
+      property="og:title"
+      content="OneMouse | Controla Android, PC con Windows y Mac desde Windows"
+    />
     <meta
       property="og:description"
-      content="Windows 端发起并管理与 Android、另一台 Windows 电脑和 macOS 13+ Apple 芯片 Mac 的连接。"
+      content="Usa un PC con Windows para controlar Android, otro PC con Windows y un Mac con Apple Silicon que tenga macOS 13 o posterior."
     />
-    <meta property="og:url" content="https://onemouse.pages.dev/zh/" />
+    <meta property="og:url" content="https://onemouse.pages.dev/en/" />
     <meta property="og:image" content="https://onemouse.pages.dev/assets/hero-bg-generated-2.png" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="OneMouse | Windows 控制 Android、另一台电脑与 Mac" />
+    <meta
+      name="twitter:title"
+      content="OneMouse | Controla Android, PC con Windows y Mac desde Windows"
+    />
     <meta
       name="twitter:description"
-      content="连接由 Windows 端发起并管理，现已提供适用于 macOS 13+ Apple 芯片 Mac 的公开 DMG。"
+      content="Usa un PC con Windows para controlar Android, otro PC con Windows y un Mac con Apple Silicon que tenga macOS 13 o posterior."
     />
     <meta
       name="twitter:image"
@@ -49,10 +55,10 @@
         "alternateName": ["OneMouse", "MouseLink", "share mouse"],
         "applicationCategory": "UtilitiesApplication",
         "operatingSystem": "Windows 10, Windows 11, Android, macOS 13 and later",
-        "url": "https://onemouse.pages.dev/zh/",
-        "inLanguage": "zh-CN",
-        "downloadUrl": "https://onemouse.pages.dev/zh/#get",
-        "description": "OneMouse 由 Windows 端发起并管理连接，可控制 Android、另一台 Windows 电脑和 macOS 13+ Apple 芯片 Mac。"
+        "url": "https://onemouse.pages.dev/en/",
+        "inLanguage": "en-US",
+        "downloadUrl": "https://onemouse.pages.dev/en/#get",
+        "description": "OneMouse permite que un PC con Windows controle Android, otro PC con Windows y Mac con Apple Silicon que tengan macOS 13 o posterior."
       }
     </script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MJ73H86TWX"></script>
@@ -68,66 +74,67 @@
   <body>
     <header class="site">
       <div class="wrap hd">
-        <a class="brand" href="./" aria-label="OneMouse 主页"
+        <a class="brand" href="./" aria-label="Inicio de OneMouse"
           ><span class="om">OM</span>OneMouse</a
         >
-        <nav class="nav" aria-label="主菜单">
-          <a href="./" class="on">概览</a>
-          <a href="#use">功能</a>
-          <a href="./guide">使用方法</a>
-          <a href="./help">帮助</a>
+        <nav class="nav" aria-label="Navegación principal">
+          <a href="./" class="on">Resumen</a>
+          <a href="#use">Funciones</a>
+          <a href="./guide">Guía</a>
+          <a href="./help">Ayuda</a>
         </nav>
         <div class="hd-right">
-          <div class="lang" aria-label="语言">
+          <div class="lang" aria-label="Idioma">
             <a href="../">KOR</a><a href="../en/">ENG</a
-            ><a href="../ja/">JPN</a><span class="on">CHN</span>
-            <a href="../es/">ESP</a>
+            ><a href="../ja/">JPN</a><a href="../zh/">CHN</a>
+            <span class="on">ESP</span>
           </div>
-          <a class="hd-cta" href="#get">下载</a>
+          <a class="hd-cta" href="#get">Descargar</a>
         </div>
       </div>
     </header>
 
     <main class="main-grid-aligned">
       <!-- HERO + SIMULATOR -->
-      <section class="hero wrap" aria-label="概览">
-        <span class="tagpill">● Android、Windows 与 Apple 芯片 Mac</span>
+      <section class="hero wrap" aria-label="Resumen">
+        <span class="tagpill">● Android, Windows y Mac con Apple Silicon</span>
         <h1>
-          一只 Windows 鼠标，<br class="hero-break" />
-          <span class="flow">轻松操控手机、平板与 Mac</span>。
+          Un solo ratón de Windows para<br class="hero-break" />
+          <span class="flow">el teléfono, la tablet y el Mac.</span>
         </h1>
         <p class="sub">
-          像摆放屏幕一样连接 Android 与另一台 Windows PC，也支持运行 macOS 13+ 的 Apple 芯片 Mac。
+          Conecta Android y otro PC con Windows como si fueran pantallas contiguas. También
+          funciona con los Mac de Apple Silicon que tengan macOS 13 o posterior.
         </p>
 
         <div class="hero-cta">
-          <a class="btn btn-pri" href="#get">下载 Windows 版</a>
-          <a class="btn btn-sec" href="./guide">查看连接方法</a>
+          <a class="btn btn-pri" href="#get">Descargar la app para Windows</a>
+          <a class="btn btn-sec" href="./guide">Ver cómo conectar</a>
         </div>
-        <div class="role-map" aria-label="支持的设备">
-          <div class="role-main"><span>连接发起端</span><strong>Windows 10/11</strong></div>
+        <div class="role-map" aria-label="Dispositivos compatibles">
+          <div class="role-main"><span>Empieza en</span><strong>Windows 10/11</strong></div>
           <span class="role-link" aria-hidden="true">→</span>
           <div class="role-targets">
-            <span><b>Android</b> 已支持</span>
-            <span><b>另一台 Windows PC</b> 已支持</span>
-            <span class="mac-role"><b>macOS 13+</b> 已支持</span>
+            <span><b>Android</b> Disponible</span>
+            <span><b>Otro PC con Windows</b> Disponible</span>
+            <span class="mac-role"><b>macOS 13+</b> Disponible</span>
           </div>
         </div>
 
         <div class="play">
           <div class="play-head">
             <div class="steps">
-              <span><span class="n">1</span><b>移动鼠标</b>，把光标滑过去看看</span>
-              <span><span class="n">2</span><b>拖动设备名牌</b>，换个位置试试</span>
-              <span><span class="n">3</span><b>拖动文件</b>发送到其他设备</span>
+              <span><span class="n">1</span><b>Mueve el ratón</b> para que el cursor cruce</span>
+              <span><span class="n">2</span><b>Arrastra la etiqueta de un dispositivo</b> para moverlo de sitio</span>
+              <span><span class="n">3</span><b>Arrastra un archivo</b> hasta otro dispositivo</span>
             </div>
-            <button class="reset" id="reset" type="button">恢复初始布局</button>
+            <button class="reset" id="reset" type="button">Restablecer disposición</button>
           </div>
           <div class="desk" id="desk">
             <div class="stage" id="stage">
               <div class="snapedge" id="snapedge"></div>
               <div class="dev monitor" data-id="pc">
-                <span class="pin">我的电脑</span>
+                <span class="pin">Mi PC</span>
                 <div class="screen">
                   <div
                     class="apps"
@@ -152,7 +159,7 @@
                 </div>
               </div>
               <div class="dev phone grab" data-id="phone">
-                <span class="pin">手机</span>
+                <span class="pin">Teléfono</span>
                 <div class="screen">
                   <div class="apps">
                     <i style="background: #57e0ab88"></i><i style="background: #ffcf5e88"></i
@@ -162,7 +169,7 @@
                 </div>
               </div>
               <div class="dev subpc grab" data-id="subpc">
-                <span class="pin">另一台电脑</span>
+                <span class="pin">Otro PC</span>
                 <div class="screen">
                   <div
                     class="apps"
@@ -180,11 +187,11 @@
                 <div class="screen">
                   <div
                     class="apps"
-                    style="grid-template-columns: repeat(5, 1fr); padding: 9px 9px 18px"
+                    style="grid-template-columns: repeat(5, 1fr); padding: 10px 10px 20px"
                   >
-                    <i style="background: #8ab4ff66"></i><i style="background: #7ee0b966"></i
-                    ><i style="background: #ffffff55"></i><i style="background: #ffd16655"></i
-                    ><i style="background: #c7a0ff55"></i>
+                    <i style="background: #ff7f7755"></i><i style="background: #ffd45c55"></i
+                    ><i style="background: #65d69e55"></i><i style="background: #60a5fa55"></i
+                    ><i style="background: #b394f755"></i>
                   </div>
                   <div class="bar"><i></i><i></i><i></i></div>
                 </div>
@@ -216,20 +223,24 @@
                     stroke-width="1.6"
                     stroke-linejoin="round"
                   /></svg
-                ><span>照片.jpg</span>
+                ><span>photo.jpg</span>
               </div>
             </div>
           </div>
           <div class="play-foot">
             <div id="status">
-              <span class="dotnow"></span>当前光标位置 → <span class="where">我的电脑</span>
+              <span class="dotnow"></span>El cursor está ahora en → <span class="where">Mi PC</span>
             </div>
-            <span class="hint">会跳到相邻的设备 · 光标不会跑到屏幕外消失</span>
+            <span class="hint"
+              >El cursor pasa al dispositivo que toca · nunca desaparece fuera de la
+              pantalla</span
+            >
           </div>
         </div>
 
         <p class="hero-note">
-          上面的演示就是真实的<b>设备布局</b>功能——在应用里也是这样摆好、把鼠标滑过去。
+          La demo de arriba es la función real de <b>disposición de dispositivos</b>: en la app
+          colocas los dispositivos y pasas el ratón igual que aquí.
         </p>
       </section>
 
@@ -237,9 +248,14 @@
       <section id="use">
         <div class="wrap">
           <div class="sec-head">
-            <p class="ey">这些场景很好用</p>
-            <h2 class="sec">在 Windows 前做的事，延伸到手机、另一台电脑和 Mac。</h2>
-            <p class="sec-lead">不懂网络设置也没关系。从你常做的事来看，一下就明白它用在哪儿。</p>
+            <p class="ey">Ideal para momentos como estos</p>
+            <h2 class="sec">
+              Lo que haces en tu PC con Windows, ahora en el teléfono, en otros PC y en el Mac.
+            </h2>
+            <p class="sec-lead">
+              No necesitas saber de redes. Con ejemplos del día a día se entiende todo
+              enseguida.
+            </p>
           </div>
           <div class="cards">
             <article class="card">
@@ -256,8 +272,11 @@
                   <path d="M11 6h2" />
                 </svg>
               </div>
-              <h3>把手机当作旁边的屏幕来控制</h3>
-              <p>把鼠标推到电脑显示器边缘，就会跨到 Android，点击、滚动、拖拽一气呵成。</p>
+              <h3>Controla el teléfono como una segunda pantalla</h3>
+              <p>
+                Empuja el ratón más allá del borde del monitor y pasará a Android llevando consigo
+                los clics, el desplazamiento y los arrastres.
+              </p>
             </article>
             <article class="card">
               <div class="card-ic" style="background: #eafaf1; color: #15845f">
@@ -273,8 +292,11 @@
                   <path d="M6 10h.01M10 10h.01M14 10h.01M8 14h8" />
                 </svg>
               </div>
-              <h3>长句子也用电脑键盘打</h3>
-              <p>搜索词、聊天回复、应用输入框，凡是要在手机上打字的时候，都能直接用电脑键盘。</p>
+              <h3>Escribe mensajes largos con el teclado del PC</h3>
+              <p>
+                Búsquedas, respuestas en mensajería, cualquier campo de texto: siempre que vayas a
+                escribir en el teléfono, usa mejor el teclado del PC.
+              </p>
             </article>
             <article class="card">
               <div class="card-ic" style="background: #fff0e8; color: #ff7a4d">
@@ -289,8 +311,11 @@
                   <path d="M4 5h6l2 2h8v11H4z" />
                 </svg>
               </div>
-              <h3>文件·剪贴板即传即到</h3>
-              <p>抓起文件拖到屏幕边界，就直接发到选定的设备；文字和剪贴板也在两端一起同步。</p>
+              <h3>Envía archivos y el portapapeles al instante</h3>
+              <p>
+                Arrastra un archivo hasta el borde de la pantalla y llegará directo al dispositivo
+                que elijas; el texto y el portapapeles se mantienen sincronizados en ambos lados.
+              </p>
             </article>
             <article class="card">
               <div class="card-ic" style="background: #f3ecff; color: #7a52d0">
@@ -306,11 +331,14 @@
                   <rect x="13" y="4" width="9" height="7" rx="1.5" />
                 </svg>
               </div>
-              <h3>另一台 Windows 电脑也能一起用</h3>
-              <p>摆好另一台电脑，就能把鼠标滑过去控制它，还能互传文件。</p>
+              <h3>Suma también otros PC con Windows</h3>
+              <p>
+                Coloca otro PC con Windows en tu disposición y podrás pasarle el ratón para
+                controlarlo e intercambiar archivos en ambos sentidos.
+              </p>
             </article>
             <article class="card">
-              <div class="card-ic" style="background: #edf1f7; color: #52627a">
+              <div class="card-ic" style="background: #eef2f6; color: #536273">
                 <svg
                   width="22"
                   height="22"
@@ -320,11 +348,14 @@
                   stroke-width="1.8"
                 >
                   <rect x="3" y="4" width="18" height="13" rx="2" />
-                  <path d="M8 21h8M12 17v4" />
+                  <path d="M1.5 20h21M9 17l-1 3m7-3 1 3" />
                 </svg>
               </div>
-              <h3>连接 Apple 芯片 Mac</h3>
-              <p>从 Windows 将光标移到 Mac，并继续使用键盘输入、文件和剪贴板传输。</p>
+              <h3>Conecta un Mac con Apple Silicon</h3>
+              <p>
+                Mueve el cursor hasta el Mac y sigue con el teclado, los archivos y la
+                transferencia del portapapeles.
+              </p>
             </article>
             <article class="card">
               <div class="card-ic" style="background: #eef0f4; color: #4a5978">
@@ -339,9 +370,10 @@
                   <path d="M8 5l8 7-5 4V4l5 4-8 7" />
                 </svg>
               </div>
-              <h3>用 Bluetooth 也能连</h3>
+              <h3>También se conecta por Bluetooth</h3>
               <p>
-                平时用 Wi-Fi，没有 Wi-Fi 路由器或网络时，就用 Bluetooth 直接连到手机和另一台电脑。
+                Wi-Fi para el día a día y, cuando no hay router ni internet, conexión directa con
+                Android u otro PC con Windows. El Mac se conecta por ahora a través de la red local.
               </p>
             </article>
           </div>
@@ -352,39 +384,47 @@
       <section class="section-alt" id="setup">
         <div class="wrap">
           <div class="sec-head">
-            <p class="ey">连接方法</p>
-            <h2 class="sec">Android 连接四步走，1 分钟搞定。</h2>
+            <p class="ey">Cómo conectar</p>
+            <h2 class="sec">Android se conecta en cuatro pasos rápidos.</h2>
             <p class="sec-lead">
-              以下是 Android 的连接流程。Mac 安装公开的 Apple 芯片版本后，也由 Windows
-              端发起并管理，具体请参阅<a href="./guide#mac">Mac 连接指南</a>。
+              Estos pasos son para Android. Para Mac, instala la versión pública de Apple Silicon y
+              sigue la guía de conexión del Mac.
             </p>
           </div>
           <div class="flow4">
             <div class="step">
               <div class="badge">01</div>
-              <h4>打开电脑上的应用</h4>
-              <p>在 Windows 上打开 OneMouse，看一下屏幕上的二维码或 6 位数字码。</p>
+              <h4>Abre la app del PC</h4>
+              <p>Abre OneMouse en Windows y mira el QR o el código de 6 dígitos en pantalla.</p>
             </div>
             <div class="step">
               <div class="badge">02</div>
-              <h4>打开 Android 权限</h4>
-              <p>为了接收电脑的鼠标和键盘输入，打开一次无障碍服务。</p>
+              <h4>Activa el permiso en Android</h4>
+              <p>
+                Activa una vez el Servicio de accesibilidad para que Android pueda recibir el ratón
+                y el teclado del PC.
+              </p>
             </div>
             <div class="step">
               <div class="badge">03</div>
-              <h4>用二维码或数字码连接</h4>
-              <p>找到同一 Wi-Fi 下的电脑，扫二维码或输入 6 位数字码确认你的设备。</p>
+              <h4>Conecta con el QR o el código</h4>
+              <p>
+                Busca el PC en la misma red Wi-Fi y confirma tu dispositivo escaneando el código QR
+                o escribiendo el código de 6 dígitos.
+              </p>
             </div>
             <div class="step">
               <div class="badge">04</div>
-              <h4>摆好位置再滑过去</h4>
-              <p>把手机、另一台 Windows 电脑或 Mac 放到屏幕边缘，再把光标从对应边缘移过去。</p>
+              <h4>Colócalos y cruza</h4>
+              <p>
+                Pon el teléfono junto a un borde de la pantalla, mueve el ratón hacia ahí y listo.
+              </p>
             </div>
           </div>
           <details class="fold">
             <summary>
-              <span>看看真实的配对画面</span
-              ><small>准备 → 确认电脑数字码 → 输入数字 → 扫二维码</small>
+              <span>Ver las pantallas reales de vinculación</span
+              ><small>Prepárate → Mira el código del PC → Teclea los números → Escanea el QR</small>
             </summary>
             <div class="fold-body">
               <a
@@ -393,14 +433,14 @@
                 rel="noopener"
                 ><img
                   src="../assets/onemouse-pairing-real-ui-comic-v5.png"
-                  alt="OneMouse 配对方法：准备、确认电脑数字码、输入数字、扫二维码的顺序"
+                  alt="Pasos de vinculación de OneMouse: prepárate, mira el código del PC, escribe los números, escanea el QR"
                   loading="lazy"
                   style="border-radius: 12px"
               /></a>
             </div>
           </details>
           <div style="margin-top: 20px">
-            <a class="btn btn-sec sm" href="./guide">查看详细使用指南</a>
+            <a class="btn btn-sec sm" href="./guide">Ver la guía completa</a>
           </div>
         </div>
       </section>
@@ -409,10 +449,11 @@
       <section id="trust">
         <div class="wrap">
           <div class="sec-head">
-            <p class="ey">放心使用</p>
-            <h2 class="sec">只在你自己的设备之间，你自己的网络内。</h2>
+            <p class="ey">Úsalo con tranquilidad</p>
+            <h2 class="sec">Entre tus propios dispositivos y dentro de tu propia red.</h2>
             <p class="sec-lead">
-              OneMouse 只在你配对过的自己的设备之间运行。权限也只在你用到相应功能时才请求。
+              OneMouse solo funciona entre los dispositivos que has vinculado y pide permisos
+              únicamente cuando usas la función correspondiente.
             </p>
           </div>
           <div class="trust">
@@ -429,8 +470,11 @@
                   <path d="M12 3l7 4v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V7z" /></svg
               ></span>
               <div>
-                <b>不经过服务器</b
-                ><span>输入、文件、剪贴板都在同一网络里你自己的电脑和设备之间往来。</span>
+                <b>Sin servidores de por medio</b
+                ><span
+                  >La entrada, los archivos y el portapapeles viajan entre tu PC y tus dispositivos
+                  dentro de la misma red.</span
+                >
               </div>
             </div>
             <div class="t">
@@ -447,10 +491,11 @@
                   <path d="M8 10V7a4 4 0 0 1 8 0v3" /></svg
               ></span>
               <div>
-                <b>权限只在需要时请求</b
+                <b>Permisos solo cuando hacen falta</b
                 ><span
-                  >Mac 的“辅助功能”是接收输入所必需的；macOS 15+ 需允许“本地网络”，macOS 13/14
-                  可能不会显示该项目。</span
+                  >Android usa Accesibilidad. Un Mac que recibe la entrada de Windows también usa
+                  Accesibilidad; el permiso de Red local aparece en macOS 15+, mientras que macOS
+                  13/14 puede no mostrarlo.</span
                 >
               </div>
             </div>
@@ -467,13 +512,18 @@
                   <path d="M5 13l4 4L19 7" /></svg
               ></span>
               <div>
-                <b>不收集·不存储</b
-                ><span>不会把无障碍数据用于广告或屏幕收集，也不会把文件存到服务器上。</span>
+                <b>No recopilamos ni guardamos nada</b
+                ><span
+                  >No usamos los datos de Accesibilidad para publicidad ni para recopilar la
+                  pantalla, y nunca guardamos tus archivos en un servidor.</span
+                >
               </div>
             </div>
           </div>
           <div style="margin-top: 20px">
-            <a class="btn btn-sec sm" href="./technical">查看技术与安全详情</a>
+            <a class="btn btn-sec sm" href="./technical"
+              >Más información sobre Aspectos técnicos y seguridad</a
+            >
           </div>
         </div>
       </section>
@@ -482,16 +532,12 @@
       <section class="section-alt" id="get">
         <div class="wrap">
           <div class="sec-head">
-            <p class="ey">下载</p>
-            <h2 class="sec">先在 Windows 上开始，再为要连接的设备安装对应版本。</h2>
+            <p class="ey">Descargas</p>
+            <h2 class="sec">Instala OneMouse en Windows y en cada dispositivo que conectes.</h2>
             <p class="sec-lead">
-              Windows 10/11 负责发起并管理连接，Android 可从应用商店安装，macOS 13+ Apple
-              芯片版本提供公开 DMG。
+              Las conexiones se inician y se gestionan desde Windows 10/11. Android está disponible
+              en sus tiendas y hay una versión pública de Apple Silicon para macOS 13 o posterior.
             </p>
-          </div>
-          <div class="panel tip" style="margin-bottom: 16px">
-            <h3>macOS 下载</h3>
-            <p>已提供适用于 macOS 13+ Apple 芯片 Mac 的公开 DMG。连接由 Windows 端发起并管理。</p>
           </div>
           <div class="dl">
             <article class="dcard first download-card">
@@ -501,43 +547,46 @@
                 >PC</span
               >
               <h3>Windows</h3>
-              <p data-download-filename>正在获取最新的 Setup 文件。</p>
+              <p data-download-filename>Buscando el archivo Setup más reciente.</p>
               <a
                 class="btn btn-pri"
                 href="https://github.com/sdlckdrl/mouselink-web/releases/download/v1.3.7/OneMouse-Setup-1.3.7-x64.exe"
                 data-latest-windows-download
                 download
-                >下载 Windows 版</a
+                >Descargar para Windows</a
               >
             </article>
             <article class="dcard">
-              <span class="dtag" style="background: #15845f">A</span>
+              <span class="dtag" style="background: #15845f">AND</span>
               <h3>Android</h3>
-              <p>选择适合设备的商店，将 Android 添加为连接目标。</p>
+              <p>
+                Instálala desde Google Play o Galaxy Store, activa Accesibilidad y vincúlala con
+                Windows.
+              </p>
               <div class="store-actions">
                 <a
                   class="btn btn-sec"
                   href="https://play.google.com/store/apps/details?id=com.mouselink.app"
-                  >Google Play</a
+                  >Ver en Google Play</a
                 >
                 <a
                   class="btn btn-sec"
                   href="https://apps.samsung.com/appquery/appDetail.as?appId=com.mouselink.app.galaxy"
-                  >Galaxy Store</a
+                  >Ver en Galaxy Store</a
                 >
               </div>
             </article>
             <article class="dcard mac-download-card">
-              <span class="dtag" style="background: #52627a">Mac</span>
+              <span class="dtag" style="background: #536273">MAC</span>
               <h3>macOS</h3>
-              <p data-macos-download-filename>Apple 芯片 · macOS 13+</p>
+              <p data-macos-download-filename>Apple Silicon · macOS 13+</p>
               <a
                 class="btn btn-sec"
                 href="https://github.com/sdlckdrl/mouselink-web/releases/download/mac-v0.1.1/OneMouse-macOS-0.1.1-Apple-Silicon.dmg"
                 data-latest-macos-download
-                data-ready-label="下载 Apple 芯片版"
+                data-ready-label="Descargar para Apple Silicon"
                 download
-                >下载 Apple 芯片版</a
+                >Descargar para Apple Silicon</a
               >
             </article>
           </div>
@@ -548,39 +597,42 @@
       <section id="faq">
         <div class="wrap narrow">
           <div class="sec-head">
-            <p class="ey">常见问题</p>
-            <h2 class="sec">连接前想弄清楚的事。</h2>
+            <p class="ey">Preguntas frecuentes</p>
+            <h2 class="sec">Dudas habituales antes de conectar.</h2>
           </div>
           <div class="faq">
             <details>
-              <summary>需要 root 或开发者设置吗？</summary>
+              <summary>¿Hace falta root o ajustes de desarrollador?</summary>
               <div class="a">
-                不需要。在 Android 上只要打开一次<b>无障碍服务</b>就行。也不需要 USB 连接或 ADB。
+                No. Solo tienes que activar una vez el <b>Servicio de accesibilidad</b> en Android.
+                No hace falta cable USB ni ADB.
               </div>
             </details>
             <details>
-              <summary>没有同一个 Wi-Fi 也可以吗？</summary>
+              <summary>¿Puedo usarlo sin estar en la misma red Wi-Fi?</summary>
               <div class="a">
-                可以。用 <b>Bluetooth</b> 直接连到手机和另一台电脑，就能互传鼠标、键盘、文件。
+                Sí, con Android y con otro PC con Windows mediante <b>Bluetooth</b>. El Mac se
+                conecta por ahora a través de la red local.
               </div>
             </details>
             <details>
-              <summary>Mac 连接由哪一端发起？</summary>
+              <summary>¿Desde dónde se inicia la conexión con el Mac?</summary>
               <div class="a">
-                连接由 <b>Windows 10/11 端发起并管理</b>。在 Windows 的设备管理中选择 Mac，然后输入
-                Mac 上显示的 6 位代码。
+                Inicia y gestiona la conexión desde OneMouse en Windows 10/11. Selecciona el Mac en
+                Dispositivos de Windows y escribe el código de 6 dígitos que aparece en el Mac.
               </div>
             </details>
             <details>
-              <summary>连接总是断开。</summary>
+              <summary>La conexión se corta constantemente.</summary>
               <div class="a">
-                多半是<b>电池优化</b>或<b>防火墙、访客 Wi-Fi 的客户端隔离</b
-                >导致的。请按帮助里的排障步骤逐步缩小范围。
+                Casi siempre la causa es la <b>optimización de batería</b> o un
+                <b>firewall o el aislamiento de clientes de la Wi-Fi de invitados</b>. Sigue el
+                orden de diagnóstico de Ayuda para descartar causas paso a paso.
               </div>
             </details>
           </div>
           <div style="margin-top: 20px">
-            <a class="btn btn-sec sm" href="./help">查看全部帮助</a>
+            <a class="btn btn-sec sm" href="./help">Ver toda la Ayuda</a>
           </div>
         </div>
       </section>
@@ -590,8 +642,9 @@
       <div class="wrap ft">
         <span>© 2026 OneMouse</span>
         <span class="links"
-          ><a href="./technical">技术与安全</a><a href="./privacy">隐私政策</a
-          ><a href="./terms">使用条款</a><a href="./licenses">开源许可</a></span
+          ><a href="./technical">Aspectos técnicos y seguridad</a
+          ><a href="./privacy">Política de privacidad</a><a href="./terms">Términos del servicio</a
+          ><a href="./licenses">Licencias de código abierto</a></span
         >
       </div>
     </footer>
@@ -608,10 +661,10 @@
         if (!desk) return;
         const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
         const HOME = {
-          pc: { x: 250, y: 150, w: 206, h: 132, label: '我的电脑', drag: false },
+          pc: { x: 250, y: 150, w: 206, h: 132, label: 'Mi PC', drag: false },
           tab: { x: 456, y: 160, w: 150, h: 112, label: 'Galaxy Tab', drag: true },
-          phone: { x: 606, y: 153, w: 66, h: 126, label: '手机', drag: true },
-          subpc: { x: 268, y: 40, w: 170, h: 110, label: '另一台电脑', drag: true },
+          phone: { x: 606, y: 153, w: 66, h: 126, label: 'Teléfono', drag: true },
+          subpc: { x: 268, y: 40, w: 170, h: 110, label: 'Otro PC', drag: true },
           mac: { x: 95, y: 166, w: 155, h: 100, label: 'Mac', drag: true },
         };
         const devs = {};
@@ -704,7 +757,7 @@
           void cursorEl.offsetWidth;
           cursorEl.classList.add('squash');
         }
-        /* 文件传输演示：把文件卡片拖到其他设备即可"发送"。拖到手机上时光标会变成圆点。 */
+        /* File-transfer demo: drag the file chip onto another device to "send" it. Dragging over the phone turns the cursor into a dot. */
         let fileOwner = 'pc',
           fdrag = null;
         const fileEl = document.getElementById('filechip');
@@ -731,7 +784,7 @@
           const d = devs[id],
             b = document.createElement('div');
           b.className = 'sentbadge';
-          b.textContent = '✓ 已发送到 ' + devs[id].label;
+          b.textContent = '✓ Enviado a ' + devs[id].label;
           b.style.left = d.x + d.w / 2 + 'px';
           b.style.top = d.y + 'px';
           stage.appendChild(b);
@@ -963,7 +1016,7 @@
           active = 'pc';
           cx = devs.pc.x + devs.pc.w / 2;
           cy = devs.pc.y + devs.pc.h / 2;
-          statusWhere.textContent = '我的电脑';
+          statusWhere.textContent = 'Mi PC';
           setCursor(cx, cy);
         });
         addEventListener('resize', fit);

@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Aspectos técnicos y seguridad | OneMouse para Android, Windows y Mac</title>
+    <meta
+      name="description"
+      content="Cómo OneMouse conecta Windows, Android, otro PC con Windows y los Mac con Apple Silicon con macOS 13 o posterior, incluidos los permisos, el flujo de datos local y el alcance del soporte."
+    />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <link rel="stylesheet" href="../css/onemouse.css" />
+    <link rel="canonical" href="https://onemouse.pages.dev/es/technical" />
+    <link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/technical" />
+    <link rel="alternate" hreflang="en" href="https://onemouse.pages.dev/en/technical" />
+    <link rel="alternate" hreflang="ja" href="https://onemouse.pages.dev/ja/technical" />
+    <link rel="alternate" hreflang="zh" href="https://onemouse.pages.dev/zh/technical" />
+    <link rel="alternate" hreflang="es" href="https://onemouse.pages.dev/es/technical" />
+    <link rel="alternate" hreflang="x-default" href="https://onemouse.pages.dev/technical" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MJ73H86TWX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-MJ73H86TWX');
+    </script>
+  </head>
+  <body>
+    <header class="site">
+      <div class="wrap hd">
+        <a class="brand" href="./" aria-label="Inicio de OneMouse"
+          ><span class="om">OM</span>OneMouse</a
+        >
+        <nav class="nav" aria-label="Navegación principal">
+          <a href="./">Resumen</a>
+          <a href="./#use">Funciones</a>
+          <a href="./guide">Guía</a>
+          <a href="./help">Ayuda</a>
+        </nav>
+        <div class="hd-right">
+          <div class="lang" aria-label="Idioma">
+            <a href="../technical">KOR</a><a href="../en/technical">ENG</a
+            ><a href="../ja/technical">JPN</a><a href="../zh/technical">CHN</a>
+            <span class="on">ESP</span>
+          </div>
+          <a class="hd-cta" href="./#get">Descargar</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="main-grid-aligned">
+      <section class="phero wrap">
+        <p class="ey">Aspectos técnicos y seguridad</p>
+        <h1 class="page">Cómo se conecta y qué permisos usa, explicado en una página aparte.</h1>
+        <p class="lead">
+          Esta página no es el manual de uso diario. Explica <b>cómo funciona la conexión</b> y
+          <b>por qué se usa cada permiso</b>. Para el uso paso a paso, consulta la
+          <a href="./guide" style="color: var(--coral-deep); font-weight: 700">guía de uso</a>.
+        </p>
+        <nav class="toc" aria-label="En esta página">
+          <a href="#data-flow">Primero local</a>
+          <a href="#permissions">Permisos</a>
+          <a href="#handling">Tratamiento de datos</a>
+          <a href="#network">Red</a>
+          <a href="#scope">Alcance del soporte</a>
+          <a href="#updates">Registro de novedades</a>
+        </nav>
+      </section>
+
+      <!-- LOCAL FIRST -->
+      <section id="data-flow">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">Primero local</p>
+            <h2 class="sec">Funciona solo entre tus propios dispositivos vinculados.</h2>
+          </div>
+          <p class="sec-lead" style="max-width: 64ch">
+            La entrada, los archivos y el portapapeles viajan directamente entre <b>tu PC con
+            Windows y el dispositivo vinculado, ya sea Android, otro PC con Windows o un Mac</b>. No
+            se sube nada a ninguna cuenta a través de un servidor externo.
+          </p>
+        </div>
+      </section>
+
+      <!-- PERMISSIONS -->
+      <section class="section-alt" id="permissions">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="ey">Permisos</p>
+            <h2 class="sec">Solo lo que cada función necesita de verdad.</h2>
+            <p class="sec-lead">
+              No se piden todos de golpe. Android y Mac solicitan cada permiso cuando arranca la
+              función correspondiente.
+            </p>
+          </div>
+          <div class="cards">
+            <article class="card accent">
+              <p class="card-lbl">Obligatorio</p>
+              <h3>Servicio de accesibilidad</h3>
+              <p>
+                Para controlar Android con el ratón y el teclado del PC y para gestionar la entrada
+                remota y las acciones relacionadas con la pantalla se necesita el servicio de
+                accesibilidad. Las funciones principales de OneMouse dependen de él.
+              </p>
+            </article>
+            <article class="card">
+              <p class="card-lbl">Al iniciar el control remoto</p>
+              <h3>Autorización de captura de pantalla</h3>
+              <p>
+                Se autoriza mediante un aviso del sistema Android al abrir la ventana de control
+                remoto del móvil. Algunos contenidos, como las pantallas protegidas, pueden no
+                verse.
+              </p>
+            </article>
+            <article class="card">
+              <p class="card-lbl">Al conectar</p>
+              <h3>Dispositivos Wi-Fi cercanos</h3>
+              <p>
+                Puede solicitarse en Android 13 o posterior al buscar tu PC. Se pide justo en el
+                momento de la búsqueda, no al abrir la app.
+              </p>
+            </article>
+            <article class="card">
+              <p class="card-lbl">Al iniciarse el servicio</p>
+              <h3>Notificaciones</h3>
+              <p>
+                Sirven para mostrar el estado de la conexión en segundo plano. Solo se piden cuando
+                hacen falta.
+              </p>
+            </article>
+            <article class="card">
+              <p class="card-lbl">Al usar el brillo</p>
+              <h3>Modificar los ajustes del sistema</h3>
+              <p>
+                Se necesita una sola vez, la primera vez que ajustas el brillo de la pantalla del
+                móvil con Alt+Shift+↑/↓.
+              </p>
+            </article>
+            <article class="card">
+              <p class="card-lbl">Recomendado</p>
+              <h3>Excepción de optimización de batería</h3>
+              <p>
+                Se recomienda por estabilidad si la conexión se corta después de apagarse la
+                pantalla. No es obligatorio.
+              </p>
+            </article>
+            <article class="card accent">
+              <p class="card-lbl">Mac · solo macOS 15 o posterior</p>
+              <h3>Red local</h3>
+              <p>
+                Permite que el Mac detecte el PC con Windows en macOS 15 o posterior. En macOS 13/14
+                puede que este permiso no aparezca, y la app lo considera innecesario.
+              </p>
+            </article>
+            <article class="card accent">
+              <p class="card-lbl">Obligatorio en Mac</p>
+              <h3>Accesibilidad</h3>
+              <p>
+                Permite que el Mac ejecute la entrada de ratón y teclado que llega desde Windows. La
+                recepción básica de entrada no requiere la Monitorización de entrada.
+              </p>
+            </article>
+            <article class="card">
+              <p class="card-lbl">Solo para compartir la pantalla del Mac</p>
+              <h3>Grabación de pantalla y audio del sistema</h3>
+              <p>
+                Solo se usa al compartir la pantalla del Mac con Windows. OneMouse no captura el
+                audio del sistema.
+              </p>
+            </article>
+            <article class="card">
+              <p class="card-lbl">Bluetooth en Mac · beta</p>
+              <h3>Bluetooth</h3>
+              <p>
+                El Bluetooth en Mac está disponible como beta (actívalo en los ajustes de la app de
+                Mac). La LAN es la vía con soporte oficial para conectar un Mac y compartir su
+                pantalla o sus ventanas.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- DATA HANDLING -->
+      <section id="handling">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">Tratamiento de datos</p>
+            <h2 class="sec">
+              Entrada, archivos y portapapeles: solo dentro del alcance que elijas.
+            </h2>
+          </div>
+          <div class="panel">
+            <ul>
+              <li>
+                No se crea ninguna cuenta remota: funciona por vinculación, sin iniciar sesión.
+              </li>
+              <li>
+                Los archivos que envías no se guardan en ningún servidor. Van directos al
+                dispositivo que elijas.
+              </li>
+              <li>
+                <b>Los datos de accesibilidad nunca se usan para publicidad ni para recopilar
+                pantallas.</b> Solo se usan para las funciones indicadas, como transmitir la entrada
+                y el control remoto.
+              </li>
+              <li>
+                Las transferencias de portapapeles y de archivos solo se producen cuando eliges un
+                destino y las inicias tú.
+              </li>
+              <li>
+                La app de Mac guarda la clave de sesión vinculada en el Llavero de macOS. Al borrar
+                la vinculación se elimina la conexión de confianza.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- NETWORK -->
+      <section class="section-alt" id="network">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">Red</p>
+            <h2 class="sec">
+              La calidad de la conexión depende de las condiciones de tu red local.
+            </h2>
+          </div>
+          <div class="split">
+            <div class="panel tip">
+              <h3>Configuración recomendada</h3>
+              <ul>
+                <li>La misma Wi-Fi en un router Wi-Fi propio (2,4 o 5 GHz, cualquiera sirve)</li>
+                <li>Una red que permita la comunicación entre dispositivos</li>
+                <li>OneMouse permitido para conexiones entrantes en el firewall de Windows</li>
+                <li>
+                  En macOS 15 o posterior, acceso a la red local permitido para OneMouse en el Mac
+                </li>
+              </ul>
+            </div>
+            <div class="panel">
+              <h3>Configuración limitada</h3>
+              <ul>
+                <li>Aislamiento de clientes en redes Wi-Fi de invitados o corporativas</li>
+                <li>Conexiones entrantes bloqueadas en una red marcada como "pública"</li>
+                <li>
+                  En esos casos, usa una conexión Bluetooth directa o un punto de acceso personal
+                </li>
+              </ul>
+            </div>
+          </div>
+          <p class="sec-lead" style="margin-top: 16px">
+            OneMouse no pasa por ningún servidor de retransmisión en internet, así que los dos
+            dispositivos tienen que poder encontrarse directamente.
+          </p>
+        </div>
+      </section>
+
+      <!-- SCOPE -->
+      <section id="scope">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">Alcance del soporte</p>
+            <h2 class="sec">
+              Los Mac con Apple Silicon son compatibles como destino de conexión por LAN.
+            </h2>
+          </div>
+          <div class="panel">
+            <ul>
+              <li>
+                <b>Windows 10/11:</b> desde aquí se inician y se gestionan las conexiones; otro PC
+                con Windows también puede ser un destino de conexión.
+              </li>
+              <li>
+                <b>Android:</b> se conecta como destino por <b>Wi-Fi/LAN</b> en la misma red o por
+                <b>Bluetooth</b> directo.
+              </li>
+              <li>
+                <b>macOS 13 o posterior:</b> la versión pública para Apple Silicon acepta conexiones
+                LAN iniciadas y gestionadas desde Windows. Por LAN se admiten la entrada, la
+                transferencia de archivos y de portapapeles, el arrastre por los bordes y la
+                pantalla compartida. El Bluetooth en Mac está en beta; la LAN sigue siendo la vía
+                con soporte oficial.
+              </li>
+              <li>
+                No incluido: la conexión por USB/ADB queda fuera del alcance del soporte oficial.
+              </li>
+              <li>
+                Entre Windows y Windows se admite la transferencia bidireccional de archivos,
+                carpetas y portapapeles. Entre Windows y Mac, los archivos y el portapapeles van por
+                LAN.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- UPDATES -->
+      <section class="section-alt" id="updates">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">Novedades</p>
+            <h2 class="sec">Registro de novedades recientes.</h2>
+          </div>
+          <div class="log">
+            <div class="log-item">
+              <time datetime="2026-08">2026.08</time>
+              <p>
+                <b>Compatibilidad pública con macOS 13 o posterior</b> — ya hay un DMG público para
+                los Mac con Apple Silicon. Conecta y coloca un Mac desde Windows para seguir usando
+                el ratón y el teclado, los archivos y el portapapeles.
+              </p>
+            </div>
+            <div class="log-item">
+              <time datetime="2026-08">2026.08</time>
+              <p>
+                <b
+                  >Llega en la próxima versión de Windows: arrastre de archivos e idas y vueltas
+                  más fiables</b
+                >
+                — al llevar un archivo cruzando el borde entre el PC y el Mac, volver antes de
+                soltarlo, completar la transferencia o cancelarla, el cursor y el estado del
+                arrastre seguirán sincronizados.
+              </p>
+            </div>
+            <div class="log-item">
+              <time datetime="2026-08">2026.08</time>
+              <p>
+                <b
+                  >Llega en las próximas versiones de Windows y Android: orientación del móvil
+                  estable y traspasos entre varios dispositivos</b
+                >
+                — un mismo móvil dejará de alternar entre horizontal y vertical en la disposición de
+                dispositivos, y la posición del cursor y el estado de la conexión se mantendrán
+                estables durante traspasos repetidos entre varios dispositivos.
+              </p>
+            </div>
+            <div class="log-item">
+              <time datetime="2026-07">2026.07</time>
+              <p>
+                <b>Disposición de dispositivos más inteligente</b> · <b>Ver la disposición completa
+                en otro PC</b> — los dispositivos ya no se solapan y, al arrastrar uno entre otros
+                dos, encaja en su sitio. Mueve el dispositivo de referencia y el resto vuelve a
+                pegarse como un imán al PC con Windows; además, un segundo PC conectado por
+                Bluetooth o Wi-Fi ya muestra también la disposición completa del PC con Windows.
+              </p>
+            </div>
+            <div class="log-item">
+              <time datetime="2026-07">2026.07</time>
+              <p>
+                <b>Pantalla encendida mientras hay conexión · atenuación en reposo</b> — la pantalla
+                del móvil permanece encendida durante la conexión y se atenúa en reposo para ahorrar
+                batería. Se mantiene incluso con varios dispositivos conectados a la vez.
+              </p>
+            </div>
+            <div class="log-item">
+              <time datetime="2026-07">2026.07</time>
+              <p>
+                <b>Ver la posición de los demás dispositivos desde el móvil</b> · <b>disposición en
+                cadena (una sola fila)</b> — desde el móvil puedes comprobar cómo están colocados
+                los demás dispositivos conectados y alinear PC, móvil y PC en una sola fila.
+              </p>
+            </div>
+            <div class="log-item">
+              <time datetime="2026-07">2026.07</time>
+              <p>
+                <b>Efecto de paso del cursor entre dispositivos</b> · <b>Ctrl+Alt+Backspace para
+                volver a centrarlo</b> — un efecto suave cuando el cursor pasa de un dispositivo a
+                otro; si se pierde, vuelve al centro del monitor.
+              </p>
+            </div>
+            <div class="log-item">
+              <time datetime="2026-07">2026.07</time>
+              <p>
+                <b>Enter para enviar en apps de mensajería</b> — en las apps de mensajería, pulsa
+                Enter en el teclado del PC para enviar y Shift+Enter para saltar de línea.
+              </p>
+            </div>
+            <div class="log-item">
+              <time datetime="2026-06">2026.06</time>
+              <p>
+                <b>Conexión Bluetooth directa</b> · <b>Bluetooth entre PC y PC</b> — conéctate al
+                móvil o a otro PC sin router Wi-Fi para intercambiar entrada, portapapeles y
+                archivos.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site">
+      <div class="wrap ft">
+        <span>© 2026 OneMouse</span>
+        <span class="links"
+          ><a href="./technical">Aspectos técnicos y seguridad</a
+          ><a href="./privacy">Política de privacidad</a><a href="./terms">Términos del servicio</a
+          ><a href="./licenses">Licencias de código abierto</a></span
+        >
+      </div>
+    </footer>
+  </body>
+</html>
