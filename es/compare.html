@@ -1,0 +1,689 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Comparativa de software para compartir ratón y teclado (2026) | OneMouse</title>
+    <meta
+      name="description"
+      content="Software para compartir ratón y teclado comparado: OneMouse frente a Synergy, Deskflow, Mouse Without Borders, ShareMouse, Logitech Flow, Universal Control y scrcpy."
+    />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <link rel="stylesheet" href="../css/onemouse.css" />
+    <link rel="canonical" href="https://onemouse.pages.dev/es/compare" />
+    <link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/compare" />
+    <link rel="alternate" hreflang="en" href="https://onemouse.pages.dev/en/compare" />
+    <link rel="alternate" hreflang="ja" href="https://onemouse.pages.dev/ja/compare" />
+    <link rel="alternate" hreflang="zh" href="https://onemouse.pages.dev/zh/compare" />
+    <link rel="alternate" hreflang="es" href="https://onemouse.pages.dev/es/compare" />
+    <link rel="alternate" hreflang="x-default" href="https://onemouse.pages.dev/compare" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Inicio",
+                "item": "https://onemouse.pages.dev/es/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Comparativa",
+                "item": "https://onemouse.pages.dev/es/compare"
+              }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "¿Hay software gratis para compartir ratón y teclado?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Sí. Mouse Without Borders (solo Windows, parte de PowerToys), Deskflow (Windows, macOS, Linux; código abierto) y ShareMouse Free (dos equipos, uso personal) no cuestan nada. Las apps de OneMouse para Windows y Mac también son gratis; la app de OneMouse para Android tiene un nivel Gratis con anuncios y límites diarios de portapapeles y archivos, y el desbloqueo Pro de pago único los elimina."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Compartir ratón y teclado funciona sin conexión a internet?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Los KVM por software como OneMouse, Synergy, Deskflow y Mouse Without Borders funcionan a través de la red local y no necesitan acceso a internet. OneMouse también puede conectarse por Bluetooth sin ningún router. Algunas herramientas de fabricante dependen de una cuenta en línea: Apple Universal Control requiere una cuenta de Apple, Samsung Multi Control una cuenta Samsung, y Logitech Flow necesita acceso a internet para su configuración inicial."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Controlar un móvil Android desde el PC: ¿es una ventana duplicada o un cursor real?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Son cosas distintas. Las herramientas de duplicación como scrcpy, Vysor y Enlace Móvil (Phone Link) muestran la pantalla del móvil en una ventana del PC y tú haces clic dentro de esa ventana. Las herramientas de cruce de borde como OneMouse y Samsung Multi Control envían el cursor del PC a la propia pantalla del móvil, de modo que el móvil se comporta como un monitor adicional. OneMouse funciona por cruce de borde y además ofrece una ventana de control remoto opcional."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "¿OneMouse necesita una cuenta o un servidor?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. Los dispositivos se vinculan en local con un código de 6 dígitos o un código QR (un PIN con intercambio de claves SPAKE2), y la entrada, los archivos y el portapapeles viajan directamente entre tus propios dispositivos vinculados. No hay nada en lo que iniciar sesión ni ningún servidor de retransmisión."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Puedo compartir ratón y teclado por Bluetooth en lugar de Wi-Fi?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Con OneMouse, los dispositivos Android y otros PC con Windows pueden conectarse por Bluetooth en lugar de Wi-Fi; la app de Mac se conecta a través de la red local de forma predeterminada (el Bluetooth para Mac es una opción beta, desactivada por defecto). El Bluetooth es más lento que la Wi-Fi, así que los archivos grandes conviene enviarlos por Wi-Fi. Los KVM por software entre PC y PC como Synergy, Deskflow, Mouse Without Borders y ShareMouse funcionan solo por red. Apple Universal Control usa Bluetooth junto con Wi-Fi y Handoff."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Mouse Without Borders o OneMouse?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Mouse Without Borders es gratis, viene dentro de Microsoft PowerToys y enlaza hasta cuatro PC con Windows con portapapeles compartido y transferencias de un archivo de hasta 100 MB. OneMouse también enlaza PC con Windows y añade móviles y tablets Android, Mac con Apple Silicon, conexiones Bluetooth y transferencia de carpetas entre PC. Si todos los equipos son Windows y PowerToys ya está instalado, Mouse Without Borders es suficiente; OneMouse encaja cuando se suma al escritorio un móvil, una tablet o un Mac."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Synergy o OneMouse?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Synergy es un KVM por software de pago para Windows, macOS y Linux en el que cualquier equipo puede ser el servidor. OneMouse requiere un anfitrión con Windows, no admite Linux, y sus apps de Windows y Mac son gratis. La diferencia principal es Android: Synergy no tiene cliente móvil, mientras que OneMouse controla móviles y tablets Android por Wi-Fi o Bluetooth."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "¿OneMouse admite Linux, iPhone o iPad?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. Los destinos de OneMouse son Android, otros PC con Windows y Mac con Apple Silicon con macOS 13 o posterior, siempre con un PC con Windows 10/11 como anfitrión. Para Linux, usa Deskflow o Synergy. Para un Mac y un iPad, usa Apple Universal Control."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header class="site">
+      <div class="wrap hd">
+        <a class="brand" href="./" aria-label="Inicio de OneMouse"
+          ><span class="om">OM</span>OneMouse</a
+        >
+        <nav class="nav" aria-label="Navegación principal">
+          <a href="./">Resumen</a>
+          <a href="./#use">Funciones</a>
+          <a href="./guide">Guía</a>
+          <a href="./help">Ayuda</a>
+        </nav>
+        <div class="hd-right">
+          <div class="lang" aria-label="Idioma">
+            <a href="../compare">KOR</a><a href="../en/compare">ENG</a
+            ><a href="../ja/compare">JPN</a><a href="../zh/compare">CHN</a>
+            <span class="on">ESP</span>
+          </div>
+          <a class="hd-cta" href="./#get">Descargar</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="main-grid-aligned">
+      <section class="phero wrap">
+        <p class="ey">Comparativa</p>
+        <h1 class="page">Comparativa de software para compartir ratón y teclado (2026)</h1>
+        <p class="lead">
+          Esta página responde a una sola pregunta:
+          <b>¿qué software para compartir ratón y teclado encaja en tu escritorio?</b> Pone a
+          OneMouse junto a las herramientas que la gente suele considerar, desde los KVM por
+          software entre PC y PC hasta las utilidades para controlar el móvil y las funciones de
+          ecosistema de cada fabricante. OneMouse es <b>nuestro propio producto</b>, así que lee
+          esto como la comparativa de un fabricante. Los datos sobre los demás productos proceden de
+          sus páginas y repositorios oficiales, comprobados en septiembre de 2026.
+        </p>
+        <nav class="toc" aria-label="En esta página">
+          <a href="#types">Tipos de herramienta</a>
+          <a href="#comparison">Tabla comparativa</a>
+          <a href="#products">Notas por producto</a>
+          <a href="#pick">Elegir según tu caso</a>
+          <a href="#faq">Preguntas frecuentes</a>
+        </nav>
+      </section>
+
+      <!-- TOOL TYPES -->
+      <section id="types">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="ey">Tipos de herramienta</p>
+            <h2 class="sec">¿Qué tipo de herramienta necesitas?</h2>
+            <p class="sec-lead">
+              La mayoría de las listas de "mejor software para compartir el ratón" mezclan tres
+              cosas distintas. Decide primero en qué grupo estás; eso descarta a la mayoría de los
+              candidatos.
+            </p>
+          </div>
+          <div class="cards">
+            <article class="card">
+              <p class="card-lbl">De PC a PC</p>
+              <h3>Dos equipos en un mismo escritorio</h3>
+              <p>
+                Dos o más equipos, cada uno con su propia pantalla, comparten un ratón y un teclado
+                a través de la red local. Empuja el cursor más allá del borde de una pantalla y
+                aparecerá en el siguiente equipo, normalmente con portapapeles compartido y una
+                transferencia de archivos sencilla. Es el KVM por software clásico: Synergy,
+                Deskflow, Input Leap, Barrier, Mouse Without Borders, ShareMouse y OneMouse para
+                Windows a Windows o Windows a Mac.
+              </p>
+            </article>
+            <article class="card">
+              <p class="card-lbl">De PC a móvil o tablet</p>
+              <h3>Controlar Android desde el PC</h3>
+              <p>
+                Quieres escribir y hacer clic en un móvil o una tablet Android sin levantarlos de la
+                mesa. Hay dos enfoques. Las herramientas de duplicación de pantalla, como scrcpy,
+                muestran el móvil en una ventana del PC. Las herramientas de cruce de borde llevan
+                el cursor a la propia pantalla del móvil como si fuera otro monitor; OneMouse está
+                en este grupo, y también utilidades más antiguas basadas en ADB como DeskDock e
+                InputShare. Los recopilatorios rara vez cubren esta categoría.
+              </p>
+            </article>
+            <article class="card">
+              <p class="card-lbl">Ecosistema / fabricante</p>
+              <h3>Solo entre dispositivos de una misma marca</h3>
+              <p>
+                Funciones gratuitas integradas en una plataforma que solo funcionan con el hardware
+                o la cuenta de ese fabricante: Apple Universal Control (Mac y iPad), Samsung Multi
+                Control (dispositivos Galaxy) y Logitech Flow (ratones Logitech). Si todos tus
+                dispositivos ya cumplen los requisitos, son cómodas. Si uno queda fuera de la marca,
+                no sirven.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- COMPARISON TABLE -->
+      <section class="section-alt" id="comparison">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="ey">Tabla comparativa</p>
+            <h2 class="sec">Once herramientas, una junto a otra.</h2>
+            <p class="sec-lead">
+              Verificado en septiembre de 2026 a partir de las páginas oficiales; consulta el sitio
+              de cada producto por si ha habido cambios. Un guion (—) marca lo que no pudimos
+              verificar.
+            </p>
+          </div>
+          <div class="table-wrap">
+            <table class="kt" style="min-width: 1080px">
+              <thead>
+                <tr>
+                  <th>Producto</th>
+                  <th>Anfitrión y sistemas compatibles</th>
+                  <th>Android</th>
+                  <th>Modelo de precio</th>
+                  <th>Requiere hardware específico</th>
+                  <th>Conexión</th>
+                  <th>Notas</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><b>OneMouse</b> (el nuestro)</td>
+                  <td>
+                    Anfitrión: Windows 10/11. Destinos: Android, Windows, Mac con Apple Silicon
+                    (macOS 13+)
+                  </td>
+                  <td>Sí, el cursor cruza el borde de la pantalla</td>
+                  <td>
+                    Apps de Windows y Mac gratis; en Android, nivel Gratis (anuncios, límites) o Pro
+                    con pago único
+                  </td>
+                  <td>No</td>
+                  <td>Wi-Fi/LAN o Bluetooth (Mac: LAN; Bluetooth en beta)</td>
+                  <td>Sin Linux ni iPhone/iPad. Vinculación local, sin cuenta</td>
+                </tr>
+                <tr>
+                  <td><b>Synergy</b></td>
+                  <td>Windows, macOS, Linux; cualquier equipo puede ser el servidor</td>
+                  <td>No (el fabricante dice que está previsto, sin fecha)</td>
+                  <td>De pago; pago único para uso personal, por puesto para empresas</td>
+                  <td>No</td>
+                  <td>LAN</td>
+                  <td>Synergy 1 v1.20.4 y Synergy 3 v3.6.3, junio de 2026; código cerrado</td>
+                </tr>
+                <tr>
+                  <td><b>Deskflow</b></td>
+                  <td>Windows 10 1809+, macOS 12+ (13+ en Apple Silicon), Linux, FreeBSD</td>
+                  <td>
+                    No oficial; existe un cliente de terceros, última versión en julio de 2025
+                  </td>
+                  <td>Gratis, código abierto (GPL-2.0)</td>
+                  <td>No</td>
+                  <td>LAN, TLS activado por defecto</td>
+                  <td>
+                    v1.26.0, feb. de 2026; el núcleo de código abierto sobre el que se construye
+                    Synergy
+                  </td>
+                </tr>
+                <tr>
+                  <td><b>Input Leap</b></td>
+                  <td>Windows 10/11 de 64 bits, macOS 10.12+, Linux, FreeBSD, OpenBSD</td>
+                  <td>No</td>
+                  <td>Gratis, código abierto (GPL-2.0)</td>
+                  <td>No</td>
+                  <td>LAN</td>
+                  <td>
+                    Repositorio archivado en julio de 2026 (solo lectura); última versión v3.0.3,
+                    junio de 2025
+                  </td>
+                </tr>
+                <tr>
+                  <td><b>Barrier</b></td>
+                  <td>Windows 7–11 de 64 bits, macOS 10.12+, Linux, FreeBSD, OpenBSD</td>
+                  <td>No</td>
+                  <td>Gratis, código abierto (GPL-2.0)</td>
+                  <td>No</td>
+                  <td>LAN</td>
+                  <td>Sin mantenimiento; última versión v2.4.0, nov. de 2021</td>
+                </tr>
+                <tr>
+                  <td><b>Mouse Without Borders</b></td>
+                  <td>Solo Windows 10 (2004+) y 11; hasta 4 PC</td>
+                  <td>No (petición de función abierta)</td>
+                  <td>Gratis, código abierto (PowerToys, MIT)</td>
+                  <td>No</td>
+                  <td>LAN</td>
+                  <td>
+                    Portapapeles compartido, transferencia de un archivo de hasta 100 MB; PowerToys
+                    v0.101, ago. de 2026
+                  </td>
+                </tr>
+                <tr>
+                  <td><b>ShareMouse</b></td>
+                  <td>Windows 10/11, macOS 13–15 y 26</td>
+                  <td>No (el fabricante no tiene planes)</td>
+                  <td>
+                    Nivel gratuito para uso personal (2 equipos); Standard y Pro con pago único
+                  </td>
+                  <td>No</td>
+                  <td>LAN</td>
+                  <td>v7.0.27, ago. de 2026; sin planes para Linux</td>
+                </tr>
+                <tr>
+                  <td><b>Logitech Flow</b></td>
+                  <td>Windows 10/11 y macOS (versión mínima —); 2–3 equipos</td>
+                  <td>No (ni móviles ni tablets)</td>
+                  <td>Software gratis</td>
+                  <td>
+                    Sí: ratón Logitech compatible con Flow y Easy-Switch; teclado Flow opcional
+                  </td>
+                  <td>LAN; internet para la configuración inicial</td>
+                  <td>Parte de Logi Options+</td>
+                </tr>
+                <tr>
+                  <td><b>Apple Universal Control</b></td>
+                  <td>macOS 12.4+ y iPadOS 15.4+; un Mac más hasta dos Mac o iPad</td>
+                  <td>No</td>
+                  <td>Gratis, integrado</td>
+                  <td>Sí: modelos de Mac y iPad compatibles, la misma cuenta de Apple con 2FA</td>
+                  <td>Bluetooth + Wi-Fi + Handoff, a menos de 10 m</td>
+                  <td>Sin extremo Windows, iPhone ni Android</td>
+                </tr>
+                <tr>
+                  <td><b>Samsung Multi Control</b></td>
+                  <td>
+                    Galaxy Book (2021+, Windows 10/11) o PC con Windows 11 con la app de Samsung; de
+                    tablet Galaxy a móvil
+                  </td>
+                  <td>Solo móviles y tablets Galaxy con One UI 5.1+</td>
+                  <td>Gratis</td>
+                  <td>
+                    Sí: dispositivos Galaxy y una cuenta Samsung; el PC necesita Bluetooth y Wi-Fi
+                  </td>
+                  <td>Wi-Fi + Bluetooth</td>
+                  <td>
+                    App de la tienda actualizada en ago. de 2026; los Android que no son Galaxy no
+                    aparecen en la lista
+                  </td>
+                </tr>
+                <tr>
+                  <td><b>scrcpy</b></td>
+                  <td>Anfitrión: Windows, macOS, Linux</td>
+                  <td>Ventana de duplicación con entrada; no cruza el borde</td>
+                  <td>Gratis, código abierto (Apache-2.0)</td>
+                  <td>No (cable USB o Wi-Fi)</td>
+                  <td>USB (ADB) o Wi-Fi (ADB TCP/IP)</td>
+                  <td>v4.1, julio de 2026; requiere depuración USB salvo en modo OTG</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRODUCT NOTES -->
+      <section id="products">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="ey">Notas por producto</p>
+            <h2 class="sec">Qué hace bien cada herramienta y dónde se queda corta.</h2>
+            <p class="sec-lead">
+              Dos o tres frases por producto. Los límites de OneMouse se enumeran igual que los de
+              los demás.
+            </p>
+          </div>
+          <div class="cards">
+            <article class="card accent">
+              <p class="card-lbl">De PC a PC y de PC a Android · nuestro producto</p>
+              <h3>OneMouse</h3>
+              <p>
+                Un PC con Windows 10/11 comparte su ratón y su teclado con móviles y tablets
+                Android, otros PC con Windows y Mac con Apple Silicon (macOS 13+) cruzando el borde
+                de la pantalla, con transferencia de archivos y sincronización del portapapeles.
+                Todo se queda en local: la vinculación usa un código de 6 dígitos o un código QR, y
+                no hay cuenta ni servidor. Límites: Windows tiene que ser el anfitrión, no hay
+                Linux, ni iPhone ni iPad, los Mac necesitan Apple Silicon y se conectan por LAN de forma
+                predeterminada (el Bluetooth para Mac es una opción beta, desactivada por defecto), y el nivel Gratis de Android tiene anuncios y límites diarios de portapapeles y
+                archivos que el desbloqueo Pro de pago único elimina.
+              </p>
+            </article>
+            <article class="card">
+              <p class="card-lbl">De PC a PC · de pago</p>
+              <h3>Synergy</h3>
+              <p>
+                KVM por software comercial de Symless para Windows, macOS y Linux; cualquier equipo
+                puede ser el servidor. Las licencias personales son un pago único y las de empresa
+                se cobran por puesto. Synergy 1 y Synergy 3 se actualizaron en junio de 2026.
+                Limitación principal: no hay cliente para Android, iOS ni ChromeOS, aunque Symless
+                dice que tiene previsto añadirlos en el futuro.
+              </p>
+            </article>
+            <article class="card">
+              <p class="card-lbl">De PC a PC · gratis, código abierto</p>
+              <h3>Deskflow</h3>
+              <p>
+                El núcleo de código abierto sobre el que se construye Synergy: GPL-2.0, TLS activado
+                por defecto y compilaciones para Windows, macOS, Linux y FreeBSD. Es el proyecto con
+                mantenimiento activo del linaje de Barrier e Input Leap, con la v1.26.0 publicada en
+                febrero de 2026. Limitación principal: no hay cliente oficial para Android. Existe
+                un cliente de terceros para Android 14+, pero no ha tenido ninguna versión desde
+                julio de 2025.
+              </p>
+            </article>
+            <article class="card">
+              <p class="card-lbl">De PC a PC · gratis, código abierto · archivado</p>
+              <h3>Input Leap</h3>
+              <p>
+                Una bifurcación de Barrier que cubre Windows, macOS, Linux y BSD, con una
+                compilación para Wayland incluida. El repositorio de GitHub se archivó en julio de
+                2026 y es de solo lectura; su última versión fue la v3.0.3 en junio de 2025, y sus
+                antiguos colaboradores remiten a Deskflow. Sigue funcionando donde ya está
+                instalado, pero no recibirá correcciones de seguridad.
+              </p>
+            </article>
+            <article class="card">
+              <p class="card-lbl">De PC a PC · gratis, código abierto · sin mantenimiento</p>
+              <h3>Barrier</h3>
+              <p>
+                La bifurcación de Synergy 1.9 que muchos recopilatorios de 2026 siguen recomendando.
+                Su última versión, la v2.4.0, es de noviembre de 2021, y esa misma página de
+                lanzamiento indica que Barrier ya no tiene mantenimiento ni recibe correcciones de
+                seguridad. Su sucesor, Input Leap, fue archivado a su vez en 2026, así que Deskflow
+                es la opción viva de esta familia.
+              </p>
+            </article>
+            <article class="card">
+              <p class="card-lbl">De PC a PC · gratis, código abierto</p>
+              <h3>Mouse Without Borders</h3>
+              <p>
+                La herramienta de Microsoft solo para Windows, ahora parte de PowerToys (MIT).
+                Enlaza hasta cuatro PC con Windows 10/11 en la misma red con portapapeles compartido
+                y transferencia de un archivo de hasta 100 MB, y recibió mejoras de cifrado en
+                agosto de 2026. Limitación principal: solo Windows. La compatibilidad con Android es
+                una petición de función abierta, no una función.
+              </p>
+            </article>
+            <article class="card">
+              <p class="card-lbl">De PC a PC · nivel gratuito y de pago</p>
+              <h3>ShareMouse</h3>
+              <p>
+                KVM por software para Windows y macOS de Bartels Media, actualizado a la 7.0.27 en
+                agosto de 2026. ShareMouse Free cubre dos equipos y dos pantallas para uso personal
+                no comercial; Standard y Professional son compras únicas con 12 meses de
+                actualizaciones. Limitación principal: no hay Linux ni Android ni iPhone/iPad, y el
+                fabricante dice que no tiene planes para ellos.
+              </p>
+            </article>
+            <article class="card">
+              <p class="card-lbl">Ecosistema · software gratis, requiere hardware</p>
+              <h3>Logitech Flow</h3>
+              <p>
+                Permite que un ratón Logitech compatible con Flow se mueva entre dos o tres equipos
+                con Windows y macOS en la misma red a través de Logi Options+, con un teclado
+                Logitech compatible que lo sigue. Limitación principal: requiere hardware Logitech
+                con Easy-Switch, necesita acceso a internet para la configuración inicial y no
+                admite tablets ni móviles.
+              </p>
+            </article>
+            <article class="card">
+              <p class="card-lbl">Ecosistema · gratis, integrado</p>
+              <h3>Apple Universal Control</h3>
+              <p>
+                Integrado en macOS 12.4+ y iPadOS 15.4+: un Mac controla hasta otros dos Mac o iPad
+                con un solo teclado y ratón. Limitación principal: solo Mac y iPad de las listas de
+                modelos compatibles de Apple, todos con la misma cuenta de Apple con autenticación
+                de doble factor y a menos de 10 metros. No hay extremo para Windows, iPhone ni
+                Android.
+              </p>
+            </article>
+            <article class="card">
+              <p class="card-lbl">Ecosistema · gratis, solo Galaxy</p>
+              <h3>Samsung Multi Control</h3>
+              <p>
+                La forma de Samsung de controlar un móvil desde un PC: un Galaxy Book (de 2021 en
+                adelante) o un PC con Windows 11 con la app Multi Control de Samsung de la Microsoft
+                Store lleva el cursor a móviles y tablets Galaxy con portapapeles compartido y
+                arrastrar y soltar de archivos. Limitación principal: Samsung solo enumera
+                dispositivos Galaxy con One UI 5.1 o posterior, y todos los dispositivos necesitan
+                la misma cuenta Samsung además de Bluetooth y Wi-Fi.
+              </p>
+            </article>
+            <article class="card">
+              <p class="card-lbl">De PC a móvil · gratis, código abierto</p>
+              <h3>scrcpy</h3>
+              <p>
+                La herramienta de duplicación de Genymobile muestra la pantalla de Android, con
+                audio, en una ventana de un anfitrión con Windows, macOS o Linux y reenvía la
+                entrada de teclado y ratón; no se instala nada en el móvil. La v4.1 se publicó en
+                julio de 2026. Limitación principal: es una ventana de duplicación, no un cruce de
+                borde, y necesita depuración USB por cable o ADB por Wi-Fi (el modo OTG es solo por
+                USB).
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- PICK BY SITUATION -->
+      <section class="section-alt" id="pick">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">Elegir según tu caso</p>
+            <h2 class="sec">Empieza por los dispositivos que tienes en el escritorio.</h2>
+          </div>
+          <div class="panel">
+            <ul>
+              <li>
+                <b>Dos PC con Windows en un mismo escritorio:</b> Mouse Without Borders es gratis,
+                ya viene dentro de PowerToys y gestiona hasta cuatro PC con Windows. OneMouse
+                también enlaza dos PC con Windows con transferencia bidireccional de archivos,
+                carpetas y portapapeles, y puede hacerlo por Bluetooth cuando no hay router.
+                ShareMouse Free cubre dos equipos para uso personal.
+              </li>
+              <li>
+                <b>PC con Windows + móvil o tablet Android:</b> OneMouse lleva el cursor al móvil
+                por Wi-Fi o Bluetooth sin cable, sin ADB y sin exigir ninguna marca. Samsung Multi
+                Control encaja si tienes un móvil Galaxy, un Galaxy Book o un PC con Windows 11 y
+                una cuenta Samsung. Si prefieres ver la pantalla del móvil en una ventana, usa
+                scrcpy (cualquier marca, depuración USB) o la pantalla del teléfono de Enlace Móvil
+                (Phone Link) en las marcas que admite.
+              </li>
+              <li>
+                <b>PC con Windows + Mac:</b> OneMouse funciona cuando el PC con Windows es el
+                anfitrión y el Mac es de Apple Silicon con macOS 13 o posterior, por LAN. Si el Mac
+                tiene que ser el equipo que controla, o es un Mac con Intel, usa Synergy (de pago),
+                Deskflow (gratis) o ShareMouse. Logitech Flow funciona si ya tienes un ratón
+                Logitech compatible con Flow.
+              </li>
+              <li>
+                <b>Mac + iPad:</b> Apple Universal Control, integrado y gratis. OneMouse no admite
+                iPad ni un Mac como anfitrión.
+              </li>
+              <li>
+                <b>Hay Linux de por medio:</b> OneMouse no admite Linux. Deskflow es la opción
+                gratuita con mantenimiento activo para Windows, macOS y Linux, y Synergy es la de
+                pago con soporte del fabricante. Lan Mouse es una alternativa de código abierto más
+                reciente con compatibilidad con Wayland. Evita Barrier e Input Leap para
+                instalaciones nuevas; ninguno de los dos tiene mantenimiento.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">Preguntas frecuentes</p>
+            <h2 class="sec">Lo que la gente pregunta antes de elegir.</h2>
+          </div>
+          <div class="faq">
+            <details>
+              <summary>¿Hay software gratis para compartir ratón y teclado?</summary>
+              <div class="a">
+                Sí. <b>Mouse Without Borders</b> (solo Windows, parte de PowerToys),
+                <b>Deskflow</b> (Windows, macOS, Linux; código abierto) y <b>ShareMouse Free</b>
+                (dos equipos, uso personal) no cuestan nada. Las apps de OneMouse para Windows y Mac
+                también son gratis; la app de OneMouse para Android tiene un nivel Gratis con
+                anuncios y límites diarios de portapapeles y archivos, y el desbloqueo Pro de pago
+                único los elimina.
+              </div>
+            </details>
+            <details>
+              <summary>¿Compartir ratón y teclado funciona sin conexión a internet?</summary>
+              <div class="a">
+                Los KVM por software como OneMouse, Synergy, Deskflow y Mouse Without Borders
+                funcionan a través de la red local y no necesitan acceso a internet. OneMouse
+                también puede conectarse por <b>Bluetooth sin ningún router</b>. Algunas
+                herramientas de fabricante dependen de una cuenta en línea: Apple Universal Control
+                requiere una cuenta de Apple, Samsung Multi Control una cuenta Samsung, y Logitech
+                Flow necesita acceso a internet para su configuración inicial.
+              </div>
+            </details>
+            <details>
+              <summary>
+                Controlar un móvil Android desde el PC: ¿es una ventana duplicada o un cursor real?
+              </summary>
+              <div class="a">
+                Son cosas distintas. Las herramientas de <b>duplicación</b> como scrcpy, Vysor y
+                Enlace Móvil (Phone Link) muestran la pantalla del móvil en una ventana del PC y tú
+                haces clic dentro de esa ventana. Las herramientas de <b>cruce de borde</b> como
+                OneMouse y Samsung Multi Control envían el cursor del PC a la propia pantalla del
+                móvil, de modo que el móvil se comporta como un monitor adicional. OneMouse funciona
+                por cruce de borde y además ofrece una ventana de control remoto opcional.
+              </div>
+            </details>
+            <details>
+              <summary>¿OneMouse necesita una cuenta o un servidor?</summary>
+              <div class="a">
+                No. Los dispositivos se vinculan en local con un
+                <b>código de 6 dígitos o un código QR</b> (un PIN con intercambio de claves SPAKE2),
+                y la entrada, los archivos y el portapapeles viajan directamente entre tus propios
+                dispositivos vinculados. No hay nada en lo que iniciar sesión ni ningún servidor de
+                retransmisión.
+              </div>
+            </details>
+            <details>
+              <summary>¿Puedo compartir ratón y teclado por Bluetooth en lugar de Wi-Fi?</summary>
+              <div class="a">
+                Con OneMouse, los dispositivos Android y otros PC con Windows pueden conectarse por
+                <b>Bluetooth</b> en lugar de Wi-Fi; la app de Mac se conecta a través de la red local de forma predeterminada (el Bluetooth para Mac es una opción beta, desactivada por defecto). El Bluetooth es más lento que la Wi-Fi, así que los archivos grandes conviene
+                enviarlos por Wi-Fi. Los KVM por software entre PC y PC como Synergy, Deskflow,
+                Mouse Without Borders y ShareMouse funcionan solo por red. Apple Universal Control
+                usa Bluetooth junto con Wi-Fi y Handoff.
+              </div>
+            </details>
+            <details>
+              <summary>¿Mouse Without Borders o OneMouse?</summary>
+              <div class="a">
+                Mouse Without Borders es gratis, viene dentro de Microsoft PowerToys y enlaza hasta
+                cuatro PC con Windows con portapapeles compartido y transferencias de un archivo de
+                hasta 100 MB. OneMouse también enlaza PC con Windows y añade
+                <b>móviles y tablets Android</b>, <b>Mac con Apple Silicon</b>, conexiones Bluetooth
+                y transferencia de carpetas entre PC. Si todos los equipos son Windows y PowerToys
+                ya está instalado, Mouse Without Borders es suficiente; OneMouse encaja cuando se
+                suma al escritorio un móvil, una tablet o un Mac.
+              </div>
+            </details>
+            <details>
+              <summary>¿Synergy o OneMouse?</summary>
+              <div class="a">
+                Synergy es un KVM por software de pago para Windows, macOS y Linux en el que
+                cualquier equipo puede ser el servidor. OneMouse requiere un anfitrión con Windows,
+                no admite Linux, y sus apps de Windows y Mac son gratis. La diferencia principal es
+                <b>Android</b>: Synergy no tiene cliente móvil, mientras que OneMouse controla
+                móviles y tablets Android por Wi-Fi o Bluetooth.
+              </div>
+            </details>
+            <details>
+              <summary>¿OneMouse admite Linux, iPhone o iPad?</summary>
+              <div class="a">
+                No. Los destinos de OneMouse son Android, otros PC con Windows y Mac con Apple
+                Silicon con macOS 13 o posterior, siempre con un PC con Windows 10/11 como
+                anfitrión. Para Linux, usa Deskflow o Synergy. Para un Mac y un iPad, usa Apple
+                Universal Control.
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- NEXT STEP -->
+      <section class="section-alt" id="next">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">Siguiente paso</p>
+            <h2 class="sec">Windows, Android y Mac en un mismo escritorio, todo en local.</h2>
+            <p class="sec-lead">
+              Instala primero la app de Windows y luego añade los móviles, PC o Mac a los que
+              quieras llegar. La guía explica paso a paso la vinculación y la colocación.
+            </p>
+          </div>
+          <div style="display: flex; gap: 12px; flex-wrap: wrap">
+            <a class="btn btn-pri" href="./#get">Descargar</a>
+            <a class="btn btn-sec" href="./guide">Leer la guía de configuración</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site">
+      <div class="wrap ft">
+        <span>© 2026 OneMouse</span>
+        <span class="links"
+          ><a href="./compare">Comparativa</a><a href="./technical">Aspectos técnicos y seguridad</a
+          ><a href="./privacy">Política de privacidad</a><a href="./terms">Términos del servicio</a
+          ><a href="./licenses">Licencias de código abierto</a></span
+        >
+      </div>
+    </footer>
+  </body>
+</html>

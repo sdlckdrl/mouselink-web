@@ -1,0 +1,540 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>マウス・キーボード共有ソフト比較（2026年） | OneMouse</title>
+    <meta
+      name="description"
+      content="マウス・キーボード共有ソフトの比較。OneMouseをSynergy、Deskflow、Mouse Without Borders、ShareMouse、Logitech Flow、Universal Control、scrcpyと並べて検証しました。"
+    />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <link rel="stylesheet" href="../css/onemouse.css" />
+    <link rel="canonical" href="https://onemouse.pages.dev/ja/compare" />
+    <link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/compare" />
+    <link rel="alternate" hreflang="en" href="https://onemouse.pages.dev/en/compare" />
+    <link rel="alternate" hreflang="ja" href="https://onemouse.pages.dev/ja/compare" />
+    <link rel="alternate" hreflang="zh" href="https://onemouse.pages.dev/zh/compare" />
+    <link rel="alternate" hreflang="es" href="https://onemouse.pages.dev/es/compare" />
+    <link rel="alternate" hreflang="x-default" href="https://onemouse.pages.dev/compare" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "ホーム",
+                "item": "https://onemouse.pages.dev/ja/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "比較",
+                "item": "https://onemouse.pages.dev/ja/compare"
+              }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "無料のマウス・キーボード共有ソフトはありますか？",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "あります。Mouse Without Borders（Windows専用、PowerToysの一部）、Deskflow（Windows、macOS、Linux。オープンソース）、ShareMouse Free（2台まで、個人利用）は無料です。OneMouseのWindowsアプリとMacアプリも無料です。OneMouseのAndroidアプリには広告と1日あたりのクリップボード・ファイル制限のあるFreeがあり、買い切りのProで解除できます。"
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "マウス・キーボード共有はインターネット接続なしで使えますか？",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "OneMouse、Synergy、Deskflow、Mouse Without BordersなどのソフトウェアKVMはローカルネットワーク上で動作し、インターネット接続を必要としません。OneMouseはルーターがまったくない状態でもBluetoothで接続できます。一方、メーカー製ツールにはオンラインアカウントに依存するものがあります。Apple Universal ControlにはApple Account、Samsung Multi ControlにはSamsungアカウントが必要で、Logitech Flowは初期設定にインターネット接続が必要です。"
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "PCからAndroidスマホを操作するのは、ミラーウィンドウですか、それとも本物のカーソルですか？",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "この2つは別物です。scrcpy、Vysor、Phone Linkなどのミラーリングツールは、スマホの画面をPC上のウィンドウに表示し、そのウィンドウの中でクリックします。OneMouseやSamsung Multi Controlなどのエッジクロッシング型ツールは、PCのカーソルをスマホ自身の画面へ送るため、スマホが追加のモニターのように振る舞います。OneMouseはエッジクロッシングで動作し、オプションのリモート操作ウィンドウも提供しています。"
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "OneMouseにアカウントやサーバーは必要ですか？",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "必要ありません。デバイスは6桁のコードまたはQRコード（SPAKE2鍵交換を使うPIN）でローカルにペアリングし、入力、ファイル、クリップボードのデータはペアリングした自分のデバイス間で直接やり取りされます。サインインするものも、中継サーバーもありません。"
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Wi-Fiの代わりにBluetoothでマウスとキーボードを共有できますか？",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "OneMouseでは、Androidデバイスと別のWindows PCはWi-Fiの代わりにBluetoothで接続できます。Macアプリは既定ではローカルネットワークで接続します（Mac Bluetoothは既定オフのベータ機能）。BluetoothはWi-Fiより遅いため、大きなファイルはWi-Fiで送るほうが適しています。Synergy、Deskflow、Mouse Without Borders、ShareMouseなどのPC間ソフトウェアKVMはネットワーク経由でのみ動作します。Apple Universal ControlはBluetoothをWi-FiおよびHandoffと組み合わせて使います。"
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Mouse Without BordersとOneMouse、どちらを選ぶべきですか？",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Mouse Without Bordersは無料でMicrosoft PowerToysに含まれており、共有クリップボードと最大100MBの単一ファイル転送で最大4台のWindows PCをつなぎます。OneMouseもWindows PC同士をつなぎ、さらにAndroidスマホ・タブレット、Apple Silicon Mac、Bluetooth接続、PC間のフォルダー転送に対応します。すべてのマシンがWindowsで、PowerToysがすでにインストールされているならMouse Without Bordersで十分です。スマホ、タブレット、Macが机に加わるならOneMouseが向いています。"
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "SynergyとOneMouse、どちらを選ぶべきですか？",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "SynergyはWindows、macOS、Linux向けの有料ソフトウェアKVMで、どのコンピューターもサーバーになれます。OneMouseはWindowsホストが必須で、Linuxには非対応ですが、WindowsアプリとMacアプリは無料です。最大の違いはAndroidです。Synergyにはモバイルクライアントがありませんが、OneMouseはWi-FiまたはBluetoothでAndroidスマホ・タブレットを操作できます。"
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "OneMouseはLinux、iPhone、iPadに対応していますか？",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "対応していません。OneMouseの接続先はAndroid、別のWindows PC、macOS 13以降のApple Silicon Macで、ホストは常にWindows 10/11 PCです。Linuxの場合はDeskflowまたはSynergyを、MacとiPadの場合はApple Universal Controlをお使いください。"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header class="site">
+      <div class="wrap hd">
+        <a class="brand" href="./" aria-label="OneMouse ホーム"
+          ><span class="om">OM</span>OneMouse</a
+        >
+        <nav class="nav" aria-label="メインメニュー">
+          <a href="./">概要</a>
+          <a href="./#use">機能</a>
+          <a href="./guide">使い方</a>
+          <a href="./help">ヘルプ</a>
+        </nav>
+        <div class="hd-right">
+          <div class="lang" aria-label="言語">
+            <a href="../compare">KOR</a><a href="../en/compare">ENG</a
+            ><span class="on">JPN</span><a href="../zh/compare">CHN</a>
+            <a href="../es/compare">ESP</a>
+          </div>
+          <a class="hd-cta" href="./#get">ダウンロード</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="main-grid-aligned">
+      <section class="phero wrap">
+        <p class="ey">比較</p>
+        <h1 class="page">マウス・キーボード共有ソフト比較（2026年）</h1>
+        <p class="lead">
+          このページが答えるのは、ひとつの質問です。<b>自分の机に合うマウス・キーボード共有ソフトはどれか。</b>PC間のソフトウェアKVMからスマホ操作ユーティリティ、メーカー独自のエコシステム機能まで、よく候補に挙がるツールとOneMouseを並べて比較します。OneMouseは<b>当社の製品</b>ですので、開発元による比較としてお読みください。他社製品に関する事実は、各社の公式ページとリポジトリをもとに2026年9月に確認したものです。
+        </p>
+        <nav class="toc" aria-label="このページの目次">
+          <a href="#types">ツールの種類</a>
+          <a href="#comparison">比較表</a>
+          <a href="#products">製品ごとの補足</a>
+          <a href="#pick">状況別の選び方</a>
+          <a href="#faq">よくある質問</a>
+        </nav>
+      </section>
+
+      <!-- TOOL TYPES -->
+      <section id="types">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="ey">ツールの種類</p>
+            <h2 class="sec">どの種類のツールが必要ですか？</h2>
+            <p class="sec-lead">
+              「おすすめマウス共有ソフト」のようなまとめ記事の多くは、性質の異なる3種類のツールを混ぜて紹介しています。まず自分がどのグループに当てはまるかを決めれば、候補の大半は絞り込めます。
+            </p>
+          </div>
+          <div class="cards">
+            <article class="card">
+              <p class="card-lbl">PCとPC</p>
+              <h3>1つの机に2台のコンピューター</h3>
+              <p>
+                それぞれ画面を持つ2台以上のコンピューターが、ローカルネットワーク経由で1組のマウスとキーボードを共有します。カーソルを画面の端の外へ押し出すと隣のマシンに現れ、多くの場合は共有クリップボードと簡単なファイル転送も付いています。これが古典的なソフトウェアKVMで、Synergy、Deskflow、Input Leap、Barrier、Mouse Without Borders、ShareMouse、そしてWindows同士またはWindowsとMacの組み合わせにおけるOneMouseがここに入ります。
+              </p>
+            </article>
+            <article class="card">
+              <p class="card-lbl">PCとスマホ・タブレット</p>
+              <h3>PCからAndroidを操作する</h3>
+              <p>
+                Androidスマホやタブレットを手に取らずに、PCから入力やクリックをしたい場合です。方法は2つあります。scrcpyのようなミラーリングツールは、スマホの画面をPC上のウィンドウに表示します。エッジクロッシング（画面端越え）型のツールは、スマホをもう1台のモニターのように扱い、カーソルをスマホ自身の画面へ移動させます。OneMouseはこのグループで、DeskDockやInputShareといった古いADBベースのユーティリティも同じ仲間です。まとめ記事がこのカテゴリーを扱うことはほとんどありません。
+              </p>
+            </article>
+            <article class="card">
+              <p class="card-lbl">エコシステム / メーカー</p>
+              <h3>同じブランドのデバイス間だけ</h3>
+              <p>
+                プラットフォームに組み込まれた無料機能で、そのメーカーのハードウェアやアカウントでしか動作しません。Apple Universal Control（MacとiPad）、Samsung Multi Control（Galaxyデバイス）、Logitech Flow（Logitechのマウス）がこれにあたります。すべてのデバイスが条件を満たしていれば便利ですが、1台でもブランドの外にあれば使えません。
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- COMPARISON TABLE -->
+      <section class="section-alt" id="comparison">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="ey">比較表</p>
+            <h2 class="sec">11のツールを横並びで。</h2>
+            <p class="sec-lead">
+              2026年9月時点で各社の公式ページをもとに確認した内容です。変更の有無は各製品のサイトでご確認ください。ダッシュ（—）は確認できなかった項目を示します。
+            </p>
+          </div>
+          <div class="table-wrap">
+            <table class="kt" style="min-width: 1080px">
+              <thead>
+                <tr>
+                  <th>製品</th>
+                  <th>ホスト / 対応OS</th>
+                  <th>Android</th>
+                  <th>料金体系</th>
+                  <th>特定ハードウェアの要否</th>
+                  <th>接続方式</th>
+                  <th>補足</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><b>OneMouse</b>（当社製品）</td>
+                  <td>
+                    ホスト：Windows 10/11。接続先：Android、Windows、Apple Silicon Mac（macOS 13以降）
+                  </td>
+                  <td>対応。カーソルが画面の端を越えて移動</td>
+                  <td>
+                    WindowsアプリとMacアプリは無料。AndroidはFree（広告・制限あり）または買い切りのPro
+                  </td>
+                  <td>不要</td>
+                  <td>Wi-Fi/LANまたはBluetooth（MacはLAN、Bluetoothはベータ）</td>
+                  <td>Linux、iPhone/iPadは非対応。ローカルでペアリングし、アカウント不要</td>
+                </tr>
+                <tr>
+                  <td><b>Synergy</b></td>
+                  <td>Windows、macOS、Linux。どのコンピューターもサーバーになれる</td>
+                  <td>非対応（メーカーは対応予定としているが時期未定）</td>
+                  <td>有料。個人用は買い切り、ビジネス用はシートごと</td>
+                  <td>不要</td>
+                  <td>LAN</td>
+                  <td>Synergy 1 v1.20.4とSynergy 3 v3.6.3（2026年6月）。クローズドソース</td>
+                </tr>
+                <tr>
+                  <td><b>Deskflow</b></td>
+                  <td>Windows 10 1809以降、macOS 12以降（Apple Siliconは13以降）、Linux、FreeBSD</td>
+                  <td>公式には非対応。サードパーティ製クライアントがあり、最終リリースは2025年7月</td>
+                  <td>無料、オープンソース（GPL-2.0）</td>
+                  <td>不要</td>
+                  <td>LAN、TLSが既定で有効</td>
+                  <td>v1.26.0（2026年2月）。Synergyの土台となるオープンソースのコア</td>
+                </tr>
+                <tr>
+                  <td><b>Input Leap</b></td>
+                  <td>Windows 10/11 64ビット、macOS 10.12以降、Linux、FreeBSD、OpenBSD</td>
+                  <td>非対応</td>
+                  <td>無料、オープンソース（GPL-2.0）</td>
+                  <td>不要</td>
+                  <td>LAN</td>
+                  <td>リポジトリは2026年7月にアーカイブ（読み取り専用）。最終リリースはv3.0.3（2025年6月）</td>
+                </tr>
+                <tr>
+                  <td><b>Barrier</b></td>
+                  <td>Windows 7〜11 64ビット、macOS 10.12以降、Linux、FreeBSD、OpenBSD</td>
+                  <td>非対応</td>
+                  <td>無料、オープンソース（GPL-2.0）</td>
+                  <td>不要</td>
+                  <td>LAN</td>
+                  <td>メンテナンス終了。最終リリースはv2.4.0（2021年11月）</td>
+                </tr>
+                <tr>
+                  <td><b>Mouse Without Borders</b></td>
+                  <td>Windows 10（2004以降）と11のみ。最大4台のPC</td>
+                  <td>非対応（機能要望がオープンのまま）</td>
+                  <td>無料、オープンソース（PowerToys、MIT）</td>
+                  <td>不要</td>
+                  <td>LAN</td>
+                  <td>
+                    共有クリップボード、最大100MBの単一ファイル転送。PowerToys v0.101（2026年8月）
+                  </td>
+                </tr>
+                <tr>
+                  <td><b>ShareMouse</b></td>
+                  <td>Windows 10/11、macOS 13〜15および26</td>
+                  <td>非対応（メーカーは予定なし）</td>
+                  <td>個人利用向けの無料版（2台まで）。StandardとProは買い切り</td>
+                  <td>不要</td>
+                  <td>LAN</td>
+                  <td>v7.0.27（2026年8月）。Linux対応の予定なし</td>
+                </tr>
+                <tr>
+                  <td><b>Logitech Flow</b></td>
+                  <td>Windows 10/11とmacOS（最低バージョン —）。2〜3台のコンピューター</td>
+                  <td>非対応（スマホ・タブレットは不可）</td>
+                  <td>ソフトウェアは無料</td>
+                  <td>必要：Easy-Switch搭載のFlow対応Logitechマウス。Flow対応キーボードは任意</td>
+                  <td>LAN。初期設定にはインターネットが必要</td>
+                  <td>Logi Options+の一部</td>
+                </tr>
+                <tr>
+                  <td><b>Apple Universal Control</b></td>
+                  <td>macOS 12.4以降とiPadOS 15.4以降。1台のMacに加えて最大2台のMacまたはiPad</td>
+                  <td>非対応</td>
+                  <td>無料、内蔵</td>
+                  <td>必要：対応モデルのMacとiPad、2ファクタ認証を有効にした同じApple Account</td>
+                  <td>Bluetooth + Wi-Fi + Handoff、10m以内</td>
+                  <td>Windows、iPhone、Androidは接続先にできない</td>
+                </tr>
+                <tr>
+                  <td><b>Samsung Multi Control</b></td>
+                  <td>
+                    Galaxy Book（2021年以降、Windows 10/11）またはSamsungのアプリを入れたWindows 11 PC。Galaxyタブレットからスマホも可
+                  </td>
+                  <td>One UI 5.1以降のGalaxyスマホ・タブレットのみ</td>
+                  <td>無料</td>
+                  <td>必要：GalaxyデバイスとSamsungアカウント。PCにはBluetoothとWi-Fiが必要</td>
+                  <td>Wi-Fi + Bluetooth</td>
+                  <td>ストアアプリは2026年8月更新。Galaxy以外のAndroidは記載なし</td>
+                </tr>
+                <tr>
+                  <td><b>scrcpy</b></td>
+                  <td>ホスト：Windows、macOS、Linux</td>
+                  <td>入力付きのミラーウィンドウ。エッジクロッシングではない</td>
+                  <td>無料、オープンソース（Apache-2.0）</td>
+                  <td>不要（USBケーブルまたはWi-Fi）</td>
+                  <td>USB（ADB）またはWi-Fi（ADB TCP/IP）</td>
+                  <td>v4.1（2026年7月）。OTGモード以外はUSBデバッグが必要</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRODUCT NOTES -->
+      <section id="products">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="ey">製品ごとの補足</p>
+            <h2 class="sec">各ツールの得意なことと、限界。</h2>
+            <p class="sec-lead">
+              製品ごとに2〜3文で説明します。OneMouseの制限も、他の製品と同じ書き方で挙げています。
+            </p>
+          </div>
+          <div class="cards">
+            <article class="card accent">
+              <p class="card-lbl">PCとPC・PCとAndroid · 当社製品</p>
+              <h3>OneMouse</h3>
+              <p>
+                Windows 10/11 PCのマウスとキーボードを、画面の端を越える方式でAndroidスマホ・タブレット、別のWindows PC、Apple Silicon Mac（macOS 13以降）と共有し、ファイル転送とクリップボード同期も備えています。すべてローカルで完結します。ペアリングは6桁のコードまたはQRコードで行い、アカウントもサーバーもありません。制限：ホストはWindowsに限られ、Linux、iPhone、iPadは非対応、MacはApple Silicon必須で既定ではLAN接続（Mac Bluetoothは既定オフのベータ機能）、Android Freeには広告と1日あたりのクリップボード・ファイル制限があります（買い切りのProで解除）。
+              </p>
+            </article>
+            <article class="card">
+              <p class="card-lbl">PCとPC · 有料</p>
+              <h3>Synergy</h3>
+              <p>
+                Symless社の商用ソフトウェアKVMで、Windows、macOS、Linuxに対応し、どのコンピューターもサーバーになれます。個人ライセンスは買い切り、ビジネスライセンスはシートごとの課金です。Synergy 1とSynergy 3はどちらも2026年6月に更新されました。主な制限：Android、iOS、ChromeOSのクライアントがありません。Symlessは将来対応する予定だとしています。
+              </p>
+            </article>
+            <article class="card">
+              <p class="card-lbl">PCとPC · 無料・オープンソース</p>
+              <h3>Deskflow</h3>
+              <p>
+                Synergyの土台となるオープンソースのコアです。GPL-2.0、TLSは既定で有効、Windows、macOS、Linux、FreeBSD向けのビルドがあります。BarrierとInput Leapの系譜の中で現在も活発にメンテナンスされているプロジェクトで、2026年2月にv1.26.0がリリースされました。主な制限：公式のAndroidクライアントがありません。サードパーティ製のAndroid 14以降向けクライアントはありますが、2025年7月以降リリースがありません。
+              </p>
+            </article>
+            <article class="card">
+              <p class="card-lbl">PCとPC · 無料・オープンソース · アーカイブ済み</p>
+              <h3>Input Leap</h3>
+              <p>
+                Barrierのフォークで、Windows、macOS、Linux、BSDに対応し、Waylandビルドもあります。GitHubリポジトリは2026年7月にアーカイブされて読み取り専用となり、最終リリースは2025年6月のv3.0.3です。元のコントリビューターは代わりにDeskflowを勧めています。インストール済みの環境では動作し続けますが、セキュリティ修正は提供されません。
+              </p>
+            </article>
+            <article class="card">
+              <p class="card-lbl">PCとPC · 無料・オープンソース · メンテナンス終了</p>
+              <h3>Barrier</h3>
+              <p>
+                Synergy 1.9のフォークで、2026年のまとめ記事でも今なお多く勧められています。最終リリースのv2.4.0は2021年11月のもので、そのリリースページにはBarrierはもうメンテナンスされておらず、セキュリティ修正も行われないと明記されています。後継のInput Leapも2026年にアーカイブされたため、この系統で現役の選択肢はDeskflowです。
+              </p>
+            </article>
+            <article class="card">
+              <p class="card-lbl">PCとPC · 無料・オープンソース</p>
+              <h3>Mouse Without Borders</h3>
+              <p>
+                MicrosoftのWindows専用ツールで、現在はPowerToys（MIT）の一部です。同じネットワーク上の最大4台のWindows 10/11 PCを共有クリップボードと最大100MBの単一ファイル転送でつなぎ、2026年8月には暗号化の更新も受けています。主な制限：Windows専用です。Android対応はオープンな機能要望であって、機能ではありません。
+              </p>
+            </article>
+            <article class="card">
+              <p class="card-lbl">PCとPC · 無料版と有料版</p>
+              <h3>ShareMouse</h3>
+              <p>
+                Bartels Media社のWindows・macOS向けソフトウェアKVMで、2026年8月に7.0.27へ更新されました。ShareMouse Freeは個人の非商用利用で2台のコンピューターと2枚のディスプレイまで対応し、StandardとProfessionalは12か月分の更新が付いた買い切りです。主な制限：Linuxに非対応で、AndroidやiPhone/iPadにも非対応です。メーカーはこれらに対応する予定はないとしています。
+              </p>
+            </article>
+            <article class="card">
+              <p class="card-lbl">エコシステム · ソフトは無料、ハードウェアが必要</p>
+              <h3>Logitech Flow</h3>
+              <p>
+                Flow対応のLogitechマウスを、Logi Options+を通じて同じネットワーク上の2〜3台のWindows・macOSコンピューター間で移動させ、対応するLogitechキーボードもそれに追従します。主な制限：Easy-Switch搭載のLogitechハードウェアが必要で、初期設定にはインターネット接続が必要、タブレットやスマホには対応していません。
+              </p>
+            </article>
+            <article class="card">
+              <p class="card-lbl">エコシステム · 無料・内蔵</p>
+              <h3>Apple Universal Control</h3>
+              <p>
+                macOS 12.4以降とiPadOS 15.4以降に内蔵されており、1台のMacから1組のキーボードとマウスで最大2台のMacまたはiPadを操作できます。主な制限：Appleの対応モデルリストに載っているMacとiPadだけが対象で、すべてのデバイスが2ファクタ認証を有効にした同じApple Accountにサインインし、10メートル以内にある必要があります。Windows、iPhone、Androidは接続先にできません。
+              </p>
+            </article>
+            <article class="card">
+              <p class="card-lbl">エコシステム · 無料、Galaxy限定</p>
+              <h3>Samsung Multi Control</h3>
+              <p>
+                SamsungによるPCからスマホを操作する方法です。Galaxy Book（2021年以降）またはMicrosoft StoreのMulti ControlアプリをインストールしたWindows 11 PCから、Galaxyスマホ・タブレットへカーソルを移動でき、共有クリップボードとファイルのドラッグ＆ドロップも使えます。主な制限：Samsungが対象としているのはOne UI 5.1以降のGalaxyデバイスのみで、すべてのデバイスに同じSamsungアカウントとBluetooth、Wi-Fiが必要です。
+              </p>
+            </article>
+            <article class="card">
+              <p class="card-lbl">PCとスマホ · 無料・オープンソース</p>
+              <h3>scrcpy</h3>
+              <p>
+                Genymobile製のミラーリングツールで、Windows、macOS、Linuxのホスト上のウィンドウにAndroidの画面を音声付きで表示し、キーボードとマウスの入力を転送します。スマホ側には何もインストールしません。v4.1は2026年7月にリリースされました。主な制限：エッジクロッシングではなくミラーウィンドウであること、ケーブル経由のUSBデバッグまたはWi-Fi経由のADBが必要なことです（OTGモードはUSBのみ）。
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- PICK BY SITUATION -->
+      <section class="section-alt" id="pick">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">状況別の選び方</p>
+            <h2 class="sec">机の上にあるデバイスから考えましょう。</h2>
+          </div>
+          <div class="panel">
+            <ul>
+              <li>
+                <b>1つの机にWindows PCが2台：</b>Mouse Without Bordersは無料で、PowerToysに最初から含まれ、最大4台のWindows PCに対応します。OneMouseも2台のWindows PCをつなぎ、ファイル・フォルダー・クリップボードを双方向でやり取りでき、ルーターがなければBluetoothでも接続できます。ShareMouse Freeは個人利用で2台まで対応します。
+              </li>
+              <li>
+                <b>Windows PC + Androidスマホ・タブレット：</b>OneMouseはケーブルもADBもブランドの条件もなしに、Wi-FiまたはBluetoothでカーソルをスマホへ移動させます。Galaxyスマホ、Galaxy BookまたはWindows 11 PC、Samsungアカウントがそろっていれば、Samsung Multi Controlも候補です。スマホの画面をウィンドウで見たい場合は、scrcpy（ブランドを問わず、USBデバッグが必要）か、対応ブランドであればPhone Linkのスマホ画面機能をお使いください。
+              </li>
+              <li>
+                <b>Windows PC + Mac：</b>OneMouseは、Windows PCがホストで、MacがmacOS 13以降のApple SiliconであればLAN経由で動作します。Macを操作する側にしたい場合や、Intel Macの場合は、Synergy（有料）、Deskflow（無料）、ShareMouseをお使いください。Flow対応のLogitechマウスをすでにお持ちなら、Logitech Flowも使えます。
+              </li>
+              <li>
+                <b>Mac + iPad：</b>Apple Universal Controlが内蔵かつ無料です。OneMouseはiPadにもMacホストにも対応していません。
+              </li>
+              <li>
+                <b>Linuxが含まれる：</b>OneMouseはLinuxに対応していません。DeskflowはWindows、macOS、Linux向けに活発にメンテナンスされている無料の選択肢で、Synergyはメーカーサポート付きの有料の選択肢です。Lan MouseはWayland対応の比較的新しいオープンソースの代替です。新しく構築する環境ではBarrierとInput Leapは避けてください。どちらもメンテナンスされていません。
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">よくある質問</p>
+            <h2 class="sec">選ぶ前によくある質問。</h2>
+          </div>
+          <div class="faq">
+            <details>
+              <summary>無料のマウス・キーボード共有ソフトはありますか？</summary>
+              <div class="a">
+                あります。<b>Mouse Without Borders</b>（Windows専用、PowerToysの一部）、<b>Deskflow</b>（Windows、macOS、Linux。オープンソース）、<b>ShareMouse Free</b>（2台まで、個人利用）は無料です。OneMouseのWindowsアプリとMacアプリも無料です。OneMouseのAndroidアプリには広告と1日あたりのクリップボード・ファイル制限のあるFreeがあり、買い切りのProで解除できます。
+              </div>
+            </details>
+            <details>
+              <summary>
+                マウス・キーボード共有はインターネット接続なしで使えますか？
+              </summary>
+              <div class="a">
+                OneMouse、Synergy、Deskflow、Mouse Without BordersなどのソフトウェアKVMはローカルネットワーク上で動作し、インターネット接続を必要としません。OneMouseは<b>ルーターがまったくない状態でもBluetooth</b>で接続できます。一方、メーカー製ツールにはオンラインアカウントに依存するものがあります。Apple Universal ControlにはApple Account、Samsung Multi ControlにはSamsungアカウントが必要で、Logitech Flowは初期設定にインターネット接続が必要です。
+              </div>
+            </details>
+            <details>
+              <summary>
+                PCからAndroidスマホを操作するのは、ミラーウィンドウですか、それとも本物のカーソルですか？
+              </summary>
+              <div class="a">
+                この2つは別物です。scrcpy、Vysor、Phone Linkなどの<b>ミラーリング</b>ツールは、スマホの画面をPC上のウィンドウに表示し、そのウィンドウの中でクリックします。OneMouseやSamsung Multi Controlなどの<b>エッジクロッシング</b>型ツールは、PCのカーソルをスマホ自身の画面へ送るため、スマホが追加のモニターのように振る舞います。OneMouseはエッジクロッシングで動作し、オプションのリモート操作ウィンドウも提供しています。
+              </div>
+            </details>
+            <details>
+              <summary>OneMouseにアカウントやサーバーは必要ですか？</summary>
+              <div class="a">
+                必要ありません。デバイスは<b>6桁のコードまたはQRコード</b>（SPAKE2鍵交換を使うPIN）でローカルにペアリングし、入力、ファイル、クリップボードのデータはペアリングした自分のデバイス間で直接やり取りされます。サインインするものも、中継サーバーもありません。
+              </div>
+            </details>
+            <details>
+              <summary>Wi-Fiの代わりにBluetoothでマウスとキーボードを共有できますか？</summary>
+              <div class="a">
+                OneMouseでは、Androidデバイスと別のWindows PCはWi-Fiの代わりに<b>Bluetooth</b>で接続できます。Macアプリは既定ではローカルネットワークで接続します（Mac Bluetoothは既定オフのベータ機能）。BluetoothはWi-Fiより遅いため、大きなファイルはWi-Fiで送るほうが適しています。Synergy、Deskflow、Mouse Without Borders、ShareMouseなどのPC間ソフトウェアKVMはネットワーク経由でのみ動作します。Apple Universal ControlはBluetoothをWi-FiおよびHandoffと組み合わせて使います。
+              </div>
+            </details>
+            <details>
+              <summary>Mouse Without BordersとOneMouse、どちらを選ぶべきですか？</summary>
+              <div class="a">
+                Mouse Without Bordersは無料でMicrosoft PowerToysに含まれており、共有クリップボードと最大100MBの単一ファイル転送で最大4台のWindows PCをつなぎます。OneMouseもWindows PC同士をつなぎ、さらに<b>Androidスマホ・タブレット</b>、<b>Apple Silicon Mac</b>、Bluetooth接続、PC間のフォルダー転送に対応します。すべてのマシンがWindowsで、PowerToysがすでにインストールされているならMouse Without Bordersで十分です。スマホ、タブレット、Macが机に加わるならOneMouseが向いています。
+              </div>
+            </details>
+            <details>
+              <summary>SynergyとOneMouse、どちらを選ぶべきですか？</summary>
+              <div class="a">
+                SynergyはWindows、macOS、Linux向けの有料ソフトウェアKVMで、どのコンピューターもサーバーになれます。OneMouseはWindowsホストが必須で、Linuxには非対応ですが、WindowsアプリとMacアプリは無料です。最大の違いは<b>Android</b>です。Synergyにはモバイルクライアントがありませんが、OneMouseはWi-FiまたはBluetoothでAndroidスマホ・タブレットを操作できます。
+              </div>
+            </details>
+            <details>
+              <summary>OneMouseはLinux、iPhone、iPadに対応していますか？</summary>
+              <div class="a">
+                対応していません。OneMouseの接続先はAndroid、別のWindows PC、macOS 13以降のApple Silicon Macで、ホストは常にWindows 10/11 PCです。Linuxの場合はDeskflowまたはSynergyを、MacとiPadの場合はApple Universal Controlをお使いください。
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- NEXT STEP -->
+      <section class="section-alt" id="next">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">次のステップ</p>
+            <h2 class="sec">Windows、Android、Macを1つの机で、ローカルのまま。</h2>
+            <p class="sec-lead">
+              まずWindowsアプリをインストールし、次に操作したいスマホ、PC、Macを追加してください。ペアリングと配置の手順は使い方ガイドで説明しています。
+            </p>
+          </div>
+          <div style="display: flex; gap: 12px; flex-wrap: wrap">
+            <a class="btn btn-pri" href="./#get">ダウンロード</a>
+            <a class="btn btn-sec" href="./guide">使い方ガイドを読む</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site">
+      <div class="wrap ft">
+        <span>© 2026 OneMouse</span>
+        <span class="links"
+          ><a href="./compare">比較</a><a href="./technical">技術・セキュリティ</a
+          ><a href="./privacy">プライバシーポリシー</a><a href="./terms">利用規約</a
+          ><a href="./licenses">オープンソースライセンス</a></span
+        >
+      </div>
+    </footer>
+  </body>
+</html>

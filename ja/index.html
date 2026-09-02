@@ -7,7 +7,7 @@
     <title>OneMouse | WindowsからAndroid・別のPC・Macへ接続</title>
     <meta
       name="description"
-      content="OneMouseはWindowsからAndroid、別のWindows PC、Apple Silicon Macへの接続を開始・管理するアプリです。macOS 13以降向けの公開DMGを提供しています。"
+      content="OneMouseはWindows PCからAndroid・別のWindows PC・Apple Silicon MacをLANやBluetoothで操作するマウス・キーボード共有ソフトです。アカウント不要のローカルペアリング。"
     />
     <meta name="robots" content="index,follow,max-image-preview:large" />
     <meta
@@ -46,13 +46,53 @@
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
         "name": "OneMouse",
-        "alternateName": ["OneMouse", "MouseLink", "share mouse"],
+        "alternateName": [
+          "OneMouse",
+          "MouseLink",
+          "share mouse"
+        ],
         "applicationCategory": "UtilitiesApplication",
+        "applicationSubCategory": "Mouse and keyboard sharing (software KVM)",
         "operatingSystem": "Windows 10, Windows 11, Android, macOS 13 and later",
         "url": "https://onemouse.pages.dev/ja/",
         "inLanguage": "ja-JP",
         "downloadUrl": "https://onemouse.pages.dev/ja/#get",
-        "description": "OneMouseはWindowsからAndroid、別のWindows PC、macOS 13以降のApple Silicon Macへの接続を開始・管理するアプリです。"
+        "softwareHelp": "https://onemouse.pages.dev/ja/help",
+        "description": "OneMouseはWindowsからAndroid、別のWindows PC、macOS 13以降のApple Silicon Macへの接続を開始・管理するアプリです。",
+        "keywords": "マウス共有, キーボード共有, ソフトウェアKVM, PCからAndroidを操作, WindowsとMacでマウス共有",
+        "featureList": [
+          "Control an Android phone or tablet with the Windows mouse and keyboard",
+          "Control another Windows PC from the same mouse and keyboard",
+          "Control an Apple Silicon Mac (macOS 13+) over the local network",
+          "Move the cursor across the screen edge between devices",
+          "Send files between paired devices",
+          "Sync clipboard text between paired devices",
+          "Connect over Wi-Fi/LAN or Bluetooth (Mac: LAN)",
+          "Local-only pairing with a 6-digit code or QR, no account"
+        ],
+        "isAccessibleForFree": true,
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD",
+          "url": "https://onemouse.pages.dev/ja/pricing"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "OneMouse",
+          "url": "https://onemouse.pages.dev/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "OneMouse",
+          "url": "https://onemouse.pages.dev/"
+        },
+        "sameAs": [
+          "https://play.google.com/store/apps/details?id=com.mouselink.app",
+          "https://apps.samsung.com/appquery/appDetail.as?appId=com.mouselink.app.galaxy",
+          "https://apps.microsoft.com/detail/9MZHT0262V7Q",
+          "https://github.com/sdlckdrl/mouselink-web/releases"
+        ]
       }
     </script>
   </head>
@@ -606,7 +646,7 @@
       <div class="wrap ft">
         <span>© 2026 OneMouse</span>
         <span class="links"
-          ><a href="./technical">技術・セキュリティ</a
+          ><a href="./compare">比較</a><a href="./technical">技術・セキュリティ</a
           ><a href="./privacy">プライバシーポリシー</a><a href="./terms">利用規約</a
           ><a href="./licenses">オープンソースライセンス</a></span
         >
