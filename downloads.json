@@ -4,16 +4,16 @@
   },
   "macos": {
     "status": "released",
-    "version": "0.1.5",
+    "version": "0.1.6",
     "minimumOs": "13.0",
     "distribution": "architecture_specific",
-    "downloadPageUrl": "https://github.com/sdlckdrl/mouselink-web/releases/tag/mac-v0.1.5",
+    "downloadPageUrl": "https://github.com/sdlckdrl/mouselink-web/releases/tag/mac-v0.1.6",
     "assets": [
       {
         "arch": "arm64",
-        "url": "https://github.com/sdlckdrl/mouselink-web/releases/download/mac-v0.1.5/OneMouse-macOS-0.1.5-Apple-Silicon.dmg",
-        "filename": "OneMouse-macOS-0.1.5-Apple-Silicon.dmg",
-        "sha256": "0181930ea81cb038c9c58780d7d0e7f7a6298155daa1829e3bda8488038e1b2b"
+        "url": "https://github.com/sdlckdrl/mouselink-web/releases/download/mac-v0.1.6/OneMouse-macOS-0.1.6-Apple-Silicon.dmg",
+        "filename": "OneMouse-macOS-0.1.6-Apple-Silicon.dmg",
+        "sha256": "0159c4177b15cd2f53a37745ec948a4c67c7e0683c62400dc56a9af70bcb9841"
       }
     ]
   }
