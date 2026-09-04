@@ -68,7 +68,8 @@
           "Send files between paired devices",
           "Sync clipboard text between paired devices",
           "Connect over Wi-Fi/LAN or Bluetooth (Mac: LAN)",
-          "Local-only pairing with a 6-digit code or QR, no account"
+          "Local-only pairing with a 6-digit code or QR, no account",
+          "Show phone SMS and messenger notifications on the PC, with one-click copy for verification codes"
         ],
         "isAccessibleForFree": true,
         "offers": {
@@ -397,6 +398,25 @@
                 ふだんはWi-Fiで、Wi-FiルーターやインターネットがないときはBluetoothでスマホや別のPCに直接つなぎます。
               </p>
             </article>
+            <article class="card">
+              <div class="card-ic" style="background: #fff4e5; color: #d97706">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                >
+                  <path d="M6 16v-5a6 6 0 0 1 12 0v5l2 2H4z" />
+                  <path d="M10 20a2 2 0 0 0 4 0" />
+                </svg>
+              </div>
+              <h3>スマホの通知と認証コードをPCで</h3>
+              <p>
+                SMS・メッセージの通知がPC画面の隅に短く表示され、認証コードはコピーボタン一つでPCの入力欄に貼り付けられます。スマホ側でオンにしたときだけ動き、どこにも保存しません。
+              </p>
+            </article>
           </div>
         </div>
       </section>
@@ -632,6 +652,13 @@
               <summary>接続がよく切れます。</summary>
               <div class="a">
                 多くは<b>バッテリー最適化</b>や<b>ファイアウォール・ゲストWi-Fiのクライアント分離</b>が原因です。ヘルプのトラブル解決手順に沿って、段階的に絞り込んでみてください。
+              </div>
+            </details>
+            <details>
+              <summary>スマホのSMS認証コードをPCでそのまま使えますか？</summary>
+              <div class="a">
+                はい。スマホアプリの設定で<b>PCに通知を送る</b>をオンにし、通知へのアクセスを許可すると、SMS・メッセージの通知がPCの隅に表示され、認証コードはコピーボタンで貼り付けられます。Android
+                15以降はシステムが認証コードの通知を隠すため、同じ画面の<b>PCを登録</b>でこのPCを一度登録してください。
               </div>
             </details>
           </div>
