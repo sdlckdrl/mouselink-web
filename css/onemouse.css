@@ -839,6 +839,20 @@ footer.site {
 .ft .brand {
   font-size: 14px;
 }
+.ft .ato-badge {
+  display: inline-flex;
+  line-height: 0;
+  opacity: 0.85;
+  transition: opacity 0.15s ease;
+}
+.ft .ato-badge:hover {
+  opacity: 1;
+}
+.ft .ato-badge img {
+  display: block;
+  width: 171px;
+  height: 55px;
+}
 .ft .links {
   margin-left: auto;
   display: flex;
