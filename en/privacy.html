@@ -49,7 +49,7 @@
           OneMouse connects Windows with Android, paired Windows PCs, and Apple Silicon Macs running
           macOS 13+. Mac connections in the current public support scope use the local network.
         </p>
-        <p class="policy-date">Effective date: September 1, 2026</p>
+        <p class="policy-date">Effective date: September 1, 2026 · Last updated: September 21, 2026</p>
       </section>
 
       <section>
@@ -91,8 +91,10 @@
                 <li>
                   Notification information (optional): if you turn on "Send notifications to PC" in
                   the Android app and allow notification access, the title and text of notifications
-                  from the apps you select are sent to your paired PC and shown briefly. They are not
-                  stored on the phone or the PC and never leave your devices.
+                  from the apps you select are sent to your paired PC and shown briefly. The Windows
+                  PC can keep an encrypted local history of notification titles and text, app and
+                  device details, receipt times, and whether an image was present. This history is not
+                  uploaded to a server.
                 </li>
               </ul>
             </article>
@@ -126,6 +128,23 @@
                 each app's local storage. The Mac app stores its paired session key in the macOS
                 Keychain. Clearing pairing removes the trusted session record; users can separately
                 remove app data and settings from their devices.
+              </p>
+              <p>
+                Notification history is enabled by default and keeps only newly received notifications
+                on the PC for 7 days, up to 200 entries. It does not import older notifications from
+                your phone. In the PC's Notifications tab, you can choose 1, 7, or 30 days, stop saving
+                new entries, or clear all history.
+              </p>
+              <p>
+                Notifications detected as containing verification codes and notifications with hidden
+                or redacted content are excluded. Clipboard content, photos, and avatar images are not
+                saved in history. Not all sensitive content can be detected automatically. History is
+                not saved if secure operating-system encryption is unavailable.
+              </p>
+              <p>
+                Turning off history does not delete existing entries; they remain until they expire
+                or you delete them. Entries that expire while the app is closed are cleaned up at the
+                next launch. Clearing PC history does not delete notifications on your phone.
               </p>
             </article>
             <article class="lcard">
