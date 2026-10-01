@@ -698,6 +698,50 @@ table.kt kbd {
   white-space: nowrap;
 }
 
+/* Gesture directions stay readable without the keyboard table's mobile minimum width. */
+table.kt.gesture-table {
+  min-width: 0;
+}
+.gesture-table td {
+  vertical-align: top;
+}
+.gesture-table td:first-child {
+  width: 96px;
+  white-space: nowrap;
+  color: var(--coral-deep);
+  font-size: 22px;
+  font-weight: 800;
+}
+.gesture-table small {
+  display: block;
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.65;
+}
+.gesture-setup h3:not(:first-child) {
+  margin-top: 20px;
+}
+.gesture-steps {
+  padding-left: 22px;
+  color: var(--muted);
+  font-size: 14px;
+}
+.gesture-steps li {
+  margin: 8px 0;
+}
+.gesture-patterns {
+  margin-top: 20px;
+}
+.gesture-notes {
+  margin-top: 18px;
+}
+.gesture-notes a,
+#mouse-gestures-faq a {
+  color: var(--coral-deep);
+  font-weight: 700;
+}
+
 /* ---------- changelog ---------- */
 .log {
   display: flex;

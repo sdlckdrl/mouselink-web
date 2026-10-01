@@ -57,6 +57,7 @@
           <a href="#start">5-minute setup</a>
           <a href="#position">Place your phone</a>
           <a href="#remote">Mobile remote control</a>
+          <a href="#mouse-gestures">Mouse gestures</a>
           <a href="#files">Files &amp; clipboard</a>
           <a href="#text-to-pc">Mobile to PC</a>
           <a href="#quick">Number shortcuts</a>
@@ -252,6 +253,75 @@
                 </div>
               </details>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ANDROID MOUSE GESTURES -->
+      <section id="mouse-gestures">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">Android mouse gestures</p>
+            <h2 class="sec" id="mouse-gestures-title">Hold the right button and draw to navigate.</h2>
+            <p class="sec-lead">How to enable gestures, the seven stroke patterns, and support limits.</p>
+          </div>
+          <div class="panel gesture-setup">
+            <h3>1. Enable gestures</h3>
+            <p>In Settings → Typing &amp; clipboard, turn on Mouse gestures (off by default). Use Apps for mouse gestures to choose the apps. Both PC and Android need a gesture-capable version.</p>
+            <h3>2. Hold, draw, release</h3>
+            <p>Move the PC pointer onto the Android phone or tablet and open a selected app.</p>
+            <ol class="gesture-steps">
+              <li>Hold the right mouse button over the page content.</li>
+              <li>Draw the directions in order, not as one diagonal. The red trail shows the recognised action and estimated scroll amount.</li>
+              <li>Release the button to run the action. The page does not scroll while drawing.</li>
+            </ol>
+          </div>
+          <div class="table-wrap gesture-patterns">
+            <table class="kt gesture-table" aria-labelledby="mouse-gestures-title">
+              <thead>
+                <tr><th scope="col">Gesture</th><th scope="col">Action</th></tr>
+              </thead>
+              <tbody>
+                <tr data-gesture-action="back">
+                  <td><span role="img" aria-label="Left">←</span></td>
+                  <td><b>Back</b><small>Draw left to return to the previous page or screen.</small></td>
+                </tr>
+                <tr data-gesture-action="forward">
+                  <td><span role="img" aria-label="Right">→</span></td>
+                  <td><b>Forward</b><small>Draw right to return to a page after going back. A forward history entry and supported browser control are needed.</small></td>
+                </tr>
+                <tr data-gesture-action="scroll_up">
+                  <td><span role="img" aria-label="Up">↑</span></td>
+                  <td><b>Scroll up</b><small>Draw up and release to scroll upward. A longer stroke scrolls more; a shorter stroke scrolls less. The amount shown is an estimate.</small></td>
+                </tr>
+                <tr data-gesture-action="scroll_down">
+                  <td><span role="img" aria-label="Down">↓</span></td>
+                  <td><b>Scroll down</b><small>Draw down and release to scroll downward. A longer stroke scrolls more; a shorter stroke scrolls less. The amount shown is an estimate.</small></td>
+                </tr>
+                <tr data-gesture-action="minimize">
+                  <td><span role="img" aria-label="Down, then right">↓ →</span></td>
+                  <td><b>Minimize app</b><small>Draw down, then right. Go to Home without closing the app, its tabs, or its recent-app card.</small></td>
+                </tr>
+                <tr data-gesture-action="reload">
+                  <td><span role="img" aria-label="Up, then down">↑ ↓</span></td>
+                  <td><b>Reload</b><small>Draw up, then down to reload the page using a supported browser button.</small></td>
+                </tr>
+                <tr data-gesture-action="recents">
+                  <td><span role="img" aria-label="Up, then right">↑ →</span></td>
+                  <td><b>Recent apps</b><small>Draw up, then right to open the recent-app list. Choose an app from the list; no app is closed.</small></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="panel gesture-notes">
+            <h3>If a gesture does not work</h3>
+            <ul>
+              <li>These gestures apply to direct Android control after the pointer crosses onto the device, not Windows/Mac control or the separate mirroring window.</li>
+              <li>Forward returns to a page in browser history, not the next article. Reload needs a recognised native browser button; some selected apps or screens do not support it.</li>
+              <li>Start scrolling over the page content, not a toolbar. Very short strokes and incomplete or cancelled patterns do nothing. A short right-click without movement keeps the usual right-click behaviour.</li>
+              <li>The scroll amount is an estimate; actual movement varies by app. Long scrolls run as several swipes, limited to 8 screenfuls and 10 seconds in total. Clicking, starting a new gesture, switching apps, or ending control cancels the remaining scroll. Moving only the pointer does not stop it.</li>
+            </ul>
+            <p><a href="./help#mouse-gestures-faq">Troubleshoot mouse gestures</a></p>
           </div>
         </div>
       </section>

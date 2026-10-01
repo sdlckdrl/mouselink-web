@@ -53,6 +53,7 @@
           <a href="#start">5 分钟连接步骤</a>
           <a href="#position">手机位置布局</a>
           <a href="#remote">移动端远程控制</a>
+          <a href="#mouse-gestures">鼠标手势</a>
           <a href="#files">文件与剪贴板</a>
           <a href="#quick">数字快捷键</a>
           <a href="#bluetooth">Bluetooth 连接</a>
@@ -235,6 +236,75 @@
                 </div>
               </details>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ANDROID MOUSE GESTURES -->
+      <section id="mouse-gestures">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">Android鼠标手势</p>
+            <h2 class="sec" id="mouse-gestures-title">按住右键绘制，快速完成操作。</h2>
+            <p class="sec-lead">查看启用方法、7种手势及支持范围。</p>
+          </div>
+          <div class="panel gesture-setup">
+            <h3>1. 启用手势</h3>
+            <p>在设置 → 输入 · 剪贴板中启用鼠标手势（默认关闭），并在使用鼠标手势的应用中选择应用。PC和Android都需要支持手势的版本。</p>
+            <h3>2. 按住、绘制、松开</h3>
+            <p>将PC光标移到Android手机或平板，打开已选应用。</p>
+            <ol class="gesture-steps">
+              <li>在页面内容上按住鼠标右键。</li>
+              <li>按显示的方向顺序绘制，不要画成一条斜线。红色轨迹旁会显示识别的操作和预计滚动量。</li>
+              <li>松开按钮后执行操作，绘制时页面不会滚动。</li>
+            </ol>
+          </div>
+          <div class="table-wrap gesture-patterns">
+            <table class="kt gesture-table" aria-labelledby="mouse-gestures-title">
+              <thead>
+                <tr><th scope="col">手势</th><th scope="col">操作</th></tr>
+              </thead>
+              <tbody>
+                <tr data-gesture-action="back">
+                  <td><span role="img" aria-label="向左">←</span></td>
+                  <td><b>返回</b><small>向左绘制以返回上一页或上一个界面。</small></td>
+                </tr>
+                <tr data-gesture-action="forward">
+                  <td><span role="img" aria-label="向右">→</span></td>
+                  <td><b>前进</b><small>向右绘制以恢复返回前的页面，需要前进历史和支持的浏览器按钮。</small></td>
+                </tr>
+                <tr data-gesture-action="scroll_up">
+                  <td><span role="img" aria-label="向上">↑</span></td>
+                  <td><b>向上滚动</b><small>向上绘制并松开后向上滚动。笔画越长滚动越多，越短滚动越少。显示的滚动量是估计值。</small></td>
+                </tr>
+                <tr data-gesture-action="scroll_down">
+                  <td><span role="img" aria-label="向下">↓</span></td>
+                  <td><b>向下滚动</b><small>向下绘制并松开后向下滚动。笔画越长滚动越多，越短滚动越少。显示的滚动量是估计值。</small></td>
+                </tr>
+                <tr data-gesture-action="minimize">
+                  <td><span role="img" aria-label="先向下，再向右">↓ →</span></td>
+                  <td><b>最小化应用</b><small>先向下再向右绘制。返回主屏幕，不关闭应用、标签页或最近任务卡片。</small></td>
+                </tr>
+                <tr data-gesture-action="reload">
+                  <td><span role="img" aria-label="先向上，再向下">↑ ↓</span></td>
+                  <td><b>刷新</b><small>先向上再向下绘制，通过支持的浏览器按钮刷新当前页面。</small></td>
+                </tr>
+                <tr data-gesture-action="recents">
+                  <td><span role="img" aria-label="先向上，再向右">↑ →</span></td>
+                  <td><b>最近应用</b><small>先向上再向右绘制，打开最近应用列表。可从列表选择应用，不会关闭应用。</small></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="panel gesture-notes">
+            <h3>手势无效时</h3>
+            <ul>
+              <li>手势用于将光标移入Android设备后的直接控制，不适用于Windows、Mac控制或独立镜像窗口。</li>
+              <li>前进是返回后恢复历史页面，不是进入下一篇文章。刷新需要可识别的浏览器原生按钮，已选应用的部分界面也可能不支持。</li>
+              <li>请在页面内容而非工具栏上开始滚动。过短笔画及未完成或已取消的手势不会执行。不移动光标的短右击保留原有行为。</li>
+              <li>显示的滚动量是估计值，实际移动量因应用而异。长距离滚动分为多次滑动，总量最多8屏、最长10秒。点击、开始新手势、切换应用或结束控制会取消剩余滚动。仅移动光标不会停止滚动。</li>
+            </ul>
+            <p><a href="./help#mouse-gestures-faq">查看手势问题排查</a></p>
           </div>
         </div>
       </section>
