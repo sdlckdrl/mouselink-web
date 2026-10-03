@@ -6,6 +6,7 @@ OneMouse is a local mouse and keyboard sharing utility (software KVM). The publi
 
 - Overview and downloads: https://onemouse.pages.dev/
 - Setup, permissions and feature instructions: https://onemouse.pages.dev/guide
+- Keyboard shortcut defaults, settings and platform conditions: https://onemouse.pages.dev/guide#shortcuts
 - Help and troubleshooting: https://onemouse.pages.dev/help
 - Connection and security details: https://onemouse.pages.dev/technical
 - Software comparison and its dated source references: https://onemouse.pages.dev/en/compare

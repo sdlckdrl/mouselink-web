@@ -133,7 +133,8 @@
                 <h4>넘겨 씁니다</h4>
                 <p>
                   배치한 방향으로 마우스를 밀면 폰으로 넘어갑니다. 파일은 빠른 드롭존에 놓고, 다른
-                  PC로는 화면 경계로 끌어 보냅니다. 화면 캡처는 Print Screen 또는 Ctrl+Alt+S.
+                  PC로는 화면 경계로 끌어 보냅니다. 스크린샷 기본 키는 Ctrl+Alt+S입니다. 대상별
+                  조건은 <a href="#shortcuts">단축키 안내</a>를 확인하세요.
                 </p>
               </div>
             </div>
@@ -464,9 +465,12 @@
             <div class="panel">
               <h3>Ctrl + Alt + 1~9</h3>
               <ul>
-                <li>기기 관리의 앞 9개 기기에 <b>Ctrl+Alt+1~9</b>가 붙습니다.</li>
+                <li>
+                  기본 설정에서 메인 PC 기기 목록의 앞 9개 기기에 <b>Ctrl+Alt+1~9</b>가 붙습니다. 키
+                  변경은 <a href="#shortcuts">단축키 안내</a>를 확인하세요.
+                </li>
                 <li>번호를 누르면 그 기기에 연결됩니다.</li>
-                <li>이미 연결된 기기의 번호를 다시 누르면 연결이 끊깁니다.</li>
+                <li>현재 입력 제어 중인 기기의 같은 번호를 다시 누르면 제어를 해제합니다.</li>
                 <li>연결/해제 때 오른쪽 아래에 작은 알림이 뜹니다.</li>
               </ul>
             </div>
@@ -739,40 +743,152 @@
       <section id="shortcuts">
         <div class="wrap narrow">
           <div class="sec-head">
-            <p class="ey">단축키</p>
-            <h2 class="sec">자주 쓰는 키보드 단축키.</h2>
+            <h2 class="sec">키보드 단축키와 적용 조건.</h2>
+            <p class="sec-lead">
+              아래 PC 단축키는 기본값입니다. PC의 설정 → 단축키에서 키 조합을 바꾸거나 각
+              항목·전체를 끌 수 있습니다. 키를 바꿨다면 설정한 조합을 사용하세요.
+            </p>
           </div>
+          <h3 id="pc-shortcuts-title">Windows 앱의 기본 단축키</h3>
           <div class="table-wrap">
-            <table class="kt">
+            <table class="kt" aria-labelledby="pc-shortcuts-title">
               <thead>
                 <tr>
-                  <th>단축키</th>
-                  <th>동작</th>
+                  <th scope="col">기본 단축키</th>
+                  <th scope="col">동작·조건</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>1~9</kbd></td>
-                  <td>목록의 해당 기기 연결 / 다시 누르면 해제</td>
+                  <td>
+                    메인 PC: 목록의 해당 기기에 입력 제어를 연결합니다. 현재 제어 중인 기기의 같은
+                    번호를 다시 누르면 제어를 해제합니다.
+                  </td>
                 </tr>
                 <tr>
                   <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>D</kbd></td>
-                  <td>빠른 드롭존 숨기기 / 보이기</td>
+                  <td>빠른 드롭존 보이기 / 숨기기.</td>
                 </tr>
                 <tr>
-                  <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>S</kbd> · <kbd>PrintScreen</kbd></td>
-                  <td>모바일 화면 캡처</td>
+                  <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>S</kbd></td>
+                  <td>
+                    제어 중인 Windows PC·Mac·Android의 화면에서 영역을 선택해 메인 PC로 받습니다.
+                    다른 기기를 제어하지 않을 때는 내 PC를 캡처합니다. 양쪽 앱의 기능 지원과 대상
+                    기기의 캡처 권한이 필요합니다.
+                  </td>
+                </tr>
+                <tr>
+                  <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>V</kbd></td>
+                  <td>
+                    메인 PC: 인증번호가 포함된 폰 알림이 PC에 떠 있는 동안 해당 번호를 복사합니다.
+                    폰 알림 전송을 먼저 켜야 합니다.
+                  </td>
+                </tr>
+                <tr>
+                  <td><kbd>Ctrl</kbd>+<kbd>V</kbd></td>
+                  <td>
+                    다른 PC에서 복사한 공유 파일을 이 PC로 받아 붙여넣습니다. 받을 공유 파일이
+                    없으면 일반 붙여넣기를 사용합니다.
+                  </td>
                 </tr>
                 <tr>
                   <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Backspace</kbd></td>
-                  <td>커서를 내 PC(모니터 중앙)로 강제 복귀</td>
-                </tr>
-                <tr>
-                  <td><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>↑</kbd>/<kbd>↓</kbd></td>
-                  <td>모바일 화면 밝기 조절(시스템 설정 권한 필요)</td>
+                  <td>
+                    메인 PC: 다른 기기 제어 중 커서를 내 PC의 모니터 중앙으로 즉시 되돌립니다.
+                  </td>
                 </tr>
               </tbody>
             </table>
+          </div>
+          <div class="panel tip">
+            <p>
+              서브 PC에서는 빠른 드롭존·이 PC 스크린샷·공유 파일 붙여넣기를 사용합니다. 메인 PC의
+              키보드로 서브 PC를 제어할 때는 메인 PC의 단축키 설정이 적용됩니다.
+            </p>
+            <p>
+              전체 단축키를 끄면 긴급 복귀도 작동하지 않습니다. 화면 경계로 커서를 되돌리세요. 키가
+              작동하지 않으면 설정 → 단축키에서 켜짐 상태와 키 충돌을 확인하세요.
+            </p>
+          </div>
+          <h3 id="android-shortcuts-title">Android를 직접 제어할 때</h3>
+          <p>
+            아래는 Android로 전달하는 입력 조합입니다. PC 앱의 단축키 설정 표와 구분하며, 텍스트
+            편집은 대상 앱·입력창의 지원에 따라 달라집니다.
+          </p>
+          <div class="table-wrap">
+            <table class="kt" aria-labelledby="android-shortcuts-title">
+              <thead>
+                <tr>
+                  <th scope="col">기본 단축키</th>
+                  <th scope="col">동작·조건</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><kbd>PrintScreen</kbd></td>
+                  <td>
+                    Android 11 이상: 직접 제어 중인 폰 화면을 찍어 PC로 보냅니다. 접근성 권한이
+                    필요합니다.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>↑</kbd> /
+                    <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>↓</kbd>
+                  </td>
+                  <td>Android 화면 밝기 올리기 / 내리기. 시스템 설정 변경 권한이 필요합니다.</td>
+                </tr>
+                <tr>
+                  <td><kbd>Alt</kbd>+<kbd>↑</kbd> / <kbd>Alt</kbd>+<kbd>↓</kbd></td>
+                  <td>Android 미디어 음량 올리기 / 내리기.</td>
+                </tr>
+                <tr>
+                  <td>
+                    <kbd>Alt</kbd>+<kbd>Tab</kbd> / <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>Tab</kbd>
+                  </td>
+                  <td>최근 앱 전환 / 반대 방향 전환. Alt를 놓으면 선택한 앱으로 이동합니다.</td>
+                </tr>
+                <tr>
+                  <td>
+                    <kbd>Ctrl</kbd>+<kbd>A</kbd> / <kbd>Ctrl</kbd>+<kbd>C</kbd> /
+                    <kbd>Ctrl</kbd>+<kbd>X</kbd> / <kbd>Ctrl</kbd>+<kbd>V</kbd>
+                  </td>
+                  <td>지원하는 텍스트 입력창에서 전체 선택 / 복사 / 잘라내기 / 붙여넣기.</td>
+                </tr>
+                <tr>
+                  <td>
+                    <kbd>Ctrl</kbd>+<kbd>Insert</kbd> / <kbd>Shift</kbd>+<kbd>Insert</kbd> /
+                    <kbd>Shift</kbd>+<kbd>Delete</kbd>
+                  </td>
+                  <td>지원하는 텍스트 입력창에서 복사 / 붙여넣기 / 잘라내기.</td>
+                </tr>
+                <tr>
+                  <td><kbd>Ctrl</kbd>+<kbd>Z</kbd></td>
+                  <td>실행 취소. 지원하는 앱·입력창에서 동작합니다.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="panel">
+            <h3>Windows 키보드로 Mac을 제어할 때</h3>
+            <p>
+              기본 Windows 단축키 매핑에서는 Ctrl이 Command, Alt가 Option으로 전달됩니다. Mac 앱
+              설정의 키보드 수정키 매핑을 Mac 원래 방식으로 바꿀 수 있습니다. 위 Windows 앱 단축키의
+              Ctrl을 Command로 바꾸라는 의미는 아닙니다.
+            </p>
+          </div>
+          <div class="panel tip" id="shortcuts-next-release">
+            <h3>PC 1.5.0 배포 예정: 원격창 열기</h3>
+            <p>
+              현재 공개 Windows 1.4.9에는 아직 포함되지 않습니다. 1.5.0에서는 메인 PC의
+              Ctrl+Alt+Shift+1~9로 해당 기기의 원격창을 열거나 이미 열린 창을 앞으로 가져옵니다.
+              다시 눌러 창을 닫는 단축키는 아닙니다.
+            </p>
+            <p>
+              1.5.0에서는 연결·원격창 단축키가 같은 LAN 기기 번호를 사용하며 Bluetooth 기기는 번호
+              배정에서 제외합니다.
+            </p>
           </div>
         </div>
       </section>

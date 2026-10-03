@@ -38,6 +38,19 @@ python -B -m http.server 8000 --bind 127.0.0.1
 - `llms.txt`에는 공개판의 짧은 요약과 안내 링크만 남깁니다. 설치 절차·경쟁사 정보·구매
   조건을 별도 복제하면 불일치가 생기므로 원문을 연결합니다.
 
+### 단축키 안내를 바꿀 때
+
+PC 기본 키·역할 조건·변경/끄기 설정은 앱 저장소의
+[`shortcuts-config.js`](https://github.com/sdlckdrl/MouseLink/blob/main/pc/electron/renderer/shortcuts-config.js)와
+[`shortcut-manager.js`](https://github.com/sdlckdrl/MouseLink/blob/main/pc/electron/shortcut-manager.js)를
+기준으로 확인합니다. 실제 동작은 `main.js`, `input_bridge.py`, `local_hotkeys.py`와 플랫폼별
+수신 코드를 대조합니다. Android 입력 조합과 Mac 수정키 변환을 PC 전역 단축키와 구분합니다.
+
+`guide.html#shortcuts` 5개 언어의 표·조건, 첫 연결의 캡처 안내, 번호 연결 안내,
+`help.html`의 기본 복귀 키 설명을 함께 확인합니다. 배포 전 기능은
+`#shortcuts-next-release`에서 공개판과 구분합니다. 해당 버전이 실제로 공개되면 예정 표시와
+번호 배정 조건을 현재 배포판에 맞게 갱신하며, 버전 숫자만 소스에 맞춰 올리지 않습니다.
+
 ## 다운로드·앱 호환성
 
 홈페이지 다운로드와 앱 업데이트가 함께 사용하는 파일이므로 배포된 자산을 먼저 확인합니다.

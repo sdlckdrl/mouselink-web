@@ -128,7 +128,9 @@
                 <h4>移过去使用</h4>
                 <p>
                   朝布置好的方向推动鼠标，就会切换到手机上。文件放到快速拖放区，发到另一台 PC
-                  则拖过屏幕边界。屏幕捕获用 Print Screen 或 Ctrl+Alt+S。
+                  则拖过屏幕边界。截图默认按键为 Ctrl+Alt+S。各设备的条件请参阅<a href="#shortcuts"
+                    >快捷键说明</a
+                  >。
                 </p>
               </div>
             </div>
@@ -459,9 +461,14 @@
             <div class="panel">
               <h3>Ctrl + Alt + 1~9</h3>
               <ul>
-                <li>设备管理中前 9 个设备会绑定 <b>Ctrl+Alt+1~9</b>。</li>
+                <li>
+                  默认情况下，主电脑设备列表前 9 个设备会绑定 <b>Ctrl+Alt+1~9</b>。修改按键请参阅<a
+                    href="#shortcuts"
+                    >快捷键说明</a
+                  >。
+                </li>
                 <li>按下编号就会连接到对应设备。</li>
-                <li>对已连接的设备再次按下其编号即可断开连接。</li>
+                <li>再次按当前正在控制设备的同一编号，即可解除输入控制。</li>
                 <li>连接／断开时，右下角会弹出一个小提示。</li>
               </ul>
             </div>
@@ -704,40 +711,141 @@
       <section id="shortcuts">
         <div class="wrap narrow">
           <div class="sec-head">
-            <p class="ey">快捷键</p>
-            <h2 class="sec">常用键盘快捷键。</h2>
+            <h2 class="sec">键盘快捷键及适用条件。</h2>
+            <p class="sec-lead">
+              以下 PC 快捷键是默认值。可在 PC 设置 →
+              快捷键中更改组合、单独关闭某项或关闭全部快捷键。如果更改过，请使用已保存的组合。
+            </p>
           </div>
+          <h3 id="pc-shortcuts-title">Windows 应用默认快捷键</h3>
           <div class="table-wrap">
-            <table class="kt">
+            <table class="kt" aria-labelledby="pc-shortcuts-title">
               <thead>
                 <tr>
-                  <th>快捷键</th>
-                  <th>动作</th>
+                  <th scope="col">默认快捷键</th>
+                  <th scope="col">操作与条件</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>1~9</kbd></td>
-                  <td>连接列表中对应的设备 / 再次按下则断开</td>
+                  <td>
+                    主电脑：连接列表中对应设备的输入控制。再次按当前正在控制设备的同一编号，解除该设备的输入控制。
+                  </td>
                 </tr>
                 <tr>
                   <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>D</kbd></td>
-                  <td>隐藏 / 显示快速拖放区</td>
+                  <td>显示 / 隐藏快速拖放区。</td>
                 </tr>
                 <tr>
-                  <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>S</kbd> · <kbd>PrintScreen</kbd></td>
-                  <td>移动端屏幕捕获</td>
+                  <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>S</kbd></td>
+                  <td>
+                    在正在控制的 Windows PC、Mac 或 Android
+                    屏幕上选择区域，并在主电脑接收截图。不控制其他设备时，截取本机屏幕。两端应用都需支持此功能，目标设备还需具有截图权限。
+                  </td>
+                </tr>
+                <tr>
+                  <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>V</kbd></td>
+                  <td>
+                    主电脑：手机验证码通知显示在 PC 上期间，复制其中的验证码。请先开启手机通知转发。
+                  </td>
+                </tr>
+                <tr>
+                  <td><kbd>Ctrl</kbd>+<kbd>V</kbd></td>
+                  <td>
+                    接收并粘贴在另一台 PC
+                    上复制的共享文件。没有待接收的共享文件时，仍可使用普通粘贴。
+                  </td>
                 </tr>
                 <tr>
                   <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Backspace</kbd></td>
-                  <td>把光标强制返回到本机 PC（显示器中央）</td>
-                </tr>
-                <tr>
-                  <td><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>↑</kbd>/<kbd>↓</kbd></td>
-                  <td>调节移动端屏幕亮度（需要系统设置权限）</td>
+                  <td>主电脑：控制其他设备时，立即将光标返回本机显示器中央。</td>
                 </tr>
               </tbody>
             </table>
+          </div>
+          <div class="panel tip">
+            <p>
+              副电脑可使用快速拖放、本机截图及共享文件粘贴。用主电脑键盘控制副电脑时，应用主电脑的快捷键设置。
+            </p>
+            <p>
+              关闭全部快捷键也会关闭紧急返回。请让光标跨过屏幕边缘返回。按键无效时，请在设置 →
+              快捷键中检查开关状态与按键冲突。
+            </p>
+          </div>
+          <h3 id="android-shortcuts-title">直接控制 Android 时</h3>
+          <p>
+            以下是发送给 Android 的输入组合，与上方 PC
+            应用快捷键设置不同。文本编辑效果取决于目标应用和输入框的支持情况。
+          </p>
+          <div class="table-wrap">
+            <table class="kt" aria-labelledby="android-shortcuts-title">
+              <thead>
+                <tr>
+                  <th scope="col">默认快捷键</th>
+                  <th scope="col">操作与条件</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><kbd>PrintScreen</kbd></td>
+                  <td>
+                    Android 11 及以上：直接控制手机时截取手机屏幕并发送到 PC。需要无障碍权限。
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>↑</kbd> /
+                    <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>↓</kbd>
+                  </td>
+                  <td>提高 / 降低 Android 屏幕亮度。需要修改系统设置的权限。</td>
+                </tr>
+                <tr>
+                  <td><kbd>Alt</kbd>+<kbd>↑</kbd> / <kbd>Alt</kbd>+<kbd>↓</kbd></td>
+                  <td>提高 / 降低 Android 媒体音量。</td>
+                </tr>
+                <tr>
+                  <td>
+                    <kbd>Alt</kbd>+<kbd>Tab</kbd> / <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>Tab</kbd>
+                  </td>
+                  <td>切换最近应用 / 反向切换。松开 Alt 后进入选中的应用。</td>
+                </tr>
+                <tr>
+                  <td>
+                    <kbd>Ctrl</kbd>+<kbd>A</kbd> / <kbd>Ctrl</kbd>+<kbd>C</kbd> /
+                    <kbd>Ctrl</kbd>+<kbd>X</kbd> / <kbd>Ctrl</kbd>+<kbd>V</kbd>
+                  </td>
+                  <td>在支持的输入框中全选 / 复制 / 剪切 / 粘贴。</td>
+                </tr>
+                <tr>
+                  <td>
+                    <kbd>Ctrl</kbd>+<kbd>Insert</kbd> / <kbd>Shift</kbd>+<kbd>Insert</kbd> /
+                    <kbd>Shift</kbd>+<kbd>Delete</kbd>
+                  </td>
+                  <td>在支持的输入框中复制 / 粘贴 / 剪切。</td>
+                </tr>
+                <tr>
+                  <td><kbd>Ctrl</kbd>+<kbd>Z</kbd></td>
+                  <td>在支持的应用和输入框中撤销操作。</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="panel">
+            <h3>用 Windows 键盘控制 Mac 时</h3>
+            <p>
+              默认 Windows 快捷键映射将 Ctrl 作为 Command、Alt 作为 Option 发送。可在 Mac
+              应用的键盘设置中改为 Mac 原生修饰键映射。这并不表示要把上方 Windows 应用快捷键的 Ctrl
+              改成 Command。
+            </p>
+          </div>
+          <div class="panel tip" id="shortcuts-next-release">
+            <h3>计划用于 PC 1.5.0：远程窗口快捷键</h3>
+            <p>
+              当前公开的 Windows 1.4.9 下载版尚未包含此功能。1.5.0 中，在主电脑按 Ctrl+Alt+Shift+1~9
+              可打开对应设备的远程窗口，或将已打开的窗口置于前台。再次按下不会关闭窗口。
+            </p>
+            <p>1.5.0 中，连接和远程窗口快捷键使用相同的 LAN 设备编号；Bluetooth 设备不参与编号。</p>
           </div>
         </div>
       </section>

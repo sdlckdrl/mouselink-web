@@ -138,9 +138,9 @@
                 <h4>Cruza y empieza a usarlo</h4>
                 <p>
                   Empuja el ratón hacia el borde que has definido y pasará al teléfono. Suelta
-                  archivos en la zona de envío rápido y, para llegar a otro PC, arrástralos
-                  cruzando el límite de la pantalla. Para capturar la pantalla, usa Print Screen o
-                  Ctrl+Alt+S.
+                  archivos en la zona de envío rápido y, para llegar a otro PC, arrástralos cruzando
+                  el límite de la pantalla. El atajo predeterminado de captura es Ctrl+Alt+S.
+                  Consulta las <a href="#shortcuts">condiciones de cada destino</a>.
                 </p>
               </div>
             </div>
@@ -499,9 +499,16 @@
             <div class="panel">
               <h3>Ctrl + Alt + 1~9</h3>
               <ul>
-                <li>Los 9 primeros dispositivos de Dispositivos reciben <b>Ctrl+Alt+1~9</b>.</li>
+                <li>
+                  De forma predeterminada, los 9 primeros dispositivos de la lista del PC principal
+                  reciben <b>Ctrl+Alt+1~9</b>. Consulta los
+                  <a href="#shortcuts">ajustes de atajos</a> para cambiar las teclas.
+                </li>
                 <li>Pulsa un número para conectar con ese dispositivo.</li>
-                <li>Vuelve a pulsar el número de un dispositivo ya conectado para desconectarlo.</li>
+                <li>
+                  Pulsa el mismo número otra vez para dejar de controlar el dispositivo que
+                  controlas actualmente.
+                </li>
                 <li>
                   Aparece una pequeña notificación abajo a la derecha al conectar o desconectar.
                 </li>
@@ -799,46 +806,165 @@
       <section id="shortcuts">
         <div class="wrap narrow">
           <div class="sec-head">
-            <p class="ey">Atajos</p>
-            <h2 class="sec">Los atajos de teclado que más vas a usar.</h2>
+            <h2 class="sec">Atajos de teclado y cuándo se aplican.</h2>
+            <p class="sec-lead">
+              Estos atajos del PC son los predeterminados. En Ajustes del PC → Atajos puedes cambiar
+              cada combinación, desactivar acciones individuales o desactivar todos los atajos. Si
+              cambiaste una combinación, usa la que guardaste.
+            </p>
           </div>
+          <h3 id="pc-shortcuts-title">Atajos predeterminados de la app de Windows</h3>
           <div class="table-wrap">
-            <table class="kt">
+            <table class="kt" aria-labelledby="pc-shortcuts-title">
               <thead>
                 <tr>
-                  <th>Atajo</th>
-                  <th>Acción</th>
+                  <th scope="col">Atajo predeterminado</th>
+                  <th scope="col">Acción y condiciones</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>1~9</kbd></td>
                   <td>
-                    Conecta el dispositivo correspondiente de la lista / púlsalo otra vez para
-                    desconectar
+                    PC principal: conecta el control de entrada al dispositivo correspondiente de la
+                    lista. Pulsa el mismo número otra vez para dejar de controlar el dispositivo
+                    actual.
                   </td>
                 </tr>
                 <tr>
                   <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>D</kbd></td>
-                  <td>Oculta / muestra la zona de envío rápido</td>
+                  <td>Muestra / oculta la zona de envío rápido.</td>
                 </tr>
                 <tr>
-                  <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>S</kbd> · <kbd>PrintScreen</kbd></td>
-                  <td>Captura la pantalla del móvil</td>
+                  <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>S</kbd></td>
+                  <td>
+                    Selecciona un área de la pantalla del PC Windows, Mac o Android que controlas y
+                    recíbela en el PC principal. Si no controlas otro dispositivo, captura este PC.
+                    Ambas apps deben admitir la función y el destino necesita permiso de captura.
+                  </td>
+                </tr>
+                <tr>
+                  <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>V</kbd></td>
+                  <td>
+                    PC principal: copia el código de verificación mientras su notificación del
+                    teléfono aparece en el PC. Activa primero el envío de notificaciones del
+                    teléfono.
+                  </td>
+                </tr>
+                <tr>
+                  <td><kbd>Ctrl</kbd>+<kbd>V</kbd></td>
+                  <td>
+                    Recibe y pega archivos compartidos copiados en otro PC. Si no hay archivos
+                    compartidos pendientes, el pegado normal sigue disponible.
+                  </td>
                 </tr>
                 <tr>
                   <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Backspace</kbd></td>
-                  <td>Fuerza el regreso del cursor a tu PC (centro del monitor)</td>
-                </tr>
-                <tr>
-                  <td><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>↑</kbd>/<kbd>↓</kbd></td>
                   <td>
-                    Ajusta el brillo de la pantalla del móvil (requiere permiso de ajustes del
-                    sistema)
+                    PC principal: devuelve inmediatamente el cursor al centro de tu monitor mientras
+                    controlas otro dispositivo.
                   </td>
                 </tr>
               </tbody>
             </table>
+          </div>
+          <div class="panel tip">
+            <p>
+              El PC secundario usa envío rápido, capturas locales y pegado de archivos compartidos.
+              Si lo controlas con el teclado del PC principal, se aplican los atajos del PC
+              principal.
+            </p>
+            <p>
+              Desactivar todos los atajos también desactiva el regreso de emergencia. Devuelve el
+              cursor cruzando el borde de la pantalla. Si una tecla no funciona, revisa su estado y
+              los conflictos en Ajustes → Atajos.
+            </p>
+          </div>
+          <h3 id="android-shortcuts-title">Al controlar Android directamente</h3>
+          <p>
+            Estas combinaciones se envían a Android y son distintas de los ajustes de atajos de la
+            app del PC. La edición de texto depende de la app y del campo de texto de destino.
+          </p>
+          <div class="table-wrap">
+            <table class="kt" aria-labelledby="android-shortcuts-title">
+              <thead>
+                <tr>
+                  <th scope="col">Atajo predeterminado</th>
+                  <th scope="col">Acción y condiciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><kbd>PrintScreen</kbd></td>
+                  <td>
+                    Android 11 o posterior: captura la pantalla del teléfono durante el control
+                    directo y envíala al PC. Requiere permiso de Accesibilidad.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>↑</kbd> /
+                    <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>↓</kbd>
+                  </td>
+                  <td>
+                    Sube / baja el brillo de Android. Requiere permiso para modificar los ajustes
+                    del sistema.
+                  </td>
+                </tr>
+                <tr>
+                  <td><kbd>Alt</kbd>+<kbd>↑</kbd> / <kbd>Alt</kbd>+<kbd>↓</kbd></td>
+                  <td>Sube / baja el volumen multimedia de Android.</td>
+                </tr>
+                <tr>
+                  <td>
+                    <kbd>Alt</kbd>+<kbd>Tab</kbd> / <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>Tab</kbd>
+                  </td>
+                  <td>
+                    Cambia entre apps recientes / recorre la lista en sentido inverso. Suelta Alt
+                    para abrir la app seleccionada.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <kbd>Ctrl</kbd>+<kbd>A</kbd> / <kbd>Ctrl</kbd>+<kbd>C</kbd> /
+                    <kbd>Ctrl</kbd>+<kbd>X</kbd> / <kbd>Ctrl</kbd>+<kbd>V</kbd>
+                  </td>
+                  <td>Selecciona todo / copia / corta / pega en un campo de texto compatible.</td>
+                </tr>
+                <tr>
+                  <td>
+                    <kbd>Ctrl</kbd>+<kbd>Insert</kbd> / <kbd>Shift</kbd>+<kbd>Insert</kbd> /
+                    <kbd>Shift</kbd>+<kbd>Delete</kbd>
+                  </td>
+                  <td>Copia / pega / corta en un campo de texto compatible.</td>
+                </tr>
+                <tr>
+                  <td><kbd>Ctrl</kbd>+<kbd>Z</kbd></td>
+                  <td>Deshace una acción en apps y campos de texto compatibles.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="panel">
+            <h3>Al usar un teclado de Windows para controlar un Mac</h3>
+            <p>
+              La asignación predeterminada de atajos de Windows envía Ctrl como Command y Alt como
+              Option. Puedes elegir los modificadores nativos de Mac en los ajustes de teclado de la
+              app de Mac. Esto no significa sustituir Ctrl por Command en los atajos de la app de
+              Windows de arriba.
+            </p>
+          </div>
+          <div class="panel tip" id="shortcuts-next-release">
+            <h3>Previsto para PC 1.5.0: atajos de ventana remota</h3>
+            <p>
+              No está incluido en la descarga pública actual de Windows 1.4.9. En 1.5.0,
+              Ctrl+Alt+Shift+1~9 en el PC principal abre la ventana remota correspondiente o trae al
+              frente una ventana existente. Pulsarlo otra vez no cierra la ventana.
+            </p>
+            <p>
+              En 1.5.0, los atajos de conexión y ventana remota comparten los números de los
+              dispositivos LAN; los dispositivos Bluetooth quedan fuera de esa numeración.
+            </p>
           </div>
         </div>
       </section>

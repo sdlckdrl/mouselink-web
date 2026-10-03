@@ -136,7 +136,8 @@
                 <p>
                   Push the mouse toward the edge you set and it moves onto the phone. Drop files on
                   the Quick Drop zone, and to reach another PC drag them across the screen boundary.
-                  For screen capture, use Print Screen or Ctrl+Alt+S.
+                  The default screenshot key is Ctrl+Alt+S. See
+                  <a href="#shortcuts">shortcut conditions</a> for each target.
                 </p>
               </div>
             </div>
@@ -492,9 +493,16 @@
             <div class="panel">
               <h3>Ctrl + Alt + 1~9</h3>
               <ul>
-                <li>The first 9 devices in Devices get <b>Ctrl+Alt+1~9</b>.</li>
+                <li>
+                  By default, the first 9 devices in the main PC device list get
+                  <b>Ctrl+Alt+1~9</b>. See <a href="#shortcuts">shortcut settings</a> to change the
+                  keys.
+                </li>
                 <li>Press a number to connect to that device.</li>
-                <li>Press the number of an already-connected device again to disconnect.</li>
+                <li>
+                  Press the same number again to release input control of the device you are
+                  currently controlling.
+                </li>
                 <li>
                   A small notification appears at the bottom right when you connect or disconnect.
                 </li>
@@ -785,40 +793,160 @@
       <section id="shortcuts">
         <div class="wrap narrow">
           <div class="sec-head">
-            <p class="ey">Shortcuts</p>
-            <h2 class="sec">The keyboard shortcuts you'll use most.</h2>
+            <h2 class="sec">Keyboard shortcuts and when they apply.</h2>
+            <p class="sec-lead">
+              These PC shortcuts are defaults. In PC Settings → Shortcuts, you can change each
+              combination, turn individual actions off, or disable all shortcuts. Use your saved
+              combination if you have changed it.
+            </p>
           </div>
+          <h3 id="pc-shortcuts-title">Windows app defaults</h3>
           <div class="table-wrap">
-            <table class="kt">
+            <table class="kt" aria-labelledby="pc-shortcuts-title">
               <thead>
                 <tr>
-                  <th>Shortcut</th>
-                  <th>Action</th>
+                  <th scope="col">Default shortcut</th>
+                  <th scope="col">Action and conditions</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>1~9</kbd></td>
-                  <td>Connect the matching device in the list / press again to disconnect</td>
+                  <td>
+                    Main PC: connect input control to the matching device in the list. Press the
+                    same number again to release the device you are currently controlling.
+                  </td>
                 </tr>
                 <tr>
                   <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>D</kbd></td>
-                  <td>Hide / show the Quick Drop zone</td>
+                  <td>Show / hide the Quick Drop zone.</td>
                 </tr>
                 <tr>
-                  <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>S</kbd> · <kbd>PrintScreen</kbd></td>
-                  <td>Capture the mobile screen</td>
+                  <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>S</kbd></td>
+                  <td>
+                    Select an area on the Windows PC, Mac, or Android device you are controlling and
+                    receive it on the main PC. With no remote device under control, capture this PC.
+                    Both apps must support the feature, and the target needs capture permission.
+                  </td>
+                </tr>
+                <tr>
+                  <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>V</kbd></td>
+                  <td>
+                    Main PC: copy a verification code while its phone notification is visible on the
+                    PC. Enable phone notification relay first.
+                  </td>
+                </tr>
+                <tr>
+                  <td><kbd>Ctrl</kbd>+<kbd>V</kbd></td>
+                  <td>
+                    Receive and paste shared files copied on another PC. With no shared files
+                    waiting, ordinary paste remains available.
+                  </td>
                 </tr>
                 <tr>
                   <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Backspace</kbd></td>
-                  <td>Force the cursor back to your PC (center of the monitor)</td>
-                </tr>
-                <tr>
-                  <td><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>↑</kbd>/<kbd>↓</kbd></td>
-                  <td>Adjust the mobile screen brightness (needs system settings permission)</td>
+                  <td>
+                    Main PC: immediately return the cursor to the center of your own monitor while
+                    controlling another device.
+                  </td>
                 </tr>
               </tbody>
             </table>
+          </div>
+          <div class="panel tip">
+            <p>
+              A secondary PC uses Quick Drop, local screenshots, and shared-file paste. When its
+              input comes from the main PC keyboard, the main PC shortcut settings apply.
+            </p>
+            <p>
+              Disabling all shortcuts also disables emergency return. Move the cursor back across
+              the screen edge. If a key does not work, check its enabled state and conflicts in
+              Settings → Shortcuts.
+            </p>
+          </div>
+          <h3 id="android-shortcuts-title">While directly controlling Android</h3>
+          <p>
+            These are input combinations sent to Android, separate from the PC app shortcut settings
+            above. Text editing depends on support in the target app and text field.
+          </p>
+          <div class="table-wrap">
+            <table class="kt" aria-labelledby="android-shortcuts-title">
+              <thead>
+                <tr>
+                  <th scope="col">Default shortcut</th>
+                  <th scope="col">Action and conditions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><kbd>PrintScreen</kbd></td>
+                  <td>
+                    Android 11+: capture the phone screen during direct control and send it to the
+                    PC. Accessibility permission is required.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>↑</kbd> /
+                    <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>↓</kbd>
+                  </td>
+                  <td>
+                    Raise / lower Android screen brightness. Requires permission to modify system
+                    settings.
+                  </td>
+                </tr>
+                <tr>
+                  <td><kbd>Alt</kbd>+<kbd>↑</kbd> / <kbd>Alt</kbd>+<kbd>↓</kbd></td>
+                  <td>Raise / lower Android media volume.</td>
+                </tr>
+                <tr>
+                  <td>
+                    <kbd>Alt</kbd>+<kbd>Tab</kbd> / <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>Tab</kbd>
+                  </td>
+                  <td>
+                    Switch recent apps / cycle in reverse. Release Alt to enter the selected app.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <kbd>Ctrl</kbd>+<kbd>A</kbd> / <kbd>Ctrl</kbd>+<kbd>C</kbd> /
+                    <kbd>Ctrl</kbd>+<kbd>X</kbd> / <kbd>Ctrl</kbd>+<kbd>V</kbd>
+                  </td>
+                  <td>Select all / copy / cut / paste in a supported text field.</td>
+                </tr>
+                <tr>
+                  <td>
+                    <kbd>Ctrl</kbd>+<kbd>Insert</kbd> / <kbd>Shift</kbd>+<kbd>Insert</kbd> /
+                    <kbd>Shift</kbd>+<kbd>Delete</kbd>
+                  </td>
+                  <td>Copy / paste / cut in a supported text field.</td>
+                </tr>
+                <tr>
+                  <td><kbd>Ctrl</kbd>+<kbd>Z</kbd></td>
+                  <td>Undo in apps and text fields that support it.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="panel">
+            <h3>Using a Windows keyboard to control a Mac</h3>
+            <p>
+              The default Windows shortcut mapping sends Ctrl as Command and Alt as Option. You can
+              switch to native Mac modifier mapping in the Mac app keyboard settings. This does not
+              mean replacing Ctrl with Command in the Windows app shortcuts above.
+            </p>
+          </div>
+          <div class="panel tip" id="shortcuts-next-release">
+            <h3>Planned for PC 1.5.0: remote window shortcuts</h3>
+            <p>
+              Not included in the current public Windows 1.4.9 download. In 1.5.0,
+              Ctrl+Alt+Shift+1~9 on the main PC opens the matching remote window or brings an
+              existing window forward. Pressing it again does not close the window.
+            </p>
+            <p>
+              In 1.5.0, connection and remote-window shortcuts share the same LAN device numbers;
+              Bluetooth devices are excluded from numbering.
+            </p>
           </div>
         </div>
       </section>

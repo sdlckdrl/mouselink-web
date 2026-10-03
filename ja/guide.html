@@ -123,8 +123,10 @@
               <div class="body">
                 <h4>そのまま使えます</h4>
                 <p>
-                  配置した方向へマウスを押し出すと、スマホへ移ります。ファイルはクイックドロップに置き、別のPCへは画面の境界へドラッグして送ります。画面キャプチャはPrint
-                  ScreenまたはCtrl+Alt+S。
+                  配置した方向へマウスを押し出すと、スマホへ移ります。ファイルはクイックドロップに置き、別のPCへは画面の境界へドラッグして送ります。撮影の既定キーはCtrl+Alt+Sです。対象ごとの条件は<a
+                    href="#shortcuts"
+                    >ショートカットの説明</a
+                  >を確認してください。
                 </p>
               </div>
             </div>
@@ -516,9 +518,14 @@
             <div class="panel">
               <h3>Ctrl + Alt + 1~9</h3>
               <ul>
-                <li>デバイス管理の先頭9台に<b>Ctrl+Alt+1~9</b>が割り当てられます。</li>
+                <li>
+                  既定ではメインPCの機器一覧の先頭9台に<b>Ctrl+Alt+1~9</b>が割り当てられます。変更方法は<a
+                    href="#shortcuts"
+                    >ショートカットの説明</a
+                  >を確認してください。
+                </li>
                 <li>番号を押すと、そのデバイスに接続します。</li>
-                <li>すでに接続中のデバイスの番号をもう一度押すと、接続が切れます。</li>
+                <li>現在操作中の機器と同じ番号をもう一度押すと、入力操作を解除します。</li>
                 <li>接続/解除のときに、右下に小さな通知が表示されます。</li>
               </ul>
             </div>
@@ -771,40 +778,145 @@
       <section id="shortcuts">
         <div class="wrap narrow">
           <div class="sec-head">
-            <p class="ey">ショートカット</p>
-            <h2 class="sec">よく使うキーボードショートカット。</h2>
+            <h2 class="sec">キーボードショートカットと適用条件。</h2>
+            <p class="sec-lead">
+              以下のPCショートカットは既定値です。PCの設定 →
+              ショートカットでキーの組み合わせを変更し、個別または全体をオフにできます。変更した場合は保存した組み合わせを使ってください。
+            </p>
           </div>
+          <h3 id="pc-shortcuts-title">Windowsアプリの既定ショートカット</h3>
           <div class="table-wrap">
-            <table class="kt">
+            <table class="kt" aria-labelledby="pc-shortcuts-title">
               <thead>
                 <tr>
-                  <th>ショートカット</th>
-                  <th>動作</th>
+                  <th scope="col">既定ショートカット</th>
+                  <th scope="col">動作・条件</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>1~9</kbd></td>
-                  <td>一覧の該当デバイスに接続 / もう一度押すと解除</td>
+                  <td>
+                    メインPC：一覧の該当機器の入力操作を開始します。現在操作中の機器と同じ番号をもう一度押すと、操作を解除します。
+                  </td>
                 </tr>
                 <tr>
                   <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>D</kbd></td>
-                  <td>クイックドロップを隠す / 表示する</td>
+                  <td>クイックドロップの表示 / 非表示。</td>
                 </tr>
                 <tr>
-                  <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>S</kbd> · <kbd>PrintScreen</kbd></td>
-                  <td>モバイルの画面キャプチャ</td>
+                  <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>S</kbd></td>
+                  <td>
+                    操作中のWindows
+                    PC・Mac・Androidの画面で範囲を選び、メインPCで受け取ります。他の機器を操作していない場合は、このPCを撮影します。両方のアプリの対応と、対象機器の撮影権限が必要です。
+                  </td>
+                </tr>
+                <tr>
+                  <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>V</kbd></td>
+                  <td>
+                    メインPC：認証コードを含むスマートフォンの通知がPCに表示されている間、そのコードをコピーします。先にスマートフォンの通知転送を有効にしてください。
+                  </td>
+                </tr>
+                <tr>
+                  <td><kbd>Ctrl</kbd>+<kbd>V</kbd></td>
+                  <td>
+                    別のPCでコピーした共有ファイルを、このPCで受信して貼り付けます。待機中の共有ファイルがなければ、通常の貼り付けを使用できます。
+                  </td>
                 </tr>
                 <tr>
                   <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Backspace</kbd></td>
-                  <td>カーソルを自分のPC（モニター中央）へ強制的に戻す</td>
-                </tr>
-                <tr>
-                  <td><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>↑</kbd>/<kbd>↓</kbd></td>
-                  <td>モバイル画面の明るさ調整（システム設定の権限が必要）</td>
+                  <td>
+                    メインPC：他の機器の操作中に、カーソルを自分のモニター中央へすぐに戻します。
+                  </td>
                 </tr>
               </tbody>
             </table>
+          </div>
+          <div class="panel tip">
+            <p>
+              サブPCではクイックドロップ・このPCの撮影・共有ファイルの貼り付けを使います。メインPCのキーボードでサブPCを操作する場合は、メインPCのショートカット設定が適用されます。
+            </p>
+            <p>
+              全ショートカットをオフにすると、緊急復帰も使えません。画面の境界を越えてカーソルを戻してください。動作しない場合は、設定
+              → ショートカットで有効状態とキーの競合を確認してください。
+            </p>
+          </div>
+          <h3 id="android-shortcuts-title">Androidを直接操作するとき</h3>
+          <p>
+            以下はAndroidへ送る入力の組み合わせで、上のPCアプリのショートカット設定とは別です。テキスト編集は対象アプリ・入力欄の対応によって異なります。
+          </p>
+          <div class="table-wrap">
+            <table class="kt" aria-labelledby="android-shortcuts-title">
+              <thead>
+                <tr>
+                  <th scope="col">既定ショートカット</th>
+                  <th scope="col">動作・条件</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><kbd>PrintScreen</kbd></td>
+                  <td>
+                    Android
+                    11以降：直接操作中のスマートフォン画面を撮影してPCへ送ります。アクセシビリティ権限が必要です。
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>↑</kbd> /
+                    <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>↓</kbd>
+                  </td>
+                  <td>Android画面の明るさを上げる / 下げる。システム設定の変更権限が必要です。</td>
+                </tr>
+                <tr>
+                  <td><kbd>Alt</kbd>+<kbd>↑</kbd> / <kbd>Alt</kbd>+<kbd>↓</kbd></td>
+                  <td>Androidのメディア音量を上げる / 下げる。</td>
+                </tr>
+                <tr>
+                  <td>
+                    <kbd>Alt</kbd>+<kbd>Tab</kbd> / <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>Tab</kbd>
+                  </td>
+                  <td>
+                    最近のアプリを切り替える /
+                    逆方向へ切り替える。Altを離すと選択したアプリへ移ります。
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <kbd>Ctrl</kbd>+<kbd>A</kbd> / <kbd>Ctrl</kbd>+<kbd>C</kbd> /
+                    <kbd>Ctrl</kbd>+<kbd>X</kbd> / <kbd>Ctrl</kbd>+<kbd>V</kbd>
+                  </td>
+                  <td>対応する入力欄で、全選択 / コピー / 切り取り / 貼り付け。</td>
+                </tr>
+                <tr>
+                  <td>
+                    <kbd>Ctrl</kbd>+<kbd>Insert</kbd> / <kbd>Shift</kbd>+<kbd>Insert</kbd> /
+                    <kbd>Shift</kbd>+<kbd>Delete</kbd>
+                  </td>
+                  <td>対応する入力欄で、コピー / 貼り付け / 切り取り。</td>
+                </tr>
+                <tr>
+                  <td><kbd>Ctrl</kbd>+<kbd>Z</kbd></td>
+                  <td>対応するアプリ・入力欄で元に戻します。</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="panel">
+            <h3>WindowsキーボードでMacを操作するとき</h3>
+            <p>
+              既定のWindowsショートカット設定では、CtrlはCommand、AltはOptionとして送られます。Macアプリのキーボード設定で、Mac本来の修飾キー方式へ変更できます。上のWindowsアプリのショートカットでCtrlをCommandに置き換えるという意味ではありません。
+            </p>
+          </div>
+          <div class="panel tip" id="shortcuts-next-release">
+            <h3>PC 1.5.0で提供予定：リモート画面のショートカット</h3>
+            <p>
+              現在公開中のWindows
+              1.4.9のダウンロードには含まれません。1.5.0ではメインPCのCtrl+Alt+Shift+1~9で該当するリモート画面を開くか、既存のウィンドウを前面に表示します。もう一度押しても閉じません。
+            </p>
+            <p>
+              1.5.0では接続とリモート画面のショートカットで同じLAN機器番号を使い、Bluetooth機器は番号の対象から除外します。
+            </p>
           </div>
         </div>
       </section>
