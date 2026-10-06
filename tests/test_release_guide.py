@@ -1,5 +1,4 @@
-"""Keep the current remote-window shortcut guide aligned with the PC release."""
-import json
+"""Keep the remote-window shortcut in all five localized PC shortcut tables."""
 import re
 import unittest
 
@@ -24,35 +23,52 @@ NUMBERING_TERMS = {
 
 
 class ReleaseGuideTest(unittest.TestCase):
-    def test_remote_window_heading_and_body_use_the_current_pc_release(self):
-        version = json.loads((ROOT / "latest.json").read_text(encoding="utf-8"))["pc"]["version"]
-        self.assertRegex(version, r"^\d+\.\d+\.\d+$")
+    def test_remote_window_shortcut_is_the_second_pc_table_row(self):
         for locale in LOCALES:
             with self.subTest(locale=locale or "ko"):
-                section = Document(ROOT / locale / "guide.html").by_id("shortcuts-next-release")
-                heading, = [node for node in section.children if node.tag == "h3"]
-                paragraphs = [node for node in section.children if node.tag == "p"]
-                self.assertTrue(paragraphs)
-                self.assertEqual([version], VERSION_PATTERN.findall(heading.text()))
-                body_versions = VERSION_PATTERN.findall(" ".join(node.text() for node in paragraphs))
-                self.assertTrue(body_versions, "The current release must also be stated in the body")
-                self.assertEqual({version}, set(body_versions))
-                self.assertEqual({version}, set(VERSION_PATTERN.findall(section.text())))
-                self.assertIn("Windows", section.text())
+                guide = Document(ROOT / locale / "guide.html")
+                row = guide.by_id("shortcuts-next-release")
+                table, = [node for node in guide.root.walk()
+                          if node.tag == "table" and node.attrs.get("aria-labelledby") == "pc-shortcuts-title"]
+                body, = [node for node in table.children if node.tag == "tbody"]
+                rows = [node for node in body.children if node.tag == "tr"]
+                self.assertEqual("tr", row.tag)
+                self.assertIs(body, row.parent)
+                self.assertIs(row, rows[1])
+                first_cell = next(node for node in rows[0].children if node.tag == "td")
+                self.assertEqual(["Ctrl", "Alt", "1~9"],
+                                 [node.text() for node in first_cell.walk() if node.tag == "kbd"])
+                self.assertEqual("remote-window", row.attrs.get("data-shortcut-action"))
+                self.assertEqual([row], [node for node in guide.root.walk()
+                                        if node.attrs.get("data-shortcut-action") == "remote-window"])
 
-    def test_current_shortcut_block_does_not_describe_a_pending_release(self):
+    def test_remote_window_shortcut_uses_keyboard_markup_and_plus_separators(self):
         for locale in LOCALES:
             with self.subTest(locale=locale or "ko"):
-                content = Document(ROOT / locale / "guide.html").by_id("shortcuts-next-release").text()
-                self.assertNotIn("1.4.9", content)
+                row = Document(ROOT / locale / "guide.html").by_id("shortcuts-next-release")
+                cells = [node for node in row.children if node.tag == "td"]
+                self.assertEqual(2, len(cells))
+                self.assertEqual(["Ctrl", "Alt", "Shift", "1~9"],
+                                 [node.text() for node in cells[0].walk() if node.tag == "kbd"])
+                self.assertEqual("Ctrl+Alt+Shift+1~9", cells[0].text().replace(" ", ""))
+
+    def test_remote_window_shortcut_has_no_release_heading_or_pending_wording(self):
+        for locale in LOCALES:
+            with self.subTest(locale=locale or "ko"):
+                row = Document(ROOT / locale / "guide.html").by_id("shortcuts-next-release")
+                content = row.text()
+                self.assertFalse(any(node.tag == "h3" for node in row.walk()))
+                self.assertNotRegex(content, VERSION_PATTERN)
                 for term in PENDING_TERMS[locale]:
                     self.assertNotIn(term.casefold(), content.casefold())
 
-    def test_current_shortcut_block_retains_role_and_numbering_conditions(self):
+    def test_remote_window_shortcut_retains_role_and_numbering_conditions(self):
         for locale in LOCALES:
             with self.subTest(locale=locale or "ko"):
-                content = Document(ROOT / locale / "guide.html").by_id("shortcuts-next-release").text()
-                self.assertIn("Ctrl+Alt+Shift+1~9", content)
+                row = Document(ROOT / locale / "guide.html").by_id("shortcuts-next-release")
+                cells = [node for node in row.children if node.tag == "td"]
+                self.assertEqual(2, len(cells))
+                content = cells[1].text()
                 for term in NUMBERING_TERMS[locale]:
                     self.assertIn(term.casefold(), content.casefold())
 
