@@ -56,10 +56,11 @@
         <nav class="toc" aria-label="On this page">
           <a href="#start">5-minute setup</a>
           <a href="#position">Place your phone</a>
-          <a href="#remote">Mobile remote control</a>
+          <a href="#remote">Remote screens</a>
           <a href="#mouse-gestures">Mouse gestures</a>
           <a href="#files">Files &amp; clipboard</a>
           <a href="#text-to-pc">Mobile to PC</a>
+          <a href="#notifications">Notifications &amp; replies</a>
           <a href="#quick">Number shortcuts</a>
           <a href="#bluetooth">Bluetooth connection</a>
           <a href="#pcpc">Connect another PC</a>
@@ -197,7 +198,7 @@
         <div class="wrap">
           <div class="sec-head">
             <p class="ey">Remote control</p>
-            <h2 class="sec">Mobile screen remote control starts from Devices.</h2>
+            <h2 class="sec">Open remote screens from Devices.</h2>
           </div>
           <div class="split lead-left">
             <div>
@@ -207,7 +208,7 @@
                 Android screen capture approval is required.
               </p>
               <div class="panel">
-                <h3>Controls in the window</h3>
+                <h3>Controls in an Android window</h3>
                 <ul>
                   <li>Left click, drag, and wheel pass straight through.</li>
                   <li><b>Right click = Back</b>, <b>wheel click = Home</b>.</li>
@@ -220,6 +221,21 @@
                     control off and on again.
                   </li>
                 </ul>
+              </div>
+              <div class="panel tip" style="margin-top: 18px">
+                <h3 id="windows-remote">Right-button dragging in Windows remote windows</h3>
+                <p>
+                  Open a Windows PC window from its remote control icon in Devices or the default
+                  <b>Ctrl+Alt+Shift+1~9</b>. Windows for different devices can stay open together;
+                  pressing the same number again brings its existing window forward. See
+                  <a href="#shortcuts">shortcut settings</a> to change the keys.
+                </p>
+                <p>
+                  A Windows remote window also forwards movement while the right button is held,
+                  so you can use a gesture extension already configured in the target PC's browser.
+                  This is separate from OneMouse's Android gestures below. Right click on Android
+                  still means Back.
+                </p>
               </div>
             </div>
             <div>
@@ -269,13 +285,24 @@
           <div class="panel gesture-setup">
             <h3>1. Enable gestures</h3>
             <p>In Settings → Typing &amp; clipboard, turn on Mouse gestures (off by default). Use Apps for mouse gestures to choose the apps. Both PC and Android need a gesture-capable version.</p>
+            <p>
+              In versions that support <b>All apps</b>, select it to use gestures in installed apps
+              with launcher icons and on the home screen. OneMouse and system screens such as the
+              lock screen and permission prompts are excluded; available actions still depend on the app and screen.
+            </p>
             <h3>2. Hold, draw, release</h3>
             <p>Move the PC pointer onto the Android phone or tablet and open a selected app.</p>
             <ol class="gesture-steps">
               <li>Hold the right mouse button over the page content.</li>
-              <li>Draw the directions in order, not as one diagonal. The red trail shows the recognised action and estimated scroll amount.</li>
+              <li>Draw the directions in order, not as one diagonal. The red trail shows the recognised action and scroll intensity.</li>
               <li>Release the button to run the action. The page does not scroll while drawing.</li>
             </ol>
+            <p>
+              The scroll preview's arrow and vertical gauge show direction and stroke intensity,
+              not your position on the page or an exact distance. On the home screen or app drawer,
+              an up/down gesture makes just one swipe, even with a long stroke; it does not scroll
+              repeatedly.
+            </p>
           </div>
           <div class="table-wrap gesture-patterns">
             <table class="kt gesture-table" aria-labelledby="mouse-gestures-title">
@@ -388,7 +415,8 @@
             <p class="ey">Mobile to PC</p>
             <h2 class="sec">Send files and selected text from your phone to your PC.</h2>
             <p class="sec-lead">
-              First make sure the phone is paired and connected to the PC. Send files from the
+              For LAN transfers, choose the <b>default PC</b> on the mobile app's home screen and
+              check that it is paired and connected. Send files from the
               transfer tab or Android's share menu, and send text through OneMouse to PC in the
               selection menu.
             </p>
@@ -418,6 +446,18 @@
                 </li>
               </ol>
             </div>
+          </div>
+          <div class="panel tip" style="margin-top: 18px">
+            <h3 id="file-receive-folder">Find received files on the PC</h3>
+            <p>
+              In PC <b>Settings → General → File transfer → Received file location</b>, use
+              <b>Change folder</b> to choose the destination and <b>Open folder</b> to view it.
+              Main and sub PCs can each change their own receive folder.
+            </p>
+            <p>
+              Previously received files are not moved. Screenshot previews use their own save
+              dialog to choose a location.
+            </p>
           </div>
           <details class="fold">
             <summary>
@@ -482,6 +522,46 @@
         </div>
       </section>
 
+      <!-- NOTIFICATIONS -->
+      <section class="section-alt" id="notifications">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">Notifications &amp; replies</p>
+            <h2 class="sec">Read phone notifications and reply when supported.</h2>
+          </div>
+          <div class="split">
+            <div class="panel">
+              <h3>Receive notifications and view history</h3>
+              <p>
+                In the Android app, enable <b>Send notifications to PC</b>, allow notification
+                access, and select the apps to relay. On the main PC, enable device notifications
+                in <b>Settings → Notifications</b>.
+              </p>
+              <p>
+                The same screen shows notification history and retention settings: 7 days by
+                default, a choice of 1, 7, or 30 days, and at most 200 entries. Only new notifications
+                received after enabling history are recorded; verification codes and hidden
+                sensitive content are not recorded.
+              </p>
+            </div>
+            <div class="panel">
+              <h3>Reply to a live notification</h3>
+              <p>
+                <b>Reply</b> appears only when both PC and Android versions support replies and the
+                original phone notification offers a free-text reply. Type your reply and choose
+                <b>Send</b> or <b>Ctrl+Enter</b>. <b>Enter</b> adds a line break.
+              </p>
+              <p>
+                Replies go through the original phone app and cannot be sent from notification
+                history. ‘Passed to phone app’ does not confirm receipt by the recipient. If delivery
+                is unclear, check on your phone; failed replies are not automatically resent.
+              </p>
+              <p><a href="./help#notification-reply-faq">No Reply button, or reply not sent?</a></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- QUICK CONNECT -->
       <section id="quick">
         <div class="wrap narrow">
@@ -518,6 +598,19 @@
                 <li>No separate notification appears as the mouse moves between devices.</li>
               </ul>
             </div>
+          </div>
+          <div class="panel tip" style="margin-top: 18px">
+            <h3 id="device-order">Change device order and shortcut numbers</h3>
+            <p>
+              With at least two LAN devices on the main PC, choose <b>Devices → Edit order</b>.
+              Drag the handle or use the ↑/↓ buttons; changes save automatically. Choose
+              <b>Done</b> to finish editing.
+            </p>
+            <p>
+              Connection and remote-window shortcut numbers follow the same order. Screen layout
+              and your saved key combinations do not change. Bluetooth device order is not changed,
+              and order editing is not available on a PC running in the sub role.
+            </p>
           </div>
         </div>
       </section>
@@ -862,6 +955,14 @@
                 </tr>
               </tbody>
             </table>
+          </div>
+          <div class="panel tip" id="screenshot-result">
+            <p>
+              Receiving a screenshot does not return the pointer from the device you are controlling.
+              A separate preview appears on the main PC and closes after <b>Copy</b> or <b>Save</b>
+              succeeds. If the action fails or saving is cancelled, the preview stays open so you
+              can retry. Both apps need versions that support this behavior.
+            </p>
           </div>
           <div class="panel tip">
             <p>

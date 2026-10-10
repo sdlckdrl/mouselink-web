@@ -55,10 +55,11 @@
         <nav class="toc" aria-label="이 페이지 목차">
           <a href="#start">Android 연결</a>
           <a href="#position">폰 위치 배치</a>
-          <a href="#remote">모바일 원격 제어</a>
+          <a href="#remote">원격 화면</a>
           <a href="#mouse-gestures">마우스 제스처</a>
           <a href="#files">파일·클립보드</a>
           <a href="#text-to-pc">모바일 → PC 전송</a>
+          <a href="#notifications">알림·답장</a>
           <a href="#quick">번호 단축키</a>
           <a href="#bluetooth">블루투스 연결</a>
           <a href="#pcpc">다른 Windows PC</a>
@@ -191,7 +192,7 @@
         <div class="wrap">
           <div class="sec-head">
             <p class="ey">원격 제어</p>
-            <h2 class="sec">모바일 화면 원격 제어는 기기 관리에서 시작합니다.</h2>
+            <h2 class="sec">원격 화면은 기기 관리에서 엽니다.</h2>
           </div>
           <div class="split lead-left">
             <div>
@@ -200,13 +201,27 @@
                 별도 창이 열립니다. 처음 열 때는 Android 화면 캡처 승인이 필요합니다.
               </p>
               <div class="panel">
-                <h3>창에서의 조작</h3>
+                <h3>Android 창에서의 조작</h3>
                 <ul>
                   <li>좌클릭·드래그·휠이 그대로 전달됩니다.</li>
                   <li><b>우클릭 = 뒤로</b>, <b>휠클릭 = 홈</b>.</li>
                   <li>PC 키보드(한글 포함)는 폰의 현재 입력칸으로 갑니다.</li>
                   <li>화면이 비어 보이면 캡처 승인 팝업을 확인하고, 원격 제어를 껐다 켜세요.</li>
                 </ul>
+              </div>
+              <div class="panel tip" style="margin-top: 18px">
+                <h3 id="windows-remote">Windows 원격창에서도 우클릭 드래그</h3>
+                <p>
+                  기기 관리의 Windows PC 원격 제어 아이콘이나 기본
+                  <b>Ctrl+Alt+Shift+1~9</b>로 창을 엽니다. 서로 다른 기기의 원격창을 함께 열 수 있고,
+                  같은 번호를 다시 누르면 열린 창을 앞으로 가져옵니다. 키 변경은
+                  <a href="#shortcuts">단축키 안내</a>를 확인하세요.
+                </p>
+                <p>
+                  Windows 원격창에서는 우클릭을 누른 채 움직이는 경로도 전달합니다. 대상 PC의
+                  브라우저에 설정한 제스처 확장을 사용할 수 있으며, 아래 Android 자체 제스처와는
+                  별개입니다. Android의 우클릭은 기존처럼 뒤로 가기입니다.
+                </p>
               </div>
             </div>
             <div>
@@ -253,13 +268,23 @@
           <div class="panel gesture-setup">
             <h3>1. 제스처 켜기</h3>
             <p>설정 → 입력 · 클립보드에서 마우스 제스처를 켜세요(기본은 꺼짐). 제스처 사용할 앱에서 사용할 앱을 선택하세요. PC와 Android 모두 제스처 기능이 포함된 버전이 필요합니다.</p>
+            <p>
+              모든 앱 선택을 지원하는 버전에서는 <b>모든 앱</b>으로 실행 아이콘이 있는 설치 앱과
+              홈 화면에서도 사용할 수 있습니다. OneMouse와 잠금·권한창 같은 시스템 화면은 제외되며,
+              앱·화면에 따라 가능한 동작이 다릅니다.
+            </p>
             <h3>2. 누르고, 그리고, 놓기</h3>
             <p>PC 커서를 Android 폰·태블릿으로 넘긴 뒤 선택한 앱을 여세요.</p>
             <ol class="gesture-steps">
               <li>페이지 본문 위에서 우클릭을 누른 채 유지하세요.</li>
-              <li>대각선이 아닌 표시된 방향을 순서대로 그리세요. 빨간 궤적 옆에 인식된 동작과 예상 스크롤양이 표시됩니다.</li>
+              <li>대각선이 아닌 표시된 방향을 순서대로 그리세요. 빨간 궤적 옆에 인식된 동작과 스크롤 강도가 표시됩니다.</li>
               <li>버튼을 놓으면 동작이 실행됩니다. 그리는 중에는 페이지가 스크롤되지 않습니다.</li>
             </ol>
+            <p>
+              스크롤 미리보기의 화살표와 세로 게이지는 방향과 그린 길이의 강도를 보여줍니다.
+              페이지 위치나 정확한 이동량이 아닙니다. 홈 화면과
+              앱 목록의 위·아래 동작은 길게 그려도 한 번만 스와이프하며 반복 스크롤하지 않습니다.
+            </p>
           </div>
           <div class="table-wrap gesture-patterns">
             <table class="kt gesture-table" aria-labelledby="mouse-gestures-title">
@@ -369,7 +394,8 @@
             <p class="ey">모바일 → PC</p>
             <h2 class="sec">폰에서 고른 파일과 텍스트를 PC로 보냅니다.</h2>
             <p class="sec-lead">
-              먼저 PC와 페어링·연결된 상태인지 확인하세요. 파일은 전송 탭 또는 Android 공유
+              LAN으로 보낼 때는 모바일 앱 홈에서 <b>기본 PC</b>를 선택하고 페어링·연결 상태를 확인하세요.
+              파일은 전송 탭 또는 Android 공유
               메뉴에서, 텍스트는 선택 메뉴의 OneMouse to PC에서 보낼 수 있습니다.
             </p>
           </div>
@@ -390,6 +416,18 @@
                 <li>처음 보이지 않으면 앱 관리에서 OneMouse를 한 번 켠 뒤 다시 선택하세요.</li>
               </ol>
             </div>
+          </div>
+          <div class="panel tip" style="margin-top: 18px">
+            <h3 id="file-receive-folder">PC에서 받은 파일 찾기</h3>
+            <p>
+              PC의 <b>설정 → 일반 → 파일 전송 → 수신 파일 저장 위치</b>에서 <b>폴더 변경</b>으로
+              저장 위치를 정하고 <b>폴더 열기</b>로 확인합니다. 메인·서브 PC 모두 자신의 수신
+              폴더를 바꿀 수 있습니다.
+            </p>
+            <p>
+              이미 받은 파일은 옮기지 않습니다. 스크린샷 미리보기의 저장 위치는 별도 저장
+              대화상자에서 선택합니다.
+            </p>
           </div>
           <details class="fold">
             <summary>
@@ -454,6 +492,44 @@
         </div>
       </section>
 
+      <!-- NOTIFICATIONS -->
+      <section class="section-alt" id="notifications">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">알림·답장</p>
+            <h2 class="sec">폰 알림을 PC에서 보고, 지원되는 알림에 답장합니다.</h2>
+          </div>
+          <div class="split">
+            <div class="panel">
+              <h3>알림 받기와 지난 알림</h3>
+              <p>
+                Android 앱에서 <b>PC로 알림 보내기</b>를 켜고 알림 접근 권한을 허용한 뒤,
+                보낼 앱을 선택하세요. 메인 PC의 <b>설정 → 알림</b>에서 기기 알림 표시를 켭니다.
+              </p>
+              <p>
+                같은 화면에서 지난 알림과 보관 설정을 확인합니다. 기본 7일, 1·7·30일 중
+                선택하며 최대 200개를 보관합니다. 기능을 켠 뒤 받은 알림부터 기록하고, 인증번호나
+                숨긴 민감 내용은 기록하지 않습니다.
+              </p>
+            </div>
+            <div class="panel">
+              <h3>실시간 알림에 답장</h3>
+              <p>
+                PC·Android 모두 답장 기능을 지원하는 버전이고, 원본 폰 알림이 자유 입력 답장을
+                지원할 때만 <b>답장</b>이 나옵니다. 내용을 입력하고 <b>전송</b> 또는
+                <b>Ctrl+Enter</b>를 누르세요. <b>Enter</b>는 줄바꿈입니다.
+              </p>
+              <p>
+                답장은 원래 폰 앱을 통해 전달하며 지난 알림 기록에서는 보낼 수 없습니다.
+                ‘폰 앱으로 전달됨’은 상대방의 수신 확인이 아닙니다. 전송 여부가 불명확하면 폰에서
+                확인하고, 실패한 답장을 자동으로 다시 보내지 않습니다.
+              </p>
+              <p><a href="./help#notification-reply-faq">답장 버튼이 없거나 전송이 안 될 때</a></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- QUICK CONNECT -->
       <section id="quick">
         <div class="wrap narrow">
@@ -484,6 +560,18 @@
                 <li>마우스가 기기 사이를 오갈 때 별도 알림은 뜨지 않습니다.</li>
               </ul>
             </div>
+          </div>
+          <div class="panel tip" style="margin-top: 18px">
+            <h3 id="device-order">기기 순서와 단축키 번호 바꾸기</h3>
+            <p>
+              메인 PC에 LAN 기기가 2개 이상 있으면 <b>기기 관리 → 순서 편집</b>을 누르세요.
+              손잡이를 끌거나 ↑·↓ 버튼으로 옮기면 자동 저장됩니다. <b>완료</b>로 편집을 끝냅니다.
+            </p>
+            <p>
+              연결·원격창 단축키 번호에 같은 순서가 적용됩니다. 화면 배치와 지정한 키 조합은
+              바뀌지 않습니다. Bluetooth 기기 순서는 변경하지 않으며, 서브 역할로 실행한 PC에서는
+              순서 편집을 제공하지 않습니다.
+            </p>
           </div>
         </div>
       </section>
@@ -810,6 +898,14 @@
                 </tr>
               </tbody>
             </table>
+          </div>
+          <div class="panel tip" id="screenshot-result">
+            <p>
+              다른 기기의 캡처 결과를 받아도 커서는 해당 기기에 남습니다. 메인 PC에는 독립된
+              미리보기창만 표시되고, <b>복사·저장</b>이 성공하면 그 창이 닫힙니다. 실패하면 창을
+              유지하므로 다시 시도할 수 있습니다. 저장 취소 시에도 유지합니다. 양쪽 앱이 이 기능을
+              지원하는 버전이어야 합니다.
+            </p>
           </div>
           <div class="panel tip">
             <p>

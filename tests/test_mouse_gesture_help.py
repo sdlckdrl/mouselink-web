@@ -140,11 +140,11 @@ class MouseGestureHelpTest(unittest.TestCase):
 
     def test_all_locales_explain_adaptive_scroll_amount_and_safety_limits(self):
         amount_terms = {
-            "": ("길게", "짧게", "예상", "앱마다"),
-            "en": ("longer", "shorter", "estimate", "varies by app"),
-            "es": ("largo", "corto", "estimación", "según la app"),
-            "ja": ("長く", "短く", "目安", "アプリによって"),
-            "zh": ("越长", "越短", "估计值", "因应用"),
+            "": ("길게", "짧게", "앱마다"),
+            "en": ("longer", "shorter", "varies by app"),
+            "es": ("largo", "corto", "según la app"),
+            "ja": ("長く", "短く", "アプリによって"),
+            "zh": ("越长", "越短", "因应用"),
         }
         for locale in LOCALES:
             with self.subTest(locale=locale or "ko"):

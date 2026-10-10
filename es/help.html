@@ -198,7 +198,7 @@
                 de SMS y KakaoTalk; también puedes elegir todas las apps.
               </li>
               <li>
-                Abre los ajustes de la pestaña <b>Notificaciones</b> de la app del PC y comprueba que
+                En el PC principal, abre <b>Ajustes → Notificaciones</b> y comprueba que
                 <b>Notificaciones de dispositivos</b> esté activado.
               </li>
               <li>
@@ -208,7 +208,7 @@
                 Bluetooth solo hace falta al registrar.
               </li>
               <li>Las notificaciones se muestran un momento en el PC y su historial se guarda cifrado de forma local en el PC. No se sube a ningún servidor.</li>
-              <li>El historial está activado de forma predeterminada y conserva hasta 200 notificaciones durante 7 días. En la pestaña Notificaciones del PC puedes elegir 1, 7 o 30 días o dejar de guardar nuevas entradas. Al desactivarlo, las entradas existentes se conservan; usa Borrar todo en el historial para eliminarlas.</li>
+              <li>El historial está activado de forma predeterminada y conserva hasta 200 notificaciones durante 7 días. En Ajustes → Notificaciones del PC principal puedes elegir 1, 7 o 30 días o dejar de guardar nuevas entradas. Al desactivarlo, las entradas existentes se conservan; usa Borrar todo en el historial para eliminarlas.</li>
             </ul>
           </div>
         </div>
@@ -281,10 +281,47 @@
             <h2 class="sec">Los problemas más habituales.</h2>
           </div>
           <div class="faq">
+            <details id="notification-reply-faq">
+              <summary>No aparece Responder o la respuesta no se envía.</summary>
+              <div class="a">
+                <p>El PC y Android deben tener versiones compatibles con las respuestas, y la notificación original del teléfono debe permitir respuestas de texto libre. Solo se puede responder desde una notificación en vivo del PC principal, no desde notificaciones ocultas o sensibles, códigos de verificación ni el historial. Comprueba el bloqueo del teléfono, si la notificación se eliminó o caducó y la conexión.</p>
+                <p>Si falla o se agota el tiempo, no se reenvía automáticamente; comprueba la conversación en el teléfono. «Pasado a la aplicación del teléfono» confirma la entrega de la acción a la app original, no la recepción del mensaje por el destinatario. <a href="./guide#notifications">Cómo responder</a></p>
+              </div>
+            </details>
+            <details id="device-order-faq">
+              <summary>¿Cómo cambio los números si no aparece Editar orden?</summary>
+              <div class="a">
+                <p>Editar orden aparece en Dispositivos del PC principal cuando hay al menos dos dispositivos LAN. Los cambios se guardan automáticamente y actualizan los números de los atajos de conexión y de ventanas remotas. La disposición de pantallas y las combinaciones de teclas no cambian. No se cambia el orden de dispositivos Bluetooth, y un PC que funcione como secundario no muestra el botón de edición. <a href="./guide#device-order">Cambiar el orden de dispositivos</a></p>
+              </div>
+            </details>
+            <details id="windows-remote-gestures-faq">
+              <summary>Los gestos del navegador no funcionan en la ventana remota de Windows.</summary>
+              <div class="a">
+                <p>Actualiza OneMouse para Windows a la versión 1.5.4 o posterior y comprueba que la extensión o función de gestos del navegador esté activada en el PC de destino. La ventana remota transmite el movimiento con el botón derecho pulsado. No es la función de gestos de Android de OneMouse, que solo funciona en control directo al pasar el cursor al teléfono. <a href="./guide#remote">Guía de la ventana remota</a></p>
+              </div>
+            </details>
+            <details id="default-pc-faq">
+              <summary>Un archivo compartido desde el teléfono no llega al PC.</summary>
+              <div class="a">
+                <p>Para enviar por Wi-Fi o LAN, elige el PC receptor en PC predeterminado, en Inicio de la app del teléfono, y comprueba el emparejamiento y la conexión. Debe tener el rol principal; un PC secundario no es un destino de control o de envío desde el teléfono. Con Bluetooth ya conectado, puedes enviar por Bluetooth sin elegir un PC predeterminado. <a href="./guide#text-to-pc">Enviar del teléfono al PC</a></p>
+              </div>
+            </details>
+            <details id="file-receive-folder-faq">
+              <summary>No puedo cambiar ni abrir la carpeta de archivos recibidos del PC.</summary>
+              <div class="a">
+                <p>En un PC principal o secundario, usa Cambiar carpeta o Abrir carpeta en Ajustes → General → Transferencia de archivos → Ubicación de archivos recibidos. Comprueba los permisos de escritura y la conexión de la unidad USB o de red; si aparece un error, elige otra carpeta accesible. Los archivos existentes no se mueven y las capturas usan una ubicación independiente. <a href="./guide#file-receive-folder">Ajustes de la carpeta de recepción</a></p>
+              </div>
+            </details>
+            <details id="screenshot-preview-faq">
+              <summary>El cursor no vuelve tras capturar o la vista previa se cierra.</summary>
+              <div class="a">
+                <p>Ambas apps deben admitir esta función. Tras capturar, el cursor permanece en el dispositivo controlado. La app del PC principal sigue minimizada o en la bandeja; solo aparece una vista previa independiente. Se cierra al copiar o guardar correctamente y queda abierta si se cancela el guardado o falla. Vuelve a pasar el cursor al PC principal para usarla. <a href="./guide#screenshot-result">Usar el resultado de la captura</a></p>
+              </div>
+            </details>
             <details id="mouse-gestures-faq">
               <summary>Los gestos del ratón no se inician.</summary>
               <div class="a">
-                <p>Comprueba que tanto el PC como Android tengan una versión que admita gestos. En Ajustes de Android → Escritura y portapapeles, activa Gestos del ratón y elige la app actual en Apps para gestos del ratón. Están desactivados por defecto. Pasa el cursor a Android, mantén el botón derecho, dibuja y suelta. Solo se aplica al control directo de Android, no al de Windows/Mac ni a la ventana de duplicación.</p>
+                <p>Comprueba que tanto el PC como Android tengan una versión que admita gestos. En Ajustes de Android → Escritura y portapapeles, activa Gestos del ratón y elige la app actual en Apps para gestos del ratón. En versiones compatibles, Todas las apps incluye las apps instaladas con icono de inicio e Inicio, pero excluye OneMouse y las pantallas del sistema, como el bloqueo y los diálogos de permisos. No todas las acciones funcionan en todas las pantallas. Están desactivados por defecto. Pasa el cursor a Android, mantén el botón derecho, dibuja y suelta. Solo se aplica al control directo de Android, no al de Windows/Mac ni a la ventana de duplicación.</p>
                 <p><a href="./guide#mouse-gestures">Ver la guía y todos los gestos</a></p>
               </div>
             </details>
@@ -298,7 +335,7 @@
             </details>
             <details id="mouse-gestures-scroll">
               <summary>¿Cómo ajusto y detengo el desplazamiento arriba y abajo?</summary>
-              <div class="a">Mantén el botón derecho y dibuja hacia arriba o abajo: un trazo más largo desplaza más y uno más corto desplaza menos. Los trazos muy cortos se ignoran. El desplazamiento solo empieza al soltar el botón; la página no se mueve mientras dibujas. La cantidad junto al trazo rojo es una estimación y la distancia real varía según la app. Los desplazamientos largos se dividen en varios deslizamientos, con un máximo total de 8 pantallas y 10 segundos. Hacer clic, iniciar otro gesto, cambiar de app o finalizar el control cancela el desplazamiento pendiente. Mover solo el cursor no lo detiene.</div>
+              <div class="a">Mantén el botón derecho y dibuja hacia arriba o abajo: un trazo más largo desplaza más y uno más corto desplaza menos. Los trazos muy cortos se ignoran. El desplazamiento solo empieza al soltar el botón; la página no se mueve mientras dibujas. En versiones compatibles, la flecha y el indicador vertical muestran la dirección y la intensidad del trazo, no la posición del documento ni la distancia exacta. La distancia real varía según la app. En Inicio y el cajón de apps solo se realiza un deslizamiento, no un desplazamiento repetido. Los desplazamientos largos se dividen en varios deslizamientos, con un máximo total de 8 pantallas y 10 segundos. Hacer clic, iniciar otro gesto, cambiar de app o finalizar el control cancela el desplazamiento pendiente. Mover solo el cursor no lo detiene.</div>
             </details>
             <details open>
               <summary>Se desconecta cada 10 segundos aproximadamente.</summary>

@@ -52,9 +52,10 @@
         <nav class="toc" aria-label="本页目录">
           <a href="#start">5 分钟连接步骤</a>
           <a href="#position">手机位置布局</a>
-          <a href="#remote">移动端远程控制</a>
+          <a href="#remote">远程画面</a>
           <a href="#mouse-gestures">鼠标手势</a>
           <a href="#files">文件与剪贴板</a>
+          <a href="#notifications">通知与回复</a>
           <a href="#quick">数字快捷键</a>
           <a href="#bluetooth">Bluetooth 连接</a>
           <a href="#pcpc">连接另一台 PC</a>
@@ -187,7 +188,7 @@
         <div class="wrap">
           <div class="sec-head">
             <p class="ey">远程控制</p>
-            <h2 class="sec">移动端屏幕远程控制从设备管理开始。</h2>
+            <h2 class="sec">从设备管理打开远程画面。</h2>
           </div>
           <div class="split lead-left">
             <div>
@@ -197,13 +198,25 @@
                 屏幕捕获。
               </p>
               <div class="panel">
-                <h3>窗口中的操作</h3>
+                <h3>Android 窗口中的操作</h3>
                 <ul>
                   <li>左键点击、拖动、滚轮会被原样传递。</li>
                   <li><b>右键 = 返回</b>，<b>滚轮点击 = 主屏</b>。</li>
                   <li>PC 键盘（含中文）会输入到手机当前的输入框。</li>
                   <li>如果画面看起来是空的，请确认捕获授权弹窗，并把远程控制关掉再打开。</li>
                 </ul>
+              </div>
+              <div class="panel tip" style="margin-top: 18px">
+                <h3 id="windows-remote">Windows 远程窗口支持按住右键拖动</h3>
+                <p>
+                  在设备管理中点击 Windows PC 的远程控制图标，或使用默认的
+                  <b>Ctrl+Alt+Shift+1~9</b> 打开窗口。可同时打开不同设备的窗口；再次按相同编号
+                  会将已有窗口置于前台。修改按键请查看<a href="#shortcuts">快捷键设置</a>。
+                </p>
+                <p>
+                  Windows 远程窗口也会传递按住右键时的移动轨迹，可使用目标 PC 浏览器中已配置
+                  的手势扩展。这与下方 OneMouse 自带的 Android 手势不同。Android 的右键仍是返回。
+                </p>
               </div>
             </div>
             <div>
@@ -253,13 +266,21 @@
           <div class="panel gesture-setup">
             <h3>1. 启用手势</h3>
             <p>在设置 → 输入 · 剪贴板中启用鼠标手势（默认关闭），并在使用鼠标手势的应用中选择应用。PC和Android都需要支持手势的版本。</p>
+            <p>
+              支持<b>所有应用</b>选项的版本可在有启动图标的已安装应用和主屏幕中使用手势。
+              OneMouse 及锁屏、权限提示等系统界面不在范围内；可用操作仍取决于应用和当前界面。
+            </p>
             <h3>2. 按住、绘制、松开</h3>
             <p>将PC光标移到Android手机或平板，打开已选应用。</p>
             <ol class="gesture-steps">
               <li>在页面内容上按住鼠标右键。</li>
-              <li>按显示的方向顺序绘制，不要画成一条斜线。红色轨迹旁会显示识别的操作和预计滚动量。</li>
+              <li>按显示的方向顺序绘制，不要画成一条斜线。红色轨迹旁会显示识别的操作和滚动强度。</li>
               <li>松开按钮后执行操作，绘制时页面不会滚动。</li>
             </ol>
+            <p>
+              滚动预览的箭头和竖向量条表示方向及绘制长度的强度，而非页面位置或精确移动距离。
+              在主屏幕或应用列表中，上下手势只执行一次滑动；即使画得很长，也不会连续重复滚动。
+            </p>
           </div>
           <div class="table-wrap gesture-patterns">
             <table class="kt gesture-table" aria-labelledby="mouse-gestures-title">
@@ -365,7 +386,8 @@
             <p class="ey">手机 → PC</p>
             <h2 class="sec">把手机中选好的文件和文本发送到 PC。</h2>
             <p class="sec-lead">
-              请先确认手机已与 PC 配对并连接。文件可从传输标签或 Android
+              通过 LAN 发送时，请先在移动应用的首页选择<b>默认 PC</b>，并确认已配对、连接。
+              文件可从传输标签或 Android
               分享菜单发送；文本可从选择菜单中的 OneMouse to PC 发送。
             </p>
           </div>
@@ -386,6 +408,16 @@
                 <li>若第一次没有显示，请先在应用管理中启用一次 OneMouse，再重新选择。</li>
               </ol>
             </div>
+          </div>
+          <div class="panel tip" style="margin-top: 18px">
+            <h3 id="file-receive-folder">在 PC 上查找收到的文件</h3>
+            <p>
+              在 PC 的<b>设置 → 常规 → 文件传输 → 接收文件保存位置</b>中，点击<b>更改文件夹</b>
+              选择保存位置，点击<b>打开文件夹</b>查看。主、副电脑都可以更改各自的接收文件夹。
+            </p>
+            <p>
+              已收到的文件不会移动。截图预览使用独立的保存对话框选择位置。
+            </p>
           </div>
           <details class="fold">
             <summary>
@@ -450,6 +482,41 @@
         </div>
       </section>
 
+      <!-- NOTIFICATIONS -->
+      <section class="section-alt" id="notifications">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">通知与回复</p>
+            <h2 class="sec">在 PC 上查看手机通知，并回复支持的通知。</h2>
+          </div>
+          <div class="split">
+            <div class="panel">
+              <h3>接收通知与查看历史记录</h3>
+              <p>
+                在 Android 应用中启用<b>向 PC 发送通知</b>，允许通知访问权限，并选择要发送通知
+                的应用。在主电脑的<b>设置 → 通知</b>中启用设备通知显示。
+              </p>
+              <p>
+                同一界面可查看通知历史和保留设置：默认 7 天，可选 1、7 或 30 天，最多 200 条。
+                只记录开启历史后新收到的通知；验证码及隐藏的敏感内容不会记录。
+              </p>
+            </div>
+            <div class="panel">
+              <h3>回复实时通知</h3>
+              <p>
+                只有 PC 和 Android 都支持回复功能，且手机原始通知提供自由文本回复时，才显示
+                <b>回复</b>。输入内容后点击<b>发送</b>或按<b>Ctrl+Enter</b>；<b>Enter</b>用于换行。
+              </p>
+              <p>
+                回复通过手机的原应用发送，不能从历史通知中回复。“已传给手机应用”不代表对方
+                已收到。若不确定是否发送，请在手机上确认；失败的回复不会自动重发。
+              </p>
+              <p><a href="./help#notification-reply-faq">没有回复按钮或无法发送时</a></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- QUICK CONNECT -->
       <section id="quick">
         <div class="wrap narrow">
@@ -479,6 +546,17 @@
                 <li>鼠标在设备之间来回移动时不会另外弹出提示。</li>
               </ul>
             </div>
+          </div>
+          <div class="panel tip" style="margin-top: 18px">
+            <h3 id="device-order">更改设备顺序与快捷键编号</h3>
+            <p>
+              主电脑上有至少两台 LAN 设备时，点击<b>设备管理 → 编辑顺序</b>。拖动手柄或使用
+              ↑/↓ 按钮移动，改动会自动保存。点击<b>完成</b>结束编辑。
+            </p>
+            <p>
+              连接和远程窗口快捷键使用同一设备顺序；屏幕布局和已设置的组合键不会改变。
+              Bluetooth 设备的顺序不会更改，作为副电脑运行的 PC 不提供顺序编辑。
+            </p>
           </div>
         </div>
       </section>
@@ -770,6 +848,13 @@
                 </tr>
               </tbody>
             </table>
+          </div>
+          <div class="panel tip" id="screenshot-result">
+            <p>
+              收到截图后，光标仍留在当前控制的设备上。主电脑仅显示独立预览窗口，<b>复制</b>或
+              <b>保存</b>成功后该窗口会关闭；失败或取消保存时保持打开，方便重试。两端应用都需要
+              支持这一行为的版本。
+            </p>
           </div>
           <div class="panel tip">
             <p>

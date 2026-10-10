@@ -57,10 +57,11 @@
         <nav class="toc" aria-label="En esta página">
           <a href="#start">Configuración en 5 minutos</a>
           <a href="#position">Coloca tu teléfono</a>
-          <a href="#remote">Control remoto del móvil</a>
+          <a href="#remote">Pantallas remotas</a>
           <a href="#mouse-gestures">Gestos del ratón</a>
           <a href="#files">Archivos y portapapeles</a>
           <a href="#text-to-pc">Del móvil al PC</a>
+          <a href="#notifications">Notificaciones y respuestas</a>
           <a href="#quick">Atajos numéricos</a>
           <a href="#bluetooth">Conexión Bluetooth</a>
           <a href="#pcpc">Conectar otro PC</a>
@@ -200,7 +201,7 @@
         <div class="wrap">
           <div class="sec-head">
             <p class="ey">Control remoto</p>
-            <h2 class="sec">El control remoto de la pantalla del móvil empieza en Dispositivos.</h2>
+            <h2 class="sec">Abre pantallas remotas desde Dispositivos.</h2>
           </div>
           <div class="split lead-left">
             <div>
@@ -210,7 +211,7 @@
                 abras, hay que aprobar la captura de pantalla en Android.
               </p>
               <div class="panel">
-                <h3>Controles de la ventana</h3>
+                <h3>Controles de una ventana de Android</h3>
                 <ul>
                   <li>El clic izquierdo, el arrastre y la rueda pasan directamente.</li>
                   <li><b>Clic derecho = Atrás</b>, <b>clic de rueda = Inicio</b>.</li>
@@ -223,6 +224,21 @@
                     captura y apaga y vuelve a encender el control remoto.
                   </li>
                 </ul>
+              </div>
+              <div class="panel tip" style="margin-top: 18px">
+                <h3 id="windows-remote">Arrastrar con el botón derecho en una ventana remota de Windows</h3>
+                <p>
+                  Abre la ventana de un PC con Windows desde su icono de control remoto en
+                  Dispositivos o con <b>Ctrl+Alt+Shift+1~9</b> por defecto. Puedes mantener abiertas
+                  ventanas de distintos dispositivos; repetir el número trae la ventana existente
+                  al frente. Para cambiar las teclas, consulta los <a href="#shortcuts">ajustes de atajos</a>.
+                </p>
+                <p>
+                  La ventana remota de Windows también transmite el movimiento con el botón derecho
+                  pulsado, para usar una extensión de gestos ya configurada en el navegador del PC
+                  de destino. Es independiente de los gestos propios de Android que se explican
+                  abajo. En Android, el clic derecho sigue siendo Atrás.
+                </p>
               </div>
             </div>
             <div>
@@ -272,13 +288,25 @@
           <div class="panel gesture-setup">
             <h3>1. Activar los gestos</h3>
             <p>En Ajustes → Escritura y portapapeles, activa Gestos del ratón (desactivados por defecto). Selecciona las apps en Apps para gestos del ratón. Tanto el PC como Android necesitan una versión que admita gestos.</p>
+            <p>
+              En las versiones que admiten <b>Todas las apps</b>, esa opción permite usar gestos en
+              apps instaladas con icono de inicio y en la pantalla de inicio. Se excluyen OneMouse
+              y las pantallas del sistema, como el bloqueo y los avisos de permisos; las acciones disponibles dependen de la
+              app y la pantalla.
+            </p>
             <h3>2. Mantener, dibujar y soltar</h3>
             <p>Mueve el cursor del PC al teléfono o tableta Android y abre una app seleccionada.</p>
             <ol class="gesture-steps">
               <li>Mantén pulsado el botón derecho sobre el contenido de la página.</li>
-              <li>Dibuja las direcciones en orden, no en una sola diagonal. El trazo rojo muestra la acción reconocida y el desplazamiento estimado.</li>
+              <li>Dibuja las direcciones en orden, no en una sola diagonal. El trazo rojo muestra la acción reconocida y la intensidad del desplazamiento.</li>
               <li>Suelta el botón para ejecutar la acción. La página no se desplaza mientras dibujas.</li>
             </ol>
+            <p>
+              La flecha y el indicador vertical muestran la dirección y la intensidad del trazo,
+              no la posición en la página ni una distancia exacta. En la pantalla de inicio o el
+              cajón de apps, el gesto vertical realiza un solo deslizamiento, aunque sea largo;
+              no se repite.
+            </p>
           </div>
           <div class="table-wrap gesture-patterns">
             <table class="kt gesture-table" aria-labelledby="mouse-gestures-title">
@@ -393,7 +421,8 @@
             <p class="ey">Del móvil al PC</p>
             <h2 class="sec">Envía archivos y el texto seleccionado del teléfono a tu PC.</h2>
             <p class="sec-lead">
-              Primero comprueba que el teléfono está vinculado y conectado al PC. Envía archivos
+              Para enviar por LAN, elige el <b>PC predeterminado</b> en el inicio de la app móvil y
+              comprueba que está vinculado y conectado. Envía archivos
               desde la pestaña de transferencia o desde el menú de compartir de Android, y envía
               texto con OneMouse al PC desde el menú de selección.
             </p>
@@ -424,6 +453,18 @@
                 </li>
               </ol>
             </div>
+          </div>
+          <div class="panel tip" style="margin-top: 18px">
+            <h3 id="file-receive-folder">Encontrar los archivos recibidos en el PC</h3>
+            <p>
+              En <b>Ajustes → General → Transferencia de archivos → Ubicación de archivos recibidos</b>
+              del PC, usa <b>Cambiar carpeta</b> para elegir el destino y <b>Abrir carpeta</b> para
+              verlo. Cada PC, principal o secundario, puede cambiar su propia carpeta de recepción.
+            </p>
+            <p>
+              Los archivos ya recibidos no se mueven. La vista previa de capturas tiene su propio
+              diálogo para elegir dónde guardarlas.
+            </p>
           </div>
           <details class="fold">
             <summary>
@@ -488,6 +529,47 @@
         </div>
       </section>
 
+      <!-- NOTIFICATIONS -->
+      <section class="section-alt" id="notifications">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">Notificaciones y respuestas</p>
+            <h2 class="sec">Lee las notificaciones del teléfono y responde cuando se admita.</h2>
+          </div>
+          <div class="split">
+            <div class="panel">
+              <h3>Recibir notificaciones y ver el historial</h3>
+              <p>
+                En Android, activa <b>Enviar notificaciones al PC</b>, permite el acceso a
+                notificaciones y selecciona las apps que se enviarán. En el PC principal, activa
+                las notificaciones de dispositivos en <b>Ajustes → Notificaciones</b>.
+              </p>
+              <p>
+                En esa misma pantalla están el historial y su conservación: 7 días por defecto,
+                opciones de 1, 7 o 30 días, y hasta 200 entradas. Solo se registran las notificaciones
+                nuevas recibidas tras activar el historial; no se registran códigos de verificación
+                ni contenido sensible oculto.
+              </p>
+            </div>
+            <div class="panel">
+              <h3>Responder a una notificación en tiempo real</h3>
+              <p>
+                <b>Responder</b> solo aparece si las versiones de PC y Android admiten respuestas y
+                la notificación original del teléfono ofrece respuesta de texto libre. Escribe y
+                pulsa <b>Enviar</b> o <b>Ctrl+Enter</b>. <b>Enter</b> añade un salto de línea.
+              </p>
+              <p>
+                La respuesta se transmite mediante la app original del teléfono; no puede enviarse
+                desde el historial. «Pasado a la aplicación del teléfono» no confirma la entrega al
+                destinatario. Si hay dudas, compruébalo en el teléfono; las respuestas fallidas
+                no se reenvían automáticamente.
+              </p>
+              <p><a href="./help#notification-reply-faq">¿Falta Responder o no se envía la respuesta?</a></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- QUICK CONNECT -->
       <section id="quick">
         <div class="wrap narrow">
@@ -524,6 +606,19 @@
                 <li>No aparece ninguna notificación aparte al mover el ratón entre dispositivos.</li>
               </ul>
             </div>
+          </div>
+          <div class="panel tip" style="margin-top: 18px">
+            <h3 id="device-order">Cambiar el orden y los números de los atajos</h3>
+            <p>
+              Con al menos dos dispositivos LAN en el PC principal, elige <b>Dispositivos → Editar
+              orden</b>. Arrastra el asa o usa los botones ↑/↓; los cambios se guardan automáticamente.
+              Pulsa <b>Listo</b> para terminar.
+            </p>
+            <p>
+              Los números de conexión y de ventana remota siguen ese mismo orden. La disposición
+              de pantallas y las combinaciones de teclas no cambian. No se cambia el orden de
+              dispositivos Bluetooth, y no se ofrece edición de orden en un PC con rol secundario.
+            </p>
           </div>
         </div>
       </section>
@@ -878,6 +973,15 @@
                 </tr>
               </tbody>
             </table>
+          </div>
+          <div class="panel tip" id="screenshot-result">
+            <p>
+              Recibir una captura no devuelve el cursor desde el dispositivo que estás controlando.
+              En el PC principal aparece una vista previa independiente, que se cierra si
+              <b>Copiar</b> o <b>Guardar</b> termina correctamente. Si falla, sigue abierta para
+              que puedas reintentarlo. También se mantiene al cancelar el guardado. Ambas apps
+              necesitan una versión compatible con este comportamiento.
+            </p>
           </div>
           <div class="panel tip">
             <p>
