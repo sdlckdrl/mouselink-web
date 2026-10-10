@@ -84,7 +84,9 @@ class MouseGestureHelpTest(unittest.TestCase):
                     self.assertEqual(2, len(cells))
                     self.assertEqual(PATTERNS[row.attrs["data-gesture-action"]], cells[0].text())
                     self.assertTrue(any(node.tag == "b" and node.text() for node in cells[1].walk()))
-                    self.assertTrue(any(node.tag == "small" and len(node.text()) > 15 for node in cells[1].walk()))
+                    minimum_description_length = 5 if locale in ("", "ja", "zh") else 15
+                    self.assertTrue(any(node.tag == "small" and len(node.text()) > minimum_description_length
+                                        for node in cells[1].walk()))
                 self.assertNotIn("↙", section.text())
                 self.assertNotIn("↑ ←", section.text())
                 self.assertNotIn("↓ ←", section.text())
@@ -142,40 +144,43 @@ class MouseGestureHelpTest(unittest.TestCase):
         amount_terms = {
             "": ("길게", "짧게", "앱마다"),
             "en": ("longer", "shorter", "varies by app"),
-            "es": ("largo", "corto", "según la app"),
-            "ja": ("長く", "短く", "アプリによって"),
+            "es": ("largo", "corto", ("según la app", "varía por app")),
+            "ja": ("長く", "短く", ("アプリによって", "アプリ次第")),
             "zh": ("越长", "越短", "因应用"),
         }
         for locale in LOCALES:
             with self.subTest(locale=locale or "ko"):
                 guide = Document(ROOT / locale / "guide.html").by_id("mouse-gestures")
                 help_page = Document(ROOT / locale / "help.html").by_id("mouse-gestures-scroll")
+                self.assertIn("8", help_page.text())
+                self.assertIn("10", help_page.text())
+                self.assertTrue(any(node.attrs.get("href") == "./help#mouse-gestures-scroll"
+                                    for node in guide.walk()))
                 for content in (guide.text(), help_page.text()):
-                    self.assertIn("8", content)
-                    self.assertIn("10", content)
                     self.assertNotIn("32", content)
                     self.assertNotRegex(content, r"1[.,]5")
                     for term in amount_terms[locale]:
-                        self.assertIn(term, content)
+                        alternatives = term if isinstance(term, tuple) else (term,)
+                        self.assertTrue(any(value.casefold() in content.casefold()
+                                            for value in alternatives), alternatives)
 
     def test_all_locales_explain_release_and_pending_scroll_cancellation(self):
         policy_terms = {
-            "": ("놓", "그리는 중", "클릭", "새 제스처", "앱 전환", "제어 종료", "커서만 움직여서는 중단되지 않습니다"),
-            "en": ("release", "while drawing", "Clicking", "new gesture", "switching apps", "ending control", "Moving only the pointer does not stop it"),
-            "es": ("botón", "mientras dibujas", "Hacer clic", "otro gesto", "cambiar de app", "finalizar el control", "Mover solo el cursor no lo detiene"),
-            "ja": ("離", "描いている間", "クリック", "新しいジェスチャー", "アプリ切り替え", "操作終了", "カーソルの移動だけでは止まりません"),
-            "zh": ("松开", "绘制时", "点击", "新手势", "切换应用", "结束控制", "仅移动光标不会停止滚动"),
+            "": ("놓", "그리는 중", "클릭", "새 제스처", "앱 전환", "제어 종료", "커서 이동만으로는 멈추지 않습니다"),
+            "en": ("release", "while drawing", "Clicking", "new gesture", "switching apps", "ending control", "Pointer movement alone does not stop it"),
+            "es": ("botón", "mientras dibujas", "Clic", "otro gesto", "cambio de app", "fin del control", "Mover solo el cursor no lo detiene"),
+            "ja": ("離", "描いている間", "クリック", "新しいジェスチャー", "アプリ切り替え", "操作終了", "カーソル移動だけでは止まりません"),
+            "zh": ("松开", "绘制时", "点击", "新手势", "切换应用", "结束控制", "仅移动光标不会停止"),
         }
         for locale in LOCALES:
             with self.subTest(locale=locale or "ko"):
                 guide = Document(ROOT / locale / "guide.html").by_id("mouse-gestures")
                 help_page = Document(ROOT / locale / "help.html").by_id("mouse-gestures-scroll")
+                self.assertIn(policy_terms[locale][0].lower(), guide.text().lower())
                 for term in policy_terms[locale]:
-                    self.assertIn(term.lower(), guide.text().lower())
                     self.assertIn(term.lower(), help_page.text().lower())
                 if locale == "es":
-                    self.assertIn("Suelta el botón", guide.text())
-                    self.assertIn("al soltar el botón", help_page.text())
+                    self.assertIn("suelta el botón derecho", help_page.text().lower())
 
     def test_gesture_table_does_not_inherit_keyboard_table_mobile_minimum(self):
         css = (ROOT / "css/onemouse.css").read_text(encoding="utf-8")

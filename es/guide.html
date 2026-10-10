@@ -228,16 +228,12 @@
               <div class="panel tip" style="margin-top: 18px">
                 <h3 id="windows-remote">Arrastrar con el botón derecho en una ventana remota de Windows</h3>
                 <p>
-                  Abre la ventana de un PC con Windows desde su icono de control remoto en
-                  Dispositivos o con <b>Ctrl+Alt+Shift+1~9</b> por defecto. Puedes mantener abiertas
-                  ventanas de distintos dispositivos; repetir el número trae la ventana existente
-                  al frente. Para cambiar las teclas, consulta los <a href="#shortcuts">ajustes de atajos</a>.
+                  Abre una ventana desde su icono remoto en Dispositivos o con
+                  <b>Ctrl+Alt+Shift+1~9</b> por defecto. Arrastrar con el botón derecho permite usar
+                  las extensiones de gestos del navegador del PC de destino, aparte de los gestos de Android.
                 </p>
                 <p>
-                  La ventana remota de Windows también transmite el movimiento con el botón derecho
-                  pulsado, para usar una extensión de gestos ya configurada en el navegador del PC
-                  de destino. Es independiente de los gestos propios de Android que se explican
-                  abajo. En Android, el clic derecho sigue siendo Atrás.
+                  <a href="./help#windows-remote-gestures-faq">Ayuda de ventanas remotas</a>
                 </p>
               </div>
             </div>
@@ -287,25 +283,21 @@
           </div>
           <div class="panel gesture-setup">
             <h3>1. Activar los gestos</h3>
-            <p>En Ajustes → Escritura y portapapeles, activa Gestos del ratón (desactivados por defecto). Selecciona las apps en Apps para gestos del ratón. Tanto el PC como Android necesitan una versión que admita gestos.</p>
+            <p>En Ajustes → Escritura y portapapeles, activa Gestos del ratón y selecciona las apps (desactivados por defecto). El PC y Android necesitan versiones compatibles con gestos.</p>
             <p>
-              En las versiones que admiten <b>Todas las apps</b>, esa opción permite usar gestos en
-              apps instaladas con icono de inicio y en la pantalla de inicio. Se excluyen OneMouse
-              y las pantallas del sistema, como el bloqueo y los avisos de permisos; las acciones disponibles dependen de la
-              app y la pantalla.
+              Selecciona <b>Todas las apps</b> para usarlos en apps y en la pantalla de inicio.
+              <a href="./help#mouse-gestures-faq">Ver las limitaciones</a>
             </p>
             <h3>2. Mantener, dibujar y soltar</h3>
             <p>Mueve el cursor del PC al teléfono o tableta Android y abre una app seleccionada.</p>
             <ol class="gesture-steps">
               <li>Mantén pulsado el botón derecho sobre el contenido de la página.</li>
-              <li>Dibuja las direcciones en orden, no en una sola diagonal. El trazo rojo muestra la acción reconocida y la intensidad del desplazamiento.</li>
-              <li>Suelta el botón para ejecutar la acción. La página no se desplaza mientras dibujas.</li>
+              <li>Dibuja las direcciones en orden; comprueba la acción junto al trazo rojo.</li>
+              <li>Suelta para ejecutar. La página no se desplaza mientras dibujas.</li>
             </ol>
             <p>
-              La flecha y el indicador vertical muestran la dirección y la intensidad del trazo,
-              no la posición en la página ni una distancia exacta. En la pantalla de inicio o el
-              cajón de apps, el gesto vertical realiza un solo deslizamiento, aunque sea largo;
-              no se repite.
+              La flecha y el indicador vertical muestran la dirección y la intensidad según la
+              longitud del trazo, no la posición en la página ni una distancia exacta.
             </p>
           </div>
           <div class="table-wrap gesture-patterns">
@@ -320,27 +312,27 @@
                 </tr>
                 <tr data-gesture-action="forward">
                   <td><span role="img" aria-label="Derecha">→</span></td>
-                  <td><b>Adelante</b><small>Dibuja hacia la derecha para volver a una página tras retroceder. Se necesita historial hacia delante y un control compatible del navegador.</small></td>
+                  <td><b>Adelante</b><small>Dibuja hacia la derecha para volver a una página tras retroceder.</small></td>
                 </tr>
                 <tr data-gesture-action="scroll_up">
                   <td><span role="img" aria-label="Arriba">↑</span></td>
-                  <td><b>Desplazar arriba</b><small>Dibuja hacia arriba y suelta para desplazar hacia arriba. Un trazo más largo desplaza más; uno más corto desplaza menos. La cantidad mostrada es una estimación.</small></td>
+                  <td><b>Desplazar arriba</b><small>Dibuja arriba y suelta. Un trazo largo desplaza más; uno corto, menos.</small></td>
                 </tr>
                 <tr data-gesture-action="scroll_down">
                   <td><span role="img" aria-label="Abajo">↓</span></td>
-                  <td><b>Desplazar abajo</b><small>Dibuja hacia abajo y suelta para desplazar hacia abajo. Un trazo más largo desplaza más; uno más corto desplaza menos. La cantidad mostrada es una estimación.</small></td>
+                  <td><b>Desplazar abajo</b><small>Dibuja abajo y suelta. Un trazo largo desplaza más; uno corto, menos.</small></td>
                 </tr>
                 <tr data-gesture-action="minimize">
                   <td><span role="img" aria-label="Abajo, después derecha">↓ →</span></td>
-                  <td><b>Minimizar app</b><small>Dibuja hacia abajo y después a la derecha. Ve a Inicio sin cerrar la app, sus pestañas ni su tarjeta de Recientes.</small></td>
+                  <td><b>Minimizar app</b><small>Ve a Inicio sin cerrar la app.</small></td>
                 </tr>
                 <tr data-gesture-action="reload">
                   <td><span role="img" aria-label="Arriba, después abajo">↑ ↓</span></td>
-                  <td><b>Recargar</b><small>Dibuja hacia arriba y después hacia abajo para recargar la página con un botón compatible del navegador.</small></td>
+                  <td><b>Recargar</b><small>Actualiza la página en un navegador compatible.</small></td>
                 </tr>
                 <tr data-gesture-action="recents">
                   <td><span role="img" aria-label="Arriba, después derecha">↑ →</span></td>
-                  <td><b>Apps recientes</b><small>Dibuja hacia arriba y después a la derecha para abrir las apps recientes. Elige una app de la lista; no se cierra ninguna.</small></td>
+                  <td><b>Apps recientes</b><small>Abre las apps recientes para elegir otra app.</small></td>
                 </tr>
               </tbody>
             </table>
@@ -348,12 +340,12 @@
           <div class="panel gesture-notes">
             <h3>Si un gesto no funciona</h3>
             <ul>
-              <li>Los gestos se usan al pasar el cursor al dispositivo Android para controlarlo directamente, no al controlar Windows/Mac ni en la ventana de duplicación.</li>
-              <li>Adelante vuelve a una página del historial, no al siguiente artículo. Recargar necesita un botón nativo reconocido del navegador; algunas apps o pantallas seleccionadas no lo admiten.</li>
-              <li>Inicia el desplazamiento sobre el contenido, no en una barra de herramientas. Los trazos muy cortos y los gestos incompletos o cancelados no hacen nada. Un clic derecho breve sin movimiento conserva su comportamiento habitual.</li>
-              <li>El desplazamiento mostrado es una estimación; la distancia real varía según la app. Los desplazamientos largos se dividen en varios deslizamientos, con un máximo total de 8 pantallas y 10 segundos. Hacer clic, iniciar otro gesto, cambiar de app o finalizar el control cancela el desplazamiento pendiente. Mover solo el cursor no lo detiene.</li>
+              <li>Para el control directo de Android, no Windows/Mac ni ventanas de duplicación.</li>
+              <li>Adelante restaura el historial. Adelante y Recargar requieren un navegador compatible.</li>
+              <li>Empieza sobre el contenido. Un clic derecho breve conserva su función habitual.</li>
+              <li>La distancia varía según la app; Inicio y el cajón de apps usan un solo deslizamiento.</li>
             </ul>
-            <p><a href="./help#mouse-gestures-faq">Solucionar problemas de gestos</a></p>
+            <p><a href="./help#mouse-gestures-faq">Ayuda de gestos</a> · <a href="./help#mouse-gestures-scroll">Límites y cancelación del desplazamiento</a></p>
           </div>
         </div>
       </section>
@@ -459,11 +451,10 @@
             <p>
               En <b>Ajustes → General → Transferencia de archivos → Ubicación de archivos recibidos</b>
               del PC, usa <b>Cambiar carpeta</b> para elegir el destino y <b>Abrir carpeta</b> para
-              verlo. Cada PC, principal o secundario, puede cambiar su propia carpeta de recepción.
+              verlo. Está disponible tanto en el PC principal como en el secundario.
             </p>
             <p>
-              Los archivos ya recibidos no se mueven. La vista previa de capturas tiene su propio
-              diálogo para elegir dónde guardarlas.
+              <a href="./help#file-receive-folder-faq">Ajustes de carpeta y problemas</a>
             </p>
           </div>
           <details class="fold">
@@ -545,24 +536,16 @@
                 las notificaciones de dispositivos en <b>Ajustes → Notificaciones</b>.
               </p>
               <p>
-                En esa misma pantalla están el historial y su conservación: 7 días por defecto,
-                opciones de 1, 7 o 30 días, y hasta 200 entradas. Solo se registran las notificaciones
-                nuevas recibidas tras activar el historial; no se registran códigos de verificación
-                ni contenido sensible oculto.
+                En esa misma pantalla están el historial y su conservación.
+                <a href="./help#phone-notifications">Más sobre las notificaciones</a>
               </p>
             </div>
             <div class="panel">
               <h3>Responder a una notificación en tiempo real</h3>
               <p>
-                <b>Responder</b> solo aparece si las versiones de PC y Android admiten respuestas y
-                la notificación original del teléfono ofrece respuesta de texto libre. Escribe y
-                pulsa <b>Enviar</b> o <b>Ctrl+Enter</b>. <b>Enter</b> añade un salto de línea.
-              </p>
-              <p>
-                La respuesta se transmite mediante la app original del teléfono; no puede enviarse
-                desde el historial. «Pasado a la aplicación del teléfono» no confirma la entrega al
-                destinatario. Si hay dudas, compruébalo en el teléfono; las respuestas fallidas
-                no se reenvían automáticamente.
+                <b>Responder</b> aparece si el PC y Android admiten respuestas y la notificación
+                original ofrece texto libre. Escribe y pulsa <b>Enviar</b> o <b>Ctrl+Enter</b> para
+                enviar por la app original del teléfono (<b>Enter</b> añade un salto de línea).
               </p>
               <p><a href="./help#notification-reply-faq">¿Falta Responder o no se envía la respuesta?</a></p>
             </div>
@@ -611,13 +594,11 @@
             <h3 id="device-order">Cambiar el orden y los números de los atajos</h3>
             <p>
               Con al menos dos dispositivos LAN en el PC principal, elige <b>Dispositivos → Editar
-              orden</b>. Arrastra el asa o usa los botones ↑/↓; los cambios se guardan automáticamente.
-              Pulsa <b>Listo</b> para terminar.
+              orden</b>. Arrastra el asa o usa ↑/↓; se guarda automáticamente y terminas con <b>Listo</b>.
+              Los números de conexión y ventana remota siguen ese mismo orden.
             </p>
             <p>
-              Los números de conexión y de ventana remota siguen ese mismo orden. La disposición
-              de pantallas y las combinaciones de teclas no cambian. No se cambia el orden de
-              dispositivos Bluetooth, y no se ofrece edición de orden en un PC con rol secundario.
+              <a href="./help#device-order-faq">¿No aparece Editar orden?</a>
             </p>
           </div>
         </div>
@@ -976,12 +957,11 @@
           </div>
           <div class="panel tip" id="screenshot-result">
             <p>
-              Recibir una captura no devuelve el cursor desde el dispositivo que estás controlando.
-              En el PC principal aparece una vista previa independiente, que se cierra si
-              <b>Copiar</b> o <b>Guardar</b> termina correctamente. Si falla, sigue abierta para
-              que puedas reintentarlo. También se mantiene al cancelar el guardado. Ambas apps
-              necesitan una versión compatible con este comportamiento.
+              Tras capturar, el cursor sigue en el dispositivo que controlas. La vista previa del
+              PC principal se cierra al <b>Copiar</b> o <b>Guardar</b> correctamente.
+              Ambas apps deben admitir este comportamiento.
             </p>
+            <p><a href="./help#screenshot-preview-faq">Ayuda de la vista previa de capturas</a></p>
           </div>
           <div class="panel tip">
             <p>

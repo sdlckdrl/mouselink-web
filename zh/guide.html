@@ -209,13 +209,11 @@
               <div class="panel tip" style="margin-top: 18px">
                 <h3 id="windows-remote">Windows 远程窗口支持按住右键拖动</h3>
                 <p>
-                  在设备管理中点击 Windows PC 的远程控制图标，或使用默认的
-                  <b>Ctrl+Alt+Shift+1~9</b> 打开窗口。可同时打开不同设备的窗口；再次按相同编号
-                  会将已有窗口置于前台。修改按键请查看<a href="#shortcuts">快捷键设置</a>。
+                  在设备管理中点击远程控制图标，或使用默认的 <b>Ctrl+Alt+Shift+1~9</b> 打开窗口。
+                  按住右键拖动可使用目标 PC 浏览器已配置的手势扩展，与 Android 自带手势不同。
                 </p>
                 <p>
-                  Windows 远程窗口也会传递按住右键时的移动轨迹，可使用目标 PC 浏览器中已配置
-                  的手势扩展。这与下方 OneMouse 自带的 Android 手势不同。Android 的右键仍是返回。
+                  <a href="./help#windows-remote-gestures-faq">远程窗口帮助</a>
                 </p>
               </div>
             </div>
@@ -265,21 +263,20 @@
           </div>
           <div class="panel gesture-setup">
             <h3>1. 启用手势</h3>
-            <p>在设置 → 输入 · 剪贴板中启用鼠标手势（默认关闭），并在使用鼠标手势的应用中选择应用。PC和Android都需要支持手势的版本。</p>
+            <p>在设置 → 输入 · 剪贴板中启用鼠标手势并选择应用（默认关闭）。PC和Android都需要支持手势的版本。</p>
             <p>
-              支持<b>所有应用</b>选项的版本可在有启动图标的已安装应用和主屏幕中使用手势。
-              OneMouse 及锁屏、权限提示等系统界面不在范围内；可用操作仍取决于应用和当前界面。
+              选择<b>所有应用</b>可在应用和主屏幕使用手势。
+              <a href="./help#mouse-gestures-faq">查看支持范围</a>
             </p>
             <h3>2. 按住、绘制、松开</h3>
             <p>将PC光标移到Android手机或平板，打开已选应用。</p>
             <ol class="gesture-steps">
               <li>在页面内容上按住鼠标右键。</li>
-              <li>按显示的方向顺序绘制，不要画成一条斜线。红色轨迹旁会显示识别的操作和滚动强度。</li>
-              <li>松开按钮后执行操作，绘制时页面不会滚动。</li>
+              <li>按显示的方向顺序绘制，在红色轨迹旁确认操作。</li>
+              <li>松开后执行操作；绘制时页面不会滚动。</li>
             </ol>
             <p>
-              滚动预览的箭头和竖向量条表示方向及绘制长度的强度，而非页面位置或精确移动距离。
-              在主屏幕或应用列表中，上下手势只执行一次滑动；即使画得很长，也不会连续重复滚动。
+              箭头和竖向量条表示方向及绘制长度对应的滚动强度，而非页面位置或精确移动距离。
             </p>
           </div>
           <div class="table-wrap gesture-patterns">
@@ -294,27 +291,27 @@
                 </tr>
                 <tr data-gesture-action="forward">
                   <td><span role="img" aria-label="向右">→</span></td>
-                  <td><b>前进</b><small>向右绘制以恢复返回前的页面，需要前进历史和支持的浏览器按钮。</small></td>
+                  <td><b>前进</b><small>向右绘制，恢复返回前的页面。</small></td>
                 </tr>
                 <tr data-gesture-action="scroll_up">
                   <td><span role="img" aria-label="向上">↑</span></td>
-                  <td><b>向上滚动</b><small>向上绘制并松开后向上滚动。笔画越长滚动越多，越短滚动越少。显示的滚动量是估计值。</small></td>
+                  <td><b>向上滚动</b><small>向上绘制并松开；笔画越长滚动越多，越短滚动越少。</small></td>
                 </tr>
                 <tr data-gesture-action="scroll_down">
                   <td><span role="img" aria-label="向下">↓</span></td>
-                  <td><b>向下滚动</b><small>向下绘制并松开后向下滚动。笔画越长滚动越多，越短滚动越少。显示的滚动量是估计值。</small></td>
+                  <td><b>向下滚动</b><small>向下绘制并松开；笔画越长滚动越多，越短滚动越少。</small></td>
                 </tr>
                 <tr data-gesture-action="minimize">
                   <td><span role="img" aria-label="先向下，再向右">↓ →</span></td>
-                  <td><b>最小化应用</b><small>先向下再向右绘制。返回主屏幕，不关闭应用、标签页或最近任务卡片。</small></td>
+                  <td><b>最小化应用</b><small>返回主屏幕，但不关闭正在使用的应用。</small></td>
                 </tr>
                 <tr data-gesture-action="reload">
                   <td><span role="img" aria-label="先向上，再向下">↑ ↓</span></td>
-                  <td><b>刷新</b><small>先向上再向下绘制，通过支持的浏览器按钮刷新当前页面。</small></td>
+                  <td><b>刷新</b><small>在支持此功能的浏览器中刷新当前页面。</small></td>
                 </tr>
                 <tr data-gesture-action="recents">
                   <td><span role="img" aria-label="先向上，再向右">↑ →</span></td>
-                  <td><b>最近应用</b><small>先向上再向右绘制，打开最近应用列表。可从列表选择应用，不会关闭应用。</small></td>
+                  <td><b>最近应用</b><small>打开最近应用列表，选择另一个应用。</small></td>
                 </tr>
               </tbody>
             </table>
@@ -322,12 +319,12 @@
           <div class="panel gesture-notes">
             <h3>手势无效时</h3>
             <ul>
-              <li>手势用于将光标移入Android设备后的直接控制，不适用于Windows、Mac控制或独立镜像窗口。</li>
-              <li>前进是返回后恢复历史页面，不是进入下一篇文章。刷新需要可识别的浏览器原生按钮，已选应用的部分界面也可能不支持。</li>
-              <li>请在页面内容而非工具栏上开始滚动。过短笔画及未完成或已取消的手势不会执行。不移动光标的短右击保留原有行为。</li>
-              <li>显示的滚动量是估计值，实际移动量因应用而异。长距离滚动分为多次滑动，总量最多8屏、最长10秒。点击、开始新手势、切换应用或结束控制会取消剩余滚动。仅移动光标不会停止滚动。</li>
+              <li>用于Android直接控制，不适用于Windows、Mac或镜像窗口。</li>
+              <li>前进恢复历史页面；前进和刷新需要浏览器支持。</li>
+              <li>在页面内容上开始滚动；短暂右击且不移动时保留原有行为。</li>
+              <li>实际滚动距离因应用而异；主屏幕和应用列表只滑动一次。</li>
             </ul>
-            <p><a href="./help#mouse-gestures-faq">查看手势问题排查</a></p>
+            <p><a href="./help#mouse-gestures-faq">手势帮助</a> · <a href="./help#mouse-gestures-scroll">滚动限制与停止方法</a></p>
           </div>
         </div>
       </section>
@@ -413,10 +410,10 @@
             <h3 id="file-receive-folder">在 PC 上查找收到的文件</h3>
             <p>
               在 PC 的<b>设置 → 常规 → 文件传输 → 接收文件保存位置</b>中，点击<b>更改文件夹</b>
-              选择保存位置，点击<b>打开文件夹</b>查看。主、副电脑都可以更改各自的接收文件夹。
+              选择保存位置，点击<b>打开文件夹</b>查看。主、副电脑均可使用。
             </p>
             <p>
-              已收到的文件不会移动。截图预览使用独立的保存对话框选择位置。
+              <a href="./help#file-receive-folder-faq">保存位置与文件夹问题</a>
             </p>
           </div>
           <details class="fold">
@@ -497,19 +494,15 @@
                 的应用。在主电脑的<b>设置 → 通知</b>中启用设备通知显示。
               </p>
               <p>
-                同一界面可查看通知历史和保留设置：默认 7 天，可选 1、7 或 30 天，最多 200 条。
-                只记录开启历史后新收到的通知；验证码及隐藏的敏感内容不会记录。
+                同一界面可查看通知历史和保留设置。
+                <a href="./help#phone-notifications">通知设置详情</a>
               </p>
             </div>
             <div class="panel">
               <h3>回复实时通知</h3>
               <p>
-                只有 PC 和 Android 都支持回复功能，且手机原始通知提供自由文本回复时，才显示
-                <b>回复</b>。输入内容后点击<b>发送</b>或按<b>Ctrl+Enter</b>；<b>Enter</b>用于换行。
-              </p>
-              <p>
-                回复通过手机的原应用发送，不能从历史通知中回复。“已传给手机应用”不代表对方
-                已收到。若不确定是否发送，请在手机上确认；失败的回复不会自动重发。
+                PC 和 Android 均支持回复，且手机原始通知提供自由文本回复时，才显示<b>回复</b>。
+                输入后点击<b>发送</b>或按<b>Ctrl+Enter</b>，由手机原应用发送（<b>Enter</b>换行）。
               </p>
               <p><a href="./help#notification-reply-faq">没有回复按钮或无法发送时</a></p>
             </div>
@@ -551,11 +544,10 @@
             <h3 id="device-order">更改设备顺序与快捷键编号</h3>
             <p>
               主电脑上有至少两台 LAN 设备时，点击<b>设备管理 → 编辑顺序</b>。拖动手柄或使用
-              ↑/↓ 按钮移动，改动会自动保存。点击<b>完成</b>结束编辑。
+              ↑/↓ 按钮移动，自动保存后点击<b>完成</b>。连接和远程窗口快捷键使用相同的设备顺序。
             </p>
             <p>
-              连接和远程窗口快捷键使用同一设备顺序；屏幕布局和已设置的组合键不会改变。
-              Bluetooth 设备的顺序不会更改，作为副电脑运行的 PC 不提供顺序编辑。
+              <a href="./help#device-order-faq">找不到编辑顺序时</a>
             </p>
           </div>
         </div>
@@ -851,10 +843,10 @@
           </div>
           <div class="panel tip" id="screenshot-result">
             <p>
-              收到截图后，光标仍留在当前控制的设备上。主电脑仅显示独立预览窗口，<b>复制</b>或
-              <b>保存</b>成功后该窗口会关闭；失败或取消保存时保持打开，方便重试。两端应用都需要
-              支持这一行为的版本。
+              截图后，光标仍留在当前控制的设备上。主电脑的预览窗口在<b>复制</b>或<b>保存</b>
+              成功后关闭。两端应用均需支持这一功能。
             </p>
+            <p><a href="./help#screenshot-preview-faq">截图预览帮助</a></p>
           </div>
           <div class="panel tip">
             <p>

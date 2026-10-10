@@ -225,16 +225,12 @@
               <div class="panel tip" style="margin-top: 18px">
                 <h3 id="windows-remote">Right-button dragging in Windows remote windows</h3>
                 <p>
-                  Open a Windows PC window from its remote control icon in Devices or the default
-                  <b>Ctrl+Alt+Shift+1~9</b>. Windows for different devices can stay open together;
-                  pressing the same number again brings its existing window forward. See
-                  <a href="#shortcuts">shortcut settings</a> to change the keys.
+                  Open a window from its remote control icon in Devices or with the default
+                  <b>Ctrl+Alt+Shift+1~9</b>. Right-button dragging works with gesture extensions
+                  configured in the target PC's browser, separately from Android gestures.
                 </p>
                 <p>
-                  A Windows remote window also forwards movement while the right button is held,
-                  so you can use a gesture extension already configured in the target PC's browser.
-                  This is separate from OneMouse's Android gestures below. Right click on Android
-                  still means Back.
+                  <a href="./help#windows-remote-gestures-faq">Remote-window help</a>
                 </p>
               </div>
             </div>
@@ -284,24 +280,21 @@
           </div>
           <div class="panel gesture-setup">
             <h3>1. Enable gestures</h3>
-            <p>In Settings → Typing &amp; clipboard, turn on Mouse gestures (off by default). Use Apps for mouse gestures to choose the apps. Both PC and Android need a gesture-capable version.</p>
+            <p>In Settings → Typing &amp; clipboard, turn on Mouse gestures and choose the apps (off by default). Both PC and Android need a gesture-capable version.</p>
             <p>
-              In versions that support <b>All apps</b>, select it to use gestures in installed apps
-              with launcher icons and on the home screen. OneMouse and system screens such as the
-              lock screen and permission prompts are excluded; available actions still depend on the app and screen.
+              Select <b>All apps</b> to use gestures in apps and on the home screen.
+              <a href="./help#mouse-gestures-faq">Check the support limits</a>
             </p>
             <h3>2. Hold, draw, release</h3>
             <p>Move the PC pointer onto the Android phone or tablet and open a selected app.</p>
             <ol class="gesture-steps">
               <li>Hold the right mouse button over the page content.</li>
-              <li>Draw the directions in order, not as one diagonal. The red trail shows the recognised action and scroll intensity.</li>
-              <li>Release the button to run the action. The page does not scroll while drawing.</li>
+              <li>Draw the directions in order; check the action beside the red trail.</li>
+              <li>Release to run the action. The page does not scroll while drawing.</li>
             </ol>
             <p>
-              The scroll preview's arrow and vertical gauge show direction and stroke intensity,
-              not your position on the page or an exact distance. On the home screen or app drawer,
-              an up/down gesture makes just one swipe, even with a long stroke; it does not scroll
-              repeatedly.
+              The arrow and vertical gauge show direction and scroll intensity based on stroke
+              length, not your position on the page or an exact distance.
             </p>
           </div>
           <div class="table-wrap gesture-patterns">
@@ -316,27 +309,27 @@
                 </tr>
                 <tr data-gesture-action="forward">
                   <td><span role="img" aria-label="Right">→</span></td>
-                  <td><b>Forward</b><small>Draw right to return to a page after going back. A forward history entry and supported browser control are needed.</small></td>
+                  <td><b>Forward</b><small>Draw right to return to a page after going back.</small></td>
                 </tr>
                 <tr data-gesture-action="scroll_up">
                   <td><span role="img" aria-label="Up">↑</span></td>
-                  <td><b>Scroll up</b><small>Draw up and release to scroll upward. A longer stroke scrolls more; a shorter stroke scrolls less. The amount shown is an estimate.</small></td>
+                  <td><b>Scroll up</b><small>Draw up and release. Longer strokes scroll more; shorter strokes scroll less.</small></td>
                 </tr>
                 <tr data-gesture-action="scroll_down">
                   <td><span role="img" aria-label="Down">↓</span></td>
-                  <td><b>Scroll down</b><small>Draw down and release to scroll downward. A longer stroke scrolls more; a shorter stroke scrolls less. The amount shown is an estimate.</small></td>
+                  <td><b>Scroll down</b><small>Draw down and release. Longer strokes scroll more; shorter strokes scroll less.</small></td>
                 </tr>
                 <tr data-gesture-action="minimize">
                   <td><span role="img" aria-label="Down, then right">↓ →</span></td>
-                  <td><b>Minimize app</b><small>Draw down, then right. Go to Home without closing the app, its tabs, or its recent-app card.</small></td>
+                  <td><b>Minimize app</b><small>Go to Home without closing the app.</small></td>
                 </tr>
                 <tr data-gesture-action="reload">
                   <td><span role="img" aria-label="Up, then down">↑ ↓</span></td>
-                  <td><b>Reload</b><small>Draw up, then down to reload the page using a supported browser button.</small></td>
+                  <td><b>Reload</b><small>Refresh the page in a supported browser.</small></td>
                 </tr>
                 <tr data-gesture-action="recents">
                   <td><span role="img" aria-label="Up, then right">↑ →</span></td>
-                  <td><b>Recent apps</b><small>Draw up, then right to open the recent-app list. Choose an app from the list; no app is closed.</small></td>
+                  <td><b>Recent apps</b><small>Open the recent-app list to choose another app.</small></td>
                 </tr>
               </tbody>
             </table>
@@ -344,12 +337,12 @@
           <div class="panel gesture-notes">
             <h3>If a gesture does not work</h3>
             <ul>
-              <li>These gestures apply to direct Android control after the pointer crosses onto the device, not Windows/Mac control or the separate mirroring window.</li>
-              <li>Forward returns to a page in browser history, not the next article. Reload needs a recognised native browser button; some selected apps or screens do not support it.</li>
-              <li>Start scrolling over the page content, not a toolbar. Very short strokes and incomplete or cancelled patterns do nothing. A short right-click without movement keeps the usual right-click behaviour.</li>
-              <li>The scroll amount is an estimate; actual movement varies by app. Long scrolls run as several swipes, limited to 8 screenfuls and 10 seconds in total. Clicking, starting a new gesture, switching apps, or ending control cancels the remaining scroll. Moving only the pointer does not stop it.</li>
+              <li>For direct Android control, not Windows/Mac control or a mirroring window.</li>
+              <li>Forward restores browser history. Forward and Reload require browser support.</li>
+              <li>Start over page content. A short right-click alone keeps its usual behavior.</li>
+              <li>Scroll distance varies by app; Home and the app drawer use just one swipe.</li>
             </ul>
-            <p><a href="./help#mouse-gestures-faq">Troubleshoot mouse gestures</a></p>
+            <p><a href="./help#mouse-gestures-faq">Gesture help</a> · <a href="./help#mouse-gestures-scroll">Scroll limits and cancellation</a></p>
           </div>
         </div>
       </section>
@@ -452,11 +445,10 @@
             <p>
               In PC <b>Settings → General → File transfer → Received file location</b>, use
               <b>Change folder</b> to choose the destination and <b>Open folder</b> to view it.
-              Main and sub PCs can each change their own receive folder.
+              This is available on both main and sub PCs.
             </p>
             <p>
-              Previously received files are not moved. Screenshot previews use their own save
-              dialog to choose a location.
+              <a href="./help#file-receive-folder-faq">Folder settings and troubleshooting</a>
             </p>
           </div>
           <details class="fold">
@@ -538,23 +530,16 @@
                 in <b>Settings → Notifications</b>.
               </p>
               <p>
-                The same screen shows notification history and retention settings: 7 days by
-                default, a choice of 1, 7, or 30 days, and at most 200 entries. Only new notifications
-                received after enabling history are recorded; verification codes and hidden
-                sensitive content are not recorded.
+                The same screen shows history and retention settings.
+                <a href="./help#phone-notifications">More about notifications</a>
               </p>
             </div>
             <div class="panel">
               <h3>Reply to a live notification</h3>
               <p>
-                <b>Reply</b> appears only when both PC and Android versions support replies and the
-                original phone notification offers a free-text reply. Type your reply and choose
-                <b>Send</b> or <b>Ctrl+Enter</b>. <b>Enter</b> adds a line break.
-              </p>
-              <p>
-                Replies go through the original phone app and cannot be sent from notification
-                history. ‘Passed to phone app’ does not confirm receipt by the recipient. If delivery
-                is unclear, check on your phone; failed replies are not automatically resent.
+                <b>Reply</b> appears when PC and Android support replies and the original phone
+                notification offers a free-text reply. Type your reply and choose <b>Send</b> or <b>Ctrl+Enter</b> to send
+                through the original phone app (<b>Enter</b> adds a line break).
               </p>
               <p><a href="./help#notification-reply-faq">No Reply button, or reply not sent?</a></p>
             </div>
@@ -603,13 +588,11 @@
             <h3 id="device-order">Change device order and shortcut numbers</h3>
             <p>
               With at least two LAN devices on the main PC, choose <b>Devices → Edit order</b>.
-              Drag the handle or use the ↑/↓ buttons; changes save automatically. Choose
-              <b>Done</b> to finish editing.
+              Drag the handle or use ↑/↓; changes save automatically, then choose <b>Done</b>.
+              Connection and remote-window shortcut numbers follow the same order.
             </p>
             <p>
-              Connection and remote-window shortcut numbers follow the same order. Screen layout
-              and your saved key combinations do not change. Bluetooth device order is not changed,
-              and order editing is not available on a PC running in the sub role.
+              <a href="./help#device-order-faq">Can't find Edit order?</a>
             </p>
           </div>
         </div>
@@ -958,11 +941,10 @@
           </div>
           <div class="panel tip" id="screenshot-result">
             <p>
-              Receiving a screenshot does not return the pointer from the device you are controlling.
-              A separate preview appears on the main PC and closes after <b>Copy</b> or <b>Save</b>
-              succeeds. If the action fails or saving is cancelled, the preview stays open so you
-              can retry. Both apps need versions that support this behavior.
+              After capture, the pointer stays on the device you are controlling. The main PC's
+              preview closes when <b>Copy</b> or <b>Save</b> succeeds. Both apps must support this behavior.
             </p>
+            <p><a href="./help#screenshot-preview-faq">Screenshot-preview help</a></p>
           </div>
           <div class="panel tip">
             <p>

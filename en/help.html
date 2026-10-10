@@ -205,8 +205,8 @@
                 protection. In the phone app's <b>Verification-code notifications</b> block, tap
                 <b>Register PC</b> once. Bluetooth is only needed while registering.
               </li>
-              <li>Notifications appear briefly on the PC, and their history is encrypted and stored locally on the PC. It is not uploaded to a server.</li>
-              <li>History is enabled by default and retains up to 200 notifications for 7 days. In Settings → Notifications on the main PC, you can choose 1, 7, or 30 days or stop saving new entries. Turning it off keeps existing entries; use Clear all in notification history to delete them.</li>
+              <li>Notifications appear briefly; history is encrypted locally on the PC, never uploaded. Only notifications received after enabling are recorded; verification codes and hidden sensitive content are not saved.</li>
+              <li>History defaults to on, 7 days, and up to 200 entries. Main-PC Settings → Notifications offers 1/7/30 days or no new entries. Existing history stays; Clear all deletes it.</li>
             </ul>
           </div>
         </div>
@@ -278,44 +278,46 @@
             <details id="notification-reply-faq">
               <summary>The Reply button is missing, or my reply will not send.</summary>
               <div class="a">
-                <p>Both PC and Android need a reply-capable version, and the original phone notification must support free-text replies. Replies work only from live notifications on the main PC, not hidden or sensitive notifications, verification codes, or history. Check the phone lock, whether the original notification was removed or expired, and the connection.</p>
-                <p>Failed or timed-out replies are not automatically resent; check the conversation on your phone. “Passed to phone app” means the original app received the reply action, not that the recipient received the message. <a href="./guide#notifications">See how to reply</a></p>
+                <p>PC and Android need reply-capable versions and an original phone notification with free-text reply. Only live main-PC notifications qualify; hidden/sensitive content, verification codes, and history are excluded.</p>
+                <p>If sending fails, check the phone lock, deleted/expired notification, and connection. Failures and timeouts are not automatically resent; check the phone conversation. “Passed to phone app” confirms the original app's reply action, not delivery to the recipient. <a href="./guide#notifications">See how to reply</a></p>
               </div>
             </details>
             <details id="device-order-faq">
               <summary>How do I change device numbers if Edit order is missing?</summary>
               <div class="a">
-                <p>Edit order appears in Devices on the main PC when there are at least two LAN devices. Changes save automatically and update both connection and remote-window shortcut numbers. Screen arrangement and key combinations stay unchanged. Bluetooth device order is unchanged, and a PC running in the sub role has no edit button. <a href="./guide#device-order">Change device order</a></p>
+                <p>Edit order appears in main-PC Devices with two or more LAN devices. It saves automatically and updates connection/remote-window numbers, not screen arrangement or key combinations. Bluetooth order stays unchanged; sub-role PCs cannot edit. <a href="./guide#device-order">Change device order</a></p>
               </div>
             </details>
             <details id="windows-remote-gestures-faq">
               <summary>Browser gestures do not work in a Windows remote window.</summary>
               <div class="a">
-                <p>Update OneMouse for Windows to 1.5.4 or later and check that the browser's existing gesture extension or feature is enabled on the target PC. The remote window forwards movement while the right button is held. This is separate from OneMouse's built-in Android gestures, which work only during direct control after the pointer crosses onto the phone. <a href="./guide#remote">See the remote-window guide</a></p>
+                <p>Use OneMouse for Windows 1.5.4 or later and enable the target browser's gesture extension or feature. The remote window forwards right-button drags, separately from Android's built-in gestures for direct phone control.</p>
+                <p>You can open remote windows for multiple devices; repeating a device's shortcut number brings its window forward. <a href="./guide#remote">See the remote-window guide</a></p>
               </div>
             </details>
             <details id="default-pc-faq">
               <summary>A file shared from my phone does not reach the PC.</summary>
               <div class="a">
-                <p>For Wi-Fi or LAN sharing, choose the receiving PC under Default PC on the phone app's Home screen, then check pairing and connection. It must have the main role; a sub PC is not a phone control or sharing target. An existing Bluetooth connection can send over Bluetooth without a default PC. <a href="./guide#text-to-pc">Send from phone to PC</a></p>
+                <p>For Wi-Fi/LAN, choose a main-role Default PC on the phone's Home screen and check pairing/connection (sub PCs are excluded). An existing Bluetooth connection can send without a default PC. <a href="./guide#text-to-pc">Send from phone to PC</a></p>
               </div>
             </details>
             <details id="file-receive-folder-faq">
               <summary>I cannot change or open the PC's received-files folder.</summary>
               <div class="a">
-                <p>On either a main or sub PC, use Change folder or Open folder in Settings → General → File transfer → Received-file save location. Check write permission and any USB or network drive connection; if an error appears, choose another accessible folder. Existing files are not moved, and screenshots use a separate save location. <a href="./guide#file-receive-folder">See received-folder settings</a></p>
+                <p>On main or sub PCs, use Change/Open folder in Settings → General → File transfer → Received-file save location. For errors, check write access and USB/network drives or choose another accessible folder. Existing files stay put; screenshot saving is separate. <a href="./guide#file-receive-folder">See received-folder settings</a></p>
               </div>
             </details>
             <details id="screenshot-preview-faq">
               <summary>The pointer does not return after capture, or the preview closes.</summary>
               <div class="a">
-                <p>Both apps need to support this feature. After capture, the pointer stays on the controlled device. The main PC app remains in the tray or minimized, with only a separate preview appearing. Successful copying or saving closes it; cancelling a save or a failure leaves it open. Move the pointer back to the main PC yourself to use the preview. <a href="./guide#screenshot-result">See screenshot results</a></p>
+                <p>With supported versions on both sides, the pointer stays on the controlled device and only a separate preview appears; the main app stays in the tray or minimized. Copy/save success closes the preview; save cancellation or failure keeps it open. Move the pointer back to the main PC to use it. <a href="./guide#screenshot-result">See screenshot results</a></p>
               </div>
             </details>
             <details id="mouse-gestures-faq">
               <summary>Mouse gestures do not start.</summary>
               <div class="a">
-                <p>Check that both PC and Android have a gesture-capable version. In Android Settings → Typing &amp; clipboard, enable Mouse gestures and choose the current app in Apps for mouse gestures. On supported versions, All apps includes installed apps with launcher icons and the Home screen, but excludes OneMouse and system screens such as the lock screen and permission dialogs. Not every action works on every screen. Gestures are off by default. Move the pointer onto Android, hold the right button, draw, and release. This is for direct Android control, not Windows/Mac control or the separate mirroring window.</p>
+                <p>Use supported PC/Android versions, enable Mouse gestures in Android Settings → Typing &amp; clipboard, and select the current app (off by default). Move the pointer onto the phone, right-drag, then release; this does not apply to Windows/Mac or mirroring windows.</p>
+                <p>All apps covers installed apps with launcher icons and Home. OneMouse and system screens such as lock/permission dialogs are excluded; supported actions vary by app and screen.</p>
                 <p><a href="./guide#mouse-gestures">View the gesture guide and all patterns</a></p>
               </div>
             </details>
@@ -329,7 +331,14 @@
             </details>
             <details id="mouse-gestures-scroll">
               <summary>How do I adjust and stop up/down scrolling?</summary>
-              <div class="a">Hold the right button and draw up or down: a longer stroke scrolls more, and a shorter stroke scrolls less. Very short strokes are ignored. Scrolling starts only when you release the button; the page does not move while drawing. On supported versions, the arrow and vertical gauge show direction and stroke strength, not document position or exact distance. Actual movement varies by app. Home and the app drawer use only one swipe rather than repeated scrolling. Long scrolls run as several swipes, limited to 8 screenfuls and 10 seconds in total. Clicking, starting a new gesture, switching apps, or ending control cancels the remaining scroll. Moving only the pointer does not stop it.</div>
+              <div class="a">
+                <p>A longer up/down stroke scrolls more, a shorter one less; release the right button to start (nothing moves while drawing). The arrow and vertical gauge show direction and stroke strength, not document position or exact distance.</p>
+                <ul>
+                  <li>Start over page content. Very short, incomplete, or cancelled strokes do nothing; a short right-click without movement keeps its usual action.</li>
+                  <li>Movement varies by app; Home/app drawer uses one swipe. Other long scrolls use several swipes, up to 8 screenfuls/10 seconds.</li>
+                  <li>Clicking, a new gesture, switching apps, or ending control cancels remaining scrolling. Pointer movement alone does not stop it.</li>
+                </ul>
+              </div>
             </details>
             <details open>
               <summary>It keeps disconnecting about every 10 seconds.</summary>
