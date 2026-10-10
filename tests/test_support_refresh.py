@@ -11,14 +11,12 @@ FAQ_LINKS = {
     "windows-remote-gestures-faq": "remote",
     "default-pc-faq": "text-to-pc",
     "file-receive-folder-faq": "file-receive-folder",
-    "screenshot-preview-faq": "screenshot-result",
 }
-GUIDE_ANCHORS = ("notifications", "device-order", "file-receive-folder", "screenshot-result")
+GUIDE_ANCHORS = ("notifications", "device-order", "file-receive-folder")
 GUIDE_DETAIL_LINKS = {
     "windows-remote": "windows-remote-gestures-faq",
     "device-order": "device-order-faq",
     "file-receive-folder": "file-receive-folder-faq",
-    "screenshot-result": "screenshot-preview-faq",
 }
 REPLY_TERMS = {
     "": ("PC", "Android", "원본", "답장", "지난", "수신"),
@@ -98,7 +96,7 @@ class SupportRefreshTest(unittest.TestCase):
 
     def test_recent_guide_cards_stay_concise(self):
         limits = {"notifications": 900, "windows-remote": 600, "device-order": 600,
-                  "file-receive-folder": 600, "screenshot-result": 600}
+                  "file-receive-folder": 600}
         for locale in LOCALES:
             guide = Document(ROOT / locale / "guide.html")
             for anchor, limit in limits.items():

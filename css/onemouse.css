@@ -667,57 +667,6 @@ a.btn-disabled[aria-disabled='true'] {
 }
 
 /* ---------- shortcut table ---------- */
-.shortcut-notes {
-  margin: 18px 0 28px;
-  padding: 16px 18px;
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  background: color-mix(in srgb, var(--card) 60%, var(--paper));
-}
-.shortcut-notes > h4 {
-  margin: 0 0 12px;
-  color: var(--muted);
-  font-size: 13px;
-  font-weight: 700;
-}
-.shortcut-note {
-  display: grid;
-  grid-template-columns: 96px minmax(0, 1fr);
-  gap: 8px 14px;
-  font-size: 14px;
-  scroll-margin-top: 136px;
-}
-.shortcut-note + .shortcut-note {
-  margin-top: 12px;
-  padding-top: 12px;
-  border-top: 1px solid var(--line-soft);
-}
-.shortcut-note h5 {
-  align-self: start;
-  margin: 0;
-  font-size: inherit;
-  font-weight: 700;
-}
-.shortcut-note p {
-  margin: 0;
-  color: var(--muted);
-}
-.shortcut-note p b {
-  color: var(--ink);
-}
-.shortcut-note .shortcut-note-link {
-  margin-top: 6px;
-}
-.shortcut-note-warning h5 {
-  border-inline-start: 3px solid var(--coral);
-  padding-inline-start: 8px;
-}
-@media (max-width: 600px) {
-  .shortcut-note {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 4px;
-  }
-}
 .table-wrap {
   overflow-x: auto;
   border: 1px solid var(--line);
