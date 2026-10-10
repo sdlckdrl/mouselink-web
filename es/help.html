@@ -46,14 +46,12 @@
         <p class="ey">Ayuda</p>
         <h1 class="page">Si no funciona, acota el problema paso a paso.</h1>
         <p class="lead">
-          Revisa en este orden:
-          <b>encendido → descubrimiento → firewall → vinculación → entrada y regreso</b>. En Mac,
-          la compatibilidad pública actual funciona por la misma red Wi-Fi o LAN local.
+          Comprueba <b>aplicaciones → detección → firewall → vinculación → entrada</b> en ese orden.
         </p>
       </section>
 
       <!-- 이것부터 -->
-      <section style="padding-top: 14px">
+      <section id="quick-help" style="padding-top: 14px">
         <div class="wrap narrow">
           <div class="panel tip">
             <p>
@@ -69,9 +67,9 @@
                 <kbd style="font-family: var(--mono)">Ctrl+Alt+Backspace</kbd> y el cursor vuelve
                 a tu propio PC (al centro del monitor).
               </li>
-              <li>
+              <li id="android-input-help">
                 <b>¿Conectado pero la entrada no funciona? →</b> Vuelve a activar OneMouse en
-                <b>Accesibilidad</b> de Android, o concede <b>Accesibilidad</b> a OneMouse en Mac.
+                <b>Accesibilidad</b> de Android. En Mac, <a class="text-link" href="#mac-input-help">revisa el permiso de entrada</a>.
               </li>
             </ul>
           </div>
@@ -91,10 +89,7 @@
               <div class="body">
                 <h4>Encendido y permisos</h4>
                 <p>
-                  Asegúrate de que OneMouse esté funcionando en Windows y en el dispositivo de
-                  destino. Android necesita su <b>servicio de accesibilidad</b>; un Mac que recibe
-                  entrada desde Windows necesita <b>Accesibilidad</b>. La opción Red local aparece
-                  en macOS 15 o posterior, mientras que macOS 13/14 puede no mostrarla.
+                  Comprueba que ambas aplicaciones estén abiertas. Para los permisos, consulta las <a class="text-link" href="#quick-help">comprobaciones rápidas</a>.
                 </p>
               </div>
             </div>
@@ -103,9 +98,7 @@
               <div class="body">
                 <h4>Misma red y descubrimiento</h4>
                 <p>
-                  Comprueba que Windows y el teléfono o el Mac usen la <b>misma red Wi-Fi o LAN</b>.
-                  En macOS 15 o posterior, confirma que OneMouse tenga acceso a Red local; en
-                  macOS 13/14 puede que ese ajuste no exista.
+                  Comprueba que ambos dispositivos usen la <b>misma red Wi-Fi o LAN</b>. Para detectar un Mac, consulta <a class="text-link" href="#mac">la ayuda de Mac</a>.
                 </p>
               </div>
             </div>
@@ -126,10 +119,7 @@
               <div class="body">
                 <h4>Vinculación y conexión</h4>
                 <p>
-                  Confirma que la vinculación haya terminado y que el dispositivo aparezca como
-                  conectado en Dispositivos. Para el Mac, selecciónalo en Windows e introduce el
-                  <b>código de 6 dígitos que muestra el Mac</b>. Antes de la vinculación no se
-                  abren los canales de entrada ni de archivos.
+                  Revisa la vinculación y el estado de conexión en Dispositivos. Si es la primera vez, sigue la <a class="text-link" href="./guide#start">guía de conexión</a>.
                 </p>
               </div>
             </div>
@@ -138,9 +128,7 @@
               <div class="body">
                 <h4>Entrada y regreso</h4>
                 <p>
-                  Empuja el ratón hacia el borde configurado para ver si lo cruza; si no lo cruza,
-                  revisa la disposición. Si el cursor acaba en un sitio raro, tráelo de vuelta con
-                  <kbd style="font-family: var(--mono)">Ctrl+Alt+Backspace</kbd>.
+                  Si el cursor no cruza el borde, revisa la disposición. Si lo has perdido, consulta <a class="text-link" href="#quick-help">cómo recuperarlo</a>.
                 </p>
               </div>
             </div>
@@ -207,9 +195,14 @@
                 verificación</b> de la app del teléfono, pulsa <b>Registrar PC</b> una vez. El
                 Bluetooth solo hace falta al registrar.
               </li>
-              <li>Las notificaciones aparecen brevemente; el historial se cifra en el PC y no se sube a servidores. Solo registra notificaciones recibidas tras activarlo, sin códigos ni contenido sensible oculto.</li>
-              <li>El historial viene activado: 7 días, hasta 200 entradas. Ajustes → Notificaciones del PC principal permite 1/7/30 días o detener nuevas entradas. Las existentes se conservan; Borrar todo las elimina.</li>
             </ul>
+            <details class="fold" id="notification-history">
+              <summary><span>Historial de notificaciones y borrado</span></summary>
+              <div class="fold-body">
+                <p>Las notificaciones aparecen brevemente; el historial se cifra en el PC y no se sube a servidores. Solo registra notificaciones recibidas tras activarlo, sin códigos ni contenido sensible oculto.</p>
+                <p>El historial viene activado: 7 días, hasta 200 entradas. Ajustes → Notificaciones del PC principal permite 1/7/30 días o detener nuevas entradas. Las existentes se conservan; Borrar todo las elimina.</p>
+              </div>
+            </details>
           </div>
         </div>
       </section>
@@ -234,7 +227,7 @@
                 este elemento. Vuelve a OneMouse y actualiza Dispositivos en Windows.
               </div>
             </details>
-            <details>
+            <details id="mac-input-help">
               <summary>El Mac está conectado, pero el ratón y el teclado no funcionan.</summary>
               <div class="a">
                 Autoriza OneMouse en <b>Privacidad y seguridad → Accesibilidad</b> de macOS y luego
@@ -242,7 +235,7 @@
                 requiere Monitorización de entrada.
               </div>
             </details>
-            <details>
+            <details id="mac-screen-help">
               <summary>
                 La pantalla del Mac se ve en blanco en la ventana de control remoto de Windows.
               </summary>
@@ -264,9 +257,7 @@
             <details>
               <summary>¿Dónde se inicia una conexión con el Mac?</summary>
               <div class="a">
-                Las conexiones se inician y se gestionan desde OneMouse en Windows 10/11. Selecciona
-                el Mac en Dispositivos de Windows e introduce el código de 6 dígitos que muestra el
-                Mac.
+                <a class="text-link" href="./guide#mac">Sigue la guía de conexión con Mac</a>.
               </div>
             </details>
           </div>
@@ -346,18 +337,14 @@
                 </ul>
               </div>
             </details>
-            <details open>
+            <details id="connection-drops">
               <summary>Se desconecta cada 10 segundos aproximadamente.</summary>
               <div class="a">
-                Hay cuatro causas habituales: <b>① aislamiento de clientes en el Wi-Fi de la oficina
-                o de invitados</b>, <b>② la optimización de batería</b> que corta la conexión en
-                segundo plano del teléfono, <b>③ el bloqueo de entrada del firewall de Windows</b> y
-                <b>④ el Wi-Fi que entra en ahorro de energía al apagarse la pantalla</b>. Activa la
-                excepción de batería, permite la entrada de OneMouse en el firewall y usa una red
-                Wi-Fi privada siempre que puedas.
+                Comprueba el aislamiento de clientes del Wi-Fi de oficina/invitados y el <a class="text-link" href="#firewall-help">firewall de Windows</a>.
+                Si ocurre cuando el teléfono está inactivo, revisa <a class="text-link" href="#screen-sleep">batería y suspensión</a>.
               </div>
             </details>
-            <details>
+            <details id="firewall-help">
               <summary>El teléfono ve el PC, pero el PC no ve el teléfono.</summary>
               <div class="a">
                 Normalmente es un problema de <b>entrada del firewall de Windows</b>. Si la red
@@ -377,8 +364,7 @@
             <details>
               <summary>Dice que está conectado, pero el ratón y el teclado no responden.</summary>
               <div class="a">
-                Seguramente el sistema desactivó o reinició el <b>servicio de accesibilidad</b> de
-                Android. Ve a Ajustes de Android → Accesibilidad y vuelve a activar OneMouse.
+                Vuelve a activar OneMouse siguiendo la <a class="text-link" href="#android-input-help">comprobación de Accesibilidad en Android</a>.
               </div>
             </details>
             <details>
@@ -386,11 +372,10 @@
                 El cursor se queda atrapado en el teléfono, en otro PC o en el Mac y no vuelve.
               </summary>
               <div class="a">
-                Pulsa <kbd style="font-family: var(--mono)">Ctrl+Alt+Backspace</kbd> para forzar el
-                regreso del cursor al centro del monitor de tu propio PC.
+                <a class="text-link" href="#quick-help">Revisa la tecla de regreso de emergencia y sus ajustes</a>.
               </div>
             </details>
-            <details>
+            <details id="screen-sleep">
               <summary>La conexión se corta cuando se apaga la pantalla.</summary>
               <div class="a">
                 Al apagarse la pantalla, el Wi-Fi del teléfono puede entrar en ahorro de energía o
@@ -399,12 +384,12 @@
                 Revisa también la opción de mantener la pantalla encendida mientras hay conexión.
               </div>
             </details>
-            <details>
-              <summary>El control remoto de pantalla por Bluetooth no funciona bien.</summary>
+            <details id="bluetooth-help">
+              <summary>La conexión Bluetooth o la pantalla remota no funcionan bien.</summary>
               <div class="a">
-                El control remoto de la pantalla del teléfono mueve muchos datos, así que
-                <b>no se recomienda por Bluetooth</b>. Usa Wi-Fi para el control remoto. Bluetooth
-                va bien para ratón, teclado, portapapeles y archivos.
+                Para problemas de conexión, elimina la vinculación en los ajustes Bluetooth del sistema de ambos dispositivos y vuelve a vincularlos.
+                Usa Wi-Fi o LAN para archivos grandes y pantallas remotas móviles. Compartir pantallas/ventanas del Mac requiere LAN.
+                <a class="text-link" href="./guide#bluetooth">Pasos de conexión Bluetooth</a>
               </div>
             </details>
           </div>

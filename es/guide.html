@@ -95,8 +95,7 @@
                 <h4>Activa el servicio de accesibilidad de Android</h4>
                 <p>
                   Para recibir la entrada de ratón y teclado del PC, activa el servicio de
-                  accesibilidad de OneMouse en Android. En la práctica, es lo único que tienes que
-                  configurar.
+                  accesibilidad de OneMouse en Android.
                 </p>
               </div>
             </div>
@@ -138,10 +137,7 @@
               <div class="body">
                 <h4>Cruza y empieza a usarlo</h4>
                 <p>
-                  Empuja el ratón hacia el borde que has definido y pasará al teléfono. Suelta
-                  archivos en la zona de envío rápido y, para llegar a otro PC, arrástralos cruzando
-                  el límite de la pantalla. El atajo predeterminado de captura es Ctrl+Alt+S.
-                  Consulta las <a href="#shortcuts">condiciones de cada destino</a>.
+                  Mueve el ratón por el borde configurado para usar el ratón y el teclado del PC en el teléfono.
                 </p>
               </div>
             </div>
@@ -177,9 +173,7 @@
             </h2>
           </div>
           <p class="sec-lead" style="max-width: 60ch">
-            Decide por qué borde cruza el ratón y luego coloca cada dispositivo donde está realmente.
-            Android, otro PC con Windows y un Mac compatible se pueden colocar alrededor de la
-            pantalla de Windows.
+            Arrastra cada dispositivo a su posición real en el editor. El cursor cruza por el borde correspondiente.
           </p>
           <details class="fold">
             <summary><span>Ver la pantalla de disposición</span></summary>
@@ -373,8 +367,7 @@
                   arrástralo cruzando el límite entre las pantallas y suéltalo en el destino.
                 </li>
                 <li style="margin: 8px 0">
-                  De Android al PC: envía desde la pestaña de transferencia de Android o desde el
-                  menú de compartir.
+                  <a class="text-link" href="#text-to-pc">Enviar de Android al PC</a>
                 </li>
                 <li style="margin: 8px 0 0">
                   Si no arranca, revisa el estado de la conexión y el dispositivo seleccionado.
@@ -574,9 +567,6 @@
                   Pulsa el mismo número otra vez para dejar de controlar el dispositivo que
                   controlas actualmente.
                 </li>
-                <li>
-                  Aparece una pequeña notificación abajo a la derecha al conectar o desconectar.
-                </li>
               </ul>
             </div>
             <div class="panel tip">
@@ -586,7 +576,6 @@
                   Cuando está activada, la aplicación de PC vuelve a conectar sola en cuanto
                   reaparece tu último dispositivo o cuando solo hay uno listo.
                 </li>
-                <li>No aparece ninguna notificación aparte al mover el ratón entre dispositivos.</li>
               </ul>
             </div>
           </div>
@@ -612,9 +601,7 @@
             <h2 class="sec">También puedes conectar por Bluetooth, sin router.</h2>
             <p class="sec-lead">
               Windows↔Android y Windows↔Windows pueden intercambiar entrada, portapapeles y archivos
-              directamente por Bluetooth. El Bluetooth en Mac se ofrece como beta (actívalo en los
-              ajustes de la aplicación de Mac; desactivado por defecto): la LAN sigue siendo la vía
-              oficialmente compatible para Mac.
+              directamente por Bluetooth.
             </p>
           </div>
           <div class="split lead-left">
@@ -630,22 +617,10 @@
               <div class="panel tip">
                 <h3>Conviene saber</h3>
                 <ul>
-                  <li>
-                    Actívalo desde la pestaña de ajustes de Android; funciona con independencia del
-                    Wi-Fi (con reintentos escalonados).
-                  </li>
-                  <li>Windows↔Windows admite arrastrar archivos en ambos sentidos.</li>
-                  <li>
-                    Las conexiones, la transferencia de archivos y la pantalla compartida del Mac
-                    usan LAN por ahora.
-                  </li>
-                  <li>Puedes activar a la vez varios dispositivos Bluetooth de la lista.</li>
-                  <li>El Bluetooth es más lento que el Wi-Fi: para archivos grandes, usa Wi-Fi.</li>
-                  <li>
-                    Compartir la pantalla o una ventana del Mac no funciona por Bluetooth: solo LAN.
-                  </li>
-                  <li>Si tienes problemas, vuelve a vincular desde el Bluetooth de Windows.</li>
+                  <li>Usa Wi-Fi o LAN para archivos grandes y pantallas remotas móviles.</li>
+                  <li>Bluetooth en Mac es beta (actívalo en sus ajustes; desactivado por defecto). LAN es la vía oficial y la única para compartir pantallas o ventanas del Mac.</li>
                 </ul>
+                <p><a class="text-link" href="./help#bluetooth-help">Resolver problemas de Bluetooth</a></p>
               </div>
             </div>
             <div>
@@ -830,44 +805,9 @@
             <p class="ey">Permisos</p>
             <h2 class="sec">Cada plataforma pide solo los permisos que necesitan sus funciones.</h2>
             <p class="sec-lead">
-              Los permisos no se piden todos a la vez: se solicitan cuando usas la función. Tienes
-              las notas detalladas de cada elemento en Aspectos técnicos y seguridad.
+              La entrada en Android requiere el servicio de accesibilidad; en Mac, Accesibilidad.
+              Ver la pantalla remota de Android o Mac también requiere aprobar la captura o grabación de pantalla.
             </p>
-          </div>
-          <div class="panel">
-            <ul>
-              <li>
-                <b>Servicio de accesibilidad — obligatorio:</b> hace falta para controlar Android y
-                para la captura de pantalla y la entrada remota.
-              </li>
-              <li>
-                <b>Aprobación de captura de pantalla — al iniciar el control remoto:</b> se aprueba
-                en una ventana emergente del sistema Android.
-              </li>
-              <li>
-                <b>Dispositivos Wi-Fi cercanos — al conectar:</b> puede pedirse una vez en Android
-                13 o posterior mientras se busca el PC.
-              </li>
-              <li>
-                <b>Notificaciones, ajustes del sistema, excepción de batería:</b> solo cuando hacen
-                falta, para mostrar el estado del servicio, ajustar el brillo y mantener la
-                estabilidad tras apagarse la pantalla, respectivamente.
-              </li>
-              <li>
-                <b>Accesibilidad en Mac — obligatoria para la entrada:</b> permite que el Mac ejecute
-                la entrada recibida desde Windows. La <b>Red local</b> se permite para la detección
-                en macOS 15 o posterior; macOS 13/14 puede no mostrarla.
-              </li>
-              <li>
-                <b>Grabación de pantalla en Mac — opcional:</b> se usa solo al compartir la pantalla
-                del Mac con Windows.
-              </li>
-              <li>
-                <b>Bluetooth en Mac — beta:</b> actívalo en los ajustes de la aplicación de Mac
-                (desactivado por defecto). La LAN es la vía oficialmente compatible; compartir la
-                pantalla o una ventana del Mac solo funciona por LAN.
-              </li>
-            </ul>
           </div>
           <div style="margin-top: 18px">
             <a class="btn btn-sec sm" href="./technical#permissions"

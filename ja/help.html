@@ -46,14 +46,12 @@
         <p class="ey">ヘルプ</p>
         <h1 class="page">うまくいかないときは、段階で絞り込みましょう。</h1>
         <p class="lead">
-          Androidと別のWindows PCは<b
-            >起動 → 権限 → 検出 → ファイアウォール → ペアリング → 入力・復帰</b
-          >の順で確認します。MacはWindowsと同じローカルネットワークを使う公開LAN接続を確認します。
+          <b>アプリの起動 → 検出 → ファイアウォール → ペアリング → 入力</b>の順で確認してください。
         </p>
       </section>
 
       <!-- 이것부터 -->
-      <section style="padding-top: 14px">
+      <section id="quick-help" style="padding-top: 14px">
         <div class="wrap narrow">
           <div class="panel tip">
             <p>
@@ -68,14 +66,12 @@
                 <kbd style="font-family: var(--mono)">Ctrl+Alt+Backspace</kbd
                 >を押すと、カーソルが自分のPC（モニターの中央）に戻ります。
               </li>
-              <li>
+              <li id="android-input-help">
                 <b>接続はできたのに入力できないとき →</b>
                 Androidの<b>アクセシビリティサービス</b>がオフになったか、再起動された可能性があります。アクセシビリティでOneMouseを再度オンにしてください。
               </li>
               <li>
-                <b>Macで入力できないとき →</b> Macの<b
-                  >システム設定 → プライバシーとセキュリティ → アクセシビリティ</b
-                >でOneMouseを許可してください。
+                <b>Macで入力できないとき →</b> <a class="text-link" href="#mac-input-help">入力権限を確認</a>
               </li>
             </ul>
           </div>
@@ -95,8 +91,7 @@
               <div class="body">
                 <h4>起動と権限</h4>
                 <p>
-                  Windowsと接続先のアプリが起動しているか確認します。Androidは<b>アクセシビリティサービス</b>、Macは入力用の<b>アクセシビリティ</b>が必要です。ローカルネットワークはmacOS
-                  15以降で表示され、macOS 13/14では項目がない場合があります。
+                  両方のアプリが起動しているか確認します。入力権限は<a class="text-link" href="#quick-help">最初の確認項目</a>をご覧ください。
                 </p>
               </div>
             </div>
@@ -123,7 +118,7 @@
               <div class="body">
                 <h4>ペアリング・接続</h4>
                 <p>
-                  ペアリングが完了し、デバイス管理で接続状態になっているか確認します。MacはWindows側でMacを選び、Macに表示された6桁コードをWindowsへ入力します。
+                  デバイス管理でペアリング・接続状態を確認します。初回は<a class="text-link" href="./guide#start">接続ガイド</a>をご覧ください。
                 </p>
               </div>
             </div>
@@ -132,10 +127,7 @@
               <div class="body">
                 <h4>入力・復帰</h4>
                 <p>
-                  配置した端へマウスを押し当てて越えられるか、越えられない場合は位置の配置を確認します。カーソルが変な場所にあるときは<kbd
-                    style="font-family: var(--mono)"
-                    >Ctrl+Alt+Backspace</kbd
-                  >で復帰させます。
+                  カーソルが画面の端を越えない場合は配置を確認します。見失ったら<a class="text-link" href="#quick-help">復帰方法</a>をご覧ください。
                 </p>
               </div>
             </div>
@@ -189,9 +181,14 @@
                 認証コードのメッセージだけが「非表示」で届く場合は、Android
                 15以降の保護機能です。スマホアプリの<b>認証コードの通知</b>ブロックで<b>PCを登録</b>を一度押してください。Bluetoothは登録時だけオンにすれば大丈夫です。
               </li>
-              <li>通知は短く表示し、履歴はPC内に暗号化保存します（サーバー送信なし）。有効にした後の通知だけを記録し、認証コード・非表示の機密内容は保存しません。</li>
-              <li>履歴は初期値オン・7日・最大200件です。メインPCの設定 → 通知で1日・7日・30日または新規保存オフを選べます。既存履歴は残り、全削除で消去できます。</li>
             </ul>
+            <details class="fold" id="notification-history">
+              <summary><span>通知履歴の保存・削除</span></summary>
+              <div class="fold-body">
+                <p>通知は短く表示し、履歴はPC内に暗号化保存します（サーバー送信なし）。有効にした後の通知だけを記録し、認証コード・非表示の機密内容は保存しません。</p>
+                <p>履歴は初期値オン・7日・最大200件です。メインPCの設定 → 通知で1日・7日・30日または新規保存オフを選べます。既存履歴は残り、全削除で消去できます。</p>
+              </div>
+            </details>
           </div>
         </div>
       </section>
@@ -220,16 +217,16 @@
                 <li>ゲストWi-Fiや社内Wi-Fiのクライアント分離も確認します。</li>
               </ul>
             </div>
-            <div class="panel tip">
+            <div class="panel tip" id="mac-input-help">
               <h3>接続済みでも入力・画面が動かない</h3>
               <ul>
                 <li>
                   入力できない場合は、Macの<b>アクセシビリティ</b>許可を確認し、変更後にOneMouseへ戻ります。
                 </li>
-                <li>
+                <li id="mac-screen-help">
                   Mac画面が表示されない場合だけ<b>画面収録</b>を許可します。通常の入力には不要です。
                 </li>
-                <li>Macに表示された現在の6桁コードをWindowsへ入力したか確認します。</li>
+                <li><a class="text-link" href="./guide#mac">Macのペアリング・配置手順を見る</a></li>
                 <li>カーソルが移らない場合は、Windowsの配置エディタでMacの位置を確認します。</li>
               </ul>
             </div>
@@ -310,18 +307,14 @@
                 </ul>
               </div>
             </details>
-            <details open>
+            <details id="connection-drops">
               <summary>10秒おきくらいに切れ続けます。</summary>
               <div class="a">
-                代表的な原因は4つです: <b>① ゲスト/会社Wi-Fiのクライアント分離</b>、<b
-                  >② バッテリー最適化</b
-                >でスマホのバックグラウンド接続が切られる、<b
-                  >③ Windowsファイアウォールの受信ブロック</b
-                >、<b>④ 画面がオフになるとWi-Fiが省電力（スリープ）になる</b
-                >。バッテリー最適化の除外をオンにし、ファイアウォールでOneMouseの受信を許可し、可能ならプライベートなWi-Fiを使ってください。
+                ゲスト・社内Wi-Fiのクライアント分離と<a class="text-link" href="#firewall-help">Windowsファイアウォール</a>を確認してください。
+                スマホの待機中に切れる場合は<a class="text-link" href="#screen-sleep">バッテリー・省電力設定</a>を確認します。
               </div>
             </details>
-            <details>
+            <details id="firewall-help">
               <summary>スマホではPCが見えるのに、PCからスマホが見えません。</summary>
               <div class="a">
                 たいていは<b>Windowsファイアウォールの受信（インバウンド）</b>の問題です。現在のネットワークが<b>「パブリック（Public）」</b>だと受信がブロックされることがあるので、<b>「プライベート（Private）」</b>に変えるか、ファイアウォールでOneMouseの受信を許可してください。
@@ -338,34 +331,33 @@
             <details>
               <summary>接続はできたはずなのに、マウス・キーボードが効きません。</summary>
               <div class="a">
-                Androidの<b>アクセシビリティサービス</b>がオフになったか、システムによって再起動された可能性が高いです。Androidの設定
-                → アクセシビリティでOneMouseを再度オンにしてください。
+                <a class="text-link" href="#android-input-help">Androidのアクセシビリティ確認</a>に従い、OneMouseを再度オンにしてください。
               </div>
             </details>
             <details>
               <summary>Macとの接続はどこから始めますか？</summary>
               <div class="a">
-                接続は<b>Windows 10/11から開始・管理</b
-                >します。Macに表示された6桁コードをWindowsへ入力し、Windowsの配置エディタでMacの位置を設定します。
+                <a class="text-link" href="./guide#mac">Macの接続ガイドを見る</a>
               </div>
             </details>
             <details>
               <summary>カーソルがスマホ/別のPCに閉じ込められて戻ってきません。</summary>
               <div class="a">
-                <kbd style="font-family: var(--mono)">Ctrl+Alt+Backspace</kbd
-                >を押すと、カーソルが自分のPCのモニター中央へ強制的に復帰します。
+                <a class="text-link" href="#quick-help">緊急復帰キーと設定を確認</a>
               </div>
             </details>
-            <details>
+            <details id="screen-sleep">
               <summary>画面がオフになると接続が切れます。</summary>
               <div class="a">
                 画面がオフになるとき、スマホのWi-Fiが省電力になったり、バッテリー最適化でアプリがスリープしたりすることがあります。AndroidでOneMouseを<b>バッテリー最適化の除外</b>にしておくと安定します。接続中の画面オフ防止オプションも確認してください。
               </div>
             </details>
-            <details>
-              <summary>Bluetoothでのリモート画面操作がうまくいきません。</summary>
+            <details id="bluetooth-help">
+              <summary>Bluetooth接続・リモート画面がうまく動きません。</summary>
               <div class="a">
-                モバイル画面のリモート操作はデータ量が多いため、<b>Bluetoothでは推奨しません</b>。リモート操作はWi-Fiで使ってください。Bluetoothはマウス・キーボード・クリップボード・ファイルに向いています。
+                接続の問題は、両機器のシステムBluetooth設定で既存のペアリングを削除し、再度ペアリングしてください。
+                大きなファイル・モバイルのリモート画面にはWi-Fi・LANをおすすめします。Macの画面・ウィンドウ共有はLAN専用です。
+                <a class="text-link" href="./guide#bluetooth">Bluetoothの接続手順</a>
               </div>
             </details>
           </div>

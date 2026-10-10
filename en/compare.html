@@ -70,7 +70,7 @@
                 "name": "Does OneMouse need an account or a server?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "No. Devices pair locally with a 6-digit code or QR code (a PIN with SPAKE2 key exchange), and input, files, and clipboard data move directly between your own paired devices. There is nothing to sign in to and no relay server."
+                  "text": "No. Pair locally with a 6-digit code or QR code; data travels directly between your devices, without sign-in or a relay server. See Technical & Security for connection details."
                 }
               },
               {
@@ -139,12 +139,9 @@
         <p class="ey">Compare</p>
         <h1 class="page">Mouse and keyboard sharing software (software KVM) compared (2026)</h1>
         <p class="lead">
-          This page answers one question:
-          <b>which mouse and keyboard sharing software fits your desk?</b> It puts OneMouse next to
-          the tools people usually consider, from PC-to-PC software KVMs to phone-control utilities
-          and vendor ecosystem features. OneMouse is <b>our own product</b>, so read this as a
-          maker's comparison. The facts about other products come from their official pages and
-          repositories, checked in September 2026.
+          Compare sharing tools for your PC, phone, and tablet setup.
+          This is a <b>comparison by the makers of OneMouse</b>, with other product facts checked
+          against official pages and repositories in September 2026.
         </p>
         <nav class="toc" aria-label="On this page">
           <a href="#types">Tool types</a>
@@ -161,42 +158,31 @@
           <div class="sec-head">
             <p class="ey">Tool types</p>
             <h2 class="sec">Which kind of tool do you need?</h2>
-            <p class="sec-lead">
-              Most "best mouse sharing software" lists mix three different things. Decide which
-              group you are in first; it removes most of the candidates.
-            </p>
+            <p class="sec-lead">Start with the devices you want to connect and how you want to control them.</p>
           </div>
           <div class="cards">
             <article class="card">
               <p class="card-lbl">PC to PC</p>
               <h3>Two computers on one desk</h3>
               <p>
-                Two or more computers, each with its own screen, share one mouse and keyboard over
-                the local network. Push the cursor off one screen edge and it appears on the next
-                machine, usually with a shared clipboard and simple file transfer. This is the
-                classic software KVM: Synergy, Deskflow, Input Leap, Barrier, Mouse Without Borders,
-                ShareMouse, and OneMouse for Windows-to-Windows or Windows-to-Mac.
+                Computers share one mouse and keyboard over the local network.
+                Software KVMs move the cursor from one screen edge to the next computer.
               </p>
             </article>
             <article class="card">
               <p class="card-lbl">PC to phone or tablet</p>
               <h3>Control Android from the PC</h3>
               <p>
-                You want to type and click on an Android phone or tablet without picking it up.
-                There are two approaches. Mirroring tools such as scrcpy show the phone in a window
-                on the PC. Edge-crossing tools move the cursor onto the phone's own screen as if it
-                were another monitor; OneMouse is in this group, and older ADB-based utilities such
-                as DeskDock and InputShare are too. Roundups rarely cover this category at all.
+                Mirroring tools control the phone inside a PC window.
+                Edge-crossing tools such as OneMouse move the cursor onto the phone's own screen.
               </p>
             </article>
             <article class="card">
               <p class="card-lbl">Ecosystem / vendor</p>
               <h3>Only within one brand's devices</h3>
               <p>
-                Free features built into a platform that only work with that vendor's hardware or
-                account: Apple Universal Control (Mac and iPad), Samsung Multi Control (Galaxy
-                devices), and Logitech Flow (Logitech mice). If every device already qualifies,
-                these are convenient. If one device falls outside the brand, they do not apply.
+                These sharing features require compatible vendor hardware or accounts.
+                Check whether every device in your setup is supported.
               </p>
             </article>
           </div>
@@ -348,10 +334,6 @@
           <div class="sec-head">
             <p class="ey">Product notes</p>
             <h2 class="sec">What each tool does well, and where it stops.</h2>
-            <p class="sec-lead">
-              Two or three sentences per product. OneMouse's limits are listed the same way as
-              everyone else's.
-            </p>
           </div>
           <div class="cards">
             <article class="card accent">
@@ -488,36 +470,28 @@
           <div class="panel">
             <ul>
               <li>
-                <b>Two Windows PCs on one desk:</b> Mouse Without Borders is free, already inside
-                PowerToys, and handles up to four Windows PCs. OneMouse also links two Windows PCs
-                with two-way file, folder, and clipboard transfer, and can do it over Bluetooth when
-                there is no router. ShareMouse Free covers two computers for personal use.
+                <b>Two Windows PCs:</b> Candidates include Mouse Without Borders (PowerToys, up to four PCs),
+                OneMouse (Bluetooth and folder transfer), and ShareMouse Free (two PCs, personal use).
               </li>
               <li>
-                <b>Windows PC + Android phone or tablet:</b> OneMouse moves the cursor onto the
-                phone over Wi-Fi or Bluetooth with no cable, no ADB, and no brand requirement, and
-                shows the phone's SMS and messenger notifications, verification codes included, on
-                the PC screen.
-                Samsung Multi Control fits if you have a Galaxy phone, a Galaxy Book or Windows 11
-                PC, and a Samsung account. If you would rather see the phone's screen in a window,
-                use scrcpy (any brand, USB debugging) or Phone Link's Phone screen on the brands it
-                supports.
+                <b>Windows PC + Android:</b> For a cursor on the phone itself, compare OneMouse (Wi-Fi or
+                Bluetooth, no brand requirement) and Samsung Multi Control (Galaxy, a supported PC,
+                and Samsung account). For a mirror window, compare scrcpy (USB debugging) and
+                Phone Link (supported brands).
               </li>
               <li>
-                <b>Windows PC + Mac:</b> OneMouse works when the Windows PC is the host and the Mac
-                is Apple Silicon on macOS 13 or later, over LAN. If the Mac must be the controlling
-                machine, or it is an Intel Mac, use Synergy (paid), Deskflow (free), or ShareMouse.
-                Logitech Flow works if you already own a Flow-enabled Logitech mouse.
+                <b>Windows PC + Mac:</b> OneMouse connects a Windows host to an Apple Silicon Mac on macOS 13+
+                over LAN. For a Mac host or Intel Mac, compare Synergy, Deskflow, ShareMouse, or Flow
+                with a compatible Logitech mouse.
               </li>
               <li>
-                <b>Mac + iPad:</b> Apple Universal Control, built in and free. OneMouse does not
-                support iPad or a Mac host.
+                <b>Mac + iPad:</b> Apple Universal Control is built in.
+                OneMouse does not support iPad or a Mac host.
               </li>
               <li>
-                <b>Linux involved:</b> OneMouse does not support Linux. Deskflow is the actively
-                maintained free option for Windows, macOS, and Linux, and Synergy is the paid one
-                with vendor support. Lan Mouse is a newer open-source alternative with Wayland
-                support. Avoid Barrier and Input Leap for new setups; neither is maintained.
+                <b>Linux involved:</b> OneMouse does not support it; candidates include Deskflow (free),
+                Synergy (paid), and Lan Mouse (Wayland). See the table for Barrier and Input Leap's
+                maintenance status.
               </li>
             </ul>
           </div>
@@ -569,9 +543,9 @@
             <details>
               <summary>Does OneMouse need an account or a server?</summary>
               <div class="a">
-                No. Devices pair locally with a <b>6-digit code or QR code</b> (a PIN with SPAKE2
-                key exchange), and input, files, and clipboard data move directly between your own
-                paired devices. There is nothing to sign in to and no relay server.
+                No. Pair locally with a <b>6-digit code or QR code</b>; data travels directly between your
+                devices, without sign-in or a relay server.
+                See <a class="text-link" href="./technical#data-flow">Technical &amp; Security</a> for connection details.
               </div>
             </details>
             <details>

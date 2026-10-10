@@ -44,13 +44,10 @@
     <main class="main-grid-aligned">
       <section class="phero wrap">
         <p class="ey">技术与安全</p>
-        <h1 class="page">连接结构与权限，我们单独做了整理。</h1>
+        <h1 class="page">连接与安全</h1>
         <p class="lead">
-          本页不讲一般用法，而是说明<b>连接是怎么建立的</b>以及<b>为什么要用这些权限</b>。使用步骤请查看<a
-            href="./guide"
-            style="color: var(--coral-deep); font-weight: 700"
-            >使用指南</a
-          >。
+          介绍数据处理方式和所需权限。
+          设置步骤请查看<a class="text-link" href="./guide" style="color: var(--coral-deep); font-weight: 700">使用指南</a>。
         </p>
         <nav class="toc" aria-label="本页目录">
           <a href="#data-flow">本地优先</a>
@@ -79,31 +76,15 @@
 
       <!-- CONNECTION DIRECTION -->
       <section class="section-alt" id="roles">
-        <div class="wrap">
+        <div class="wrap narrow">
           <div class="sec-head">
             <p class="ey">Connection Direction</p>
-            <h2 class="sec">
-              Windows 发起并管理连接；Android、另一台 Windows PC 与 Mac 是连接目标。
-            </h2>
-            <p class="sec-lead">macOS 13+ Apple 芯片 Mac 已作为 LAN 连接目标公开支持。</p>
+            <h2 class="sec">由 Windows 发起并管理连接。</h2>
           </div>
-          <div class="split">
-            <div class="panel tip">
-              <h3>连接控制端</h3>
-              <ul>
-                <li>使用 Windows 10/11。</li>
-                <li>负责设备发现、选择目标、布局和发送鼠标与键盘输入。</li>
-                <li>与 Mac 配对时，在 Windows 输入 Mac 上显示的 6 位代码。</li>
-              </ul>
-            </div>
-            <div class="panel">
-              <h3>连接目标</h3>
-              <ul>
-                <li>当前公开支持 Android、另一台 Windows PC 与 macOS 13+ Apple 芯片 Mac。</li>
-                <li>Mac 连接由 Windows 端发起并管理，使用 LAN 传输输入、文件和剪贴板。</li>
-              </ul>
-            </div>
-          </div>
+          <p class="sec-lead">
+            Windows 10/11 向 Android、另一台 Windows PC 和 macOS 13+ Apple 芯片 Mac 发送输入。
+            Mac 的官方支持范围为 LAN 连接。
+          </p>
         </div>
       </section>
 
@@ -192,7 +173,7 @@
         <div class="wrap narrow">
           <div class="sec-head">
             <p class="ey">Data Handling</p>
-            <h2 class="sec">输入、文件和剪贴板，都在你选定的范围内。</h2>
+            <h2 class="sec">数据处理</h2>
           </div>
           <div class="panel">
             <ul>
@@ -213,7 +194,7 @@
         <div class="wrap narrow">
           <div class="sec-head">
             <p class="ey">Network</p>
-            <h2 class="sec">连接质量会受本地网络条件的影响。</h2>
+            <h2 class="sec">网络条件</h2>
           </div>
           <div class="split">
             <div class="panel tip">
@@ -234,9 +215,7 @@
               </ul>
             </div>
           </div>
-          <p class="sec-lead" style="margin-top: 16px">
-            OneMouse 不经过互联网中继服务器，因此需要两台设备能够彼此直接找到的环境。
-          </p>
+          <p class="sec-lead" style="margin-top: 16px">设备之间必须能够直接通信。</p>
         </div>
       </section>
 
@@ -245,12 +224,10 @@
         <div class="wrap narrow">
           <div class="sec-head">
             <p class="ey">Support Scope</p>
-            <h2 class="sec">公开指南以 Wi-Fi/LAN 和 Bluetooth 连接为准。</h2>
+            <h2 class="sec">支持的平台与连接方式</h2>
           </div>
           <div class="panel">
             <ul>
-              <li><b>连接控制端：</b>Windows 10/11。设备发现、布局和输入发送均从 Windows 进行。</li>
-              <li><b>当前公开连接目标：</b>Android、另一台 Windows PC 与 Apple 芯片 Mac。</li>
               <li>
                 <b>Mac：</b>支持 macOS 13+ Apple 芯片机型，连接由 Windows
                 端发起并管理，当前公开支持使用 LAN。
@@ -279,6 +256,7 @@
           <div class="sec-head">
             <p class="ey">Updates</p>
             <h2 class="sec">最近更新记录。</h2>
+            <p class="sec-lead" id="updates-history-note">旧记录中的“下个版本”计划反映的是记录编写时的状态。</p>
           </div>
           <div class="log">
             <div class="log-item">

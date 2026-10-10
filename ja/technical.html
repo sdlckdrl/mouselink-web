@@ -44,13 +44,10 @@
     <main class="main-grid-aligned">
       <section class="phero wrap">
         <p class="ey">技術・セキュリティ</p>
-        <h1 class="page">接続の仕組みと権限を、別ページにまとめました。</h1>
+        <h1 class="page">接続とセキュリティ</h1>
         <p class="lead">
-          このページは一般的な使い方ではなく、<b>どうやって接続されるのか</b>と<b>なぜ権限を使うのか</b>を説明します。使う順番は<a
-            href="./guide"
-            style="color: var(--coral-deep); font-weight: 700"
-            >使い方ガイド</a
-          >をご覧ください。
+          データの扱いと必要な権限を説明します。
+          設定方法は<a class="text-link" href="./guide" style="color: var(--coral-deep); font-weight: 700">使い方ガイド</a>をご覧ください。
         </p>
         <nav class="toc" aria-label="このページの目次">
           <a href="#data-flow">ローカル優先</a>
@@ -80,46 +77,15 @@
 
       <!-- デバイスの役割 -->
       <section class="section-alt" id="roles">
-        <div class="wrap">
+        <div class="wrap narrow">
           <div class="sec-head">
             <p class="ey">接続の方向</p>
             <h2 class="sec">接続はWindowsから開始・管理します。</h2>
-            <p class="sec-lead">
-              Android、別のWindows PC、macOS 13以降のApple Silicon
-              Macを接続先として同じ並びで扱います。Macの公開サポートはLAN接続が対象です。
-            </p>
           </div>
-          <div class="cards">
-            <article class="card accent">
-              <p class="card-lbl">接続を開始・管理</p>
-              <h3>Windows 10/11</h3>
-              <p>
-                マウス・キーボード入力を取得し、デバイス管理で接続先を選び、配置した画面境界から入力を送ります。
-              </p>
-            </article>
-            <article class="card">
-              <p class="card-lbl">接続先</p>
-              <h3>Android</h3>
-              <p>
-                Windowsから届いた入力をアクセシビリティサービスで受け取り、ファイルとクリップボードをやり取りします。
-              </p>
-            </article>
-            <article class="card">
-              <p class="card-lbl">接続先</p>
-              <h3>別のWindows PC</h3>
-              <p>
-                Windowsのデバイス管理で選択・配置し、入力を受け取ります。コンピューター間でファイルも転送できます。
-              </p>
-            </article>
-            <article class="card">
-              <p class="card-lbl">接続先 · LANで公開サポート</p>
-              <h3>macOS 13以降</h3>
-              <p>
-                Apple Silicon
-                Mac向けの公開版です。Windows側から選択し、Macに表示された6桁コードを入力してLANで接続します。
-              </p>
-            </article>
-          </div>
+          <p class="sec-lead">
+            Windows 10/11がAndroid・別のWindows PC・macOS 13以降のApple Silicon Macへ入力を送ります。
+            Macの公開サポートはLAN接続です。
+          </p>
         </div>
       </section>
 
@@ -211,7 +177,7 @@
         <div class="wrap narrow">
           <div class="sec-head">
             <p class="ey">Data Handling</p>
-            <h2 class="sec">入力・ファイル・クリップボードは、ユーザーが選んだ範囲で。</h2>
+            <h2 class="sec">データの扱い</h2>
           </div>
           <div class="panel">
             <ul>
@@ -240,7 +206,7 @@
         <div class="wrap narrow">
           <div class="sec-head">
             <p class="ey">Network</p>
-            <h2 class="sec">接続品質は、ローカルネットワークの条件の影響を受けます。</h2>
+            <h2 class="sec">ネットワーク条件</h2>
           </div>
           <div class="split">
             <div class="panel tip">
@@ -260,10 +226,7 @@
               </ul>
             </div>
           </div>
-          <p class="sec-lead" style="margin-top: 16px">
-            OneMouseはインターネットのリレーサーバーを経由しないため、Windowsと接続先のAndroid、別のWindows
-            PC、Macがお互いを直接見つけられる環境である必要があります。
-          </p>
+          <p class="sec-lead" style="margin-top: 16px">デバイス同士が直接通信できる環境が必要です。</p>
         </div>
       </section>
 
@@ -272,17 +235,10 @@
         <div class="wrap narrow">
           <div class="sec-head">
             <p class="ey">Support Scope</p>
-            <h2 class="sec">Apple Silicon MacをLANの接続先として公開サポートします。</h2>
+            <h2 class="sec">対応プラットフォームと接続方式</h2>
           </div>
           <div class="panel">
             <ul>
-              <li>
-                <b>接続の開始・管理：</b>Windows 10/11で接続先を選択・配置し、入力を送ります。
-              </li>
-              <li>
-                <b>接続先：</b>Android、別のWindows PC、macOS 13以降のApple Silicon
-                Mac。Macへの接続はWindowsから開始・管理し、LANを使用します。
-              </li>
               <li>
                 Macの入力・ファイル・境界ドラッグ・画面共有はLANで利用できます。MacのBluetooth接続はベータ版です（公式サポートはLAN）。Mac画面・ウィンドウ共有はLAN専用です。
               </li>
@@ -302,6 +258,7 @@
           <div class="sec-head">
             <p class="ey">Updates</p>
             <h2 class="sec">最近の更新履歴。</h2>
+            <p class="sec-lead" id="updates-history-note">過去の記録の「次回版」は、その記録を作成した時点の予定です。</p>
           </div>
           <div class="log">
             <div class="log-item">

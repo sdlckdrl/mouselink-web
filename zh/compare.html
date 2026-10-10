@@ -70,7 +70,7 @@
                 "name": "OneMouse 需要账号或服务器吗？",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "不需要。设备通过 6 位代码或 QR 码在本地配对（PIN 加 SPAKE2 密钥交换），输入、文件和剪贴板数据直接在你自己已配对的设备之间传输。没有任何需要登录的地方，也没有中继服务器。"
+                  "text": "不需要。通过6 位代码或 QR 码在本地配对，数据直接在自己的设备之间传输，无需登录或中继服务器。 连接详情请查看技术与安全。"
                 }
               },
               {
@@ -139,7 +139,8 @@
         <p class="ey">软件对比</p>
         <h1 class="page">鼠标键盘共享软件（软件 KVM）对比（2026）</h1>
         <p class="lead">
-          本页只回答一个问题：<b>哪款鼠标键盘共享软件适合你的桌面？</b>它把 OneMouse 与人们通常会考虑的工具放在一起比较，从 PC 对 PC 的软件 KVM 到手机控制工具，再到厂商生态功能。OneMouse 是<b>我们自己的产品</b>，因此请把本页当作开发者视角的对比来读。其他产品的信息来自其官方页面和代码仓库，于 2026 年 9 月核对。
+          比较适合你的电脑、手机和平板组合的共享工具。
+          本页由<b>OneMouse 开发者编写</b>，其他产品信息于 2026 年 9 月在官方页面和代码仓库中核对。
         </p>
         <nav class="toc" aria-label="本页目录">
           <a href="#types">工具类型</a>
@@ -156,30 +157,31 @@
           <div class="sec-head">
             <p class="ey">工具类型</p>
             <h2 class="sec">你需要哪一类工具？</h2>
-            <p class="sec-lead">
-              大多数“最佳鼠标共享软件”榜单把三类不同的东西混在一起。先确定自己属于哪一组，就能排除掉大部分候选。
-            </p>
+            <p class="sec-lead">先确认要连接的设备和需要的控制方式。</p>
           </div>
           <div class="cards">
             <article class="card">
               <p class="card-lbl">PC 对 PC</p>
               <h3>一张桌子上的两台电脑</h3>
               <p>
-                两台或多台各有自己屏幕的电脑，通过本地网络共用一套鼠标和键盘。把光标推出一块屏幕的边缘，它就出现在下一台机器上，通常还带共享剪贴板和简单的文件传输。这就是经典的软件 KVM：Synergy、Deskflow、Input Leap、Barrier、Mouse Without Borders、ShareMouse，以及用于 Windows 对 Windows 或 Windows 对 Mac 的 OneMouse。
+                多台电脑通过本地网络共用一套鼠标和键盘。
+                软件 KVM 让光标从屏幕边缘移到下一台电脑。
               </p>
             </article>
             <article class="card">
               <p class="card-lbl">PC 对手机或平板</p>
               <h3>从 PC 控制 Android</h3>
               <p>
-                你想不用拿起手机，就在 Android 手机或平板上打字和点击。有两种做法。scrcpy 等镜像工具把手机显示在 PC 上的一个窗口里。跨边缘工具则把光标移到手机自己的屏幕上，就像它是另一块显示器；OneMouse 属于这一组，DeskDock、InputShare 等较早的基于 ADB 的工具也是。榜单文章很少涉及这一类。
+                镜像工具在电脑窗口内控制手机。
+                OneMouse 等跨边缘工具则把光标移到手机自己的屏幕上。
               </p>
             </article>
             <article class="card">
               <p class="card-lbl">生态 / 厂商</p>
               <h3>只限同一品牌的设备</h3>
               <p>
-                内置于平台的免费功能，只能配合该厂商的硬件或账号使用：Apple Universal Control（Mac 和 iPad）、Samsung Multi Control（Galaxy 设备）和 Logitech Flow（Logitech 鼠标）。如果每台设备都符合条件，它们很方便；只要有一台设备不在该品牌之内，就用不上。
+                这些共享功能需要厂商指定的硬件或账号。
+                请确认你的每台设备都符合支持条件。
               </p>
             </article>
           </div>
@@ -321,9 +323,6 @@
           <div class="sec-head">
             <p class="ey">产品说明</p>
             <h2 class="sec">每款工具擅长什么，止步于何处。</h2>
-            <p class="sec-lead">
-              每款产品两三句话。OneMouse 的限制也按同样的方式列出。
-            </p>
           </div>
           <div class="cards">
             <article class="card accent">
@@ -417,19 +416,23 @@
           <div class="panel">
             <ul>
               <li>
-                <b>一张桌子上的两台 Windows PC：</b>Mouse Without Borders 免费，已内置于 PowerToys，最多可处理四台 Windows PC。OneMouse 同样可以连接两台 Windows PC，支持双向文件、文件夹和剪贴板传输，没有路由器时还能通过 Bluetooth 完成。ShareMouse Free 面向个人使用，覆盖两台电脑。
+                <b>两台 Windows PC：</b>可比较 Mouse Without Borders（PowerToys，最多四台）、OneMouse（Bluetooth 和文件夹传输）及 ShareMouse Free（个人使用，两台电脑）。
               </li>
               <li>
-                <b>Windows PC + Android 手机或平板：</b>OneMouse 通过 Wi-Fi 或 Bluetooth 把光标移到手机上，不需要数据线、ADB，也没有品牌限制，手机的短信、聊天通知和验证码也能显示在电脑屏幕上。如果你有 Galaxy 手机、Galaxy Book 或 Windows 11 PC 以及三星账号，Samsung Multi Control 也合适。如果你更想在窗口里看到手机屏幕，可以用 scrcpy（不限品牌，需 USB 调试），或在受支持的品牌上使用 Phone Link 的手机屏幕功能。
+                <b>Windows PC + Android：</b>要在手机自身屏幕上移动光标，可比较 OneMouse（Wi-Fi 或 Bluetooth，不限品牌）和 Samsung Multi Control（Galaxy、支持的电脑、三星账号）。
+                要使用镜像窗口，可比较 scrcpy（USB 调试）和 Phone Link（支持的品牌）。
               </li>
               <li>
-                <b>Windows PC + Mac：</b>当 Windows PC 作为主机、Mac 是运行 macOS 13 或更高版本的 Apple 芯片机型时，OneMouse 可通过 LAN 工作。如果必须由 Mac 作为控制端，或者它是 Intel Mac，请使用 Synergy（付费）、Deskflow（免费）或 ShareMouse。如果你已经拥有支持 Flow 的 Logitech 鼠标，Logitech Flow 也可以。
+                <b>Windows PC + Mac：</b>OneMouse 通过 LAN 连接 Windows 主机和 macOS 13+ Apple 芯片 Mac。
+                对于 Mac 控制端或 Intel Mac，可比较 Synergy、Deskflow、ShareMouse，或需要兼容 Logitech 鼠标的 Flow。
               </li>
               <li>
-                <b>Mac + iPad：</b>Apple Universal Control，系统内置且免费。OneMouse 不支持 iPad，也不支持以 Mac 作为主机。
+                <b>Mac + iPad：</b>Apple Universal Control 已内置。
+                OneMouse 不支持 iPad 或 Mac 控制端。
               </li>
               <li>
-                <b>涉及 Linux：</b>OneMouse 不支持 Linux。Deskflow 是面向 Windows、macOS 和 Linux 且仍在积极维护的免费选择，Synergy 则是带厂商支持的付费选择。Lan Mouse 是一个较新的开源替代品，支持 Wayland。新搭建的环境请避开 Barrier 和 Input Leap；两者都已无人维护。
+                <b>涉及 Linux：</b>OneMouse 不支持，可比较 Deskflow（免费）、Synergy（付费）和 Lan Mouse（Wayland）。
+                Barrier 与 Input Leap 的维护状态请查看对比表。
               </li>
             </ul>
           </div>
@@ -465,7 +468,8 @@
             <details>
               <summary>OneMouse 需要账号或服务器吗？</summary>
               <div class="a">
-                不需要。设备通过 <b>6 位代码或 QR 码</b>在本地配对（PIN 加 SPAKE2 密钥交换），输入、文件和剪贴板数据直接在你自己已配对的设备之间传输。没有任何需要登录的地方，也没有中继服务器。
+                不需要。通过<b>6 位代码或 QR 码</b>在本地配对，数据直接在自己的设备之间传输，无需登录或中继服务器。
+                连接详情请查看<a class="text-link" href="./technical#data-flow">技术与安全</a>。
               </div>
             </details>
             <details>

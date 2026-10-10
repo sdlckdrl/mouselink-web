@@ -46,13 +46,12 @@
         <p class="ey">도움말</p>
         <h1 class="page">안 될 때는, 단계로 좁혀보세요.</h1>
         <p class="lead">
-          원인을 <b>전원 → 발견 → 방화벽 → 페어링 → 입력·복귀</b> 순서로 좁혀보세요. Android, 다른
-          Windows PC, Mac에 공통으로 적용한 뒤 플랫폼별 권한을 확인하면 됩니다.
+          <b>앱 실행 → 검색 → 방화벽 → 페어링 → 입력</b> 순서로 확인하세요.
         </p>
       </section>
 
       <!-- 이것부터 -->
-      <section style="padding-top: 14px">
+      <section id="quick-help" style="padding-top: 14px">
         <div class="wrap narrow">
           <div class="panel tip">
             <p>
@@ -67,13 +66,12 @@
                 <kbd style="font-family: var(--mono)">Ctrl+Alt+Backspace</kbd>를 누르면 커서가 내
                 PC(모니터 중앙)로 돌아옵니다.
               </li>
-              <li>
+              <li id="android-input-help">
                 <b>연결은 됐는데 입력이 안 될 때 →</b> Android <b>접근성 서비스</b>가 꺼졌거나
                 재시작됐을 수 있습니다. 접근성에서 OneMouse를 다시 켜세요.
               </li>
               <li>
-                <b>Mac에 입력이 안 될 때 →</b> macOS 시스템 설정 → 개인정보 보호 및 보안 →
-                <b>손쉬운 사용</b>에서 OneMouse를 허용하세요.
+                <b>Mac에 입력이 안 될 때 →</b> <a class="text-link" href="#mac-input-help">손쉬운 사용 권한 확인</a>
               </li>
             </ul>
           </div>
@@ -93,9 +91,7 @@
               <div class="body">
                 <h4>전원과 권한</h4>
                 <p>
-                  Windows와 연결할 기기 앱이 모두 켜져 있는지 확인합니다. Android는
-                  <b>접근성 서비스</b>, Mac은 입력을 위한 <b>손쉬운 사용</b>이 필요합니다. Mac 로컬
-                  네트워크 권한은 macOS 15+에서만 표시될 수 있습니다.
+                  양쪽 앱이 실행 중인지 확인하세요. 입력 권한은 <a class="text-link" href="#quick-help">먼저 확인할 항목</a>을 봅니다.
                 </p>
               </div>
             </div>
@@ -125,8 +121,7 @@
               <div class="body">
                 <h4>페어링·연결</h4>
                 <p>
-                  QR 또는 6자리 코드 페어링이 끝났는지, 기기 관리에서 연결 상태인지 확인합니다.
-                  페어링 전에는 입력·파일 채널이 열리지 않습니다.
+                  기기 관리에서 페어링·연결 상태를 확인하세요. 처음이라면 <a class="text-link" href="./guide#start">연결 가이드</a>를 따르세요.
                 </p>
               </div>
             </div>
@@ -135,9 +130,7 @@
               <div class="body">
                 <h4>입력·복귀</h4>
                 <p>
-                  배치한 가장자리로 마우스를 밀어 넘어가는지, 안 넘어가면 위치 배치를 확인합니다.
-                  커서가 엉뚱한 데 있으면
-                  <kbd style="font-family: var(--mono)">Ctrl+Alt+Backspace</kbd>로 복귀시킵니다.
+                  배치한 가장자리로 넘어가지 않으면 위치 배치를 확인하세요. 커서를 잃었다면 <a class="text-link" href="#quick-help">복귀 방법</a>을 보세요.
                 </p>
               </div>
             </div>
@@ -163,7 +156,7 @@
                 있으므로 Windows 방화벽과 네트워크를 확인하세요.
               </p>
             </article>
-            <article class="card accent">
+            <article class="card accent" id="mac-input-help">
               <p class="card-lbl">입력되지 않음</p>
               <h3>손쉬운 사용</h3>
               <p>
@@ -171,7 +164,7 @@
                 앱을 완전히 종료한 뒤 다시 실행하세요.
               </p>
             </article>
-            <article class="card">
+            <article class="card" id="mac-screen-help">
               <p class="card-lbl">화면이 보이지 않음</p>
               <h3>화면 녹화</h3>
               <p>
@@ -191,7 +184,7 @@
           <div class="panel tip" style="margin-top: 16px">
             <h3>Mac 연결은 Windows에서 시작합니다</h3>
             <p style="margin: 0; color: var(--muted); font-size: 14px">
-              Windows 앱의 기기 관리에서 Mac을 선택하고 Mac에 표시된 6자리 코드로 연결합니다.
+              <a class="text-link" href="./guide#mac">Mac 연결 가이드 보기</a>
             </p>
           </div>
         </div>
@@ -244,9 +237,14 @@
                 <b>인증번호 알림</b> 블록에서 <b>PC 등록하기</b>로 이 PC를 한 번 등록하세요.
                 블루투스는 등록할 때만 켜면 됩니다.
               </li>
-              <li>알림은 잠깐 표시되며 기록은 PC에 암호화 보관됩니다(서버 전송 없음). 켠 뒤 받은 알림만 기록하며 인증번호·가려진 민감 내용은 저장하지 않습니다.</li>
-              <li>기록은 기본 켜짐·7일·최대 200개입니다. 메인 설정 → 알림에서 1일·7일·30일 또는 새 기록 저장 끄기를 선택하세요. 기존 기록은 남으며 지난 알림에서 전체 삭제할 수 있습니다.</li>
             </ul>
+            <details class="fold" id="notification-history">
+              <summary><span>지난 알림 보관·삭제</span></summary>
+              <div class="fold-body">
+                <p>알림은 잠깐 표시되며 기록은 PC에 암호화 보관됩니다(서버 전송 없음). 켠 뒤 받은 알림만 기록하며 인증번호·가려진 민감 내용은 저장하지 않습니다.</p>
+                <p>기록은 기본 켜짐·7일·최대 200개입니다. 메인 설정 → 알림에서 1일·7일·30일 또는 새 기록 저장 끄기를 선택하세요. 기존 기록은 남으며 지난 알림에서 전체 삭제할 수 있습니다.</p>
+              </div>
+            </details>
           </div>
         </div>
       </section>
@@ -324,17 +322,14 @@
                 </ul>
               </div>
             </details>
-            <details open>
+            <details id="connection-drops">
               <summary>10초쯤마다 계속 끊겨요.</summary>
               <div class="a">
-                대표 원인 네 가지입니다: <b>① 게스트/회사 Wi-Fi의 기기 간 격리</b>,
-                <b>② 배터리 최적화</b>로 폰의 백그라운드 연결이 잘림,
-                <b>③ Windows 방화벽 인바운드 차단</b>, <b>④ 화면이 꺼지면 Wi-Fi가 절전(슬립)</b>.
-                배터리 예외를 켜고, 방화벽에서 OneMouse 인바운드를 허용하고, 가능하면 개인 Wi-Fi를
-                쓰세요.
+                게스트·회사 Wi-Fi의 기기 간 격리와 <a class="text-link" href="#firewall-help">Windows 방화벽</a>을 확인하세요.
+                폰이 쉬는 동안 끊긴다면 <a class="text-link" href="#screen-sleep">배터리·절전 설정</a>을 확인하세요.
               </div>
             </details>
-            <details>
+            <details id="firewall-help">
               <summary>폰에서는 PC가 보이는데, PC에서 폰이 안 보여요.</summary>
               <div class="a">
                 대개 <b>Windows 방화벽 인바운드</b> 문제입니다. 현재 네트워크가
@@ -353,32 +348,28 @@
             <details>
               <summary>연결은 됐다는데 마우스·키보드가 안 먹어요.</summary>
               <div class="a">
-                Android <b>접근성 서비스</b>가 꺼졌거나 시스템에 의해 재시작됐을 가능성이 큽니다.
-                Android 설정 → 접근성에서 OneMouse를 다시 켜세요.
+                <a class="text-link" href="#android-input-help">Android 접근성 확인 방법</a>을 따라 OneMouse를 다시 켜세요.
               </div>
             </details>
             <details>
               <summary>Mac은 보이는데 입력이 안 되면?</summary>
               <div class="a">
-                Mac의 <b>손쉬운 사용</b> 권한을 확인하고 OneMouse를 완전히 종료한 뒤 다시
-                실행하세요.
+                <a class="text-link" href="#mac-input-help">Mac 손쉬운 사용 권한 확인</a>
               </div>
             </details>
             <details>
               <summary>Mac 화면이나 창이 검게 보여요.</summary>
               <div class="a">
-                화면 공유를 사용할 때는 Mac의 <b>화면 녹화</b> 권한이 필요합니다. 권한을 허용한 뒤
-                공유를 껐다 켜세요. 기본 입력 제어에는 이 권한이 필요하지 않습니다.
+                <a class="text-link" href="#mac-screen-help">Mac 화면 녹화 권한 확인</a> 후 공유를 껐다 켜세요.
               </div>
             </details>
             <details>
               <summary>커서가 폰/다른 PC에 갇혀서 안 돌아와요.</summary>
               <div class="a">
-                <kbd style="font-family: var(--mono)">Ctrl+Alt+Backspace</kbd>를 누르면 커서가 내
-                PC의 모니터 중앙으로 강제 복귀합니다.
+                <a class="text-link" href="#quick-help">긴급 복귀 키와 설정 확인</a>
               </div>
             </details>
-            <details>
+            <details id="screen-sleep">
               <summary>화면이 꺼지면 연결이 끊겨요.</summary>
               <div class="a">
                 화면이 꺼질 때 폰의 Wi-Fi가 절전되거나 배터리 최적화로 앱이 잠들 수 있습니다.
@@ -386,11 +377,12 @@
                 꺼짐 방지 옵션도 확인하세요.
               </div>
             </details>
-            <details>
-              <summary>블루투스로 원격 화면 제어가 잘 안 돼요.</summary>
+            <details id="bluetooth-help">
+              <summary>블루투스 연결·원격 화면이 잘 안 돼요.</summary>
               <div class="a">
-                모바일 화면 원격 제어는 데이터가 많아 <b>블루투스에서는 권장하지 않습니다</b>. 원격
-                제어는 Wi-Fi로 쓰세요. 블루투스는 마우스·키보드·클립보드·파일에 적합합니다.
+                연결 문제는 두 기기의 시스템 Bluetooth 설정에서 기존 페어링을 삭제하고 다시 페어링하세요.
+                큰 파일·모바일 원격 화면은 Wi-Fi·LAN을 권장합니다. Mac 화면·창 공유는 LAN 전용입니다.
+                <a class="text-link" href="./guide#bluetooth">블루투스 연결 순서</a>
               </div>
             </details>
           </div>

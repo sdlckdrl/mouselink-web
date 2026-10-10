@@ -70,7 +70,7 @@
                 "name": "OneMouseにアカウントやサーバーは必要ですか？",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "必要ありません。デバイスは6桁のコードまたはQRコード（SPAKE2鍵交換を使うPIN）でローカルにペアリングし、入力、ファイル、クリップボードのデータはペアリングした自分のデバイス間で直接やり取りされます。サインインするものも、中継サーバーもありません。"
+                  "text": "必要ありません。6桁のコードまたはQRコードでローカルにペアリングし、データは自分のデバイス間で直接やり取りします。 ログインや中継サーバーは不要です。接続の詳細は技術・セキュリティをご覧ください。"
                 }
               },
               {
@@ -139,7 +139,8 @@
         <p class="ey">比較</p>
         <h1 class="page">マウス・キーボード共有ソフト（ソフトウェアKVM）比較（2026年）</h1>
         <p class="lead">
-          このページが答えるのは、ひとつの質問です。<b>自分の机に合うマウス・キーボード共有ソフトはどれか。</b>PC間のソフトウェアKVMからスマホ操作ユーティリティ、メーカー独自のエコシステム機能まで、よく候補に挙がるツールとOneMouseを並べて比較します。OneMouseは<b>当社の製品</b>ですので、開発元による比較としてお読みください。他社製品に関する事実は、各社の公式ページとリポジトリをもとに2026年9月に確認したものです。
+          PC・スマホ・タブレットの組み合わせに合う共有ツールを比較します。
+          <b>OneMouseの開発元による比較</b>で、他社製品の情報は公式ページとリポジトリで2026年9月に確認しました。
         </p>
         <nav class="toc" aria-label="このページの目次">
           <a href="#types">ツールの種類</a>
@@ -156,30 +157,31 @@
           <div class="sec-head">
             <p class="ey">ツールの種類</p>
             <h2 class="sec">どの種類のツールが必要ですか？</h2>
-            <p class="sec-lead">
-              「おすすめマウス共有ソフト」のようなまとめ記事の多くは、性質の異なる3種類のツールを混ぜて紹介しています。まず自分がどのグループに当てはまるかを決めれば、候補の大半は絞り込めます。
-            </p>
+            <p class="sec-lead">接続するデバイスと操作方法から選びましょう。</p>
           </div>
           <div class="cards">
             <article class="card">
               <p class="card-lbl">PCとPC</p>
               <h3>1つの机に2台のコンピューター</h3>
               <p>
-                それぞれ画面を持つ2台以上のコンピューターが、ローカルネットワーク経由で1組のマウスとキーボードを共有します。カーソルを画面の端の外へ押し出すと隣のマシンに現れ、多くの場合は共有クリップボードと簡単なファイル転送も付いています。これが古典的なソフトウェアKVMで、Synergy、Deskflow、Input Leap、Barrier、Mouse Without Borders、ShareMouse、そしてWindows同士またはWindowsとMacの組み合わせにおけるOneMouseがここに入ります。
+                複数のコンピューターがローカルネットワークで1組のマウスとキーボードを共有します。
+                ソフトウェアKVMは画面端から次のコンピューターへカーソルを移します。
               </p>
             </article>
             <article class="card">
               <p class="card-lbl">PCとスマホ・タブレット</p>
               <h3>PCからAndroidを操作する</h3>
               <p>
-                Androidスマホやタブレットを手に取らずに、PCから入力やクリックをしたい場合です。方法は2つあります。scrcpyのようなミラーリングツールは、スマホの画面をPC上のウィンドウに表示します。エッジクロッシング（画面端越え）型のツールは、スマホをもう1台のモニターのように扱い、カーソルをスマホ自身の画面へ移動させます。OneMouseはこのグループで、DeskDockやInputShareといった古いADBベースのユーティリティも同じ仲間です。まとめ記事がこのカテゴリーを扱うことはほとんどありません。
+                ミラーリングツールはPCのウィンドウ内でスマホを操作します。
+                OneMouseなどの画面端越え型ツールは、スマホ自身の画面へカーソルを移します。
               </p>
             </article>
             <article class="card">
               <p class="card-lbl">エコシステム / メーカー</p>
               <h3>同じブランドのデバイス間だけ</h3>
               <p>
-                プラットフォームに組み込まれた無料機能で、そのメーカーのハードウェアやアカウントでしか動作しません。Apple Universal Control（MacとiPad）、Samsung Multi Control（Galaxyデバイス）、Logitech Flow（Logitechのマウス）がこれにあたります。すべてのデバイスが条件を満たしていれば便利ですが、1台でもブランドの外にあれば使えません。
+                メーカー指定のハードウェアやアカウントが必要な共有機能です。
+                使うデバイスがすべて対応しているか確認してください。
               </p>
             </article>
           </div>
@@ -329,9 +331,6 @@
           <div class="sec-head">
             <p class="ey">製品ごとの補足</p>
             <h2 class="sec">各ツールの得意なことと、限界。</h2>
-            <p class="sec-lead">
-              製品ごとに2〜3文で説明します。OneMouseの制限も、他の製品と同じ書き方で挙げています。
-            </p>
           </div>
           <div class="cards">
             <article class="card accent">
@@ -425,19 +424,23 @@
           <div class="panel">
             <ul>
               <li>
-                <b>1つの机にWindows PCが2台：</b>Mouse Without Bordersは無料で、PowerToysに最初から含まれ、最大4台のWindows PCに対応します。OneMouseも2台のWindows PCをつなぎ、ファイル・フォルダー・クリップボードを双方向でやり取りでき、ルーターがなければBluetoothでも接続できます。ShareMouse Freeは個人利用で2台まで対応します。
+                <b>Windows PCが2台：</b>Mouse Without Borders（PowerToys、最大4台）、OneMouse（Bluetooth・フォルダー転送）、ShareMouse Free（個人利用で2台）が候補です。
               </li>
               <li>
-                <b>Windows PC + Androidスマホ・タブレット：</b>OneMouseはケーブルもADBもブランドの条件もなしに、Wi-FiまたはBluetoothでカーソルをスマホへ移動させ、スマホのSMS・メッセージ通知や認証コードもPC画面に表示します。Galaxyスマホ、Galaxy BookまたはWindows 11 PC、Samsungアカウントがそろっていれば、Samsung Multi Controlも候補です。スマホの画面をウィンドウで見たい場合は、scrcpy（ブランドを問わず、USBデバッグが必要）か、対応ブランドであればPhone Linkのスマホ画面機能をお使いください。
+                <b>Windows PC + Android：</b>スマホ自身の画面へカーソルを移すなら、OneMouse（Wi-Fi・Bluetooth、ブランド不問）とSamsung Multi Control（Galaxy・対応PC・Samsungアカウント）を比較してください。
+                ミラーウィンドウならscrcpy（USBデバッグ）とPhone Link（対応ブランド）が候補です。
               </li>
               <li>
-                <b>Windows PC + Mac：</b>OneMouseは、Windows PCがホストで、MacがmacOS 13以降のApple SiliconであればLAN経由で動作します。Macを操作する側にしたい場合や、Intel Macの場合は、Synergy（有料）、Deskflow（無料）、ShareMouseをお使いください。Flow対応のLogitechマウスをすでにお持ちなら、Logitech Flowも使えます。
+                <b>Windows PC + Mac：</b>OneMouseはWindowsホストとmacOS 13以降のApple Silicon MacをLANで接続します。
+                MacホストやIntel MacではSynergy、Deskflow、ShareMouse、または対応Logitechマウスを使うFlowを比較してください。
               </li>
               <li>
-                <b>Mac + iPad：</b>Apple Universal Controlが内蔵かつ無料です。OneMouseはiPadにもMacホストにも対応していません。
+                <b>Mac + iPad：</b>Apple Universal Controlが内蔵されています。
+                OneMouseはiPadとMacホストに対応していません。
               </li>
               <li>
-                <b>Linuxが含まれる：</b>OneMouseはLinuxに対応していません。DeskflowはWindows、macOS、Linux向けに活発にメンテナンスされている無料の選択肢で、Synergyはメーカーサポート付きの有料の選択肢です。Lan MouseはWayland対応の比較的新しいオープンソースの代替です。新しく構築する環境ではBarrierとInput Leapは避けてください。どちらもメンテナンスされていません。
+                <b>Linuxを含む場合：</b>OneMouseは非対応で、Deskflow（無料）、Synergy（有料）、Lan Mouse（Wayland）が候補です。
+                Barrier・Input Leapのメンテナンス状況は比較表をご覧ください。
               </li>
             </ul>
           </div>
@@ -477,7 +480,8 @@
             <details>
               <summary>OneMouseにアカウントやサーバーは必要ですか？</summary>
               <div class="a">
-                必要ありません。デバイスは<b>6桁のコードまたはQRコード</b>（SPAKE2鍵交換を使うPIN）でローカルにペアリングし、入力、ファイル、クリップボードのデータはペアリングした自分のデバイス間で直接やり取りされます。サインインするものも、中継サーバーもありません。
+                必要ありません。<b>6桁のコードまたはQRコード</b>でローカルにペアリングし、データは自分のデバイス間で直接やり取りします。
+                ログインや中継サーバーは不要です。接続の詳細は<a class="text-link" href="./technical#data-flow">技術・セキュリティ</a>をご覧ください。
               </div>
             </details>
             <details>
