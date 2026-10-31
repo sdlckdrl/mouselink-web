@@ -46,11 +46,10 @@
         <p class="ey">Política de privacidad</p>
         <h1 class="page">Política de privacidad</h1>
         <p class="lead">
-          OneMouse conecta Windows con Android, otros PC con Windows vinculados y Mac con Apple
-          Silicon que ejecutan macOS 13 o posterior. Las conexiones con Mac dentro del alcance de
-          soporte público actual usan la red local.
+          OneMouse conecta Windows con Android, otros PC con Windows y Mac. Esta política describe el tratamiento de datos y los permisos de la vinculación LAN/Bluetooth y de la conexión opcional mediante una cuenta de Google.
         </p>
-        <p class="policy-date">Fecha de entrada en vigor: 1 de septiembre de 2026 · Última actualización: 21 de septiembre de 2026</p>
+        <p class="policy-date">Fecha de entrada en vigor: 1 de septiembre de 2026 · Última actualización: 31 de octubre de 2026</p>
+        <p><a class="text-link" href="#google-account">Datos de la cuenta de Google</a> · <a class="text-link" href="#account-deletion">Solicitar eliminación de cuenta y datos</a></p>
       </section>
 
       <section>
@@ -60,10 +59,7 @@
               <p class="num">01</p>
               <h2>Principio fundamental</h2>
               <p>
-                OneMouse usa comunicación local entre el PC con Windows del usuario y un dispositivo
-                Android, otro PC con Windows o un Mac vinculados. OneMouse no opera un servidor de
-                cuentas que almacene archivos del usuario, contenido del portapapeles ni contenido
-                de entrada.
+                La vinculación LAN/Bluetooth funciona sin iniciar sesión. En versiones compatibles, la conexión opcional mediante Google permite encontrar tus dispositivos de la misma cuenta e intentar conexiones directas entre redes. El servidor de cuentas de OneMouse procesa metadatos y señales de conexión; no almacena ni retransmite archivos, portapapeles, entradas o vídeo.
               </p>
             </article>
             <article class="lcard">
@@ -201,6 +197,38 @@
                 archivo. Como en cualquier solicitud de internet, tu dirección IP y la hora de la
                 solicitud pueden quedar registradas en los registros del servidor. La descarga del
                 instalador solo se realiza cuando eliges descargarla explícitamente.
+              </p>
+            </article>
+            <article class="lcard" id="google-account">
+              <p class="num">09</p>
+              <h2>Conexión opcional con Google</h2>
+              <p>
+                Usamos el identificador de cuenta verificado por Google (sub) y el correo electrónico verificado, si se proporciona, para identificar y mostrar tu cuenta. No recibimos tu contraseña de Google ni accedemos a tus contactos, mensajes de correo o archivos de Google Drive.
+              </p>
+              <p>
+                El servicio almacena las claves públicas, los ID derivados de ellas, los nombres y tipos de los dispositivos registrados, el ID LAN opcional, el rol del PC (principal/secundario), las fechas de registro y última conexión, la caducidad de las sesiones y el estado de conexión. Se usan para encontrar dispositivos de la misma cuenta, validar conexiones y mantener la seguridad. No se guardan claves privadas ni tokens de acceso o ID de Google en el servidor; los tokens de sesión de la app se guardan como hashes.
+              </p>
+              <p>
+                Google verifica la identidad al iniciar sesión. Cloudflare Workers y SQLite Durable Objects almacenan metadatos de cuenta y dispositivos y transmiten señales de conexión. Las señales SDP/ICE pueden incluir direcciones IP y otros datos de red; se transmiten al otro dispositivo, pero no se guardan en la base de datos de cuentas de OneMouse. Proveedores como Google y Cloudflare pueden procesar direcciones IP y otros metadatos de red al atender solicitudes.
+              </p>
+              <p>
+                Los registros de cuenta y dispositivos pueden permanecer hasta que se elimine el dispositivo registrado o la cuenta de OneMouse. Las sesiones duran hasta 7 días, los flujos temporales de acceso hasta 10 minutos y los tickets de conexión de un solo uso 30 segundos. Los registros temporales caducados se limpian periódicamente; los de protección contra repetición y límites de solicitudes también caducan. Cerrar, desconectar o desinstalar la app no elimina por sí solo el registro del servidor.
+              </p>
+              <p>
+                Iniciar sesión no inicia una pantalla compartida. La app valida el dispositivo, la sesión y la firma actuales de las solicitudes de la misma cuenta. La conexión directa puede fallar en algunas redes.
+              </p>
+            </article>
+            <article class="lcard" id="account-deletion">
+              <p class="num">10</p>
+              <h2>Solicitar la eliminación de la cuenta y los datos de OneMouse</h2>
+              <p>
+                En Android, usa <b>Cuenta de Google → Administrar cuenta → Eliminar vínculo de cuenta</b> para eliminar la cuenta de OneMouse, sus dispositivos registrados y sus sesiones del servidor. Si se solicita verificar el acceso, cierra sesión, vuelve a entrar e inténtalo en cinco minutos. Tu cuenta de Google y las vinculaciones LAN/Bluetooth no se eliminan.
+              </p>
+              <p>
+                Si no puedes acceder a la app o la has desinstalado, <a href="mailto:sdlckdrl@gmail.com?subject=OneMouse%20account%20deletion">solicita la eliminación escribiendo a sdlckdrl@gmail.com</a>. Indica el correo de Google usado con OneMouse y que deseas eliminar la cuenta. Puede ser necesario verificar que eres su titular. No envíes contraseñas ni tokens de acceso.
+              </p>
+              <p>
+                Cerrar sesión elimina el registro y las sesiones de cuenta del dispositivo actual; no elimina toda la cuenta de OneMouse. Si el servidor no está disponible, puede completarse solo el cierre local y permanecer el registro del servidor. Elimina los archivos transferidos y el historial local de notificaciones por separado en cada dispositivo.
               </p>
             </article>
           </div>

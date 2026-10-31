@@ -65,11 +65,10 @@
         <p class="ey">Privacy Policy</p>
         <h1 class="page">隐私政策</h1>
         <p class="lead">
-          OneMouse 在用户的本地环境中，由 Windows 端发起并管理与 Android、另一台 Windows PC 和 macOS
-          13+ Apple 芯片 Mac 的连接。Mac 的当前公开支持使用
-          LAN。本政策说明处理的信息、设备权限以及结算 SDK 的使用方式。
+          OneMouse 连接 Windows 与 Android、其他 Windows PC 和 Mac。本政策说明现有 LAN/Bluetooth 配对和可选 Google 账号连接的信息处理及权限使用。
         </p>
-        <p class="policy-date">生效日期：2026年9月1日 · 最后更新日期：2026年9月21日</p>
+        <p class="policy-date">生效日期：2026年9月1日 · 最后更新日期：2026年10月31日</p>
+        <p><a class="text-link" href="#google-account">Google 账号信息处理</a> · <a class="text-link" href="#account-deletion">请求删除账号及数据</a></p>
       </section>
 
       <section>
@@ -79,9 +78,7 @@
               <p class="num">01</p>
               <h2>基本原则</h2>
               <p>
-                OneMouse 以用户的 Windows 端与已配对的 Android、Windows PC 或 Mac
-                之间的本地通信为核心。OneMouse
-                不运营用于保存用户文件、剪贴板内容或输入内容的独立账号服务器。
+                现有 LAN/Bluetooth 配对无需登录。在支持的应用版本中，可选 Google 账号连接用于查找同一账号的设备，并尝试跨网络直接连接。OneMouse 账号服务器处理连接信息和信令，不存储或中转文件、剪贴板、输入或视频内容。
               </p>
             </article>
             <article class="lcard">
@@ -160,6 +157,38 @@
               <p>
                 这些请求不包含设备标识符、配对信息、账户信息或使用统计，应用只会下载该文件。与其他互联网请求一样，访问者的
                 IP 地址和时间可能会记录在服务器日志中。安装文件的下载仅在用户明确选择时进行。
+              </p>
+            </article>
+            <article class="lcard" id="google-account">
+              <p class="num">09</p>
+              <h2>可选 Google 账号连接</h2>
+              <p>
+                我们使用经 Google 验证的账号标识符（sub）及已验证的邮箱地址（如有提供）识别和显示账号。不会接收 Google 密码，也不会访问联系人、邮件内容或 Google Drive 文件。
+              </p>
+              <p>
+                账号服务保存注册设备的公钥、基于公钥的 ID、名称和类型、可选 LAN 设备 ID、PC 角色（主机/副机）、注册和最后连接时间、会话到期信息及连接状态，用于同账号设备发现、连接验证和安全保护。设备私钥及 Google 访问/ID 令牌不保存在服务器上，应用会话令牌以哈希形式保存。
+              </p>
+              <p>
+                Google 用于验证登录身份；Cloudflare Workers 和 SQLite Durable Objects 用于保存账号及设备信息并转发连接信令。SDP/ICE 信令可能包含 IP 地址等网络信息，会转发给对方设备，但不保存在 OneMouse 账号数据库中。Google、Cloudflare 等服务提供商在处理请求时可能处理 IP 地址等网络信息。
+              </p>
+              <p>
+                账号和设备注册信息可能保留至解除相应设备注册或删除 OneMouse 账号。应用会话最长有效 7 天，临时登录流程最长 10 分钟，一次性连接票据有效 30 秒。过期临时信息由服务器定期清理；防重放和速率限制记录也按有效期清理。关闭应用、断开网络或卸载应用本身不会删除服务器注册信息。
+              </p>
+              <p>
+                仅登录不会开始屏幕共享。同账号连接请求仍由应用验证当前设备、会话和签名。部分网络环境可能无法直接连接。
+              </p>
+            </article>
+            <article class="lcard" id="account-deletion">
+              <p class="num">10</p>
+              <h2>请求删除 OneMouse 账号及数据</h2>
+              <p>
+                在 Android 应用中打开 <b>Google 账号 → 账号管理 → 删除账号关联</b>，可删除服务器上的 OneMouse 账号、注册设备及会话。如需重新验证，请退出后重新登录，并在五分钟内重试。此操作不会删除 Google 账号本身或现有 LAN/Bluetooth 配对。
+              </p>
+              <p>
+                如果无法使用应用或已卸载，仍可<a href="mailto:sdlckdrl@gmail.com?subject=OneMouse%20account%20deletion">向 sdlckdrl@gmail.com 发送账号删除请求</a>。请注明登录 OneMouse 使用的 Google 邮箱地址及删除账号的请求。我们可能需要验证账号所有权。请勿发送密码或登录令牌。
+              </p>
+              <p>
+                退出登录用于解除当前设备的账号注册和会话，不等于删除整个 OneMouse 账号。如果无法连接服务器，可能仅完成本地退出，服务器注册仍会保留。已传输文件和本地通知记录需在各设备上分别删除。
               </p>
             </article>
           </div>

@@ -46,10 +46,10 @@
         <p class="ey">Privacy Policy</p>
         <h1 class="page">Privacy Policy</h1>
         <p class="lead">
-          OneMouse connects Windows with Android, paired Windows PCs, and Apple Silicon Macs running
-          macOS 13+. Mac connections in the current public support scope use the local network.
+          OneMouse connects Windows with Android, other Windows PCs, and Macs. This policy covers existing LAN/Bluetooth pairing and optional Google account linking, including data handling and permissions.
         </p>
-        <p class="policy-date">Effective date: September 1, 2026 · Last updated: September 21, 2026</p>
+        <p class="policy-date">Effective date: September 1, 2026 · Last updated: October 31, 2026</p>
+        <p><a class="text-link" href="#google-account">Google account data</a> · <a class="text-link" href="#account-deletion">Request account and data deletion</a></p>
       </section>
 
       <section>
@@ -59,9 +59,7 @@
               <p class="num">01</p>
               <h2>Core principle</h2>
               <p>
-                OneMouse uses local communication between the user's Windows PC and a paired Android
-                device, Windows PC, or Mac. OneMouse does not operate an account server that stores
-                user files, clipboard content, or input content.
+                Existing LAN/Bluetooth pairing works without sign-in. In supported app versions, optional Google account linking finds your own account devices and attempts direct connections across networks. The OneMouse account server processes connection metadata and signals; it does not store or relay files, clipboard content, input, or video.
               </p>
             </article>
             <article class="lcard">
@@ -188,6 +186,38 @@
                 information, or usage statistics — the apps only download the file. As with any
                 internet request, your IP address and the time of the request may appear in server
                 logs. Installer downloads happen only when you explicitly choose to download.
+              </p>
+            </article>
+            <article class="lcard" id="google-account">
+              <p class="num">09</p>
+              <h2>Optional Google account linking</h2>
+              <p>
+                We use the Google-verified account identifier (sub) and verified email address, when provided, to identify and display your account. We do not receive your Google password or access your contacts, email messages, or Google Drive files.
+              </p>
+              <p>
+                The account service stores registered devices' public keys, public-key-based IDs, names and types, optional LAN device IDs, PC roles (main/sub), registration and last-seen times, session expiry, and connection state. These support same-account device discovery, connection validation, and security. Device private keys and Google access/ID tokens are not stored on the server; app session tokens are stored there as hashes.
+              </p>
+              <p>
+                Google verifies sign-in identity. Cloudflare Workers and SQLite Durable Objects store account/device metadata and forward connection signals. SDP/ICE signals may include IP addresses and other network information; they are forwarded to the other device but not stored in the OneMouse account database. Providers such as Google and Cloudflare may process IP addresses and other network metadata when serving requests.
+              </p>
+              <p>
+                Account and device registration records may remain until the device is unregistered or the OneMouse account is deleted. App sessions last up to 7 days, temporary sign-in flows up to 10 minutes, and one-use connection tickets 30 seconds. Expired temporary records are eligible for periodic server cleanup; replay-prevention and rate-limit records also expire. Closing, disconnecting, or uninstalling the app does not itself delete server registrations.
+              </p>
+              <p>
+                Signing in alone does not start screen sharing. Apps validate the current device, session, and signature for same-account connection requests. Direct connections can fail on some networks.
+              </p>
+            </article>
+            <article class="lcard" id="account-deletion">
+              <p class="num">10</p>
+              <h2>Request OneMouse account and data deletion</h2>
+              <p>
+                In the Android app, use <b>Google account → Account management → Delete account link</b> to delete your server-side OneMouse account, registered devices, and sessions. If reauthentication is required, sign out, sign in again, and retry within five minutes. This does not delete your Google account or existing LAN/Bluetooth pairings.
+              </p>
+              <p>
+                If you cannot access the app or have uninstalled it, <a href="mailto:sdlckdrl@gmail.com?subject=OneMouse%20account%20deletion">email sdlckdrl@gmail.com to request account deletion</a>. Identify the Google email address used with OneMouse and state that you request account deletion. Account ownership verification may be needed. Do not send your Google password or sign-in tokens.
+              </p>
+              <p>
+                Signing out unregisters the current device and its account sessions; it is different from deleting the entire OneMouse account. If the server cannot be reached, only local sign-out may complete and the server registration can remain. Delete transferred files and local notification history separately on each device.
               </p>
             </article>
           </div>
