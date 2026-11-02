@@ -266,6 +266,57 @@
         <p class="hero-note">기기 배치와 커서 이동을 체험하는 데모입니다.</p>
       </section>
 
+      <!-- PROMOTIONAL VIDEO -->
+      <section id="video" aria-labelledby="promo-video-title">
+        <div class="wrap">
+          <div class="sec-head promo-video-heading">
+            <div>
+              <p class="ey">OneMouse 소개 영상</p>
+              <h2 class="sec" id="promo-video-title">어떻게 쓰는지, 영상으로 먼저 보세요.</h2>
+              <p class="sec-lead">
+                마우스·키보드 공유부터 파일 전송과 원격제어까지, 사용 모습을 한 번에 확인하세요.
+              </p>
+            </div>
+            <a
+              class="text-link"
+              href="https://www.youtube.com/watch?v=lfrUuJgT5nw"
+              target="_blank"
+              rel="noopener"
+              >YouTube에서 보기 ↗</a
+            >
+          </div>
+          <div class="promo-video-player" id="promo-video-player">
+            <a
+              class="promo-video-play"
+              href="https://www.youtube.com/watch?v=lfrUuJgT5nw"
+              target="_blank"
+              rel="noopener"
+              aria-label="OneMouse 소개 영상 재생"
+              aria-describedby="promo-video-note"
+              data-promo-video-play
+            >
+              <img
+                src="./assets/onemouse-promo-video.jpg"
+                alt="Windows·Mac·Android를 연결해 사용하는 OneMouse 소개 영상 미리보기"
+                width="1280"
+                height="720"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="promo-video-action" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="28" height="28">
+                  <path d="m9 5 11 7-11 7z" fill="currentColor" />
+                </svg>
+                <span>소개 영상 재생</span>
+              </span>
+            </a>
+          </div>
+          <p class="feature-note" id="promo-video-note">
+            재생을 누르면 YouTube 플레이어가 열립니다. 영상을 보기 전에는 YouTube에 연결하지 않습니다.
+          </p>
+        </div>
+      </section>
+
       <!-- USE CASES -->
       <section id="use">
         <div class="wrap">
@@ -1106,5 +1157,6 @@
       })();
     </script>
     <script src="./js/downloads.js"></script>
+    <script src="./js/promo-video.js" defer></script>
   </body>
 </html>
