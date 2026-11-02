@@ -6,7 +6,7 @@
     <title>Guide | OneMouse — Connect Android, Windows PCs, and Mac</title>
     <meta
       name="description"
-      content="Set up OneMouse from Windows for Android, another Windows PC, or an Apple Silicon Mac running macOS 13+, including pairing, arrangement, file transfer, and permissions."
+      content="Set up OneMouse and learn screenshot capture and sharing, PC remote control from Android, file and clipboard transfers, and Bluetooth connections."
     />
     <meta name="robots" content="index,follow,max-image-preview:large" />
     <link rel="stylesheet" href="../css/onemouse.css" />
@@ -57,8 +57,10 @@
           <a href="#start">5-minute setup</a>
           <a href="#position">Place your phone</a>
           <a href="#remote">Remote screens</a>
+          <a href="#mobile-pc-remote">Control a PC from mobile</a>
           <a href="#mouse-gestures">Mouse gestures</a>
           <a href="#files">Files &amp; clipboard</a>
+          <a href="#screenshots">Capture &amp; send screenshots</a>
           <a href="#text-to-pc">Mobile to PC</a>
           <a href="#notifications">Notifications &amp; replies</a>
           <a href="#quick">Number shortcuts</a>
@@ -264,6 +266,84 @@
         </div>
       </section>
 
+      <!-- MOBILE TO PC REMOTE CONTROL -->
+      <section class="section-alt" id="mobile-pc-remote">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="ey">Android → Windows</p>
+            <h2 class="sec">Open and control your PC screen from your phone.</h2>
+            <p class="sec-lead">
+              See your PC screen, click by touch, move the cursor and type with your phone's keyboard.
+              Both the PC and Android need up-to-date apps that support this feature.
+            </p>
+          </div>
+          <div class="split lead-left">
+            <div>
+              <div class="panel">
+                <h3>Open a remote screen</h3>
+                <ol>
+                  <li>
+                    Run OneMouse on the PC. Pair your devices on the same Wi-Fi network or link them using
+                    the same Google account.
+                  </li>
+                  <li>In Android's registered PC list, choose <b>Remote screen</b> for that PC.</li>
+                  <li>
+                    Review the request on the PC and choose <b>Allow</b>. For your own phone, you can
+                    choose <b>Always allow this device</b> for future sessions.
+                  </li>
+                  <li>
+                    Once connected, use touch to control the screen. Open the control panel with the
+                    settings icon on the right.
+                  </li>
+                </ol>
+              </div>
+              <div class="panel" style="margin-top: 18px">
+                <h3>Choose the controls that suit you</h3>
+                <ul>
+                  <li><b>Touch mode:</b> tap where you want to click, and drag to move items.</li>
+                  <li><b>Cursor mode:</b> slide a finger to move the pointer and tap to click.</li>
+                  <li>Long-press to right-click. In cursor mode, double-tap and hold to drag.</li>
+                  <li>
+                    Pinch with two fingers to zoom. At 1×, move two fingers to scroll the PC; when zoomed
+                    in, move them to pan the view.
+                  </li>
+                  <li>
+                    Use <b>Keyboard</b> to type, or enable <b>View only</b> when you only want to watch.
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div>
+              <figure class="feature-figure">
+                <img
+                  class="feature-visual"
+                  src="../assets/feature-mobile-pc-remote-photo.webp"
+                  alt="Photorealistic usage example of controlling a Windows PC from an Android phone"
+                  width="1536"
+                  height="1024"
+                  loading="lazy"
+                />
+                <figcaption>
+                  AI-generated usage example · The actual interface may vary by app version.
+                </figcaption>
+              </figure>
+              <div class="panel tip" style="margin-top: 18px">
+                <h3>Quality, frame rate and disconnecting</h3>
+                <p>
+                  Choose image quality and the maximum frame rate in the control panel. A PC that supports
+                  live quality changes applies them without reconnecting. Actual resolution and frame rate
+                  depend on device performance and network conditions.
+                </p>
+                <p>
+                  To finish, use <b>Control panel → Disconnect</b>. Disconnecting remote control leaves
+                  the PC running. Bluetooth connections do not carry remote video.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- ANDROID MOUSE GESTURES -->
       <section id="mouse-gestures">
         <div class="wrap narrow">
@@ -391,6 +471,76 @@
                 </div>
               </details>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SCREENSHOT CAPTURE AND SHARING -->
+      <section id="screenshots">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="ey">Capture &amp; send screenshots</p>
+            <h2 class="sec">Capture what you need and send it where you need it.</h2>
+            <p class="sec-lead">
+              Capture your own PC or the device you are currently controlling. Copy or save the result
+              from the preview, or send it to a connected device's clipboard.
+            </p>
+          </div>
+          <div class="split lead-left">
+            <div>
+              <div class="panel">
+                <h3>Capture and send, step by step</h3>
+                <ol>
+                  <li>
+                    Press the default <b>Ctrl+Alt+S</b> shortcut in Windows. If you are controlling
+                    another device, capture that device; otherwise, capture your own PC.
+                  </li>
+                  <li>Drag to select a region or choose <b>Full screen</b> from the toolbar.</li>
+                  <li>
+                    In the small preview on the PC, choose <b>Copy</b> or <b>Save</b>. To use the image on
+                    another device, choose <b>Send</b> and select the receiving device.
+                  </li>
+                  <li>
+                    On the receiving device, paste the image into an app that supports image pasting.
+                  </li>
+                </ol>
+                <p>
+                  If you changed the shortcut, use your configured keys. While selecting a region,
+                  <b>Esc</b> or Cancel closes the selection without sending an image.
+                </p>
+              </div>
+            </div>
+            <figure class="feature-figure">
+              <img
+                class="feature-visual"
+                src="../assets/feature-screenshot-share-photo.webp"
+                alt="Photorealistic usage example of a PC screenshot preview and an Android phone receiving the same image"
+                width="1536"
+                height="1024"
+                loading="lazy"
+              />
+              <figcaption>
+                AI-generated usage example · The actual interface may vary by app version.
+              </figcaption>
+            </figure>
+          </div>
+          <div class="panel tip" style="margin-top: 18px">
+            <h3>Check the connection and permissions</h3>
+            <ul>
+              <li>
+                <b>Sending images requires Wi-Fi/LAN</b> and support in both apps. A device connected only
+                over Bluetooth cannot receive this transfer.
+              </li>
+              <li>
+                Capturing an Android screen requires
+                <b>Android 11 or later and accessibility permission</b>. Capturing a Mac screen requires
+                screen recording permission. Protected screens may not be captured.
+              </li>
+              <li>
+                On Android, use an app that supports image pasting. Receiving an image does not
+                automatically paste it or save it to the gallery.
+              </li>
+            </ul>
           </div>
         </div>
       </section>

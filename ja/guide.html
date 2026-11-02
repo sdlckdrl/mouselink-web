@@ -6,7 +6,7 @@
     <title>使い方ガイド | OneMouse — 初回接続からよく使う機能まで</title>
     <meta
       name="description"
-      content="OneMouseでWindowsからAndroid・別のWindows PC・macOS 13以降のApple Silicon Macへの接続を開始・管理する手順をご案内します。"
+      content="OneMouseの使い方ガイド。デバイスの接続、スクリーンショットの撮影・送信、スマホからPCのリモート操作、ファイル・クリップボードとBluetoothの使い方をご案内します。"
     />
     <meta name="robots" content="index,follow,max-image-preview:large" />
     <link rel="stylesheet" href="../css/onemouse.css" />
@@ -46,15 +46,17 @@
         <p class="ey">使い方ガイド</p>
         <h1 class="page">初回接続からよく使う機能まで、順番に。</h1>
         <p class="lead">
-          接続はWindows 10/11から開始・管理します。Android、別のWindows PC、macOS 13以降のApple
-          Silicon Macを接続先として扱います。Macの公開サポートはLAN接続が対象です。
+          初回接続からよく使う機能まで、順番にご案内します。スクリーンショットの送信や、
+          AndroidからWindows PCを操作する手順もこちらで確認できます。
         </p>
         <nav class="toc" aria-label="このページの目次">
           <a href="#start">5分で接続</a>
           <a href="#position">スマホの配置</a>
           <a href="#remote">リモート画面</a>
+          <a href="#mobile-pc-remote">スマホからPCを操作</a>
           <a href="#mouse-gestures">マウスジェスチャー</a>
           <a href="#files">ファイル・クリップボード</a>
+          <a href="#screenshots">スクリーンショットの撮影・送信</a>
           <a href="#notifications">通知・返信</a>
           <a href="#quick">番号ショートカット</a>
           <a href="#bluetooth">Bluetooth接続</a>
@@ -246,6 +248,83 @@
         </div>
       </section>
 
+      <!-- MOBILE TO PC REMOTE CONTROL -->
+      <section class="section-alt" id="mobile-pc-remote">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="ey">Android → Windows</p>
+            <h2 class="sec">スマホからPCの画面を開いて操作します。</h2>
+            <p class="sec-lead">
+              PCの画面を見ながらタッチでクリックしたり、カーソルを動かしたり、スマホのキーボードで文字を入力できます。PCとAndroidの両方に、この機能に対応した最新アプリが必要です。
+            </p>
+          </div>
+          <div class="split lead-left">
+            <div>
+              <div class="panel">
+                <h3>リモート画面を開く</h3>
+                <ol>
+                  <li>
+                    PCでOneMouseを起動します。同じWi-Fiでペアリングするか、同じGoogleアカウントでデバイスを接続します。
+                  </li>
+                  <li>Androidアプリの登録済みPC一覧で、対象PCの<b>リモート画面</b>をタップします。</li>
+                  <li>
+                    PCに表示されたリクエストを確認して<b>許可</b>を押します。自分のスマホで今後も使う場合は、<b>この機器を常に許可</b>を選べます。
+                  </li>
+                  <li>
+                    画面がつながったらタッチで操作できます。右側の設定アイコンから操作パネルを開きます。
+                  </li>
+                </ol>
+              </div>
+              <div class="panel" style="margin-top: 18px">
+                <h3>使いやすい操作モードを選びましょう</h3>
+                <ul>
+                  <li>
+                    <b>タッチモード：</b
+                    >画面上の目的の位置をタップしてクリックし、指を動かしてドラッグします。
+                  </li>
+                  <li><b>カーソルモード：</b>指を滑らせてポインターを動かし、タップでクリックします。</li>
+                  <li>
+                    長押しで右クリックします。カーソルモードでは、2回目のタップを押したまま動かすとドラッグできます。
+                  </li>
+                  <li>
+                    2本指で拡大・縮小できます。等倍では2本指の移動でPCをスクロールし、拡大中は表示範囲を移動します。
+                  </li>
+                  <li>
+                    <b>キーボード</b
+                    >で文字を入力できます。画面を見るだけなら<b>表示のみ</b>をオンにします。
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div>
+              <figure class="feature-figure">
+                <img
+                  class="feature-visual"
+                  src="../assets/feature-mobile-pc-remote-photo.webp"
+                  alt="AndroidスマホからWindows PCの画面を操作する実写風の使用イメージ"
+                  width="1536"
+                  height="1024"
+                  loading="lazy"
+                />
+                <figcaption>
+                  AIで制作した使用イメージです。実際の画面はアプリのバージョンによって異なる場合があります。
+                </figcaption>
+              </figure>
+              <div class="panel tip" style="margin-top: 18px">
+                <h3>画質・フレームレートと接続の終了</h3>
+                <p>
+                  操作パネルで画質と最大フレームレートを選べます。画質変更に対応したPCでは、接続を維持したまま反映されます。実際の解像度やフレームレートはデバイスの性能とネットワークの状態によって変わります。
+                </p>
+                <p>
+                  終了するには<b>操作パネル → 接続を終了</b
+                  >を押します。リモート接続を終了してもPCの電源は切れません。Bluetooth接続ではリモート映像を送信できません。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- ANDROID MOUSE GESTURES -->
       <section id="mouse-gestures">
         <div class="wrap narrow">
@@ -423,6 +502,68 @@
                 </div>
               </details>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SCREENSHOT CAPTURE AND SHARING -->
+      <section id="screenshots">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="ey">スクリーンショットの撮影・送信</p>
+            <h2 class="sec">必要な部分を撮って、使いたいデバイスへ。</h2>
+            <p class="sec-lead">
+              自分のPCだけでなく、操作中の別のデバイスの画面も撮影できます。プレビューからコピー・保存したり、接続したデバイスのクリップボードへ送信したりできます。
+            </p>
+          </div>
+          <div class="split lead-left">
+            <div>
+              <div class="panel">
+                <h3>撮影して送信する手順</h3>
+                <ol>
+                  <li>
+                    Windowsで初期設定のショートカット<b>Ctrl+Alt+S</b>を押します。別のデバイスを操作中ならその画面を、操作中のデバイスがなければ自分のPC画面を撮影します。
+                  </li>
+                  <li>ドラッグして撮影範囲を選ぶか、ツールバーの<b>全画面</b>を押します。</li>
+                  <li>
+                    PCに開いた小さなプレビューで<b>コピー</b>または<b>保存</b>を押します。別のデバイスで使う場合は<b>送信</b>を押し、送信先を選びます。
+                  </li>
+                  <li>受信したデバイスで、画像の貼り付けに対応したアプリを開いて貼り付けます。</li>
+                </ol>
+                <p>
+                  ショートカットを変更した場合は、設定したキーを使ってください。範囲選択中に<b>Esc</b>またはキャンセルを押すと、画像を送信せずに閉じます。
+                </p>
+              </div>
+            </div>
+            <figure class="feature-figure">
+              <img
+                class="feature-visual"
+                src="../assets/feature-screenshot-share-photo.webp"
+                alt="PCのキャプチャープレビューと同じ画像を受け取ったAndroidスマホの実写風の使用イメージ"
+                width="1536"
+                height="1024"
+                loading="lazy"
+              />
+              <figcaption>
+                AIで制作した使用イメージです。実際の画面はアプリのバージョンによって異なる場合があります。
+              </figcaption>
+            </figure>
+          </div>
+          <div class="panel tip" style="margin-top: 18px">
+            <h3>接続と権限を確認してください</h3>
+            <ul>
+              <li>
+                <b>画像の送信にはWi-Fi・LAN接続</b
+                >と、両方のアプリでの機能対応が必要です。Bluetooth接続のみのデバイスには送信できません。
+              </li>
+              <li>
+                Android画面の撮影には<b>Android 11以降とユーザー補助の権限</b
+                >が、Mac画面の撮影には画面収録の権限が必要です。保護された画面は撮影できない場合があります。
+              </li>
+              <li>
+                Androidへ送信した画像は、貼り付けに対応したアプリで使ってください。送信後に自動で貼り付けたり、ギャラリーへ保存したりすることはありません。
+              </li>
+            </ul>
           </div>
         </div>
       </section>

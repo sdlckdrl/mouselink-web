@@ -7,7 +7,7 @@
     <title>OneMouse | 软件 KVM：Windows 控制 Android、另一台电脑与 Mac</title>
     <meta
       name="description"
-      content="OneMouse 是鼠标键盘共享软件（软件 KVM）：由 Windows PC 通过 LAN 或 Bluetooth 控制 Android 手机/平板、其他 Windows PC 和 Apple 芯片 Mac。LAN/Bluetooth 配对无需登录，Google 账号连接为可选功能。"
+      content="使用 OneMouse 在 Windows、Android 与 Mac 之间共享鼠标和键盘，将截图发送到其他设备，也能在 Android 手机或平板上远程控制 Windows PC。支持 LAN/Bluetooth 配对和可选的 Google 账号连接。"
     />
     <meta name="robots" content="index,follow,max-image-preview:large" />
     <meta
@@ -27,19 +27,22 @@
     <meta property="og:title" content="OneMouse | Windows 控制 Android、另一台电脑与 Mac" />
     <meta
       property="og:description"
-      content="Windows 端发起并管理与 Android、另一台 Windows 电脑和 macOS 13+ Apple 芯片 Mac 的连接。"
+      content="从跨设备共享鼠标和键盘，到发送截图、在 Android 上远程控制 Windows PC。"
     />
     <meta property="og:url" content="https://onemouse.pages.dev/zh/" />
-    <meta property="og:image" content="https://onemouse.pages.dev/assets/hero-bg-generated-2.png" />
+    <meta
+      property="og:image"
+      content="https://onemouse.pages.dev/assets/feature-screenshot-share-photo.webp"
+    />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="OneMouse | Windows 控制 Android、另一台电脑与 Mac" />
     <meta
       name="twitter:description"
-      content="连接由 Windows 端发起并管理，现已提供适用于 macOS 13+ Apple 芯片 Mac 的公开 DMG。"
+      content="从跨设备共享鼠标和键盘，到发送截图、在 Android 上远程控制 Windows PC。"
     />
     <meta
       name="twitter:image"
-      content="https://onemouse.pages.dev/assets/hero-bg-generated-2.png"
+      content="https://onemouse.pages.dev/assets/feature-screenshot-share-photo.webp"
     />
     <script type="application/ld+json">
       {
@@ -58,7 +61,7 @@
         "inLanguage": "zh-CN",
         "downloadUrl": "https://onemouse.pages.dev/zh/#get",
         "softwareHelp": "https://onemouse.pages.dev/zh/help",
-        "description": "OneMouse 由 Windows 端发起并管理连接，可控制 Android、另一台 Windows 电脑和 macOS 13+ Apple 芯片 Mac。",
+        "description": "OneMouse 在 Windows、Android 与 Mac 之间共享鼠标和键盘，并支持截图发送和在 Android 上远程控制 Windows PC。",
         "keywords": "鼠标共享, 键盘共享, 软件 KVM, 用电脑控制安卓, Windows 与 Mac 共享鼠标",
         "featureList": [
           "Control an Android phone or tablet with the Windows mouse and keyboard",
@@ -67,6 +70,8 @@
           "Move the cursor across the screen edge between devices",
           "Send files between paired devices",
           "Sync clipboard text between paired devices",
+          "Capture a screenshot and send it to another device over Wi-Fi/LAN",
+          "View and control a Windows PC from an Android phone or tablet",
           "Connect over Wi-Fi/LAN or Bluetooth (Mac: LAN)",
           "LAN/Bluetooth pairing without sign-in; optional Google account linking",
           "Show phone SMS and messenger notifications on the PC, with one-click copy for verification codes"
@@ -128,7 +133,7 @@
           一只 Windows 鼠标，<br class="hero-break" />
           <span class="flow">轻松操控手机、平板与 Mac</span>。
         </h1>
-        <p class="sub">在多台设备间共享 Windows 鼠标和键盘，无需线缆或专用 KVM 设备。</p>
+        <p class="sub">在多台设备间共享鼠标和键盘，随手发送截图。也可以在手机上打开 PC 画面并进行操作。</p>
 
         <div class="hero-cta">
           <a class="btn btn-pri" href="#get">下载 Windows 版</a>
@@ -261,6 +266,56 @@
         <p class="hero-note">在这个浏览器演示中体验设备布局和光标移动。</p>
       </section>
 
+      <!-- PROMOTIONAL VIDEO -->
+      <section id="video" aria-labelledby="promo-video-title">
+        <div class="wrap">
+          <div class="sec-head promo-video-heading">
+            <div>
+              <p class="ey">OneMouse 介绍视频</p>
+              <h2 class="sec" id="promo-video-title">先看视频，了解如何使用。</h2>
+              <p class="sec-lead">从鼠标键盘共享到文件传输和远程控制，一次了解实际使用方式。</p>
+            </div>
+            <a
+              class="text-link"
+              href="https://www.youtube.com/watch?v=lfrUuJgT5nw"
+              target="_blank"
+              rel="noopener"
+              >在 YouTube 上观看 ↗</a
+            >
+          </div>
+          <div class="promo-video-player" id="promo-video-player">
+            <a
+              class="promo-video-play"
+              href="https://www.youtube.com/watch?v=lfrUuJgT5nw"
+              target="_blank"
+              rel="noopener"
+              aria-label="播放 OneMouse 介绍视频"
+              aria-describedby="promo-video-note"
+              data-promo-video-play
+              data-video-title="OneMouse 介绍视频 — 鼠标键盘共享、文件传输和远程控制"
+            >
+              <img
+                src="../assets/onemouse-promo-video.jpg"
+                alt="连接 Windows、Mac 与 Android 使用 OneMouse 的介绍视频预览"
+                width="1280"
+                height="720"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="promo-video-action" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="28" height="28">
+                  <path d="m9 5 11 7-11 7z" fill="currentColor" />
+                </svg>
+                <span>播放介绍视频</span>
+              </span>
+            </a>
+          </div>
+          <p class="feature-note" id="promo-video-note">
+            点击播放后才会加载 YouTube 播放器。播放前不会连接 YouTube。
+          </p>
+        </div>
+      </section>
+
       <!-- USE CASES -->
       <section id="use">
         <div class="wrap">
@@ -387,6 +442,68 @@
               <p>在电脑上查看手机通知，并复制支持的验证码。<a class="text-link" href="./guide#notifications">通知设置</a></p>
             </article>
           </div>
+        </div>
+      </section>
+
+      <!-- SCREENSHOT SHARING + MOBILE PC REMOTE -->
+      <section class="section-alt" id="screen-tools" aria-labelledby="screen-tools-title">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="ey">让画面连接工作</p>
+            <h2 class="sec" id="screen-tools-title">随手截图发送，在手机上打开 PC。</h2>
+          </div>
+          <div class="feature-stories">
+            <article class="feature-story" aria-labelledby="screenshot-share-title">
+              <figure class="feature-figure">
+                <img
+                  class="feature-visual"
+                  src="../assets/feature-screenshot-share-photo.webp"
+                  width="1536"
+                  height="1024"
+                  alt="PC 上的截图预览与收到同一张图片的 Android 手机，写实风格使用示例"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <figcaption>截图与发送 · AI 制作的使用示例</figcaption>
+              </figure>
+              <div class="feature-story-body">
+                <p class="feature-kicker">截图 · Wi-Fi / LAN</p>
+                <h3 id="screenshot-share-title">截取需要的部分，发送到另一台设备。</h3>
+                <p>
+                  默认按 <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>S</kbd> 截图，在预览中复制、保存或发送到
+                  已连接的设备。在手机上，可以将收到的图片粘贴到支持图片粘贴的应用中。
+                </p>
+                <a class="text-link" href="./guide#screenshots">了解如何截图与发送 →</a>
+              </div>
+            </article>
+            <article class="feature-story" aria-labelledby="mobile-pc-remote-title">
+              <figure class="feature-figure">
+                <img
+                  class="feature-visual"
+                  src="../assets/feature-mobile-pc-remote-photo.webp"
+                  width="1536"
+                  height="1024"
+                  alt="横握 Android 手机操作 Windows PC 画面的写实风格使用示例"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <figcaption>从手机远程控制 PC · AI 制作的使用示例</figcaption>
+              </figure>
+              <div class="feature-story-body">
+                <p class="feature-kicker">Android → Windows</p>
+                <h3 id="mobile-pc-remote-title">这一次，用手机来操作 PC。</h3>
+                <p>
+                  在手机或平板上打开已连接 PC 的画面，点击、滚动并输入文字。可选择直接触控或光标模式，
+                  也可以缩放画面、调整画质。
+                </p>
+                <a class="text-link" href="./guide#mobile-pc-remote">了解如何在手机上打开 PC 画面 →</a>
+              </div>
+            </article>
+          </div>
+          <p class="feature-note">
+            两台设备都需要支持相应功能的 OneMouse 版本。截图发送使用 Wi-Fi/LAN 连接；PC 远程画面 可通过
+            LAN 或受支持的 Google 账号连接打开。
+          </p>
         </div>
       </section>
 
@@ -1027,5 +1144,6 @@
       })();
     </script>
     <script src="../js/downloads.js"></script>
+    <script src="../js/promo-video.js" defer></script>
   </body>
 </html>

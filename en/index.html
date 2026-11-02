@@ -7,7 +7,7 @@
     <title>OneMouse | Software KVM: Control Android, Windows PCs, and Mac from Windows</title>
     <meta
       name="description"
-      content="OneMouse is mouse and keyboard sharing software (a software KVM): a Windows PC controls Android phones and tablets, other Windows PCs, and Apple Silicon Macs over LAN or Bluetooth, LAN/Bluetooth pairing needs no sign-in; Google account linking is optional."
+      content="Share your mouse and keyboard across Windows, Android and Mac with OneMouse. Send screenshots between devices and control a Windows PC from your Android phone or tablet. LAN/Bluetooth pairing and optional Google account linking are supported."
     />
     <meta name="robots" content="index,follow,max-image-preview:large" />
     <meta
@@ -30,10 +30,13 @@
     />
     <meta
       property="og:description"
-      content="Use a Windows PC to control Android, another Windows PC, and an Apple Silicon Mac running macOS 13+."
+      content="Share a mouse and keyboard, send screenshots, and control your Windows PC from Android."
     />
     <meta property="og:url" content="https://onemouse.pages.dev/en/" />
-    <meta property="og:image" content="https://onemouse.pages.dev/assets/hero-bg-generated-2.png" />
+    <meta
+      property="og:image"
+      content="https://onemouse.pages.dev/assets/feature-screenshot-share-photo.webp"
+    />
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
@@ -41,11 +44,11 @@
     />
     <meta
       name="twitter:description"
-      content="Use a Windows PC to control Android, another Windows PC, and an Apple Silicon Mac running macOS 13+."
+      content="Share a mouse and keyboard, send screenshots, and control your Windows PC from Android."
     />
     <meta
       name="twitter:image"
-      content="https://onemouse.pages.dev/assets/hero-bg-generated-2.png"
+      content="https://onemouse.pages.dev/assets/feature-screenshot-share-photo.webp"
     />
     <script type="application/ld+json">
       {
@@ -73,6 +76,8 @@
           "Move the cursor across the screen edge between devices",
           "Send files between paired devices",
           "Sync clipboard text between paired devices",
+          "Capture a screenshot and send it to another device over Wi-Fi/LAN",
+          "View and control a Windows PC from an Android phone or tablet",
           "Connect over Wi-Fi/LAN or Bluetooth (Mac: LAN)",
           "LAN/Bluetooth pairing without sign-in; optional Google account linking",
           "Show phone SMS and messenger notifications on the PC, with one-click copy for verification codes"
@@ -134,7 +139,7 @@
           One Windows mouse for<br class="hero-break" />
           <span class="flow">phone, tablet, and Mac.</span>
         </h1>
-        <p class="sub">Share your Windows mouse and keyboard across devices, without cables or a separate KVM switch.</p>
+        <p class="sub">Share your mouse and keyboard across devices, and send screenshots in a few clicks. You can also open and control your PC screen from your phone.</p>
 
         <div class="hero-cta">
           <a class="btn btn-pri" href="#get">Get the Windows app</a>
@@ -268,6 +273,59 @@
         </div>
 
         <p class="hero-note">Try device arrangement and cursor movement in this browser demo.</p>
+      </section>
+
+      <!-- PROMOTIONAL VIDEO -->
+      <section id="video" aria-labelledby="promo-video-title">
+        <div class="wrap">
+          <div class="sec-head promo-video-heading">
+            <div>
+              <p class="ey">OneMouse demo</p>
+              <h2 class="sec" id="promo-video-title">See how it works, in one video.</h2>
+              <p class="sec-lead">
+                See mouse and keyboard sharing, file transfers and remote control in action.
+              </p>
+            </div>
+            <a
+              class="text-link"
+              href="https://www.youtube.com/watch?v=lfrUuJgT5nw"
+              target="_blank"
+              rel="noopener"
+              >Watch on YouTube ↗</a
+            >
+          </div>
+          <div class="promo-video-player" id="promo-video-player">
+            <a
+              class="promo-video-play"
+              href="https://www.youtube.com/watch?v=lfrUuJgT5nw"
+              target="_blank"
+              rel="noopener"
+              aria-label="Play the OneMouse demo"
+              aria-describedby="promo-video-note"
+              data-promo-video-play
+              data-video-title="OneMouse demo — mouse and keyboard sharing, file transfer and remote control"
+            >
+              <img
+                src="../assets/onemouse-promo-video.jpg"
+                alt="Preview of the OneMouse demo connecting Windows, Mac and Android"
+                width="1280"
+                height="720"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="promo-video-action" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="28" height="28">
+                  <path d="m9 5 11 7-11 7z" fill="currentColor" />
+                </svg>
+                <span>Play demo</span>
+              </span>
+            </a>
+          </div>
+          <p class="feature-note" id="promo-video-note">
+            Press play to load the YouTube player. This page does not connect to YouTube before you play
+            the video.
+          </p>
+        </div>
       </section>
 
       <!-- USE CASES -->
@@ -410,6 +468,69 @@
               <p>View phone notifications on your PC and copy supported verification codes. <a class="text-link" href="./guide#notifications">Notification setup</a></p>
             </article>
           </div>
+        </div>
+      </section>
+
+      <!-- SCREENSHOT SHARING + MOBILE PC REMOTE -->
+      <section class="section-alt" id="screen-tools" aria-labelledby="screen-tools-title">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="ey">Keep work moving between screens</p>
+            <h2 class="sec" id="screen-tools-title">Send a screenshot. Open your PC from your phone.</h2>
+          </div>
+          <div class="feature-stories">
+            <article class="feature-story" aria-labelledby="screenshot-share-title">
+              <figure class="feature-figure">
+                <img
+                  class="feature-visual"
+                  src="../assets/feature-screenshot-share-photo.webp"
+                  width="1536"
+                  height="1024"
+                  alt="Photorealistic usage example of a PC screenshot preview and an Android phone receiving the same image"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <figcaption>Screenshot sharing · AI-generated usage example</figcaption>
+              </figure>
+              <div class="feature-story-body">
+                <p class="feature-kicker">Screenshots · Wi-Fi / LAN</p>
+                <h3 id="screenshot-share-title">Capture what you need, then send it.</h3>
+                <p>
+                  Use the default <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>S</kbd> shortcut to capture a
+                  screenshot. Copy it, save it or send it to a connected device from the preview. On your
+                  phone, paste it into an app that supports images.
+                </p>
+                <a class="text-link" href="./guide#screenshots">How to capture and send →</a>
+              </div>
+            </article>
+            <article class="feature-story" aria-labelledby="mobile-pc-remote-title">
+              <figure class="feature-figure">
+                <img
+                  class="feature-visual"
+                  src="../assets/feature-mobile-pc-remote-photo.webp"
+                  width="1536"
+                  height="1024"
+                  alt="Photorealistic usage example of an Android phone held horizontally to control a Windows PC"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <figcaption>Control your PC from mobile · AI-generated usage example</figcaption>
+              </figure>
+              <div class="feature-story-body">
+                <p class="feature-kicker">Android → Windows</p>
+                <h3 id="mobile-pc-remote-title">Now control your PC from your phone.</h3>
+                <p>
+                  Open a connected PC's screen on your phone or tablet to click, scroll and type. Choose
+                  direct touch or cursor mode, zoom the screen and adjust image quality.
+                </p>
+                <a class="text-link" href="./guide#mobile-pc-remote">How to open your PC screen →</a>
+              </div>
+            </article>
+          </div>
+          <p class="feature-note">
+            Both devices need OneMouse versions that support these features. Screenshot sharing uses
+            Wi-Fi/LAN. PC remote screens use LAN or supported Google account connections.
+          </p>
         </div>
       </section>
 
@@ -1058,5 +1179,6 @@
       })();
     </script>
     <script src="../js/downloads.js"></script>
+    <script src="../js/promo-video.js" defer></script>
   </body>
 </html>

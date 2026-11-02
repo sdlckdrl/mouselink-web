@@ -7,7 +7,7 @@
     <title>OneMouse | KVM por software: controla Android, PC con Windows y Mac desde Windows</title>
     <meta
       name="description"
-      content="OneMouse es un KVM por software que comparte ratón y teclado: un PC con Windows controla móviles y tablets Android, otros PC con Windows y Mac con Apple Silicon por LAN o Bluetooth, La vinculación LAN/Bluetooth no requiere iniciar sesión; la cuenta de Google es opcional."
+      content="Comparte el ratón y el teclado entre Windows, Android y Mac con OneMouse. Envía capturas a otro dispositivo y controla un PC con Windows desde Android. Vinculación LAN/Bluetooth y conexión opcional con una cuenta de Google."
     />
     <meta name="robots" content="index,follow,max-image-preview:large" />
     <meta
@@ -30,10 +30,10 @@
     />
     <meta
       property="og:description"
-      content="Usa un PC con Windows para controlar Android, otro PC con Windows y un Mac con Apple Silicon que tenga macOS 13 o posterior."
+      content="Comparte ratón y teclado, envía capturas y controla un PC con Windows desde Android."
     />
-    <meta property="og:url" content="https://onemouse.pages.dev/en/" />
-    <meta property="og:image" content="https://onemouse.pages.dev/assets/hero-bg-generated-2.png" />
+    <meta property="og:url" content="https://onemouse.pages.dev/es/" />
+    <meta property="og:image" content="https://onemouse.pages.dev/assets/feature-screenshot-share-photo.webp" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
@@ -41,11 +41,11 @@
     />
     <meta
       name="twitter:description"
-      content="Usa un PC con Windows para controlar Android, otro PC con Windows y un Mac con Apple Silicon que tenga macOS 13 o posterior."
+      content="Comparte ratón y teclado, envía capturas y controla un PC con Windows desde Android."
     />
     <meta
       name="twitter:image"
-      content="https://onemouse.pages.dev/assets/hero-bg-generated-2.png"
+      content="https://onemouse.pages.dev/assets/feature-screenshot-share-photo.webp"
     />
     <script type="application/ld+json">
       {
@@ -73,6 +73,8 @@
           "Move the cursor across the screen edge between devices",
           "Send files between paired devices",
           "Sync clipboard text between paired devices",
+          "Capture a screenshot and send it to another device over Wi-Fi/LAN",
+          "View and control a Windows PC from an Android phone or tablet",
           "Connect over Wi-Fi/LAN or Bluetooth (Mac: LAN)",
           "LAN/Bluetooth pairing without sign-in; optional Google account linking",
           "Show phone SMS and messenger notifications on the PC, with one-click copy for verification codes"
@@ -134,7 +136,7 @@
           Un solo ratón de Windows para<br class="hero-break" />
           <span class="flow">el teléfono, la tablet y el Mac.</span>
         </h1>
-        <p class="sub">Comparte el ratón y el teclado de Windows entre dispositivos, sin cables ni un conmutador KVM.</p>
+        <p class="sub">Comparte el ratón y el teclado entre dispositivos y envía capturas al instante. También puedes abrir y controlar la pantalla del PC desde tu móvil.</p>
 
         <div class="hero-cta">
           <a class="btn btn-pri" href="#get">Descargar la app para Windows</a>
@@ -268,6 +270,60 @@
         </div>
 
         <p class="hero-note">Prueba la disposición de dispositivos y el movimiento del cursor en esta demo del navegador.</p>
+      </section>
+
+      <!-- PROMOTIONAL VIDEO -->
+      <section id="video" aria-labelledby="promo-video-title">
+        <div class="wrap">
+          <div class="sec-head promo-video-heading">
+            <div>
+              <p class="ey">OneMouse en vídeo</p>
+              <h2 class="sec" id="promo-video-title">Descubre cómo funciona, paso a paso.</h2>
+              <p class="sec-lead">
+                Mira cómo compartir el ratón y el teclado, enviar archivos y controlar tus dispositivos a
+                distancia.
+              </p>
+            </div>
+            <a
+              class="text-link"
+              href="https://www.youtube.com/watch?v=lfrUuJgT5nw"
+              target="_blank"
+              rel="noopener"
+              >Ver en YouTube ↗</a
+            >
+          </div>
+          <div class="promo-video-player" id="promo-video-player">
+            <a
+              class="promo-video-play"
+              href="https://www.youtube.com/watch?v=lfrUuJgT5nw"
+              target="_blank"
+              rel="noopener"
+              aria-label="Reproducir el vídeo de presentación de OneMouse"
+              aria-describedby="promo-video-note"
+              data-promo-video-play
+              data-video-title="OneMouse: compartir ratón y teclado, transferir archivos y controlar dispositivos a distancia"
+            >
+              <img
+                src="../assets/onemouse-promo-video.jpg"
+                alt="Vista previa del vídeo de OneMouse con Windows, Mac y Android"
+                width="1280"
+                height="720"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="promo-video-action" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="28" height="28">
+                  <path d="m9 5 11 7-11 7z" fill="currentColor" />
+                </svg>
+                <span>Reproducir vídeo</span>
+              </span>
+            </a>
+          </div>
+          <p class="feature-note" id="promo-video-note">
+            Al pulsar reproducir se carga el reproductor de YouTube. No se conecta con YouTube antes de
+            reproducir el vídeo.
+          </p>
+        </div>
       </section>
 
       <!-- USE CASES -->
@@ -410,6 +466,73 @@
               <p>Ve las notificaciones del teléfono en el PC y copia los códigos compatibles. <a class="text-link" href="./guide#notifications">Configurar notificaciones</a></p>
             </article>
           </div>
+        </div>
+      </section>
+
+      <!-- SCREENSHOT SHARING + MOBILE PC REMOTE -->
+      <section class="section-alt" id="screen-tools" aria-labelledby="screen-tools-title">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="ey">Tus pantallas, conectadas</p>
+            <h2 class="sec" id="screen-tools-title">Envía una captura. Abre tu PC desde el móvil.</h2>
+          </div>
+          <div class="feature-stories">
+            <article class="feature-story" aria-labelledby="screenshot-share-title">
+              <figure class="feature-figure">
+                <img
+                  class="feature-visual"
+                  src="../assets/feature-screenshot-share-photo.webp"
+                  width="1536"
+                  height="1024"
+                  alt="Ejemplo de uso de estilo fotográfico: un PC y un teléfono Android con la misma captura de pantalla"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <figcaption>Capturar y enviar · Ejemplo de uso creado con IA</figcaption>
+              </figure>
+              <div class="feature-story-body">
+                <p class="feature-kicker">Capturas · Wi-Fi / LAN</p>
+                <h3 id="screenshot-share-title">
+                  Captura lo que necesitas y envíalo a otro dispositivo.
+                </h3>
+                <p>
+                  Usa el atajo predeterminado <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>S</kbd> para hacer una
+                  captura. Desde la vista previa puedes copiarla, guardarla o enviarla a un dispositivo
+                  conectado. En el móvil, pégala en una app que admita imágenes.
+                </p>
+                <a class="text-link" href="./guide#screenshots">Cómo capturar y enviar →</a>
+              </div>
+            </article>
+            <article class="feature-story" aria-labelledby="mobile-pc-remote-title">
+              <figure class="feature-figure">
+                <img
+                  class="feature-visual"
+                  src="../assets/feature-mobile-pc-remote-photo.webp"
+                  width="1536"
+                  height="1024"
+                  alt="Ejemplo de uso de estilo fotográfico: un teléfono Android en horizontal controla un PC con Windows"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <figcaption>Control del PC desde el móvil · Ejemplo de uso creado con IA</figcaption>
+              </figure>
+              <div class="feature-story-body">
+                <p class="feature-kicker">Android → Windows</p>
+                <h3 id="mobile-pc-remote-title">Ahora también puedes controlar el PC desde el móvil.</h3>
+                <p>
+                  Abre la pantalla del PC conectado en tu teléfono o tablet para hacer clic, desplazarte y
+                  escribir. Elige entre control táctil directo y modo cursor; también puedes ampliar la
+                  pantalla y ajustar la calidad.
+                </p>
+                <a class="text-link" href="./guide#mobile-pc-remote">Cómo abrir el PC desde el móvil →</a>
+              </div>
+            </article>
+          </div>
+          <p class="feature-note">
+            Ambos dispositivos necesitan una versión de OneMouse compatible con estas funciones. El envío
+            de capturas requiere Wi-Fi o LAN; la pantalla remota del PC se abre por LAN o mediante una
+            conexión de cuenta de Google compatible.
+          </p>
         </div>
       </section>
 
@@ -1058,5 +1181,6 @@
       })();
     </script>
     <script src="../js/downloads.js"></script>
+    <script src="../js/promo-video.js" defer></script>
   </body>
 </html>
