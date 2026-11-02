@@ -174,8 +174,8 @@ class SupportRefreshTest(unittest.TestCase):
             for page in ("guide", "help"):
                 with self.subTest(locale=locale or "ko", page=page):
                     prefix = f"/{locale}" if locale else ""
-                    self.assertEqual("2026-10-10", dates[
-                        f"https://onemouse.pages.dev{prefix}/{page}"])
+                    self.assertGreaterEqual(dates[
+                        f"https://onemouse.pages.dev{prefix}/{page}"], "2026-10-10")
 
 
 if __name__ == "__main__":

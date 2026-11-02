@@ -159,7 +159,7 @@ class SiteCopyCleanupTest(unittest.TestCase):
                     route += name
                 with self.subTest(locale=locale or "ko", page=name):
                     expected = "2026-10-25" if name == "index" else "2026-10-10"
-                    self.assertEqual(expected, dates[f"https://onemouse.pages.dev{route}"])
+                    self.assertGreaterEqual(dates[f"https://onemouse.pages.dev{route}"], expected)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="640" viewBox="0 0 960 640" role="img" aria-labelledby="title desc">
+  <title id="title">캡처한 화면을 연결된 폰으로 보내기</title>
+  <desc id="desc">PC 스크린샷 미리보기에서 보내기를 선택하면 연결된 Android 기기에 같은 이미지를 전달하는 기능 설명용 그림입니다.</desc>
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#6b4832" flood-opacity="0.12"/>
+    </filter>
+    <symbol id="capture" viewBox="0 0 420 240">
+      <rect width="420" height="240" rx="14" fill="#f2f5ed"/>
+      <circle cx="330" cy="59" r="29" fill="#ffc890"/>
+      <path d="M0 191 107 87 213 191 284 132 420 225v15H0Z" fill="#d5dfcb"/>
+      <path d="m0 226 119-83 99 97H0Zm420-62-97-70-111 146h208Z" fill="#9db9a5"/>
+      <rect x="25" y="24" width="153" height="10" rx="5" fill="#61776a" opacity="0.55"/>
+      <rect x="25" y="45" width="111" height="8" rx="4" fill="#61776a" opacity="0.23"/>
+      <rect x="25" y="195" width="95" height="21" rx="10.5" fill="#ffffff" opacity="0.85"/>
+    </symbol>
+  </defs>
+  <rect width="960" height="640" fill="#fdf1e6"/>
+  <circle cx="863" cy="87" r="110" fill="#ffead8"/>
+  <circle cx="78" cy="592" r="138" fill="#f6e7d9"/>
+  <g font-family="'Segoe UI','Noto Sans KR',sans-serif" fill="#241a12">
+    <g filter="url(#shadow)">
+      <rect x="42" y="83" width="576" height="432" rx="23" fill="#fff" stroke="#ecdccf" stroke-width="2"/>
+      <text x="71" y="120" font-size="18" font-weight="600" fill="#a07152">OneMouse</text>
+      <text x="71" y="157" font-size="29" font-weight="700">스크린샷</text>
+      <path d="m577 112 13 13m0-13-13 13" fill="none" stroke="#a29283" stroke-width="2.5" stroke-linecap="round"/>
+      <rect x="70" y="178" width="520" height="253" rx="15" fill="#faf6f1"/>
+      <use href="#capture" x="119" y="184" width="420" height="240"/>
+      <g font-size="22" font-weight="600" text-anchor="middle">
+        <rect x="71" y="451" width="159" height="43" rx="12" fill="#f6f0e9"/>
+        <text x="151" y="480" fill="#6d5e50">복사</text>
+        <rect x="248" y="451" width="159" height="43" rx="12" fill="#f6f0e9"/>
+        <text x="328" y="480" fill="#6d5e50">저장</text>
+        <rect x="425" y="451" width="165" height="43" rx="12" fill="#ff7a4d"/>
+        <text x="508" y="480" fill="#fff">보내기</text>
+      </g>
+    </g>
+    <g fill="none" stroke="#ef7950" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M632 298h41"/>
+      <path d="m660 285 14 13-14 13"/>
+    </g>
+    <g filter="url(#shadow)">
+      <rect x="691" y="126" width="220" height="405" rx="33" fill="#39423d"/>
+      <rect x="699" y="134" width="204" height="389" rx="27" fill="#fffdf9"/>
+      <rect x="768" y="146" width="66" height="7" rx="3.5" fill="#39423d"/>
+      <text x="718" y="201" font-size="22" font-weight="700">내 폰</text>
+      <rect x="715" y="222" width="172" height="145" rx="14" fill="#f5f0e9"/>
+      <use href="#capture" x="722" y="248" width="158" height="91"/>
+      <path d="m744 402 10 10 18-20" fill="none" stroke="#15845f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="784" y="411" font-size="21" font-weight="600" fill="#15845f">전달 완료</text>
+      <rect x="715" y="439" width="172" height="42" rx="12" fill="#f3ece3"/>
+      <text x="801" y="467" font-size="21" font-weight="600" text-anchor="middle" fill="#6d5e50">붙여넣기</text>
+      <rect x="773" y="505" width="56" height="4" rx="2" fill="#b6b5ae"/>
+    </g>
+    <rect x="71" y="546" width="204" height="43" rx="11" fill="#fff8f1" stroke="#e7d4c3" stroke-width="1.5"/>
+    <text x="173" y="575" font-size="22" font-weight="600" text-anchor="middle" fill="#7b5c46">Ctrl + Alt + S</text>
+    <text x="296" y="575" font-size="22" fill="#8b715b">캡처 → 미리보기 → 보내기</text>
+  </g>
+</svg>

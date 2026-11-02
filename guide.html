@@ -6,7 +6,7 @@
     <title>사용 가이드 | OneMouse 원마우스 — 처음 연결부터 자주 쓰는 기능까지</title>
     <meta
       name="description"
-      content="OneMouse 사용 가이드: Android, 다른 Windows PC, macOS 13+ Apple Silicon Mac 연결과 파일·클립보드, 원격 제어, Bluetooth 사용법을 안내합니다."
+      content="OneMouse 사용 가이드: 기기 연결부터 스크린샷 캡처·전송, 모바일에서 PC 원격제어, 파일·클립보드와 Bluetooth 사용법까지 안내합니다."
     />
     <meta name="robots" content="index,follow,max-image-preview:large" />
     <link rel="stylesheet" href="./css/onemouse.css" />
@@ -56,8 +56,10 @@
           <a href="#start">Android 연결</a>
           <a href="#position">폰 위치 배치</a>
           <a href="#remote">원격 화면</a>
+          <a href="#mobile-pc-remote">모바일에서 PC 제어</a>
           <a href="#mouse-gestures">마우스 제스처</a>
           <a href="#files">파일·클립보드</a>
+          <a href="#screenshots">스크린샷 캡처·전송</a>
           <a href="#text-to-pc">모바일 → PC 전송</a>
           <a href="#notifications">알림·답장</a>
           <a href="#quick">번호 단축키</a>
@@ -250,6 +252,77 @@
         </div>
       </section>
 
+      <!-- MOBILE TO PC REMOTE CONTROL -->
+      <section class="section-alt" id="mobile-pc-remote">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="ey">Android → Windows</p>
+            <h2 class="sec">휴대폰에서 PC 화면을 열고 조작합니다.</h2>
+            <p class="sec-lead">
+              PC 화면을 보면서 터치로 클릭하고, 커서를 움직이고, 휴대폰 키보드로 글자를 입력할 수
+              있습니다. PC와 Android 모두 이 기능을 지원하는 최신 앱이 필요합니다.
+            </p>
+          </div>
+          <div class="split lead-left">
+            <div>
+              <div class="panel">
+                <h3>원격 화면 열기</h3>
+                <ol>
+                  <li>
+                    PC에서 OneMouse를 실행합니다. 같은 Wi-Fi에서 페어링하거나, 같은 Google 계정으로 기기를
+                    연결합니다.
+                  </li>
+                  <li>Android 앱의 등록 PC 목록에서 해당 PC의 <b>원격 화면</b>을 누릅니다.</li>
+                  <li>
+                    PC에 나타난 요청을 확인하고 <b>허용</b>을 누릅니다. 내 휴대폰에서 다음에도 사용할 경우
+                    <b>이 기기 항상 허용</b>을 선택할 수 있습니다.
+                  </li>
+                  <li>화면이 연결되면 터치로 조작합니다. 오른쪽 설정 아이콘에서 제어 패널을 엽니다.</li>
+                </ol>
+              </div>
+              <div class="panel" style="margin-top: 18px">
+                <h3>손에 맞는 조작 모드를 선택하세요</h3>
+                <ul>
+                  <li><b>터치 모드:</b> 화면의 원하는 위치를 눌러 클릭하고, 끌어서 드래그합니다.</li>
+                  <li><b>커서 모드:</b> 손가락을 밀어 포인터를 옮기고, 탭으로 클릭합니다.</li>
+                  <li>길게 누르면 우클릭합니다. 커서 모드의 드래그는 두 번 누른 채 끕니다.</li>
+                  <li>
+                    두 손가락으로 확대·축소합니다. 1배에서는 두 손가락 이동으로 PC를 스크롤하고, 확대
+                    중에는 보고 있는 화면을 옮깁니다.
+                  </li>
+                  <li><b>키보드</b>로 문자를 입력하고, 보기만 할 때는 <b>보기 전용</b>을 켭니다.</li>
+                </ul>
+              </div>
+            </div>
+            <div>
+              <figure class="feature-figure">
+                <img
+                  class="feature-visual"
+                  src="./assets/feature-mobile-pc-remote.svg"
+                  alt="Android 휴대폰에서 Windows PC 화면을 보고 터치·커서·키보드로 조작하는 흐름"
+                  width="960"
+                  height="640"
+                  loading="lazy"
+                />
+                <figcaption>기능 설명용 이미지 · 화면 구성은 앱 버전에 따라 다를 수 있습니다.</figcaption>
+              </figure>
+              <div class="panel tip" style="margin-top: 18px">
+                <h3>화질·프레임 속도와 종료</h3>
+                <p>
+                  제어 패널에서 화질과 최대 프레임 속도를 고를 수 있습니다. 화질 변경을 지원하는 PC에서는
+                  연결을 유지한 채 적용합니다. 실제 해상도와 프레임 속도는 기기 성능과 네트워크 상태에
+                  따라 달라집니다.
+                </p>
+                <p>
+                  종료할 때는 <b>제어 패널 → 연결 종료</b>를 누릅니다. 원격 연결을 종료해도 PC는 켜진
+                  상태로 유지됩니다. Bluetooth 연결은 원격 영상을 전송하지 않습니다.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- ANDROID MOUSE GESTURES -->
       <section id="mouse-gestures">
         <div class="wrap narrow">
@@ -374,6 +447,71 @@
                 </div>
               </details>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SCREENSHOT CAPTURE AND SHARING -->
+      <section id="screenshots">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="ey">스크린샷 캡처·전송</p>
+            <h2 class="sec">필요한 부분만 찍고, 쓸 기기로 바로 보내세요.</h2>
+            <p class="sec-lead">
+              내 PC 화면은 물론 제어 중인 다른 기기의 화면도 캡처할 수 있습니다. 미리보기에서
+              복사·저장하거나, 연결된 기기의 클립보드로 보냅니다.
+            </p>
+          </div>
+          <div class="split lead-left">
+            <div>
+              <div class="panel">
+                <h3>캡처해서 보내는 순서</h3>
+                <ol>
+                  <li>
+                    Windows에서 기본 단축키 <b>Ctrl+Alt+S</b>를 누릅니다. 다른 기기를 제어 중이면 그
+                    기기의 화면을, 제어 중인 기기가 없으면 내 PC 화면을 캡처합니다.
+                  </li>
+                  <li>드래그해서 필요한 영역을 선택하거나, 도구 모음의 <b>전체 화면</b>을 누릅니다.</li>
+                  <li>
+                    PC에 열린 작은 미리보기에서 <b>복사</b> 또는 <b>저장</b>을 누릅니다. 다른 기기에서
+                    쓰려면 <b>보내기</b>를 누르고 받을 기기를 선택합니다.
+                  </li>
+                  <li>받은 기기에서 이미지 붙여넣기를 지원하는 앱을 열고 붙여넣습니다.</li>
+                </ol>
+                <p>
+                  단축키를 바꿨다면 설정한 조합을 사용하세요. 영역 선택 중 <b>Esc</b>나 취소 버튼을 누르면
+                  이미지를 보내지 않고 닫습니다.
+                </p>
+              </div>
+            </div>
+            <figure class="feature-figure">
+              <img
+                class="feature-visual"
+                src="./assets/feature-screenshot-share.svg"
+                alt="PC에서 영역을 캡처한 뒤 미리보기의 보내기로 연결된 휴대폰 클립보드에 전달하는 흐름"
+                width="960"
+                height="640"
+                loading="lazy"
+              />
+              <figcaption>기능 설명용 이미지 · 화면 구성은 앱 버전에 따라 다를 수 있습니다.</figcaption>
+            </figure>
+          </div>
+          <div class="panel tip" style="margin-top: 18px">
+            <h3>연결과 권한을 확인하세요</h3>
+            <ul>
+              <li>
+                <b>이미지 보내기는 Wi-Fi·LAN 연결</b>과 양쪽 앱의 기능 지원이 필요합니다. Bluetooth만
+                연결된 기기는 전송 대상으로 사용할 수 없습니다.
+              </li>
+              <li>
+                Android 화면 캡처에는 <b>Android 11 이상과 접근성 권한</b>이 필요하며, Mac 화면 캡처에는
+                화면 기록 권한이 필요합니다. 보안 화면은 캡처되지 않을 수 있습니다.
+              </li>
+              <li>
+                Android로 보낸 이미지는 붙여넣기를 지원하는 앱에서 사용하세요. 전달 후 자동으로 붙여넣거나
+                갤러리에 저장하지 않습니다.
+              </li>
+            </ul>
           </div>
         </div>
       </section>
