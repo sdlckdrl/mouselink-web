@@ -76,87 +76,155 @@
         <div class="wrap narrow">
           <div class="sec-head">
             <p class="ey">Android setup</p>
-            <h2 class="sec">For your first Android connection, just follow this order.</h2>
+            <h2 class="sec">Choose a connection method in the current app.</h2>
             <p class="sec-lead">
-              This assumes Wi-Fi (the same router). Android needs its Accessibility Service; for
-              Mac, use the separate five-step flow below.
+              Choose a shared Google account or Wi-Fi pairing without signing in. The steps below describe
+              QR or numeric-code pairing on the same Wi-Fi network.
+            </p>
+          </div>
+          <div class="panel tip pairing-account-note">
+            <h3>Connect with a Google account — optional</h3>
+            <p>
+              Sign in to the same Google account in Devices on the PC and on the phone’s home screen to
+              find your account devices. QR and numeric-code pairing works without signing in. Phone input
+              control needs Accessibility permission with either method.
             </p>
           </div>
           <div class="timeline">
             <div class="tstep">
               <div class="rail"><span class="num">1</span><span class="line"></span></div>
               <div class="body">
-                <h4>Open the PC app</h4>
-                <p>Run OneMouse on Windows and a 6-digit code and a QR code appear on screen.</p>
+                <h4>Connect the PC and phone to the same Wi-Fi</h4>
+                <p>Run OneMouse on both devices. Open Devices in the PC app.</p>
               </div>
             </div>
             <div class="tstep">
               <div class="rail"><span class="num">2</span><span class="line"></span></div>
               <div class="body">
-                <h4>Turn on the Android Accessibility Service</h4>
+                <h4>Allow Android Accessibility</h4>
                 <p>
-                  To receive mouse and keyboard input from the PC, turn on the OneMouse
-                  Accessibility Service on Android.
+                  Enable the OneMouse Accessibility Service on your phone. Allow required permissions,
+                  such as Nearby Wi-Fi devices, if requested.
                 </p>
               </div>
             </div>
             <div class="tstep">
               <div class="rail"><span class="num">3</span><span class="line"></span></div>
               <div class="body">
-                <h4>Search for your PC</h4>
+                <h4>Show the QR and pairing code on the PC</h4>
                 <p>
-                  Find the PC on the same Wi-Fi (the same router). On Android 13 and up, you may be
-                  asked once for the "nearby Wi-Fi devices" permission at this point.
+                  In Devices, expand Other ways to connect and choose QR &amp; code for this PC. This
+                  dialog shows the QR and six-digit code.
                 </p>
               </div>
             </div>
             <div class="tstep">
               <div class="rail"><span class="num">4</span><span class="line"></span></div>
               <div class="body">
-                <h4>Pair with the QR or 6-digit code</h4>
+                <h4>Authenticate on the phone with a code or QR</h4>
                 <p>
-                  Scan the QR code or enter the 6-digit code to confirm it's your device. Once
-                  pairing is done, the input, file, and clipboard channels open.
+                  Choose Home → Other ways to connect → Add with QR or pairing code. Enter the six digits
+                  in Number code and choose Connect, or use Scan QR code → Open camera to scan the PC’s
+                  QR. Choose one method.
                 </p>
               </div>
             </div>
             <div class="tstep">
               <div class="rail"><span class="num">5</span><span class="line"></span></div>
               <div class="body">
-                <h4>Set your phone's position</h4>
+                <h4>Check the registered PC and connection state</h4>
                 <p>
-                  Choose which edge of the PC screen (left, right, top, or bottom) leads to your
-                  phone, and arrange it to match the real direction. That edge is where the cursor
-                  crosses over.
+                  Confirm that the PC appears under Registered PCs on the phone’s home screen. Already
+                  registered devices do not need this authentication every time.
                 </p>
               </div>
             </div>
             <div class="tstep">
               <div class="rail"><span class="num">6</span></div>
               <div class="body">
-                <h4>Cross over and use it</h4>
+                <h4>Set Phone placement and move the mouse across</h4>
                 <p>
-                  Move the mouse across the arranged edge to use your PC mouse and keyboard on the phone.
+                  Match Phone placement to the phone’s actual position, then move the mouse across that
+                  edge of the PC screen.
                 </p>
               </div>
             </div>
           </div>
-          <details class="fold">
+          <details class="fold pairing-screens">
             <summary>
-              <span>See the real-UI pairing flow</span
-              ><small>Get ready → check the PC code → enter the number → scan the QR</small>
+              <span>See the current app pairing screens</span
+              ><small>Show the PC code → add the PC on your phone → choose code or QR</small>
             </summary>
             <div class="fold-body">
-              <a
-                href="../assets/onemouse-pairing-real-ui-comic-v5.png"
-                target="_blank"
-                rel="noopener"
-                ><img
-                  src="../assets/onemouse-pairing-real-ui-comic-v5.png"
-                  alt="How to pair OneMouse: get ready, check the PC code, enter the number, scan the QR"
-                  loading="lazy"
-                  style="border-radius: 12px"
-              /></a>
+              <div class="pairing-gallery">
+                <figure class="pairing-shot pairing-shot-pc">
+                  <a href="../assets/pairing/pc-code-en.webp" target="_blank" rel="noopener">
+                    <img
+                      src="../assets/pairing/pc-code-en.webp"
+                      alt="1. Show the PC QR and pairing code: Devices → Other ways to connect → QR &amp; code for this PC"
+                      width="888"
+                      height="742"
+                      loading="lazy"
+                    />
+                  </a>
+                  <figcaption>
+                    <b>1. Show the PC QR and pairing code</b
+                    ><span>Devices → Other ways to connect → QR &amp; code for this PC</span>
+                  </figcaption>
+                </figure>
+                <figure class="pairing-shot pairing-overview-shot">
+                  <a href="../assets/pairing/android-other-en.webp" target="_blank" rel="noopener">
+                    <img
+                      src="../assets/pairing/android-other-en.webp"
+                      alt="2. Add the PC on your phone: Home → Other ways to connect → Add with QR or pairing code"
+                      width="1080"
+                      height="2400"
+                      loading="lazy"
+                    />
+                  </a>
+                  <figcaption>
+                    <b>2. Add the PC on your phone</b
+                    ><span>Home → Other ways to connect → Add with QR or pairing code</span>
+                  </figcaption>
+                </figure>
+                <figure class="pairing-shot pairing-dialog-shot">
+                  <a href="../assets/pairing/android-code-en.webp" target="_blank" rel="noopener">
+                    <img
+                      src="../assets/pairing/android-code-en.webp"
+                      alt="3. Connect with a numeric code: In the Number code tab, enter the PC’s six digits and choose Connect."
+                      width="1080"
+                      height="2400"
+                      loading="lazy"
+                    />
+                  </a>
+                  <figcaption>
+                    <b>3. Connect with a numeric code</b
+                    ><span>In the Number code tab, enter the PC’s six digits and choose Connect.</span>
+                  </figcaption>
+                </figure>
+                <figure class="pairing-shot pairing-dialog-shot">
+                  <a href="../assets/pairing/android-qr-en.webp" target="_blank" rel="noopener">
+                    <img
+                      src="../assets/pairing/android-qr-en.webp"
+                      alt="Or connect with a QR code: Choose Scan QR code → Open camera and scan the PC’s QR. Use either the numeric code or QR, not both."
+                      width="1080"
+                      height="2400"
+                      loading="lazy"
+                    />
+                  </a>
+                  <figcaption>
+                    <b>Or connect with a QR code</b
+                    ><span
+                      >Choose Scan QR code → Open camera and scan the PC’s QR. Use either the numeric code
+                      or QR, not both.</span
+                    >
+                  </figcaption>
+                </figure>
+              </div>
+              <p class="pairing-example-note">
+                Actual app screens captured with example devices and codes. Use the code or QR shown in
+                your own PC app when connecting. Select an image to view it at full size.
+              </p>
             </div>
           </details>
         </div>
@@ -177,10 +245,12 @@
           <details class="fold">
             <summary><span>See the arrangement screen</span></summary>
             <div class="fold-body">
-              <a href="../assets/onboarding_pc_position.png" target="_blank" rel="noopener"
+              <a href="../assets/pairing/pc-position-en.webp" target="_blank" rel="noopener"
                 ><img
-                  src="../assets/onboarding_pc_position.png"
-                  alt="OneMouse phone position arrangement screen"
+                  src="../assets/pairing/pc-position-en.webp"
+                  alt="Current OneMouse device layout with an example Android device placed to the right of the PC"
+                  width="2240"
+                  height="1800"
                   loading="lazy"
                   style="border-radius: 12px"
               /></a>
@@ -820,18 +890,28 @@
         <div class="wrap">
           <div class="sec-head">
             <p class="ey">Another PC</p>
-            <h2 class="sec">
-              Link another Windows PC in this order: Settings · Devices · arrangement.
-            </h2>
+            <h2 class="sec">Connect another Windows PC: Devices, connection, then arrangement.</h2>
           </div>
           <div class="split lead-left">
             <div>
               <div class="panel">
                 <h3>Connecting</h3>
                 <ul>
-                  <li>Choose the Windows PC that will start and manage the connection.</li>
-                  <li>Pair the other Windows PC to add it to Devices.</li>
-                  <li>In the layout editor, place the other PC where it really sits.</li>
+                  <li>
+                    Run OneMouse on both Windows PCs. Sign in to the same Google account, or put both PCs
+                    on the same network for LAN pairing.
+                  </li>
+                  <li>
+                    For LAN, open <b>Device management → Other ways to connect</b> on the controlling PC,
+                    select the other Windows PC, enter its 6-digit code and choose <b>Pair</b>. Find the
+                    code on the other PC under
+                    <b>Device management → Other ways to connect → QR &amp; code for this PC</b>. LAN
+                    pairing needs no sign-in.
+                  </li>
+                  <li>
+                    Check the registered PC’s connection state and enable <b>Connect</b> if needed. Then
+                    place it in the layout editor to match its physical position.
+                  </li>
                   <li>
                     Move the mouse in that direction to control the other PC, and exchange files by
                     dragging across the boundary.
@@ -841,15 +921,37 @@
             </div>
             <div>
               <details class="fold" open>
-                <summary><span>The arrangement screen</span></summary>
+                <summary><span>Pairing and arrangement screens</span></summary>
                 <div class="fold-body">
-                  <a href="../assets/guide_pc_arrangement.png" target="_blank" rel="noopener"
-                    ><img
-                      src="../assets/guide_pc_arrangement.png"
-                      alt="The layout editor screen for another PC"
-                      loading="lazy"
-                      style="border-radius: 12px"
-                  /></a>
+                  <figure class="feature-figure" style="margin-bottom: 18px">
+                    <a href="../assets/pairing/pc-peer-en.webp" target="_blank" rel="noopener"
+                      ><img
+                        src="../assets/pairing/pc-peer-en.webp"
+                        alt="Current Other ways to connect screen with the other Windows PC’s six-digit pairing code"
+                        width="2240"
+                        height="1800"
+                        loading="lazy"
+                        style="border-radius: 12px"
+                    /></a>
+                    <figcaption>
+                      1. Enter the other PC’s six-digit code and choose Pair. The code and device names
+                      are examples.
+                    </figcaption>
+                  </figure>
+                  <figure class="feature-figure">
+                    <a href="../assets/pairing/pc-peer-position-en.webp" target="_blank" rel="noopener"
+                      ><img
+                        src="../assets/pairing/pc-peer-position-en.webp"
+                        alt="Current device management screen arranging a connected Windows PC"
+                        width="2240"
+                        height="1800"
+                        loading="lazy"
+                        style="border-radius: 12px"
+                    /></a>
+                    <figcaption>
+                      2. Check the connection, then arrange the other PC to match its physical position.
+                    </figcaption>
+                  </figure>
                 </div>
               </details>
             </div>

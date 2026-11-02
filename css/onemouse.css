@@ -917,6 +917,97 @@ table.kt.gesture-table {
   }
 }
 
+/* ---------- current pairing screenshots ---------- */
+.pairing-account-note {
+  margin-bottom: 24px;
+}
+.pairing-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+.pairing-shot {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--card);
+}
+.pairing-shot > a {
+  display: grid;
+  flex: 1;
+  min-height: 240px;
+  padding: 12px;
+  place-items: center;
+  background: var(--paper2);
+}
+.pairing-shot img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 520px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+.pairing-overview-shot > a,
+.pairing-dialog-shot > a {
+  position: relative;
+  display: block;
+  flex: none;
+  min-height: 0;
+  padding: 0;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+}
+.pairing-overview-shot > a {
+  aspect-ratio: 3 / 4;
+}
+.pairing-overview-shot img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-height: none;
+  border-radius: 0;
+}
+.pairing-dialog-shot img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 125%;
+  max-width: none;
+  height: auto;
+  max-height: none;
+  border-radius: 0;
+  transform: translate(-50%, -50%);
+}
+.pairing-shot figcaption {
+  padding: 16px 18px;
+  font-size: 14px;
+  line-height: 1.7;
+}
+.pairing-shot figcaption b,
+.pairing-shot figcaption span {
+  display: block;
+}
+.pairing-shot figcaption span {
+  margin-top: 5px;
+  color: var(--muted);
+}
+.pairing-example-note {
+  margin: 18px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+@media (max-width: 640px) {
+  .pairing-gallery {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
 /* ---------- screenshot sharing and mobile PC remote ---------- */
 .feature-stories {
   display: grid;

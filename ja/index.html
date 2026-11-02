@@ -522,46 +522,108 @@
           <div class="sec-head">
             <p class="ey">接続方法</p>
             <h2 class="sec">Androidとの接続は4ステップ。</h2>
-            <p class="sec-lead">Macは<a class="text-link" href="./guide#mac">Mac接続ガイド</a>をご覧ください。</p>
+            <p class="sec-lead">
+              Macは<a class="text-link" href="./guide#mac">Mac接続ガイド</a>をご覧ください。
+            </p>
           </div>
           <div class="flow4">
             <div class="step">
               <div class="badge">01</div>
-              <h4>Windowsアプリを起動</h4>
-              <p>メインPCでOneMouseを起動します。</p>
+              <h4>両方のアプリとWi-Fiを確認</h4>
+              <p>PCとAndroidでOneMouseを起動し、同じWi-Fiに接続します。</p>
             </div>
             <div class="step">
               <div class="badge">02</div>
               <h4>Androidの権限を許可</h4>
-              <p>スマホアプリを開き、アクセシビリティを許可します。</p>
+              <p>PCのマウス・キーボードで操作するには、OneMouseのアクセシビリティを許可します。</p>
             </div>
             <div class="step">
               <div class="badge">03</div>
-              <h4>QR・6桁コードで接続</h4>
-              <p>同じネットワークのPCを探し、QRをスキャンするかコードを入力します。</p>
+              <h4>接続方法を選びます</h4>
+              <p>
+                両方で同じGoogleアカウントにログインするか、<b>ほかの接続方法</b>からQR・6桁コードでLANペアリングします。
+              </p>
             </div>
             <div class="step">
               <div class="badge">04</div>
-              <h4>配置して渡します</h4>
-              <p>スマホを配置し、その方向へマウスを移動します。</p>
+              <h4>接続を確認して配置</h4>
+              <p>
+                PCが登録されたことを確認し、<b>スマホの配置</b>を合わせて、その方向へマウスを移動します。
+              </p>
             </div>
           </div>
-          <details class="fold">
+          <details class="fold pairing-screens">
             <summary>
-              <span>実際のペアリング画面を見る</span
-              ><small>準備 → PCコード確認 → 数字入力 → QRスキャン</small>
+              <span>最新のペアリング画面を見る</span
+              ><small>PCコード → スマホで追加 → 番号コードまたはQR</small>
             </summary>
             <div class="fold-body">
-              <a
-                href="../assets/onemouse-pairing-real-ui-comic-v5.png"
-                target="_blank"
-                rel="noopener"
-                ><img
-                  src="../assets/onemouse-pairing-real-ui-comic-v5.png"
-                  alt="OneMouseのペアリング方法：準備、PCコード確認、数字入力、QRスキャンの順"
-                  loading="lazy"
-                  style="border-radius: 12px"
-              /></a>
+              <p>方法Aと方法Bは選択肢です。番号の入力とQRスキャンを両方行う必要はありません。</p>
+              <div class="pairing-gallery">
+                <figure class="pairing-shot pairing-shot-pc">
+                  <a href="../assets/pairing/pc-code-ja.webp" target="_blank" rel="noopener">
+                    <img
+                      src="../assets/pairing/pc-code-ja.webp"
+                      alt="PCで「このPCのQR・認証番号」を開いた現在のペアリング画面"
+                      width="888"
+                      height="744"
+                      loading="lazy"
+                    />
+                  </a>
+                  <figcaption>
+                    <b>1. PCのQR・認証番号</b><span>デバイス管理から「ほかの接続方法」を開きます。</span>
+                  </figcaption>
+                </figure>
+                <figure class="pairing-shot pairing-overview-shot">
+                  <a href="../assets/pairing/android-other-ja.webp" target="_blank" rel="noopener">
+                    <img
+                      src="../assets/pairing/android-other-ja.webp"
+                      alt="Androidホームの「別の方法で接続」と「QR・ペアリングコードで PC を追加」"
+                      width="1080"
+                      height="2400"
+                      loading="lazy"
+                    />
+                  </a>
+                  <figcaption>
+                    <b>2. Androidで接続方法を開く</b
+                    ><span>ホームの「別の方法で接続」からPCを追加します。</span>
+                  </figcaption>
+                </figure>
+                <figure class="pairing-shot pairing-dialog-shot">
+                  <a href="../assets/pairing/android-code-ja.webp" target="_blank" rel="noopener">
+                    <img
+                      src="../assets/pairing/android-code-ja.webp"
+                      alt="Androidの番号コード入力画面と接続するボタン"
+                      width="1080"
+                      height="2400"
+                      loading="lazy"
+                    />
+                  </a>
+                  <figcaption>
+                    <b>3. 方法A：番号コード</b
+                    ><span>PCの6桁コードを入力して「接続する」を押します。</span>
+                  </figcaption>
+                </figure>
+                <figure class="pairing-shot pairing-dialog-shot">
+                  <a href="../assets/pairing/android-qr-ja.webp" target="_blank" rel="noopener">
+                    <img
+                      src="../assets/pairing/android-qr-ja.webp"
+                      alt="AndroidのQRスキャン画面とカメラを開くボタン"
+                      width="1080"
+                      height="2400"
+                      loading="lazy"
+                    />
+                  </a>
+                  <figcaption>
+                    <b>またはQRスキャン</b
+                    ><span>「カメラを開く」からPCに表示されたQRを読み取ります。</span>
+                  </figcaption>
+                </figure>
+              </div>
+              <p class="pairing-example-note">
+                画像のコードやデバイス名は説明用の例です。ご自身のPCアプリに現在表示されているコードを使用してください。
+                画像を押すと原寸で確認できます。
+              </p>
             </div>
           </details>
           <div style="margin-top: 20px">

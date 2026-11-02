@@ -73,80 +73,147 @@
             <p class="ey">Androidを5分で接続</p>
             <h2 class="sec">Androidとの初回接続は、この順番どおりに進めるだけです。</h2>
             <p class="sec-lead">
-              WindowsとAndroidが同じWi-Fi（同じWi-Fiルーター）にあることを前提としています。
+              PCとAndroidの現在の画面に沿った手順です。以下は同じWi-FiでのLANペアリングです。Androidを操作するにはアクセシビリティ権限が必要です。Macは<a
+                href="#mac"
+                class="text-link"
+                >Mac接続ガイド</a
+              >をご覧ください。
+            </p>
+          </div>
+          <div class="panel tip" style="margin-bottom: 18px">
+            <h3>Googleアカウントで接続する場合</h3>
+            <p>
+              PCとAndroidの両方で同じGoogleアカウントにログインし、アカウントのデバイス一覧を確認します。Googleログインは任意です。以下のQR・6桁コードによるLANペアリングは、ログインなしで利用できます。
             </p>
           </div>
           <div class="timeline">
             <div class="tstep">
               <div class="rail"><span class="num">1</span><span class="line"></span></div>
               <div class="body">
-                <h4>PCアプリを起動します</h4>
-                <p>WindowsでOneMouseを起動すると、画面に6桁のコードとQRコードが表示されます。</p>
+                <h4>両方のアプリを同じWi-Fiで起動</h4>
+                <p>WindowsとAndroidでOneMouseを起動し、同じWi-Fiに接続します。</p>
               </div>
             </div>
             <div class="tstep">
               <div class="rail"><span class="num">2</span><span class="line"></span></div>
               <div class="body">
-                <h4>Androidのアクセシビリティサービスをオンにします</h4>
+                <h4>Androidのアクセシビリティを許可</h4>
                 <p>
-                  PCのマウス・キーボード入力を受け取るには、AndroidでOneMouseのアクセシビリティサービスをオンにします。
+                  PCから操作するには、AndroidでOneMouseのアクセシビリティサービスを有効にします。Android
+                  13以降では、PC検索のために「付近のWi-Fiデバイス」の許可を求められる場合があります。
                 </p>
               </div>
             </div>
             <div class="tstep">
               <div class="rail"><span class="num">3</span><span class="line"></span></div>
               <div class="body">
-                <h4>PCを検索します</h4>
+                <h4>PCのQR・認証番号を開く</h4>
                 <p>
-                  同じWi-Fi（同じWi-Fiルーター）でPCを探します。Android
-                  13以上では、このとき「付近のWi-Fiデバイス」の権限を一度確認されることがあります。
+                  PCの<b>デバイス管理 → ほかの接続方法 → このPCのQR・認証番号</b
+                  >を開き、現在表示されている6桁コードまたはQRを確認します。
                 </p>
               </div>
             </div>
             <div class="tstep">
               <div class="rail"><span class="num">4</span><span class="line"></span></div>
               <div class="body">
-                <h4>QRまたは6桁のコードでペアリング</h4>
+                <h4>スマホからPCを追加</h4>
                 <p>
-                  QRをスキャンするか6桁のコードを入力して、自分のデバイスかどうかを確認します。ペアリングを完了すると、入力・ファイル・クリップボードのチャンネルが開きます。
+                  Androidのホームで<b>別の方法で接続 → QR・ペアリングコードで PC を追加</b
+                  >を開きます。<b>番号コード</b>で6桁を入力して<b>接続する</b>を押すか、QRスキャンのタブで<b>カメラを開く</b>を押し、PCのQRを読み取ります。どちらか一方で接続できます。
                 </p>
               </div>
             </div>
             <div class="tstep">
               <div class="rail"><span class="num">5</span><span class="line"></span></div>
               <div class="body">
-                <h4>スマホの位置を合わせます</h4>
-                <p>
-                  PC画面のどの端（左・右・上・下）へスマホをつなげるか、実際の方向に合わせて配置します。この端がカーソルの進入方向になります。
-                </p>
+                <h4>登録されたPCと接続状態を確認</h4>
+                <p>Androidの<b>登録されたPC</b>に対象のPCが表示され、接続できていることを確認します。</p>
               </div>
             </div>
             <div class="tstep">
               <div class="rail"><span class="num">6</span></div>
               <div class="body">
-                <h4>そのまま使えます</h4>
+                <h4>スマホの配置を合わせて使います</h4>
                 <p>
-                  配置した画面の端を越えると、PCのマウス・キーボードでスマホを操作できます。
+                  <b>スマホの配置</b
+                  >をスマホの実際の方向に合わせます。対応するPC画面の端へマウスを移動すると、PCのマウス・キーボードでスマホを操作できます。
                 </p>
               </div>
             </div>
           </div>
-          <details class="fold">
+          <details class="fold pairing-screens">
             <summary>
-              <span>実際のUIでのペアリングの流れを見る</span
-              ><small>準備 → PCコード確認 → 数字入力 → QRスキャン</small>
+              <span>最新のペアリング画面を見る</span
+              ><small>PCコード → スマホで追加 → 番号コードまたはQR</small>
             </summary>
             <div class="fold-body">
-              <a
-                href="../assets/onemouse-pairing-real-ui-comic-v5.png"
-                target="_blank"
-                rel="noopener"
-                ><img
-                  src="../assets/onemouse-pairing-real-ui-comic-v5.png"
-                  alt="OneMouseのペアリング方法：準備、PCコード確認、数字入力、QRスキャンの順"
-                  loading="lazy"
-                  style="border-radius: 12px"
-              /></a>
+              <p>方法Aと方法Bは選択肢です。番号の入力とQRスキャンを両方行う必要はありません。</p>
+              <div class="pairing-gallery">
+                <figure class="pairing-shot pairing-shot-pc">
+                  <a href="../assets/pairing/pc-code-ja.webp" target="_blank" rel="noopener">
+                    <img
+                      src="../assets/pairing/pc-code-ja.webp"
+                      alt="PCで「このPCのQR・認証番号」を開いた現在のペアリング画面"
+                      width="888"
+                      height="744"
+                      loading="lazy"
+                    />
+                  </a>
+                  <figcaption>
+                    <b>1. PCのQR・認証番号</b><span>デバイス管理から「ほかの接続方法」を開きます。</span>
+                  </figcaption>
+                </figure>
+                <figure class="pairing-shot pairing-overview-shot">
+                  <a href="../assets/pairing/android-other-ja.webp" target="_blank" rel="noopener">
+                    <img
+                      src="../assets/pairing/android-other-ja.webp"
+                      alt="Androidホームの「別の方法で接続」と「QR・ペアリングコードで PC を追加」"
+                      width="1080"
+                      height="2400"
+                      loading="lazy"
+                    />
+                  </a>
+                  <figcaption>
+                    <b>2. Androidで接続方法を開く</b
+                    ><span>ホームの「別の方法で接続」からPCを追加します。</span>
+                  </figcaption>
+                </figure>
+                <figure class="pairing-shot pairing-dialog-shot">
+                  <a href="../assets/pairing/android-code-ja.webp" target="_blank" rel="noopener">
+                    <img
+                      src="../assets/pairing/android-code-ja.webp"
+                      alt="Androidの番号コード入力画面と接続するボタン"
+                      width="1080"
+                      height="2400"
+                      loading="lazy"
+                    />
+                  </a>
+                  <figcaption>
+                    <b>3. 方法A：番号コード</b
+                    ><span>PCの6桁コードを入力して「接続する」を押します。</span>
+                  </figcaption>
+                </figure>
+                <figure class="pairing-shot pairing-dialog-shot">
+                  <a href="../assets/pairing/android-qr-ja.webp" target="_blank" rel="noopener">
+                    <img
+                      src="../assets/pairing/android-qr-ja.webp"
+                      alt="AndroidのQRスキャン画面とカメラを開くボタン"
+                      width="1080"
+                      height="2400"
+                      loading="lazy"
+                    />
+                  </a>
+                  <figcaption>
+                    <b>またはQRスキャン</b
+                    ><span>「カメラを開く」からPCに表示されたQRを読み取ります。</span>
+                  </figcaption>
+                </figure>
+              </div>
+              <p class="pairing-example-note">
+                画像のコードやデバイス名は説明用の例です。ご自身のPCアプリに現在表示されているコードを使用してください。
+                画像を押すと原寸で確認できます。
+              </p>
             </div>
           </details>
         </div>
@@ -165,10 +232,12 @@
           <details class="fold">
             <summary><span>配置画面を見る</span></summary>
             <div class="fold-body">
-              <a href="../assets/onboarding_pc_position.png" target="_blank" rel="noopener"
+              <a href="../assets/pairing/pc-position-ja.webp" target="_blank" rel="noopener"
                 ><img
-                  src="../assets/onboarding_pc_position.png"
-                  alt="OneMouseのスマホ位置の配置画面"
+                  src="../assets/pairing/pc-position-ja.webp"
+                  alt="現在のOneMouseのデバイス配置画面：Androidのサンプル機器をPCの右側に配置"
+                  width="2240"
+                  height="1800"
                   loading="lazy"
                   style="border-radius: 12px"
               /></a>
@@ -831,7 +900,7 @@
         <div class="wrap">
           <div class="sec-head">
             <p class="ey">別のWindows PC</p>
-            <h2 class="sec">Windows PC同士は、設定 · デバイス管理 · 配置の順でつなぎます。</h2>
+            <h2 class="sec">Windows PC同士は、デバイス管理 → 接続 → 配置の順でつなぎます。</h2>
           </div>
           <div class="split lead-left">
             <div>
@@ -839,11 +908,18 @@
                 <h3>接続する</h3>
                 <ul>
                   <li>
-                    操作する側のWindows PCは<b>メイン</b>、操作される側のWindows
-                    PCは<b>サブ</b>の役割にします。
+                    両方のWindows
+                    PCでOneMouseを起動します。同じGoogleアカウントにログインするか、LANペアリングのために同じネットワークへ接続します。
                   </li>
-                  <li>サブPCをペアリングして、デバイス管理に追加します。</li>
-                  <li>配置エディタで、サブPCを実際の位置どおりに置きます。</li>
+                  <li>
+                    LANでは、操作元のPCの<b>デバイス管理 → ほかの接続方法</b>で相手のWindows
+                    PCを選び、6桁コードを入力して<b>ペアリング</b>します。コードは相手のPCの<b
+                      >デバイス管理 → ほかの接続方法 → このPCのQR・認証番号</b
+                    >で確認します。LANペアリングはログイン不要です。
+                  </li>
+                  <li>
+                    登録された相手のPCの接続状態を確認し、必要に応じて<b>接続する</b>スイッチをオンにします。配置エディタで実際の位置に合わせます。
+                  </li>
                   <li>
                     その方向へマウスを渡すと別のPCを操作でき、ファイルも境界へのドラッグでやり取りできます。
                   </li>
@@ -852,15 +928,37 @@
             </div>
             <div>
               <details class="fold" open>
-                <summary><span>配置画面</span></summary>
+                <summary><span>ペアリングと配置の画面</span></summary>
                 <div class="fold-body">
-                  <a href="../assets/guide_pc_arrangement.png" target="_blank" rel="noopener"
-                    ><img
-                      src="../assets/guide_pc_arrangement.png"
-                      alt="別のPCの配置エディタ画面"
-                      loading="lazy"
-                      style="border-radius: 12px"
-                  /></a>
+                  <figure class="feature-figure" style="margin-bottom: 18px">
+                    <a href="../assets/pairing/pc-peer-ja.webp" target="_blank" rel="noopener"
+                      ><img
+                        src="../assets/pairing/pc-peer-ja.webp"
+                        alt="現在の「ほかの接続方法」で相手のWindows PCの6桁コードを入力する画面"
+                        width="2240"
+                        height="1800"
+                        loading="lazy"
+                        style="border-radius: 12px"
+                    /></a>
+                    <figcaption>
+                      1.
+                      相手のPCの6桁コードを入力してペアリングします。コードとデバイス名は説明用の例です。
+                    </figcaption>
+                  </figure>
+                  <figure class="feature-figure">
+                    <a href="../assets/pairing/pc-peer-position-ja.webp" target="_blank" rel="noopener"
+                      ><img
+                        src="../assets/pairing/pc-peer-position-ja.webp"
+                        alt="現在のデバイス管理で接続したWindows PCを配置する画面"
+                        width="2240"
+                        height="1800"
+                        loading="lazy"
+                        style="border-radius: 12px"
+                    /></a>
+                    <figcaption>
+                      2. 接続状態を確認し、相手のPCを実際に置いている方向へ配置します。
+                    </figcaption>
+                  </figure>
                 </div>
               </details>
             </div>

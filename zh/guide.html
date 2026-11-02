@@ -73,84 +73,143 @@
             <p class="ey">5 分钟连接</p>
             <h2 class="sec">首次连接只要照着这个顺序做就行。</h2>
             <p class="sec-lead">
-              以下是 Android 的首次连接流程，以 Wi-Fi（同一台 Wi-Fi 路由器）为准。Mac
-              请使用下方独立的 LAN 连接步骤。
+              以下按 PC 与 Android 当前界面说明首次连接步骤，适用于同一 Wi-Fi 下的 LAN 配对。控制 Android
+              需要无障碍权限。Mac 请参阅<a href="#mac" class="text-link">Mac 连接指南</a>。
+            </p>
+          </div>
+          <div class="panel tip" style="margin-bottom: 18px">
+            <h3>选择 Google 账号连接时</h3>
+            <p>
+              在 PC 和 Android 两端登录同一 Google 账号，然后查看账号设备列表。Google
+              登录是可选的；下方通过二维码或 6 位代码进行的 LAN 配对无需登录。
             </p>
           </div>
           <div class="timeline">
             <div class="tstep">
               <div class="rail"><span class="num">1</span><span class="line"></span></div>
               <div class="body">
-                <h4>打开 PC 应用</h4>
-                <p>在 Windows 上运行 OneMouse，屏幕上会显示 6 位数字代码和二维码。</p>
+                <h4>打开两端应用并连接同一 Wi-Fi</h4>
+                <p>在 Windows 和 Android 上运行 OneMouse，并连接同一 Wi-Fi。</p>
               </div>
             </div>
             <div class="tstep">
               <div class="rail"><span class="num">2</span><span class="line"></span></div>
               <div class="body">
-                <h4>打开 Android 无障碍服务</h4>
+                <h4>允许 Android 无障碍服务</h4>
                 <p>
-                  要接收 PC 的鼠标和键盘输入，需要在 Android 上打开 OneMouse
-                  无障碍服务。
+                  要接收 PC 的操作，请在 Android 上开启 OneMouse 无障碍服务。Android 13
+                  及以上系统可能还会请求“附近 Wi-Fi 设备”权限，以搜索 PC。
                 </p>
               </div>
             </div>
             <div class="tstep">
               <div class="rail"><span class="num">3</span><span class="line"></span></div>
               <div class="body">
-                <h4>搜索 PC</h4>
+                <h4>打开 PC 的二维码和验证码</h4>
                 <p>
-                  在同一 Wi-Fi（同一台 Wi-Fi 路由器）下查找 PC。Android 13
-                  及以上系统此时可能会询问一次“附近 Wi-Fi 设备”权限。
+                  在 PC 上打开<b>设备管理 → 其他连接方式 → 此 PC 的二维码和验证码</b>，查看当前显示的 6
+                  位代码或二维码。
                 </p>
               </div>
             </div>
             <div class="tstep">
               <div class="rail"><span class="num">4</span><span class="line"></span></div>
               <div class="body">
-                <h4>用二维码或 6 位代码配对</h4>
+                <h4>从手机添加 PC</h4>
                 <p>
-                  扫描二维码或输入 6
-                  位代码，确认是自己的设备。完成配对后，输入、文件、剪贴板通道才会开启。
+                  在 Android 首页打开<b>其他连接方式 → 通过二维码或配对码添加 PC</b
+                  >。可在<b>号码代码</b>页输入 6
+                  位代码并点击<b>连接</b>，或在二维码扫描页点击<b>打开相机</b>扫描 PC
+                  上的二维码。任选一种即可。
                 </p>
               </div>
             </div>
             <div class="tstep">
               <div class="rail"><span class="num">5</span><span class="line"></span></div>
               <div class="body">
-                <h4>对准手机位置</h4>
-                <p>
-                  按实际方向布置手机会从 PC
-                  屏幕的哪个边缘（左、右、上、下）延伸出去。这个边缘就是光标的进入方向。
-                </p>
+                <h4>确认 PC 已注册且连接正常</h4>
+                <p>在 Android 的<b>已注册PCs</b>列表中确认目标 PC 已出现，并检查连接状态。</p>
               </div>
             </div>
             <div class="tstep">
               <div class="rail"><span class="num">6</span></div>
               <div class="body">
-                <h4>移过去使用</h4>
+                <h4>设置手机位置并开始使用</h4>
                 <p>
-                  将鼠标移过布局中对应的边缘，即可用 PC 鼠标和键盘操作手机。
+                  在<b>手机布局</b>中选择手机实际放置的方向。将鼠标移到 PC 屏幕对应边缘，即可用 PC
+                  鼠标和键盘操作手机。
                 </p>
               </div>
             </div>
           </div>
-          <details class="fold">
+          <details class="fold pairing-screens">
             <summary>
-              <span>查看实际 UI 配对流程</span
-              ><small>准备 → 确认 PC 代码 → 输入数字 → 扫描二维码</small>
+              <span>查看最新版配对界面</span><small>PC 代码 → 手机添加 → 数字代码或二维码</small>
             </summary>
             <div class="fold-body">
-              <a
-                href="../assets/onemouse-pairing-real-ui-comic-v5.png"
-                target="_blank"
-                rel="noopener"
-                ><img
-                  src="../assets/onemouse-pairing-real-ui-comic-v5.png"
-                  alt="OneMouse 配对方法：准备、确认 PC 代码、输入数字、扫描二维码的顺序"
-                  loading="lazy"
-                  style="border-radius: 12px"
-              /></a>
+              <p>方式 A 和方式 B 二选一，无需先输入代码再扫描二维码。</p>
+              <div class="pairing-gallery">
+                <figure class="pairing-shot pairing-shot-pc">
+                  <a href="../assets/pairing/pc-code-zh.webp" target="_blank" rel="noopener">
+                    <img
+                      src="../assets/pairing/pc-code-zh.webp"
+                      alt="PC 当前的“此 PC 的二维码和验证码”配对界面"
+                      width="888"
+                      height="742"
+                      loading="lazy"
+                    />
+                  </a>
+                  <figcaption>
+                    <b>1. PC 二维码和验证码</b><span>从“设备管理”打开“其他连接方式”。</span>
+                  </figcaption>
+                </figure>
+                <figure class="pairing-shot pairing-overview-shot">
+                  <a href="../assets/pairing/android-other-zh.webp" target="_blank" rel="noopener">
+                    <img
+                      src="../assets/pairing/android-other-zh.webp"
+                      alt="Android 首页的“其他连接方式”和“通过二维码或配对码添加 PC”"
+                      width="1080"
+                      height="2400"
+                      loading="lazy"
+                    />
+                  </a>
+                  <figcaption>
+                    <b>2. 在 Android 打开连接方式</b><span>从首页的“其他连接方式”添加 PC。</span>
+                  </figcaption>
+                </figure>
+                <figure class="pairing-shot pairing-dialog-shot">
+                  <a href="../assets/pairing/android-code-zh.webp" target="_blank" rel="noopener">
+                    <img
+                      src="../assets/pairing/android-code-zh.webp"
+                      alt="Android 数字配对码输入界面与连接按钮"
+                      width="1080"
+                      height="2400"
+                      loading="lazy"
+                    />
+                  </a>
+                  <figcaption>
+                    <b>3. 方式 A：数字代码</b><span>输入 PC 的 6 位代码，再点击“连接”。</span>
+                  </figcaption>
+                </figure>
+                <figure class="pairing-shot pairing-dialog-shot">
+                  <a href="../assets/pairing/android-qr-zh.webp" target="_blank" rel="noopener">
+                    <img
+                      src="../assets/pairing/android-qr-zh.webp"
+                      alt="Android 二维码扫描界面与打开相机按钮"
+                      width="1080"
+                      height="2400"
+                      loading="lazy"
+                    />
+                  </a>
+                  <figcaption>
+                    <b>或扫描二维码</b><span>点击“打开相机”，扫描 PC 上显示的二维码。</span>
+                  </figcaption>
+                </figure>
+              </div>
+              <p class="pairing-example-note">
+                图片中的代码和设备名称仅为示例，请使用您自己的 PC 应用当前显示的代码。
+                点击图片可查看原图。
+              </p>
             </div>
           </details>
         </div>
@@ -169,10 +228,12 @@
           <details class="fold">
             <summary><span>查看布局界面</span></summary>
             <div class="fold-body">
-              <a href="../assets/onboarding_pc_position.png" target="_blank" rel="noopener"
+              <a href="../assets/pairing/pc-position-zh.webp" target="_blank" rel="noopener"
                 ><img
-                  src="../assets/onboarding_pc_position.png"
-                  alt="OneMouse 手机位置布局界面"
+                  src="../assets/pairing/pc-position-zh.webp"
+                  alt="当前 OneMouse 设备布局界面：将示例 Android 设备放在 PC 右侧"
+                  width="2240"
+                  height="1800"
                   loading="lazy"
                   style="border-radius: 12px"
               /></a>
@@ -761,31 +822,61 @@
         <div class="wrap">
           <div class="sec-head">
             <p class="ey">另一台 PC</p>
-            <h2 class="sec">另一台 Windows PC 按设置 · 设备管理 · 布局的顺序接入。</h2>
+            <h2 class="sec">Windows PC 之间按设备管理 → 连接 → 布局的顺序接入。</h2>
           </div>
           <div class="split lead-left">
             <div>
               <div class="panel">
                 <h3>建立连接</h3>
                 <ul>
-                  <li>进行控制的 PC 设为<b>主</b>，被控制的 PC 设为<b>从</b>角色。</li>
-                  <li>配对从 PC 并添加到设备管理。</li>
-                  <li>在布局编辑器中按实际位置摆放从 PC。</li>
-                  <li>朝那个方向移过鼠标就能控制另一台 PC，文件也可通过边界拖动来互传。</li>
+                  <li>
+                    在两台 Windows PC 上运行 OneMouse。登录同一 Google 账号，或将两台 PC
+                    接入同一网络以进行 LAN 配对。
+                  </li>
+                  <li>
+                    通过 LAN 连接时，在控制端 PC 的<b>设备管理 → 其他连接方式</b>中选择另一台 Windows
+                    PC，输入其 6 位代码并点击<b>配对</b>。代码可在另一台 PC 的<b
+                      >设备管理 → 其他连接方式 → 此 PC 的二维码和验证码</b
+                    >中查看。LAN 配对无需登录。
+                  </li>
+                  <li>
+                    确认已注册 PC
+                    的连接状态，必要时开启<b>连接</b>开关，然后在布局编辑器中按设备的实际位置摆放。
+                  </li>
+                  <li>朝对应方向移过鼠标即可控制另一台 PC，也可将文件拖过边界来互传。</li>
                 </ul>
               </div>
             </div>
             <div>
               <details class="fold" open>
-                <summary><span>布局界面</span></summary>
+                <summary><span>配对与布局界面</span></summary>
                 <div class="fold-body">
-                  <a href="../assets/guide_pc_arrangement.png" target="_blank" rel="noopener"
-                    ><img
-                      src="../assets/guide_pc_arrangement.png"
-                      alt="另一台 PC 的布局编辑器界面"
-                      loading="lazy"
-                      style="border-radius: 12px"
-                  /></a>
+                  <figure class="feature-figure" style="margin-bottom: 18px">
+                    <a href="../assets/pairing/pc-peer-zh.webp" target="_blank" rel="noopener"
+                      ><img
+                        src="../assets/pairing/pc-peer-zh.webp"
+                        alt="当前“其他连接方式”中输入另一台 Windows PC 的 6 位配对码的界面"
+                        width="2240"
+                        height="1800"
+                        loading="lazy"
+                        style="border-radius: 12px"
+                    /></a>
+                    <figcaption>
+                      1. 输入另一台 PC 的 6 位代码并点击“配对”。代码和设备名称仅为示例。
+                    </figcaption>
+                  </figure>
+                  <figure class="feature-figure">
+                    <a href="../assets/pairing/pc-peer-position-zh.webp" target="_blank" rel="noopener"
+                      ><img
+                        src="../assets/pairing/pc-peer-position-zh.webp"
+                        alt="当前设备管理中调整已连接 Windows PC 位置的界面"
+                        width="2240"
+                        height="1800"
+                        loading="lazy"
+                        style="border-radius: 12px"
+                    /></a>
+                    <figcaption>2. 确认连接状态后，按另一台 PC 的实际方向调整布局。</figcaption>
+                  </figure>
                 </div>
               </details>
             </div>
