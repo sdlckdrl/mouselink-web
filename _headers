@@ -1,0 +1,3 @@
+# Keep published license/source hashes valid; do not inject analytics into copies.
+/assets/licenses/*
+  Cache-Control: public, max-age=0, must-revalidate, no-transform
