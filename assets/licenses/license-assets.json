@@ -590,22 +590,6 @@
       "contentHandling": "Separate download; excluded from notice-only ZIP. Original application code is not relicensed as LGPL merely by this download."
     },
     {
-      "file": "pc-1.6.2/README.html",
-      "url": "/assets/licenses/pc-1.6.2/README.html",
-      "bytes": 14773,
-      "sha256": "9ad9bfb0fc09a30fc1073052c8afdf5d2b19b66888ff44de83cd4b6d29dc7430",
-      "component": "OneMouse zeroconf source and recombination kit",
-      "version": "PC1.6.2 / zeroconf0.151.3",
-      "licenseExpression": "LGPL-2.1-or-later and included third-party notices",
-      "scope": [
-        "source-availability-and-recombination"
-      ],
-      "sourceUrl": "https://onemouse.pages.dev/assets/licenses/pc-1.6.2/README.html",
-      "upstreamSourceUrl": "https://files.pythonhosted.org/packages/2b/7f/bb22975bbbc04765920b766e433410422794568053bff0ab5b3f0bf0197c/zeroconf-0.151.3.tar.gz",
-      "noticeBundleIncluded": false,
-      "contentHandling": "Separate download; excluded from notice-only ZIP. Original application code is not relicensed as LGPL merely by this download."
-    },
-    {
       "file": "pc-1.6.2/README.ko.md",
       "url": "/assets/licenses/pc-1.6.2/README.ko.md",
       "bytes": 6722,
@@ -963,5 +947,9 @@
       "sourceVerification": "Exact publisher source archive bytes",
       "packagedTextMatchesAllowingLineEndings": true
     }
-  ]
+  ],
+  "renderedInstructions": {
+    "url": "/assets/licenses/pc-1.6.2/README.html",
+    "note": "Presentation page generated from the SHA-256-verified README.en.md and README.ko.md downloads. The host may inject analytics into rendered HTML; its response bytes are not an original download artifact. Use the Markdown downloads and compliance-kit ZIP to verify unchanged instructions."
+  }
 }
