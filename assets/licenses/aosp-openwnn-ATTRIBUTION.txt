@@ -1,0 +1,22 @@
+OneMouse offline Japanese conversion
+
+OpenWnn: Copyright (C) 2008-2012 OMRON SOFTWARE Co., Ltd.
+Copyright (C) 2009 OMRON SOFTWARE CO., LTD. All rights reserved.
+Licensed under the Apache License, Version 2.0. See NOTICE.
+
+Source: Android Open Source Project packages/inputmethods/OpenWnn
+Commit: 5067ec8ec5a80ab12218c961f9b083fbccc71b93
+https://android.googlesource.com/platform/packages/inputmethods/OpenWnn/+/5067ec8ec5a80ab12218c961f9b083fbccc71b93/
+
+The complete upstream Japanese dictionary is included. Original WnnJpnDic.c:
+8185630 bytes; SHA-256 ef905defdf1e03dfcd02e419db63346f70d9728f9114a0ea732d4102967e2504.
+
+Local changes: fixed-width 32-bit dictionary types on LP64; defined intptr_t JNI
+handles; application SONAME library loading; explicit native owner close;
+read-only operation without a personal SQLite/learning dictionary.
+OneMouse supplies the bounded complete-sentence conversion adapter and native
+build integration. No network conversion or toy replacement lexicon is used.
+The upstream historic vocabulary is not Mozc or the current Google dictionary.
+
+ASCII romaji/alphabet case conversion and internal SQL formatting explicitly
+use Locale.ROOT so device language settings cannot alter conversion results.

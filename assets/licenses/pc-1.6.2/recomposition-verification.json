@@ -1,0 +1,41 @@
+{
+  "date": "2026-11-05",
+  "original_backend_sha256": "9bee371c5d944d754eb97f7722d7aa5ae702570380899b0ffe8a091edb3d0ae2",
+  "original_msix_sha256": "aea5870c83b875e4bb5801a080ef16e51b29a8528f388a6fc4b5526dce86f57d",
+  "original_backend_unchanged": true,
+  "normal_reconstructed_sha256": "846340efb21aa42e0dc742f8ad89ec2cec65843e93515d4ab51805eb5cef225b",
+  "probe_reconstructed_sha256": "a63a1a8d04f1fe22c6a532581ef72e04087c3314e9664405762f3366f98487a3",
+  "original_library_probe": {
+    "exit_code": 0,
+    "version": "0.151.3",
+    "marker": null,
+    "cache_marker": null,
+    "cache_file": "_cache.cp311-win_amd64.pyd",
+    "service_port": 5000,
+    "empty_cache": true
+  },
+  "modified_library_probe": {
+    "exit_code": 0,
+    "version": "0.151.3",
+    "marker": "modified-zeroconf-2026-11-05",
+    "cache_marker": "modified-zeroconf-2026-11-05",
+    "service_port": 5000,
+    "empty_cache": true,
+    "library_file": "__init__.py",
+    "cache_file": "_cache.py"
+  },
+  "unchanged_non_zeroconf_pyz_payloads": 489,
+  "unchanged_carchive_payloads": 722,
+  "removed_zeroconf_cython_extensions": 18,
+  "replacement_python_modules": 33,
+  "bootloader_bytes_unchanged": true,
+  "base_object_manifest_parts_verified": true,
+  "reconstructed_authenticode_status": "NotSigned",
+  "application_source_published": false,
+  "application_started": false,
+  "limitations": [
+    "Import and data-only library API verification; desktop interface and end-to-end discovery/input/file transfer not exercised.",
+    "The custom copy uses upstream-supported pure Python zeroconf and can be slower than the native release.",
+    "Installed signed Store packages are not modified or re-signed."
+  ]
+}

@@ -36,378 +36,122 @@
     <section class="phero wrap">
       <p class="ey">Código abierto</p>
       <h1 class="page">Licencias de código abierto</h1>
-      <p class="lead">OneMouse usa bibliotecas de código abierto y SDK de terceros para las apps de PC, Android y macOS, el escaneo de códigos QR, la transmisión del control remoto, los pagos y los anuncios. Cada componente sigue estando bajo la licencia de su titular original de los derechos de autor.</p>
-      <p class="policy-date">Última actualización: 26 de julio de 2026</p>
+      <p class="lead">Licencias y avisos de derechos de autor de los componentes de código abierto incluidos en OneMouse. A continuación se ofrecen los textos originales, los archivos NOTICE y el código fuente correspondiente.</p>
+      <p class="policy-date">Última actualización: 5 de noviembre de 2026</p>
     </section>
 
     <section>
       <div class="wrap narrow">
         <div class="legal one">
         <article class="lcard">
-          <h2>App de Android</h2>
+          <h2>Inventario detallado de componentes</h2>
+          <p>Este inventario corresponde a los componentes verificados de Windows MSIX 1.6.2.0, Android 1.2.43(79) para Play y Galaxy, y macOS 1.6.0. La disponibilidad de las actualizaciones depende de la revisión y publicación de cada tienda. Las versiones anteriores pueden contener otros componentes.</p>
+        </article>
+
+        <article class="lcard">
+          <h2>Aplicación Android</h2>
           <ul>
-            <li><strong>AndroidX Core KTX 1.13.1</strong><br />Propósito: utilidades de compatibilidad de Android y extensiones de Kotlin<br />Licencia: Apache License 2.0</li>
-            <li><strong>AndroidX Activity KTX 1.9.3</strong><br />Propósito: API de Activity de Android y extensiones de Kotlin<br />Licencia: Apache License 2.0</li>
-            <li><strong>AndroidX AppCompat 1.6.1</strong><br />Propósito: soporte de interfaz de Android compatible con versiones anteriores<br />Licencia: Apache License 2.0</li>
-            <li><strong>Kotlin standard library</strong><br />Propósito: soporte del entorno de ejecución de Kotlin<br />Licencia: Apache License 2.0</li>
-            <li><strong>ZXing Android Embedded 4.3.0 / ZXing Core</strong><br />Propósito: escaneo de códigos QR<br />Licencia: Apache License 2.0</li>
-            <li><strong>Google Play Billing Library 8.3.0</strong><br />Propósito: compras de Pro dentro de la app y restauración de compras<br />Condiciones: condiciones de los SDK de Google</li>
-            <li><strong>Google Play App Update SDK 2.1.0</strong><br />Propósito: comprobación de actualizaciones de la app de Android<br />Condiciones: condiciones de los SDK de Google</li>
-            <li><strong>Google Play In-App Review SDK 2.0.2</strong><br />Propósito: solicitudes de reseña dentro de la app<br />Condiciones: condiciones de los SDK de Google</li>
-            <li><strong>WebRTC Android SDK 144.7559.05</strong><br />Propósito: transmisión de vídeo para el control remoto de la pantalla del móvil<br />Licencia: BSD 3-Clause License</li>
-            <li><strong>LazySodium Android 5.2.0 / libsodium 1.0.20</strong><br />Propósito: operaciones Argon2id y Edwards25519 para la vinculación SPAKE2<br />Licencia: Mozilla Public License 2.0 / ISC License</li>
-            <li><strong>Java Native Access (JNA) 5.17.0</strong><br />Propósito: acceso desde Android al entorno de ejecución de libsodium incluido<br />Licencia: Apache License 2.0 (seleccionada de su licencia dual)</li>
+            <li><strong>AndroidX Core 1.18.0 · Activity 1.13.0 · AppCompat 1.8.0 · Browser 1.9.0</strong><br />Compatibilidad con Android, interfaz, navegador y conexión de dispositivos<br /><a href="../assets/licenses/APACHE-2.0.txt">Apache License 2.0</a></li>
+            <li><strong>Kotlin standard library 2.2.21 · kotlinx-coroutines 1.9.0</strong><br />Entorno Kotlin y procesamiento asíncrono<br /><a href="../assets/licenses/APACHE-2.0.txt">Apache License 2.0</a></li>
+            <li><strong>OkHttp 5.3.2 · Okio 3.16.4</strong><br />Conexiones de cuenta HTTPS y WebSocket y operaciones de entrada y salida<br /><a href="../assets/licenses/APACHE-2.0.txt">Apache License 2.0</a></li>
+            <li><strong>ZXing Android Embedded 4.3.0 · ZXing Core 3.4.1</strong><br />Lectura de códigos QR<br /><a href="../assets/licenses/APACHE-2.0.txt">Apache License 2.0</a></li>
+            <li><strong>WebRTC Android SDK 144.7559.05</strong><br />Transmisión de vídeo de pantallas remotas<br /><a href="../assets/licenses/webrtc-android-144.7559.05-LICENSE.txt">BSD 3-Clause</a> · <a href="../assets/licenses/webrtc-android-144.7559.05-THIRD-PARTY-NOTICES.md">Avisos de terceros</a> · <a href="../assets/licenses/webrtc-android-144.7559.05-PATENTS.txt">PATENTS</a></li>
+            <li><strong>LazySodium Android 5.2.0 · libsodium 1.0.20</strong><br />Vinculación y cifrado<br /><a href="../assets/licenses/MPL-2.0.txt">MPL 2.0</a> · <a href="../assets/licenses/libsodium-1.0.20-LICENSE.txt">ISC</a></li>
+            <li><strong>Java Native Access (JNA) 5.19.1</strong><br />Acceso a las bibliotecas nativas incluidas<br /><a href="../assets/licenses/APACHE-2.0.txt">Apache License 2.0</a></li>
+            <li><strong>AOSP Pinyin · OpenWnn</strong><br />Entrada de pinyin chino y japonés<br /><a href="../assets/licenses/APACHE-2.0.txt">Apache License 2.0</a> · <a href="#original-notices">Avisos de terceros</a></li>
+            <li><strong>Android NDK libc++ / LLVM runtime (28.2.13676358)</strong><br />Entrada de pinyin chino y japonés<br /><a href="../assets/licenses/android-ndk-28.2.13676358-llvm-NOTICE.txt">Apache 2.0 with LLVM exception</a></li>
+            <li><strong>Google Play Billing 8.3.0 · App Update 2.1.0 · In-App Review 2.0.2</strong><br />Solo Google Play: compras, actualizaciones y reseñas<br /><a href="https://developer.android.com/studio/terms" target="_blank" rel="noopener">Condiciones de los SDK de Google</a></li>
+            <li><strong>Firebase encoders</strong><br />Dependencias transitivas de los SDK exclusivos de Play<br /><a href="../assets/licenses/APACHE-2.0.txt">Apache License 2.0</a></li>
+          </ul>
+          <p>Los SDK de Google Play y Firebase encoders solo se incluyen en la versión Play, no en Galaxy.</p>
+          <p><a href="../assets/licenses/android-1.2.43-runtime-components.json">Inventario detallado de componentes</a> · <a href="../assets/licenses/Android-THIRD-PARTY-NOTICES.txt">Avisos de terceros</a></p>
+        </article>
+
+        <article class="lcard">
+          <h2>Aplicación para Windows PC</h2>
+          <ul>
+            <li><strong>Electron 45.2.3</strong><br />Interfaz de escritorio y entorno Chromium / Node.js<br /><a href="../assets/licenses/electron-45.2.3-LICENSE.txt">MIT</a> · <a href="../assets/licenses/electron-45.2.3-LICENSES.chromium.html">Chromium / Node.js / FFmpeg</a></li>
+            <li><strong>Python 3.11.9</strong><br />Entorno del backend para PC<br /><a href="../assets/licenses/python-3.11.9-LICENSE.txt">PSF License</a></li>
+            <li><strong>cryptography 50.0.1 · PyNaCl 1.6.2 · libsodium</strong><br />Vinculación y cifrado<br /><a href="../assets/licenses/APACHE-2.0.txt">Apache License 2.0</a> / BSD 3-Clause · ISC</li>
+            <li><strong>OpenSSL 3.0.13 (Python) · OpenSSL 4.0.2 (cryptography)</strong><br />Vinculación y cifrado<br /><a href="../assets/licenses/openssl-3.0.13-LICENSE.txt">Apache 2.0</a> · <a href="../assets/licenses/openssl-4.0.2-LICENSE.txt">Apache 2.0</a></li>
+            <li><strong>zeroconf 0.151.3 · ifaddr 0.2.0</strong><br />Detección de dispositivos en la red local y consulta de direcciones de interfaces<br /><a href="../assets/licenses/LGPL-2.1.txt">LGPL 2.1-or-later</a> · MIT · <a href="#library-source">Código fuente correspondiente</a></li>
+            <li><strong>winsdk 1.0.0b10 · pyserial 3.5</strong><br />Comunicación Bluetooth y serie en Windows<br />MIT · BSD 3-Clause</li>
+            <li><strong>cffi 2.0.0</strong><br />Interfaces de bibliotecas nativas de Python<br /><a href="../assets/licenses/cffi-2.0.0-LICENSE.txt">MIT-0</a></li>
           </ul>
         </article>
 
         <article class="lcard">
-          <h2>App de PC</h2>
+          <h2>Aplicación macOS</h2>
           <ul>
-            <li><strong>Electron 41.3.0</strong><br />Propósito: entorno de ejecución de la interfaz de escritorio de Windows<br />Licencia: MIT License</li>
-            <li><strong>Python 3.11 runtime</strong><br />Propósito: entorno de ejecución del backend de PC empaquetado<br />Licencia: Python Software Foundation License</li>
-            <li><strong>PyInstaller 6.20.0</strong><br />Propósito: empaquetado del ejecutable del backend<br />Licencia: GPLv2-or-later con excepción especial</li>
-            <li><strong>cryptography 47.0.0</strong><br />Propósito: cifrado de la sesión, la entrada, los archivos y la transmisión de pantalla<br />Licencia: Apache License 2.0 OR BSD 3-Clause License</li>
-            <li><strong>PyNaCl 1.6.2 / bundled libsodium</strong><br />Propósito: operaciones Argon2id y Edwards25519 para la vinculación SPAKE2<br />Licencia: Apache License 2.0 / ISC License</li>
-            <li><strong>pynput 1.7.6</strong><br />Propósito: hooks de entrada de teclado y ratón<br />Licencia: GNU Lesser General Public License v3</li>
-            <li><strong>zeroconf 0.148.0</strong><br />Propósito: detección mDNS<br />Licencia: GNU Lesser General Public License v2.1 or later</li>
-            <li><strong>pyserial 3.5</strong><br />Propósito: comunicación por puerto serie para la conexión Bluetooth<br />Licencia: BSD 3-Clause License</li>
-            <li><strong>winsdk 1.0.0b10</strong><br />Propósito: conexión directa por socket Bluetooth (RFCOMM/SPP) mediante WinRT<br />Licencia: MIT License</li>
-            <li><strong>cffi 2.0.0, pycparser 3.0, six 1.17.0</strong><br />Propósito: dependencias de soporte de Python<br />Licencia: MIT License o BSD 3-Clause License</li>
+            <li><strong>Swift Sodium 0.11.0 · libsodium 1.0.22</strong><br />Vinculación y cifrado<br /><a href="../assets/licenses/swift-sodium-0.11.0-LICENSE.txt">ISC</a> · <a href="../assets/licenses/libsodium-1.0.22-LICENSE.txt">ISC</a></li>
+            <li><strong>WebRTC 152.0.0 (stasel/WebRTC)</strong><br />Transmisión de vídeo de pantallas remotas<br /><a href="../assets/licenses/webrtc-macos-152.0.0-LICENSE.txt">BSD 3-Clause</a> · <a href="../assets/licenses/webrtc-macos-152.0.0-PATENTS.txt">PATENTS</a></li>
           </ul>
         </article>
 
-        <article class="lcard">
-          <h2>App de macOS</h2>
+        <article class="lcard" id="original-notices">
+          <h2>Licencias originales y avisos de derechos de autor</h2>
+          <p>Estas copias conservan las licencias reales, los derechos de autor y los archivos NOTICE de cada componente. Un nombre de licencia genérico no sustituye los avisos específicos. Los textos legales originales se ofrecen en su idioma original.</p>
           <ul>
-            <li><strong>Swift Sodium 0.11.0 / libsodium 1.0.22</strong><br />Propósito: operaciones Argon2id y Edwards25519 para la vinculación SPAKE2<br />Licencia: ISC License</li>
-            <li><strong>WebRTC 151 (stasel/WebRTC distribution)</strong><br />Propósito: transmisión de vídeo para el control remoto de la pantalla del Mac<br />Licencia: BSD 3-Clause License</li>
+            <li><a href="../assets/licenses/license-assets.json">Fuentes, versiones e inventario SHA-256</a></li>
+            <li><a href="../assets/licenses/onemouse-license-notices.zip">Descargar licencias y avisos</a></li>
+            <li><a href="../assets/licenses/Android-THIRD-PARTY-NOTICES.txt">Android — Avisos de terceros</a></li>
+            <li><a href="../assets/licenses/electron-45.2.3-LICENSE.txt">Electron — MIT</a></li>
+            <li><a href="../assets/licenses/electron-45.2.3-LICENSES.chromium.html">Chromium / Node.js / FFmpeg — Avisos de terceros</a></li>
+            <li><a href="../assets/licenses/webrtc-android-144.7559.05-LICENSE.txt">WebRTC Android — BSD 3-Clause</a></li>
+            <li><a href="../assets/licenses/webrtc-android-144.7559.05-THIRD-PARTY-NOTICES.md">WebRTC Android — Avisos de terceros</a></li>
+            <li><a href="../assets/licenses/webrtc-macos-152.0.0-LICENSE.txt">WebRTC macOS — BSD 3-Clause</a></li>
+            <li><a href="../assets/licenses/swift-sodium-0.11.0-LICENSE.txt">Swift Sodium — ISC</a></li>
+            <li><a href="../assets/licenses/webrtc-sdk-android-144.7559.05-LICENSE.txt">WebRTC Android SDK distributor — MIT</a></li>
+            <li><a href="../assets/licenses/webrtc-macos-152.0.0-DISTRIBUTOR-LICENSE.md">WebRTC macOS distributor — BSD 3-Clause</a></li>
+            <li><a href="../assets/licenses/libsodium-1.0.20-LICENSE.txt">libsodium 1.0.20 — ISC</a></li>
+            <li><a href="../assets/licenses/libsodium-1.0.22-LICENSE.txt">libsodium 1.0.22 — ISC</a></li>
+            <li><a href="../assets/licenses/python-3.11.9-LICENSE.txt">Python — PSF License</a></li>
+            <li><a href="../assets/licenses/cryptography-50.0.1-LICENSE.txt">cryptography — Apache 2.0 / BSD 3-Clause</a></li>
+            <li><a href="../assets/licenses/cryptography-50.0.1-LICENSE.APACHE.txt">cryptography — Apache License 2.0</a></li>
+            <li><a href="../assets/licenses/cryptography-50.0.1-LICENSE.BSD.txt">cryptography — BSD 3-Clause</a></li>
+            <li><a href="../assets/licenses/pynacl-1.6.2-LICENSE.txt">PyNaCl — Apache License 2.0</a></li>
+            <li><a href="../assets/licenses/pynacl-1.6.2-libsodium-LICENSE.txt">PyNaCl bundled libsodium — ISC</a></li>
+            <li><a href="../assets/licenses/ifaddr-0.2.0-LICENSE.txt">ifaddr — MIT</a></li>
+            <li><a href="../assets/licenses/winsdk-1.0.0b10-LICENSE.txt">winsdk — MIT</a></li>
+            <li><a href="../assets/licenses/pyserial-3.5-LICENSE.txt">pyserial — BSD</a></li>
+            <li><a href="../assets/licenses/cffi-2.0.0-LICENSE.txt">cffi — MIT-0</a></li>
+            <li><a href="../assets/licenses/cffi-2.0.0-libffi-x86-x64-NOTICES.txt">cffi bundled libffi — MIT notices</a></li>
+            <li><a href="../assets/licenses/openssl-3.0.13-LICENSE.txt">OpenSSL 3.0.13 — Apache License 2.0</a></li>
+            <li><a href="../assets/licenses/openssl-3.0.13-AUTHORS.md">OpenSSL 3.0.13 — AUTHORS</a></li>
+            <li><a href="../assets/licenses/openssl-4.0.2-LICENSE.txt">OpenSSL 4.0.2 — Apache License 2.0</a></li>
+            <li><a href="../assets/licenses/openssl-4.0.2-AUTHORS.md">OpenSSL 4.0.2 — AUTHORS</a></li>
+            <li><a href="../assets/licenses/zeroconf-0.151.3-COPYING.txt">zeroconf — LGPL 2.1-or-later</a></li>
+            <li><a href="../assets/licenses/lazysodium-android-5.2.0-LICENSE.md">LazySodium Android — MPL 2.0</a></li>
+            <li><a href="../assets/licenses/aosp-pinyin-NOTICE.txt">AOSP Pinyin — NOTICE</a></li>
+            <li><a href="../assets/licenses/aosp-pinyin-PROVENANCE.md">AOSP Pinyin — source / changes</a></li>
+            <li><a href="../assets/licenses/aosp-openwnn-NOTICE.txt">AOSP OpenWnn — NOTICE</a></li>
+            <li><a href="../assets/licenses/aosp-openwnn-ATTRIBUTION.txt">AOSP OpenWnn — attribution / changes</a></li>
+            <li><a href="../assets/licenses/aosp-japanese-PROVENANCE.md">AOSP OpenWnn — source / changes</a></li>
+            <li><a href="../assets/licenses/android-ndk-28.2.13676358-llvm-NOTICE.txt">Android NDK libc++ / LLVM runtime — Apache 2.0 with LLVM exception</a></li>
+            <li><a href="../assets/licenses/pyinstaller-6.22.2-COPYING.txt">PyInstaller — GPL with bootloader exception</a></li>
+            <li><a href="../assets/licenses/APACHE-2.0.txt">Apache License 2.0</a></li>
+            <li><a href="../assets/licenses/MPL-2.0.txt">Mozilla Public License 2.0</a></li>
+            <li><a href="../assets/licenses/LGPL-2.1.txt">GNU LGPL 2.1</a></li>
+            <li><a href="../assets/licenses/GPL-2.0.txt">GNU GPL 2.0</a></li>
+            <li><a href="../assets/licenses/GPL-3.0.txt">GNU GPL 3.0</a></li>
+            <li><a href="../assets/licenses/LGPL-3.0.txt">GNU LGPL 3.0</a></li>
           </ul>
         </article>
 
-        <article class="lcard">
-          <h2>Solo para compilación y pruebas</h2>
-          <p>
-            Android Gradle Plugin, Kotlin Gradle Plugin, Gradle wrapper, JUnit, org.json y Electron Builder se usan durante los flujos de compilación o de pruebas.
-            Los avisos sobre el entorno de ejecución se enumeran arriba según el paquete de la app que se distribuye.
-          </p>
+        <article class="lcard" id="library-source">
+          <h2>Disponibilidad del código fuente y recombinación de bibliotecas</h2>
+          <p>Se proporciona el código fuente correspondiente a LazySodium Android 5.2.0, incluidos el original y su licencia. OneMouse no ha modificado el código fuente de esta biblioteca.</p>
+          <p><a href="../assets/licenses/lazysodium-android-5.2.0-source.zip">Código fuente correspondiente — LazySodium Android 5.2.0</a></p>
+          <p><a href="../assets/licenses/lazysodium-android-5.2.0-sources.jar">LazySodium Android 5.2.0 — published sources JAR</a></p>
+          <p>Se ofrecen el código fuente correspondiente y los materiales de recombinación de zeroconf 0.151.3 incluido en Windows 1.6.2.0. La herramienta conserva el código objeto de la aplicación distribuida y genera otro ejecutable con el código modificado de zeroconf. No sobrescribe la aplicación original ni presupone que los módulos empaquetados puedan sustituirse automáticamente.</p>
+          <p><a href="../assets/licenses/pc-1.6.2/README.html">Instrucciones y archivos de recombinación para Windows 1.6.2.0</a></p>
+          <p>No restringimos la modificación o recombinación de bibliotecas ni la ingeniería inversa para depurar dichas modificaciones en los términos permitidos por la licencia de código abierto aplicable. Los ejecutables recompuestos son archivos separados sin firma de Microsoft Store. Consulta las instrucciones y el alcance de la validación.</p>
+          <p>Si necesitas el código fuente o materiales de otra versión, o si una descarga no funciona, contacta con nosotros indicando la versión de tu aplicación. <a href="mailto:sdlckdrl@gmail.com">sdlckdrl@gmail.com</a></p>
         </article>
 
         <article class="lcard">
-          <h2>Aviso</h2>
-          <p>
-            En esta página se enumeran las bibliotecas y los SDK incluidos en las distribuciones de OneMouse o utilizados por ellas.
-            Más abajo encontrarás el texto completo (o el enlace oficial) de cada licencia y los avisos de copyright correspondientes.
-            En el caso de los componentes LGPL, puedes solicitar una copia de la licencia junto con el enlace al código fuente oficial.
-          </p>
-        </article>
-
-        <article class="lcard">
-          <h2>Textos de las licencias y avisos de copyright</h2>
-
-          <h3>Avisos de copyright por componente</h3>
-          <ul>
-            <li>AndroidX (Core KTX, Activity KTX, AppCompat), Kotlin standard library — Copyright (c) The Android Open Source Project / JetBrains s.r.o. and Kotlin contributors — Apache License 2.0</li>
-            <li>ZXing Android Embedded — Copyright (c) Journey Mobile, Inc.; ZXing Core — Copyright (c) ZXing authors — Apache License 2.0</li>
-            <li>cryptography — Copyright (c) The Python Cryptographic Authority and individual contributors — Apache License 2.0 OR BSD 3-Clause License</li>
-            <li>PyNaCl — Copyright (c) The PyNaCl developers — Apache License 2.0</li>
-            <li>LazySodium Android — Copyright (c) Terl Tech Ltd — Mozilla Public License 2.0</li>
-            <li>Java Native Access (JNA) — Copyright (c) JNA contributors — Apache License 2.0</li>
-            <li>Swift Sodium and libsodium — Copyright (c) Frank Denis — ISC License</li>
-            <li>WebRTC — Copyright (c) The WebRTC project authors — BSD 3-Clause License</li>
-            <li>Electron — Copyright (c) GitHub Inc. and Electron contributors — MIT License</li>
-            <li>cffi — Copyright (c) Armin Rigo, Maciej Fijalkowski — MIT License</li>
-            <li>six — Copyright (c) Benjamin Peterson — MIT License</li>
-            <li>winsdk — Copyright (c) Microsoft Corporation — MIT License</li>
-            <li>pycparser — Copyright (c) Eli Bendersky — BSD 3-Clause License</li>
-            <li>pyserial — Copyright (c) Chris Liechti — BSD 3-Clause License</li>
-            <li>Python — Copyright (c) Python Software Foundation — PSF License</li>
-            <li>PyInstaller — Copyright (c) PyInstaller Development Team — GPLv2-or-later with a special bootloader exception</li>
-            <li>pynput — Copyright (c) Moses Palmér — GNU LGPL v3</li>
-            <li>zeroconf — Copyright (c) python-zeroconf contributors — GNU LGPL v2.1 or later</li>
-          </ul>
-
-          <details>
-            <summary>Apache License 2.0 — texto completo</summary>
-            <p>Se aplica a: AndroidX, Kotlin standard library, ZXing, cryptography, PyNaCl, JNA</p>
-            <pre class="license-text">                                 Apache License
-                           Version 2.0, January 2004
-                        http://www.apache.org/licenses/
-
-   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
-
-   1. Definitions.
-
-      "License" shall mean the terms and conditions for use, reproduction,
-      and distribution as defined by Sections 1 through 9 of this document.
-
-      "Licensor" shall mean the copyright owner or entity authorized by
-      the copyright owner that is granting the License.
-
-      "Legal Entity" shall mean the union of the acting entity and all
-      other entities that control, are controlled by, or are under common
-      control with that entity. For the purposes of this definition,
-      "control" means (i) the power, direct or indirect, to cause the
-      direction or management of such entity, whether by contract or
-      otherwise, or (ii) ownership of fifty percent (50%) or more of the
-      outstanding shares, or (iii) beneficial ownership of such entity.
-
-      "You" (or "Your") shall mean an individual or Legal Entity
-      exercising permissions granted by this License.
-
-      "Source" form shall mean the preferred form for making modifications,
-      including but not limited to software source code, documentation
-      source, and configuration files.
-
-      "Object" form shall mean any form resulting from mechanical
-      transformation or translation of a Source form, including but
-      not limited to compiled object code, generated documentation,
-      and conversions to other media types.
-
-      "Work" shall mean the work of authorship, whether in Source or
-      Object form, made available under the License, as indicated by a
-      copyright notice that is included in or attached to the work
-      (an example is provided in the Appendix below).
-
-      "Derivative Works" shall mean any work, whether in Source or Object
-      form, that is based on (or derived from) the Work and for which the
-      editorial revisions, annotations, elaborations, or other modifications
-      represent, as a whole, an original work of authorship. For the purposes
-      of this License, Derivative Works shall not include works that remain
-      separable from, or merely link (or bind by name) to the interfaces of,
-      the Work and Derivative Works thereof.
-
-      "Contribution" shall mean any work of authorship, including
-      the original version of the Work and any modifications or additions
-      to that Work or Derivative Works thereof, that is intentionally
-      submitted to Licensor for inclusion in the Work by the copyright owner
-      or by an individual or Legal Entity authorized to submit on behalf of
-      the copyright owner. For the purposes of this definition, "submitted"
-      means any form of electronic, verbal, or written communication sent
-      to the Licensor or its representatives, including but not limited to
-      communication on electronic mailing lists, source code control systems,
-      and issue tracking systems that are managed by, or on behalf of, the
-      Licensor for the purpose of discussing and improving the Work, but
-      excluding communication that is conspicuously marked or otherwise
-      designated in writing by the copyright owner as "Not a Contribution."
-
-      "Contributor" shall mean Licensor and any individual or Legal Entity
-      on behalf of whom a Contribution has been received by Licensor and
-      subsequently incorporated within the Work.
-
-   2. Grant of Copyright License. Subject to the terms and conditions of
-      this License, each Contributor hereby grants to You a perpetual,
-      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
-      copyright license to reproduce, prepare Derivative Works of,
-      publicly display, publicly perform, sublicense, and distribute the
-      Work and such Derivative Works in Source or Object form.
-
-   3. Grant of Patent License. Subject to the terms and conditions of
-      this License, each Contributor hereby grants to You a perpetual,
-      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
-      (except as stated in this section) patent license to make, have made,
-      use, offer to sell, sell, import, and otherwise transfer the Work,
-      where such license applies only to those patent claims licensable
-      by such Contributor that are necessarily infringed by their
-      Contribution(s) alone or by combination of their Contribution(s)
-      with the Work to which such Contribution(s) was submitted. If You
-      institute patent litigation against any entity (including a
-      cross-claim or counterclaim in a lawsuit) alleging that the Work
-      or a Contribution incorporated within the Work constitutes direct
-      or contributory patent infringement, then any patent licenses
-      granted to You under this License for that Work shall terminate
-      as of the date such litigation is filed.
-
-   4. Redistribution. You may reproduce and distribute copies of the
-      Work or Derivative Works thereof in any medium, with or without
-      modifications, and in Source or Object form, provided that You
-      meet the following conditions:
-
-      (a) You must give any other recipients of the Work or Derivative
-          Works a copy of this License; and
-
-      (b) You must cause any modified files to carry prominent notices
-          stating that You changed the files; and
-
-      (c) You must retain, in the Source form of any Derivative Works
-          that You distribute, all copyright, patent, trademark, and
-          attribution notices from the Source form of the Work, excluding
-          those notices that do not pertain to any part of the Derivative
-          Works; and
-
-      (d) If the Work includes a "NOTICE" text file as part of its
-          distribution, then any Derivative Works that You distribute must
-          include a readable copy of the attribution notices contained
-          within such NOTICE file, excluding those notices that do not
-          pertain to any part of the Derivative Works, in at least one
-          of the following places: within a NOTICE text file distributed
-          as part of the Derivative Works; within the Source form or
-          documentation, if provided along with the Derivative Works; or,
-          within a display generated by the Derivative Works, if and
-          wherever such third-party notices normally appear. The contents
-          of the NOTICE file are for informational purposes only and do
-          not modify the License. You may add Your own attribution notices
-          within Derivative Works that You distribute, alongside or as an
-          addendum to the NOTICE text from the Work, provided that such
-          additional attribution notices cannot be construed as modifying
-          the License.
-
-      You may add Your own copyright statement to Your modifications and
-      may provide additional or different license terms and conditions
-      for use, reproduction, or distribution of Your modifications, or
-      for any such Derivative Works as a whole, provided Your use,
-      reproduction, and distribution of the Work otherwise complies with
-      the conditions stated in this License.
-
-   5. Submission of Contributions. Unless You explicitly state otherwise,
-      any Contribution intentionally submitted for inclusion in the Work
-      by You to the Licensor shall be under the terms and conditions of
-      this License, without any additional terms or conditions.
-      Notwithstanding the above, nothing herein shall supersede or modify
-      the terms of any separate license agreement you may have executed
-      with Licensor regarding such Contributions.
-
-   6. Trademarks. This License does not grant permission to use the trade
-      names, trademarks, service marks, or product names of the Licensor,
-      except as required for reasonable and customary use in describing the
-      origin of the Work and reproducing the content of the NOTICE file.
-
-   7. Disclaimer of Warranty. Unless required by applicable law or
-      agreed to in writing, Licensor provides the Work (and each
-      Contributor provides its Contributions) on an "AS IS" BASIS,
-      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
-      implied, including, without limitation, any warranties or conditions
-      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
-      PARTICULAR PURPOSE. You are solely responsible for determining the
-      appropriateness of using or redistributing the Work and assume any
-      risks associated with Your exercise of permissions under this License.
-
-   8. Limitation of Liability. In no event and under no legal theory,
-      whether in tort (including negligence), contract, or otherwise,
-      unless required by applicable law (such as deliberate and grossly
-      negligent acts) or agreed to in writing, shall any Contributor be
-      liable to You for damages, including any direct, indirect, special,
-      incidental, or consequential damages of any character arising as a
-      result of this License or out of the use or inability to use the
-      Work (including but not limited to damages for loss of goodwill,
-      work stoppage, computer failure or malfunction, or any and all
-      other commercial damages or losses), even if such Contributor
-      has been advised of the possibility of such damages.
-
-   9. Accepting Warranty or Additional Liability. While redistributing
-      the Work or Derivative Works thereof, You may choose to offer,
-      and charge a fee for, acceptance of support, warranty, indemnity,
-      or other liability obligations and/or rights consistent with this
-      License. However, in accepting such obligations, You may act only
-      on Your own behalf and on Your sole responsibility, not on behalf
-      of any other Contributor, and only if You agree to indemnify,
-      defend, and hold each Contributor harmless for any liability
-      incurred by, or claims asserted against, such Contributor by reason
-      of your accepting any such warranty or additional liability.
-
-   END OF TERMS AND CONDITIONS
-
-   Licensed under the Apache License, Version 2.0 (the "License");
-   you may not use this file except in compliance with the License.
-   You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.</pre>
-          </details>
-
-          <details>
-            <summary>ISC License — texto completo</summary>
-            <p>Se aplica a: libsodium y Swift Sodium</p>
-            <pre class="license-text">ISC License
-
-Copyright (c) 2013-2026, Frank Denis &lt;j at pureftpd dot org&gt;
-Copyright (c) 2014-2026, Frank Denis &lt;j at pureftpd dot org&gt;
-
-Permission to use, copy, modify, and/or distribute this software for any
-purpose with or without fee is hereby granted, provided that the above
-copyright notice and this permission notice appear in all copies.
-
-THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
-SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION
-OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
-CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.</pre>
-          </details>
-
-          <details>
-            <summary>MIT License — texto completo</summary>
-            <p>Se aplica a: Electron, cffi, six, winsdk</p>
-            <pre class="license-text">MIT License
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.</pre>
-          </details>
-
-          <details>
-            <summary>BSD 3-Clause License — texto completo</summary>
-            <p>Se aplica a: WebRTC, pycparser, pyserial, cryptography (alternativa)</p>
-            <pre class="license-text">BSD 3-Clause License
-
-Redistribution and use in source and binary forms, with or without
-modification, are permitted provided that the following conditions are met:
-
-1. Redistributions of source code must retain the above copyright notice, this
-   list of conditions and the following disclaimer.
-
-2. Redistributions in binary form must reproduce the above copyright notice,
-   this list of conditions and the following disclaimer in the documentation
-   and/or other materials provided with the distribution.
-
-3. Neither the name of the copyright holder nor the names of its
-   contributors may be used to endorse or promote products derived from
-   this software without specific prior written permission.
-
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
-AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
-DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
-FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
-DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
-SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
-CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
-OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</pre>
-          </details>
-
-          <h3>Licencias facilitadas mediante enlace oficial</h3>
-          <p>Los siguientes componentes tienen textos de licencia muy largos, por lo que se indican mediante su enlace oficial; puedes solicitar una copia.</p>
-          <ul>
-            <li><strong>Python Software Foundation License</strong> (Python 3.11) — <a href="https://docs.python.org/3/license.html" rel="noopener" target="_blank">docs.python.org/3/license.html</a></li>
-            <li><strong>GNU LGPL v3</strong> (pynput) — <a href="https://www.gnu.org/licenses/lgpl-3.0.txt" rel="noopener" target="_blank">gnu.org/licenses/lgpl-3.0.txt</a> (y el <a href="https://www.gnu.org/licenses/gpl-3.0.txt" rel="noopener" target="_blank">texto</a> de GPL v3)</li>
-            <li><strong>GNU LGPL v2.1</strong> (zeroconf) — <a href="https://www.gnu.org/licenses/lgpl-2.1.txt" rel="noopener" target="_blank">gnu.org/licenses/lgpl-2.1.txt</a></li>
-            <li><strong>GPLv2 with bootloader exception</strong> (PyInstaller) — <a href="https://github.com/pyinstaller/pyinstaller/blob/develop/COPYING.txt" rel="noopener" target="_blank">PyInstaller COPYING.txt</a></li>
-            <li><strong>Mozilla Public License 2.0</strong> (LazySodium Android) — <a href="https://www.mozilla.org/MPL/2.0/" rel="noopener" target="_blank">mozilla.org/MPL/2.0</a>; fuente: <a href="https://github.com/terl/lazysodium-android" rel="noopener" target="_blank">github.com/terl/lazysodium-android</a></li>
-          </ul>
-          <p>
-            Los componentes LGPL (pynput, zeroconf) se usan de forma dinámica como módulos independientes, y puedes sustituirlos o volver a enlazarlos en la medida en que la LGPL lo permita.
-            Si necesitas una copia o más información, escribe a <a href="mailto:sdlckdrl@gmail.com">sdlckdrl@gmail.com</a>.
-          </p>
+          <h2>Herramientas de compilación y pruebas</h2>
+          <p>PyInstaller 6.22.2 (GPLv2-or-later con excepción del cargador), Electron Builder 26.18.1 (MIT), Android Gradle Plugin, Gradle, Kotlin Gradle Plugin y las herramientas de pruebas se distinguen de los componentes de ejecución. Se proporciona la excepción real del cargador de PyInstaller.</p>
         </article>
         </div>
       </div>

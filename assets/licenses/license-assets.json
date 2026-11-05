@@ -1,0 +1,967 @@
+{
+  "schemaVersion": 1,
+  "updated": "2026-11-05",
+  "releaseScope": {
+    "windows": "Microsoft Store1.6.2.0",
+    "android": "Play/Galaxy1.2.43(79)",
+    "macos": "Public1.6.0 source commit155de5c310868a20301e9a8e7afff32189d83fc4"
+  },
+  "licenseTextPolicy": "Publisher license/copyright bodies are preserved. Generated notices clearly mark provenance and file boundaries.",
+  "limitations": [
+    "Mac WebRTC transitive third-party notice completeness was not independently certified; exact binary LICENSE, pinned upstream LICENSE/PATENTS and source evidence are provided.",
+    "The Android native-code commit is not asserted from Maven metadata; its exact distributor-tag notice is provided.",
+    "A source URL or license notice is not a general patent clearance or legal certification."
+  ],
+  "assets": [
+    {
+      "file": "APACHE-2.0.txt",
+      "url": "/assets/licenses/APACHE-2.0.txt",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "component": "License text reference",
+      "version": null,
+      "licenseExpression": "Apache-2.0",
+      "scope": [
+        "shared-license-text"
+      ],
+      "sourceUrl": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "contentHandling": "Unmodified publisher bytes"
+    },
+    {
+      "file": "Android-THIRD-PARTY-NOTICES.txt",
+      "url": "/assets/licenses/Android-THIRD-PARTY-NOTICES.txt",
+      "bytes": 4636835,
+      "sha256": "1e6f2b8b5bb2a5ee6a537a14b5366e3840721bdf0f19b34e12c068b5c3814196",
+      "component": "Android release runtime copyright and license notices",
+      "version": "1.2.43(79)",
+      "licenseExpression": "Multiple",
+      "scope": [
+        "android-1.2.43"
+      ],
+      "sourceUrl": "https://repo.maven.apache.org/maven2/",
+      "contentHandling": "Original notices from actual release AAR/JAR/nested classes and copyright headers from61official source JARs; provenance URLs and entry names supplied in each section. Duplicate headers deduplicated only within a module; notice body text retained.",
+      "sourceEncodingNote": "56 original U+FFFD characters in publisher SDK notices are retained; UTF-8 decoding errors zero."
+    },
+    {
+      "file": "GPL-2.0.txt",
+      "url": "/assets/licenses/GPL-2.0.txt",
+      "bytes": 17984,
+      "sha256": "edaef632cbb643e4e7a221717a6c441a4c1a7c918e6e4d56debc3d8739b233f6",
+      "component": "License text reference",
+      "version": null,
+      "licenseExpression": "GPL-2.0-only",
+      "scope": [
+        "shared-license-text"
+      ],
+      "sourceUrl": "https://www.gnu.org/licenses/old-licenses/gpl-2.0.txt",
+      "contentHandling": "Unmodified publisher bytes"
+    },
+    {
+      "file": "GPL-3.0.txt",
+      "url": "/assets/licenses/GPL-3.0.txt",
+      "bytes": 35149,
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+      "component": "License text reference",
+      "version": null,
+      "licenseExpression": "GPL-3.0-only",
+      "scope": [
+        "shared-license-text"
+      ],
+      "sourceUrl": "https://www.gnu.org/licenses/gpl-3.0.txt",
+      "contentHandling": "Unmodified publisher bytes"
+    },
+    {
+      "file": "LGPL-2.1.txt",
+      "url": "/assets/licenses/LGPL-2.1.txt",
+      "bytes": 26419,
+      "sha256": "20e50fe7aae3e56378ebf0417d9de904f55a0e61e4df315333e632a4d3555d95",
+      "component": "License text reference",
+      "version": null,
+      "licenseExpression": "LGPL-2.1-only",
+      "scope": [
+        "shared-license-text"
+      ],
+      "sourceUrl": "https://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt",
+      "contentHandling": "Unmodified publisher bytes"
+    },
+    {
+      "file": "LGPL-3.0.txt",
+      "url": "/assets/licenses/LGPL-3.0.txt",
+      "bytes": 7652,
+      "sha256": "e3a994d82e644b03a792a930f574002658412f62407f5fee083f2555c5f23118",
+      "component": "License text reference",
+      "version": null,
+      "licenseExpression": "LGPL-3.0-only",
+      "scope": [
+        "shared-license-text"
+      ],
+      "sourceUrl": "https://www.gnu.org/licenses/lgpl-3.0.txt",
+      "contentHandling": "Unmodified publisher bytes"
+    },
+    {
+      "file": "MPL-2.0.txt",
+      "url": "/assets/licenses/MPL-2.0.txt",
+      "bytes": 16726,
+      "sha256": "3f3d9e0024b1921b067d6f7f88deb4a60cbe7a78e76c64e3f1d7fc3b779b9d04",
+      "component": "License text reference",
+      "version": null,
+      "licenseExpression": "MPL-2.0",
+      "scope": [
+        "shared-license-text"
+      ],
+      "sourceUrl": "https://www.mozilla.org/media/MPL/2.0/index.txt",
+      "contentHandling": "Unmodified publisher bytes"
+    },
+    {
+      "file": "README.md",
+      "url": "/assets/licenses/README.md",
+      "bytes": 1799,
+      "sha256": "7b3285bd17963ffe2dec0265ed3e5efc1e1277dbe0b7dfb9d260d86a795e9a0e",
+      "component": "OneMouse notice bundle guide",
+      "version": "2026-11-05",
+      "licenseExpression": null,
+      "scope": [
+        "provenance"
+      ],
+      "sourceUrl": "https://onemouse.pages.dev/licenses",
+      "contentHandling": "OneMouse explanation; not a third-party license"
+    },
+    {
+      "file": "android-1.2.43-runtime-components.json",
+      "url": "/assets/licenses/android-1.2.43-runtime-components.json",
+      "bytes": 45481,
+      "sha256": "4dc7d26ca9311b2cb572adb75b10dc28363568d41915129068d987769d42c510",
+      "component": "Android resolved runtime dependency inventory",
+      "version": "1.2.43 (79)",
+      "licenseExpression": null,
+      "scope": [
+        "inventory"
+      ],
+      "sourceUrl": "https://repo.maven.apache.org/maven2/",
+      "contentHandling": "Generated from resolved release artifacts and official Maven POM metadata; per-component source URLs included"
+    },
+    {
+      "file": "android-ndk-28.2.13676358-llvm-NOTICE.txt",
+      "url": "/assets/licenses/android-ndk-28.2.13676358-llvm-NOTICE.txt",
+      "bytes": 130424,
+      "sha256": "f96f763beb66a7ba7a667647fc64c0226ace875e590c831fdd9579ec1c1d91e1",
+      "component": "Android NDK LLVM / static libc++ runtime",
+      "version": "r28c / 28.2.13676358",
+      "licenseExpression": "Apache-2.0 WITH LLVM-exception and third-party terms",
+      "scope": [
+        "android-1.2.43"
+      ],
+      "sourceUrl": "https://dl.google.com/android/repository/android-ndk-r28c-windows.zip",
+      "archiveMember": "android-ndk-r28c/toolchains/llvm/prebuilt/windows-x86_64/NOTICE",
+      "noticeScope": "Full NDK LLVM notice supplied as reference for the statically linked libc++ runtime; compiler tools are not shipped in the app"
+    },
+    {
+      "file": "aosp-japanese-PROVENANCE.md",
+      "url": "/assets/licenses/aosp-japanese-PROVENANCE.md",
+      "bytes": 4964,
+      "sha256": "1c7068867a7bf98e3b5019916f1ee9198860cbafbdc6d576c6f46dfe4af7d30a",
+      "component": "AOSP OpenWnn",
+      "version": "5067ec8ec5a80ab12218c961f9b083fbccc71b93",
+      "licenseExpression": "Apache-2.0",
+      "scope": [
+        "android-1.2.43"
+      ],
+      "sourceUrl": "https://android.googlesource.com/platform/packages/inputmethods/OpenWnn/+/5067ec8ec5a80ab12218c961f9b083fbccc71b93/",
+      "contentHandling": "OneMouse source provenance and modification record"
+    },
+    {
+      "file": "aosp-openwnn-ATTRIBUTION.txt",
+      "url": "/assets/licenses/aosp-openwnn-ATTRIBUTION.txt",
+      "bytes": 1232,
+      "sha256": "9e914e498f063912fabf9b67b8b1c7742c49f3f2e6c9d87f46968d4d16d86a6a",
+      "component": "AOSP OpenWnn",
+      "version": "5067ec8ec5a80ab12218c961f9b083fbccc71b93",
+      "licenseExpression": "Apache-2.0",
+      "scope": [
+        "android-1.2.43"
+      ],
+      "sourceUrl": "https://android.googlesource.com/platform/packages/inputmethods/OpenWnn/+/5067ec8ec5a80ab12218c961f9b083fbccc71b93/",
+      "contentHandling": "OneMouse source provenance and modification record"
+    },
+    {
+      "file": "aosp-openwnn-NOTICE.txt",
+      "url": "/assets/licenses/aosp-openwnn-NOTICE.txt",
+      "bytes": 10297,
+      "sha256": "05cc719deafd0ab083b03296bb2911de10d116953b626a7629b9ca59938038b1",
+      "component": "AOSP OpenWnn",
+      "version": "5067ec8ec5a80ab12218c961f9b083fbccc71b93",
+      "licenseExpression": "Apache-2.0",
+      "scope": [
+        "android-1.2.43"
+      ],
+      "sourceUrl": "https://android.googlesource.com/platform/packages/inputmethods/OpenWnn/+/5067ec8ec5a80ab12218c961f9b083fbccc71b93/",
+      "contentHandling": "Bundled original NOTICE"
+    },
+    {
+      "file": "aosp-pinyin-NOTICE.txt",
+      "url": "/assets/licenses/aosp-pinyin-NOTICE.txt",
+      "bytes": 10690,
+      "sha256": "b5830d96fb5a7e7e7ebcc295f352846b4b998e78fdc8f9aa68e134d2e4b39986",
+      "component": "AOSP PinyinIME",
+      "version": "49aebad1c1cfbbcaa9288ffed5161e79e57c3679",
+      "licenseExpression": "Apache-2.0",
+      "scope": [
+        "android-1.2.43"
+      ],
+      "sourceUrl": "https://android.googlesource.com/platform/packages/inputmethods/PinyinIME/+/49aebad1c1cfbbcaa9288ffed5161e79e57c3679/",
+      "contentHandling": "Bundled original NOTICE"
+    },
+    {
+      "file": "aosp-pinyin-PROVENANCE.md",
+      "url": "/assets/licenses/aosp-pinyin-PROVENANCE.md",
+      "bytes": 4236,
+      "sha256": "0013003ffba473fc2c62099abb88f23d4aeb69ead8b5d6ca53a96f99e1415452",
+      "component": "AOSP PinyinIME",
+      "version": "49aebad1c1cfbbcaa9288ffed5161e79e57c3679",
+      "licenseExpression": "Apache-2.0",
+      "scope": [
+        "android-1.2.43"
+      ],
+      "sourceUrl": "https://android.googlesource.com/platform/packages/inputmethods/PinyinIME/+/49aebad1c1cfbbcaa9288ffed5161e79e57c3679/",
+      "contentHandling": "OneMouse source provenance and modification record"
+    },
+    {
+      "file": "cffi-2.0.0-LICENSE.txt",
+      "url": "/assets/licenses/cffi-2.0.0-LICENSE.txt",
+      "bytes": 1123,
+      "sha256": "5ba24ddc57067f9249add644c3afc41a5d6dc37e23433ef759d95df370b0af63",
+      "component": "cffi",
+      "version": "2.0.0",
+      "licenseExpression": "MIT-0",
+      "scope": [
+        "windows-msix-1.6.2.0"
+      ],
+      "sourceUrl": "https://files.pythonhosted.org/packages/eb/56/b1ba7935a17738ae8453301356628e8147c79dbb825bcbc73dc7401f9846/cffi-2.0.0.tar.gz",
+      "sourceArchiveSha256": "44d1b5909021139fe36001ae048dbdde8214afa20200eda0f64c068cac5d5529",
+      "archiveMember": "cffi-2.0.0/LICENSE",
+      "sourceVerification": "Exact publisher source archive bytes"
+    },
+    {
+      "file": "cffi-2.0.0-libffi-x86-x64-NOTICES.txt",
+      "url": "/assets/licenses/cffi-2.0.0-libffi-x86-x64-NOTICES.txt",
+      "bytes": 8610,
+      "sha256": "bc261887799018e97f4ceebc21229eb682741f24a82285d0a0e3672369610771",
+      "component": "libffi bundled by CFFI for Windows x86/x64",
+      "version": "as shipped in cffi 2.0.0",
+      "licenseExpression": "MIT",
+      "scope": [
+        "windows-msix-1.6.2.0"
+      ],
+      "sourceUrl": "https://files.pythonhosted.org/packages/eb/56/b1ba7935a17738ae8453301356628e8147c79dbb825bcbc73dc7401f9846/cffi-2.0.0.tar.gz",
+      "sourceArchiveSha256": "44d1b5909021139fe36001ae048dbdde8214afa20200eda0f64c068cac5d5529",
+      "contentHandling": "Seven original source copyright/license comment blocks copied verbatim; file-boundary headings added"
+    },
+    {
+      "file": "cryptography-50.0.1-LICENSE.APACHE.txt",
+      "url": "/assets/licenses/cryptography-50.0.1-LICENSE.APACHE.txt",
+      "bytes": 11360,
+      "sha256": "aac73b3148f6d1d7111dbca32099f68d26c644c6813ae1e4f05f6579aa2663fe",
+      "component": "cryptography",
+      "version": "50.0.1",
+      "licenseExpression": "Apache-2.0 OR BSD-3-Clause",
+      "scope": [
+        "windows-msix-1.6.2.0"
+      ],
+      "sourceUrl": "https://files.pythonhosted.org/packages/bb/ad/5d6702db60b1e40b41ef513b6967ff5848f307d50f8449baf1634f5908f1/cryptography-50.0.1.tar.gz",
+      "sourceArchiveSha256": "5dd9bda1c12b4162f6ff568eeb5e0ff956c28d14406e875cfe8a63a2d414ff20",
+      "archiveMember": "cryptography-50.0.1/LICENSE.APACHE",
+      "sourceVerification": "Exact publisher source archive bytes"
+    },
+    {
+      "file": "cryptography-50.0.1-LICENSE.BSD.txt",
+      "url": "/assets/licenses/cryptography-50.0.1-LICENSE.BSD.txt",
+      "bytes": 1532,
+      "sha256": "602c4c7482de6479dd2e9793cda275e5e63d773dacd1eca689232ab7008fb4fb",
+      "component": "cryptography",
+      "version": "50.0.1",
+      "licenseExpression": "Apache-2.0 OR BSD-3-Clause",
+      "scope": [
+        "windows-msix-1.6.2.0"
+      ],
+      "sourceUrl": "https://files.pythonhosted.org/packages/bb/ad/5d6702db60b1e40b41ef513b6967ff5848f307d50f8449baf1634f5908f1/cryptography-50.0.1.tar.gz",
+      "sourceArchiveSha256": "5dd9bda1c12b4162f6ff568eeb5e0ff956c28d14406e875cfe8a63a2d414ff20",
+      "archiveMember": "cryptography-50.0.1/LICENSE.BSD",
+      "sourceVerification": "Exact publisher source archive bytes"
+    },
+    {
+      "file": "cryptography-50.0.1-LICENSE.txt",
+      "url": "/assets/licenses/cryptography-50.0.1-LICENSE.txt",
+      "bytes": 197,
+      "sha256": "3e0c7c091a948b82533ba98fd7cbb40432d6f1a9acbf85f5922d2f99a93ae6bb",
+      "component": "cryptography",
+      "version": "50.0.1",
+      "licenseExpression": "Apache-2.0 OR BSD-3-Clause",
+      "scope": [
+        "windows-msix-1.6.2.0"
+      ],
+      "sourceUrl": "https://files.pythonhosted.org/packages/bb/ad/5d6702db60b1e40b41ef513b6967ff5848f307d50f8449baf1634f5908f1/cryptography-50.0.1.tar.gz",
+      "sourceArchiveSha256": "5dd9bda1c12b4162f6ff568eeb5e0ff956c28d14406e875cfe8a63a2d414ff20",
+      "archiveMember": "cryptography-50.0.1/LICENSE",
+      "sourceVerification": "Exact publisher source archive bytes"
+    },
+    {
+      "file": "download-sources.json",
+      "url": "/assets/licenses/download-sources.json",
+      "bytes": 1670,
+      "sha256": "1d79d9a7e34b278bb779553f086d841a33337895c449bb9b8dd6c90600233e51",
+      "component": "License provenance metadata",
+      "version": "2026-11-05",
+      "licenseExpression": null,
+      "scope": [
+        "inventory"
+      ],
+      "sourceUrl": "https://onemouse.pages.dev/licenses",
+      "contentHandling": "OneMouse generated source URL and verification record"
+    },
+    {
+      "file": "electron-45.2.3-LICENSE.txt",
+      "url": "/assets/licenses/electron-45.2.3-LICENSE.txt",
+      "bytes": 1096,
+      "sha256": "5154e165bd6c2cc0cfbcd8916498c7abab0497923bafcd5cb07673fe8480087d",
+      "component": "Electron",
+      "version": "45.2.3",
+      "licenseExpression": "MIT",
+      "scope": [
+        "windows-msix-1.6.2.0"
+      ],
+      "sourceUrl": "https://github.com/electron/electron/releases/download/v45.2.3/electron-v45.2.3-win32-x64.zip",
+      "archiveMember": "LICENSE",
+      "contentHandling": "Unmodified file from the packaged Electron distribution"
+    },
+    {
+      "file": "electron-45.2.3-LICENSES.chromium.html",
+      "url": "/assets/licenses/electron-45.2.3-LICENSES.chromium.html",
+      "bytes": 5705935,
+      "sha256": "7dac8267ac6da8d959cfe88f5f055b18a397f10230380b5329125e167bf5639b",
+      "component": "Electron Chromium and third-party components",
+      "version": "45.2.3",
+      "licenseExpression": "Multiple",
+      "scope": [
+        "windows-msix-1.6.2.0"
+      ],
+      "sourceUrl": "https://github.com/electron/electron/releases/download/v45.2.3/electron-v45.2.3-win32-x64.zip",
+      "archiveMember": "LICENSES.chromium.html",
+      "contentHandling": "Unmodified file from the packaged Electron distribution"
+    },
+    {
+      "file": "ifaddr-0.2.0-LICENSE.txt",
+      "url": "/assets/licenses/ifaddr-0.2.0-LICENSE.txt",
+      "bytes": 1084,
+      "sha256": "8700856576ae2bc80c63bc970250510d9213fb02fed006d5f22742c9ddde24d7",
+      "component": "ifaddr",
+      "version": "0.2.0",
+      "licenseExpression": "MIT",
+      "scope": [
+        "windows-msix-1.6.2.0"
+      ],
+      "sourceUrl": "https://files.pythonhosted.org/packages/e8/ac/fb4c578f4a3256561548cd825646680edcadb9440f3f68add95ade1eb791/ifaddr-0.2.0.tar.gz",
+      "sourceArchiveSha256": "cc0cbfcaabf765d44595825fb96a99bb12c79716b73b44330ea38ee2b0c4aed4",
+      "archiveMember": "ifaddr-0.2.0/LICENSE.txt",
+      "sourceVerification": "Exact publisher source archive bytes"
+    },
+    {
+      "file": "lazysodium-android-5.2.0-LICENSE.md",
+      "url": "/assets/licenses/lazysodium-android-5.2.0-LICENSE.md",
+      "bytes": 16724,
+      "sha256": "4b89d4518bd135ab4ee154a7bce722246b57a98c3d7efc1a09409898160c2bd1",
+      "component": "LazySodium Android",
+      "version": "5.2.0",
+      "licenseExpression": "MPL-2.0",
+      "scope": [
+        "android-1.2.43"
+      ],
+      "sourceUrl": "https://raw.githubusercontent.com/terl/lazysodium-android/d8b1885cff127a47b5a3bd9bcf0a53d36c372855/LICENSE.md"
+    },
+    {
+      "file": "lazysodium-android-5.2.0-source.zip",
+      "url": "/assets/licenses/lazysodium-android-5.2.0-source.zip",
+      "bytes": 1769633,
+      "sha256": "d14893890e5d9efa4a40ea24d24b0feccca4b0974f114d3e144ceb6d6cafb8f3",
+      "component": "LazySodium Android source",
+      "version": "5.2.0",
+      "licenseExpression": "MPL-2.0",
+      "scope": [
+        "source-availability"
+      ],
+      "sourceUrl": "https://codeload.github.com/terl/lazysodium-android/zip/d8b1885cff127a47b5a3bd9bcf0a53d36c372855",
+      "upstreamCommit": "d8b1885cff127a47b5a3bd9bcf0a53d36c372855",
+      "contentHandling": "Unmodified publisher source archive; sources.jar complements Java sources in the tag archive"
+    },
+    {
+      "file": "lazysodium-android-5.2.0-sources.jar",
+      "url": "/assets/licenses/lazysodium-android-5.2.0-sources.jar",
+      "bytes": 66977,
+      "sha256": "710dfd80260b41d44bb2197fe9639837ae98b7fa6c0b99ae09c19b2bc0bf65b8",
+      "component": "LazySodium Android source",
+      "version": "5.2.0",
+      "licenseExpression": "MPL-2.0",
+      "scope": [
+        "source-availability"
+      ],
+      "sourceUrl": "https://repo.maven.apache.org/maven2/com/goterl/lazysodium-android/5.2.0/lazysodium-android-5.2.0-sources.jar",
+      "upstreamCommit": "d8b1885cff127a47b5a3bd9bcf0a53d36c372855",
+      "contentHandling": "Unmodified publisher source archive; sources.jar complements Java sources in the tag archive"
+    },
+    {
+      "file": "libsodium-1.0.20-LICENSE.txt",
+      "url": "/assets/licenses/libsodium-1.0.20-LICENSE.txt",
+      "bytes": 823,
+      "sha256": "43964d976a6db3fb986af689d05f8ca0e9971878bccae709750dac8fdc4a99cf",
+      "component": "libsodium",
+      "version": "1.0.20",
+      "licenseExpression": "ISC",
+      "scope": [
+        "android-1.2.43"
+      ],
+      "sourceUrl": "https://raw.githubusercontent.com/jedisct1/libsodium/1.0.20-RELEASE/LICENSE",
+      "contentHandling": "Unmodified publisher bytes"
+    },
+    {
+      "file": "libsodium-1.0.22-LICENSE.txt",
+      "url": "/assets/licenses/libsodium-1.0.22-LICENSE.txt",
+      "bytes": 823,
+      "sha256": "508a76d186356c0dd807a670ef510964f8724557024796a2c426c6c0e19ab683",
+      "component": "libsodium",
+      "version": "1.0.22",
+      "licenseExpression": "ISC",
+      "scope": [
+        "macos-1.6.0"
+      ],
+      "sourceUrl": "https://raw.githubusercontent.com/jedisct1/libsodium/1.0.22-RELEASE/LICENSE",
+      "contentHandling": "Unmodified publisher bytes"
+    },
+    {
+      "file": "onemouse-license-notices.zip",
+      "url": "/assets/licenses/onemouse-license-notices.zip",
+      "bytes": 1387345,
+      "sha256": "53c993809f30e6cf5b4054fb419ca19c34172fc9f66a8ffcd89e770a183ab6b3",
+      "component": "OneMouse license/notice text bundle",
+      "version": "2026-11-05",
+      "licenseExpression": null,
+      "scope": [
+        "notice-bundle"
+      ],
+      "sourceUrl": "https://onemouse.pages.dev/licenses",
+      "contentHandling": "ZIP of unmodified individual license texts and labeled provenance notices; no compiled code or source archives"
+    },
+    {
+      "file": "openssl-3.0.13-AUTHORS.md",
+      "url": "/assets/licenses/openssl-3.0.13-AUTHORS.md",
+      "bytes": 990,
+      "sha256": "5076ca441daef7fb35e904c2ac070880c7b3d58300a5a6aecac41e8f525f4412",
+      "component": "OpenSSL",
+      "version": "3.0.13",
+      "licenseExpression": "Apache-2.0",
+      "scope": [
+        "windows-msix-1.6.2.0"
+      ],
+      "sourceUrl": "https://raw.githubusercontent.com/openssl/openssl/openssl-3.0.13/AUTHORS.md",
+      "usedBy": "CPython ssl",
+      "contentHandling": "Unmodified publisher bytes"
+    },
+    {
+      "file": "openssl-3.0.13-LICENSE.txt",
+      "url": "/assets/licenses/openssl-3.0.13-LICENSE.txt",
+      "bytes": 10175,
+      "sha256": "7d5450cb2d142651b8afa315b5f238efc805dad827d91ba367d8516bc9d49e7a",
+      "component": "OpenSSL",
+      "version": "3.0.13",
+      "licenseExpression": "Apache-2.0",
+      "scope": [
+        "windows-msix-1.6.2.0"
+      ],
+      "sourceUrl": "https://raw.githubusercontent.com/openssl/openssl/openssl-3.0.13/LICENSE.txt",
+      "usedBy": "CPython ssl",
+      "contentHandling": "Unmodified publisher bytes"
+    },
+    {
+      "file": "openssl-4.0.2-AUTHORS.md",
+      "url": "/assets/licenses/openssl-4.0.2-AUTHORS.md",
+      "bytes": 1022,
+      "sha256": "b9f638dfc06b59c2d3b808186c3b30f713805a5db390f5b77b1703ac58acb83e",
+      "component": "OpenSSL",
+      "version": "4.0.2",
+      "licenseExpression": "Apache-2.0",
+      "scope": [
+        "windows-msix-1.6.2.0"
+      ],
+      "sourceUrl": "https://raw.githubusercontent.com/openssl/openssl/openssl-4.0.2/AUTHORS.md",
+      "usedBy": "cryptography 50.0.1",
+      "contentHandling": "Unmodified publisher bytes"
+    },
+    {
+      "file": "openssl-4.0.2-LICENSE.txt",
+      "url": "/assets/licenses/openssl-4.0.2-LICENSE.txt",
+      "bytes": 10175,
+      "sha256": "7d5450cb2d142651b8afa315b5f238efc805dad827d91ba367d8516bc9d49e7a",
+      "component": "OpenSSL",
+      "version": "4.0.2",
+      "licenseExpression": "Apache-2.0",
+      "scope": [
+        "windows-msix-1.6.2.0"
+      ],
+      "sourceUrl": "https://raw.githubusercontent.com/openssl/openssl/openssl-4.0.2/LICENSE.txt",
+      "usedBy": "cryptography 50.0.1",
+      "contentHandling": "Unmodified publisher bytes"
+    },
+    {
+      "file": "pc-1.6.2/MouseLinkBackend-1.6.2.exe.part01",
+      "url": "/assets/licenses/pc-1.6.2/MouseLinkBackend-1.6.2.exe.part01",
+      "bytes": 15728640,
+      "sha256": "94a1f5b546b9e714898a5753be24d8778dd8b646af328700ad2d0f8e610e01c0",
+      "component": "OneMouse application object code for LGPL recombination",
+      "version": "PC1.6.2 / zeroconf0.151.3",
+      "licenseExpression": "LicenseRef-OneMouse-application-and-third-party-notices",
+      "scope": [
+        "application-object-for-recombination"
+      ],
+      "sourceUrl": "https://onemouse.pages.dev/assets/licenses/pc-1.6.2/MouseLinkBackend-1.6.2.exe.part01",
+      "upstreamSourceUrl": "https://files.pythonhosted.org/packages/2b/7f/bb22975bbbc04765920b766e433410422794568053bff0ab5b3f0bf0197c/zeroconf-0.151.3.tar.gz",
+      "noticeBundleIncluded": false,
+      "contentHandling": "Separate download; excluded from notice-only ZIP. Original application code is not relicensed as LGPL merely by this download."
+    },
+    {
+      "file": "pc-1.6.2/MouseLinkBackend-1.6.2.exe.part02",
+      "url": "/assets/licenses/pc-1.6.2/MouseLinkBackend-1.6.2.exe.part02",
+      "bytes": 12306042,
+      "sha256": "3e9ed8ae9aa1253385d6eafaa149773a514091fd4ce56a6922caf6d7cfa444a3",
+      "component": "OneMouse application object code for LGPL recombination",
+      "version": "PC1.6.2 / zeroconf0.151.3",
+      "licenseExpression": "LicenseRef-OneMouse-application-and-third-party-notices",
+      "scope": [
+        "application-object-for-recombination"
+      ],
+      "sourceUrl": "https://onemouse.pages.dev/assets/licenses/pc-1.6.2/MouseLinkBackend-1.6.2.exe.part02",
+      "upstreamSourceUrl": "https://files.pythonhosted.org/packages/2b/7f/bb22975bbbc04765920b766e433410422794568053bff0ab5b3f0bf0197c/zeroconf-0.151.3.tar.gz",
+      "noticeBundleIncluded": false,
+      "contentHandling": "Separate download; excluded from notice-only ZIP. Original application code is not relicensed as LGPL merely by this download."
+    },
+    {
+      "file": "pc-1.6.2/OneMouse-1.6.2-LGPL-kit.zip",
+      "url": "/assets/licenses/pc-1.6.2/OneMouse-1.6.2-LGPL-kit.zip",
+      "bytes": 304635,
+      "sha256": "d6f49d44018f1706278ab3004870e4838a240dc068b99bf19005e8ed62c2e187",
+      "component": "OneMouse zeroconf source and recombination kit",
+      "version": "PC1.6.2 / zeroconf0.151.3",
+      "licenseExpression": "LGPL-2.1-or-later and included third-party notices",
+      "scope": [
+        "source-availability-and-recombination"
+      ],
+      "sourceUrl": "https://onemouse.pages.dev/assets/licenses/pc-1.6.2/OneMouse-1.6.2-LGPL-kit.zip",
+      "upstreamSourceUrl": "https://files.pythonhosted.org/packages/2b/7f/bb22975bbbc04765920b766e433410422794568053bff0ab5b3f0bf0197c/zeroconf-0.151.3.tar.gz",
+      "noticeBundleIncluded": false,
+      "contentHandling": "Separate download; excluded from notice-only ZIP. Original application code is not relicensed as LGPL merely by this download."
+    },
+    {
+      "file": "pc-1.6.2/PUBLIC-NOTICES.txt",
+      "url": "/assets/licenses/pc-1.6.2/PUBLIC-NOTICES.txt",
+      "bytes": 651,
+      "sha256": "19af8bc83faece5bde9b7deeae5fed5dfb17b4673a5ee6c9102c3c397827425e",
+      "component": "OneMouse zeroconf source and recombination kit",
+      "version": "PC1.6.2 / zeroconf0.151.3",
+      "licenseExpression": "LGPL-2.1-or-later and included third-party notices",
+      "scope": [
+        "source-availability-and-recombination"
+      ],
+      "sourceUrl": "https://onemouse.pages.dev/assets/licenses/pc-1.6.2/PUBLIC-NOTICES.txt",
+      "upstreamSourceUrl": "https://files.pythonhosted.org/packages/2b/7f/bb22975bbbc04765920b766e433410422794568053bff0ab5b3f0bf0197c/zeroconf-0.151.3.tar.gz",
+      "noticeBundleIncluded": false,
+      "contentHandling": "Separate download; excluded from notice-only ZIP. Original application code is not relicensed as LGPL merely by this download."
+    },
+    {
+      "file": "pc-1.6.2/README.en.md",
+      "url": "/assets/licenses/pc-1.6.2/README.en.md",
+      "bytes": 6222,
+      "sha256": "52397c00e125ab6b7f0802e6cac08168c5138a18acb5ea97b957ce80f8222476",
+      "component": "OneMouse zeroconf source and recombination kit",
+      "version": "PC1.6.2 / zeroconf0.151.3",
+      "licenseExpression": "LGPL-2.1-or-later and included third-party notices",
+      "scope": [
+        "source-availability-and-recombination"
+      ],
+      "sourceUrl": "https://onemouse.pages.dev/assets/licenses/pc-1.6.2/README.en.md",
+      "upstreamSourceUrl": "https://files.pythonhosted.org/packages/2b/7f/bb22975bbbc04765920b766e433410422794568053bff0ab5b3f0bf0197c/zeroconf-0.151.3.tar.gz",
+      "noticeBundleIncluded": false,
+      "contentHandling": "Separate download; excluded from notice-only ZIP. Original application code is not relicensed as LGPL merely by this download."
+    },
+    {
+      "file": "pc-1.6.2/README.html",
+      "url": "/assets/licenses/pc-1.6.2/README.html",
+      "bytes": 14773,
+      "sha256": "9ad9bfb0fc09a30fc1073052c8afdf5d2b19b66888ff44de83cd4b6d29dc7430",
+      "component": "OneMouse zeroconf source and recombination kit",
+      "version": "PC1.6.2 / zeroconf0.151.3",
+      "licenseExpression": "LGPL-2.1-or-later and included third-party notices",
+      "scope": [
+        "source-availability-and-recombination"
+      ],
+      "sourceUrl": "https://onemouse.pages.dev/assets/licenses/pc-1.6.2/README.html",
+      "upstreamSourceUrl": "https://files.pythonhosted.org/packages/2b/7f/bb22975bbbc04765920b766e433410422794568053bff0ab5b3f0bf0197c/zeroconf-0.151.3.tar.gz",
+      "noticeBundleIncluded": false,
+      "contentHandling": "Separate download; excluded from notice-only ZIP. Original application code is not relicensed as LGPL merely by this download."
+    },
+    {
+      "file": "pc-1.6.2/README.ko.md",
+      "url": "/assets/licenses/pc-1.6.2/README.ko.md",
+      "bytes": 6722,
+      "sha256": "65de55648186b81442921751532cbf1152b7f1f51460ef83f460eb5b0da6e332",
+      "component": "OneMouse zeroconf source and recombination kit",
+      "version": "PC1.6.2 / zeroconf0.151.3",
+      "licenseExpression": "LGPL-2.1-or-later and included third-party notices",
+      "scope": [
+        "source-availability-and-recombination"
+      ],
+      "sourceUrl": "https://onemouse.pages.dev/assets/licenses/pc-1.6.2/README.ko.md",
+      "upstreamSourceUrl": "https://files.pythonhosted.org/packages/2b/7f/bb22975bbbc04765920b766e433410422794568053bff0ab5b3f0bf0197c/zeroconf-0.151.3.tar.gz",
+      "noticeBundleIncluded": false,
+      "contentHandling": "Separate download; excluded from notice-only ZIP. Original application code is not relicensed as LGPL merely by this download."
+    },
+    {
+      "file": "pc-1.6.2/SHA256SUMS.txt",
+      "url": "/assets/licenses/pc-1.6.2/SHA256SUMS.txt",
+      "bytes": 644,
+      "sha256": "b6d88db4d8682450006a791e691d1597bafa7a0ad89d1263e8bc5d8c7b1a097e",
+      "component": "OneMouse zeroconf source and recombination kit",
+      "version": "PC1.6.2 / zeroconf0.151.3",
+      "licenseExpression": "LGPL-2.1-or-later and included third-party notices",
+      "scope": [
+        "source-availability-and-recombination"
+      ],
+      "sourceUrl": "https://onemouse.pages.dev/assets/licenses/pc-1.6.2/SHA256SUMS.txt",
+      "upstreamSourceUrl": "https://files.pythonhosted.org/packages/2b/7f/bb22975bbbc04765920b766e433410422794568053bff0ab5b3f0bf0197c/zeroconf-0.151.3.tar.gz",
+      "noticeBundleIncluded": false,
+      "contentHandling": "Separate download; excluded from notice-only ZIP. Original application code is not relicensed as LGPL merely by this download."
+    },
+    {
+      "file": "pc-1.6.2/object-manifest.json",
+      "url": "/assets/licenses/pc-1.6.2/object-manifest.json",
+      "bytes": 1114,
+      "sha256": "181d5ee4f52cb4c2b518023bc06dd3d37feed3694745fff69f3184ddb7adddea",
+      "component": "OneMouse zeroconf source and recombination kit",
+      "version": "PC1.6.2 / zeroconf0.151.3",
+      "licenseExpression": "LGPL-2.1-or-later and included third-party notices",
+      "scope": [
+        "source-availability-and-recombination"
+      ],
+      "sourceUrl": "https://onemouse.pages.dev/assets/licenses/pc-1.6.2/object-manifest.json",
+      "upstreamSourceUrl": "https://files.pythonhosted.org/packages/2b/7f/bb22975bbbc04765920b766e433410422794568053bff0ab5b3f0bf0197c/zeroconf-0.151.3.tar.gz",
+      "noticeBundleIncluded": false,
+      "contentHandling": "Separate download; excluded from notice-only ZIP. Original application code is not relicensed as LGPL merely by this download."
+    },
+    {
+      "file": "pc-1.6.2/recomposition-verification.json",
+      "url": "/assets/licenses/pc-1.6.2/recomposition-verification.json",
+      "bytes": 1728,
+      "sha256": "cdec8eac1c80731e8d762527eb0cc3ddff58efd74e4538da5043c0083277b6dd",
+      "component": "OneMouse zeroconf source and recombination kit",
+      "version": "PC1.6.2 / zeroconf0.151.3",
+      "licenseExpression": "LGPL-2.1-or-later and included third-party notices",
+      "scope": [
+        "source-availability-and-recombination"
+      ],
+      "sourceUrl": "https://onemouse.pages.dev/assets/licenses/pc-1.6.2/recomposition-verification.json",
+      "upstreamSourceUrl": "https://files.pythonhosted.org/packages/2b/7f/bb22975bbbc04765920b766e433410422794568053bff0ab5b3f0bf0197c/zeroconf-0.151.3.tar.gz",
+      "noticeBundleIncluded": false,
+      "contentHandling": "Separate download; excluded from notice-only ZIP. Original application code is not relicensed as LGPL merely by this download."
+    },
+    {
+      "file": "publisher-file-verification.json",
+      "url": "/assets/licenses/publisher-file-verification.json",
+      "bytes": 2961,
+      "sha256": "31dfa7b8adbef495517a197580c3c12a162e5a94ef8ab114edfb07c06298c8c2",
+      "component": "License provenance metadata",
+      "version": "2026-11-05",
+      "licenseExpression": null,
+      "scope": [
+        "inventory"
+      ],
+      "sourceUrl": "https://onemouse.pages.dev/licenses",
+      "contentHandling": "OneMouse generated source URL and verification record"
+    },
+    {
+      "file": "publisher-sources.json",
+      "url": "/assets/licenses/publisher-sources.json",
+      "bytes": 2742,
+      "sha256": "06e65939a9bb06f3541097ec1f9f3868e66cbe2f5085c0e4246a1630b26d31e0",
+      "component": "License provenance metadata",
+      "version": "2026-11-05",
+      "licenseExpression": null,
+      "scope": [
+        "inventory"
+      ],
+      "sourceUrl": "https://onemouse.pages.dev/licenses",
+      "contentHandling": "OneMouse generated source URL and verification record"
+    },
+    {
+      "file": "pyinstaller-6.22.2-COPYING.txt",
+      "url": "/assets/licenses/pyinstaller-6.22.2-COPYING.txt",
+      "bytes": 32138,
+      "sha256": "dcf75fdb959db1e3b41c0f8505069d2ece781b5ec6b3d0a4d30975cfc6580245",
+      "component": "pyinstaller",
+      "version": "6.22.2",
+      "licenseExpression": "GPL-2.0-or-later WITH Bootloader-exception",
+      "scope": [
+        "packaging-bootloader"
+      ],
+      "sourceUrl": "https://files.pythonhosted.org/packages/cc/2b/836d9def811c02522e0921d8b8cdf0c16b0545a216e97e71041758057859/pyinstaller-6.22.2.tar.gz",
+      "sourceArchiveSha256": "89b65a3ad07d9dd5832253e37bc45f31872d10d7f9d5c9fd0fdd6088a83829dd",
+      "archiveMember": "pyinstaller-6.22.2/COPYING.txt",
+      "sourceVerification": "Exact publisher source archive bytes"
+    },
+    {
+      "file": "pynacl-1.6.2-LICENSE.txt",
+      "url": "/assets/licenses/pynacl-1.6.2-LICENSE.txt",
+      "bytes": 9694,
+      "sha256": "d3174ad63e721d4c9dccb8ad4320848992d314369bc46319720b5802c9153fe9",
+      "component": "pynacl",
+      "version": "1.6.2",
+      "licenseExpression": "Apache-2.0",
+      "scope": [
+        "windows-msix-1.6.2.0"
+      ],
+      "sourceUrl": "https://files.pythonhosted.org/packages/d9/9a/4019b524b03a13438637b11538c82781a5eda427394380381af8f04f467a/pynacl-1.6.2.tar.gz",
+      "sourceArchiveSha256": "018494d6d696ae03c7e656e5e74cdfd8ea1326962cc401bcf018f1ed8436811c",
+      "archiveMember": "pynacl-1.6.2/LICENSE",
+      "sourceVerification": "Exact publisher source archive bytes",
+      "packagedTextMatchesAllowingLineEndings": true
+    },
+    {
+      "file": "pynacl-1.6.2-libsodium-LICENSE.txt",
+      "url": "/assets/licenses/pynacl-1.6.2-libsodium-LICENSE.txt",
+      "bytes": 823,
+      "sha256": "508a76d186356c0dd807a670ef510964f8724557024796a2c426c6c0e19ab683",
+      "component": "pynacl",
+      "version": "1.6.2",
+      "licenseExpression": "ISC",
+      "scope": [
+        "windows-msix-1.6.2.0"
+      ],
+      "sourceUrl": "https://files.pythonhosted.org/packages/d9/9a/4019b524b03a13438637b11538c82781a5eda427394380381af8f04f467a/pynacl-1.6.2.tar.gz",
+      "sourceArchiveSha256": "018494d6d696ae03c7e656e5e74cdfd8ea1326962cc401bcf018f1ed8436811c",
+      "archiveMember": "pynacl-1.6.2/licenses/LICENSE.libsodium.txt",
+      "sourceVerification": "Exact publisher source archive bytes",
+      "packagedTextMatchesAllowingLineEndings": true
+    },
+    {
+      "file": "pyserial-3.5-LICENSE.txt",
+      "url": "/assets/licenses/pyserial-3.5-LICENSE.txt",
+      "bytes": 1885,
+      "sha256": "f91cb9813de6a5b142b8f7f2dede630b5134160aedaeaf55f4d6a7e2593ca3f3",
+      "component": "pyserial",
+      "version": "3.5",
+      "licenseExpression": "BSD-3-Clause",
+      "scope": [
+        "windows-msix-1.6.2.0"
+      ],
+      "sourceUrl": "https://files.pythonhosted.org/packages/1e/7d/ae3f0a63f41e4d2f6cb66a5b57197850f919f59e558159a4dd3a818f5082/pyserial-3.5.tar.gz",
+      "sourceArchiveSha256": "3c77e014170dfffbd816e6ffc205e9842efb10be9f58ec16d3e8675b4925cddb",
+      "archiveMember": "pyserial-3.5/LICENSE.txt",
+      "sourceVerification": "Exact publisher source archive bytes"
+    },
+    {
+      "file": "python-3.11.9-LICENSE.txt",
+      "url": "/assets/licenses/python-3.11.9-LICENSE.txt",
+      "bytes": 13936,
+      "sha256": "3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf",
+      "component": "CPython",
+      "version": "3.11.9",
+      "licenseExpression": "PSF-2.0",
+      "scope": [
+        "windows-msix-1.6.2.0"
+      ],
+      "sourceUrl": "https://raw.githubusercontent.com/python/cpython/v3.11.9/LICENSE",
+      "contentHandling": "Unmodified publisher bytes"
+    },
+    {
+      "file": "swift-sodium-0.11.0-LICENSE.txt",
+      "url": "/assets/licenses/swift-sodium-0.11.0-LICENSE.txt",
+      "bytes": 773,
+      "sha256": "65bdb1ccfab986d20315fe5384c09c9eadabaa7128eac584e1daf6bc558346d3",
+      "component": "Swift Sodium",
+      "version": "0.11.0",
+      "licenseExpression": "ISC",
+      "scope": [
+        "macos-1.6.0"
+      ],
+      "sourceUrl": "https://raw.githubusercontent.com/jedisct1/swift-sodium/0.11.0/LICENSE",
+      "contentHandling": "Unmodified publisher bytes"
+    },
+    {
+      "file": "webrtc-android-144.7559.05-LICENSE.txt",
+      "url": "/assets/licenses/webrtc-android-144.7559.05-LICENSE.txt",
+      "bytes": 1511,
+      "sha256": "ab00a482b6a3902e40211b43c5d0441962ea99b6cc7c25c0f243fa270b78d482",
+      "component": "WebRTC Android",
+      "version": "144.7559.05",
+      "licenseExpression": "BSD-3-Clause",
+      "scope": [
+        "android-1.2.43"
+      ],
+      "sourceUrl": "https://raw.githubusercontent.com/webrtc-sdk/webrtc/597a7f4fb2c252c8d3c1d8d8144bfb730fbacaf2/LICENSE",
+      "contentHandling": "Unmodified upstream reference bytes",
+      "sourceVerification": "LICENSE matches the exact Android distribution tag notice after decoding HTML entities"
+    },
+    {
+      "file": "webrtc-android-144.7559.05-PATENTS.txt",
+      "url": "/assets/licenses/webrtc-android-144.7559.05-PATENTS.txt",
+      "bytes": 1388,
+      "sha256": "01462e2068d1a04c2274f3389773014c14ed9bc3446b28303543bd3e3c064145",
+      "component": "WebRTC Android",
+      "version": "144.7559.05",
+      "licenseExpression": "Additional IP Rights Grant",
+      "scope": [
+        "android-1.2.43"
+      ],
+      "sourceUrl": "https://raw.githubusercontent.com/webrtc-sdk/webrtc/597a7f4fb2c252c8d3c1d8d8144bfb730fbacaf2/PATENTS",
+      "contentHandling": "Unmodified upstream reference bytes",
+      "sourceVerification": "Upstream M144 reference; exact Android native-code build revision not asserted"
+    },
+    {
+      "file": "webrtc-android-144.7559.05-THIRD-PARTY-NOTICES.md",
+      "url": "/assets/licenses/webrtc-android-144.7559.05-THIRD-PARTY-NOTICES.md",
+      "bytes": 788358,
+      "sha256": "d1f9382c6878ac024155fd6d44a5977329108bb8b0a01cea40e4a2f1d7de252e",
+      "component": "WebRTC Android and its third-party components",
+      "version": "144.7559.05",
+      "licenseExpression": "Multiple",
+      "scope": [
+        "android-1.2.43"
+      ],
+      "sourceUrl": "https://raw.githubusercontent.com/webrtc-sdk/android/v144.7559.05/Licenses/WEBRTC.md",
+      "contentHandling": "Unmodified publisher bytes"
+    },
+    {
+      "file": "webrtc-macos-152.0.0-DISTRIBUTOR-LICENSE.md",
+      "url": "/assets/licenses/webrtc-macos-152.0.0-DISTRIBUTOR-LICENSE.md",
+      "bytes": 2992,
+      "sha256": "843529896bae499c92af3ecade86855128f930334ba97530695ccecef56e966d",
+      "component": "stasel WebRTC distribution repository",
+      "version": "152.0.0",
+      "licenseExpression": "BSD-3-Clause",
+      "scope": [
+        "publisher-distribution-notice"
+      ],
+      "sourceUrl": "https://raw.githubusercontent.com/stasel/WebRTC/152.0.0/LICENSE.md",
+      "contentHandling": "Unmodified publisher bytes"
+    },
+    {
+      "file": "webrtc-macos-152.0.0-LICENSE.txt",
+      "url": "/assets/licenses/webrtc-macos-152.0.0-LICENSE.txt",
+      "bytes": 1511,
+      "sha256": "ab00a482b6a3902e40211b43c5d0441962ea99b6cc7c25c0f243fa270b78d482",
+      "component": "WebRTC macOS",
+      "version": "152.0.0",
+      "licenseExpression": "BSD-3-Clause",
+      "scope": [
+        "macos-1.6.0"
+      ],
+      "sourceUrl": "https://github.com/stasel/WebRTC/releases/download/152.0.0/WebRTC-M152.xcframework.zip",
+      "upstreamCommit": "6f37672d358475cd17544121a12494da454d85fb",
+      "upstreamReleaseUrl": "https://github.com/stasel/WebRTC/releases/tag/152.0.0",
+      "contentHandling": "Gitiles base64 transfer decoded without changing text",
+      "sourceArchiveSha256": "115cb9944248a3302c0c8af17462e2576a28ccc7adef9f6a1fe66ee75d9e1cc8",
+      "archiveMember": "WebRTC.xcframework/LICENSE",
+      "sourceVerification": "Exact binary archive file bytes; equal to upstream source LICENSE"
+    },
+    {
+      "file": "webrtc-macos-152.0.0-PATENTS.txt",
+      "url": "/assets/licenses/webrtc-macos-152.0.0-PATENTS.txt",
+      "bytes": 1388,
+      "sha256": "01462e2068d1a04c2274f3389773014c14ed9bc3446b28303543bd3e3c064145",
+      "component": "WebRTC macOS",
+      "version": "152.0.0",
+      "licenseExpression": "Additional IP Rights Grant",
+      "scope": [
+        "macos-1.6.0"
+      ],
+      "sourceUrl": "https://webrtc.googlesource.com/src/+/6f37672d358475cd17544121a12494da454d85fb/PATENTS",
+      "upstreamCommit": "6f37672d358475cd17544121a12494da454d85fb",
+      "upstreamReleaseUrl": "https://github.com/stasel/WebRTC/releases/tag/152.0.0",
+      "contentHandling": "Gitiles base64 transfer decoded without changing text"
+    },
+    {
+      "file": "webrtc-macos-152.0.0-UPSTREAM-LICENSE.txt",
+      "url": "/assets/licenses/webrtc-macos-152.0.0-UPSTREAM-LICENSE.txt",
+      "bytes": 1511,
+      "sha256": "ab00a482b6a3902e40211b43c5d0441962ea99b6cc7c25c0f243fa270b78d482",
+      "component": "WebRTC macOS",
+      "version": "152.0.0",
+      "licenseExpression": "BSD-3-Clause",
+      "scope": [
+        "macos-1.6.0"
+      ],
+      "sourceUrl": "https://webrtc.googlesource.com/src/+/6f37672d358475cd17544121a12494da454d85fb/LICENSE",
+      "upstreamCommit": "6f37672d358475cd17544121a12494da454d85fb",
+      "upstreamReleaseUrl": "https://github.com/stasel/WebRTC/releases/tag/152.0.0",
+      "contentHandling": "Gitiles base64 transfer decoded without changing text"
+    },
+    {
+      "file": "webrtc-macos-152.0.0-UPSTREAM-PATENTS.txt",
+      "url": "/assets/licenses/webrtc-macos-152.0.0-UPSTREAM-PATENTS.txt",
+      "bytes": 1388,
+      "sha256": "01462e2068d1a04c2274f3389773014c14ed9bc3446b28303543bd3e3c064145",
+      "component": "WebRTC macOS",
+      "version": "152.0.0",
+      "licenseExpression": "Additional IP Rights Grant",
+      "scope": [
+        "macos-1.6.0"
+      ],
+      "sourceUrl": "https://webrtc.googlesource.com/src/+/6f37672d358475cd17544121a12494da454d85fb/PATENTS",
+      "upstreamCommit": "6f37672d358475cd17544121a12494da454d85fb",
+      "upstreamReleaseUrl": "https://github.com/stasel/WebRTC/releases/tag/152.0.0",
+      "contentHandling": "Gitiles base64 transfer decoded without changing text"
+    },
+    {
+      "file": "webrtc-sdk-android-144.7559.05-LICENSE.txt",
+      "url": "/assets/licenses/webrtc-sdk-android-144.7559.05-LICENSE.txt",
+      "bytes": 1068,
+      "sha256": "e6b282fe6c0fb353928923470457f31b44cbab203effd60c0cde4a5bb96c8aec",
+      "component": "WebRTC SDK Android distribution repository",
+      "version": "144.7559.05",
+      "licenseExpression": "MIT",
+      "scope": [
+        "publisher-distribution-notice"
+      ],
+      "sourceUrl": "https://raw.githubusercontent.com/webrtc-sdk/android/v144.7559.05/LICENSE",
+      "contentHandling": "Unmodified publisher bytes"
+    },
+    {
+      "file": "winsdk-1.0.0b10-LICENSE.txt",
+      "url": "/assets/licenses/winsdk-1.0.0b10-LICENSE.txt",
+      "bytes": 1111,
+      "sha256": "f49ddfd04fc40eb2a33cea48d6345da291d6765049be9eb3ad1cf7b5d9978672",
+      "component": "winsdk",
+      "version": "1.0.0b10",
+      "licenseExpression": "MIT",
+      "scope": [
+        "windows-msix-1.6.2.0"
+      ],
+      "sourceUrl": "https://files.pythonhosted.org/packages/f5/01/005772332e79947013aa33c7cb20431e3efd6ac46eb54aed3472c14afe50/winsdk-1.0.0b10.tar.gz",
+      "sourceArchiveSha256": "8f39ea759626797449371f857c9085b84bb9f3b6d493dc6525e2cedcb3d15ea2",
+      "archiveMember": "winsdk-1.0.0b10/LICENSE",
+      "sourceVerification": "Exact publisher source archive bytes"
+    },
+    {
+      "file": "zeroconf-0.151.3-COPYING.txt",
+      "url": "/assets/licenses/zeroconf-0.151.3-COPYING.txt",
+      "bytes": 24943,
+      "sha256": "73b9e1d4dc992630bbc22b4519f437020446bc8e913d0ad81a3292a79275a251",
+      "component": "zeroconf",
+      "version": "0.151.3",
+      "licenseExpression": "LGPL-2.1-or-later",
+      "scope": [
+        "windows-msix-1.6.2.0"
+      ],
+      "sourceUrl": "https://files.pythonhosted.org/packages/2b/7f/bb22975bbbc04765920b766e433410422794568053bff0ab5b3f0bf0197c/zeroconf-0.151.3.tar.gz",
+      "sourceArchiveSha256": "ce6c548e665759b6150cef4db9ab9d7bdd89857e90c513abd6b7340bdd7dbd6a",
+      "archiveMember": "zeroconf-0.151.3/COPYING",
+      "sourceVerification": "Exact publisher source archive bytes",
+      "packagedTextMatchesAllowingLineEndings": true
+    }
+  ]
+}

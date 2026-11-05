@@ -1,0 +1,42 @@
+{
+  "cffi": {
+    "sourceUrl": "https://files.pythonhosted.org/packages/eb/56/b1ba7935a17738ae8453301356628e8147c79dbb825bcbc73dc7401f9846/cffi-2.0.0.tar.gz",
+    "sourceArchiveSha256": "44d1b5909021139fe36001ae048dbdde8214afa20200eda0f64c068cac5d5529",
+    "publisherMetadataUrl": "https://pypi.org/pypi/cffi/2.0.0/json"
+  },
+  "cryptography": {
+    "sourceUrl": "https://files.pythonhosted.org/packages/bb/ad/5d6702db60b1e40b41ef513b6967ff5848f307d50f8449baf1634f5908f1/cryptography-50.0.1.tar.gz",
+    "sourceArchiveSha256": "5dd9bda1c12b4162f6ff568eeb5e0ff956c28d14406e875cfe8a63a2d414ff20",
+    "publisherMetadataUrl": "https://pypi.org/pypi/cryptography/50.0.1/json"
+  },
+  "ifaddr": {
+    "sourceUrl": "https://files.pythonhosted.org/packages/e8/ac/fb4c578f4a3256561548cd825646680edcadb9440f3f68add95ade1eb791/ifaddr-0.2.0.tar.gz",
+    "sourceArchiveSha256": "cc0cbfcaabf765d44595825fb96a99bb12c79716b73b44330ea38ee2b0c4aed4",
+    "publisherMetadataUrl": "https://pypi.org/pypi/ifaddr/0.2.0/json"
+  },
+  "pyinstaller": {
+    "sourceUrl": "https://files.pythonhosted.org/packages/cc/2b/836d9def811c02522e0921d8b8cdf0c16b0545a216e97e71041758057859/pyinstaller-6.22.2.tar.gz",
+    "sourceArchiveSha256": "89b65a3ad07d9dd5832253e37bc45f31872d10d7f9d5c9fd0fdd6088a83829dd",
+    "publisherMetadataUrl": "https://pypi.org/pypi/pyinstaller/6.22.2/json"
+  },
+  "pynacl": {
+    "sourceUrl": "https://files.pythonhosted.org/packages/d9/9a/4019b524b03a13438637b11538c82781a5eda427394380381af8f04f467a/pynacl-1.6.2.tar.gz",
+    "sourceArchiveSha256": "018494d6d696ae03c7e656e5e74cdfd8ea1326962cc401bcf018f1ed8436811c",
+    "publisherMetadataUrl": "https://pypi.org/pypi/pynacl/1.6.2/json"
+  },
+  "winsdk": {
+    "sourceUrl": "https://files.pythonhosted.org/packages/f5/01/005772332e79947013aa33c7cb20431e3efd6ac46eb54aed3472c14afe50/winsdk-1.0.0b10.tar.gz",
+    "sourceArchiveSha256": "8f39ea759626797449371f857c9085b84bb9f3b6d493dc6525e2cedcb3d15ea2",
+    "publisherMetadataUrl": "https://pypi.org/pypi/winsdk/1.0.0b10/json"
+  },
+  "zeroconf": {
+    "sourceUrl": "https://files.pythonhosted.org/packages/2b/7f/bb22975bbbc04765920b766e433410422794568053bff0ab5b3f0bf0197c/zeroconf-0.151.3.tar.gz",
+    "sourceArchiveSha256": "ce6c548e665759b6150cef4db9ab9d7bdd89857e90c513abd6b7340bdd7dbd6a",
+    "publisherMetadataUrl": "https://pypi.org/pypi/zeroconf/0.151.3/json"
+  },
+  "pyserial": {
+    "sourceUrl": "https://files.pythonhosted.org/packages/1e/7d/ae3f0a63f41e4d2f6cb66a5b57197850f919f59e558159a4dd3a818f5082/pyserial-3.5.tar.gz",
+    "sourceArchiveSha256": "3c77e014170dfffbd816e6ffc205e9842efb10be9f58ec16d3e8675b4925cddb",
+    "publisherMetadataUrl": "https://pypi.org/pypi/pyserial/3.5/json"
+  }
+}

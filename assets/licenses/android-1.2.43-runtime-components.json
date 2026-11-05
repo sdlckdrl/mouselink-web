@@ -1,0 +1,1233 @@
+{
+  "appVersion": "1.2.43",
+  "versionCode": 79,
+  "verifiedOn": "2026-11-05",
+  "scope": "Resolved Play and Galaxy release runtime artifacts. R8 may remove unused classes and resources; inclusion in this inventory does not imply the app uses every upstream feature. Build/test-only dependencies are excluded. JNA is used under Apache-2.0 from its dual-license offer.",
+  "components": [
+    {
+      "module": "androidx.activity:activity",
+      "version": "1.13.0",
+      "channels": [
+        "play",
+        "galaxy"
+      ],
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "metadataUrl": "https://dl.google.com/dl/android/maven2/androidx/activity/activity/1.13.0/activity-1.13.0.pom",
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/activity#1.13.0",
+      "scmUrl": "https://cs.android.com/androidx/platform/frameworks/support"
+    },
+    {
+      "module": "androidx.activity:activity-ktx",
+      "version": "1.13.0",
+      "channels": [
+        "play",
+        "galaxy"
+      ],
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "metadataUrl": "https://dl.google.com/dl/android/maven2/androidx/activity/activity-ktx/1.13.0/activity-ktx-1.13.0.pom",
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/activity#1.13.0",
+      "scmUrl": "https://cs.android.com/androidx/platform/frameworks/support"
+    },
+    {
+      "module": "androidx.annotation:annotation-experimental",
+      "version": "1.4.1",
+      "channels": [
+        "play",
+        "galaxy"
+      ],
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "metadataUrl": "https://dl.google.com/dl/android/maven2/androidx/annotation/annotation-experimental/1.4.1/annotation-experimental-1.4.1.pom",
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/annotation#1.4.1",
+      "scmUrl": "https://cs.android.com/androidx/platform/frameworks/support"
+    },
+    {
+      "module": "androidx.annotation:annotation-jvm",
+      "version": "1.9.1",
+      "channels": [
+        "play",
+        "galaxy"
+      ],
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "metadataUrl": "https://dl.google.com/dl/android/maven2/androidx/annotation/annotation-jvm/1.9.1/annotation-jvm-1.9.1.pom",
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/annotation#1.9.1",
+      "scmUrl": "https://cs.android.com/androidx/platform/frameworks/support"
+    },
+    {
+      "module": "androidx.appcompat:appcompat",
+      "version": "1.8.0",
+      "channels": [
+        "play",
+        "galaxy"
+      ],
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "metadataUrl": "https://dl.google.com/dl/android/maven2/androidx/appcompat/appcompat/1.8.0/appcompat-1.8.0.pom",
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/appcompat#1.8.0",
+      "scmUrl": "https://cs.android.com/androidx/platform/frameworks/support"
+    },
+    {
+      "module": "androidx.appcompat:appcompat-resources",
+      "version": "1.8.0",
+      "channels": [
+        "play",
+        "galaxy"
+      ],
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "metadataUrl": "https://dl.google.com/dl/android/maven2/androidx/appcompat/appcompat-resources/1.8.0/appcompat-resources-1.8.0.pom",
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/appcompat#1.8.0",
+      "scmUrl": "https://cs.android.com/androidx/platform/frameworks/support"
+    },
+    {
+      "module": "androidx.arch.core:core-common",
+      "version": "2.2.0",
+      "channels": [
+        "play",
+        "galaxy"
+      ],
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "metadataUrl": "https://dl.google.com/dl/android/maven2/androidx/arch/core/core-common/2.2.0/core-common-2.2.0.pom",
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/arch-core#2.2.0",
+      "scmUrl": "https://cs.android.com/androidx/platform/frameworks/support"
+    },
+    {
+      "module": "androidx.arch.core:core-runtime",
+      "version": "2.2.0",
+      "channels": [
+        "play",
+        "galaxy"
+      ],
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "metadataUrl": "https://dl.google.com/dl/android/maven2/androidx/arch/core/core-runtime/2.2.0/core-runtime-2.2.0.pom",
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/arch-core#2.2.0",
+      "scmUrl": "https://cs.android.com/androidx/platform/frameworks/support"
+    },
+    {
+      "module": "androidx.browser:browser",
+      "version": "1.9.0",
+      "channels": [
+        "play",
+        "galaxy"
+      ],
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "metadataUrl": "https://dl.google.com/dl/android/maven2/androidx/browser/browser/1.9.0/browser-1.9.0.pom",
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/browser#1.9.0",
+      "scmUrl": "https://cs.android.com/androidx/platform/frameworks/support"
+    },
+    {
+      "module": "androidx.collection:collection-jvm",
+      "version": "1.4.2",
+      "channels": [
+        "play",
+        "galaxy"
+      ],
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "metadataUrl": "https://dl.google.com/dl/android/maven2/androidx/collection/collection-jvm/1.4.2/collection-jvm-1.4.2.pom",
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/collection#1.4.2",
+      "scmUrl": "https://cs.android.com/androidx/platform/frameworks/support"
+    },
+    {
+      "module": "androidx.compose.runtime:runtime-annotation-android",
+      "version": "1.9.0",
+      "channels": [
+        "play",
+        "galaxy"
+      ],
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "metadataUrl": "https://dl.google.com/dl/android/maven2/androidx/compose/runtime/runtime-annotation-android/1.9.0/runtime-annotation-android-1.9.0.pom",
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/compose-runtime#1.9.0",
+      "scmUrl": "https://cs.android.com/androidx/platform/frameworks/support"
+    },
+    {
+      "module": "androidx.concurrent:concurrent-futures",
+      "version": "1.1.0",
+      "channels": [
+        "play",
+        "galaxy"
+      ],
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "metadataUrl": "https://dl.google.com/dl/android/maven2/androidx/concurrent/concurrent-futures/1.1.0/concurrent-futures-1.1.0.pom",
+      "projectUrl": "https://developer.android.com/topic/libraries/architecture/index.html",
+      "scmUrl": "http://source.android.com"
+    },
+    {
+      "module": "androidx.core:core",
+      "version": "1.18.0",
+      "channels": [
+        "play",
+        "galaxy"
+      ],
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "metadataUrl": "https://dl.google.com/dl/android/maven2/androidx/core/core/1.18.0/core-1.18.0.pom",
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/core#1.18.0",
+      "scmUrl": "https://cs.android.com/androidx/platform/frameworks/support"
+    },
+    {
+      "module": "androidx.core:core-ktx",
+      "version": "1.18.0",
+      "channels": [
+        "play",
+        "galaxy"
+      ],
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "metadataUrl": "https://dl.google.com/dl/android/maven2/androidx/core/core-ktx/1.18.0/core-ktx-1.18.0.pom",
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/core#1.18.0",
+      "scmUrl": "https://cs.android.com/androidx/platform/frameworks/support"
+    },
+    {
+      "module": "androidx.core:core-viewtree",
+      "version": "1.0.0",
+      "channels": [
+        "play",
+        "galaxy"
+      ],
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "metadataUrl": "https://dl.google.com/dl/android/maven2/androidx/core/core-viewtree/1.0.0/core-viewtree-1.0.0.pom",
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/core#1.0.0",
+      "scmUrl": "https://cs.android.com/androidx/platform/frameworks/support"
+    },
+    {
+      "module": "androidx.cursoradapter:cursoradapter",
+      "version": "1.0.0",
+      "channels": [
+        "play",
+        "galaxy"
+      ],
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "metadataUrl": "https://dl.google.com/dl/android/maven2/androidx/cursoradapter/cursoradapter/1.0.0/cursoradapter-1.0.0.pom",
+      "projectUrl": "http://developer.android.com/tools/extras/support-library.html",
+      "scmUrl": "http://source.android.com"
+    },
+    {
+      "module": "androidx.customview:customview",
+      "version": "1.0.0",
+      "channels": [
+        "play",
+        "galaxy"
+      ],
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "metadataUrl": "https://dl.google.com/dl/android/maven2/androidx/customview/customview/1.0.0/customview-1.0.0.pom",
+      "projectUrl": "http://developer.android.com/tools/extras/support-library.html",
+      "scmUrl": "http://source.android.com"
+    },
+    {
+      "module": "androidx.drawerlayout:drawerlayout",
+      "version": "1.0.0",
+      "channels": [
+        "play",
+        "galaxy"
+      ],
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "metadataUrl": "https://dl.google.com/dl/android/maven2/androidx/drawerlayout/drawerlayout/1.0.0/drawerlayout-1.0.0.pom",
+      "projectUrl": "http://developer.android.com/tools/extras/support-library.html",
+      "scmUrl": "http://source.android.com"
+    },
+    {
+      "module": "androidx.emoji2:emoji2",
+      "version": "1.3.0",
+      "channels": [
+        "play",
+        "galaxy"
+      ],
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "metadataUrl": "https://dl.google.com/dl/android/maven2/androidx/emoji2/emoji2/1.3.0/emoji2-1.3.0.pom",
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/emoji2#1.3.0",
+      "scmUrl": "https://cs.android.com/androidx/platform/frameworks/support"
+    },
+    {
+      "module": "androidx.emoji2:emoji2-views-helper",
+      "version": "1.3.0",
+      "channels": [
+        "play",
+        "galaxy"
+      ],
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "metadataUrl": "https://dl.google.com/dl/android/maven2/androidx/emoji2/emoji2-views-helper/1.3.0/emoji2-views-helper-1.3.0.pom",
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/emoji2#1.3.0",
+      "scmUrl": "https://cs.android.com/androidx/platform/frameworks/support"
+    },
+    {
+      "module": "androidx.fragment:fragment",
+      "version": "1.5.4",
+      "channels": [
+        "play",
+        "galaxy"
+      ],
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "metadataUrl": "https://dl.google.com/dl/android/maven2/androidx/fragment/fragment/1.5.4/fragment-1.5.4.pom",
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/fragment#1.5.4",
+      "scmUrl": "https://cs.android.com/androidx/platform/frameworks/support"
+    },
+    {
+      "module": "androidx.interpolator:interpolator",
+      "version": "1.0.0",
+      "channels": [
+        "play",
+        "galaxy"
+      ],
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "metadataUrl": "https://dl.google.com/dl/android/maven2/androidx/interpolator/interpolator/1.0.0/interpolator-1.0.0.pom",
+      "projectUrl": "http://developer.android.com/tools/extras/support-library.html",
+      "scmUrl": "http://source.android.com"
+    },
+    {
+      "module": "androidx.lifecycle:lifecycle-common",
+      "version": "2.6.2",
+      "channels": [
+        "play",
+        "galaxy"
+      ],
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "metadataUrl": "https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-common/2.6.2/lifecycle-common-2.6.2.pom",
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/lifecycle#2.6.2",
+      "scmUrl": "https://cs.android.com/androidx/platform/frameworks/support"
+    },
+    {
+      "module": "androidx.lifecycle:lifecycle-livedata",
+      "version": "2.6.2",
+      "channels": [
+        "play",
+        "galaxy"
+      ],
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "metadataUrl": "https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-livedata/2.6.2/lifecycle-livedata-2.6.2.pom",
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/lifecycle#2.6.2",
+      "scmUrl": "https://cs.android.com/androidx/platform/frameworks/support"
+    },
+    {
+      "module": "androidx.lifecycle:lifecycle-livedata-core",
+      "version": "2.6.2",
+      "channels": [
+        "play",
+        "galaxy"
+      ],
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "metadataUrl": "https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-livedata-core/2.6.2/lifecycle-livedata-core-2.6.2.pom",
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/lifecycle#2.6.2",
+      "scmUrl": "https://cs.android.com/androidx/platform/frameworks/support"
+    },
+    {
+      "module": "androidx.lifecycle:lifecycle-process",
+      "version": "2.6.2",
+      "channels": [
+        "play",
+        "galaxy"
+      ],
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "metadataUrl": "https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-process/2.6.2/lifecycle-process-2.6.2.pom",
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/lifecycle#2.6.2",
+      "scmUrl": "https://cs.android.com/androidx/platform/frameworks/support"
+    },
+    {
+      "module": "androidx.lifecycle:lifecycle-runtime",
+      "version": "2.6.2",
+      "channels": [
+        "play",
+        "galaxy"
+      ],
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "metadataUrl": "https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-runtime/2.6.2/lifecycle-runtime-2.6.2.pom",
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/lifecycle#2.6.2",
+      "scmUrl": "https://cs.android.com/androidx/platform/frameworks/support"
+    },
+    {
+      "module": "androidx.lifecycle:lifecycle-runtime-ktx",
+      "version": "2.6.2",
+      "channels": [
+        "play",
+        "galaxy"
+      ],
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "metadataUrl": "https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-runtime-ktx/2.6.2/lifecycle-runtime-ktx-2.6.2.pom",
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/lifecycle#2.6.2",
+      "scmUrl": "https://cs.android.com/androidx/platform/frameworks/support"
+    },
+    {
+      "module": "androidx.lifecycle:lifecycle-viewmodel",
+      "version": "2.6.2",
+      "channels": [
+        "play",
+        "galaxy"
+      ],
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "metadataUrl": "https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-viewmodel/2.6.2/lifecycle-viewmodel-2.6.2.pom",
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/lifecycle#2.6.2",
+      "scmUrl": "https://cs.android.com/androidx/platform/frameworks/support"
+    },
+    {
+      "module": "androidx.lifecycle:lifecycle-viewmodel-ktx",
+      "version": "2.6.2",
+      "channels": [
+        "play",
+        "galaxy"
+      ],
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "metadataUrl": "https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-viewmodel-ktx/2.6.2/lifecycle-viewmodel-ktx-2.6.2.pom",
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/lifecycle#2.6.2",
+      "scmUrl": "https://cs.android.com/androidx/platform/frameworks/support"
+    },
+    {
+      "module": "androidx.lifecycle:lifecycle-viewmodel-savedstate",
+      "version": "2.6.2",
+      "channels": [
+        "play",
+        "galaxy"
+      ],
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "metadataUrl": "https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-viewmodel-savedstate/2.6.2/lifecycle-viewmodel-savedstate-2.6.2.pom",
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/lifecycle#2.6.2",
+      "scmUrl": "https://cs.android.com/androidx/platform/frameworks/support"
+    },
+    {
+      "module": "androidx.loader:loader",
+      "version": "1.0.0",
+      "channels": [
+        "play",
+        "galaxy"
+      ],
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "metadataUrl": "https://dl.google.com/dl/android/maven2/androidx/loader/loader/1.0.0/loader-1.0.0.pom",
+      "projectUrl": "http://developer.android.com/tools/extras/support-library.html",
+      "scmUrl": "http://source.android.com"
+    },
+    {
+      "module": "androidx.navigationevent:navigationevent-android",
+      "version": "1.0.0",
+      "channels": [
+        "play",
+        "galaxy"
+      ],
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "metadataUrl": "https://dl.google.com/dl/android/maven2/androidx/navigationevent/navigationevent-android/1.0.0/navigationevent-android-1.0.0.pom",
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/navigationevent#1.0.0",
+      "scmUrl": "https://cs.android.com/androidx/platform/frameworks/support"
+    },
+    {
+      "module": "androidx.profileinstaller:profileinstaller",
+      "version": "1.4.0",
+      "channels": [
+        "play",
+        "galaxy"
+      ],
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "metadataUrl": "https://dl.google.com/dl/android/maven2/androidx/profileinstaller/profileinstaller/1.4.0/profileinstaller-1.4.0.pom",
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/profileinstaller#1.4.0",
+      "scmUrl": "https://cs.android.com/androidx/platform/frameworks/support"
+    },
+    {
+      "module": "androidx.resourceinspection:resourceinspection-annotation",
+      "version": "1.0.1",
+      "channels": [
+        "play",
+        "galaxy"
+      ],
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "metadataUrl": "https://dl.google.com/dl/android/maven2/androidx/resourceinspection/resourceinspection-annotation/1.0.1/resourceinspection-annotation-1.0.1.pom",
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/resourceinspection#1.0.1",
+      "scmUrl": "https://cs.android.com/androidx/platform/frameworks/support"
+    },
+    {
+      "module": "androidx.savedstate:savedstate",
+      "version": "1.2.1",
+      "channels": [
+        "play",
+        "galaxy"
+      ],
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "metadataUrl": "https://dl.google.com/dl/android/maven2/androidx/savedstate/savedstate/1.2.1/savedstate-1.2.1.pom",
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/savedstate#1.2.1",
+      "scmUrl": "https://cs.android.com/androidx/platform/frameworks/support"
+    },
+    {
+      "module": "androidx.savedstate:savedstate-ktx",
+      "version": "1.2.1",
+      "channels": [
+        "play",
+        "galaxy"
+      ],
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "metadataUrl": "https://dl.google.com/dl/android/maven2/androidx/savedstate/savedstate-ktx/1.2.1/savedstate-ktx-1.2.1.pom",
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/savedstate#1.2.1",
+      "scmUrl": "https://cs.android.com/androidx/platform/frameworks/support"
+    },
+    {
+      "module": "androidx.startup:startup-runtime",
+      "version": "1.2.0",
+      "channels": [
+        "play",
+        "galaxy"
+      ],
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "metadataUrl": "https://dl.google.com/dl/android/maven2/androidx/startup/startup-runtime/1.2.0/startup-runtime-1.2.0.pom",
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/startup#1.2.0",
+      "scmUrl": "https://cs.android.com/androidx/platform/frameworks/support"
+    },
+    {
+      "module": "androidx.tracing:tracing",
+      "version": "1.2.0",
+      "channels": [
+        "play",
+        "galaxy"
+      ],
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "metadataUrl": "https://dl.google.com/dl/android/maven2/androidx/tracing/tracing/1.2.0/tracing-1.2.0.pom",
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/tracing#1.2.0",
+      "scmUrl": "https://cs.android.com/androidx/platform/frameworks/support"
+    },
+    {
+      "module": "androidx.vectordrawable:vectordrawable",
+      "version": "1.1.0",
+      "channels": [
+        "play",
+        "galaxy"
+      ],
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "metadataUrl": "https://dl.google.com/dl/android/maven2/androidx/vectordrawable/vectordrawable/1.1.0/vectordrawable-1.1.0.pom",
+      "projectUrl": "https://developer.android.com/jetpack/androidx",
+      "scmUrl": "http://source.android.com"
+    },
+    {
+      "module": "androidx.vectordrawable:vectordrawable-animated",
+      "version": "1.1.0",
+      "channels": [
+        "play",
+        "galaxy"
+      ],
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "metadataUrl": "https://dl.google.com/dl/android/maven2/androidx/vectordrawable/vectordrawable-animated/1.1.0/vectordrawable-animated-1.1.0.pom",
+      "projectUrl": "https://developer.android.com/jetpack/androidx",
+      "scmUrl": "http://source.android.com"
+    },
+    {
+      "module": "androidx.versionedparcelable:versionedparcelable",
+      "version": "1.1.1",
+      "channels": [
+        "play",
+        "galaxy"
+      ],
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "metadataUrl": "https://dl.google.com/dl/android/maven2/androidx/versionedparcelable/versionedparcelable/1.1.1/versionedparcelable-1.1.1.pom",
+      "projectUrl": "http://developer.android.com/tools/extras/support-library.html",
+      "scmUrl": "http://source.android.com"
+    },
+    {
+      "module": "androidx.viewpager:viewpager",
+      "version": "1.0.0",
+      "channels": [
+        "play",
+        "galaxy"
+      ],
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "metadataUrl": "https://dl.google.com/dl/android/maven2/androidx/viewpager/viewpager/1.0.0/viewpager-1.0.0.pom",
+      "projectUrl": "http://developer.android.com/tools/extras/support-library.html",
+      "scmUrl": "http://source.android.com"
+    },
+    {
+      "module": "com.android.billingclient:billing",
+      "version": "8.3.0",
+      "channels": [
+        "play"
+      ],
+      "licenses": [
+        {
+          "name": "Android Software Development Kit License",
+          "url": "https://developer.android.com/studio/terms.html"
+        }
+      ],
+      "metadataUrl": "https://dl.google.com/dl/android/maven2/com/android/billingclient/billing/8.3.0/billing-8.3.0.pom"
+    },
+    {
+      "module": "com.google.android.datatransport:transport-api",
+      "version": "3.0.0",
+      "channels": [
+        "play"
+      ],
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "metadataUrl": "https://dl.google.com/dl/android/maven2/com/google/android/datatransport/transport-api/3.0.0/transport-api-3.0.0.pom"
+    },
+    {
+      "module": "com.google.android.datatransport:transport-backend-cct",
+      "version": "3.1.8",
+      "channels": [
+        "play"
+      ],
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "metadataUrl": "https://dl.google.com/dl/android/maven2/com/google/android/datatransport/transport-backend-cct/3.1.8/transport-backend-cct-3.1.8.pom"
+    },
+    {
+      "module": "com.google.android.datatransport:transport-runtime",
+      "version": "3.1.8",
+      "channels": [
+        "play"
+      ],
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "metadataUrl": "https://dl.google.com/dl/android/maven2/com/google/android/datatransport/transport-runtime/3.1.8/transport-runtime-3.1.8.pom"
+    },
+    {
+      "module": "com.google.android.gms:play-services-base",
+      "version": "18.5.0",
+      "channels": [
+        "play"
+      ],
+      "licenses": [
+        {
+          "name": "Android Software Development Kit License",
+          "url": "https://developer.android.com/studio/terms.html"
+        }
+      ],
+      "metadataUrl": "https://dl.google.com/dl/android/maven2/com/google/android/gms/play-services-base/18.5.0/play-services-base-18.5.0.pom"
+    },
+    {
+      "module": "com.google.android.gms:play-services-basement",
+      "version": "18.9.0",
+      "channels": [
+        "play"
+      ],
+      "licenses": [
+        {
+          "name": "Android Software Development Kit License",
+          "url": "https://developer.android.com/studio/terms.html"
+        }
+      ],
+      "metadataUrl": "https://dl.google.com/dl/android/maven2/com/google/android/gms/play-services-basement/18.9.0/play-services-basement-18.9.0.pom"
+    },
+    {
+      "module": "com.google.android.gms:play-services-location",
+      "version": "19.0.0",
+      "channels": [
+        "play"
+      ],
+      "licenses": [
+        {
+          "name": "Android Software Development Kit License",
+          "url": "https://developer.android.com/studio/terms.html"
+        }
+      ],
+      "metadataUrl": "https://dl.google.com/dl/android/maven2/com/google/android/gms/play-services-location/19.0.0/play-services-location-19.0.0.pom"
+    },
+    {
+      "module": "com.google.android.gms:play-services-places-placereport",
+      "version": "17.0.0",
+      "channels": [
+        "play"
+      ],
+      "licenses": [
+        {
+          "name": "Android Software Development Kit License",
+          "url": "https://developer.android.com/studio/terms.html"
+        }
+      ],
+      "metadataUrl": "https://dl.google.com/dl/android/maven2/com/google/android/gms/play-services-places-placereport/17.0.0/play-services-places-placereport-17.0.0.pom"
+    },
+    {
+      "module": "com.google.android.gms:play-services-tasks",
+      "version": "18.2.0",
+      "channels": [
+        "play"
+      ],
+      "licenses": [
+        {
+          "name": "Android Software Development Kit License",
+          "url": "https://developer.android.com/studio/terms.html"
+        }
+      ],
+      "metadataUrl": "https://dl.google.com/dl/android/maven2/com/google/android/gms/play-services-tasks/18.2.0/play-services-tasks-18.2.0.pom"
+    },
+    {
+      "module": "com.google.android.play:app-update",
+      "version": "2.1.0",
+      "channels": [
+        "play"
+      ],
+      "licenses": [
+        {
+          "name": "Play Core Software Development Kit Terms of Service",
+          "url": "https://developer.android.com/guide/playcore/license"
+        }
+      ],
+      "metadataUrl": "https://dl.google.com/dl/android/maven2/com/google/android/play/app-update/2.1.0/app-update-2.1.0.pom"
+    },
+    {
+      "module": "com.google.android.play:core-common",
+      "version": "2.0.4",
+      "channels": [
+        "play"
+      ],
+      "licenses": [
+        {
+          "name": "Play Core Software Development Kit Terms of Service",
+          "url": "https://developer.android.com/guide/playcore/license"
+        }
+      ],
+      "metadataUrl": "https://dl.google.com/dl/android/maven2/com/google/android/play/core-common/2.0.4/core-common-2.0.4.pom"
+    },
+    {
+      "module": "com.google.android.play:review",
+      "version": "2.0.2",
+      "channels": [
+        "play"
+      ],
+      "licenses": [
+        {
+          "name": "Play Core Software Development Kit Terms of Service",
+          "url": "https://developer.android.com/guide/playcore/license"
+        }
+      ],
+      "metadataUrl": "https://dl.google.com/dl/android/maven2/com/google/android/play/review/2.0.2/review-2.0.2.pom"
+    },
+    {
+      "module": "com.google.firebase:firebase-encoders",
+      "version": "17.0.0",
+      "channels": [
+        "play"
+      ],
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "metadataUrl": "https://dl.google.com/dl/android/maven2/com/google/firebase/firebase-encoders/17.0.0/firebase-encoders-17.0.0.pom"
+    },
+    {
+      "module": "com.google.firebase:firebase-encoders-json",
+      "version": "18.0.0",
+      "channels": [
+        "play"
+      ],
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "metadataUrl": "https://dl.google.com/dl/android/maven2/com/google/firebase/firebase-encoders-json/18.0.0/firebase-encoders-json-18.0.0.pom"
+    },
+    {
+      "module": "com.google.firebase:firebase-encoders-proto",
+      "version": "16.0.0",
+      "channels": [
+        "play"
+      ],
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "metadataUrl": "https://dl.google.com/dl/android/maven2/com/google/firebase/firebase-encoders-proto/16.0.0/firebase-encoders-proto-16.0.0.pom"
+    },
+    {
+      "module": "com.google.guava:listenablefuture",
+      "version": "1.0",
+      "channels": [
+        "play",
+        "galaxy"
+      ],
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "metadataUrl": "https://repo.maven.apache.org/maven2/com/google/guava/listenablefuture/1.0/listenablefuture-1.0.pom",
+      "licenseEvidenceUrl": "https://repo.maven.apache.org/maven2/com/google/guava/guava-parent/26.0-android/guava-parent-26.0-android.pom"
+    },
+    {
+      "module": "com.google.zxing:core",
+      "version": "3.4.1",
+      "channels": [
+        "play",
+        "galaxy"
+      ],
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "metadataUrl": "https://repo.maven.apache.org/maven2/com/google/zxing/core/3.4.1/core-3.4.1.pom",
+      "licenseEvidenceUrl": "https://repo.maven.apache.org/maven2/com/google/zxing/zxing-parent/3.4.1/zxing-parent-3.4.1.pom"
+    },
+    {
+      "module": "com.goterl:lazysodium-android",
+      "version": "5.2.0",
+      "channels": [
+        "play",
+        "galaxy"
+      ],
+      "licenses": [
+        {
+          "name": "Mozilla Public License, Version 2.0",
+          "url": "http://www.mozilla.org/MPL/2.0/index.txt"
+        }
+      ],
+      "metadataUrl": "https://repo.maven.apache.org/maven2/com/goterl/lazysodium-android/5.2.0/lazysodium-android-5.2.0.pom",
+      "projectUrl": "https://github.com/terl/lazysodium-android",
+      "scmUrl": "http://github.com/terl/lazysodium-android"
+    },
+    {
+      "module": "com.journeyapps:zxing-android-embedded",
+      "version": "4.3.0",
+      "channels": [
+        "play",
+        "galaxy"
+      ],
+      "licenses": [
+        {
+          "name": "The Apache License, Version 2.0",
+          "url": "https://github.com/journeyapps/zxing-android-embedded/blob/master/COPYING"
+        }
+      ],
+      "metadataUrl": "https://repo.maven.apache.org/maven2/com/journeyapps/zxing-android-embedded/4.3.0/zxing-android-embedded-4.3.0.pom",
+      "projectUrl": "https://github.com/journeyapps/zxing-android-embedded",
+      "scmUrl": "https://github.com/journeyapps/zxing-android-embedded"
+    },
+    {
+      "module": "com.squareup.okhttp3:okhttp-android",
+      "version": "5.3.2",
+      "channels": [
+        "play",
+        "galaxy"
+      ],
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "metadataUrl": "https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp-android/5.3.2/okhttp-android-5.3.2.pom",
+      "projectUrl": "https://square.github.io/okhttp/",
+      "scmUrl": "https://github.com/square/okhttp"
+    },
+    {
+      "module": "com.squareup.okio:okio-jvm",
+      "version": "3.16.4",
+      "channels": [
+        "play",
+        "galaxy"
+      ],
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "metadataUrl": "https://repo.maven.apache.org/maven2/com/squareup/okio/okio-jvm/3.16.4/okio-jvm-3.16.4.pom",
+      "projectUrl": "https://github.com/square/okio/",
+      "scmUrl": "https://github.com/square/okio/"
+    },
+    {
+      "module": "io.github.webrtc-sdk:android",
+      "version": "144.7559.05",
+      "channels": [
+        "play",
+        "galaxy"
+      ],
+      "licenses": [
+        {
+          "name": "The 3-Clause BSD License",
+          "url": "https://opensource.org/license/bsd-3-clause/"
+        }
+      ],
+      "metadataUrl": "https://repo.maven.apache.org/maven2/io/github/webrtc-sdk/android/144.7559.05/android-144.7559.05.pom",
+      "projectUrl": "https://github.com/webrtc-sdk/android",
+      "scmUrl": "https://github.com/webrtc-sdk/android"
+    },
+    {
+      "module": "javax.inject:javax.inject",
+      "version": "1",
+      "channels": [
+        "play"
+      ],
+      "licenses": [
+        {
+          "name": "Apache License, Version 2.0",
+          "url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "metadataUrl": "https://repo.maven.apache.org/maven2/javax/inject/javax.inject/1/javax.inject-1.pom",
+      "licenseEvidenceUrl": "https://repo.maven.apache.org/maven2/javax/inject/javax.inject/1/javax.inject-1-sources.jar"
+    },
+    {
+      "module": "net.java.dev.jna:jna",
+      "version": "5.19.1",
+      "channels": [
+        "play",
+        "galaxy"
+      ],
+      "licenses": [
+        {
+          "name": "LGPL-2.1-or-later",
+          "url": "https://www.gnu.org/licenses/old-licenses/lgpl-2.1"
+        },
+        {
+          "name": "Apache-2.0",
+          "url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "metadataUrl": "https://repo.maven.apache.org/maven2/net/java/dev/jna/jna/5.19.1/jna-5.19.1.pom",
+      "projectUrl": "https://github.com/java-native-access/jna",
+      "scmUrl": "https://github.com/java-native-access/jna"
+    },
+    {
+      "module": "org.jetbrains.kotlin:kotlin-stdlib",
+      "version": "2.2.21",
+      "channels": [
+        "play",
+        "galaxy"
+      ],
+      "licenses": [
+        {
+          "name": "Apache-2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "metadataUrl": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib/2.2.21/kotlin-stdlib-2.2.21.pom",
+      "projectUrl": "https://kotlinlang.org/",
+      "scmUrl": "https://github.com/JetBrains/kotlin"
+    },
+    {
+      "module": "org.jetbrains.kotlinx:kotlinx-coroutines-android",
+      "version": "1.9.0",
+      "channels": [
+        "play",
+        "galaxy"
+      ],
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "metadataUrl": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-android/1.9.0/kotlinx-coroutines-android-1.9.0.pom",
+      "projectUrl": "https://github.com/Kotlin/kotlinx.coroutines",
+      "scmUrl": "https://github.com/Kotlin/kotlinx.coroutines"
+    },
+    {
+      "module": "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm",
+      "version": "1.9.0",
+      "channels": [
+        "play",
+        "galaxy"
+      ],
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "metadataUrl": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-core-jvm/1.9.0/kotlinx-coroutines-core-jvm-1.9.0.pom",
+      "projectUrl": "https://github.com/Kotlin/kotlinx.coroutines",
+      "scmUrl": "https://github.com/Kotlin/kotlinx.coroutines"
+    },
+    {
+      "module": "org.jetbrains:annotations",
+      "version": "23.0.0",
+      "channels": [
+        "play",
+        "galaxy"
+      ],
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "metadataUrl": "https://repo.maven.apache.org/maven2/org/jetbrains/annotations/23.0.0/annotations-23.0.0.pom",
+      "projectUrl": "https://github.com/JetBrains/java-annotations",
+      "scmUrl": "https://github.com/JetBrains/java-annotations"
+    },
+    {
+      "module": "org.jspecify:jspecify",
+      "version": "1.0.0",
+      "channels": [
+        "play",
+        "galaxy"
+      ],
+      "licenses": [
+        {
+          "name": "The Apache License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "metadataUrl": "https://repo.maven.apache.org/maven2/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.pom",
+      "projectUrl": "http://jspecify.org/",
+      "scmUrl": "https://github.com/jspecify/jspecify/"
+    }
+  ],
+  "nativeAndVendored": [
+    {
+      "name": "AOSP PinyinIME decoder and dictionary",
+      "version": "49aebad1c1cfbbcaa9288ffed5161e79e57c3679",
+      "channels": [
+        "play",
+        "galaxy"
+      ],
+      "license": "Apache-2.0",
+      "sourceUrl": "https://android.googlesource.com/platform/packages/inputmethods/PinyinIME/+/49aebad1c1cfbbcaa9288ffed5161e79e57c3679/",
+      "notice": "aosp-pinyin-NOTICE.txt",
+      "modifications": "aosp-pinyin-PROVENANCE.md"
+    },
+    {
+      "name": "AOSP OpenWnn Japanese decoder and dictionary",
+      "version": "5067ec8ec5a80ab12218c961f9b083fbccc71b93",
+      "channels": [
+        "play",
+        "galaxy"
+      ],
+      "license": "Apache-2.0",
+      "sourceUrl": "https://android.googlesource.com/platform/packages/inputmethods/OpenWnn/+/5067ec8ec5a80ab12218c961f9b083fbccc71b93/",
+      "notice": "aosp-openwnn-NOTICE.txt",
+      "attribution": "aosp-openwnn-ATTRIBUTION.txt",
+      "modifications": "aosp-japanese-PROVENANCE.md"
+    },
+    {
+      "name": "libsodium (bundled by LazySodium Android)",
+      "version": "1.0.20",
+      "channels": [
+        "play",
+        "galaxy"
+      ],
+      "license": "ISC",
+      "sourceUrl": "https://github.com/jedisct1/libsodium/tree/1.0.20-RELEASE"
+    }
+  ],
+  "mplSource": {
+    "name": "LazySodium Android",
+    "version": "5.2.0",
+    "tag": "v5.2.0",
+    "commit": "d8b1885cff127a47b5a3bd9bcf0a53d36c372855",
+    "sourcesJarUrl": "https://repo.maven.apache.org/maven2/com/goterl/lazysodium-android/5.2.0/lazysodium-android-5.2.0-sources.jar",
+    "sourceArchiveUrl": "https://codeload.github.com/terl/lazysodium-android/zip/d8b1885cff127a47b5a3bd9bcf0a53d36c372855",
+    "changes": "The upstream AAR is consumed without local changes to LazySodium source."
+  }
+}

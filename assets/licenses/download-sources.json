@@ -1,0 +1,54 @@
+[
+  {
+    "File": "APACHE-2.0.txt",
+    "Url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+  },
+  {
+    "File": "GPL-2.0.txt",
+    "Url": "https://www.gnu.org/licenses/old-licenses/gpl-2.0.txt"
+  },
+  {
+    "File": "GPL-3.0.txt",
+    "Url": "https://www.gnu.org/licenses/gpl-3.0.txt"
+  },
+  {
+    "File": "LGPL-2.1.txt",
+    "Url": "https://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt"
+  },
+  {
+    "File": "LGPL-3.0.txt",
+    "Url": "https://www.gnu.org/licenses/lgpl-3.0.txt"
+  },
+  {
+    "File": "MPL-2.0.txt",
+    "Url": "https://www.mozilla.org/media/MPL/2.0/index.txt"
+  },
+  {
+    "File": "python-3.11.9-LICENSE.txt",
+    "Url": "https://raw.githubusercontent.com/python/cpython/v3.11.9/LICENSE"
+  },
+  {
+    "File": "swift-sodium-0.11.0-LICENSE.txt",
+    "Url": "https://raw.githubusercontent.com/jedisct1/swift-sodium/0.11.0/LICENSE"
+  },
+  {
+    "File": "libsodium-1.0.20-LICENSE.txt",
+    "Url": "https://raw.githubusercontent.com/jedisct1/libsodium/1.0.20-RELEASE/LICENSE"
+  },
+  {
+    "File": "libsodium-1.0.22-LICENSE.txt",
+    "Url": "https://raw.githubusercontent.com/jedisct1/libsodium/1.0.22-RELEASE/LICENSE"
+  },
+  {
+    "File": "webrtc-android-144.7559.05-THIRD-PARTY-NOTICES.md",
+    "Url": "https://raw.githubusercontent.com/webrtc-sdk/android/v144.7559.05/Licenses/WEBRTC.md"
+  },
+  {
+    "File": "webrtc-sdk-android-144.7559.05-LICENSE.txt",
+    "Url": "https://raw.githubusercontent.com/webrtc-sdk/android/v144.7559.05/LICENSE"
+  },
+  {
+    "File": "webrtc-macos-152.0.0-DISTRIBUTOR-LICENSE.md",
+    "Url": "https://raw.githubusercontent.com/stasel/WebRTC/152.0.0/LICENSE.md"
+  }
+]

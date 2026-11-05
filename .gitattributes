@@ -1,1 +1,3 @@
 * text=auto eol=lf
+# Preserve publisher notices, source archives, and their published SHA-256 bytes.
+assets/licenses/** -text

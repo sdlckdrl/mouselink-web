@@ -1,0 +1,130 @@
+[
+  {
+    "component": "cffi",
+    "files": [
+      {
+        "asset": "cffi-2.0.0-LICENSE.txt",
+        "matchedSourceMembers": [
+          "cffi-2.0.0/LICENSE"
+        ],
+        "verified": true
+      }
+    ],
+    "sourceHashVerified": true
+  },
+  {
+    "component": "cryptography",
+    "files": [
+      {
+        "asset": "cryptography-50.0.1-LICENSE.txt",
+        "matchedSourceMembers": [
+          "cryptography-50.0.1/LICENSE"
+        ],
+        "verified": true
+      },
+      {
+        "asset": "cryptography-50.0.1-LICENSE.APACHE.txt",
+        "matchedSourceMembers": [
+          "cryptography-50.0.1/LICENSE.APACHE"
+        ],
+        "verified": true
+      },
+      {
+        "asset": "cryptography-50.0.1-LICENSE.BSD.txt",
+        "matchedSourceMembers": [
+          "cryptography-50.0.1/LICENSE.BSD"
+        ],
+        "verified": true
+      }
+    ],
+    "sourceHashVerified": true
+  },
+  {
+    "component": "ifaddr",
+    "files": [
+      {
+        "asset": "ifaddr-0.2.0-LICENSE.txt",
+        "matchedSourceMembers": [
+          "ifaddr-0.2.0/LICENSE.txt"
+        ],
+        "verified": true
+      }
+    ],
+    "sourceHashVerified": true
+  },
+  {
+    "component": "pyinstaller",
+    "files": [
+      {
+        "asset": "pyinstaller-6.22.2-COPYING.txt",
+        "matchedSourceMembers": [
+          "pyinstaller-6.22.2/COPYING.txt"
+        ],
+        "verified": true
+      }
+    ],
+    "sourceHashVerified": true
+  },
+  {
+    "component": "pynacl",
+    "files": [
+      {
+        "asset": "pynacl-1.6.2-LICENSE.txt",
+        "matchedSourceMembers": [
+          "pynacl-1.6.2/LICENSE"
+        ],
+        "verified": true,
+        "bundledTextMatchesAllowingLineEndings": true
+      },
+      {
+        "asset": "pynacl-1.6.2-libsodium-LICENSE.txt",
+        "matchedSourceMembers": [
+          "pynacl-1.6.2/licenses/LICENSE.libsodium.txt"
+        ],
+        "verified": true,
+        "bundledTextMatchesAllowingLineEndings": true
+      }
+    ],
+    "sourceHashVerified": true
+  },
+  {
+    "component": "winsdk",
+    "files": [
+      {
+        "asset": "winsdk-1.0.0b10-LICENSE.txt",
+        "matchedSourceMembers": [
+          "winsdk-1.0.0b10/LICENSE"
+        ],
+        "verified": true
+      }
+    ],
+    "sourceHashVerified": true
+  },
+  {
+    "component": "zeroconf",
+    "files": [
+      {
+        "asset": "zeroconf-0.151.3-COPYING.txt",
+        "matchedSourceMembers": [
+          "zeroconf-0.151.3/COPYING"
+        ],
+        "verified": true,
+        "bundledTextMatchesAllowingLineEndings": true
+      }
+    ],
+    "sourceHashVerified": true
+  },
+  {
+    "component": "pyserial",
+    "files": [
+      {
+        "asset": "pyserial-3.5-LICENSE.txt",
+        "matchedSourceMembers": [
+          "pyserial-3.5/LICENSE.txt"
+        ],
+        "verified": true
+      }
+    ],
+    "sourceHashVerified": true
+  }
+]
