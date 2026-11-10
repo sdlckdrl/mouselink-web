@@ -67,8 +67,8 @@
         <p class="lead">
           OneMouse 连接 Windows 与 Android、其他 Windows PC 和 Mac。本政策说明现有 LAN/Bluetooth 配对和可选 Google 账号连接的信息处理及权限使用。
         </p>
-        <p class="policy-date">生效日期：2026年9月1日 · 最后更新日期：2026年10月31日</p>
-        <p><a class="text-link" href="#google-account">Google 账号信息处理</a> · <a class="text-link" href="#account-deletion">请求删除账号及数据</a></p>
+        <p class="policy-date">生效日期：2026年9月1日 · 最后更新日期：2026年11月10日</p>
+        <p><a class="text-link" href="#google-account">Google 账号信息处理</a> · <a class="text-link" href="#account-deletion">请求删除账号及数据</a> · <a class="text-link" href="#standby-weather">待机时钟天气</a></p>
       </section>
 
       <section>
@@ -79,6 +79,10 @@
               <h2>基本原则</h2>
               <p>
                 现有 LAN/Bluetooth 配对无需登录。在支持的应用版本中，可选 Google 账号连接用于查找同一账号的设备，并尝试跨网络直接连接。OneMouse 账号服务器处理连接信息和信令，不存储或中转文件、剪贴板、输入或视频内容。
+              </p>
+              <p>
+                局域网设备发现会在不加密的情况下通告设备 ID、设备名称和公钥指纹等连接信息。
+                同一局域网内的其他设备可能看到这些发现信息。
               </p>
             </article>
             <article class="lcard">
@@ -123,6 +127,16 @@
                 购买和恢复使用 Google Play Billing，仅在 Android 应用中提供；所有应用均不包含广告
                 SDK。Windows 与 Mac 不使用这些 Google 结算 SDK。
               </p>
+              <p>
+                Google Play 版会检查和恢复 Pro 购买状态。结算库可能向 Google Play 发送诊断事件及
+                设备、应用和网络元数据，用于监测结算功能的运行。OneMouse 不接收卡号等付款资料。
+              </p>
+              <p>
+                Play 应用内更新功能使用设备元数据、应用版本和已安装模块信息来检查更新。用户
+                提交应用内评价后，评分和文字会发送给 Google Play，可在 Play 中删除。
+                Google 保留和删除这些数据的方式请参阅
+                <a href="https://policies.google.com/privacy">Google 隐私权政策</a>。
+              </p>
             </article>
             <article class="lcard">
               <p class="num">06</p>
@@ -151,7 +165,7 @@
                   >隐私权政策</a
                 >。
               </p>
-              <p>本条仅适用于网站，OneMouse 应用中不包含任何分析 SDK。</p>
+              <p>此访问统计仅适用于网站。Android 上 Google Play 服务处理的诊断数据，请参阅上方的结算说明。</p>
             </article>
             <article class="lcard">
               <p class="num">08</p>
@@ -197,6 +211,28 @@
               <p>
                 退出登录用于解除当前设备的账号注册和会话，不等于删除整个 OneMouse 账号。如果无法连接服务器，可能仅完成本地退出，服务器注册仍会保留。已传输文件和本地通知记录需在各设备上分别删除。
               </p>
+            </article>
+            <article class="lcard" id="standby-weather">
+              <p class="num">11</p>
+              <h2>Android 待机时钟天气（可选）</h2>
+              <p>
+                天气功能默认关闭。你同意提示并允许访问大致位置后，应用会读取设备在过去 24 小时内
+                保存的最近一次大致位置。为确定地区名称，Android 的地理编码服务可能收到该大致坐标。
+              </p>
+              <p>
+                为获取天气预报，应用会通过 HTTPS 将四舍五入至 0.1 度的坐标发送给挪威气象研究所
+                （MET Norway）。该服务会收到连接 IP 地址，以及包含 OneMouse 应用名称、版本和
+                网站地址的 User-Agent。MET Norway 在挪威奥斯陆的访问日志中记录请求坐标和 IP 地址。
+                天气请求不会经过 OneMouse 账号服务器。有关日志保留与隐私权利请求，请参阅
+                <a href="https://www.met.no/en/About-us/privacy">MET Norway 隐私政策</a>及
+                <a href="https://docs.api.met.no/doc/TermsOfService.html#personal-data">API 个人数据说明</a>。
+              </p>
+              <p>
+                取整后的坐标、地区名称和天气预报缓存在设备上。关闭待机时钟天气或在 Android 中撤销
+                位置权限后，应用会停止发出新的天气预报请求。你可以在 Android 设置中清除应用数据，
+                或卸载应用来删除本地缓存。
+              </p>
+              <p>本次修订补充了待机时钟天气和 Google Play 服务的数据处理说明。</p>
             </article>
           </div>
         </div>

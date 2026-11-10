@@ -48,8 +48,8 @@
         <p class="lead">
           OneMouse connects Windows with Android, other Windows PCs, and Macs. This policy covers existing LAN/Bluetooth pairing and optional Google account linking, including data handling and permissions.
         </p>
-        <p class="policy-date">Effective date: September 1, 2026 · Last updated: October 31, 2026</p>
-        <p><a class="text-link" href="#google-account">Google account data</a> · <a class="text-link" href="#account-deletion">Request account and data deletion</a></p>
+        <p class="policy-date">Effective date: September 1, 2026 · Last updated: November 10, 2026</p>
+        <p><a class="text-link" href="#google-account">Google account data</a> · <a class="text-link" href="#account-deletion">Request account and data deletion</a> · <a class="text-link" href="#standby-weather">Standby clock weather</a></p>
       </section>
 
       <section>
@@ -60,6 +60,11 @@
               <h2>Core principle</h2>
               <p>
                 Existing LAN/Bluetooth pairing works without sign-in. In supported app versions, optional Google account linking finds your own account devices and attempts direct connections across networks. The OneMouse account server processes connection metadata and signals; it does not store or relay files, clipboard content, input, or video.
+              </p>
+              <p>
+                LAN discovery advertises connection metadata such as device IDs, device names, and
+                public key fingerprints without encryption. Other devices on the same local
+                network can see this discovery information.
               </p>
             </article>
             <article class="lcard">
@@ -154,6 +159,19 @@
                 Android Pro entitlement between platforms. Google's own terms and privacy policies
                 may apply to Android billing services.
               </p>
+              <p>
+                The Google Play edition checks and restores Pro purchase status. The billing
+                library can send diagnostic events and device, app, and network metadata to Google
+                Play to monitor billing operation. OneMouse does not receive payment details such
+                as card numbers.
+              </p>
+              <p>
+                Play in-app updates use device metadata, app version, and installed module data to
+                check for updates. Ratings and text entered in the in-app review are sent to
+                Google Play when you submit them. You can delete the review in Google Play.
+                For how Google retains and deletes this data, see the
+                <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.
+              </p>
             </article>
             <article class="lcard">
               <p class="num">07</p>
@@ -177,7 +195,10 @@
                   >Privacy Policy</a
                 > applies.
               </p>
-              <p>This applies to the website only — the OneMouse apps contain no analytics SDK.</p>
+              <p>
+                This visitor analytics applies to the website only. The Ads and billing section
+                above describes diagnostic data handled by Google Play services on Android.
+              </p>
             </article>
             <article class="lcard">
               <p class="num">08</p>
@@ -226,6 +247,33 @@
               <p>
                 Signing out unregisters the current device and its account sessions; it is different from deleting the entire OneMouse account. If the server cannot be reached, only local sign-out may complete and the server registration can remain. Delete transferred files and local notification history separately on each device.
               </p>
+            </article>
+            <article class="lcard" id="standby-weather">
+              <p class="num">11</p>
+              <h2>Optional Android standby clock weather</h2>
+              <p>
+                Weather is off by default. If you agree to the weather disclosure and grant
+                approximate location permission, the app reads the last approximate location
+                saved on your device within the past 24 hours. The Android geocoding provider
+                may receive those approximate coordinates to find the region name.
+              </p>
+              <p>
+                To obtain a forecast, the app sends coordinates rounded to 0.1 degrees to the
+                Norwegian Meteorological Institute (MET Norway) over HTTPS. MET Norway receives
+                the connection IP address and a User-Agent with the OneMouse app name, version,
+                and website. It records the requested coordinates and IP address in access logs
+                in Oslo, Norway. Weather requests do not pass through the OneMouse account server.
+                For log retention and privacy requests, see
+                <a href="https://www.met.no/en/About-us/privacy">MET Norway's Privacy Policy</a> and
+                <a href="https://docs.api.met.no/doc/TermsOfService.html#personal-data">API privacy information</a>.
+              </p>
+              <p>
+                The rounded location, region name, and forecast are cached on your device. Turning
+                off standby weather or revoking Android location permission stops new forecast
+                requests. You can remove the local cache by clearing the app's data in Android
+                settings or uninstalling the app.
+              </p>
+              <p>This revision adds information about standby clock weather and Google Play services.</p>
             </article>
           </div>
         </div>

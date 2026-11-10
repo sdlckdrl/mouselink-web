@@ -67,8 +67,8 @@
         <p class="lead">
           OneMouseはWindowsとAndroid・別のWindows PC・Macを接続します。本方針は既存のLAN・Bluetoothペアリングと任意のGoogleアカウント接続における情報の取り扱いと権限を説明します。
         </p>
-        <p class="policy-date">施行日: 2026年9月1日 · 最終更新日: 2026年10月31日</p>
-        <p><a class="text-link" href="#google-account">Googleアカウント情報の取り扱い</a> · <a class="text-link" href="#account-deletion">アカウントとデータの削除依頼</a></p>
+        <p class="policy-date">施行日: 2026年9月1日 · 最終更新日: 2026年11月10日</p>
+        <p><a class="text-link" href="#google-account">Googleアカウント情報の取り扱い</a> · <a class="text-link" href="#account-deletion">アカウントとデータの削除依頼</a> · <a class="text-link" href="#standby-weather">待機時計の天気</a></p>
       </section>
 
       <section>
@@ -79,6 +79,9 @@
               <h2>基本方針</h2>
               <p>
                 既存のLAN・Bluetoothペアリングはログインなしで利用できます。対応バージョンでは任意のGoogleアカウント接続で同じアカウントのデバイスを探し、異なるネットワーク間の直接接続を試みます。OneMouseのアカウントサーバーは接続情報とシグナルを処理し、ファイル・クリップボード・入力・映像の内容を保存または中継しません。
+              </p>
+              <p>
+                LANでの機器検出では、デバイスID、デバイス名、公開鍵のフィンガープリントなどの接続情報を暗号化せずに通知します。同じローカルネットワーク上の機器がこの検出情報を受信できる場合があります。
               </p>
             </article>
             <article class="lcard">
@@ -130,6 +133,13 @@
                 BillingはAndroidアプリでのみ使用し、広告SDKはどのアプリにも含まれていません。WindowsとMacはAndroidの購入状態やGoogle
                 SDKを処理しません。
               </p>
+              <p>
+                Google Play版はProの購入状態を確認し、復元します。決済ライブラリは動作の把握のため、診断イベントと機器・アプリ・ネットワークのメタデータをGoogle Playに送信する場合があります。OneMouseはカード番号などの支払情報を受け取りません。
+              </p>
+              <p>
+                Playのアプリ内アップデートは、更新の確認に機器のメタデータ、アプリのバージョン、インストール済みモジュールの情報を使用します。アプリ内レビューの評価と本文は利用者が送信するとGoogle Playに送られ、Playで削除できます。Googleによるデータの保存と削除については、
+                <a href="https://policies.google.com/privacy">Googleプライバシーポリシー</a>をご覧ください。
+              </p>
             </article>
             <article class="lcard">
               <p class="num">07</p>
@@ -148,7 +158,7 @@
                   >プライバシーポリシー</a
                 >が適用されます。
               </p>
-              <p>本項はウェブサイトにのみ適用され、OneMouseアプリに解析SDKは含まれていません。</p>
+              <p>このアクセス解析はウェブサイトのみに適用されます。AndroidでGoogle Playサービスが扱う診断データについては、上記の「決済」をご覧ください。</p>
             </article>
             <article class="lcard">
               <p class="num">08</p>
@@ -193,6 +203,22 @@
               <p>
                 ログアウトは現在のデバイスのアカウント登録とセッションを解除し、OneMouseアカウント全体の削除とは異なります。サーバーに接続できなければ端末内のログアウトだけが完了し、サーバー登録が残る場合があります。転送済みファイルと端末内の通知履歴は各デバイスで別途削除してください。
               </p>
+            </article>
+            <article class="lcard" id="standby-weather">
+              <p class="num">11</p>
+              <h2>Androidの待機時計の天気（任意）</h2>
+              <p>
+                天気の表示は初期状態でオフです。案内に同意し、おおよその位置情報へのアクセスを許可すると、アプリは過去24時間以内に端末に保存された最後のおおよその位置を読み取ります。地域名を取得するため、Androidの住所変換サービスにこのおおよその座標が送信される場合があります。
+              </p>
+              <p>
+                予報を取得する際は、0.1度単位に丸めた座標をHTTPSでノルウェー気象研究所（MET Norway）に送信します。同研究所には、接続元のIPアドレスと、OneMouseのアプリ名・バージョン・ウェブサイトを含むUser-Agentが送られます。MET Norwayはリクエストの座標とIPアドレスをノルウェーのオスロにあるアクセスログに記録します。天気のリクエストはOneMouseのアカウントサーバーを経由しません。ログの保存とプライバシーに関する請求は、
+                <a href="https://www.met.no/en/About-us/privacy">MET Norwayのプライバシーポリシー</a>と
+                <a href="https://docs.api.met.no/doc/TermsOfService.html#personal-data">APIの個人データの取り扱い</a>をご覧ください。
+              </p>
+              <p>
+                丸めた位置、地域名、予報は端末にキャッシュされます。待機時計の天気をオフにするか、Androidで位置情報の権限を取り消すと、新しい予報リクエストは停止します。Androidの設定でアプリのデータを消去するか、アプリをアンインストールすると、端末のキャッシュを削除できます。
+              </p>
+              <p>今回の改定で、待機時計の天気とGoogle Playサービスのデータの取り扱いを追加しました。</p>
             </article>
           </div>
         </div>

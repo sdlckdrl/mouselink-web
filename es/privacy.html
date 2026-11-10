@@ -48,8 +48,8 @@
         <p class="lead">
           OneMouse conecta Windows con Android, otros PC con Windows y Mac. Esta política describe el tratamiento de datos y los permisos de la vinculación LAN/Bluetooth y de la conexión opcional mediante una cuenta de Google.
         </p>
-        <p class="policy-date">Fecha de entrada en vigor: 1 de septiembre de 2026 · Última actualización: 31 de octubre de 2026</p>
-        <p><a class="text-link" href="#google-account">Datos de la cuenta de Google</a> · <a class="text-link" href="#account-deletion">Solicitar eliminación de cuenta y datos</a></p>
+        <p class="policy-date">Fecha de entrada en vigor: 1 de septiembre de 2026 · Última actualización: 10 de noviembre de 2026</p>
+        <p><a class="text-link" href="#google-account">Datos de la cuenta de Google</a> · <a class="text-link" href="#account-deletion">Solicitar eliminación de cuenta y datos</a> · <a class="text-link" href="#standby-weather">Tiempo en el reloj en espera</a></p>
       </section>
 
       <section>
@@ -60,6 +60,11 @@
               <h2>Principio fundamental</h2>
               <p>
                 La vinculación LAN/Bluetooth funciona sin iniciar sesión. En versiones compatibles, la conexión opcional mediante Google permite encontrar tus dispositivos de la misma cuenta e intentar conexiones directas entre redes. El servidor de cuentas de OneMouse procesa metadatos y señales de conexión; no almacena ni retransmite archivos, portapapeles, entradas o vídeo.
+              </p>
+              <p>
+                La detección en LAN anuncia sin cifrar datos de conexión como los identificadores
+                y nombres de los dispositivos y las huellas de sus claves públicas. Otros
+                dispositivos en la misma red local pueden ver estos datos de detección.
               </p>
             </article>
             <article class="lcard">
@@ -160,6 +165,20 @@
                 términos y las políticas de privacidad propios de Google pueden aplicarse a los
                 servicios de facturación de Android.
               </p>
+              <p>
+                La edición de Google Play comprueba y restaura el estado de compra de Pro. La
+                biblioteca de facturación puede enviar a Google Play eventos de diagnóstico y
+                metadatos del dispositivo, de la app y de la red para supervisar el funcionamiento
+                de la facturación. OneMouse no recibe datos de pago como números de tarjeta.
+              </p>
+              <p>
+                Las actualizaciones en la app de Play usan metadatos del dispositivo, la versión
+                de la app y los módulos instalados para comprobar si hay actualizaciones. Las
+                valoraciones y el texto de las reseñas en la app se envían a Google Play cuando los
+                publicas y se pueden eliminar desde Play. La
+                <a href="https://policies.google.com/privacy">Política de Privacidad de Google</a>
+                explica cómo conserva y elimina Google estos datos.
+              </p>
             </article>
             <article class="lcard">
               <p class="num">07</p>
@@ -184,8 +203,9 @@
               </p>
 
               <p>
-                Esto se aplica solo al sitio web: las apps de OneMouse no incluyen ningún SDK de
-                analítica.
+                Esta analítica de visitas solo se aplica al sitio web. Consulta la sección
+                Anuncios y facturación para conocer los datos de diagnóstico que procesan los
+                servicios de Google Play en Android.
               </p>
             </article>
             <article class="lcard">
@@ -236,6 +256,37 @@
               <p>
                 Cerrar sesión elimina el registro y las sesiones de cuenta del dispositivo actual; no elimina toda la cuenta de OneMouse. Si el servidor no está disponible, puede completarse solo el cierre local y permanecer el registro del servidor. Elimina los archivos transferidos y el historial local de notificaciones por separado en cada dispositivo.
               </p>
+            </article>
+            <article class="lcard" id="standby-weather">
+              <p class="num">11</p>
+              <h2>Tiempo opcional en el reloj en espera de Android</h2>
+              <p>
+                El tiempo está desactivado de forma predeterminada. Si aceptas el aviso y
+                concedes el permiso de ubicación aproximada, la app lee la última ubicación
+                aproximada guardada en tu dispositivo durante las 24 horas anteriores. El
+                proveedor de geocodificación de Android puede recibir esas coordenadas
+                aproximadas para identificar el nombre de la zona.
+              </p>
+              <p>
+                Para obtener el pronóstico, la app envía por HTTPS las coordenadas redondeadas
+                a 0,1 grados al Instituto Meteorológico de Noruega (MET Norway). Este recibe
+                la dirección IP de la conexión y un User-Agent con el nombre, la versión y el
+                sitio web de OneMouse. MET Norway registra las coordenadas solicitadas y la IP
+                en registros de acceso en Oslo, Noruega. Las solicitudes no pasan por el
+                servidor de cuentas de OneMouse. Para saber cuánto tiempo se conservan estos
+                registros y cómo ejercer tus derechos, consulta la
+                <a href="https://www.met.no/en/About-us/privacy">política de privacidad de MET Norway</a>
+                y la
+                <a href="https://docs.api.met.no/doc/TermsOfService.html#personal-data">información de privacidad de su API</a>.
+              </p>
+              <p>
+                La ubicación redondeada, el nombre de la zona y el pronóstico se guardan en
+                el dispositivo. Desactivar el tiempo del reloj en espera o revocar el permiso
+                de ubicación de Android detiene las nuevas solicitudes. Puedes borrar la
+                caché local desde los ajustes de Android, borrando los datos de la app o
+                desinstalándola.
+              </p>
+              <p>Esta revisión añade información sobre el tiempo del reloj en espera y los servicios de Google Play.</p>
             </article>
           </div>
         </div>
