@@ -1,0 +1,12 @@
+OneMouse PC 1.6.4 backend object-code materials
+
+These materials preserve the original backend object code and supply a separate
+zeroconf modification/recomposition route. See README.en.md / README.ko.md.
+
+Third-party licenses and original copyright notices are in licenses/.
+The exact zeroconf source is in source/. The application object code is in
+the two separately downloaded part files recorded in object-manifest.json.
+The MIT tool license applies to recompose_backend.py, not to proprietary
+application object code or to third-party libraries. Each retains its license.
+
+Public general notices: https://onemouse.pages.dev/licenses

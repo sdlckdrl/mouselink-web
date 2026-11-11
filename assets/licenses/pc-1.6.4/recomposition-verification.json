@@ -1,0 +1,57 @@
+{
+  "date": "2026-11-11",
+  "original_backend_sha256": "b67ce2a54b4599a10fda902fcc6f5750f1046899574c9634ede16008986ec444",
+  "original_msix_sha256": "d9c64281053bafb76a8f717b3c37a3c15cff99a1f51a5d53586f867eae06e897",
+  "original_backend_unchanged": true,
+  "backend_identical_to_web_build_layout_and_msix": true,
+  "zeroconf_source_sha256": "ce6c548e665759b6150cef4db9ab9d7bdd89857e90c513abd6b7340bdd7dbd6a",
+  "normal_reconstructed_sha256": "ba4d38b7090e3916409e56e70fdb67126675ce8884880eacab5668f6852ad8f4",
+  "unmodified_source_probe_sha256": "3ca889950d8e931f559953dc47641efdd747c80df926b0c33b8ecbb8f0ac7363",
+  "modified_source_probe_sha256": "3755a2b5705d0c2d555c0558e1b0bd93bb9f7e697748720aa53c2e395a801297",
+  "original_library_probe": {
+    "exit_code": 0,
+    "version": "0.151.3",
+    "python_version": "3.11.9",
+    "marker": null,
+    "cache_marker": null,
+    "service_port": 5000,
+    "empty_cache": true,
+    "library_file": "__init__.py",
+    "cache_file": "_cache.cp311-win_amd64.pyd"
+  },
+  "unmodified_source_probe": {
+    "exit_code": 0,
+    "version": "0.151.3",
+    "python_version": "3.11.9",
+    "marker": null,
+    "cache_marker": null,
+    "service_port": 5000,
+    "empty_cache": true,
+    "library_file": "__init__.py",
+    "cache_file": "_cache.py"
+  },
+  "modified_library_probe": {
+    "exit_code": 0,
+    "version": "0.151.3",
+    "python_version": "3.11.9",
+    "marker": "modified-zeroconf-1.6.4",
+    "cache_marker": "modified-zeroconf-1.6.4",
+    "service_port": 5000,
+    "empty_cache": true,
+    "library_file": "__init__.py",
+    "cache_file": "_cache.py"
+  },
+  "unchanged_non_zeroconf_pyz_payloads": 495,
+  "unchanged_carchive_payloads": 719,
+  "removed_zeroconf_cython_extensions": 18,
+  "replacement_python_modules": 33,
+  "bootloader_bytes_unchanged": true,
+  "base_object_manifest_parts_verified": true,
+  "application_source_published": false,
+  "application_started": false,
+  "limitations": [
+    "Import and data-only library API verification; desktop interface and end-to-end discovery/input/file transfer not exercised.",
+    "The custom copy uses upstream-supported pure Python zeroconf and can be slower than the native release.",
+    "Installed signed Store packages are not modified or re-signed."
+  ]
+}
