@@ -10,6 +10,8 @@
     />
     <meta name="robots" content="index,follow,max-image-preview:large" />
     <link rel="stylesheet" href="../css/onemouse.css" />
+    <link rel="stylesheet" href="../css/guide-help.css" />
+    <script src="../js/guide-help.js" defer></script>
     <link rel="canonical" href="https://onemouse.pages.dev/es/help" />
     <link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/help" />
     <link rel="alternate" hreflang="en" href="https://onemouse.pages.dev/en/help" />
@@ -32,8 +34,8 @@
         </nav>
         <div class="hd-right">
           <div class="lang" aria-label="Idioma">
-            <a href="../help">KOR</a><a href="../en/help">ENG</a
-            ><a href="../ja/help">JPN</a><a href="../zh/help">CHN</a>
+            <a href="../help">KOR</a><a href="../en/help">ENG</a><a href="../ja/help">JPN</a
+            ><a href="../zh/help">CHN</a>
             <span class="on">ESP</span>
           </div>
           <a class="hd-cta" href="./#get">Descargar</a>
@@ -64,14 +66,113 @@
             <ul>
               <li>
                 <b>¿Perdiste el cursor? →</b> Pulsa
-                <kbd style="font-family: var(--mono)">Ctrl+Alt+Backspace</kbd> y el cursor vuelve
-                a tu propio PC (al centro del monitor).
+                <kbd style="font-family: var(--mono)">Ctrl+Alt+Backspace</kbd> y el cursor vuelve a
+                tu propio PC (al centro del monitor).
               </li>
               <li id="android-input-help">
-                <b>¿Conectado pero la entrada no funciona? →</b> Vuelve a activar OneMouse en
-                <b>Accesibilidad</b> de Android. En Mac, <a class="text-link" href="#mac-input-help">revisa el permiso de entrada</a>.
+                <b>¿Está conectado pero no responde? →</b> El servicio de Accesibilidad de Android
+                puede estar desactivado o haberse reiniciado.
+                <a class="text-link" href="#cursor-not-crossing"
+                  >Revisa Accesibilidad, disposición y zona de entrada en orden</a
+                >. En Mac,
+                <a class="text-link" href="#mac-input-help">revisa el permiso de entrada</a>.
               </li>
             </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-alt" id="connection-symptoms">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">Busca tu problema</p>
+            <h2 class="sec">¿Qué ocurre ahora?</h2>
+            <p class="sec-lead">
+              Despliega el apartado correspondiente y comprueba los pasos en orden antes de borrar
+              el inicio de sesión o la vinculación.
+            </p>
+          </div>
+          <div class="troubleshoot-list">
+            <details class="troubleshoot-card" id="cursor-not-crossing" data-help-topic>
+              <summary>Está conectado, pero el cursor no pasa al teléfono</summary>
+              <ol>
+                <li>
+                  <b>Accesibilidad:</b> comprueba que OneMouse esté activado en Ajustes de Android →
+                  Accesibilidad → Aplicaciones instaladas (o Aplicaciones descargadas). Si está
+                  activado pero no responde, desactívalo y actívalo de nuevo. Si usas la aplicación
+                  Test, comprueba OneMouse Test.
+                </li>
+                <li>
+                  <b>Disposición:</b> en Posición del teléfono del PC, comprueba a qué lado de la
+                  pantalla está el dispositivo de destino. Si coincide con su posición real, será
+                  más fácil seguir la dirección.
+                </li>
+                <li>
+                  <b>Zona de entrada:</b> cruza por la zona configurada en ese borde. Si está en el
+                  centro, no podrás cruzar por las esquinas.
+                  <a class="text-link" href="./guide#position">Ver la pantalla de disposición</a>
+                </li>
+                <li>
+                  <b>Versiones:</b> actualiza Windows y Android a las últimas versiones públicas y
+                  vuelve a abrir OneMouse en ambos. Comprueba que el servicio de Accesibilidad siga
+                  activado.
+                </li>
+              </ol>
+              <p>
+                Si pierdes el cursor, el atajo predeterminado <kbd>Ctrl+Alt+Backspace</kbd> lo
+                devuelve al PC. Si lo cambiaste, usa la combinación que guardaste.
+              </p>
+            </details>
+            <details class="troubleshoot-card" id="account-connect-help" data-help-topic>
+              <summary>Falta un dispositivo en mi cuenta de Google o no se conecta</summary>
+              <ol>
+                <li>
+                  Comprueba que ambas aplicaciones OneMouse muestren la misma dirección de Google,
+                  que los dos dispositivos tengan acceso a Internet y que ambas aplicaciones estén
+                  abiertas.
+                </li>
+                <li>
+                  Actualiza la lista y conecta el dispositivo de destino. Confirma cualquier
+                  solicitud en el otro dispositivo.
+                  <a class="text-link" href="./guide#connect-account"
+                    >Pasos de conexión con cuenta</a
+                  >
+                </li>
+                <li>
+                  Si se te pide verificar de nuevo tu cuenta de Google, completa la comprobación de
+                  inicio de sesión. Si aparece «No se pueden crear más conexiones», cierra las
+                  pantallas remotas y conexiones que no uses y vuelve a intentarlo tras una breve
+                  espera. Eliminar un dispositivo de la cuenta y terminar una conexión son acciones
+                  distintas.
+                </li>
+              </ol>
+              <p>
+                Para conectar sin iniciar sesión en la misma red Wi-Fi, elige la
+                <a class="text-link" href="./guide#connect-wifi">vinculación por QR o código</a>.
+                Las conexiones de cuenta no requieren el mismo router.
+              </p>
+            </details>
+            <details class="troubleshoot-card" id="remote-control-help" data-help-topic>
+              <summary>Veo la pantalla del PC en el teléfono, pero no puedo controlarlo</summary>
+              <ol>
+                <li>
+                  Comprueba que <b>Solo ver</b> esté desactivado en el panel de control de la
+                  pantalla remota.
+                </li>
+                <li>
+                  El <b>modo táctil</b> hace clic donde tocas. En el <b>modo cursor</b>, desliza el
+                  dedo para situar el puntero y después toca.
+                </li>
+                <li>
+                  Si aparece una solicitud de control en el PC, acéptala. Usa versiones compatibles
+                  y actualizadas tanto en Windows como en Android. Una conexión solo por Bluetooth
+                  no permite abrir vídeo remoto.
+                </li>
+              </ol>
+              <a class="text-link" href="./guide#remote-gesture-examples"
+                >Ver ejemplos de clic, arrastre y desplazamiento →</a
+              >
+            </details>
           </div>
         </div>
       </section>
@@ -89,16 +190,20 @@
               <div class="body">
                 <h4>Encendido y permisos</h4>
                 <p>
-                  Comprueba que ambas aplicaciones estén abiertas. Para los permisos, consulta las <a class="text-link" href="#quick-help">comprobaciones rápidas</a>.
+                  Comprueba que ambas aplicaciones estén abiertas. Para los permisos, consulta las
+                  <a class="text-link" href="#quick-help">comprobaciones rápidas</a>.
                 </p>
               </div>
             </div>
             <div class="tstep">
               <div class="rail"><span class="num">2</span><span class="line"></span></div>
               <div class="body">
-                <h4>Misma red y descubrimiento</h4>
+                <h4>Comprueba el método de conexión elegido</h4>
                 <p>
-                  Comprueba que ambos dispositivos usen la <b>misma red Wi-Fi o LAN</b>. Para detectar un Mac, consulta <a class="text-link" href="#mac">la ayuda de Mac</a>.
+                  <b>QR/código:</b> usa el mismo router y revisa los permisos de red local y la
+                  búsqueda de dispositivos. <b>Cuenta de Google:</b> comprueba la misma cuenta y el
+                  acceso a Internet de ambos dispositivos. <b>Bluetooth:</b> comprueba que esté
+                  activado, vinculado y conectado.
                 </p>
               </div>
             </div>
@@ -107,7 +212,8 @@
               <div class="body">
                 <h4>Firewall y aislamiento</h4>
                 <p>
-                  Si el teléfono ve el PC pero el PC no ve el teléfono, puede deberse a la
+                  En una conexión Wi-Fi/LAN, si el teléfono ve el PC pero el PC no ve el teléfono,
+                  puede deberse a la
                   <b>entrada del firewall de Windows</b> (según la red sea «Pública» o «Privada»).
                   El Wi-Fi de oficina o café también puede bloquearlo con
                   <b>aislamiento de clientes</b>.
@@ -119,7 +225,8 @@
               <div class="body">
                 <h4>Vinculación y conexión</h4>
                 <p>
-                  Revisa la vinculación y el estado de conexión en Dispositivos. Si es la primera vez, sigue la <a class="text-link" href="./guide#start">guía de conexión</a>.
+                  Revisa la vinculación y el estado de conexión en Dispositivos. Si es la primera
+                  vez, sigue la <a class="text-link" href="./guide#start">guía de conexión</a>.
                 </p>
               </div>
             </div>
@@ -128,7 +235,11 @@
               <div class="body">
                 <h4>Entrada y regreso</h4>
                 <p>
-                  Si el cursor no cruza el borde, revisa la disposición. Si lo has perdido, consulta <a class="text-link" href="#quick-help">cómo recuperarlo</a>.
+                  Comprueba la dirección de la disposición y la
+                  <b>zona de entrada del cursor</b> configurada. Sigue las
+                  <a class="text-link" href="#cursor-not-crossing">comprobaciones de entrada</a>; si
+                  pierdes el cursor, consulta
+                  <a class="text-link" href="#quick-help">cómo recuperarlo</a>.
                 </p>
               </div>
             </div>
@@ -146,8 +257,8 @@
           <div class="panel">
             <ul>
               <li>
-                Confirma que el <b>dispositivo seleccionado</b> sea el correcto: la transferencia
-                va al destino que hayas seleccionado.
+                Confirma que el <b>dispositivo seleccionado</b> sea el correcto: la transferencia va
+                al destino que hayas seleccionado.
               </li>
               <li>
                 Para arrastrar de escritorio a escritorio, el PC con Windows o el Mac de destino
@@ -191,16 +302,24 @@
               </li>
               <li>
                 Si solo los mensajes con código de verificación llegan como "ocultos", es la
-                protección de Android 15. En el bloque <b>Notificaciones con código de
-                verificación</b> de la app del teléfono, pulsa <b>Registrar PC</b> una vez. El
-                Bluetooth solo hace falta al registrar.
+                protección de Android 15. En el bloque
+                <b>Notificaciones con código de verificación</b> de la app del teléfono, pulsa
+                <b>Registrar PC</b> una vez. El Bluetooth solo hace falta al registrar.
               </li>
             </ul>
             <details class="fold" id="notification-history">
               <summary><span>Historial de notificaciones y borrado</span></summary>
               <div class="fold-body">
-                <p>Las notificaciones aparecen brevemente; el historial se cifra en el PC y no se sube a servidores. Solo registra notificaciones recibidas tras activarlo, sin códigos ni contenido sensible oculto.</p>
-                <p>El historial viene activado: 7 días, hasta 200 entradas. Ajustes → Notificaciones del PC principal permite 1/7/30 días o detener nuevas entradas. Las existentes se conservan; Borrar todo las elimina.</p>
+                <p>
+                  Las notificaciones aparecen brevemente; el historial se cifra en el PC y no se
+                  sube a servidores. Solo registra notificaciones recibidas tras activarlo, sin
+                  códigos ni contenido sensible oculto.
+                </p>
+                <p>
+                  El historial viene activado: 7 días, hasta 200 entradas. Ajustes → Notificaciones
+                  del PC principal permite 1/7/30 días o detener nuevas entradas. Las existentes se
+                  conservan; Borrar todo las elimina.
+                </p>
               </div>
             </details>
           </div>
@@ -275,73 +394,148 @@
             <details id="notification-reply-faq">
               <summary>No aparece Responder o la respuesta no se envía.</summary>
               <div class="a">
-                <p>El PC y Android necesitan versiones compatibles y una notificación original del teléfono con respuesta de texto libre. Solo sirve en notificaciones en vivo del PC principal; se excluyen contenido oculto/sensible, códigos e historial.</p>
-                <p>Si falla, comprueba el bloqueo, la notificación eliminada/caducada y la conexión. No se reenvía automáticamente tras un fallo o espera agotada; revisa la conversación del teléfono. «Pasado a la aplicación del teléfono» confirma la acción en la app original, no la recepción por el destinatario. <a href="./guide#notifications">Cómo responder</a></p>
+                <p>
+                  El PC y Android necesitan versiones compatibles y una notificación original del
+                  teléfono con respuesta de texto libre. Solo sirve en notificaciones en vivo del PC
+                  principal; se excluyen contenido oculto/sensible, códigos e historial.
+                </p>
+                <p>
+                  Si falla, comprueba el bloqueo, la notificación eliminada/caducada y la conexión.
+                  No se reenvía automáticamente tras un fallo o espera agotada; revisa la
+                  conversación del teléfono. «Pasado a la aplicación del teléfono» confirma la
+                  acción en la app original, no la recepción por el destinatario.
+                  <a href="./guide#notifications">Cómo responder</a>
+                </p>
               </div>
             </details>
             <details id="device-order-faq">
               <summary>¿Cómo cambio los números si no aparece Editar orden?</summary>
               <div class="a">
-                <p>Editar orden aparece en Dispositivos del PC principal con dos o más equipos LAN. Se guarda automáticamente y cambia los números de conexión/ventana remota, no la disposición de pantallas ni las teclas. Bluetooth conserva su orden; un PC secundario no puede editarlo. <a href="./guide#device-order">Cambiar el orden de dispositivos</a></p>
+                <p>
+                  Editar orden aparece en Dispositivos del PC principal con dos o más equipos LAN.
+                  Se guarda automáticamente y cambia los números de conexión/ventana remota, no la
+                  disposición de pantallas ni las teclas. Bluetooth conserva su orden; un PC
+                  secundario no puede editarlo.
+                  <a href="./guide#device-order">Cambiar el orden de dispositivos</a>
+                </p>
               </div>
             </details>
             <details id="windows-remote-gestures-faq">
-              <summary>Los gestos del navegador no funcionan en la ventana remota de Windows.</summary>
+              <summary>
+                Los gestos del navegador no funcionan en la ventana remota de Windows.
+              </summary>
               <div class="a">
-                <p>Usa OneMouse para Windows 1.5.4 o posterior y activa la función o extensión de gestos del navegador de destino. La ventana transmite el arrastre con botón derecho; es distinto de los gestos de Android para controlar directamente el teléfono.</p>
-                <p>Puedes abrir ventanas de varios dispositivos; repetir el número del atajo trae esa ventana al frente. <a href="./guide#remote">Guía de la ventana remota</a></p>
+                <p>
+                  Usa OneMouse para Windows 1.5.4 o posterior y activa la función o extensión de
+                  gestos del navegador de destino. La ventana transmite el arrastre con botón
+                  derecho; es distinto de los gestos de Android para controlar directamente el
+                  teléfono.
+                </p>
+                <p>
+                  Puedes abrir ventanas de varios dispositivos; repetir el número del atajo trae esa
+                  ventana al frente. <a href="./guide#remote">Guía de la ventana remota</a>
+                </p>
               </div>
             </details>
             <details id="default-pc-faq">
               <summary>Un archivo compartido desde el teléfono no llega al PC.</summary>
               <div class="a">
-                <p>Para Wi-Fi/LAN, elige un PC principal como predeterminado en Inicio del teléfono y comprueba el emparejamiento/conexión (se excluyen los secundarios). Si Bluetooth ya está conectado, puedes enviar sin PC predeterminado. <a href="./guide#text-to-pc">Enviar del teléfono al PC</a></p>
+                <p>
+                  Para Wi-Fi/LAN, elige un PC principal como predeterminado en Inicio del teléfono y
+                  comprueba el emparejamiento/conexión (se excluyen los secundarios). Si Bluetooth
+                  ya está conectado, puedes enviar sin PC predeterminado.
+                  <a href="./guide#text-to-pc">Enviar del teléfono al PC</a>
+                </p>
               </div>
             </details>
             <details id="file-receive-folder-faq">
               <summary>No puedo cambiar ni abrir la carpeta de archivos recibidos del PC.</summary>
               <div class="a">
-                <p>En PC principal o secundario, usa Cambiar/Abrir carpeta en Ajustes → General → Transferencia de archivos → Ubicación de archivos recibidos. Si falla, comprueba escritura y unidades USB/red o elige otra carpeta accesible. Los archivos existentes no se mueven; las capturas se guardan por separado. <a href="./guide#file-receive-folder">Ajustes de la carpeta de recepción</a></p>
+                <p>
+                  En PC principal o secundario, usa Cambiar/Abrir carpeta en Ajustes → General →
+                  Transferencia de archivos → Ubicación de archivos recibidos. Si falla, comprueba
+                  escritura y unidades USB/red o elige otra carpeta accesible. Los archivos
+                  existentes no se mueven; las capturas se guardan por separado.
+                  <a href="./guide#file-receive-folder">Ajustes de la carpeta de recepción</a>
+                </p>
               </div>
             </details>
             <details id="screenshot-preview-faq">
               <summary>El cursor no vuelve tras capturar o la vista previa se cierra.</summary>
               <div class="a">
-                <p>Con versiones compatibles en ambos lados, el cursor sigue en el dispositivo controlado y solo aparece una vista previa; la app principal permanece minimizada o en la bandeja. Copiar/guardar con éxito la cierra; cancelar el guardado o un fallo la deja abierta. Pasa el cursor al PC principal para usarla.</p>
+                <p>
+                  Con versiones compatibles en ambos lados, el cursor sigue en el dispositivo
+                  controlado y solo aparece una vista previa; la app principal permanece minimizada
+                  o en la bandeja. Copiar/guardar con éxito la cierra; cancelar el guardado o un
+                  fallo la deja abierta. Pasa el cursor al PC principal para usarla.
+                </p>
               </div>
             </details>
             <details id="mouse-gestures-faq">
               <summary>Los gestos del ratón no se inician.</summary>
               <div class="a">
-                <p>Usa versiones compatibles de PC/Android, activa Gestos del ratón en Ajustes de Android → Escritura y portapapeles y elige la app actual (desactivados por defecto). Pasa el cursor al teléfono, arrastra con el botón derecho y suelta; no funciona en Windows/Mac ni en duplicación.</p>
-                <p>Todas las apps incluye apps instaladas con icono de inicio e Inicio. Excluye OneMouse y pantallas del sistema, como bloqueo/permisos; las acciones disponibles varían según la app y pantalla.</p>
+                <p>
+                  Usa versiones compatibles de PC/Android, activa Gestos del ratón en Ajustes de
+                  Android → Escritura y portapapeles y elige la app actual (desactivados por
+                  defecto). Pasa el cursor al teléfono, arrastra con el botón derecho y suelta; no
+                  funciona en Windows/Mac ni en duplicación.
+                </p>
+                <p>
+                  Todas las apps incluye apps instaladas con icono de inicio e Inicio. Excluye
+                  OneMouse y pantallas del sistema, como bloqueo/permisos; las acciones disponibles
+                  varían según la app y pantalla.
+                </p>
                 <p><a href="./guide#mouse-gestures">Ver la guía y todos los gestos</a></p>
               </div>
             </details>
             <details id="mouse-gestures-history">
               <summary>Adelante o Recargar no funciona.</summary>
-              <div class="a">Adelante vuelve a una página del historial, no al siguiente artículo. Recargar necesita un botón nativo reconocido del navegador; algunas apps o pantallas seleccionadas no lo admiten.</div>
+              <div class="a">
+                Adelante vuelve a una página del historial, no al siguiente artículo. Recargar
+                necesita un botón nativo reconocido del navegador; algunas apps o pantallas
+                seleccionadas no lo admiten.
+              </div>
             </details>
             <details id="mouse-gestures-minimize">
               <summary>¿Abajo → derecha cierra la app?</summary>
-              <div class="a">No. Dibuja hacia abajo y después a la derecha como dos trazos, no como una diagonal. Ve a Inicio sin cerrar la app, sus pestañas ni su tarjeta de Recientes. Arriba → derecha abre las apps recientes para elegir otra app.</div>
+              <div class="a">
+                No. Dibuja hacia abajo y después a la derecha como dos trazos, no como una diagonal.
+                Ve a Inicio sin cerrar la app, sus pestañas ni su tarjeta de Recientes. Arriba →
+                derecha abre las apps recientes para elegir otra app.
+              </div>
             </details>
             <details id="mouse-gestures-scroll">
               <summary>¿Cómo ajusto y detengo el desplazamiento arriba y abajo?</summary>
               <div class="a">
-                <p>Un trazo largo arriba/abajo desplaza más y uno corto menos; suelta el botón derecho para empezar (no se mueve mientras dibujas). La flecha y el indicador vertical muestran dirección e intensidad, no posición del documento ni distancia exacta.</p>
+                <p>
+                  Un trazo largo arriba/abajo desplaza más y uno corto menos; suelta el botón
+                  derecho para empezar (no se mueve mientras dibujas). La flecha y el indicador
+                  vertical muestran dirección e intensidad, no posición del documento ni distancia
+                  exacta.
+                </p>
                 <ul>
-                  <li>Empieza sobre el contenido. Los trazos muy cortos, incompletos o cancelados no actúan; un clic derecho breve sin mover conserva su función habitual.</li>
-                  <li>La distancia varía por app; Inicio/cajón de apps usa un solo deslizamiento. Los demás desplazamientos largos usan varios, hasta 8 pantallas/10 segundos.</li>
-                  <li>Clic, otro gesto, cambio de app o fin del control cancela lo pendiente. Mover solo el cursor no lo detiene.</li>
+                  <li>
+                    Empieza sobre el contenido. Los trazos muy cortos, incompletos o cancelados no
+                    actúan; un clic derecho breve sin mover conserva su función habitual.
+                  </li>
+                  <li>
+                    La distancia varía por app; Inicio/cajón de apps usa un solo deslizamiento. Los
+                    demás desplazamientos largos usan varios, hasta 8 pantallas/10 segundos.
+                  </li>
+                  <li>
+                    Clic, otro gesto, cambio de app o fin del control cancela lo pendiente. Mover
+                    solo el cursor no lo detiene.
+                  </li>
                 </ul>
               </div>
             </details>
             <details id="connection-drops">
               <summary>Se desconecta cada 10 segundos aproximadamente.</summary>
               <div class="a">
-                Comprueba el aislamiento de clientes del Wi-Fi de oficina/invitados y el <a class="text-link" href="#firewall-help">firewall de Windows</a>.
-                Si ocurre cuando el teléfono está inactivo, revisa <a class="text-link" href="#screen-sleep">batería y suspensión</a>.
+                Comprueba el aislamiento de clientes del Wi-Fi de oficina/invitados y el
+                <a class="text-link" href="#firewall-help">firewall de Windows</a>. Si ocurre cuando
+                el teléfono está inactivo, revisa
+                <a class="text-link" href="#screen-sleep">batería y suspensión</a>.
               </div>
             </details>
             <details id="firewall-help">
@@ -357,14 +551,17 @@
               <div class="a">
                 El Wi-Fi público o de invitados suele
                 <b>aislar la comunicación entre dispositivos (aislamiento de clientes)</b> por
-                seguridad. En ese caso, los dispositivos no se encuentran ni estando en la misma
-                red Wi-Fi. Usa una <b>conexión Bluetooth</b> o un punto de acceso personal.
+                seguridad. En ese caso, los dispositivos no se encuentran ni estando en la misma red
+                Wi-Fi. Usa una <b>conexión Bluetooth</b> o un punto de acceso personal.
               </div>
             </details>
             <details>
               <summary>Dice que está conectado, pero el ratón y el teclado no responden.</summary>
               <div class="a">
-                Vuelve a activar OneMouse siguiendo la <a class="text-link" href="#android-input-help">comprobación de Accesibilidad en Android</a>.
+                Vuelve a activar OneMouse siguiendo la
+                <a class="text-link" href="#android-input-help"
+                  >comprobación de Accesibilidad en Android</a
+                >.
               </div>
             </details>
             <details>
@@ -372,7 +569,9 @@
                 El cursor se queda atrapado en el teléfono, en otro PC o en el Mac y no vuelve.
               </summary>
               <div class="a">
-                <a class="text-link" href="#quick-help">Revisa la tecla de regreso de emergencia y sus ajustes</a>.
+                <a class="text-link" href="#quick-help"
+                  >Revisa la tecla de regreso de emergencia y sus ajustes</a
+                >.
               </div>
             </details>
             <details id="screen-sleep">
@@ -387,8 +586,10 @@
             <details id="bluetooth-help">
               <summary>La conexión Bluetooth o la pantalla remota no funcionan bien.</summary>
               <div class="a">
-                Para problemas de conexión, elimina la vinculación en los ajustes Bluetooth del sistema de ambos dispositivos y vuelve a vincularlos.
-                Usa Wi-Fi o LAN para archivos grandes y pantallas remotas móviles. Compartir pantallas/ventanas del Mac requiere LAN.
+                Para problemas de conexión, elimina la vinculación en los ajustes Bluetooth del
+                sistema de ambos dispositivos y vuelve a vincularlos. Usa Wi-Fi o LAN para archivos
+                grandes y pantallas remotas móviles. Compartir pantallas/ventanas del Mac requiere
+                LAN.
                 <a class="text-link" href="./guide#bluetooth">Pasos de conexión Bluetooth</a>
               </div>
             </details>

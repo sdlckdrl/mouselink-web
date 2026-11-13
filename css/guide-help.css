@@ -1,0 +1,329 @@
+/* Connection walkthroughs progressively enhanced by guide-help.js. */
+.connection-picker [hidden],
+.gesture-guide [hidden] {
+  display: none !important;
+}
+.connection-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.connection-options button {
+  flex: 1 1 150px;
+  min-height: 48px;
+  padding: 12px 18px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--card);
+  color: var(--ink);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+.connection-options button[aria-selected='true'] {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--paper);
+}
+.connection-panel {
+  padding: 24px;
+  margin: 0 0 16px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  scroll-margin-top: 100px;
+}
+.connection-panel h3 {
+  margin: 0 0 10px;
+}
+.connection-description,
+.connection-note,
+.connection-followup {
+  color: var(--muted);
+}
+.connection-steps {
+  padding-inline-start: 24px;
+  margin: 22px 0;
+}
+.connection-steps li + li {
+  margin-top: 14px;
+}
+.connection-panel .timeline {
+  margin-top: 24px;
+}
+.connection-note,
+.connection-followup {
+  font-size: 14px;
+}
+.connection-followup {
+  margin-top: 20px;
+}
+.troubleshoot-list {
+  display: grid;
+  gap: 12px;
+}
+.troubleshoot-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 18px 22px;
+  scroll-margin-top: 100px;
+}
+.troubleshoot-card summary {
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 17px;
+}
+.troubleshoot-card ol {
+  padding-inline-start: 22px;
+}
+.troubleshoot-card li + li {
+  margin-top: 12px;
+}
+.gesture-guide-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 22px;
+}
+.gesture-guide-heading h3 {
+  font-size: 26px;
+  margin: 0 0 8px;
+}
+.gesture-guide-heading p,
+.gesture-demo p {
+  color: var(--muted);
+  margin: 0;
+}
+.gesture-guide-heading button {
+  flex-shrink: 0;
+  font: inherit;
+  cursor: pointer;
+}
+.gesture-demo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+.gesture-demo {
+  min-width: 0;
+  overflow: hidden;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+}
+.gesture-demo h4 {
+  padding: 0 16px;
+  margin: 16px 0 8px;
+  font-size: 17px;
+}
+.gesture-demo p {
+  padding: 0 16px 20px;
+  font-size: 14px;
+}
+.gesture-stage {
+  height: 170px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #e0eaf4, #f3ebe4);
+}
+.demo-window {
+  position: absolute;
+  width: 62%;
+  height: 100px;
+  top: 28px;
+  left: 14%;
+  overflow: hidden;
+  border: 1px solid #c2cbd5;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 8px 22px #34465e24;
+}
+.demo-window > i {
+  display: block;
+  height: 19px;
+  border-bottom: 1px solid #d5dce3;
+  background: #edf1f6;
+}
+.demo-window span {
+  display: block;
+  height: 7px;
+  margin: 10px 12px;
+  border-radius: 3px;
+  background: #dce5f0;
+}
+.demo-window > span:last-child {
+  width: 45%;
+  background: #f6c1a9;
+}
+.demo-pointer {
+  position: absolute;
+  width: 19px;
+  height: 25px;
+  top: 56px;
+  left: 45%;
+  z-index: 2;
+  background: #263750;
+  clip-path: polygon(0 0, 100% 68%, 58% 69%, 78% 100%, 60% 100%, 42% 72%, 12% 100%);
+}
+.demo-finger,
+.demo-tap-ring {
+  position: absolute;
+  top: 100px;
+  left: 58%;
+  width: 29px;
+  height: 29px;
+  border: 2px solid #ef6b3c;
+  border-radius: 50%;
+  background: #ff956938;
+  z-index: 3;
+}
+.demo-tap-ring {
+  top: 54px;
+  left: 43%;
+  background: transparent;
+  opacity: 0;
+}
+.demo-finger-second {
+  left: 76%;
+}
+.demo-lines {
+  position: absolute;
+  width: 100%;
+}
+.gesture-stage * {
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-play-state: paused;
+}
+.gesture-guide[data-animation-playing='true'] .gesture-stage * {
+  animation-play-state: running;
+}
+[data-gesture-demo='move'] .demo-pointer,
+[data-gesture-demo='move'] .demo-finger {
+  animation-name: guide-pointer-move;
+}
+[data-gesture-demo='click'] .demo-finger {
+  animation-name: guide-finger-tap;
+}
+[data-gesture-demo='click'] .demo-tap-ring {
+  animation-name: guide-click-ring;
+}
+[data-gesture-demo='drag'] .demo-window,
+[data-gesture-demo='drag'] .demo-pointer,
+[data-gesture-demo='drag'] .demo-finger {
+  animation-name: guide-window-drag;
+}
+[data-gesture-demo='drag'] .demo-pointer {
+  top: 36px;
+}
+[data-gesture-demo='scroll'] .demo-lines {
+  animation-name: guide-document-scroll;
+}
+[data-gesture-demo='scroll'] .demo-finger {
+  animation-name: guide-scroll-fingers;
+}
+@keyframes guide-pointer-move {
+  0%,
+  15%,
+  100% {
+    transform: translate(-26px, 14px);
+  }
+  65%,
+  85% {
+    transform: translate(26px, -12px);
+  }
+}
+@keyframes guide-finger-tap {
+  0%,
+  30%,
+  65%,
+  100% {
+    transform: scale(1);
+  }
+  43%,
+  52% {
+    transform: scale(0.7);
+    background: #ff9569a0;
+  }
+}
+@keyframes guide-click-ring {
+  0%,
+  38%,
+  75%,
+  100% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  48% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  68% {
+    opacity: 0;
+    transform: scale(1.6);
+  }
+}
+@keyframes guide-window-drag {
+  0%,
+  25%,
+  100% {
+    transform: translate(0, 0);
+  }
+  65%,
+  85% {
+    transform: translate(28px, 20px);
+  }
+}
+@keyframes guide-document-scroll {
+  0%,
+  20%,
+  100% {
+    transform: translateY(0);
+  }
+  65%,
+  85% {
+    transform: translateY(-34px);
+  }
+}
+@keyframes guide-scroll-fingers {
+  0%,
+  20%,
+  100% {
+    transform: translateY(0);
+  }
+  65%,
+  85% {
+    transform: translateY(-28px);
+  }
+}
+@media (max-width: 850px) {
+  .gesture-demo-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 480px) {
+  .connection-panel {
+    padding: 18px;
+  }
+  .gesture-guide-heading {
+    flex-direction: column;
+  }
+  .gesture-demo-grid {
+    grid-template-columns: 1fr;
+  }
+  .troubleshoot-card {
+    padding: 16px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .gesture-stage * {
+    animation-duration: 8s;
+  }
+}

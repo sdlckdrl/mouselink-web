@@ -10,6 +10,8 @@
     />
     <meta name="robots" content="index,follow,max-image-preview:large" />
     <link rel="stylesheet" href="../css/onemouse.css" />
+    <link rel="stylesheet" href="../css/guide-help.css" />
+    <script src="../js/guide-help.js" defer></script>
     <link rel="canonical" href="https://onemouse.pages.dev/en/guide" />
     <link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/guide" />
     <link rel="alternate" hreflang="en" href="https://onemouse.pages.dev/en/guide" />
@@ -21,9 +23,7 @@
   <body>
     <header class="site">
       <div class="wrap hd">
-        <a class="brand" href="./" aria-label="OneMouse home"
-          ><span class="om">OM</span>OneMouse</a
-        >
+        <a class="brand" href="./" aria-label="OneMouse home"><span class="om">OM</span>OneMouse</a>
         <nav class="nav" aria-label="Main navigation">
           <a href="./">Overview</a>
           <a href="./#use">Features</a>
@@ -32,8 +32,8 @@
         </nav>
         <div class="hd-right">
           <div class="lang" aria-label="Language">
-            <a href="../guide">KOR</a><span class="on">ENG</span
-            ><a href="../ja/guide">JPN</a><a href="../zh/guide">CHN</a>
+            <a href="../guide">KOR</a><span class="on">ENG</span><a href="../ja/guide">JPN</a
+            ><a href="../zh/guide">CHN</a>
             <a href="../es/guide">ESP</a>
           </div>
           <a class="hd-cta" href="./#get">Download</a>
@@ -76,157 +76,271 @@
         <div class="wrap narrow">
           <div class="sec-head">
             <p class="ey">Android setup</p>
-            <h2 class="sec">Choose a connection method in the current app.</h2>
+            <h2 class="sec">Choose how to connect in the current app.</h2>
             <p class="sec-lead">
-              Choose a shared Google account or Wi-Fi pairing without signing in. The steps below describe
-              QR or numeric-code pairing on the same Wi-Fi network.
+              Choose a Google account, QR/code pairing on the same Wi-Fi, or Bluetooth. All three
+              methods need Android Accessibility to control your phone with the PC mouse and
+              keyboard.
             </p>
           </div>
-          <div class="panel tip pairing-account-note">
-            <h3>Connect with a Google account — optional</h3>
-            <p>
-              Sign in to the same Google account in Devices on the PC and on the phone’s home screen to
-              find your account devices. QR and numeric-code pairing works without signing in. Phone input
-              control needs Accessibility permission with either method.
-            </p>
-          </div>
-          <div class="timeline">
-            <div class="tstep">
-              <div class="rail"><span class="num">1</span><span class="line"></span></div>
-              <div class="body">
-                <h4>Connect the PC and phone to the same Wi-Fi</h4>
-                <p>Run OneMouse on both devices. Open Devices in the PC app.</p>
-              </div>
+          <div class="connection-picker" data-connection-picker>
+            <div
+              class="connection-options"
+              data-connection-options
+              aria-label="Connection method"
+              hidden
+            >
+              <button
+                type="button"
+                data-connection-choice="account"
+                aria-controls="connect-account"
+                hidden
+              >
+                Google account
+              </button>
+              <button
+                type="button"
+                data-connection-choice="wifi"
+                aria-controls="connect-wifi"
+                hidden
+              >
+                Wi-Fi · QR/code
+              </button>
+              <button
+                type="button"
+                data-connection-choice="bluetooth"
+                aria-controls="connect-bluetooth"
+                hidden
+              >
+                Bluetooth
+              </button>
             </div>
-            <div class="tstep">
-              <div class="rail"><span class="num">2</span><span class="line"></span></div>
-              <div class="body">
-                <h4>Allow Android Accessibility</h4>
-                <p>
-                  Enable the OneMouse Accessibility Service on your phone. Allow required permissions,
-                  such as Nearby Wi-Fi devices, if requested.
-                </p>
-              </div>
-            </div>
-            <div class="tstep">
-              <div class="rail"><span class="num">3</span><span class="line"></span></div>
-              <div class="body">
-                <h4>Show the QR and pairing code on the PC</h4>
-                <p>
-                  In Devices, expand Other ways to connect and choose QR &amp; code for this PC. This
-                  dialog shows the QR and six-digit code.
-                </p>
-              </div>
-            </div>
-            <div class="tstep">
-              <div class="rail"><span class="num">4</span><span class="line"></span></div>
-              <div class="body">
-                <h4>Authenticate on the phone with a code or QR</h4>
-                <p>
-                  Choose Home → Other ways to connect → Add with QR or pairing code. Enter the six digits
-                  in Number code and choose Connect, or use Scan QR code → Open camera to scan the PC’s
-                  QR. Choose one method.
-                </p>
-              </div>
-            </div>
-            <div class="tstep">
-              <div class="rail"><span class="num">5</span><span class="line"></span></div>
-              <div class="body">
-                <h4>Check the registered PC and connection state</h4>
-                <p>
-                  Confirm that the PC appears under Registered PCs on the phone’s home screen. Already
-                  registered devices do not need this authentication every time.
-                </p>
-              </div>
-            </div>
-            <div class="tstep">
-              <div class="rail"><span class="num">6</span></div>
-              <div class="body">
-                <h4>Set Phone placement and move the mouse across</h4>
-                <p>
-                  Match Phone placement to the phone’s actual position, then move the mouse across that
-                  edge of the PC screen.
-                </p>
-              </div>
-            </div>
-          </div>
-          <details class="fold pairing-screens">
-            <summary>
-              <span>See the current app pairing screens</span
-              ><small>Show the PC code → add the PC on your phone → choose code or QR</small>
-            </summary>
-            <div class="fold-body">
-              <div class="pairing-gallery">
-                <figure class="pairing-shot pairing-shot-pc">
-                  <a href="../assets/pairing/pc-code-en.webp" target="_blank" rel="noopener">
-                    <img
-                      src="../assets/pairing/pc-code-en.webp"
-                      alt="1. Show the PC QR and pairing code: Devices → Other ways to connect → QR &amp; code for this PC"
-                      width="888"
-                      height="742"
-                      loading="lazy"
-                    />
-                  </a>
-                  <figcaption>
-                    <b>1. Show the PC QR and pairing code</b
-                    ><span>Devices → Other ways to connect → QR &amp; code for this PC</span>
-                  </figcaption>
-                </figure>
-                <figure class="pairing-shot pairing-overview-shot">
-                  <a href="../assets/pairing/android-other-en.webp" target="_blank" rel="noopener">
-                    <img
-                      src="../assets/pairing/android-other-en.webp"
-                      alt="2. Add the PC on your phone: Home → Other ways to connect → Add with QR or pairing code"
-                      width="1080"
-                      height="2400"
-                      loading="lazy"
-                    />
-                  </a>
-                  <figcaption>
-                    <b>2. Add the PC on your phone</b
-                    ><span>Home → Other ways to connect → Add with QR or pairing code</span>
-                  </figcaption>
-                </figure>
-                <figure class="pairing-shot pairing-dialog-shot">
-                  <a href="../assets/pairing/android-code-en.webp" target="_blank" rel="noopener">
-                    <img
-                      src="../assets/pairing/android-code-en.webp"
-                      alt="3. Connect with a numeric code: In the Number code tab, enter the PC’s six digits and choose Connect."
-                      width="1080"
-                      height="2400"
-                      loading="lazy"
-                    />
-                  </a>
-                  <figcaption>
-                    <b>3. Connect with a numeric code</b
-                    ><span>In the Number code tab, enter the PC’s six digits and choose Connect.</span>
-                  </figcaption>
-                </figure>
-                <figure class="pairing-shot pairing-dialog-shot">
-                  <a href="../assets/pairing/android-qr-en.webp" target="_blank" rel="noopener">
-                    <img
-                      src="../assets/pairing/android-qr-en.webp"
-                      alt="Or connect with a QR code: Choose Scan QR code → Open camera and scan the PC’s QR. Use either the numeric code or QR, not both."
-                      width="1080"
-                      height="2400"
-                      loading="lazy"
-                    />
-                  </a>
-                  <figcaption>
-                    <b>Or connect with a QR code</b
-                    ><span
-                      >Choose Scan QR code → Open camera and scan the PC’s QR. Use either the numeric code
-                      or QR, not both.</span
-                    >
-                  </figcaption>
-                </figure>
-              </div>
-              <p class="pairing-example-note">
-                Actual app screens captured with example devices and codes. Use the code or QR shown in
-                your own PC app when connecting. Select an image to view it at full size.
+            <section class="connection-panel" id="connect-account" data-connection-panel="account">
+              <h3>Connect with the same Google account</h3>
+              <p class="connection-description">
+                Find your internet-connected devices in the account list. No QR or pairing code is
+                needed.
               </p>
-            </div>
-          </details>
+              <ol class="connection-steps">
+                <li>
+                  Sign in to the <b>same Google account</b> in <b>Devices</b> on Windows and on the
+                  OneMouse home screen on your phone.
+                </li>
+                <li>
+                  Keep both apps open and check the device list. If the other device is missing,
+                  check the account address and internet connection, then choose <b>Refresh</b>.
+                </li>
+                <li>
+                  Under <b>Registered PCs</b> on the phone home screen, choose
+                  <b>Connect device</b> for that PC and check that it is connected. If it is already
+                  connected, continue to the next step. Confirm any permission request on the other
+                  device.
+                </li>
+                <li>
+                  Enable the phone’s Accessibility Service and set <b>Phone placement</b> on the PC.
+                  Move the mouse through the configured <b>cursor entry passage</b> on that edge.
+                </li>
+              </ol>
+              <p class="connection-note">
+                Internet access is required. Whether devices can connect depends on the network.
+                Choose Wi-Fi or Bluetooth to use OneMouse without signing in.
+              </p>
+              <a class="text-link" href="./help#account-connect-help"
+                >Device missing from your account or unable to connect? →</a
+              >
+            </section>
+            <section class="connection-panel" id="connect-wifi" data-connection-panel="wifi">
+              <h3>Pair with a QR or six-digit code on the same Wi-Fi</h3>
+              <p class="connection-description">
+                No Google sign-in is needed. The PC can use wired LAN as long as it is connected to
+                the same router as the phone.
+              </p>
+              <div class="timeline">
+                <div class="tstep">
+                  <div class="rail"><span class="num">1</span><span class="line"></span></div>
+                  <div class="body">
+                    <h4>Connect the PC and phone to the same Wi-Fi</h4>
+                    <p>Run OneMouse on both devices. Open Devices in the PC app.</p>
+                  </div>
+                </div>
+                <div class="tstep">
+                  <div class="rail"><span class="num">2</span><span class="line"></span></div>
+                  <div class="body">
+                    <h4>Allow Android Accessibility</h4>
+                    <p>
+                      Enable the service under Android Settings → Accessibility → Installed apps (or
+                      Downloaded apps) → OneMouse. Menu names vary by manufacturer. Also check
+                      permissions needed for discovery, such as Nearby Wi-Fi devices.
+                    </p>
+                  </div>
+                </div>
+                <div class="tstep">
+                  <div class="rail"><span class="num">3</span><span class="line"></span></div>
+                  <div class="body">
+                    <h4>Show the QR and pairing code on the PC</h4>
+                    <p>
+                      In Devices, expand Other ways to connect and choose QR &amp; code for this PC.
+                      This dialog shows the QR and six-digit code.
+                    </p>
+                  </div>
+                </div>
+                <div class="tstep">
+                  <div class="rail"><span class="num">4</span><span class="line"></span></div>
+                  <div class="body">
+                    <h4>Authenticate on the phone with a code or QR</h4>
+                    <p>
+                      Choose Home → Other ways to connect → Add with QR or pairing code. Enter the
+                      six digits in Number code and choose Connect, or use Scan QR code → Open
+                      camera to scan the PC’s QR. Choose one method.
+                    </p>
+                  </div>
+                </div>
+                <div class="tstep">
+                  <div class="rail"><span class="num">5</span><span class="line"></span></div>
+                  <div class="body">
+                    <h4>Check the registered PC and connection state</h4>
+                    <p>
+                      Confirm that the PC appears under Registered PCs on the phone’s home screen.
+                      Already registered devices do not need this authentication every time.
+                    </p>
+                  </div>
+                </div>
+                <div class="tstep">
+                  <div class="rail"><span class="num">6</span></div>
+                  <div class="body">
+                    <h4>Set Phone placement and move the mouse across</h4>
+                    <p>
+                      Match Phone placement to the phone’s actual position, then move the mouse
+                      through the <b>configured cursor entry passage</b> on that edge. If the
+                      passage is narrow, try the middle of the edge first.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <details class="fold pairing-screens">
+                <summary>
+                  <span>See the current app pairing screens</span
+                  ><small>Show the PC code → add the PC on your phone → choose code or QR</small>
+                </summary>
+                <div class="fold-body">
+                  <div class="pairing-gallery">
+                    <figure class="pairing-shot pairing-shot-pc">
+                      <a href="../assets/pairing/pc-code-en.webp" target="_blank" rel="noopener">
+                        <img
+                          src="../assets/pairing/pc-code-en.webp"
+                          alt="1. Show the PC QR and pairing code: Devices → Other ways to connect → QR &amp; code for this PC"
+                          width="888"
+                          height="742"
+                          loading="lazy"
+                        />
+                      </a>
+                      <figcaption>
+                        <b>1. Show the PC QR and pairing code</b
+                        ><span>Devices → Other ways to connect → QR &amp; code for this PC</span>
+                      </figcaption>
+                    </figure>
+                    <figure class="pairing-shot pairing-overview-shot">
+                      <a
+                        href="../assets/pairing/android-other-en.webp"
+                        target="_blank"
+                        rel="noopener"
+                      >
+                        <img
+                          src="../assets/pairing/android-other-en.webp"
+                          alt="2. Add the PC on your phone: Home → Other ways to connect → Add with QR or pairing code"
+                          width="1080"
+                          height="2400"
+                          loading="lazy"
+                        />
+                      </a>
+                      <figcaption>
+                        <b>2. Add the PC on your phone</b
+                        ><span>Home → Other ways to connect → Add with QR or pairing code</span>
+                      </figcaption>
+                    </figure>
+                    <figure class="pairing-shot pairing-dialog-shot">
+                      <a
+                        href="../assets/pairing/android-code-en.webp"
+                        target="_blank"
+                        rel="noopener"
+                      >
+                        <img
+                          src="../assets/pairing/android-code-en.webp"
+                          alt="3. Connect with a numeric code: In the Number code tab, enter the PC’s six digits and choose Connect."
+                          width="1080"
+                          height="2400"
+                          loading="lazy"
+                        />
+                      </a>
+                      <figcaption>
+                        <b>3. Connect with a numeric code</b
+                        ><span
+                          >In the Number code tab, enter the PC’s six digits and choose
+                          Connect.</span
+                        >
+                      </figcaption>
+                    </figure>
+                    <figure class="pairing-shot pairing-dialog-shot">
+                      <a href="../assets/pairing/android-qr-en.webp" target="_blank" rel="noopener">
+                        <img
+                          src="../assets/pairing/android-qr-en.webp"
+                          alt="Or connect with a QR code: Choose Scan QR code → Open camera and scan the PC’s QR. Use either the numeric code or QR, not both."
+                          width="1080"
+                          height="2400"
+                          loading="lazy"
+                        />
+                      </a>
+                      <figcaption>
+                        <b>Or connect with a QR code</b
+                        ><span
+                          >Choose Scan QR code → Open camera and scan the PC’s QR. Use either the
+                          numeric code or QR, not both.</span
+                        >
+                      </figcaption>
+                    </figure>
+                  </div>
+                  <p class="pairing-example-note">
+                    Actual app screens captured with example devices and codes. Use the code or QR
+                    shown in your own PC app when connecting. Select an image to view it at full
+                    size.
+                  </p>
+                </div>
+              </details>
+            </section>
+            <section
+              class="connection-panel"
+              id="connect-bluetooth"
+              data-connection-panel="bluetooth"
+            >
+              <h3>Connect over Bluetooth without a router</h3>
+              <ol class="connection-steps">
+                <li>
+                  Turn on Bluetooth on Windows and Android, then pair the devices using the
+                  <a class="text-link" href="#bluetooth">Bluetooth connection guide</a> below.
+                </li>
+                <li>
+                  Connect the other device from the OneMouse Bluetooth device list. No Google
+                  sign-in is needed.
+                </li>
+                <li>
+                  Enable the phone’s Accessibility Service, check Phone placement and the cursor
+                  entry passage on the PC, then move the mouse across.
+                </li>
+              </ol>
+              <p class="connection-note">
+                These steps are for Windows ↔ Android. Bluetooth does not carry remote video. To
+                view the PC screen on your phone, use Wi-Fi/LAN or a supported account connection.
+              </p>
+              <a class="text-link" href="#bluetooth">Bluetooth settings and detailed steps →</a>
+            </section>
+          </div>
+          <p class="connection-followup">
+            Input permission: Android Settings → Accessibility → Installed apps (or Downloaded apps)
+            → OneMouse.
+            <a class="text-link" href="./help#cursor-not-crossing"
+              >Connected, but the mouse will not cross? →</a
+            >
+          </p>
         </div>
       </section>
 
@@ -240,7 +354,9 @@
             </h2>
           </div>
           <p class="sec-lead" style="max-width: 60ch">
-            Drag each device to its real position in the arrangement screen. The cursor crosses the corresponding edge.
+            Drag each device to its real position in the arrangement screen. Cross through the
+            configured <b>cursor entry passage</b> on the corresponding edge. The passage may cover
+            only part of that edge.
           </p>
           <details class="fold">
             <summary><span>See the arrangement screen</span></summary>
@@ -343,8 +459,8 @@
             <p class="ey">Android → Windows</p>
             <h2 class="sec">Open and control your PC screen from your phone.</h2>
             <p class="sec-lead">
-              See your PC screen, click by touch, move the cursor and type with your phone's keyboard.
-              Both the PC and Android need up-to-date apps that support this feature.
+              See your PC screen, click by touch, move the cursor and type with your phone's
+              keyboard. Both the PC and Android need up-to-date apps that support this feature.
             </p>
           </div>
           <div class="split lead-left">
@@ -353,12 +469,12 @@
                 <h3>Open a remote screen</h3>
                 <ol>
                   <li>
-                    Run OneMouse on the PC. Pair your devices on the same Wi-Fi network or link them using
-                    the same Google account.
+                    Run OneMouse on the PC. Pair your devices on the same Wi-Fi network or link them
+                    using the same Google account.
                   </li>
                   <li>In Android's registered PC list, choose <b>Remote screen</b> for that PC.</li>
                   <li>
-                    Review the request on the PC and choose <b>Allow</b>. For your own phone, you can
+                    If a request appears on the PC, choose <b>Allow</b>. For your own phone, you can
                     choose <b>Always allow this device</b> for future sessions.
                   </li>
                   <li>
@@ -372,13 +488,18 @@
                 <ul>
                   <li><b>Touch mode:</b> tap where you want to click, and drag to move items.</li>
                   <li><b>Cursor mode:</b> slide a finger to move the pointer and tap to click.</li>
-                  <li>Long-press to right-click. In cursor mode, double-tap and hold to drag.</li>
                   <li>
-                    Pinch with two fingers to zoom. At 1×, move two fingers to scroll the PC; when zoomed
-                    in, move them to pan the view.
+                    Press and hold without moving, then lift your finger to right-click. In cursor
+                    mode, hold and then move to drag, or double-tap and move while holding the
+                    second tap.
                   </li>
                   <li>
-                    Use <b>Keyboard</b> to type, or enable <b>View only</b> when you only want to watch.
+                    Pinch with two fingers to zoom. At 1×, move two fingers to scroll the PC; when
+                    zoomed in, move them to pan the view.
+                  </li>
+                  <li>
+                    Use <b>Keyboard</b> to type, or enable <b>View only</b> when you only want to
+                    watch.
                   </li>
                 </ul>
               </div>
@@ -400,16 +521,92 @@
               <div class="panel tip" style="margin-top: 18px">
                 <h3>Quality, frame rate and disconnecting</h3>
                 <p>
-                  Choose image quality and the maximum frame rate in the control panel. A PC that supports
-                  live quality changes applies them without reconnecting. Actual resolution and frame rate
-                  depend on device performance and network conditions.
+                  Choose image quality and the maximum frame rate in the control panel. A PC that
+                  supports live quality changes applies them without reconnecting. Actual resolution
+                  and frame rate depend on device performance and network conditions.
                 </p>
                 <p>
-                  To finish, use <b>Control panel → Disconnect</b>. Disconnecting remote control leaves
-                  the PC running. Bluetooth connections do not carry remote video.
+                  To finish, use <b>Control panel → Disconnect</b>. Disconnecting remote control
+                  leaves the PC running. Bluetooth connections do not carry remote video.
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-alt" id="remote-gesture-examples">
+        <div class="wrap gesture-guide" data-animation-playing="false">
+          <div class="gesture-guide-heading">
+            <div>
+              <h3>Follow the motions to learn remote controls</h3>
+              <p>
+                These explanatory animations show the basics of cursor mode. They are not recordings
+                of the app.
+              </p>
+            </div>
+            <button
+              type="button"
+              class="btn btn-sec sm"
+              data-demo-toggle
+              data-play-label="Play examples"
+              data-pause-label="Pause"
+              aria-pressed="false"
+              hidden
+            >
+              Play examples
+            </button>
+          </div>
+          <div class="gesture-demo-grid">
+            <article class="gesture-demo" data-gesture-demo="move">
+              <div class="gesture-stage" aria-hidden="true">
+                <div class="demo-window"><i></i><span></span><span></span></div>
+                <b class="demo-pointer"></b><i class="demo-finger"></i>
+              </div>
+              <h4>1. Move the cursor</h4>
+              <p>
+                Slide one finger to move the pointer. Lift and reposition your finger to keep
+                moving.
+              </p>
+            </article>
+            <article class="gesture-demo" data-gesture-demo="click">
+              <div class="gesture-stage" aria-hidden="true">
+                <div class="demo-window"><i></i><span></span><span></span></div>
+                <b class="demo-pointer"></b><i class="demo-finger"></i><i class="demo-tap-ring"></i>
+              </div>
+              <h4>2. Click</h4>
+              <p>
+                Move the pointer over a button, then tap once. The click happens at the pointer, not
+                at your finger.
+              </p>
+            </article>
+            <article class="gesture-demo" data-gesture-demo="drag">
+              <div class="gesture-stage" aria-hidden="true">
+                <div class="demo-window"><i></i><span></span><span></span></div>
+                <b class="demo-pointer"></b><i class="demo-finger"></i>
+              </div>
+              <h4>3. Drag a window or item</h4>
+              <p>
+                Place the pointer on a title bar or item and hold your finger still until the
+                pointer turns blue. Move your finger to drag, then lift it to drop the item.
+              </p>
+            </article>
+            <article class="gesture-demo" data-gesture-demo="scroll">
+              <div class="gesture-stage" aria-hidden="true">
+                <div class="demo-window">
+                  <i></i>
+                  <div class="demo-lines">
+                    <span></span><span></span><span></span><span></span><span></span>
+                  </div>
+                </div>
+                <i class="demo-finger"></i><i class="demo-finger demo-finger-second"></i>
+              </div>
+              <h4>4. Scroll and zoom</h4>
+              <p>
+                At 1×, slide two fingers together to scroll the PC. Spread two fingers to zoom in;
+                once zoomed in, move them together to pan the view.
+              </p>
+            </article>
           </div>
         </div>
       </section>
@@ -419,12 +616,19 @@
         <div class="wrap narrow">
           <div class="sec-head">
             <p class="ey">Android mouse gestures</p>
-            <h2 class="sec" id="mouse-gestures-title">Hold the right button and draw to navigate.</h2>
-            <p class="sec-lead">How to enable gestures, the seven stroke patterns, and support limits.</p>
+            <h2 class="sec" id="mouse-gestures-title">
+              Hold the right button and draw to navigate.
+            </h2>
+            <p class="sec-lead">
+              How to enable gestures, the seven stroke patterns, and support limits.
+            </p>
           </div>
           <div class="panel gesture-setup">
             <h3>1. Enable gestures</h3>
-            <p>In Settings → Typing &amp; clipboard, turn on Mouse gestures and choose the apps (off by default). Both PC and Android need a gesture-capable version.</p>
+            <p>
+              In Settings → Typing &amp; clipboard, turn on Mouse gestures and choose the apps (off
+              by default). Both PC and Android need a gesture-capable version.
+            </p>
             <p>
               Select <b>All apps</b> to use gestures in apps and on the home screen.
               <a href="./help#mouse-gestures-faq">Check the support limits</a>
@@ -444,24 +648,43 @@
           <div class="table-wrap gesture-patterns">
             <table class="kt gesture-table" aria-labelledby="mouse-gestures-title">
               <thead>
-                <tr><th scope="col">Gesture</th><th scope="col">Action</th></tr>
+                <tr>
+                  <th scope="col">Gesture</th>
+                  <th scope="col">Action</th>
+                </tr>
               </thead>
               <tbody>
                 <tr data-gesture-action="back">
                   <td><span role="img" aria-label="Left">←</span></td>
-                  <td><b>Back</b><small>Draw left to return to the previous page or screen.</small></td>
+                  <td>
+                    <b>Back</b><small>Draw left to return to the previous page or screen.</small>
+                  </td>
                 </tr>
                 <tr data-gesture-action="forward">
                   <td><span role="img" aria-label="Right">→</span></td>
-                  <td><b>Forward</b><small>Draw right to return to a page after going back.</small></td>
+                  <td>
+                    <b>Forward</b><small>Draw right to return to a page after going back.</small>
+                  </td>
                 </tr>
                 <tr data-gesture-action="scroll_up">
                   <td><span role="img" aria-label="Up">↑</span></td>
-                  <td><b>Scroll up</b><small>Draw up and release. Longer strokes scroll more; shorter strokes scroll less.</small></td>
+                  <td>
+                    <b>Scroll up</b
+                    ><small
+                      >Draw up and release. Longer strokes scroll more; shorter strokes scroll
+                      less.</small
+                    >
+                  </td>
                 </tr>
                 <tr data-gesture-action="scroll_down">
                   <td><span role="img" aria-label="Down">↓</span></td>
-                  <td><b>Scroll down</b><small>Draw down and release. Longer strokes scroll more; shorter strokes scroll less.</small></td>
+                  <td>
+                    <b>Scroll down</b
+                    ><small
+                      >Draw down and release. Longer strokes scroll more; shorter strokes scroll
+                      less.</small
+                    >
+                  </td>
                 </tr>
                 <tr data-gesture-action="minimize">
                   <td><span role="img" aria-label="Down, then right">↓ →</span></td>
@@ -473,7 +696,9 @@
                 </tr>
                 <tr data-gesture-action="recents">
                   <td><span role="img" aria-label="Up, then right">↑ →</span></td>
-                  <td><b>Recent apps</b><small>Open the recent-app list to choose another app.</small></td>
+                  <td>
+                    <b>Recent apps</b><small>Open the recent-app list to choose another app.</small>
+                  </td>
                 </tr>
               </tbody>
             </table>
@@ -486,7 +711,10 @@
               <li>Start over page content. A short right-click alone keeps its usual behavior.</li>
               <li>Scroll distance varies by app; Home and the app drawer use just one swipe.</li>
             </ul>
-            <p><a href="./help#mouse-gestures-faq">Gesture help</a> · <a href="./help#mouse-gestures-scroll">Scroll limits and cancellation</a></p>
+            <p>
+              <a href="./help#mouse-gestures-faq">Gesture help</a> ·
+              <a href="./help#mouse-gestures-scroll">Scroll limits and cancellation</a>
+            </p>
           </div>
         </div>
       </section>
@@ -552,8 +780,8 @@
             <p class="ey">Capture &amp; send screenshots</p>
             <h2 class="sec">Capture what you need and send it where you need it.</h2>
             <p class="sec-lead">
-              Capture your own PC or the device you are currently controlling. Copy or save the result
-              from the preview, or send it to a connected device's clipboard.
+              Capture your own PC or the device you are currently controlling. Copy or save the
+              result from the preview, or send it to a connected device's clipboard.
             </p>
           </div>
           <div class="split lead-left">
@@ -567,11 +795,12 @@
                   </li>
                   <li>Drag to select a region or choose <b>Full screen</b> from the toolbar.</li>
                   <li>
-                    In the small preview on the PC, choose <b>Copy</b> or <b>Save</b>. To use the image on
-                    another device, choose <b>Send</b> and select the receiving device.
+                    In the small preview on the PC, choose <b>Copy</b> or <b>Save</b>. To use the
+                    image on another device, choose <b>Send</b> and select the receiving device.
                   </li>
                   <li>
-                    On the receiving device, paste the image into an app that supports image pasting.
+                    On the receiving device, paste the image into an app that supports image
+                    pasting.
                   </li>
                 </ol>
                 <p>
@@ -598,13 +827,13 @@
             <h3>Check the connection and permissions</h3>
             <ul>
               <li>
-                <b>Sending images requires Wi-Fi/LAN</b> and support in both apps. A device connected only
-                over Bluetooth cannot receive this transfer.
+                <b>Sending images requires Wi-Fi/LAN</b> and support in both apps. A device
+                connected only over Bluetooth cannot receive this transfer.
               </li>
               <li>
                 Capturing an Android screen requires
-                <b>Android 11 or later and accessibility permission</b>. Capturing a Mac screen requires
-                screen recording permission. Protected screens may not be captured.
+                <b>Android 11 or later and accessibility permission</b>. Capturing a Mac screen
+                requires screen recording permission. Protected screens may not be captured.
               </li>
               <li>
                 On Android, use an app that supports image pasting. Receiving an image does not
@@ -623,9 +852,8 @@
             <h2 class="sec">Send files and selected text from your phone to your PC.</h2>
             <p class="sec-lead">
               For LAN transfers, choose the <b>default PC</b> on the mobile app's home screen and
-              check that it is paired and connected. Send files from the
-              transfer tab or Android's share menu, and send text through OneMouse to PC in the
-              selection menu.
+              check that it is paired and connected. Send files from the transfer tab or Android's
+              share menu, and send text through OneMouse to PC in the selection menu.
             </p>
           </div>
           <div class="split lead-left">
@@ -658,8 +886,8 @@
             <h3 id="file-receive-folder">Find received files on the PC</h3>
             <p>
               In PC <b>Settings → General → File transfer → Received file location</b>, use
-              <b>Change folder</b> to choose the destination and <b>Open folder</b> to view it.
-              This is available on both main and sub PCs.
+              <b>Change folder</b> to choose the destination and <b>Open folder</b> to view it. This
+              is available on both main and sub PCs.
             </p>
             <p>
               <a href="./help#file-receive-folder-faq">Folder settings and troubleshooting</a>
@@ -740,8 +968,8 @@
               <h3>Receive notifications and view history</h3>
               <p>
                 In the Android app, enable <b>Send notifications to PC</b>, allow notification
-                access, and select the apps to relay. On the main PC, enable device notifications
-                in <b>Settings → Notifications</b>.
+                access, and select the apps to relay. On the main PC, enable device notifications in
+                <b>Settings → Notifications</b>.
               </p>
               <p>
                 The same screen shows history and retention settings.
@@ -752,8 +980,9 @@
               <h3>Reply to a live notification</h3>
               <p>
                 <b>Reply</b> appears when PC and Android support replies and the original phone
-                notification offers a free-text reply. Type your reply and choose <b>Send</b> or <b>Ctrl+Enter</b> to send
-                through the original phone app (<b>Enter</b> adds a line break).
+                notification offers a free-text reply. Type your reply and choose <b>Send</b> or
+                <b>Ctrl+Enter</b> to send through the original phone app (<b>Enter</b> adds a line
+                break).
               </p>
               <p><a href="./help#notification-reply-faq">No Reply button, or reply not sent?</a></p>
             </div>
@@ -797,9 +1026,9 @@
           <div class="panel tip" style="margin-top: 18px">
             <h3 id="device-order">Change device order and shortcut numbers</h3>
             <p>
-              With at least two LAN devices on the main PC, choose <b>Devices → Edit order</b>.
-              Drag the handle or use ↑/↓; changes save automatically, then choose <b>Done</b>.
-              Connection and remote-window shortcut numbers follow the same order.
+              With at least two LAN devices on the main PC, choose <b>Devices → Edit order</b>. Drag
+              the handle or use ↑/↓; changes save automatically, then choose <b>Done</b>. Connection
+              and remote-window shortcut numbers follow the same order.
             </p>
             <p>
               <a href="./help#device-order-faq">Can't find Edit order?</a>
@@ -833,9 +1062,14 @@
                 <h3>Good to know</h3>
                 <ul>
                   <li>Use Wi-Fi or LAN for large files and mobile remote screens.</li>
-                  <li>Mac Bluetooth is beta (enable in app settings; off by default). LAN is officially supported, and Mac screen/window sharing is LAN-only.</li>
+                  <li>
+                    Mac Bluetooth is beta (enable in app settings; off by default). LAN is
+                    officially supported, and Mac screen/window sharing is LAN-only.
+                  </li>
                 </ul>
-                <p><a class="text-link" href="./help#bluetooth-help">Bluetooth troubleshooting</a></p>
+                <p>
+                  <a class="text-link" href="./help#bluetooth-help">Bluetooth troubleshooting</a>
+                </p>
               </div>
             </div>
             <div>
@@ -898,19 +1132,19 @@
                 <h3>Connecting</h3>
                 <ul>
                   <li>
-                    Run OneMouse on both Windows PCs. Sign in to the same Google account, or put both PCs
-                    on the same network for LAN pairing.
+                    Run OneMouse on both Windows PCs. Sign in to the same Google account, or put
+                    both PCs on the same network for LAN pairing.
                   </li>
                   <li>
-                    For LAN, open <b>Device management → Other ways to connect</b> on the controlling PC,
-                    select the other Windows PC, enter its 6-digit code and choose <b>Pair</b>. Find the
-                    code on the other PC under
-                    <b>Device management → Other ways to connect → QR &amp; code for this PC</b>. LAN
-                    pairing needs no sign-in.
+                    For LAN, open <b>Device management → Other ways to connect</b> on the
+                    controlling PC, select the other Windows PC, enter its 6-digit code and choose
+                    <b>Pair</b>. Find the code on the other PC under
+                    <b>Device management → Other ways to connect → QR &amp; code for this PC</b>.
+                    LAN pairing needs no sign-in.
                   </li>
                   <li>
-                    Check the registered PC’s connection state and enable <b>Connect</b> if needed. Then
-                    place it in the layout editor to match its physical position.
+                    Check the registered PC’s connection state and enable <b>Connect</b> if needed.
+                    Then place it in the layout editor to match its physical position.
                   </li>
                   <li>
                     Move the mouse in that direction to control the other PC, and exchange files by
@@ -934,12 +1168,15 @@
                         style="border-radius: 12px"
                     /></a>
                     <figcaption>
-                      1. Enter the other PC’s six-digit code and choose Pair. The code and device names
-                      are examples.
+                      1. Enter the other PC’s six-digit code and choose Pair. The code and device
+                      names are examples.
                     </figcaption>
                   </figure>
                   <figure class="feature-figure">
-                    <a href="../assets/pairing/pc-peer-position-en.webp" target="_blank" rel="noopener"
+                    <a
+                      href="../assets/pairing/pc-peer-position-en.webp"
+                      target="_blank"
+                      rel="noopener"
                       ><img
                         src="../assets/pairing/pc-peer-position-en.webp"
                         alt="Current device management screen arranging a connected Windows PC"
@@ -949,7 +1186,8 @@
                         style="border-radius: 12px"
                     /></a>
                     <figcaption>
-                      2. Check the connection, then arrange the other PC to match its physical position.
+                      2. Check the connection, then arrange the other PC to match its physical
+                      position.
                     </figcaption>
                   </figure>
                 </div>
@@ -1035,7 +1273,8 @@
                 <h3>Mac Bluetooth</h3>
                 <p>
                   Mac Bluetooth is available as a beta: enable it in the Mac app settings (off by
-                  default). LAN remains the officially supported path, and screen or window sharing is LAN-only.
+                  default). LAN remains the officially supported path, and screen or window sharing
+                  is LAN-only.
                 </p>
               </div>
             </div>
@@ -1050,8 +1289,8 @@
             <p class="ey">Permissions</p>
             <h2 class="sec">Each platform asks only for the permissions its features need.</h2>
             <p class="sec-lead">
-              Android input needs Accessibility Service; Mac input needs Accessibility.
-              Viewing an Android or Mac remote screen also requires screen capture or recording approval.
+              Android input needs Accessibility Service; Mac input needs Accessibility. Viewing an
+              Android or Mac remote screen also requires screen capture or recording approval.
             </p>
           </div>
           <div style="margin-top: 18px">
@@ -1092,9 +1331,7 @@
                   </td>
                 </tr>
                 <tr id="shortcuts-next-release" data-shortcut-action="remote-window">
-                  <td>
-                    <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>1~9</kbd>
-                  </td>
+                  <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>1~9</kbd></td>
                   <td>
                     Main PC: open the matching remote window or bring an existing window forward.
                     Pressing it again does not close the window. It uses the same LAN device numbers

@@ -10,6 +10,8 @@
     />
     <meta name="robots" content="index,follow,max-image-preview:large" />
     <link rel="stylesheet" href="../css/onemouse.css" />
+    <link rel="stylesheet" href="../css/guide-help.css" />
+    <script src="../js/guide-help.js" defer></script>
     <link rel="canonical" href="https://onemouse.pages.dev/ja/guide" />
     <link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/guide" />
     <link rel="alternate" hreflang="en" href="https://onemouse.pages.dev/en/guide" />
@@ -70,152 +72,246 @@
       <section id="start">
         <div class="wrap narrow">
           <div class="sec-head">
-            <p class="ey">Androidを5分で接続</p>
-            <h2 class="sec">Androidとの初回接続は、この順番どおりに進めるだけです。</h2>
+            <p class="ey">Androidの接続</p>
+            <h2 class="sec">現在のアプリで接続方法を選びましょう。</h2>
             <p class="sec-lead">
-              PCとAndroidの現在の画面に沿った手順です。以下は同じWi-FiでのLANペアリングです。Androidを操作するにはアクセシビリティ権限が必要です。Macは<a
-                href="#mac"
-                class="text-link"
-                >Mac接続ガイド</a
-              >をご覧ください。
+              Googleアカウント、同じWi-FiでのQR・番号、Bluetoothから方法を選びます。PCのマウス・キーボードでスマホを操作するには、どの方法でもAndroidのユーザー補助権限が必要です。
             </p>
           </div>
-          <div class="panel tip" style="margin-bottom: 18px">
-            <h3>Googleアカウントで接続する場合</h3>
-            <p>
-              PCとAndroidの両方で同じGoogleアカウントにログインし、アカウントのデバイス一覧を確認します。Googleログインは任意です。以下のQR・6桁コードによるLANペアリングは、ログインなしで利用できます。
-            </p>
-          </div>
-          <div class="timeline">
-            <div class="tstep">
-              <div class="rail"><span class="num">1</span><span class="line"></span></div>
-              <div class="body">
-                <h4>両方のアプリを同じWi-Fiで起動</h4>
-                <p>WindowsとAndroidでOneMouseを起動し、同じWi-Fiに接続します。</p>
-              </div>
+          <div class="connection-picker" data-connection-picker>
+            <div class="connection-options" data-connection-options aria-label="接続方法" hidden>
+              <button
+                type="button"
+                data-connection-choice="account"
+                aria-controls="connect-account"
+                hidden
+              >
+                Googleアカウント
+              </button>
+              <button
+                type="button"
+                data-connection-choice="wifi"
+                aria-controls="connect-wifi"
+                hidden
+              >
+                Wi-Fi・QR/番号
+              </button>
+              <button
+                type="button"
+                data-connection-choice="bluetooth"
+                aria-controls="connect-bluetooth"
+                hidden
+              >
+                Bluetooth
+              </button>
             </div>
-            <div class="tstep">
-              <div class="rail"><span class="num">2</span><span class="line"></span></div>
-              <div class="body">
-                <h4>Androidのアクセシビリティを許可</h4>
-                <p>
-                  PCから操作するには、AndroidでOneMouseのアクセシビリティサービスを有効にします。Android
-                  13以降では、PC検索のために「付近のWi-Fiデバイス」の許可を求められる場合があります。
-                </p>
-              </div>
-            </div>
-            <div class="tstep">
-              <div class="rail"><span class="num">3</span><span class="line"></span></div>
-              <div class="body">
-                <h4>PCのQR・認証番号を開く</h4>
-                <p>
-                  PCの<b>デバイス管理 → ほかの接続方法 → このPCのQR・認証番号</b
-                  >を開き、現在表示されている6桁コードまたはQRを確認します。
-                </p>
-              </div>
-            </div>
-            <div class="tstep">
-              <div class="rail"><span class="num">4</span><span class="line"></span></div>
-              <div class="body">
-                <h4>スマホからPCを追加</h4>
-                <p>
-                  Androidのホームで<b>別の方法で接続 → QR・ペアリングコードで PC を追加</b
-                  >を開きます。<b>番号コード</b>で6桁を入力して<b>接続する</b>を押すか、QRスキャンのタブで<b>カメラを開く</b>を押し、PCのQRを読み取ります。どちらか一方で接続できます。
-                </p>
-              </div>
-            </div>
-            <div class="tstep">
-              <div class="rail"><span class="num">5</span><span class="line"></span></div>
-              <div class="body">
-                <h4>登録されたPCと接続状態を確認</h4>
-                <p>Androidの<b>登録されたPC</b>に対象のPCが表示され、接続できていることを確認します。</p>
-              </div>
-            </div>
-            <div class="tstep">
-              <div class="rail"><span class="num">6</span></div>
-              <div class="body">
-                <h4>スマホの配置を合わせて使います</h4>
-                <p>
-                  <b>スマホの配置</b
-                  >をスマホの実際の方向に合わせます。対応するPC画面の端へマウスを移動すると、PCのマウス・キーボードでスマホを操作できます。
-                </p>
-              </div>
-            </div>
-          </div>
-          <details class="fold pairing-screens">
-            <summary>
-              <span>最新のペアリング画面を見る</span
-              ><small>PCコード → スマホで追加 → 番号コードまたはQR</small>
-            </summary>
-            <div class="fold-body">
-              <p>方法Aと方法Bは選択肢です。番号の入力とQRスキャンを両方行う必要はありません。</p>
-              <div class="pairing-gallery">
-                <figure class="pairing-shot pairing-shot-pc">
-                  <a href="../assets/pairing/pc-code-ja.webp" target="_blank" rel="noopener">
-                    <img
-                      src="../assets/pairing/pc-code-ja.webp"
-                      alt="PCで「このPCのQR・認証番号」を開いた現在のペアリング画面"
-                      width="888"
-                      height="744"
-                      loading="lazy"
-                    />
-                  </a>
-                  <figcaption>
-                    <b>1. PCのQR・認証番号</b><span>デバイス管理から「ほかの接続方法」を開きます。</span>
-                  </figcaption>
-                </figure>
-                <figure class="pairing-shot pairing-overview-shot">
-                  <a href="../assets/pairing/android-other-ja.webp" target="_blank" rel="noopener">
-                    <img
-                      src="../assets/pairing/android-other-ja.webp"
-                      alt="Androidホームの「別の方法で接続」と「QR・ペアリングコードで PC を追加」"
-                      width="1080"
-                      height="2400"
-                      loading="lazy"
-                    />
-                  </a>
-                  <figcaption>
-                    <b>2. Androidで接続方法を開く</b
-                    ><span>ホームの「別の方法で接続」からPCを追加します。</span>
-                  </figcaption>
-                </figure>
-                <figure class="pairing-shot pairing-dialog-shot">
-                  <a href="../assets/pairing/android-code-ja.webp" target="_blank" rel="noopener">
-                    <img
-                      src="../assets/pairing/android-code-ja.webp"
-                      alt="Androidの番号コード入力画面と接続するボタン"
-                      width="1080"
-                      height="2400"
-                      loading="lazy"
-                    />
-                  </a>
-                  <figcaption>
-                    <b>3. 方法A：番号コード</b
-                    ><span>PCの6桁コードを入力して「接続する」を押します。</span>
-                  </figcaption>
-                </figure>
-                <figure class="pairing-shot pairing-dialog-shot">
-                  <a href="../assets/pairing/android-qr-ja.webp" target="_blank" rel="noopener">
-                    <img
-                      src="../assets/pairing/android-qr-ja.webp"
-                      alt="AndroidのQRスキャン画面とカメラを開くボタン"
-                      width="1080"
-                      height="2400"
-                      loading="lazy"
-                    />
-                  </a>
-                  <figcaption>
-                    <b>またはQRスキャン</b
-                    ><span>「カメラを開く」からPCに表示されたQRを読み取ります。</span>
-                  </figcaption>
-                </figure>
-              </div>
-              <p class="pairing-example-note">
-                画像のコードやデバイス名は説明用の例です。ご自身のPCアプリに現在表示されているコードを使用してください。
-                画像を押すと原寸で確認できます。
+            <section class="connection-panel" id="connect-account" data-connection-panel="account">
+              <h3>同じGoogleアカウントで接続</h3>
+              <p class="connection-description">
+                インターネットにつながった自分のデバイスをアカウント一覧から探します。QRや番号の入力は不要です。
               </p>
-            </div>
-          </details>
+              <ol class="connection-steps">
+                <li>
+                  Windowsの<b>デバイス管理</b>とスマホのOneMouseホームで、<b>同じGoogleアカウント</b>にログインします。
+                </li>
+                <li>
+                  両方のアプリを起動したままデバイス一覧を確認します。相手が見つからなければ、アカウントのメールアドレスとインターネット接続を確認し、<b>更新</b>します。
+                </li>
+                <li>
+                  スマホのホームの<b>登録されたPC</b>一覧で、対象PCの<b>デバイスを接続</b>を押し、接続済みになったことを確認します。すでに接続済みなら次へ進みます。許可の確認が表示された場合は、相手のデバイスで確認します。
+                </li>
+                <li>
+                  スマホのユーザー補助サービスをオンにし、PCで<b>スマホの配置</b>を合わせます。設定した方向の<b>カーソルの進入エリア</b>へマウスを移動します。
+                </li>
+              </ol>
+              <p class="connection-note">
+                インターネット接続が必要です。実際に接続できるかどうかはネットワーク環境によって異なります。ログインせずに使う場合はWi-FiまたはBluetoothを選んでください。
+              </p>
+              <a class="text-link" href="./help#account-connect-help"
+                >アカウントにデバイスが表示されない・接続できない場合 →</a
+              >
+            </section>
+            <section class="connection-panel" id="connect-wifi" data-connection-panel="wifi">
+              <h3>同じWi-FiでQRまたは6桁の番号を使って接続</h3>
+              <p class="connection-description">
+                Googleへのログインは不要です。PCが有線LANでも、スマホと同じルーターにつながっていれば利用できます。
+              </p>
+              <div class="timeline">
+                <div class="tstep">
+                  <div class="rail"><span class="num">1</span><span class="line"></span></div>
+                  <div class="body">
+                    <h4>両方のアプリを同じWi-Fiで起動</h4>
+                    <p>WindowsとAndroidでOneMouseを起動し、同じWi-Fiに接続します。</p>
+                  </div>
+                </div>
+                <div class="tstep">
+                  <div class="rail"><span class="num">2</span><span class="line"></span></div>
+                  <div class="body">
+                    <h4>Androidのアクセシビリティを許可</h4>
+                    <p>
+                      Androidの設定 → ユーザー補助 →
+                      インストール済みアプリ（またはダウンロードしたアプリ）→
+                      OneMouseでサービスをオンにします。メーカーによってメニュー名は異なります。付近のWi-Fiデバイスなど、検索に必要な権限も確認してください。
+                    </p>
+                  </div>
+                </div>
+                <div class="tstep">
+                  <div class="rail"><span class="num">3</span><span class="line"></span></div>
+                  <div class="body">
+                    <h4>PCのQR・認証番号を開く</h4>
+                    <p>
+                      PCの<b>デバイス管理 → ほかの接続方法 → このPCのQR・認証番号</b
+                      >を開き、現在表示されている6桁コードまたはQRを確認します。
+                    </p>
+                  </div>
+                </div>
+                <div class="tstep">
+                  <div class="rail"><span class="num">4</span><span class="line"></span></div>
+                  <div class="body">
+                    <h4>スマホからPCを追加</h4>
+                    <p>
+                      Androidのホームで<b>別の方法で接続 → QR・ペアリングコードで PC を追加</b
+                      >を開きます。<b>番号コード</b>で6桁を入力して<b>接続する</b>を押すか、QRスキャンのタブで<b>カメラを開く</b>を押し、PCのQRを読み取ります。どちらか一方で接続できます。
+                    </p>
+                  </div>
+                </div>
+                <div class="tstep">
+                  <div class="rail"><span class="num">5</span><span class="line"></span></div>
+                  <div class="body">
+                    <h4>登録されたPCと接続状態を確認</h4>
+                    <p>
+                      Androidの<b>登録されたPC</b>に対象のPCが表示され、接続できていることを確認します。
+                    </p>
+                  </div>
+                </div>
+                <div class="tstep">
+                  <div class="rail"><span class="num">6</span></div>
+                  <div class="body">
+                    <h4>スマホの配置を合わせて使います</h4>
+                    <p>
+                      <b>スマホの配置</b
+                      >を実際に置いている方向に合わせ、その画面端の<b>設定したカーソルの進入エリア</b>へマウスを移動します。エリアが狭い場合は、まず画面端の中央付近で確認してください。
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <details class="fold pairing-screens">
+                <summary>
+                  <span>最新のペアリング画面を見る</span
+                  ><small>PCコード → スマホで追加 → 番号コードまたはQR</small>
+                </summary>
+                <div class="fold-body">
+                  <p>
+                    方法Aと方法Bは選択肢です。番号の入力とQRスキャンを両方行う必要はありません。
+                  </p>
+                  <div class="pairing-gallery">
+                    <figure class="pairing-shot pairing-shot-pc">
+                      <a href="../assets/pairing/pc-code-ja.webp" target="_blank" rel="noopener">
+                        <img
+                          src="../assets/pairing/pc-code-ja.webp"
+                          alt="PCで「このPCのQR・認証番号」を開いた現在のペアリング画面"
+                          width="888"
+                          height="744"
+                          loading="lazy"
+                        />
+                      </a>
+                      <figcaption>
+                        <b>1. PCのQR・認証番号</b
+                        ><span>デバイス管理から「ほかの接続方法」を開きます。</span>
+                      </figcaption>
+                    </figure>
+                    <figure class="pairing-shot pairing-overview-shot">
+                      <a
+                        href="../assets/pairing/android-other-ja.webp"
+                        target="_blank"
+                        rel="noopener"
+                      >
+                        <img
+                          src="../assets/pairing/android-other-ja.webp"
+                          alt="Androidホームの「別の方法で接続」と「QR・ペアリングコードで PC を追加」"
+                          width="1080"
+                          height="2400"
+                          loading="lazy"
+                        />
+                      </a>
+                      <figcaption>
+                        <b>2. Androidで接続方法を開く</b
+                        ><span>ホームの「別の方法で接続」からPCを追加します。</span>
+                      </figcaption>
+                    </figure>
+                    <figure class="pairing-shot pairing-dialog-shot">
+                      <a
+                        href="../assets/pairing/android-code-ja.webp"
+                        target="_blank"
+                        rel="noopener"
+                      >
+                        <img
+                          src="../assets/pairing/android-code-ja.webp"
+                          alt="Androidの番号コード入力画面と接続するボタン"
+                          width="1080"
+                          height="2400"
+                          loading="lazy"
+                        />
+                      </a>
+                      <figcaption>
+                        <b>3. 方法A：番号コード</b
+                        ><span>PCの6桁コードを入力して「接続する」を押します。</span>
+                      </figcaption>
+                    </figure>
+                    <figure class="pairing-shot pairing-dialog-shot">
+                      <a href="../assets/pairing/android-qr-ja.webp" target="_blank" rel="noopener">
+                        <img
+                          src="../assets/pairing/android-qr-ja.webp"
+                          alt="AndroidのQRスキャン画面とカメラを開くボタン"
+                          width="1080"
+                          height="2400"
+                          loading="lazy"
+                        />
+                      </a>
+                      <figcaption>
+                        <b>またはQRスキャン</b
+                        ><span>「カメラを開く」からPCに表示されたQRを読み取ります。</span>
+                      </figcaption>
+                    </figure>
+                  </div>
+                  <p class="pairing-example-note">
+                    画像のコードやデバイス名は説明用の例です。ご自身のPCアプリに現在表示されているコードを使用してください。
+                    画像を押すと原寸で確認できます。
+                  </p>
+                </div>
+              </details>
+            </section>
+            <section
+              class="connection-panel"
+              id="connect-bluetooth"
+              data-connection-panel="bluetooth"
+            >
+              <h3>ルーターなしでBluetooth接続</h3>
+              <ol class="connection-steps">
+                <li>
+                  スマホのOneMouse設定で<b>Bluetoothモード</b>をオンにし、WindowsとAndroidのBluetoothもオンにします。
+                </li>
+                <li>
+                  WindowsのBluetooth設定でスマホとペアリングし、OneMouseのデバイス一覧で接続状態を確認します。Googleへのログインは不要です。
+                </li>
+                <li>
+                  スマホのユーザー補助サービスをオンにし、PCのスマホの配置とカーソルの進入エリアを確認してからマウスを移動します。
+                </li>
+              </ol>
+              <p class="connection-note">
+                Windows ↔
+                Androidの手順です。Bluetoothではリモート画面の映像を転送しません。スマホでPC画面を見るには、Wi-Fi/LANまたは対応するアカウント接続を使ってください。
+              </p>
+              <a class="text-link" href="#bluetooth">Bluetoothの設定画面と詳しい手順 →</a>
+            </section>
+          </div>
+          <p class="connection-followup">
+            入力権限：Androidの設定 → ユーザー補助 →
+            インストール済みアプリ（またはダウンロードしたアプリ）→ OneMouse。
+            <a class="text-link" href="./help#cursor-not-crossing"
+              >接続済みなのにマウスがスマホへ移動しない場合 →</a
+            >
+          </p>
         </div>
       </section>
 
@@ -227,7 +323,7 @@
             <h2 class="sec">接続後は、スマホの位置を実際の方向に合わせるだけです。</h2>
           </div>
           <p class="sec-lead" style="max-width: 60ch">
-            配置画面で各機器を実際の位置へドラッグします。対応する画面の端からカーソルが移ります。
+            配置画面でデバイスを実際に置いている方向へドラッグします。その画面端の<b>設定したカーソルの進入エリア</b>を通る必要があります。画面端の全体が通り道とは限りません。
           </p>
           <details class="fold">
             <summary><span>配置画面を見る</span></summary>
@@ -335,9 +431,11 @@
                   <li>
                     PCでOneMouseを起動します。同じWi-Fiでペアリングするか、同じGoogleアカウントでデバイスを接続します。
                   </li>
-                  <li>Androidアプリの登録済みPC一覧で、対象PCの<b>リモート画面</b>をタップします。</li>
                   <li>
-                    PCに表示されたリクエストを確認して<b>許可</b>を押します。自分のスマホで今後も使う場合は、<b>この機器を常に許可</b>を選べます。
+                    Androidアプリの登録済みPC一覧で、対象PCの<b>リモート画面</b>をタップします。
+                  </li>
+                  <li>
+                    PCにリクエストが表示されたら<b>許可</b>を押します。自分のスマホで今後も使う場合は、<b>この機器を常に許可</b>を選べます。
                   </li>
                   <li>
                     画面がつながったらタッチで操作できます。右側の設定アイコンから操作パネルを開きます。
@@ -351,9 +449,11 @@
                     <b>タッチモード：</b
                     >画面上の目的の位置をタップしてクリックし、指を動かしてドラッグします。
                   </li>
-                  <li><b>カーソルモード：</b>指を滑らせてポインターを動かし、タップでクリックします。</li>
                   <li>
-                    長押しで右クリックします。カーソルモードでは、2回目のタップを押したまま動かすとドラッグできます。
+                    <b>カーソルモード：</b>指を滑らせてポインターを動かし、タップでクリックします。
+                  </li>
+                  <li>
+                    指を長押しして、動かさずに離すと右クリックになります。カーソルモードでは、長押ししたまま指を動かすか、2回目のタップを押したまま動かすとドラッグできます。
                   </li>
                   <li>
                     2本指で拡大・縮小できます。等倍では2本指の移動でPCをスクロールし、拡大中は表示範囲を移動します。
@@ -394,6 +494,76 @@
         </div>
       </section>
 
+      <section class="section-alt" id="remote-gesture-examples">
+        <div class="wrap gesture-guide" data-animation-playing="false">
+          <div class="gesture-guide-heading">
+            <div>
+              <h3>リモート操作を、動きで確認しましょう</h3>
+              <p>
+                カーソルモードの基本操作を説明するアニメーションです。実際のアプリ画面の録画ではありません。
+              </p>
+            </div>
+            <button
+              type="button"
+              class="btn btn-sec sm"
+              data-demo-toggle
+              data-play-label="操作例を再生"
+              data-pause-label="一時停止"
+              hidden
+            >
+              操作例を再生
+            </button>
+          </div>
+          <div class="gesture-demo-grid">
+            <article class="gesture-demo" data-gesture-demo="move">
+              <div class="gesture-stage" aria-hidden="true">
+                <div class="demo-window"><i></i><span></span><span></span></div>
+                <b class="demo-pointer"></b><i class="demo-finger"></i>
+              </div>
+              <h4>1. カーソル移動</h4>
+              <p>
+                指1本でスワイプするとポインターが動きます。指を離して置き直し、そのまま移動を続けられます。
+              </p>
+            </article>
+            <article class="gesture-demo" data-gesture-demo="click">
+              <div class="gesture-stage" aria-hidden="true">
+                <div class="demo-window"><i></i><span></span><span></span></div>
+                <b class="demo-pointer"></b><i class="demo-finger"></i><i class="demo-tap-ring"></i>
+              </div>
+              <h4>2. クリック</h4>
+              <p>
+                ポインターをボタンの上に移動してから1回タップします。指の位置ではなく、ポインターの位置をクリックします。
+              </p>
+            </article>
+            <article class="gesture-demo" data-gesture-demo="drag">
+              <div class="gesture-stage" aria-hidden="true">
+                <div class="demo-window"><i></i><span></span><span></span></div>
+                <b class="demo-pointer"></b><i class="demo-finger"></i>
+              </div>
+              <h4>3. ウィンドウ・項目をドラッグ</h4>
+              <p>
+                タイトルバーや項目にポインターを置き、青くなるまで長押しします。指を動かすとドラッグでき、離すとその位置にドロップします。
+              </p>
+            </article>
+            <article class="gesture-demo" data-gesture-demo="scroll">
+              <div class="gesture-stage" aria-hidden="true">
+                <div class="demo-window">
+                  <i></i>
+                  <div class="demo-lines">
+                    <span></span><span></span><span></span><span></span><span></span>
+                  </div>
+                </div>
+                <i class="demo-finger"></i><i class="demo-finger demo-finger-second"></i>
+              </div>
+              <h4>4. スクロール・画面拡大</h4>
+              <p>
+                等倍表示で指2本を一緒にスワイプすると、PC側をスクロールします。指を広げると拡大し、拡大後に2本を一緒に動かすと表示範囲を移動します。
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <!-- ANDROID MOUSE GESTURES -->
       <section id="mouse-gestures">
         <div class="wrap narrow">
@@ -407,7 +577,8 @@
           <div class="panel gesture-setup">
             <h3>1. ジェスチャーを有効にする</h3>
             <p>
-              設定 → 入力・クリップボードでマウスジェスチャーをオンにして、使うアプリを選びます（初期設定はオフ）。
+              設定 →
+              入力・クリップボードでマウスジェスチャーをオンにして、使うアプリを選びます（初期設定はオフ）。
               PCとAndroidの両方に対応版が必要です。
             </p>
             <p>
@@ -420,9 +591,7 @@
             </p>
             <ol class="gesture-steps">
               <li>ページ本文の上で右ボタンを押し続けます。</li>
-              <li>
-                表示された方向を順番に描き、赤い軌跡の横で操作を確認します。
-              </li>
+              <li>表示された方向を順番に描き、赤い軌跡の横で操作を確認します。</li>
               <li>離すと実行します。描いている間はスクロールしません。</li>
             </ol>
             <p>
@@ -445,56 +614,38 @@
                 </tr>
                 <tr data-gesture-action="forward">
                   <td><span role="img" aria-label="右">→</span></td>
-                  <td>
-                    <b>進む</b
-                    ><small
-                      >右に描くと戻った後のページに進みます。</small
-                    >
-                  </td>
+                  <td><b>進む</b><small>右に描くと戻った後のページに進みます。</small></td>
                 </tr>
                 <tr data-gesture-action="scroll_up">
                   <td><span role="img" aria-label="上">↑</span></td>
                   <td>
                     <b>上にスクロール</b
-                    ><small
-                      >上に描いて離します。長く描くと多く、短く描くと少し移動します。</small
-                    >
+                    ><small>上に描いて離します。長く描くと多く、短く描くと少し移動します。</small>
                   </td>
                 </tr>
                 <tr data-gesture-action="scroll_down">
                   <td><span role="img" aria-label="下">↓</span></td>
                   <td>
                     <b>下にスクロール</b
-                    ><small
-                      >下に描いて離します。長く描くと多く、短く描くと少し移動します。</small
-                    >
+                    ><small>下に描いて離します。長く描くと多く、短く描くと少し移動します。</small>
                   </td>
                 </tr>
                 <tr data-gesture-action="minimize">
                   <td><span role="img" aria-label="下、その後右">↓ →</span></td>
                   <td>
-                    <b>アプリを最小化</b
-                    ><small
-                      >アプリを閉じずにホーム画面へ移動します。</small
-                    >
+                    <b>アプリを最小化</b><small>アプリを閉じずにホーム画面へ移動します。</small>
                   </td>
                 </tr>
                 <tr data-gesture-action="reload">
                   <td><span role="img" aria-label="上、その後下">↑ ↓</span></td>
                   <td>
-                    <b>再読み込み</b
-                    ><small
-                      >対応するブラウザーでページを再読み込みします。</small
-                    >
+                    <b>再読み込み</b><small>対応するブラウザーでページを再読み込みします。</small>
                   </td>
                 </tr>
                 <tr data-gesture-action="recents">
                   <td><span role="img" aria-label="上、その後右">↑ →</span></td>
                   <td>
-                    <b>最近のアプリ</b
-                    ><small
-                      >最近のアプリ一覧を開き、別のアプリを選びます。</small
-                    >
+                    <b>最近のアプリ</b><small>最近のアプリ一覧を開き、別のアプリを選びます。</small>
                   </td>
                 </tr>
               </tbody>
@@ -503,20 +654,19 @@
           <div class="panel gesture-notes">
             <h3>うまく動かない場合</h3>
             <ul>
-              <li>
-                Androidの直接操作用です。Windows・Macやミラーリング画面は対象外です。
-              </li>
+              <li>Androidの直接操作用です。Windows・Macやミラーリング画面は対象外です。</li>
               <li>
                 進む操作は履歴ページに戻ります。進む・再読み込みにはブラウザーの対応が必要です。
               </li>
               <li>
                 本文上でスクロールを始めます。動かさず短く右クリックすると従来の動作を維持します。
               </li>
-              <li>
-                移動量はアプリによって異なり、ホーム・アプリ一覧では1回だけスワイプします。
-              </li>
+              <li>移動量はアプリによって異なり、ホーム・アプリ一覧では1回だけスワイプします。</li>
             </ul>
-            <p><a href="./help#mouse-gestures-faq">ジェスチャーのヘルプ</a> · <a href="./help#mouse-gestures-scroll">スクロールの上限・停止方法</a></p>
+            <p>
+              <a href="./help#mouse-gestures-faq">ジェスチャーのヘルプ</a> ·
+              <a href="./help#mouse-gestures-scroll">スクロールの上限・停止方法</a>
+            </p>
           </div>
         </div>
       </section>
@@ -756,7 +906,8 @@
               <h3>通知の受信と履歴</h3>
               <p>
                 Androidアプリで<b>PCに通知を送る</b>をオンにし、通知へのアクセスを許可して、
-                送信するアプリを選びます。メインPCの<b>設定 → 通知</b>でデバイス通知表示をオンにします。
+                送信するアプリを選びます。メインPCの<b>設定 → 通知</b
+                >でデバイス通知表示をオンにします。
               </p>
               <p>
                 同じ画面で通知履歴と保存期間を確認できます。
@@ -843,7 +994,9 @@
                 <h3>知っておきたいこと</h3>
                 <ul>
                   <li>大きなファイルやモバイルのリモート画面にはWi-Fi・LANをおすすめします。</li>
-                  <li>MacのBluetoothはベータです（アプリ設定でオン、既定はオフ）。公式サポートはLANで、Macの画面・ウィンドウ共有はLAN専用です。</li>
+                  <li>
+                    MacのBluetoothはベータです（アプリ設定でオン、既定はオフ）。公式サポートはLANで、Macの画面・ウィンドウ共有はLAN専用です。
+                  </li>
                 </ul>
                 <p><a class="text-link" href="./help#bluetooth-help">Bluetoothのトラブル解決</a></p>
               </div>
@@ -946,7 +1099,10 @@
                     </figcaption>
                   </figure>
                   <figure class="feature-figure">
-                    <a href="../assets/pairing/pc-peer-position-ja.webp" target="_blank" rel="noopener"
+                    <a
+                      href="../assets/pairing/pc-peer-position-ja.webp"
+                      target="_blank"
+                      rel="noopener"
                       ><img
                         src="../assets/pairing/pc-peer-position-ja.webp"
                         alt="現在のデバイス管理で接続したWindows PCを配置する画面"
@@ -1070,9 +1226,7 @@
                   </td>
                 </tr>
                 <tr id="shortcuts-next-release" data-shortcut-action="remote-window">
-                  <td>
-                    <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>1~9</kbd>
-                  </td>
+                  <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>1~9</kbd></td>
                   <td>
                     メインPC：該当するリモート画面を開くか、既存のウィンドウを前面に表示します。もう一度押しても閉じません。接続ショートカットと同じLAN機器番号を使い、Bluetooth機器は番号の対象から除外します。
                   </td>

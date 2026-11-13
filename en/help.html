@@ -10,6 +10,8 @@
     />
     <meta name="robots" content="index,follow,max-image-preview:large" />
     <link rel="stylesheet" href="../css/onemouse.css" />
+    <link rel="stylesheet" href="../css/guide-help.css" />
+    <script src="../js/guide-help.js" defer></script>
     <link rel="canonical" href="https://onemouse.pages.dev/en/help" />
     <link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/help" />
     <link rel="alternate" hreflang="en" href="https://onemouse.pages.dev/en/help" />
@@ -21,9 +23,7 @@
   <body>
     <header class="site">
       <div class="wrap hd">
-        <a class="brand" href="./" aria-label="OneMouse home"
-          ><span class="om">OM</span>OneMouse</a
-        >
+        <a class="brand" href="./" aria-label="OneMouse home"><span class="om">OM</span>OneMouse</a>
         <nav class="nav" aria-label="Main navigation">
           <a href="./">Overview</a>
           <a href="./#use">Features</a>
@@ -32,8 +32,8 @@
         </nav>
         <div class="hd-right">
           <div class="lang" aria-label="Language">
-            <a href="../help">KOR</a><span class="on">ENG</span
-            ><a href="../ja/help">JPN</a><a href="../zh/help">CHN</a>
+            <a href="../help">KOR</a><span class="on">ENG</span><a href="../ja/help">JPN</a
+            ><a href="../zh/help">CHN</a>
             <a href="../es/help">ESP</a>
           </div>
           <a class="hd-cta" href="./#get">Download</a>
@@ -68,10 +68,99 @@
                 returns to your own PC (center of the monitor).
               </li>
               <li id="android-input-help">
-                <b>Connected but input isn't working? →</b> Re-enable OneMouse under Android
-                <b>Accessibility</b>. For Mac, <a class="text-link" href="#mac-input-help">check its input permission</a>.
+                <b>Connected but input does not work? →</b> The Android Accessibility Service may be
+                off or may have restarted.
+                <a class="text-link" href="#cursor-not-crossing"
+                  >Check Accessibility, arrangement and the entry passage in order</a
+                >.
               </li>
             </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-alt" id="connection-symptoms">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">Find your symptom</p>
+            <h2 class="sec">What is happening now?</h2>
+            <p class="sec-lead">
+              Expand the matching topic and check each step in order before clearing your sign-in or
+              pairing.
+            </p>
+          </div>
+          <div class="troubleshoot-list">
+            <details class="troubleshoot-card" id="cursor-not-crossing" data-help-topic>
+              <summary>Connected, but the cursor will not move onto the phone</summary>
+              <ol>
+                <li>
+                  <b>Accessibility:</b> check that OneMouse is enabled under Android Settings →
+                  Accessibility → Installed apps (or Downloaded apps). If it is enabled but input
+                  still fails, turn it off and on again. For the Test app, check OneMouse Test.
+                </li>
+                <li>
+                  <b>Arrangement:</b> check which side of the PC screen the target device occupies
+                  in Phone placement. Matching the phone’s physical position makes the direction
+                  easier to follow.
+                </li>
+                <li>
+                  <b>Entry passage:</b> use the configured passage on that edge. If the passage is
+                  in the middle, the screen corners will not let you cross.
+                  <a class="text-link" href="./guide#position">See the arrangement screen</a>
+                </li>
+                <li>
+                  <b>App versions:</b> update Windows and Android to the latest public versions and
+                  restart OneMouse on both. Check that the Accessibility Service is still enabled.
+                </li>
+              </ol>
+              <p>
+                If you lose the cursor, the default <kbd>Ctrl+Alt+Backspace</kbd> returns it to the
+                PC. If you changed that shortcut, use your saved key combination.
+              </p>
+            </details>
+            <details class="troubleshoot-card" id="account-connect-help" data-help-topic>
+              <summary>A device is missing from my Google account or will not connect</summary>
+              <ol>
+                <li>
+                  Check that both OneMouse apps show the same Google account address, both devices
+                  have internet access, and both apps are running.
+                </li>
+                <li>
+                  Refresh the device list and connect the target device. Confirm any request on the
+                  other device.
+                  <a class="text-link" href="./guide#connect-account">Account connection steps</a>
+                </li>
+                <li>
+                  If asked to verify your Google account again, complete the sign-in verification.
+                  If you see “Cannot create more connections,” close unused remote screens and
+                  connections, then try again after a short wait. Removing an account device and
+                  ending a connection are different actions.
+                </li>
+              </ol>
+              <p>
+                To connect without signing in on the same Wi-Fi, choose
+                <a class="text-link" href="./guide#connect-wifi">QR/code pairing</a>. Account
+                connections do not require the same router.
+              </p>
+            </details>
+            <details class="troubleshoot-card" id="remote-control-help" data-help-topic>
+              <summary>I can see the PC screen on my phone, but cannot control it</summary>
+              <ol>
+                <li>Check that <b>View only</b> is off in the remote-screen control panel.</li>
+                <li>
+                  <b>Touch mode</b> clicks where you touch. In <b>Cursor mode</b>, slide your finger
+                  to position the pointer, then tap.
+                </li>
+                <li>
+                  If a control request appears on the PC, allow it. Use supported, up-to-date
+                  versions on both Windows and Android. A Bluetooth-only connection cannot open
+                  remote video.
+                </li>
+              </ol>
+              <a class="text-link" href="./guide#remote-gesture-examples"
+                >See click, drag and scroll examples →</a
+              >
+            </details>
           </div>
         </div>
       </section>
@@ -89,16 +178,19 @@
               <div class="body">
                 <h4>Power and permissions</h4>
                 <p>
-                  Check that both apps are running. For input permissions, see the <a class="text-link" href="#quick-help">quick checks</a>.
+                  Check that both apps are running. For input permissions, see the
+                  <a class="text-link" href="#quick-help">quick checks</a>.
                 </p>
               </div>
             </div>
             <div class="tstep">
               <div class="rail"><span class="num">2</span><span class="line"></span></div>
               <div class="body">
-                <h4>Same network &amp; discovery</h4>
+                <h4>Check your chosen connection method</h4>
                 <p>
-                  Check that both devices are on the <b>same Wi-Fi or LAN</b>. For Mac discovery, see <a class="text-link" href="#mac">Mac help</a>.
+                  <b>QR/code:</b> use the same router and check local-network permissions and
+                  discovery. <b>Google account:</b> check the shared account and internet access on
+                  both devices. <b>Bluetooth:</b> check that Bluetooth is on, paired and connected.
                 </p>
               </div>
             </div>
@@ -107,7 +199,8 @@
               <div class="body">
                 <h4>Firewall &amp; isolation</h4>
                 <p>
-                  If the phone can see the PC but the PC can't see the phone, it may be a
+                  For a Wi-Fi/LAN connection, if the phone can see the PC but the PC cannot see the
+                  phone, it may be a
                   <b>Windows firewall inbound</b> issue (whether the network is set to "Public" or
                   "Private"). Office and café Wi-Fi can also block it with <b>client isolation</b>.
                 </p>
@@ -118,7 +211,8 @@
               <div class="body">
                 <h4>Pairing &amp; connection</h4>
                 <p>
-                  Check pairing and connection status in Devices. For the first connection, follow the <a class="text-link" href="./guide#start">setup guide</a>.
+                  Check pairing and connection status in Devices. For the first connection, follow
+                  the <a class="text-link" href="./guide#start">setup guide</a>.
                 </p>
               </div>
             </div>
@@ -127,7 +221,9 @@
               <div class="body">
                 <h4>Input &amp; return</h4>
                 <p>
-                  If the cursor will not cross the edge, check the arrangement. Lost it? See <a class="text-link" href="#quick-help">how to bring it back</a>.
+                  Check the arranged direction and configured <b>cursor entry passage</b>. Follow
+                  the <a class="text-link" href="#cursor-not-crossing">input checks</a>; if you lose
+                  the cursor, see <a class="text-link" href="#quick-help">how to bring it back</a>.
                 </p>
               </div>
             </div>
@@ -181,8 +277,8 @@
                 allowed.
               </li>
               <li>
-                Check that the app is in <b>Apps to send to PC</b>. The defaults are your SMS app and
-                KakaoTalk; you can also choose all apps.
+                Check that the app is in <b>Apps to send to PC</b>. The defaults are your SMS app
+                and KakaoTalk; you can also choose all apps.
               </li>
               <li>
                 On the main PC, open <b>Settings → Notifications</b> and make sure
@@ -197,8 +293,16 @@
             <details class="fold" id="notification-history">
               <summary><span>Notification history and deletion</span></summary>
               <div class="fold-body">
-                <p>Notifications appear briefly; history is encrypted locally on the PC, never uploaded. Only notifications received after enabling are recorded; verification codes and hidden sensitive content are not saved.</p>
-                <p>History defaults to on, 7 days, and up to 200 entries. Main-PC Settings → Notifications offers 1/7/30 days or no new entries. Existing history stays; Clear all deletes it.</p>
+                <p>
+                  Notifications appear briefly; history is encrypted locally on the PC, never
+                  uploaded. Only notifications received after enabling are recorded; verification
+                  codes and hidden sensitive content are not saved.
+                </p>
+                <p>
+                  History defaults to on, 7 days, and up to 200 entries. Main-PC Settings →
+                  Notifications offers 1/7/30 days or no new entries. Existing history stays; Clear
+                  all deletes it.
+                </p>
               </div>
             </details>
           </div>
@@ -270,73 +374,140 @@
             <details id="notification-reply-faq">
               <summary>The Reply button is missing, or my reply will not send.</summary>
               <div class="a">
-                <p>PC and Android need reply-capable versions and an original phone notification with free-text reply. Only live main-PC notifications qualify; hidden/sensitive content, verification codes, and history are excluded.</p>
-                <p>If sending fails, check the phone lock, deleted/expired notification, and connection. Failures and timeouts are not automatically resent; check the phone conversation. “Passed to phone app” confirms the original app's reply action, not delivery to the recipient. <a href="./guide#notifications">See how to reply</a></p>
+                <p>
+                  PC and Android need reply-capable versions and an original phone notification with
+                  free-text reply. Only live main-PC notifications qualify; hidden/sensitive
+                  content, verification codes, and history are excluded.
+                </p>
+                <p>
+                  If sending fails, check the phone lock, deleted/expired notification, and
+                  connection. Failures and timeouts are not automatically resent; check the phone
+                  conversation. “Passed to phone app” confirms the original app's reply action, not
+                  delivery to the recipient. <a href="./guide#notifications">See how to reply</a>
+                </p>
               </div>
             </details>
             <details id="device-order-faq">
               <summary>How do I change device numbers if Edit order is missing?</summary>
               <div class="a">
-                <p>Edit order appears in main-PC Devices with two or more LAN devices. It saves automatically and updates connection/remote-window numbers, not screen arrangement or key combinations. Bluetooth order stays unchanged; sub-role PCs cannot edit. <a href="./guide#device-order">Change device order</a></p>
+                <p>
+                  Edit order appears in main-PC Devices with two or more LAN devices. It saves
+                  automatically and updates connection/remote-window numbers, not screen arrangement
+                  or key combinations. Bluetooth order stays unchanged; sub-role PCs cannot edit.
+                  <a href="./guide#device-order">Change device order</a>
+                </p>
               </div>
             </details>
             <details id="windows-remote-gestures-faq">
               <summary>Browser gestures do not work in a Windows remote window.</summary>
               <div class="a">
-                <p>Use OneMouse for Windows 1.5.4 or later and enable the target browser's gesture extension or feature. The remote window forwards right-button drags, separately from Android's built-in gestures for direct phone control.</p>
-                <p>You can open remote windows for multiple devices; repeating a device's shortcut number brings its window forward. <a href="./guide#remote">See the remote-window guide</a></p>
+                <p>
+                  Use OneMouse for Windows 1.5.4 or later and enable the target browser's gesture
+                  extension or feature. The remote window forwards right-button drags, separately
+                  from Android's built-in gestures for direct phone control.
+                </p>
+                <p>
+                  You can open remote windows for multiple devices; repeating a device's shortcut
+                  number brings its window forward.
+                  <a href="./guide#remote">See the remote-window guide</a>
+                </p>
               </div>
             </details>
             <details id="default-pc-faq">
               <summary>A file shared from my phone does not reach the PC.</summary>
               <div class="a">
-                <p>For Wi-Fi/LAN, choose a main-role Default PC on the phone's Home screen and check pairing/connection (sub PCs are excluded). An existing Bluetooth connection can send without a default PC. <a href="./guide#text-to-pc">Send from phone to PC</a></p>
+                <p>
+                  For Wi-Fi/LAN, choose a main-role Default PC on the phone's Home screen and check
+                  pairing/connection (sub PCs are excluded). An existing Bluetooth connection can
+                  send without a default PC. <a href="./guide#text-to-pc">Send from phone to PC</a>
+                </p>
               </div>
             </details>
             <details id="file-receive-folder-faq">
               <summary>I cannot change or open the PC's received-files folder.</summary>
               <div class="a">
-                <p>On main or sub PCs, use Change/Open folder in Settings → General → File transfer → Received-file save location. For errors, check write access and USB/network drives or choose another accessible folder. Existing files stay put; screenshot saving is separate. <a href="./guide#file-receive-folder">See received-folder settings</a></p>
+                <p>
+                  On main or sub PCs, use Change/Open folder in Settings → General → File transfer →
+                  Received-file save location. For errors, check write access and USB/network drives
+                  or choose another accessible folder. Existing files stay put; screenshot saving is
+                  separate. <a href="./guide#file-receive-folder">See received-folder settings</a>
+                </p>
               </div>
             </details>
             <details id="screenshot-preview-faq">
               <summary>The pointer does not return after capture, or the preview closes.</summary>
               <div class="a">
-                <p>With supported versions on both sides, the pointer stays on the controlled device and only a separate preview appears; the main app stays in the tray or minimized. Copy/save success closes the preview; save cancellation or failure keeps it open. Move the pointer back to the main PC to use it.</p>
+                <p>
+                  With supported versions on both sides, the pointer stays on the controlled device
+                  and only a separate preview appears; the main app stays in the tray or minimized.
+                  Copy/save success closes the preview; save cancellation or failure keeps it open.
+                  Move the pointer back to the main PC to use it.
+                </p>
               </div>
             </details>
             <details id="mouse-gestures-faq">
               <summary>Mouse gestures do not start.</summary>
               <div class="a">
-                <p>Use supported PC/Android versions, enable Mouse gestures in Android Settings → Typing &amp; clipboard, and select the current app (off by default). Move the pointer onto the phone, right-drag, then release; this does not apply to Windows/Mac or mirroring windows.</p>
-                <p>All apps covers installed apps with launcher icons and Home. OneMouse and system screens such as lock/permission dialogs are excluded; supported actions vary by app and screen.</p>
+                <p>
+                  Use supported PC/Android versions, enable Mouse gestures in Android Settings →
+                  Typing &amp; clipboard, and select the current app (off by default). Move the
+                  pointer onto the phone, right-drag, then release; this does not apply to
+                  Windows/Mac or mirroring windows.
+                </p>
+                <p>
+                  All apps covers installed apps with launcher icons and Home. OneMouse and system
+                  screens such as lock/permission dialogs are excluded; supported actions vary by
+                  app and screen.
+                </p>
                 <p><a href="./guide#mouse-gestures">View the gesture guide and all patterns</a></p>
               </div>
             </details>
             <details id="mouse-gestures-history">
               <summary>Forward or Reload does not work.</summary>
-              <div class="a">Forward returns to a page in browser history, not the next article. Reload needs a recognised native browser button; some selected apps or screens do not support it.</div>
+              <div class="a">
+                Forward returns to a page in browser history, not the next article. Reload needs a
+                recognised native browser button; some selected apps or screens do not support it.
+              </div>
             </details>
             <details id="mouse-gestures-minimize">
               <summary>Does down → right close the app?</summary>
-              <div class="a">No. Draw down, then right as two strokes, not one diagonal. It goes to Home without closing the app, its tabs, or its recent-app card. Up → right opens the recent-app list so you can choose another app.</div>
+              <div class="a">
+                No. Draw down, then right as two strokes, not one diagonal. It goes to Home without
+                closing the app, its tabs, or its recent-app card. Up → right opens the recent-app
+                list so you can choose another app.
+              </div>
             </details>
             <details id="mouse-gestures-scroll">
               <summary>How do I adjust and stop up/down scrolling?</summary>
               <div class="a">
-                <p>A longer up/down stroke scrolls more, a shorter one less; release the right button to start (nothing moves while drawing). The arrow and vertical gauge show direction and stroke strength, not document position or exact distance.</p>
+                <p>
+                  A longer up/down stroke scrolls more, a shorter one less; release the right button
+                  to start (nothing moves while drawing). The arrow and vertical gauge show
+                  direction and stroke strength, not document position or exact distance.
+                </p>
                 <ul>
-                  <li>Start over page content. Very short, incomplete, or cancelled strokes do nothing; a short right-click without movement keeps its usual action.</li>
-                  <li>Movement varies by app; Home/app drawer uses one swipe. Other long scrolls use several swipes, up to 8 screenfuls/10 seconds.</li>
-                  <li>Clicking, a new gesture, switching apps, or ending control cancels remaining scrolling. Pointer movement alone does not stop it.</li>
+                  <li>
+                    Start over page content. Very short, incomplete, or cancelled strokes do
+                    nothing; a short right-click without movement keeps its usual action.
+                  </li>
+                  <li>
+                    Movement varies by app; Home/app drawer uses one swipe. Other long scrolls use
+                    several swipes, up to 8 screenfuls/10 seconds.
+                  </li>
+                  <li>
+                    Clicking, a new gesture, switching apps, or ending control cancels remaining
+                    scrolling. Pointer movement alone does not stop it.
+                  </li>
                 </ul>
               </div>
             </details>
             <details id="connection-drops">
               <summary>It keeps disconnecting about every 10 seconds.</summary>
               <div class="a">
-                Check client isolation on guest/office Wi-Fi and the <a class="text-link" href="#firewall-help">Windows firewall</a>.
-                If it drops while the phone is idle, check <a class="text-link" href="#screen-sleep">battery and sleep settings</a>.
+                Check client isolation on guest/office Wi-Fi and the
+                <a class="text-link" href="#firewall-help">Windows firewall</a>. If it drops while
+                the phone is idle, check
+                <a class="text-link" href="#screen-sleep">battery and sleep settings</a>.
               </div>
             </details>
             <details id="firewall-help">
@@ -359,7 +530,8 @@
             <details>
               <summary>It says connected, but the mouse and keyboard don't respond.</summary>
               <div class="a">
-                Re-enable OneMouse using the <a class="text-link" href="#android-input-help">Android Accessibility check</a>.
+                Re-enable OneMouse using the
+                <a class="text-link" href="#android-input-help">Android Accessibility check</a>.
               </div>
             </details>
             <details>
@@ -367,7 +539,9 @@
                 The cursor is stuck on the phone, another PC, or Mac and won't come back.
               </summary>
               <div class="a">
-                <a class="text-link" href="#quick-help">Check the emergency return key and its settings</a>.
+                <a class="text-link" href="#quick-help"
+                  >Check the emergency return key and its settings</a
+                >.
               </div>
             </details>
             <details id="screen-sleep">
@@ -382,8 +556,9 @@
             <details id="bluetooth-help">
               <summary>Bluetooth connection or remote screens do not work well.</summary>
               <div class="a">
-                For connection issues, remove the existing pairing in both devices' system Bluetooth settings, then pair again.
-                Use Wi-Fi or LAN for large files and mobile remote screens. Mac screen/window sharing is LAN-only.
+                For connection issues, remove the existing pairing in both devices' system Bluetooth
+                settings, then pair again. Use Wi-Fi or LAN for large files and mobile remote
+                screens. Mac screen/window sharing is LAN-only.
                 <a class="text-link" href="./guide#bluetooth">Bluetooth setup steps</a>
               </div>
             </details>

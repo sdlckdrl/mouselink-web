@@ -55,6 +55,19 @@ PC 기본 키·역할 조건·변경/끄기 설정은 앱 저장소의
 `tests/test_release_guide.py`는 5개 언어의 표 안에 해당 행이 있고 키 조합·메인 PC 조건·
 LAN 번호 배정 안내가 일치하며 별도 버전 안내 박스가 없는지 확인합니다.
 
+### 연결 방법 선택·원격 조작 예시
+
+5개 언어 `guide.html#start`의 Google 계정·Wi-Fi·Bluetooth 안내는 `js/guide-help.js`와
+`css/guide-help.css`로 전환합니다. `connect-account`·`connect-wifi`·`connect-bluetooth`
+앵커와 버튼의 `aria-controls`를 함께 유지하세요. JavaScript를 쓰지 못하면 세 절차가 모두
+표시되고 동작하지 않는 선택 버튼은 숨겨집니다. 도움말의 증상 앵커로 직접 이동하면 해당
+항목이 펼쳐집니다.
+
+`#remote-gesture-examples`는 실제 앱 녹화가 아닌 설명용 애니메이션입니다. 실제 제스처와
+지원 버전을 대조해 5개 언어를 함께 수정하고, 재생·정지 문구도 번역합니다. 동작 줄이기
+설정을 사용하면 자동 재생하지 않으며, 사용자가 재생을 선택할 수 있습니다. 배포 전에는
+키보드 선택·직접 링크·JavaScript 비활성·좁은 화면·재생 정지를 확인합니다.
+
 ## 다운로드·앱 호환성
 
 홈페이지 다운로드와 앱 업데이트가 함께 사용하는 파일이므로 배포된 자산을 먼저 확인합니다.
@@ -113,6 +126,7 @@ MP4는 형식별 용도가 다르므로 이름이 같아도 중복 파일로 판
 ```powershell
 python -B -m unittest discover -s tests -v
 node --check js/downloads.js
+node --check js/guide-help.js
 git diff --check
 ```
 

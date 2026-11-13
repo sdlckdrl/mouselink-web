@@ -10,6 +10,8 @@
     />
     <meta name="robots" content="index,follow,max-image-preview:large" />
     <link rel="stylesheet" href="../css/onemouse.css" />
+    <link rel="stylesheet" href="../css/guide-help.css" />
+    <script src="../js/guide-help.js" defer></script>
     <link rel="canonical" href="https://onemouse.pages.dev/ja/help" />
     <link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/help" />
     <link rel="alternate" hreflang="en" href="https://onemouse.pages.dev/en/help" />
@@ -32,8 +34,8 @@
         </nav>
         <div class="hd-right">
           <div class="lang" aria-label="言語">
-            <a href="../help">KOR</a><a href="../en/help">ENG</a
-            ><span class="on">JPN</span><a href="../zh/help">CHN</a>
+            <a href="../help">KOR</a><a href="../en/help">ENG</a><span class="on">JPN</span
+            ><a href="../zh/help">CHN</a>
             <a href="../es/help">ESP</a>
           </div>
           <a class="hd-cta" href="./#get">ダウンロード</a>
@@ -68,12 +70,102 @@
               </li>
               <li id="android-input-help">
                 <b>接続はできたのに入力できないとき →</b>
-                Androidの<b>アクセシビリティサービス</b>がオフになったか、再起動された可能性があります。アクセシビリティでOneMouseを再度オンにしてください。
+                Androidの<b>ユーザー補助サービス</b>がオフになったか、再起動された可能性があります。<a
+                  class="text-link"
+                  href="#cursor-not-crossing"
+                  >ユーザー補助・配置・進入エリアを順番に確認</a
+                >してください。
               </li>
               <li>
-                <b>Macで入力できないとき →</b> <a class="text-link" href="#mac-input-help">入力権限を確認</a>
+                <b>Macで入力できないとき →</b>
+                <a class="text-link" href="#mac-input-help">入力権限を確認</a>
               </li>
             </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-alt" id="connection-symptoms">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">症状から探す</p>
+            <h2 class="sec">今、どのような状態ですか？</h2>
+            <p class="sec-lead">
+              当てはまる項目を開き、上から順に確認してください。保存済みのログインやペアリングを削除する前に確認できます。
+            </p>
+          </div>
+          <div class="troubleshoot-list">
+            <details class="troubleshoot-card" id="cursor-not-crossing" data-help-topic>
+              <summary>接続済みなのにカーソルがスマホへ移動しません</summary>
+              <ol>
+                <li>
+                  <b>ユーザー補助：</b>Androidの設定 → ユーザー補助 →
+                  インストール済みアプリ（またはダウンロードしたアプリ）→
+                  OneMouseがオンか確認します。オンでも入力できない場合は一度オフにしてからオンにします。Testアプリを使っている場合はOneMouse
+                  Testを確認してください。
+                </li>
+                <li>
+                  <b>デバイスの配置：</b
+                  >PCのスマホの配置で、対象のデバイスが画面のどちら側にあるか確認します。実際のスマホの位置に設定を合わせると迷いにくくなります。
+                </li>
+                <li>
+                  <b>進入エリア：</b
+                  >設定した方向のエリアを通ってください。通り道が中央にある場合、画面の隅からは移動できません。<a
+                    class="text-link"
+                    href="./guide#position"
+                    >配置画面を見る</a
+                  >
+                </li>
+                <li>
+                  <b>アプリのバージョン：</b
+                  >PCとAndroidを最新の公開版に更新し、両方のOneMouseを起動し直します。ユーザー補助サービスが引き続きオンになっているかも確認してください。
+                </li>
+              </ol>
+              <p>
+                カーソルを見失ったら、既定の<kbd>Ctrl+Alt+Backspace</kbd>でPCへ戻します。ショートカットを変更している場合は、設定したキーを使ってください。
+              </p>
+            </details>
+            <details class="troubleshoot-card" id="account-connect-help" data-help-topic>
+              <summary>Googleアカウントにデバイスが表示されない・接続できません</summary>
+              <ol>
+                <li>
+                  両方のOneMouseで同じGoogleアカウントのメールアドレスになっているか、両方のインターネット接続とアプリの起動状態を確認します。
+                </li>
+                <li>
+                  デバイス一覧を更新して対象を接続します。確認の要求が表示されたら相手のデバイスで許可します。<a
+                    class="text-link"
+                    href="./guide#connect-account"
+                    >アカウント接続の手順</a
+                  >
+                </li>
+                <li>
+                  Googleアカウントの再確認を求められたらログインを確認します。接続数の上限に達した場合は、使っていないリモート画面や接続を閉じ、少し待って再試行してください。アカウントからのデバイス削除と接続の終了は別の操作です。
+                </li>
+              </ol>
+              <p>
+                同じWi-Fiでログインせずに使う場合は、<a
+                  class="text-link"
+                  href="./guide#connect-wifi"
+                  >QR・番号でのペアリング</a
+                >も選べます。アカウント接続で必ず同じルーターにつなぐ必要はありません。
+              </p>
+            </details>
+            <details class="troubleshoot-card" id="remote-control-help" data-help-topic>
+              <summary>スマホでPC画面は見えるのに操作できません</summary>
+              <ol>
+                <li>リモート画面の操作パネルで<b>表示のみ</b>がオフになっているか確認します。</li>
+                <li>
+                  <b>タッチモード</b
+                  >では触れた位置をクリックします。<b>カーソルモード</b>では指をスワイプしてポインターを移動し、タップします。
+                </li>
+                <li>
+                  PCに操作の許可要求が表示されたら許可します。PCとAndroidの両方が対応する最新バージョンか確認します。Bluetoothだけではリモート映像を開けません。
+                </li>
+              </ol>
+              <a class="text-link" href="./guide#remote-gesture-examples"
+                >クリック・ドラッグ・スクロールの操作例を見る →</a
+              >
+            </details>
           </div>
         </div>
       </section>
@@ -91,16 +183,21 @@
               <div class="body">
                 <h4>起動と権限</h4>
                 <p>
-                  両方のアプリが起動しているか確認します。入力権限は<a class="text-link" href="#quick-help">最初の確認項目</a>をご覧ください。
+                  両方のアプリが起動しているか確認します。入力権限は<a
+                    class="text-link"
+                    href="#quick-help"
+                    >最初の確認項目</a
+                  >をご覧ください。
                 </p>
               </div>
             </div>
             <div class="tstep">
               <div class="rail"><span class="num">2</span><span class="line"></span></div>
               <div class="body">
-                <h4>同じネットワーク・検出</h4>
+                <h4>接続方法とネットワーク</h4>
                 <p>
-                  WindowsとAndroidまたはMacが<b>同じWi-Fi/LAN</b>にあるか確認します。検索できない場合は、ネットワークが違うか、ローカル通信がブロックされています。
+                  <b>Googleアカウント：</b
+                  >同じアカウントと両方のインターネット接続を確認します。<b>QR・番号：</b>同じルーターのWi-Fi/LANか確認します。<b>Bluetooth：</b>両方のシステム設定でBluetoothがオンか確認します。
                 </p>
               </div>
             </div>
@@ -118,7 +215,11 @@
               <div class="body">
                 <h4>ペアリング・接続</h4>
                 <p>
-                  デバイス管理でペアリング・接続状態を確認します。初回は<a class="text-link" href="./guide#start">接続ガイド</a>をご覧ください。
+                  デバイス管理でペアリング・接続状態を確認します。初回は<a
+                    class="text-link"
+                    href="./guide#start"
+                    >接続ガイド</a
+                  >をご覧ください。
                 </p>
               </div>
             </div>
@@ -127,7 +228,12 @@
               <div class="body">
                 <h4>入力・復帰</h4>
                 <p>
-                  カーソルが画面の端を越えない場合は配置を確認します。見失ったら<a class="text-link" href="#quick-help">復帰方法</a>をご覧ください。
+                  配置した方向と<b>設定したカーソルの進入エリア</b>を確認します。<a
+                    class="text-link"
+                    href="#cursor-not-crossing"
+                    >入力の確認手順</a
+                  >に従い、カーソルを見失ったら<a class="text-link" href="#quick-help">復帰方法</a
+                  >をご覧ください。
                 </p>
               </div>
             </div>
@@ -174,9 +280,13 @@
                 スマホアプリの設定<b>PCに送る通知</b>で<b>PCに通知を送る</b>をオンにし、<b>通知へのアクセス</b>が許可済みになっているか確認します。
               </li>
               <li>
-                <b>PCに送るアプリ</b>にそのアプリが入っているか確認します。初期値はSMSアプリとKakaoTalkで、すべてのアプリを選ぶこともできます。
+                <b>PCに送るアプリ</b
+                >にそのアプリが入っているか確認します。初期値はSMSアプリとKakaoTalkで、すべてのアプリを選ぶこともできます。
               </li>
-              <li>メインPCの<b>設定 → 通知</b>で、<b>デバイスの通知を表示</b>がオンになっているか確認します。</li>
+              <li>
+                メインPCの<b>設定 → 通知</b
+                >で、<b>デバイスの通知を表示</b>がオンになっているか確認します。
+              </li>
               <li>
                 認証コードのメッセージだけが「非表示」で届く場合は、Android
                 15以降の保護機能です。スマホアプリの<b>認証コードの通知</b>ブロックで<b>PCを登録</b>を一度押してください。Bluetoothは登録時だけオンにすれば大丈夫です。
@@ -185,8 +295,13 @@
             <details class="fold" id="notification-history">
               <summary><span>通知履歴の保存・削除</span></summary>
               <div class="fold-body">
-                <p>通知は短く表示し、履歴はPC内に暗号化保存します（サーバー送信なし）。有効にした後の通知だけを記録し、認証コード・非表示の機密内容は保存しません。</p>
-                <p>履歴は初期値オン・7日・最大200件です。メインPCの設定 → 通知で1日・7日・30日または新規保存オフを選べます。既存履歴は残り、全削除で消去できます。</p>
+                <p>
+                  通知は短く表示し、履歴はPC内に暗号化保存します（サーバー送信なし）。有効にした後の通知だけを記録し、認証コード・非表示の機密内容は保存しません。
+                </p>
+                <p>
+                  履歴は初期値オン・7日・最大200件です。メインPCの設定 →
+                  通知で1日・7日・30日または新規保存オフを選べます。既存履歴は残り、全削除で消去できます。
+                </p>
               </div>
             </details>
           </div>
@@ -245,73 +360,129 @@
             <details id="notification-reply-faq">
               <summary>返信ボタンが表示されない、または送信できません。</summary>
               <div class="a">
-                <p>PC・Androidの返信対応版と、自由入力で返信できるスマホの元の通知が必要です。メインPCのリアルタイム通知のみが対象で、内容非表示・機密通知・認証コード・履歴は除外します。</p>
-                <p>送信エラー時はスマホのロック・通知の削除/期限切れ・接続を確認してください。失敗・タイムアウトは自動再送せず、スマホの会話で確認します。「スマホのアプリに渡しました」は元のアプリへの操作転送で、相手の受信確認ではありません。<a href="./guide#notifications">返信の使い方を見る</a></p>
+                <p>
+                  PC・Androidの返信対応版と、自由入力で返信できるスマホの元の通知が必要です。メインPCのリアルタイム通知のみが対象で、内容非表示・機密通知・認証コード・履歴は除外します。
+                </p>
+                <p>
+                  送信エラー時はスマホのロック・通知の削除/期限切れ・接続を確認してください。失敗・タイムアウトは自動再送せず、スマホの会話で確認します。「スマホのアプリに渡しました」は元のアプリへの操作転送で、相手の受信確認ではありません。<a
+                    href="./guide#notifications"
+                    >返信の使い方を見る</a
+                  >
+                </p>
               </div>
             </details>
             <details id="device-order-faq">
               <summary>番号を変えたいのに、順序の編集が見つかりません。</summary>
               <div class="a">
-                <p>メインPCのデバイス管理にLANデバイスが2台以上あると、順序を編集できます。自動保存され、接続・リモートウィンドウの番号だけが変わり、画面配置・キーの組み合わせは維持します。Bluetoothの順序は変わらず、サブ役割のPCでは編集できません。<a href="./guide#device-order">デバイスの順序を変更する</a></p>
+                <p>
+                  メインPCのデバイス管理にLANデバイスが2台以上あると、順序を編集できます。自動保存され、接続・リモートウィンドウの番号だけが変わり、画面配置・キーの組み合わせは維持します。Bluetoothの順序は変わらず、サブ役割のPCでは編集できません。<a
+                    href="./guide#device-order"
+                    >デバイスの順序を変更する</a
+                  >
+                </p>
               </div>
             </details>
             <details id="windows-remote-gestures-faq">
               <summary>Windowsのリモートウィンドウでブラウザーのジェスチャーが使えません。</summary>
               <div class="a">
-                <p>Windows版OneMouse 1.5.4以降で、接続先ブラウザーのジェスチャー拡張・機能を有効にしてください。右ボタンのドラッグを転送し、スマホの直接操作用Android独自ジェスチャーとは別です。</p>
-                <p>複数デバイスのウィンドウを同時に開けます。同じショートカット番号を再入力すると、そのウィンドウを前面に表示します。<a href="./guide#remote">リモートウィンドウの使い方を見る</a></p>
+                <p>
+                  Windows版OneMouse
+                  1.5.4以降で、接続先ブラウザーのジェスチャー拡張・機能を有効にしてください。右ボタンのドラッグを転送し、スマホの直接操作用Android独自ジェスチャーとは別です。
+                </p>
+                <p>
+                  複数デバイスのウィンドウを同時に開けます。同じショートカット番号を再入力すると、そのウィンドウを前面に表示します。<a
+                    href="./guide#remote"
+                    >リモートウィンドウの使い方を見る</a
+                  >
+                </p>
               </div>
             </details>
             <details id="default-pc-faq">
               <summary>スマホで共有したファイルがPCに届きません。</summary>
               <div class="a">
-                <p>Wi-Fi・LANではスマホのホームでメイン役割のPCを既定に選び、ペアリング・接続を確認してください（サブPCは対象外）。Bluetooth接続済みなら、既定のPCを選ばず送れます。<a href="./guide#text-to-pc">スマホからPCへ送る</a></p>
+                <p>
+                  Wi-Fi・LANではスマホのホームでメイン役割のPCを既定に選び、ペアリング・接続を確認してください（サブPCは対象外）。Bluetooth接続済みなら、既定のPCを選ばず送れます。<a
+                    href="./guide#text-to-pc"
+                    >スマホからPCへ送る</a
+                  >
+                </p>
               </div>
             </details>
             <details id="file-receive-folder-faq">
               <summary>PCの受信フォルダーを変更・開くことができません。</summary>
               <div class="a">
-                <p>メイン・サブPCの設定 → 一般 → ファイル転送 → 受信ファイルの保存先で変更・開くを選びます。エラー時は書き込み権限・USB/ネットワーク接続を確認するか、別の使えるフォルダーを選んでください。既存ファイルは移動せず、スクリーンショットの保存先は別です。<a href="./guide#file-receive-folder">受信フォルダーの設定を見る</a></p>
+                <p>
+                  メイン・サブPCの設定 → 一般 → ファイル転送 →
+                  受信ファイルの保存先で変更・開くを選びます。エラー時は書き込み権限・USB/ネットワーク接続を確認するか、別の使えるフォルダーを選んでください。既存ファイルは移動せず、スクリーンショットの保存先は別です。<a
+                    href="./guide#file-receive-folder"
+                    >受信フォルダーの設定を見る</a
+                  >
+                </p>
               </div>
             </details>
             <details id="screenshot-preview-faq">
               <summary>撮影後にカーソルが戻らない、またはプレビューが閉じます。</summary>
               <div class="a">
-                <p>両側の対応版ではカーソルは操作中のデバイスに残り、メイン画面のトレイ・最小化状態を保って別のプレビューだけを表示します。コピー・保存の成功時に閉じ、保存のキャンセル・失敗時は残ります。使うときはカーソルを自分でメインPCへ戻してください。</p>
+                <p>
+                  両側の対応版ではカーソルは操作中のデバイスに残り、メイン画面のトレイ・最小化状態を保って別のプレビューだけを表示します。コピー・保存の成功時に閉じ、保存のキャンセル・失敗時は残ります。使うときはカーソルを自分でメインPCへ戻してください。
+                </p>
               </div>
             </details>
             <details id="mouse-gestures-faq">
               <summary>マウスジェスチャーが始まりません。</summary>
               <div class="a">
-                <p>PC・Androidの対応版で、Android設定 → 入力・クリップボードのマウスジェスチャーをオンにし、現在のアプリを選びます（初期値はオフ）。カーソルをスマホへ移し、右ボタンで描いて離すと実行します。Windows・Mac・ミラーリングウィンドウは対象外です。</p>
-                <p>「すべてのアプリ」は起動アイコンのあるインストール済みアプリとホームが対象です。OneMouse・ロック・権限確認などのシステム画面は除外し、使える操作はアプリ・画面によって異なります。</p>
+                <p>
+                  PC・Androidの対応版で、Android設定 →
+                  入力・クリップボードのマウスジェスチャーをオンにし、現在のアプリを選びます（初期値はオフ）。カーソルをスマホへ移し、右ボタンで描いて離すと実行します。Windows・Mac・ミラーリングウィンドウは対象外です。
+                </p>
+                <p>
+                  「すべてのアプリ」は起動アイコンのあるインストール済みアプリとホームが対象です。OneMouse・ロック・権限確認などのシステム画面は除外し、使える操作はアプリ・画面によって異なります。
+                </p>
                 <p><a href="./guide#mouse-gestures">使い方とジェスチャー一覧を見る</a></p>
               </div>
             </details>
             <details id="mouse-gestures-history">
               <summary>進む・再読み込みが使えません。</summary>
-              <div class="a">進む操作は次の記事ではなく、戻った後の履歴ページに進みます。再読み込みには認識できるブラウザーの標準ボタンが必要で、選択したアプリでも画面によっては使えません。</div>
+              <div class="a">
+                進む操作は次の記事ではなく、戻った後の履歴ページに進みます。再読み込みには認識できるブラウザーの標準ボタンが必要で、選択したアプリでも画面によっては使えません。
+              </div>
             </details>
             <details id="mouse-gestures-minimize">
               <summary>下 → 右はアプリを閉じる操作ですか？</summary>
-              <div class="a">いいえ。下に描いてから右へ描く二段階の操作で、斜めの一本線ではありません。ホームへ移動するだけで、アプリ・タブ・最近のアプリのカードは閉じません。上 → 右は最近のアプリ一覧を開き、別のアプリを選ぶ操作です。</div>
+              <div class="a">
+                いいえ。下に描いてから右へ描く二段階の操作で、斜めの一本線ではありません。ホームへ移動するだけで、アプリ・タブ・最近のアプリのカードは閉じません。上
+                → 右は最近のアプリ一覧を開き、別のアプリを選ぶ操作です。
+              </div>
             </details>
             <details id="mouse-gestures-scroll">
               <summary>上下のスクロール量の調整と停止方法は？</summary>
               <div class="a">
-                <p>上下に長く描くと多く、短く描くと少し移動し、右ボタンを離してから開始します（描いている間は動きません）。矢印・縦ゲージは方向と線の強さで、文書位置や正確な距離ではありません。</p>
+                <p>
+                  上下に長く描くと多く、短く描くと少し移動し、右ボタンを離してから開始します（描いている間は動きません）。矢印・縦ゲージは方向と線の強さで、文書位置や正確な距離ではありません。
+                </p>
                 <ul>
-                  <li>ページ本文で開始します。非常に短い線・未完成・キャンセルは実行せず、移動のない短い右クリックは従来の動作です。</li>
-                  <li>移動量はアプリ次第で、ホーム・アプリ一覧は1回だけスワイプします。その他の長いスクロールは複数スワイプ、最大8画面・10秒です。</li>
-                  <li>クリック・新しいジェスチャー・アプリ切り替え・操作終了で残りをキャンセルします。カーソル移動だけでは止まりません。</li>
+                  <li>
+                    ページ本文で開始します。非常に短い線・未完成・キャンセルは実行せず、移動のない短い右クリックは従来の動作です。
+                  </li>
+                  <li>
+                    移動量はアプリ次第で、ホーム・アプリ一覧は1回だけスワイプします。その他の長いスクロールは複数スワイプ、最大8画面・10秒です。
+                  </li>
+                  <li>
+                    クリック・新しいジェスチャー・アプリ切り替え・操作終了で残りをキャンセルします。カーソル移動だけでは止まりません。
+                  </li>
                 </ul>
               </div>
             </details>
             <details id="connection-drops">
               <summary>10秒おきくらいに切れ続けます。</summary>
               <div class="a">
-                ゲスト・社内Wi-Fiのクライアント分離と<a class="text-link" href="#firewall-help">Windowsファイアウォール</a>を確認してください。
-                スマホの待機中に切れる場合は<a class="text-link" href="#screen-sleep">バッテリー・省電力設定</a>を確認します。
+                ゲスト・社内Wi-Fiのクライアント分離と<a class="text-link" href="#firewall-help"
+                  >Windowsファイアウォール</a
+                >を確認してください。 スマホの待機中に切れる場合は<a
+                  class="text-link"
+                  href="#screen-sleep"
+                  >バッテリー・省電力設定</a
+                >を確認します。
               </div>
             </details>
             <details id="firewall-help">
@@ -331,7 +502,8 @@
             <details>
               <summary>接続はできたはずなのに、マウス・キーボードが効きません。</summary>
               <div class="a">
-                <a class="text-link" href="#android-input-help">Androidのアクセシビリティ確認</a>に従い、OneMouseを再度オンにしてください。
+                <a class="text-link" href="#android-input-help">Androidのアクセシビリティ確認</a
+                >に従い、OneMouseを再度オンにしてください。
               </div>
             </details>
             <details>

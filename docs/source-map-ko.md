@@ -91,9 +91,11 @@ downloads.json에 SHA-256이 있어도 홈페이지 script가 브라우저에서
 
 [latest.json](../latest.json)은 다운로드 버튼을 해석하는 script에서 읽지 않는다. Android 앱의 PC 호환성 확인용 정보이므로 다운로드 표시를 바꾸는 작업과 최소 호환 버전 변경을 구분한다.
 
-## CSS 두 파일과 요금 표시
+## CSS와 안내 전용 동작
 
 [onemouse.css](../css/onemouse.css)는 홈·가이드·도움말·비교·기술·정책·라이선스와 404가 사용하는 현행 스타일이다. [style.css](../css/style.css)는 5개 언어 요금 페이지가 계속 참조하므로 미사용 파일이 아니다.
+
+[guide-help.css](../css/guide-help.css)와 [guide-help.js](../js/guide-help.js)는 5개 언어의 가이드·도움말에서만 사용한다. 연결 방법 선택, 직접 링크로 안내·증상 항목 펼치기, 설명용 원격 조작 애니메이션과 재생·정지를 담당한다. JavaScript가 없어도 연결 절차 전체를 읽을 수 있게 HTML에 내용을 유지한다. 앱 연결이나 계정 서버를 호출하는 코드는 아니다.
 
 style.css에는 무료 운영 중 유료 요금 설명을 숨기는 블록이 남아 있다. `body:has(.pricing-hero) main`, `.paid-plan-copy`, `.pricing-hero`, `.plan-cards`, `.compare-table-wrap` 등의 표시를 막고, 단축키 표의 `.shortcut-table-wrap`은 별도로 다시 표시한다.
 
