@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-11-11",
+  "updated": "2026-11-14",
   "releaseScope": {
     "windows": "Microsoft Store1.6.2.0",
     "android": "Play/Galaxy1.2.43(79)",
     "macos": "Public1.6.0 source commit155de5c310868a20301e9a8e7afff32189d83fc4",
-    "windowsLgplRecombination": "OneMouse PC 1.6.4 (zeroconf 0.151.3)"
+    "windowsLgplRecombination": "OneMouse PC 1.6.5 (zeroconf 0.151.3)"
   },
   "licenseTextPolicy": "Publisher license/copyright bodies are preserved. Generated notices clearly mark provenance and file boundaries.",
   "limitations": [
@@ -799,6 +799,150 @@
       "contentHandling": "Separate download; excluded from notice-only ZIP. Original application code is not relicensed as LGPL merely by this download."
     },
     {
+      "file": "pc-1.6.5/MouseLinkBackend-1.6.5.exe.part01",
+      "url": "/assets/licenses/pc-1.6.5/MouseLinkBackend-1.6.5.exe.part01",
+      "bytes": 15728640,
+      "sha256": "07d583c81044bb632ccb0d9f034bbc04016d088e51ca027878f3437e2a072d4d",
+      "component": "OneMouse application object code for LGPL recombination",
+      "version": "PC1.6.5 / zeroconf0.151.3",
+      "licenseExpression": "LicenseRef-OneMouse-application-and-third-party-notices",
+      "scope": [
+        "application-object-for-recombination"
+      ],
+      "sourceUrl": "https://onemouse.pages.dev/assets/licenses/pc-1.6.5/MouseLinkBackend-1.6.5.exe.part01",
+      "upstreamSourceUrl": "https://files.pythonhosted.org/packages/2b/7f/bb22975bbbc04765920b766e433410422794568053bff0ab5b3f0bf0197c/zeroconf-0.151.3.tar.gz",
+      "noticeBundleIncluded": false,
+      "contentHandling": "Separate download; excluded from notice-only ZIP. Original application code is not relicensed as LGPL merely by this download."
+    },
+    {
+      "file": "pc-1.6.5/MouseLinkBackend-1.6.5.exe.part02",
+      "url": "/assets/licenses/pc-1.6.5/MouseLinkBackend-1.6.5.exe.part02",
+      "bytes": 12219307,
+      "sha256": "0d161342172913d49bb269ae6642afea90ffaa39c91e68d75a3688cf7019b189",
+      "component": "OneMouse application object code for LGPL recombination",
+      "version": "PC1.6.5 / zeroconf0.151.3",
+      "licenseExpression": "LicenseRef-OneMouse-application-and-third-party-notices",
+      "scope": [
+        "application-object-for-recombination"
+      ],
+      "sourceUrl": "https://onemouse.pages.dev/assets/licenses/pc-1.6.5/MouseLinkBackend-1.6.5.exe.part02",
+      "upstreamSourceUrl": "https://files.pythonhosted.org/packages/2b/7f/bb22975bbbc04765920b766e433410422794568053bff0ab5b3f0bf0197c/zeroconf-0.151.3.tar.gz",
+      "noticeBundleIncluded": false,
+      "contentHandling": "Separate download; excluded from notice-only ZIP. Original application code is not relicensed as LGPL merely by this download."
+    },
+    {
+      "file": "pc-1.6.5/OneMouse-1.6.5-LGPL-kit.zip",
+      "url": "/assets/licenses/pc-1.6.5/OneMouse-1.6.5-LGPL-kit.zip",
+      "bytes": 304569,
+      "sha256": "c2b1b74d8642f4a8fe1c970464e7e14a45ccc231f959da38b042cbdf40083eb6",
+      "component": "OneMouse zeroconf source and recombination kit",
+      "version": "PC1.6.5 / zeroconf0.151.3",
+      "licenseExpression": "LGPL-2.1-or-later and included third-party notices",
+      "scope": [
+        "source-availability-and-recombination"
+      ],
+      "sourceUrl": "https://onemouse.pages.dev/assets/licenses/pc-1.6.5/OneMouse-1.6.5-LGPL-kit.zip",
+      "upstreamSourceUrl": "https://files.pythonhosted.org/packages/2b/7f/bb22975bbbc04765920b766e433410422794568053bff0ab5b3f0bf0197c/zeroconf-0.151.3.tar.gz",
+      "noticeBundleIncluded": false,
+      "contentHandling": "Separate download; excluded from notice-only ZIP. Original application code is not relicensed as LGPL merely by this download."
+    },
+    {
+      "file": "pc-1.6.5/PUBLIC-NOTICES.txt",
+      "url": "/assets/licenses/pc-1.6.5/PUBLIC-NOTICES.txt",
+      "bytes": 639,
+      "sha256": "4d01ba86ae039a88f4357c73250494ca88cd2118377e59c2c807b743536a869d",
+      "component": "OneMouse zeroconf source and recombination kit",
+      "version": "PC1.6.5 / zeroconf0.151.3",
+      "licenseExpression": "LGPL-2.1-or-later and included third-party notices",
+      "scope": [
+        "source-availability-and-recombination"
+      ],
+      "sourceUrl": "https://onemouse.pages.dev/assets/licenses/pc-1.6.5/PUBLIC-NOTICES.txt",
+      "upstreamSourceUrl": "https://files.pythonhosted.org/packages/2b/7f/bb22975bbbc04765920b766e433410422794568053bff0ab5b3f0bf0197c/zeroconf-0.151.3.tar.gz",
+      "noticeBundleIncluded": false,
+      "contentHandling": "Separate download; excluded from notice-only ZIP. Original application code is not relicensed as LGPL merely by this download."
+    },
+    {
+      "file": "pc-1.6.5/README.en.md",
+      "url": "/assets/licenses/pc-1.6.5/README.en.md",
+      "bytes": 6222,
+      "sha256": "6a41ba45dd88579706e70af00ddd19349f2b14751a19144d78c1f222d829e286",
+      "component": "OneMouse zeroconf source and recombination kit",
+      "version": "PC1.6.5 / zeroconf0.151.3",
+      "licenseExpression": "LGPL-2.1-or-later and included third-party notices",
+      "scope": [
+        "source-availability-and-recombination"
+      ],
+      "sourceUrl": "https://onemouse.pages.dev/assets/licenses/pc-1.6.5/README.en.md",
+      "upstreamSourceUrl": "https://files.pythonhosted.org/packages/2b/7f/bb22975bbbc04765920b766e433410422794568053bff0ab5b3f0bf0197c/zeroconf-0.151.3.tar.gz",
+      "noticeBundleIncluded": false,
+      "contentHandling": "Separate download; excluded from notice-only ZIP. Original application code is not relicensed as LGPL merely by this download."
+    },
+    {
+      "file": "pc-1.6.5/README.ko.md",
+      "url": "/assets/licenses/pc-1.6.5/README.ko.md",
+      "bytes": 6722,
+      "sha256": "b87cb924940763aac1baf5021ce75fbb1a1f933afc9455222df4cf9830fe833f",
+      "component": "OneMouse zeroconf source and recombination kit",
+      "version": "PC1.6.5 / zeroconf0.151.3",
+      "licenseExpression": "LGPL-2.1-or-later and included third-party notices",
+      "scope": [
+        "source-availability-and-recombination"
+      ],
+      "sourceUrl": "https://onemouse.pages.dev/assets/licenses/pc-1.6.5/README.ko.md",
+      "upstreamSourceUrl": "https://files.pythonhosted.org/packages/2b/7f/bb22975bbbc04765920b766e433410422794568053bff0ab5b3f0bf0197c/zeroconf-0.151.3.tar.gz",
+      "noticeBundleIncluded": false,
+      "contentHandling": "Separate download; excluded from notice-only ZIP. Original application code is not relicensed as LGPL merely by this download."
+    },
+    {
+      "file": "pc-1.6.5/SHA256SUMS.txt",
+      "url": "/assets/licenses/pc-1.6.5/SHA256SUMS.txt",
+      "bytes": 800,
+      "sha256": "43f608460b2ebb3a11f06c1cdd7dda47762388802ec05159139d34d03863705c",
+      "component": "OneMouse zeroconf source and recombination kit",
+      "version": "PC1.6.5 / zeroconf0.151.3",
+      "licenseExpression": "LGPL-2.1-or-later and included third-party notices",
+      "scope": [
+        "source-availability-and-recombination"
+      ],
+      "sourceUrl": "https://onemouse.pages.dev/assets/licenses/pc-1.6.5/SHA256SUMS.txt",
+      "upstreamSourceUrl": "https://files.pythonhosted.org/packages/2b/7f/bb22975bbbc04765920b766e433410422794568053bff0ab5b3f0bf0197c/zeroconf-0.151.3.tar.gz",
+      "noticeBundleIncluded": false,
+      "contentHandling": "Separate download; excluded from notice-only ZIP. Original application code is not relicensed as LGPL merely by this download."
+    },
+    {
+      "file": "pc-1.6.5/object-manifest.json",
+      "url": "/assets/licenses/pc-1.6.5/object-manifest.json",
+      "bytes": 1085,
+      "sha256": "1b7ec02b1552e1088f5119e3d5fc79312e3989f5e1c87def9e4f0299e59fa6b8",
+      "component": "OneMouse zeroconf source and recombination kit",
+      "version": "PC1.6.5 / zeroconf0.151.3",
+      "licenseExpression": "LGPL-2.1-or-later and included third-party notices",
+      "scope": [
+        "source-availability-and-recombination"
+      ],
+      "sourceUrl": "https://onemouse.pages.dev/assets/licenses/pc-1.6.5/object-manifest.json",
+      "upstreamSourceUrl": "https://files.pythonhosted.org/packages/2b/7f/bb22975bbbc04765920b766e433410422794568053bff0ab5b3f0bf0197c/zeroconf-0.151.3.tar.gz",
+      "noticeBundleIncluded": false,
+      "contentHandling": "Separate download; excluded from notice-only ZIP. Original application code is not relicensed as LGPL merely by this download."
+    },
+    {
+      "file": "pc-1.6.5/recomposition-verification.json",
+      "url": "/assets/licenses/pc-1.6.5/recomposition-verification.json",
+      "bytes": 2260,
+      "sha256": "420b618cec64accc4c265047e56ec849302cae5fa8462b05d22080d02e474910",
+      "component": "OneMouse zeroconf source and recombination kit",
+      "version": "PC1.6.5 / zeroconf0.151.3",
+      "licenseExpression": "LGPL-2.1-or-later and included third-party notices",
+      "scope": [
+        "source-availability-and-recombination"
+      ],
+      "sourceUrl": "https://onemouse.pages.dev/assets/licenses/pc-1.6.5/recomposition-verification.json",
+      "upstreamSourceUrl": "https://files.pythonhosted.org/packages/2b/7f/bb22975bbbc04765920b766e433410422794568053bff0ab5b3f0bf0197c/zeroconf-0.151.3.tar.gz",
+      "noticeBundleIncluded": false,
+      "contentHandling": "Separate download; excluded from notice-only ZIP. Original application code is not relicensed as LGPL merely by this download."
+    },
+    {
       "file": "publisher-file-verification.json",
       "url": "/assets/licenses/publisher-file-verification.json",
       "bytes": 2961,
@@ -1096,7 +1240,8 @@
   "renderedInstructions": {
     "url": "/assets/licenses/pc-1.6.2/README.html",
     "additionalUrls": [
-      "/assets/licenses/pc-1.6.4/README.html"
+      "/assets/licenses/pc-1.6.4/README.html",
+      "/assets/licenses/pc-1.6.5/README.html"
     ],
     "note": "Presentation pages generated from the SHA-256-verified README.en.md and README.ko.md downloads for each release. The host may inject analytics into rendered HTML. Use the Markdown downloads and compliance-kit ZIP to verify unchanged instructions."
   }
