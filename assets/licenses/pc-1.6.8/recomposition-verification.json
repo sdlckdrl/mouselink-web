@@ -1,0 +1,59 @@
+{
+  "date": "2026-11-17",
+  "original_backend_sha256": "2303be9ea6a6c48054a2d9b0fdf7496201af5da9f04f72fa052f870fd8d3b52a",
+  "original_setup_sha256": "f3f61e305dee4aa0d6afa272b07ff133219dfbefd66fe2c7074634626a2a2fcc",
+  "original_msix_sha256": "e64ccfe40a0ab6542213492f9e20f845a2b466c709140a5d6fc54e63cc89b097",
+  "original_backend_unchanged": true,
+  "backend_identical_to_web_build_layout_and_msix": true,
+  "backend_identical_to_setup_extracted_payload": true,
+  "zeroconf_source_sha256": "ce6c548e665759b6150cef4db9ab9d7bdd89857e90c513abd6b7340bdd7dbd6a",
+  "normal_reconstructed_sha256": "f76ef8ad245c82365d32b110f3594471334123d2c490b6e9fc3255cf2afe12a1",
+  "unmodified_source_probe_sha256": "31e9188a0b6b4f28e16dde18daa6aad5fdf9653dd7bbc606757bcc44df046247",
+  "modified_source_probe_sha256": "36b34a677eb74fa0d7ae6176824a1cfe11d671e7308cf07cbeeeb313e0686d76",
+  "original_library_probe": {
+    "exit_code": 0,
+    "version": "0.151.3",
+    "python_version": "3.11.9",
+    "marker": null,
+    "cache_marker": null,
+    "service_port": 5000,
+    "empty_cache": true,
+    "library_file": "__init__.py",
+    "cache_file": "_cache.cp311-win_amd64.pyd"
+  },
+  "unmodified_source_probe": {
+    "exit_code": 0,
+    "version": "0.151.3",
+    "python_version": "3.11.9",
+    "marker": null,
+    "cache_marker": null,
+    "service_port": 5000,
+    "empty_cache": true,
+    "library_file": "__init__.py",
+    "cache_file": "_cache.py"
+  },
+  "modified_library_probe": {
+    "exit_code": 0,
+    "version": "0.151.3",
+    "python_version": "3.11.9",
+    "marker": "modified-zeroconf-1.6.8",
+    "cache_marker": "modified-zeroconf-1.6.8",
+    "service_port": 5000,
+    "empty_cache": true,
+    "library_file": "__init__.py",
+    "cache_file": "_cache.py"
+  },
+  "unchanged_non_zeroconf_pyz_payloads": 500,
+  "unchanged_carchive_payloads": 721,
+  "removed_zeroconf_cython_extensions": 18,
+  "replacement_python_modules": 33,
+  "bootloader_bytes_unchanged": true,
+  "base_object_manifest_parts_verified": true,
+  "application_source_published": false,
+  "application_started": false,
+  "limitations": [
+    "Import and data-only library API verification; desktop interface and end-to-end discovery/input/file transfer not exercised.",
+    "The custom copy uses upstream-supported pure Python zeroconf and can be slower than the native release.",
+    "Installed signed Store packages are not modified or re-signed."
+  ]
+}
