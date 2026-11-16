@@ -54,7 +54,7 @@
                 "name": "Does mouse and keyboard sharing work without an internet connection?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Software KVMs such as OneMouse, Synergy, Deskflow, and Mouse Without Borders run over the local network and do not need internet access. OneMouse can also connect over Bluetooth with no router at all. Some vendor tools depend on an online account: Apple Universal Control requires an Apple Account, Samsung Multi Control a Samsung account, and Logitech Flow needs internet access for its initial setup."
+                  "text": "Local network connections in OneMouse, Synergy, Deskflow, and Mouse Without Borders work without internet access. OneMouse can also connect compatible devices over Bluetooth without a router. Connecting through the same Google account in OneMouse requires internet access. Apple Universal Control requires an Apple Account, Samsung Multi Control a Samsung account, and Logitech Flow needs internet access for its initial setup."
                 }
               },
               {
@@ -70,7 +70,7 @@
                 "name": "Does OneMouse need an account or a server?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "No. Pair locally with a 6-digit code or QR code; data travels directly between your devices, without sign-in or a relay server. See Technical & Security for connection details."
+                  "text": "Local Wi-Fi/LAN pairing with a QR code or a 6-digit code and Bluetooth connections work without a Google account. You can also sign in to the same Google account on both devices and find them in your device list over the internet. See the connection guide for steps."
                 }
               },
               {
@@ -94,7 +94,7 @@
                 "name": "Synergy or OneMouse?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Synergy is a paid software KVM for Windows, macOS, and Linux in which any computer can be the server. OneMouse requires a Windows host, does not support Linux, and its Windows and Mac apps are free. The main difference is Android: Synergy has no mobile client, while OneMouse controls Android phones and tablets over Wi-Fi or Bluetooth."
+                  "text": "Synergy is a paid software KVM for Windows, macOS, and Linux in which any computer can be the server. OneMouse lets you use either a Windows PC or an Apple Silicon Mac as the host, and both desktop apps are free. OneMouse also supports Android phones and tablets. Synergy has no mobile client."
                 }
               },
               {
@@ -102,7 +102,7 @@
                 "name": "Does OneMouse support Linux, iPhone, or iPad?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "No. OneMouse targets are Android, other Windows PCs, and Apple Silicon Macs running macOS 13 or later, always with a Windows 10/11 PC as the host. For Linux, use Deskflow or Synergy. For a Mac and an iPad, use Apple Universal Control."
+                  "text": "OneMouse supports Windows 10/11 PCs and Apple Silicon Macs running macOS 13 or later as hosts. Supported targets include Windows and Mac computers and Android phones and tablets. For Linux, use Deskflow or Synergy. For a Mac and an iPad, use Apple Universal Control."
                 }
               }
             ]
@@ -217,15 +217,15 @@
                 <tr>
                   <td><b>OneMouse</b> (ours)</td>
                   <td>
-                    Host: Windows 10/11. Targets: Android, Windows, Apple Silicon Mac (macOS 13+)
+                    Hosts: Windows 10/11, Apple Silicon Mac (macOS 13+). Targets: Windows, Mac, Android
                   </td>
                   <td>Yes, the cursor crosses the screen edge</td>
                   <td>
                     Windows and Mac apps free; Android Free tier (ads, limits) or one-time Pro
                   </td>
                   <td>No</td>
-                  <td>Wi-Fi/LAN or Bluetooth (Mac: LAN; Bluetooth in beta)</td>
-                  <td>No Linux, no iPhone/iPad. Local pairing, no account</td>
+                  <td>Wi-Fi/LAN, Bluetooth (beta on Mac), optional Google account connection</td>
+                  <td>Local pairing works without signing in. No Linux or iPhone/iPad support</td>
                 </tr>
                 <tr>
                   <td><b>Synergy</b></td>
@@ -340,13 +340,14 @@
               <p class="card-lbl">PC to PC and PC to Android · our product</p>
               <h3>OneMouse</h3>
               <p>
-                A Windows 10/11 PC shares its mouse and keyboard with Android phones and tablets,
-                other Windows PCs, and Apple Silicon Macs (macOS 13+) by crossing the screen edge,
-                with file transfer and clipboard sync. Everything stays local: pairing uses a
-                6-digit code or QR code, and there is no account or server. Limits: Windows must be
-                the host, no Linux, no iPhone or iPad, Macs need Apple Silicon and connect over LAN by
-                default (Bluetooth for Mac is a beta option, off by default), and the Android Free tier has ads plus daily clipboard and file limits that a
-                one-time Pro unlock removes.
+                Either a Windows 10/11 PC or an Apple Silicon Mac (macOS 13+) can share its mouse and
+                keyboard. Move the cursor across the screen edge to a connected computer or Android
+                phone or tablet. File transfer and clipboard sync are also available. Pair over local
+                Wi-Fi/LAN with a QR code or a 6-digit code, or use Bluetooth with compatible devices
+                (beta on Mac). On supported app versions, sign in to the same Google account to
+                find your devices over the internet. Connection options depend on the devices and
+                features you use. The Android Free tier has ads and daily clipboard and file limits
+                that a one-time Pro purchase removes.
               </p>
             </article>
             <article class="card">
@@ -474,19 +475,18 @@
                 OneMouse (Bluetooth and folder transfer), and ShareMouse Free (two PCs, personal use).
               </li>
               <li>
-                <b>Windows PC + Android:</b> For a cursor on the phone itself, compare OneMouse (Wi-Fi or
-                Bluetooth, no brand requirement) and Samsung Multi Control (Galaxy, a supported PC,
-                and Samsung account). For a mirror window, compare scrcpy (USB debugging) and
-                Phone Link (supported brands).
+                <b>Windows PC + Android:</b> For a cursor on the phone itself, compare OneMouse (Wi-Fi,
+                Bluetooth, or Google account connection, regardless of brand) and Samsung Multi
+                Control (Galaxy, a supported PC, and Samsung account). For a mirror window, compare
+                scrcpy (USB debugging) and Phone Link (supported brands).
               </li>
               <li>
-                <b>Windows PC + Mac:</b> OneMouse connects a Windows host to an Apple Silicon Mac on macOS 13+
-                over LAN. For a Mac host or Intel Mac, compare Synergy, Deskflow, ShareMouse, or Flow
-                with a compatible Logitech mouse.
+                <b>Windows PC + Mac:</b> With OneMouse, either a Windows PC or an Apple Silicon Mac on
+                macOS 13 or later can share its mouse and keyboard with the other. For Intel Macs,
+                compare Synergy, Deskflow, ShareMouse, or Flow with a compatible Logitech mouse.
               </li>
               <li>
                 <b>Mac + iPad:</b> Apple Universal Control is built in.
-                OneMouse does not support iPad or a Mac host.
               </li>
               <li>
                 <b>Linux involved:</b> OneMouse does not support it; candidates include Deskflow (free),
@@ -521,11 +521,12 @@
                 Does mouse and keyboard sharing work without an internet connection?
               </summary>
               <div class="a">
-                Software KVMs such as OneMouse, Synergy, Deskflow, and Mouse Without Borders run
-                over the local network and do not need internet access. OneMouse can also connect
-                over <b>Bluetooth with no router at all</b>. Some vendor tools depend on an online
-                account: Apple Universal Control requires an Apple Account, Samsung Multi Control a
-                Samsung account, and Logitech Flow needs internet access for its initial setup.
+                Local network connections in OneMouse, Synergy, Deskflow, and Mouse Without Borders
+                work without internet access. OneMouse can also connect compatible devices over
+                <b>Bluetooth without a router</b>. Connecting through the same Google account in
+                OneMouse requires internet access. Apple Universal Control requires an Apple Account,
+                Samsung Multi Control a Samsung account, and Logitech Flow needs internet access for
+                its initial setup.
               </div>
             </details>
             <details>
@@ -543,9 +544,10 @@
             <details>
               <summary>Does OneMouse need an account or a server?</summary>
               <div class="a">
-                No. Pair locally with a <b>6-digit code or QR code</b>; data travels directly between your
-                devices, without sign-in or a relay server.
-                See <a class="text-link" href="./technical#data-flow">Technical &amp; Security</a> for connection details.
+                Local Wi-Fi/LAN pairing with a <b>QR code or a 6-digit code</b> and Bluetooth connections
+                work without a Google account. You can also <b>sign in to the same Google account</b>
+                on both devices and find them in your device list over the internet.
+                See the <a class="text-link" href="./guide#connect-account">connection guide</a> for steps.
               </div>
             </details>
             <details>
@@ -574,18 +576,17 @@
               <summary>Synergy or OneMouse?</summary>
               <div class="a">
                 Synergy is a paid software KVM for Windows, macOS, and Linux in which any computer
-                can be the server. OneMouse requires a Windows host, does not support Linux, and its
-                Windows and Mac apps are free. The main difference is <b>Android</b>: Synergy has no
-                mobile client, while OneMouse controls Android phones and tablets over Wi-Fi or
-                Bluetooth.
+                can be the server. OneMouse lets you use either a Windows PC or an Apple Silicon Mac
+                as the host, and both desktop apps are free. OneMouse also supports <b>Android phones
+                and tablets</b>. Synergy has no mobile client.
               </div>
             </details>
             <details>
               <summary>Does OneMouse support Linux, iPhone, or iPad?</summary>
               <div class="a">
-                No. OneMouse targets are Android, other Windows PCs, and Apple Silicon Macs running
-                macOS 13 or later, always with a Windows 10/11 PC as the host. For Linux, use
-                Deskflow or Synergy. For a Mac and an iPad, use Apple Universal Control.
+                OneMouse supports Windows 10/11 PCs and Apple Silicon Macs running macOS 13 or later
+                as hosts. Supported targets include Windows and Mac computers and Android phones and
+                tablets. For Linux, use Deskflow or Synergy. For a Mac and an iPad, use Apple Universal Control.
               </div>
             </details>
           </div>

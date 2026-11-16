@@ -54,7 +54,7 @@
                 "name": "没有互联网连接也能共享鼠标键盘吗？",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "OneMouse、Synergy、Deskflow、Mouse Without Borders 等软件 KVM 在本地网络上运行，不需要互联网。OneMouse 还能在完全没有路由器的情况下通过 Bluetooth 连接。有些厂商工具依赖在线账号：Apple Universal Control 需要 Apple 账户，Samsung Multi Control 需要三星账号，Logitech Flow 首次设置时需要联网。"
+                  "text": "OneMouse、Synergy、Deskflow、Mouse Without Borders 等软件 KVM 可以在本地网络上运行，无需连接互联网。支持 Bluetooth 的设备组合无需路由器即可连接 OneMouse。选择 Google 账号连接时需要联网。Apple Universal Control 需要 Apple 账户，Samsung Multi Control 需要三星账号，Logitech Flow 首次设置时需要联网。"
                 }
               },
               {
@@ -70,7 +70,7 @@
                 "name": "OneMouse 需要账号或服务器吗？",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "不需要。通过6 位代码或 QR 码在本地配对，数据直接在自己的设备之间传输，无需登录或中继服务器。 连接详情请查看技术与安全。"
+                  "text": "使用局域网或 Bluetooth 连接，无需登录。局域网配对支持 6 位代码或二维码。使用受支持的版本时，也可以在各设备上登录同一 Google 账号，通过互联网连接自己的设备。连接详情请查看技术与安全。"
                 }
               },
               {
@@ -94,7 +94,7 @@
                 "name": "选 Synergy 还是 OneMouse？",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Synergy 是面向 Windows、macOS 和 Linux 的付费软件 KVM，任何一台电脑都可以作为服务器。OneMouse 需要 Windows 作为主机，不支持 Linux，其 Windows 与 Mac 应用免费。主要区别在于 Android：Synergy 没有移动端客户端，而 OneMouse 可以通过 Wi-Fi 或 Bluetooth 控制 Android 手机和平板。"
+                  "text": "Synergy 是面向 Windows、macOS 和 Linux 的付费软件 KVM，任何一台电脑都可以作为服务器。OneMouse 可以从 Windows PC 或搭载 Apple 芯片的 Mac 共享鼠标键盘，两款应用均免费。OneMouse 还支持操作 Android 手机和平板。Synergy 没有移动端客户端。"
                 }
               },
               {
@@ -102,7 +102,7 @@
                 "name": "OneMouse 支持 Linux、iPhone 或 iPad 吗？",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "不支持。OneMouse 的连接目标是 Android、其他 Windows PC 以及运行 macOS 13 或更高版本的 Apple 芯片 Mac，并且始终以 Windows 10/11 PC 作为主机。Linux 请使用 Deskflow 或 Synergy；Mac 加 iPad 请使用 Apple Universal Control。"
+                  "text": "不支持。OneMouse 可以从 Windows 10/11 PC 或运行 macOS 13 及更高版本的 Apple 芯片 Mac 共享鼠标键盘，并连接受支持的 Windows、Mac 和 Android 设备。Linux 请使用 Deskflow 或 Synergy。Mac 与 iPad 可以使用 Apple Universal Control。"
                 }
               }
             ]
@@ -214,12 +214,12 @@
               <tbody>
                 <tr>
                   <td><b>OneMouse</b>（本站产品）</td>
-                  <td>主机：Windows 10/11。连接目标：Android、Windows、Apple 芯片 Mac（macOS 13+）</td>
+                  <td>主控端：Windows 10/11 或 Apple 芯片 Mac（macOS 13+）。可连接 Windows、Mac 和 Android</td>
                   <td>支持，光标跨越屏幕边缘</td>
                   <td>Windows 与 Mac 应用免费；Android 为 Free 版（含广告、有限制）或一次性购买 Pro</td>
                   <td>否</td>
-                  <td>Wi-Fi/LAN 或 Bluetooth（Mac：LAN，Bluetooth 为测试版）</td>
-                  <td>不支持 Linux、iPhone/iPad。本地配对，无需账号</td>
+                  <td>Wi-Fi 或局域网、Bluetooth（Mac 为测试版）、同一 Google 账号（可选）</td>
+                  <td>不支持 Linux、iPhone/iPad。局域网和 Bluetooth 配对无需登录</td>
                 </tr>
                 <tr>
                   <td><b>Synergy</b></td>
@@ -329,7 +329,7 @@
               <p class="card-lbl">PC 对 PC 与 PC 对 Android · 本站产品</p>
               <h3>OneMouse</h3>
               <p>
-                一台 Windows 10/11 PC 通过跨越屏幕边缘的方式，把鼠标和键盘共享给 Android 手机和平板、其他 Windows PC 以及 Apple 芯片 Mac（macOS 13+），并支持文件传输和剪贴板同步。一切都在本地完成：配对使用 6 位代码或 QR 码，没有账号也没有服务器。限制：必须由 Windows 作为主机，不支持 Linux，不支持 iPhone 或 iPad，Mac 需要 Apple 芯片且默认通过 LAN 连接（Mac Bluetooth 为默认关闭的测试版功能），Android Free 版含广告并有每日剪贴板与文件限额，一次性购买 Pro 即可解除。
+                Windows 10/11 PC 和搭载 Apple 芯片的 Mac（macOS 13+）都可以作为主控端。把光标移过屏幕边缘，即可用同一套鼠标和键盘操作已连接的 Windows、Mac 或 Android 设备。OneMouse 也支持文件传输和剪贴板同步。局域网配对支持 6 位代码或二维码，兼容设备之间也可以通过 Bluetooth 连接。Mac 上的 Bluetooth 为测试版，默认关闭。受支持的应用版本还可选择使用同一 Google 账号通过互联网连接。可用的连接方式因设备和功能而异。不支持 Linux、iPhone 或 iPad。Android Free 版含广告，剪贴板和文件传输有每日限额，一次性购买 Pro 即可解除限制。
               </p>
             </article>
             <article class="card">
@@ -419,16 +419,16 @@
                 <b>两台 Windows PC：</b>可比较 Mouse Without Borders（PowerToys，最多四台）、OneMouse（Bluetooth 和文件夹传输）及 ShareMouse Free（个人使用，两台电脑）。
               </li>
               <li>
-                <b>Windows PC + Android：</b>要在手机自身屏幕上移动光标，可比较 OneMouse（Wi-Fi 或 Bluetooth，不限品牌）和 Samsung Multi Control（Galaxy、支持的电脑、三星账号）。
+                <b>Windows PC + Android：</b>要在手机自身屏幕上移动光标，可比较 OneMouse（Wi-Fi、Bluetooth 或 Google 账号连接，不限品牌）和 Samsung Multi Control（Galaxy、支持的电脑、三星账号）。
                 要使用镜像窗口，可比较 scrcpy（USB 调试）和 Phone Link（支持的品牌）。
               </li>
               <li>
-                <b>Windows PC + Mac：</b>OneMouse 通过 LAN 连接 Windows 主机和 macOS 13+ Apple 芯片 Mac。
-                对于 Mac 控制端或 Intel Mac，可比较 Synergy、Deskflow、ShareMouse，或需要兼容 Logitech 鼠标的 Flow。
+                <b>Windows PC + Mac：</b>OneMouse 可通过局域网连接 Windows PC 和 Apple 芯片 Mac（macOS 13+），两台电脑都能共享自己的鼠标和键盘。
+                如果使用 Intel Mac，可比较 Synergy、Deskflow、ShareMouse，或需要兼容 Logitech 鼠标的 Flow。
               </li>
               <li>
                 <b>Mac + iPad：</b>Apple Universal Control 已内置。
-                OneMouse 不支持 iPad 或 Mac 控制端。
+                OneMouse 不支持 iPad。
               </li>
               <li>
                 <b>涉及 Linux：</b>OneMouse 不支持，可比较 Deskflow（免费）、Synergy（付费）和 Lan Mouse（Wayland）。
@@ -456,7 +456,7 @@
             <details>
               <summary>没有互联网连接也能共享鼠标键盘吗？</summary>
               <div class="a">
-                OneMouse、Synergy、Deskflow、Mouse Without Borders 等软件 KVM 在本地网络上运行，不需要互联网。OneMouse 还能在<b>完全没有路由器的情况下通过 Bluetooth</b> 连接。有些厂商工具依赖在线账号：Apple Universal Control 需要 Apple 账户，Samsung Multi Control 需要三星账号，Logitech Flow 首次设置时需要联网。
+                OneMouse、Synergy、Deskflow、Mouse Without Borders 等软件 KVM 可以在本地网络上运行，无需连接互联网。支持 Bluetooth 的设备组合<b>无需路由器</b>即可连接 OneMouse。选择 Google 账号连接时需要联网。Apple Universal Control 需要 Apple 账户，Samsung Multi Control 需要三星账号，Logitech Flow 首次设置时需要联网。
               </div>
             </details>
             <details>
@@ -468,8 +468,7 @@
             <details>
               <summary>OneMouse 需要账号或服务器吗？</summary>
               <div class="a">
-                不需要。通过<b>6 位代码或 QR 码</b>在本地配对，数据直接在自己的设备之间传输，无需登录或中继服务器。
-                连接详情请查看<a class="text-link" href="./technical#data-flow">技术与安全</a>。
+                使用局域网或 Bluetooth 连接，无需登录。局域网配对支持 <b>6 位代码或二维码</b>。使用受支持的版本时，也可以在各设备上登录<b>同一 Google 账号</b>，通过互联网连接自己的设备。连接详情请查看<a class="text-link" href="./technical#data-flow">技术与安全</a>。
               </div>
             </details>
             <details>
@@ -487,13 +486,13 @@
             <details>
               <summary>选 Synergy 还是 OneMouse？</summary>
               <div class="a">
-                Synergy 是面向 Windows、macOS 和 Linux 的付费软件 KVM，任何一台电脑都可以作为服务器。OneMouse 需要 Windows 作为主机，不支持 Linux，其 Windows 与 Mac 应用免费。主要区别在于 <b>Android</b>：Synergy 没有移动端客户端，而 OneMouse 可以通过 Wi-Fi 或 Bluetooth 控制 Android 手机和平板。
+                Synergy 是面向 Windows、macOS 和 Linux 的付费软件 KVM，任何一台电脑都可以作为服务器。OneMouse 可以从 Windows PC 或搭载 Apple 芯片的 Mac 共享鼠标键盘，两款应用均免费。OneMouse 还支持操作 <b>Android</b> 手机和平板。Synergy 没有移动端客户端。
               </div>
             </details>
             <details>
               <summary>OneMouse 支持 Linux、iPhone 或 iPad 吗？</summary>
               <div class="a">
-                不支持。OneMouse 的连接目标是 Android、其他 Windows PC 以及运行 macOS 13 或更高版本的 Apple 芯片 Mac，并且始终以 Windows 10/11 PC 作为主机。Linux 请使用 Deskflow 或 Synergy；Mac 加 iPad 请使用 Apple Universal Control。
+                不支持。OneMouse 可以从 Windows 10/11 PC 或运行 macOS 13 及更高版本的 Apple 芯片 Mac 共享鼠标键盘，并连接受支持的 Windows、Mac 和 Android 设备。Linux 请使用 Deskflow 或 Synergy。Mac 与 iPad 可以使用 Apple Universal Control。
               </div>
             </details>
           </div>

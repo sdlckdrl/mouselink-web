@@ -54,7 +54,7 @@
                 "name": "マウス・キーボード共有はインターネット接続なしで使えますか？",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "OneMouse、Synergy、Deskflow、Mouse Without BordersなどのソフトウェアKVMはローカルネットワーク上で動作し、インターネット接続を必要としません。OneMouseはルーターがまったくない状態でもBluetoothで接続できます。一方、メーカー製ツールにはオンラインアカウントに依存するものがあります。Apple Universal ControlにはApple Account、Samsung Multi ControlにはSamsungアカウントが必要で、Logitech Flowは初期設定にインターネット接続が必要です。"
+                  "text": "OneMouse、Synergy、Deskflow、Mouse Without BordersなどのソフトウェアKVMはローカルネットワーク上で動作し、インターネット接続を必要としません。OneMouseは対応デバイス同士なら、ルーターなしでBluetooth接続もできます。Googleアカウントで接続する場合はインターネットが必要です。メーカー製ツールでは、Apple Universal ControlにApple Account、Samsung Multi ControlにSamsungアカウントが必要で、Logitech Flowは初期設定にインターネット接続が必要です。"
                 }
               },
               {
@@ -70,7 +70,7 @@
                 "name": "OneMouseにアカウントやサーバーは必要ですか？",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "必要ありません。6桁のコードまたはQRコードでローカルにペアリングし、データは自分のデバイス間で直接やり取りします。 ログインや中継サーバーは不要です。接続の詳細は技術・セキュリティをご覧ください。"
+                  "text": "LAN・Bluetoothで接続する場合はログイン不要です。LANでは6桁のコードまたはQRコードでペアリングできます。対応バージョンでは、各デバイスで同じGoogleアカウントにログインして、インターネット経由で自分のデバイスを接続する方法も選べます。接続の詳細は技術・セキュリティをご覧ください。"
                 }
               },
               {
@@ -94,7 +94,7 @@
                 "name": "SynergyとOneMouse、どちらを選ぶべきですか？",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "SynergyはWindows、macOS、Linux向けの有料ソフトウェアKVMで、どのコンピューターもサーバーになれます。OneMouseはWindowsホストが必須で、Linuxには非対応ですが、WindowsアプリとMacアプリは無料です。最大の違いはAndroidです。Synergyにはモバイルクライアントがありませんが、OneMouseはWi-FiまたはBluetoothでAndroidスマホ・タブレットを操作できます。"
+                  "text": "SynergyはWindows、macOS、Linux向けの有料ソフトウェアKVMで、どのコンピューターもサーバーになれます。OneMouseではWindows PCとApple Silicon Macのどちらからでもマウス・キーボードを共有でき、両方のアプリが無料です。OneMouseはAndroidスマホ・タブレットの操作にも対応しています。Synergyにはモバイルクライアントがありません。"
                 }
               },
               {
@@ -102,7 +102,7 @@
                 "name": "OneMouseはLinux、iPhone、iPadに対応していますか？",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "対応していません。OneMouseの接続先はAndroid、別のWindows PC、macOS 13以降のApple Silicon Macで、ホストは常にWindows 10/11 PCです。Linuxの場合はDeskflowまたはSynergyを、MacとiPadの場合はApple Universal Controlをお使いください。"
+                  "text": "対応していません。OneMouseの共有元はWindows 10/11 PCまたはmacOS 13以降のApple Silicon Macです。対応するWindows・Mac・Androidデバイスを接続できます。Linuxの場合はDeskflowまたはSynergyを、MacとiPadの場合はApple Universal Controlをお使いください。"
                 }
               }
             ]
@@ -215,15 +215,15 @@
                 <tr>
                   <td><b>OneMouse</b>（当社製品）</td>
                   <td>
-                    ホスト：Windows 10/11。接続先：Android、Windows、Apple Silicon Mac（macOS 13以降）
+                    共有元：Windows 10/11、Apple Silicon Mac（macOS 13以降）。接続先：Windows、Mac、Android
                   </td>
                   <td>対応。カーソルが画面の端を越えて移動</td>
                   <td>
                     WindowsアプリとMacアプリは無料。AndroidはFree（広告・制限あり）または買い切りのPro
                   </td>
                   <td>不要</td>
-                  <td>Wi-Fi/LANまたはBluetooth（MacはLAN、Bluetoothはベータ）</td>
-                  <td>Linux、iPhone/iPadは非対応。ローカルでペアリングし、アカウント不要</td>
+                  <td>Wi-Fi/LAN、Bluetooth（Macはベータ）、同じGoogleアカウント（任意）</td>
+                  <td>Linux、iPhone/iPadは非対応。LAN・Bluetoothのペアリングはログイン不要</td>
                 </tr>
                 <tr>
                   <td><b>Synergy</b></td>
@@ -337,7 +337,7 @@
               <p class="card-lbl">PCとPC・PCとAndroid · 当社製品</p>
               <h3>OneMouse</h3>
               <p>
-                Windows 10/11 PCのマウスとキーボードを、画面の端を越える方式でAndroidスマホ・タブレット、別のWindows PC、Apple Silicon Mac（macOS 13以降）と共有し、ファイル転送とクリップボード同期も備えています。すべてローカルで完結します。ペアリングは6桁のコードまたはQRコードで行い、アカウントもサーバーもありません。制限：ホストはWindowsに限られ、Linux、iPhone、iPadは非対応、MacはApple Silicon必須で既定ではLAN接続（Mac Bluetoothは既定オフのベータ機能）、Android Freeには広告と1日あたりのクリップボード・ファイル制限があります（買い切りのProで解除）。
+                Windows 10/11 PCまたはApple Silicon Mac（macOS 13以降）のマウスとキーボードを共有できます。カーソルを画面の端から接続先のWindows、Mac、Androidに移して操作します。ファイル転送やクリップボード同期にも対応しています。LANでは6桁のコードまたはQRコードでペアリングでき、対応デバイス同士ならBluetoothも使えます。MacのBluetoothは既定オフのベータ機能です。対応バージョンでは、同じGoogleアカウントでインターネット経由の接続も選べます。接続方式はデバイスの組み合わせや機能によって異なります。Linux、iPhone、iPadは非対応です。AndroidのFreeには広告と1日あたりのクリップボード・ファイル制限があり、買い切りのProで解除できます。
               </p>
             </article>
             <article class="card">
@@ -427,16 +427,16 @@
                 <b>Windows PCが2台：</b>Mouse Without Borders（PowerToys、最大4台）、OneMouse（Bluetooth・フォルダー転送）、ShareMouse Free（個人利用で2台）が候補です。
               </li>
               <li>
-                <b>Windows PC + Android：</b>スマホ自身の画面へカーソルを移すなら、OneMouse（Wi-Fi・Bluetooth、ブランド不問）とSamsung Multi Control（Galaxy・対応PC・Samsungアカウント）を比較してください。
+                <b>Windows PC + Android：</b>スマホ自身の画面へカーソルを移すなら、OneMouse（Wi-Fi・Bluetooth・Googleアカウント接続、ブランド不問）とSamsung Multi Control（Galaxy・対応PC・Samsungアカウント）を比較してください。
                 ミラーウィンドウならscrcpy（USBデバッグ）とPhone Link（対応ブランド）が候補です。
               </li>
               <li>
-                <b>Windows PC + Mac：</b>OneMouseはWindowsホストとmacOS 13以降のApple Silicon MacをLANで接続します。
-                MacホストやIntel MacではSynergy、Deskflow、ShareMouse、または対応Logitechマウスを使うFlowを比較してください。
+                <b>Windows PC + Mac：</b>Windows PCとmacOS 13以降のApple Silicon MacをLANでつなぎ、どちらのマウス・キーボードも共有元にできます。
+                Intel MacではSynergy、Deskflow、ShareMouse、または対応Logitechマウスを使うFlowを比較してください。
               </li>
               <li>
                 <b>Mac + iPad：</b>Apple Universal Controlが内蔵されています。
-                OneMouseはiPadとMacホストに対応していません。
+                OneMouseはiPadに対応していません。
               </li>
               <li>
                 <b>Linuxを含む場合：</b>OneMouseは非対応で、Deskflow（無料）、Synergy（有料）、Lan Mouse（Wayland）が候補です。
@@ -466,7 +466,7 @@
                 マウス・キーボード共有はインターネット接続なしで使えますか？
               </summary>
               <div class="a">
-                OneMouse、Synergy、Deskflow、Mouse Without BordersなどのソフトウェアKVMはローカルネットワーク上で動作し、インターネット接続を必要としません。OneMouseは<b>ルーターがまったくない状態でもBluetooth</b>で接続できます。一方、メーカー製ツールにはオンラインアカウントに依存するものがあります。Apple Universal ControlにはApple Account、Samsung Multi ControlにはSamsungアカウントが必要で、Logitech Flowは初期設定にインターネット接続が必要です。
+                OneMouse、Synergy、Deskflow、Mouse Without BordersなどのソフトウェアKVMはローカルネットワーク上で動作し、インターネット接続を必要としません。OneMouseは対応デバイス同士なら、ルーターなしで<b>Bluetooth接続</b>もできます。Googleアカウントで接続する場合はインターネットが必要です。メーカー製ツールでは、Apple Universal ControlにApple Account、Samsung Multi ControlにSamsungアカウントが必要で、Logitech Flowは初期設定にインターネット接続が必要です。
               </div>
             </details>
             <details>
@@ -480,8 +480,7 @@
             <details>
               <summary>OneMouseにアカウントやサーバーは必要ですか？</summary>
               <div class="a">
-                必要ありません。<b>6桁のコードまたはQRコード</b>でローカルにペアリングし、データは自分のデバイス間で直接やり取りします。
-                ログインや中継サーバーは不要です。接続の詳細は<a class="text-link" href="./technical#data-flow">技術・セキュリティ</a>をご覧ください。
+                LAN・Bluetoothで接続する場合はログイン不要です。LANでは<b>6桁のコードまたはQRコード</b>でペアリングできます。対応バージョンでは、各デバイスで<b>同じGoogleアカウント</b>にログインして、インターネット経由で自分のデバイスを接続する方法も選べます。接続の詳細は<a class="text-link" href="./technical#data-flow">技術・セキュリティ</a>をご覧ください。
               </div>
             </details>
             <details>
@@ -499,13 +498,13 @@
             <details>
               <summary>SynergyとOneMouse、どちらを選ぶべきですか？</summary>
               <div class="a">
-                SynergyはWindows、macOS、Linux向けの有料ソフトウェアKVMで、どのコンピューターもサーバーになれます。OneMouseはWindowsホストが必須で、Linuxには非対応ですが、WindowsアプリとMacアプリは無料です。最大の違いは<b>Android</b>です。Synergyにはモバイルクライアントがありませんが、OneMouseはWi-FiまたはBluetoothでAndroidスマホ・タブレットを操作できます。
+                SynergyはWindows、macOS、Linux向けの有料ソフトウェアKVMで、どのコンピューターもサーバーになれます。OneMouseではWindows PCとApple Silicon Macのどちらからでもマウス・キーボードを共有でき、両方のアプリが無料です。OneMouseは<b>Android</b>スマホ・タブレットの操作にも対応しています。Synergyにはモバイルクライアントがありません。
               </div>
             </details>
             <details>
               <summary>OneMouseはLinux、iPhone、iPadに対応していますか？</summary>
               <div class="a">
-                対応していません。OneMouseの接続先はAndroid、別のWindows PC、macOS 13以降のApple Silicon Macで、ホストは常にWindows 10/11 PCです。Linuxの場合はDeskflowまたはSynergyを、MacとiPadの場合はApple Universal Controlをお使いください。
+                対応していません。OneMouseの共有元はWindows 10/11 PCまたはmacOS 13以降のApple Silicon Macです。対応するWindows・Mac・Androidデバイスを接続できます。Linuxの場合はDeskflowまたはSynergyを、MacとiPadの場合はApple Universal Controlをお使いください。
               </div>
             </details>
           </div>
