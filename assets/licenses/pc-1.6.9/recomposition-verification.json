@@ -1,0 +1,59 @@
+{
+  "date": "2026-11-18",
+  "original_backend_sha256": "9fcbc7acb24713377d2f54a1f55c43eb50d03168215ee8e125a7831de54f2908",
+  "original_setup_sha256": "4d86494c1902f0fc9626cc85952efcafb36161e98d169d5dab5b7e85c5e6fbc6",
+  "original_msix_sha256": "20bab218bfd357763854ed297f2846a1abfa2ee308a8c5039bd9d8043709b5d5",
+  "original_backend_unchanged": true,
+  "backend_identical_to_web_build_layout_and_msix": true,
+  "zeroconf_source_sha256": "ce6c548e665759b6150cef4db9ab9d7bdd89857e90c513abd6b7340bdd7dbd6a",
+  "normal_reconstructed_sha256": "6a3ae58d040603b8ff7ed6c62bd1bc989b968ba51df642231f75a53838a03d0a",
+  "unmodified_source_probe_sha256": "656a898f2e8247dc8492dc1ef2273a3e885baae453d07c62c8cd4350ad600e26",
+  "modified_source_probe_sha256": "5ab47967d8c8041ab60220b680b270e09703ece13a73d6086a23ccb60e25f1f7",
+  "original_library_probe": {
+    "exit_code": 0,
+    "python_version": "3.11.9",
+    "version": "0.151.3",
+    "marker": null,
+    "cache_marker": null,
+    "service_port": 5000,
+    "empty_cache": true,
+    "library_file": "__init__.py",
+    "cache_file": "_cache.cp311-win_amd64.pyd"
+  },
+  "unmodified_source_probe": {
+    "exit_code": 0,
+    "python_version": "3.11.9",
+    "version": "0.151.3",
+    "marker": null,
+    "cache_marker": null,
+    "service_port": 5000,
+    "empty_cache": true,
+    "library_file": "__init__.py",
+    "cache_file": "_cache.py"
+  },
+  "modified_library_probe": {
+    "exit_code": 0,
+    "python_version": "3.11.9",
+    "version": "0.151.3",
+    "marker": "modified-zeroconf-1.6.9",
+    "cache_marker": "modified-zeroconf-1.6.9",
+    "service_port": 5000,
+    "empty_cache": true,
+    "library_file": "__init__.py",
+    "cache_file": "_cache.py"
+  },
+  "unchanged_non_zeroconf_pyz_payloads": 499,
+  "unchanged_carchive_payloads": 721,
+  "removed_zeroconf_cython_extensions": 18,
+  "replacement_python_modules": 33,
+  "bootloader_bytes_unchanged": true,
+  "base_object_manifest_parts_verified": true,
+  "application_source_published": false,
+  "application_started": false,
+  "limitations": [
+    "Import and data-only library API verification; desktop interface and end-to-end discovery/input/file transfer not exercised.",
+    "The custom copy uses upstream-supported pure Python zeroconf and can be slower than the native release.",
+    "Installed signed Store packages are not modified or re-signed.",
+    "Setup EXE hash was verified against its build record; its payload was not independently extracted during this recomposition check."
+  ]
+}
