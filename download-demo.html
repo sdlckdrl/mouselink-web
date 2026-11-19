@@ -13,19 +13,19 @@
 <a class="skip" href="#main">본문으로 이동</a>
 <header class="preview-header"><div class="preview-frame">
   <a class="preview-brand" href="/demo" aria-label="OneMouse 홈 시안"><span class="preview-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 3v15l4-3 3 6 2.5-1.2-3-6H18z"/></svg></span>OneMouse</a>
-  <nav class="preview-nav" aria-label="홈페이지 시안 메뉴"><a href="/demo">홈 시안</a><a href="/guide-demo">연결 가이드</a><a href="/help-demo">문제 해결</a><a href="/download-demo" aria-current="page">다운로드</a></nav>
+  <nav class="preview-nav" aria-label="홈페이지 시안 메뉴"><a href="/demo">홈 시안</a><a href="/features-demo">기능 소개</a><a href="/guide-demo">연결 가이드</a><a href="/help-demo">문제 해결</a><a href="/download-demo" aria-current="page">다운로드</a></nav>
 </div></header>
 <main id="main">
 <div class="hero"><div class="layout"><p class="eyebrow">OneMouse 다운로드 · 시안</p><h1>내 기기에 맞는 앱을 받으세요.</h1><p class="subtitle">마우스·키보드가 연결된 Windows PC에 먼저 설치하고, 조작할 기기에도 OneMouse를 설치하세요.</p></div></div>
 
 <section class="section layout" aria-labelledby="download-platform"><h2 id="download-platform">어떤 기기에 설치하나요?</h2>
 <div class="cards">
- <article class="card" id="windows"><span class="pill">먼저 설치</span><h3>Windows</h3><p>Windows 10·11. 마우스·키보드가 연결된 PC에 먼저 설치하세요. 다른 Windows PC를 연결할 때는 양쪽에 설치해요.</p>
- <div class="buttons"><a class="btn primary" href="https://apps.microsoft.com/detail/9MZHT0262V7Q">Microsoft Store에서 받기</a><a class="btn" href="/#get">Windows 설치 파일 안내</a></div></article>
+ <article class="card download-card" id="windows"><span class="pill">먼저 설치</span><h3>Windows</h3><p>Windows 10·11. 마우스·키보드가 연결된 PC에 먼저 설치하세요. 다른 Windows PC를 연결할 때는 양쪽에 설치해요.</p>
+ <div class="buttons"><a class="btn primary" href="https://apps.microsoft.com/detail/9MZHT0262V7Q">Microsoft Store에서 받기</a><a class="btn" href="https://github.com/sdlckdrl/mouselink-web/releases/download/v1.7.0/OneMouse-Setup-1.7.0-x64.exe" data-latest-windows-download download>Windows 설치 파일 받기</a></div></article>
  <article class="card" id="android"><span class="pill">연결할 기기</span><h3>Android 폰·태블릿</h3><p>Windows 마우스·키보드 입력을 받으려면 OneMouse 접근성 서비스를 켜야 해요.</p>
  <div class="buttons"><a class="btn primary" href="https://play.google.com/store/apps/details?id=com.mouselink.app">Google Play에서 받기</a><a class="btn" href="https://apps.samsung.com/appquery/appDetail.as?appId=com.mouselink.app.galaxy">Galaxy Store에서 받기</a></div></article>
- <article class="card" id="mac"><span class="pill">연결할 기기</span><h3>Mac</h3><p>Apple Silicon · macOS 13 이상. 마우스·키보드 입력엔 Mac의 손쉬운 사용 권한이 필요해요.</p>
- <div class="buttons"><a class="btn primary" href="/#get">공식 Mac 다운로드 안내</a></div></article>
+ <article class="card mac-download-card" id="mac"><span class="pill">연결할 기기</span><h3>Mac</h3><p>Apple Silicon · macOS 13 이상. 마우스·키보드 입력엔 Mac의 손쉬운 사용 권한이 필요해요.</p>
+ <div class="buttons"><a class="btn primary" href="https://github.com/sdlckdrl/mouselink-web/releases/download/mac-v1.6.8/OneMouse-macOS-1.6.8-Apple-Silicon.dmg" data-latest-macos-download data-ready-label="Apple Silicon용 받기" download>Apple Silicon용 받기</a></div></article>
 </div></section>
 <p class="layout fine">설치 전 가격이나 제공 항목은 각 스토어에서 확인하세요. <a href="/pricing">기존 요금 안내</a></p>
 <section class="section layout" aria-labelledby="download-next"><h2 id="download-next">설치했다면 연결해요.</h2><p class="plain">처음에는 두 기기를 같은 공유기에 연결하는 게 가장 간단해요.</p>
@@ -38,5 +38,6 @@
     <a href="/compatibility-demo">지원 기기·연결 방식</a><a href="/technical">기술·보안</a><a href="/pricing">요금 안내</a><a href="/privacy">개인정보</a><a href="/terms">이용약관</a><a href="/licenses">오픈소스 라이선스</a><a href="/">기존 홈페이지</a>
   </nav>
 </div></footer>
+<script src="/js/downloads.js" defer></script>
 </body>
 </html>

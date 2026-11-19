@@ -19,7 +19,7 @@
 <a class="skip" href="#main">본문으로 이동</a>
 <header class="preview-header"><div class="preview-frame">
   <a class="preview-brand" href="/demo" aria-label="OneMouse 홈 시안"><span class="preview-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 3v15l4-3 3 6 2.5-1.2-3-6H18z"/></svg></span>OneMouse</a>
-  <nav class="preview-nav" aria-label="홈페이지 시안 메뉴"><a href="/demo">홈 시안</a><a href="/guide-demo" aria-current="page">연결 가이드</a><a href="/help-demo">문제 해결</a><a href="/download-demo">다운로드</a></nav>
+  <nav class="preview-nav" aria-label="홈페이지 시안 메뉴"><a href="/demo">홈 시안</a><a href="/features-demo">기능 소개</a><a href="/guide-demo" aria-current="page">연결 가이드</a><a href="/help-demo">문제 해결</a><a href="/download-demo">다운로드</a></nav>
 </div></header>
 <main id="main">
   <div class="hero"><div class="wrap">
@@ -50,7 +50,10 @@
           <figure class="shot"><a href="/assets/pairing/pc-position-ko.webp" aria-label="Android 기기 배치 예시 화면 크게 보기"><img src="/assets/pairing/pc-position-ko.webp" alt="Windows OneMouse에서 Android를 PC 오른쪽에 배치한 화면" loading="lazy"></a><figcaption>같은 방향으로 마우스를 넘겨요.</figcaption></figure></li>
       </ol>
       <div class="tip"><strong>연결됐는데 커서가 안 넘어가나요?</strong> Android 접근성이 켜졌는지, 배치 방향과 진입 통로가 맞는지 확인해요. <a href="/help-demo#cursor">문제 해결 보기</a></div>
-      <details><summary>다른 연결 방법: Google 계정 또는 Bluetooth</summary><p>같은 공유기를 쓸 수 없나요? 지원되는 Windows·Android 앱의 <a href="/guide#connect-account">Google 계정 연결</a>이나 <a href="/guide#connect-bluetooth">Bluetooth 연결</a>을 확인하세요. 연결 방식에 따라 쓸 수 있는 기능이 다릅니다.</p></details>
+      <details id="alternatives"><summary>다른 연결 방법: Google 계정 또는 Bluetooth</summary>
+        <div id="connect-account"><h3>Google 계정으로 연결</h3><p>지원되는 Windows와 Android 앱에서 같은 Google 계정으로 로그인하고, 두 기기가 인터넷에 연결됐는지 확인하세요. 폰의 등록된 PC 목록에서 내 PC를 선택하고 Windows의 배치를 맞춰요.</p><p><a href="/help-demo#discovery">계정 연결 기기가 안 보일 때</a></p></div>
+        <div id="connect-bluetooth"><h3>Bluetooth로 연결</h3><p>두 기기의 Bluetooth를 켜고 Android의 OneMouse 설정에서 Bluetooth 모드를 켜세요. Windows Bluetooth 설정에서 폰을 페어링한 뒤 OneMouse 기기 목록의 연결 상태와 배치를 확인해요. 원격 동영상은 Bluetooth로 전송되지 않아요.</p><p><a href="/compatibility-demo">연결별 사용 범위</a></p></div>
+      </details>
     </section>
     <section class="panel" id="mac" data-device-panel aria-labelledby="mac-title">
       <p class="pill">추천 · 같은 네트워크에서 연결</p>
@@ -63,7 +66,7 @@
         <li><h3>Mac 방향으로 마우스 넘기기</h3><p>Windows의 배치 화면에서 Mac을 실제 놓인 방향에 배치하고, 그쪽 가장자리로 마우스를 밀어 보세요.</p></li>
       </ol>
       <div class="tip"><strong>Mac이 목록에 안 뜨나요?</strong> 같은 네트워크인지 확인하고, macOS에서 요청한 로컬 네트워크 권한을 확인해요. <a href="/help-demo#discovery">Mac 문제 해결</a></div>
-      <details><summary>화면 녹화 권한도 켜야 하나요?</summary><p>기본 마우스·키보드 입력에는 필요하지 않아요. Windows에서 Mac 화면이나 창을 보는 기능을 사용할 때만 허용하세요. <a href="/guide#mac">공식 Mac 가이드</a></p></details>
+      <details><summary>화면 녹화 권한도 켜야 하나요?</summary><p>기본 마우스·키보드 입력에는 필요하지 않아요. Windows에서 Mac 화면이나 창을 보는 기능을 사용할 때만 허용하세요. <a href="/guide-demo#mac">공식 Mac 가이드</a></p></details>
     </section>
     <section class="panel" id="windows" data-device-panel aria-labelledby="windows-title">
       <p class="pill">추천 · 같은 네트워크에서 6자리 번호로 연결</p>
@@ -78,16 +81,16 @@
           <figure class="shot"><a href="/assets/pairing/pc-peer-position-ko.webp" aria-label="다른 Windows PC 배치 예시 화면 크게 보기"><img src="/assets/pairing/pc-peer-position-ko.webp" alt="Windows 기기 관리에서 다른 PC를 배치하는 화면" loading="lazy"></a><figcaption>실제 놓인 방향을 맞춰요.</figcaption></figure></li>
       </ol>
       <div class="tip"><strong>상대 PC가 보이지 않나요?</strong> 두 앱이 켜져 있고 같은 네트워크인지 먼저 확인하세요. <a href="/help-demo#discovery">연결 문제 해결 보기</a></div>
-      <details><summary>Google 계정으로 연결하려면</summary><p>공식 가이드의 <a href="/guide#pcpc">Windows PC 간 연결 절차</a>에서 같은 Google 계정으로 연결하는 방법을 확인하세요.</p></details>
+      <details><summary>Google 계정으로 연결하려면</summary><p>공식 가이드의 <a href="/guide-demo#windows">Windows PC 간 연결 절차</a>에서 같은 Google 계정으로 연결하는 방법을 확인하세요.</p></details>
     </section>
     <section class="section" id="next" aria-labelledby="next-title">
       <h2 id="next-title">연결했다면, 이렇게 써 보세요.</h2>
       <div class="group">
-        <article class="card"><h3>파일 보내기</h3><p>전송 화면이나 빠른 드롭존으로 파일을 놓아 보내요.</p><a href="/guide#files">파일 전송 안내</a></article>
-        <article class="card"><h3>복사한 글 붙여넣기</h3><p>지원되는 연결에서 다른 기기로 복사한 텍스트를 이어서 써요.</p><a href="/guide#files">파일·클립보드 안내</a></article>
-        <article class="card"><h3>필요한 영역만 캡처</h3><p>기본 단축키 <strong>Ctrl+Alt+S</strong>로 시작해요. 받는 기기와 연결별 사용 조건은 안내를 참고하세요.</p><a href="/guide#screenshots">캡처·전송 안내</a></article>
+        <article class="card"><h3>파일 보내기</h3><p>전송 화면이나 빠른 드롭존으로 파일을 놓아 보내요.</p><a href="/features-demo#files">파일 전송 안내</a></article>
+        <article class="card"><h3>복사한 글 붙여넣기</h3><p>지원되는 연결에서 다른 기기로 복사한 텍스트를 이어서 써요.</p><a href="/features-demo#files">파일·클립보드 안내</a></article>
+        <article class="card"><h3>필요한 영역만 캡처</h3><p>기본 단축키 <strong>Ctrl+Alt+S</strong>로 시작해요. 받는 기기와 연결별 사용 조건은 안내를 참고하세요.</p><a href="/features-demo#screenshots">캡처·전송 안내</a></article>
       </div>
-      <p><a href="/guide#shortcuts">단축키 더 보기</a> · <a href="/help-demo">도움말 시안 보기</a></p>
+      <p><a href="/features-demo#shortcuts">단축키 더 보기</a> · <a href="/help-demo">도움말 시안 보기</a></p>
       <p><a href="/demo">브라우저에서 동작 체험하기</a>는 예시예요. 실제 기기를 연결하려면 양쪽에 OneMouse를 설치하세요.</p>
     </section>
   </div>
@@ -112,8 +115,17 @@
     });
     return true;
   }
-  function applyHash() { showDevice(location.hash.slice(1).toLowerCase()); }
-  if (!showDevice(location.hash.slice(1).toLowerCase())) showDevice('android');
+  function applyHash() {
+    const id = location.hash.slice(1).toLowerCase();
+    if (['connect-account','connect-bluetooth','alternatives'].includes(id)) {
+      showDevice('android');
+      document.getElementById('alternatives').open = true;
+      document.getElementById(id).scrollIntoView({block:'start'});
+      return true;
+    }
+    return showDevice(id);
+  }
+  if (!applyHash()) showDevice('android');
   window.addEventListener('hashchange', () => {
     if (!location.hash) showDevice('android');
     else applyHash();
