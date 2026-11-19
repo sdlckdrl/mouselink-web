@@ -20,11 +20,15 @@
 
 <section class="section layout" aria-labelledby="feature-jump">
 <h2 id="feature-jump">하고 싶은 일로 바로 가기</h2>
-<nav class="intro-links" aria-label="기능별 안내"><a class="btn" href="#position">마우스·키보드</a><a class="btn" href="#files">파일과 복사</a><a class="btn" href="#screenshots">캡처</a><a class="btn" href="#remote">원격 화면</a><a class="btn" href="#notifications">폰 알림</a><a class="btn" href="#shortcuts">단축키</a></nav>
+<nav class="intro-links" aria-label="기능별 안내"><a class="btn" href="#position">마우스·키보드</a><a class="btn" href="#files">파일과 복사</a><a class="btn" href="#screenshots">캡처</a><a class="btn" href="#remote">원격 화면</a><a class="btn" href="#mouse-gestures">제스처</a><a class="btn" href="#notifications">폰 알림</a><a class="btn" href="#shortcuts">단축키</a></nav>
 </section>
 <section class="section layout" id="position" aria-labelledby="kvm-title"><p class="eyebrow">01 · 소프트웨어 KVM</p><h2 id="kvm-title">마우스를 화면 끝으로, 키보드는 그대로.</h2><p class="plain">Windows에서 연결하고 기기를 책상 위에 놓인 방향대로 배치하세요. 배치에 표시된 화면 가장자리 통로로 커서를 넘기면 옆 기기에서 클릭·스크롤·입력을 이어서 할 수 있어요.</p>
 <div class="buttons"><a class="btn primary" href="/demo#cursor-demo">커서 넘기기 체험</a><a class="btn" href="/guide-demo">기기 연결하기</a><a class="btn" href="/help-demo#cursor">커서가 안 넘어갈 때</a></div>
-<details class="card" id="mouse-gestures"><summary>Android 기본 조작과 마우스 제스처</summary><p>좌클릭·드래그·휠을 쓰고, Windows 원격창에서는 우클릭 드래그를 대상 PC 브라우저의 제스처 확장에 쓸 수 있어요. Android 원격창에서는 우클릭으로 뒤로, 휠클릭으로 홈을 열 수 있어요. 제스처 동작은 사용하는 앱과 화면 상태에 따라 달라집니다.</p></details>
+<details class="card" id="mouse-gestures"><summary>PC 마우스로 Android 제스처 쓰기</summary>
+<p><strong>Android 화면으로 커서를 직접 넘겨서 쓰는 기능</strong>이에요. 지원되는 양쪽 앱에서 설정 → 입력 · 클립보드 → 마우스 제스처를 켜고 적용할 앱을 고르세요. 처음에는 꺼져 있어요.</p>
+<p>Android 페이지에서 우클릭을 누른 채 방향을 그리고 버튼을 놓으세요. 왼쪽·오른쪽은 뒤로·앞으로, 위·아래는 스크롤이에요. 앱 최소화·새로고침·최근 앱 제스처도 지원하며 일부 동작은 브라우저나 화면 상태에 따라 달라요.</p>
+<p>Windows·Mac 제어나 미러링 창에서는 이 Android 제스처를 쓰지 않아요. <a href="/help-demo#cursor">커서가 Android로 안 넘어갈 때</a></p>
+</details>
 <details class="card" id="quick"><summary>기기 순서와 빠른 연결</summary><p>메인 PC의 기기 관리에서 LAN 기기 순서를 편집하면 연결·원격창 단축키 번호도 함께 바뀌어요. 자동 재연결을 켜면 준비된 기기로 다시 연결할 수 있어요.</p></details>
 </section>
 <section class="section layout" id="files" aria-labelledby="share-title"><p class="eyebrow">02 · 공유</p><h2 id="share-title">방금 복사한 글, 파일도 옆 기기로.</h2>
@@ -40,8 +44,8 @@
 <div class="cards">
 <article class="card" id="mobile-pc-remote"><h3>Android 폰 → Windows</h3><p>Android에서 등록된 PC의 원격 화면을 열고, PC에서 요청을 허용하세요. 지원되는 앱의 같은 Wi-Fi 또는 Google 계정 연결에서 사용해요.</p><p>터치나 커서 모드로 조작하고, 확대·스크롤·키보드 입력을 사용할 수 있어요. 보기만 할 때는 보기 전용을 켜세요.</p><a href="/remote-demo">폰으로 PC 조작 체험</a></article>
 <article class="card" id="windows-remote"><h3>Windows → 연결한 기기</h3><p>기기 관리에서 지원되는 기기의 원격창을 열어요. Android 화면은 폰에서 화면 캡처를 승인하고, Mac 화면·창 공유는 같은 네트워크와 화면 녹화 권한이 필요해요.</p><a href="/help-demo#remote">원격 화면이 안 나올 때</a></article>
-<article class="card" id="remote-gesture-examples"><h3>터치와 커서 조작</h3><p>터치 모드는 누른 자리를 클릭하고, 커서 모드는 손가락을 밀어 포인터를 옮긴 뒤 탭으로 클릭해요. 두 손가락으로 확대하고 1배에서는 두 손가락 이동으로 스크롤할 수 있어요.</p><a href="/remote-demo">조작을 체험해 보기</a></article>
-</div><details class="card" id="remote-gamepad"><summary>폰에서 게임패드로 조작하기</summary><p>Android 폰이나 태블릿에서 Windows PC를 원격으로 조작할 때 Xbox 방식 화면 게임패드나 실물 게임패드를 사용할 수 있어요. 양쪽에 이 기능을 지원하는 OneMouse 앱 버전이 필요해요.</p><p><a href="https://play.google.com/store/apps/details?hl=ko&amp;id=com.mouselink.app">공식 Google Play 업데이트 안내</a></p></details><p class="fine">Bluetooth는 원격 화면 영상을 전송하지 않아요. 지원되는 앱의 제어 패널에서 화질·프레임 속도를 조절할 수 있습니다.</p>
+<article class="card" id="remote-gesture-examples"><h3>터치와 커서 조작</h3><p>Android에서 Windows를 원격 조작할 때 쓰는 방식이에요. 터치 모드는 누른 자리를 클릭하고, 커서 모드는 손가락으로 포인터를 옮긴 뒤 탭으로 클릭해요. 길게 누르고 떼면 우클릭할 수 있고, 1배에서는 두 손가락 이동으로 스크롤할 수 있어요.</p><a href="/remote-demo#documents">폰에서 문서 열기·스크롤 체험</a></article>
+</div><details class="card" id="remote-gamepad"><summary>폰에서 게임패드로 조작하기</summary><p>Android 폰이나 태블릿에서 Windows PC를 원격으로 조작할 때 Xbox 방식 화면 게임패드나 실물 게임패드를 사용할 수 있어요. 양쪽에 이 기능을 지원하는 OneMouse 앱 버전이 필요해요.</p><p><a href="/remote-demo#gamepad">폰으로 미니 레이싱 체험</a> · <a href="https://play.google.com/store/apps/details?hl=ko&amp;id=com.mouselink.app">공식 Google Play 업데이트 안내</a></p></details><p class="fine">Bluetooth는 원격 화면 영상을 전송하지 않아요. 지원되는 앱의 제어 패널에서 화질·프레임 속도를 조절할 수 있습니다.</p>
 </section>
 <section class="section layout" id="notifications" aria-labelledby="alert-title"><p class="eyebrow">04 · Android 알림</p><h2 id="alert-title">폰 알림을 PC에서 보고, 필요할 때 답장.</h2>
 <div class="cards">
@@ -68,5 +72,13 @@
     <a href="/compatibility-demo">지원 기기·연결 방식</a><a href="/technical">기술·보안</a><a href="/pricing">요금 안내</a><a href="/privacy">개인정보</a><a href="/terms">이용약관</a><a href="/licenses">오픈소스 라이선스</a><a href="/">기존 홈페이지</a>
   </nav>
 </div></footer>
+<script>
+function openFeatureDetail() {
+  const detail = document.getElementById(location.hash.slice(1));
+  if (detail?.tagName === 'DETAILS') detail.open = true;
+}
+openFeatureDetail();
+window.addEventListener('hashchange', openFeatureDetail);
+</script>
 </body>
 </html>
