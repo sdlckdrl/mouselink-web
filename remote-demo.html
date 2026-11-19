@@ -5,6 +5,7 @@
 <meta name="robots" content="noindex, nofollow">
 <meta name="description" content="Android 폰 게임패드로 Windows 화면과 함께 조작하는 브라우저 미니 레이싱.">
 <meta name="theme-color" content="#f5f8fa">
+<script>if(new URLSearchParams(location.search).get("embed")==="1")document.documentElement.classList.add("race-embedded");</script>
 <title>휴대폰으로 PC 조작 체험 · OneMouse 원마우스</title>
 <link rel="icon" href="/assets/preview/onemouse-android-icon.png" type="image/png" sizes="240x240">
 <link rel="stylesheet" href="/assets/preview/one-preview.css?v=light1">
@@ -49,6 +50,12 @@
   .photo-pad button:hover{background:#13765b}.photo-pad button:focus-visible{outline:4px solid #a1ffdc;outline-offset:1px}.photo-pad button:disabled{opacity:.55;pointer-events:none}
 }
 @media(max-width:500px){.race-scene{border-radius:10px}.race-scene.photo-missing{gap:7px;padding:7px}.photo-missing .race-projection{padding:4px}.game-controls:not([hidden]){gap:7px}.game-keys,.game-actions{flex:0 0 100%}.game-keys button{width:min(40%,140px)}.game-help{font-size:.8rem}}
+
+.race-embedded .preview-header,.race-embedded .hero,.race-embedded .preview-footer,.race-embedded body>.skip,.race-embedded #real-remote-section,.race-embedded #try-remote{display:none}
+.race-embedded .section.layout{width:100%;padding-block:0}
+.race-embedded .section.layout>.plain{margin:0 0 .75rem}
+.race-embedded body{background:var(--preview-panel)}
+.race-embedded #remote-status{margin:.5rem 0 .25rem}
 </style>
 </head>
 <body>
@@ -98,7 +105,7 @@
 </div>
 <noscript><p>이 체험은 JavaScript가 필요합니다. JavaScript를 켜면 게임을 시작할 수 있어요.</p></noscript>
 </section>
-<section class="section layout" aria-labelledby="real-remote"><h2 id="real-remote">체험은 예시예요.</h2>
+<section class="section layout" id="real-remote-section" aria-labelledby="real-remote"><h2 id="real-remote">체험은 예시예요.</h2>
 <div class="notice"><p>이 게임은 브라우저 체험용이며, 실제 PC 게임이나 기기를 연결하지 않고 화면 접근도 하지 않아요. 앱에서는 지원되는 Windows와 Android에 OneMouse를 설치한 뒤, 같은 Wi-Fi 또는 지원되는 Google 계정 연결에서 원격 화면을 열 수 있어요.</p></div>
 <div class="buttons"><a class="btn primary" href="/features-demo#remote-gamepad">OneMouse 게임패드</a><a class="btn" href="/features-demo#remote-gesture-examples">폰 터치·커서 조작</a><a class="btn" href="/features-demo#mouse-gestures">Android 마우스 제스처</a><a class="btn" href="/guide-demo#android">내 Android 연결하기</a><a class="btn" href="/help-demo#remote">원격 화면 문제 해결</a></div>
 </section>

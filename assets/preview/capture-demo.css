@@ -1,0 +1,100 @@
+.om-capture-demo,
+.om-capture-demo * { box-sizing: border-box; }
+.om-capture-demo {
+  --oc-ink: #173249;
+  --oc-muted: #426074;
+  --oc-accent: #006b58;
+  --oc-border: #c0d4df;
+  color: var(--oc-ink);
+  container: om-capture / inline-size;
+  line-height: 1.55;
+}
+.om-capture-intro,
+.om-capture-status { margin: 0 0 .65rem; color: var(--oc-muted); font-size: .88rem; }
+.om-capture-devices { display: grid; gap: .8rem; }
+.om-capture-desktop,
+.om-capture-phone { min-width: 0; }
+.om-capture-device-title { margin-bottom: .26rem; font-size: .82rem; font-weight: 800; }
+.om-capture-source {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16/9;
+  border-radius: .52rem;
+  box-shadow: 0 0 0 2px #234359;
+  background: #d4eff1;
+  touch-action: pan-y;
+}
+.om-capture-source.om-capture-selecting {
+  cursor: crosshair;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.om-capture-source svg,
+.om-capture-preview-view svg,
+.om-capture-phone-view svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.om-capture-source svg { position: absolute; inset: 0; }
+.om-capture-selection {
+  position: absolute;
+  border: 2px solid #fff;
+  background: #5ce6bd39;
+  box-shadow: 0 0 0 1px #09384a, 0 0 0 999px #06253b55;
+  pointer-events: none;
+}
+.om-capture-demo [hidden] { display: none !important; }
+.om-capture-demo :focus-visible { outline: 3px solid var(--oc-accent); outline-offset: 3px; }
+.om-capture-tools { display: flex; flex-wrap: wrap; gap: .35rem; margin-top: .55rem; }
+.om-capture-button {
+  min-height: 44px;
+  padding: .4rem .65rem;
+  border: 1px solid #7495a6;
+  border-radius: .45rem;
+  background: #fff;
+  color: var(--oc-ink);
+  font: 750 .85rem/1.35 system-ui, sans-serif;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+.om-capture-button:hover,
+.om-capture-button[aria-pressed="true"] { background: #dff4ec; border-color: var(--oc-accent); }
+.om-capture-primary { color: #fff; background: var(--oc-accent); border-color: var(--oc-accent); }
+.om-capture-primary:hover { background: #005343; }
+.om-capture-button:disabled { color: #587183; background: #edf4f7; border-color: var(--oc-border); cursor: default; }
+.om-capture-phone-body {
+  border: 4px solid #183449;
+  border-radius: .85rem;
+  background: #101f31;
+  padding: .28rem;
+}
+.om-capture-phone-view {
+  min-height: 4.3rem;
+  display: grid;
+  place-items: center;
+  padding: .3rem;
+  border-radius: .5rem;
+  background: #e8f2f7;
+}
+.om-capture-phone-view.om-capture-received { gap: .23rem; }
+.om-capture-phone-view svg,
+.om-capture-preview-view svg { height: auto; max-height: 10rem; }
+.om-capture-phone-hint { text-align: center; color: var(--oc-muted); font-size: .82rem; }
+.om-capture-delivered { color: #155a4b; font-size: .76rem; font-weight: 780; }
+.om-capture-tray { margin-top: .8rem; padding-top: .45rem; border-top: 1px solid var(--oc-border); }
+.om-capture-preview {
+  display: grid; grid-template-columns: auto minmax(0,1fr); align-items: center; gap: .55rem;
+  max-width: 18rem; padding: .4rem .5rem; border: 1px solid var(--oc-border); border-radius: .5rem; background: #f1f8fa;
+}
+.om-capture-preview-label { margin: 0; font-size: .8rem; font-weight: 780; }
+.om-capture-preview-view { display: grid; place-items: center; min-width: 0; }
+.om-capture-preview-view svg { max-height: 6rem; }
+.om-capture-status { margin: .45rem 0 0; }
+@container om-capture (min-width: 390px) {
+  .om-capture-devices { grid-template-columns: minmax(0,2fr) minmax(0,1fr); align-items: start; }
+  .om-capture-phone-view { min-height: 6.2rem; }
+}

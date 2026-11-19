@@ -61,7 +61,21 @@ h1,h2,h3{line-height:1.25;letter-spacing:-.04em}h1{font-size:clamp(2rem,4.8vw,3.
 .key-list kbd{display:inline-block;white-space:nowrap;font:700 .76rem/1.35 system-ui,sans-serif;padding:.14rem .33rem;border-radius:.3rem;background:#edf3f8;color:#233c52;border:1px solid #a7bbc9;box-shadow:0 1px #a7bbc9}
 @media(min-width:580px){.key-list div{grid-template-columns:minmax(0,1fr) auto;gap:1rem}}
 @media(max-width:579px){.feature>summary{padding-inline-start:.85rem}.feature>.panel{padding-inline:.85rem}}
+
+.example-actions{display:flex;align-items:center;gap:.55rem 1rem;flex-wrap:wrap;padding-top:.3rem}
+.try-feature,.close-inline{font:700 .92rem/1.25 system-ui,sans-serif;border:1px solid var(--preview-accent);padding:.55rem .75rem;min-height:44px;border-radius:.55rem;color:var(--preview-accent);background:#fff;cursor:pointer}
+.try-feature[aria-expanded="true"],.try-feature:hover{background:var(--preview-soft)}
+.try-feature:focus-visible,.close-inline:focus-visible{outline:3px solid var(--preview-accent);outline-offset:3px}
+.inline-feature[hidden]{display:none}
+.inline-feature{background:var(--preview-panel);margin-top:1rem;padding:clamp(.8rem,2vw,1.15rem);border:1px solid var(--preview-line);border-radius:.85rem}
+.inline-feature-bar{display:flex;gap:.65rem;justify-content:space-between;align-items:center;margin-bottom:.75rem}
+.inline-feature-bar h3{margin:0;font-size:1.22rem}
+.inline-feature-bar h3:focus{outline:none}
+.close-inline{min-width:54px;border-color:var(--preview-line);color:var(--preview-ink)}
+.inline-feature-note{color:var(--preview-muted);font-size:.87rem;margin:.6rem 0 0}
+.inline-race{display:block;width:100%;height:36rem;border:0}
 </style>
+<link rel="stylesheet" href="/assets/preview/capture-demo.css">
 </head>
 <body>
 <a class="skip" href="#main">본문으로 이동</a>
@@ -93,13 +107,23 @@ h1,h2,h3{line-height:1.25;letter-spacing:-.04em}h1{font-size:clamp(2rem,4.8vw,3.
   <div class="example-grid">
     <article class="example">
       <figure><img src="/assets/feature-screenshot-share-photo.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="PC가 캡처한 이미지를 Android 휴대폰으로 보내는 사용 예시"><figcaption>AI로 제작한 사용 예시</figcaption></figure>
-      <div class="example-copy"><h3>필요한 부분만 찍어 보내기</h3><p>PC에서 필요한 영역만 캡처해서 지원되는 Wi-Fi·LAN 연결로 옆 기기에 보내세요.</p><a href="#screenshots">캡처하고 보내는 방법</a></div>
+      <div class="example-copy"><h3>필요한 부분만 찍어 보내기</h3><p>PC에서 필요한 영역만 캡처해서 지원되는 Wi-Fi·LAN 연결로 옆 기기에 보내세요.</p><div class="example-actions"><button class="try-feature" type="button" data-feature-demo="capture" aria-controls="feature-capture-demo" aria-expanded="false" hidden>캡처 체험</button><a href="#screenshots">캡처하고 보내는 방법</a></div></div>
     </article>
     <article class="example">
       <figure><img src="/assets/preview/remote-racing-example.webp" width="1199" height="675" loading="lazy" decoding="async" alt="Windows 화면의 레이싱 게임을 같은 화면이 보이는 Android 폰에서 조작하는 사용 예시"><figcaption>AI로 제작한 사용 예시</figcaption></figure>
-      <div class="example-copy"><h3>폰에서 Windows PC 조작하기</h3><p>Android에서 연결된 PC 화면을 열고, 필요할 때 화면 속 게임패드로 조작해요.</p><a href="#mobile-pc-remote">폰에서 PC를 여는 방법</a></div>
+      <div class="example-copy"><h3>폰에서 Windows PC 조작하기</h3><p>Android에서 연결된 PC 화면을 열고, 필요할 때 화면 속 게임패드로 조작해요.</p><div class="example-actions"><button class="try-feature" type="button" data-feature-demo="race" aria-controls="feature-race-demo" aria-expanded="false" hidden>레이싱 체험</button><a href="#mobile-pc-remote">폰에서 PC를 여는 방법</a></div></div>
     </article>
   </div>
+  <section class="inline-feature" id="feature-capture-demo" aria-labelledby="inline-capture-title" hidden>
+    <div class="inline-feature-bar"><h3 id="inline-capture-title" tabindex="-1">캡처해서 폰으로 보내기</h3><button type="button" class="close-inline" data-close-demo="capture" aria-label="캡처 체험 닫기">닫기</button></div>
+    <div data-demo-content></div>
+    <p class="inline-feature-note">예시 이미지로만 동작해요. 실제 화면을 찍거나 파일을 보내지 않아요.</p>
+  </section>
+  <section class="inline-feature" id="feature-race-demo" aria-labelledby="inline-race-title" hidden>
+    <div class="inline-feature-bar"><h3 id="inline-race-title" tabindex="-1">폰으로 미니 레이싱 조작하기</h3><button type="button" class="close-inline" data-close-demo="race" aria-label="레이싱 체험 닫기">닫기</button></div>
+    <div data-demo-content></div>
+    <p class="inline-feature-note">실제 PC에 연결하지 않는 브라우저 체험이에요.</p>
+  </section>
 </section>
 <section class="layout overview" aria-labelledby="feature-jump">
   <h2 id="feature-jump">기능별 사용법</h2>
@@ -206,5 +230,7 @@ h1,h2,h3{line-height:1.25;letter-spacing:-.04em}h1{font-size:clamp(2rem,4.8vw,3.
   window.addEventListener('hashchange', showLinkedFeature);
 })();
 </script>
+<script src="/js/preview-capture-demo.js" defer></script>
+<script src="/js/preview-feature-demos.js" defer></script>
 </body>
 </html>
