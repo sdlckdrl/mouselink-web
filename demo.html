@@ -19,7 +19,7 @@
 .phone-memo:not([hidden]),.tablet-paste:not([hidden]){position:absolute;z-index:4;pointer-events:auto}.phone-memo:not([hidden]){left:48%;top:44%;width:7.45%;height:29%;padding:2px;border:1px solid #86bbef;background:#f4f9ff;color:#142c3f;border-radius:3px;resize:none;cursor:text;font:600 clamp(5px,1.8cqw,12px)/1.25 system-ui,sans-serif;overflow:auto}.phone-memo::placeholder{color:#455d75;opacity:1}.phone-memo:focus-visible,.tablet-paste:focus-visible{outline:2px solid #6bf5c6;outline-offset:1px}.tablet-paste:not([hidden]){left:61.65%;top:50%;width:11.6%;height:21%;padding:1px;border:1px solid #86bbef;border-radius:4px;background:#f0f8ff;color:#163450;font:750 clamp(6px,1.7cqw,11px)/1.15 system-ui,sans-serif;cursor:pointer;overflow:hidden}.tablet-paste[data-ready=true]{background:#d7ffe9;border-color:#31a58a}.stage:has(.tablet-paste:hover,.phone-memo:hover) .pointer{visibility:hidden}.stage[data-mode=text][data-copy=ready] .pointer{display:block}.assist-controls:not([hidden]){display:flex;flex-wrap:wrap;gap:6px;margin-top:7px}
 .transfer-choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}.transfer-choices label{display:grid;gap:3px;font-size:.82rem;color:#c3e9f3}.transfer-choices select{width:100%;min-width:0;min-height:44px;background:#131e33;color:var(--ink);border:1px solid #546a88;border-radius:7px;font:inherit;padding:3px}.phone-memo:not([hidden]){touch-action:auto}.windows-text:not([hidden]){max-height:none}.copy-hint:not([hidden]){overflow:hidden;padding-inline:2px;white-space:nowrap}.popup-send,.popup-send-small{font-size:clamp(4px,1.5cqw,9px)}
 @media(min-width:580px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(min-width:760px){.hero{padding-block:77px 80px;grid-template-columns:1.08fr 1fr;gap:40px;align-items:center}.desktop{display:inline-flex}.mobile{display:none}.visual{padding:23px}.section{padding-block:62px}}@media(max-width:350px){.wrap{width:calc(100% - 28px)}.head nav{gap:10px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.pointer{transition:none}}
-</style>
+.demo-options:not([hidden]){margin:11px 0 3px;padding:4px 0 2px;border-top:1px solid var(--line)}.demo-options summary{min-height:44px;padding:8px 0;color:#c6e4f3;cursor:pointer;font-size:.89rem;font-weight:720}.demo-options .demo-modes{margin:0 0 3px}.demo-options .demo-button{font-size:.8rem}.assist-controls .demo-button{border:0;background:transparent;color:#b0ccdf;text-decoration:underline;text-underline-offset:3px;padding-inline:0;font-size:.8rem}.calm-link,.caption a,.section .card h3 a{color:var(--muted);text-underline-offset:4px}.section .card h3 a{color:var(--ink);text-decoration-color:#587387}.section .card h3 a:hover,.calm-link:hover,.caption a:hover{color:var(--green)}.download-links{align-items:center;margin-top:12px}.download-links .calm-link{font-size:.9rem}.visual>#demo-title{font-size:1.12rem}.mode-panel:not([hidden]){margin-top:8px}@media(max-width:480px){.hero{padding-block:31px 37px;gap:20px}.intro{margin:12px 0 16px}.visual{padding:12px}}</style>
 <link rel="icon" href="/assets/preview/onemouse-android-icon.png" type="image/png" sizes="240x240">
 <link rel="stylesheet" href="/assets/preview/one-preview.css">
 </head>
@@ -34,19 +34,13 @@
 <div>
 <p class="eyebrow">Windows에서 연결 시작<span class="badge">홈페이지 시안</span></p>
 <h1>마우스와 키보드 하나로,<br><span>여러 기기를 오가세요.</span></h1>
-<p class="intro">Windows 화면 끝으로 마우스를 밀면 Android, Mac, 다른 Windows PC로 커서가 넘어갑니다. 키보드도 그대로 쓸 수 있어요.</p>
-<div class="actions"><a class="btn primary desktop" href="/download-demo#windows">Windows 앱 받기</a><a class="btn primary mobile" href="/download-demo#android">Android 앱 받기</a><a class="btn secondary" href="/guide-demo">연결 방법 보기</a></div>
-<p class="caption">Windows와 연결할 기기 양쪽에 설치하세요.</p>
+<p class="intro">Windows 마우스와 키보드로 Android, Mac, 다른 Windows PC를 조작해요.</p>
+<div class="actions"><a class="btn primary desktop" href="/download-demo#windows">Windows 앱 받기</a><a class="btn primary mobile" href="/download-demo#android">Android 앱 받기</a></div>
+<p class="caption"><a href="/guide-demo">처음 연결하는 방법</a></p>
 </div>
 <section class="visual" id="cursor-demo" aria-labelledby="demo-title">
-<h2 id="demo-title">화면 끝에서 옆 기기로</h2>
-<p>마우스나 손가락을 옆 화면으로 옮겨 보세요. 기기 메모를 눌러 키보드로 입력할 수도 있어요.</p>
-<div class="demo-modes" id="modes" role="group" aria-label="체험 기능" hidden>
-  <button class="demo-button" type="button" data-mode="cursor" aria-pressed="true">커서 넘기기</button>
-  <button class="demo-button" type="button" data-mode="file" aria-pressed="false">파일 보내기</button>
-  <button class="demo-button" type="button" data-mode="text" aria-pressed="false">복사·붙여넣기</button>
-  <button class="demo-button" type="button" data-mode="shot" aria-pressed="false">화면 캡처</button>
-</div>
+<h2 id="demo-title">커서를 옆 기기로 넘겨 보세요.</h2>
+<p>화면 위에서 마우스나 손가락을 옆 기기로 옮겨 보세요.</p>
 <div class="stage" id="stage" data-device="pc" data-mode="cursor">
 <svg viewBox="0 0 940 370" aria-hidden="true">
 <defs>
@@ -177,8 +171,18 @@
     <button class="demo-button" type="button" data-target="mac" aria-pressed="false">Mac</button>
   </div>
 </div>
+<details class="demo-options" id="demo-options" hidden>
+  <summary id="demo-options-label">다른 기능 체험</summary>
+  <div id="file-demo" aria-hidden="true"></div><div id="text-demo" aria-hidden="true"></div><div id="capture-demo" aria-hidden="true"></div>
+  <div class="demo-modes" id="modes" role="group" aria-label="체험 기능" hidden>
+  <button class="demo-button" type="button" data-mode="cursor" aria-pressed="true">커서 넘기기</button>
+  <button class="demo-button" type="button" data-mode="file" aria-pressed="false">파일 보내기</button>
+  <button class="demo-button" type="button" data-mode="text" aria-pressed="false">복사·붙여넣기</button>
+  <button class="demo-button" type="button" data-mode="shot" aria-pressed="false">화면 캡처</button>
+</div>
+</details>
 <div class="assist-controls" id="assist-controls" hidden>
-  <button class="demo-button" id="phone-focus" type="button">폰 메모 입력</button>
+  <button class="demo-button" id="phone-focus" type="button">메모에 글 입력</button>
 </div>
 <div class="mode-panel" id="mode-panel" hidden>
   <p id="mode-hint"></p>
@@ -203,27 +207,20 @@
 <section class="section"><div class="wrap">
 <p class="eyebrow">주요 기능</p><h2>기기가 바뀌어도 하던 일은 그대로.</h2>
 <div class="grid">
-<article class="card"><span class="num">01 / 마우스</span><h3>화면 끝으로 넘기기</h3><p>기기를 책상 위에 놓인 순서대로 배치하세요. 마우스를 그 방향으로 밀면 옆 기기에서 클릭하고 스크롤할 수 있어요.</p></article>
-<article class="card"><span class="num">02 / 키보드</span><h3>같은 키보드로 입력</h3><p>폰에서 검색하거나 메시지에 답장할 때, 익숙한 PC 키보드로 바로 입력하세요.</p></article>
-<article class="card"><span class="num">03 / 파일과 클립보드</span><h3>파일과 복사한 글 보내기</h3><p>연결된 기기끼리 파일과 복사한 텍스트를 주고받으세요. 지원 방식은 기기와 연결 방법에 따라 달라요.</p></article>
+<article class="card"><span class="num">01 / 마우스</span><h3><a href="/features-demo#position">화면 끝으로 넘기기</a></h3><p>화면 끝으로 마우스를 밀면 옆 기기에서 이어서 쓸 수 있어요.</p></article>
+<article class="card"><span class="num">02 / 키보드</span><h3><a href="/features-demo#position">같은 키보드로 입력</a></h3><p>폰이나 다른 PC에서도 익숙한 키보드로 입력해요.</p></article>
+<article class="card"><span class="num">03 / 파일과 클립보드</span><h3><a href="/features-demo#files">파일과 복사한 글 보내기</a></h3><p>연결된 기기로 파일이나 복사한 글을 보내요.</p></article>
 </div>
 </div></section>
 <section id="download" class="section"><div class="wrap">
-<p class="eyebrow">다운로드</p><h2>내 PC와 연결할 기기에 설치하세요.</h2>
-<div class="grid">
-<article id="windows" class="card"><h3>Windows</h3><p>마우스·키보드가 연결된 PC.</p><div class="store"><a class="btn secondary" href="/download-demo#windows">Windows 앱 받기</a></div></article>
-<article id="android" class="card"><h3>Android</h3><p>연결할 폰이나 태블릿.</p><div class="store"><a class="btn secondary" href="/download-demo#android">Android 앱 받기</a></div></article>
-<article id="macos" class="card"><h3>Mac</h3><p>Apple Silicon · macOS 13 이상.</p><div class="store"><a class="btn secondary" href="/download-demo#mac">Mac 앱 받기</a></div></article>
-</div>
-<p class="help"><a href="/compatibility-demo">지원 기기와 연결 방식 확인</a> · <a href="/guide-demo">연결 방법 보기</a></p>
+<span id="windows" aria-hidden="true"></span><span id="android" aria-hidden="true"></span><span id="macos" aria-hidden="true"></span>
+<p class="eyebrow">시작하기</p><h2>Windows와 연결할 기기에 설치하세요.</h2>
+<p class="help">내 기기에 맞는 설치 파일과 연결 조건을 확인하세요.</p>
+<div class="actions download-links"><a class="btn primary" href="/download-demo">내 기기용 앱 받기</a><a class="calm-link" href="/compatibility-demo">지원 기기와 연결 방식</a></div>
 </div></section>
-<section class="section extra" id="more-features"><div class="wrap"><p class="eyebrow">별도 체험 · 휴대폰에서 PC로</p><h2>이번엔 폰에서 PC 화면을 열어 보세요.</h2>
-<p class="help">마우스를 넘기는 기능과 달리, 원격 화면은 PC 화면을 폰에서 직접 보고 조작하는 기능이에요.</p>
-<div class="actions"><a class="btn primary" href="/remote-demo">폰으로 PC 조작 체험</a><a class="btn secondary" href="/features-demo">전체 기능 보기</a></div>
-<h3>다른 기능도 둘러보세요.</h3>
-<details><summary>폰에서 Windows PC 조작하기</summary><p>폰에서 연결된 PC 화면을 열어 터치로 조작할 수 있어요. <a href="/features-demo#mobile-pc-remote">원격 화면 안내</a></p></details>
-<details><summary>스크린샷 보내기</summary><p>Windows에서 찍은 화면을 Wi-Fi나 LAN으로 연결한 기기에 보낼 수 있어요. <a href="/features-demo#screenshots">스크린샷 전송 안내</a></p></details>
-<details><summary>폰 알림을 PC에서 보기</summary><p>Android 알림을 PC에서도 확인할 수 있어요. <a href="/features-demo#notifications">알림 연결 안내</a></p></details>
+<section class="section extra" id="more-features"><div class="wrap"><p class="eyebrow">별도 체험 · 휴대폰에서 PC로</p><h2>이번엔 폰으로 PC를 조작해 보세요.</h2>
+<p class="help">폰에서 게임패드를 누르면 PC 화면의 차도 함께 움직여요.</p>
+<div class="actions download-links"><a class="btn secondary" href="/remote-demo#gamepad">미니 레이싱 해보기</a><a class="calm-link" href="/features-demo">원격 화면·알림·캡처 등 더 보기</a></div>
 </div></section>
 </main>
 <footer class="preview-footer"><div class="preview-frame">
@@ -236,6 +233,7 @@
 const get = id => document.getElementById(id);
 const stage = get('stage'), controls = get('controls'), status = get('status'), modes = get('modes');
 const deviceButtons = [...controls.querySelectorAll('button')], modeButtons = [...modes.querySelectorAll('button')];
+const options = get('demo-options'), optionsLabel = get('demo-options-label');
 const [panel, hint, action, result, sample, received, visual, visualLabel, cropSurface, selection, reset,
   preview, previewImage, sendButton, previewHint, dialog, enlarged, dialogTitle, textBox, textSample, copyHint,
   memo, memoFocus, assist, pasteMemo, sender, receiver] =
@@ -391,6 +389,7 @@ function resetFlow() {
 }
 function changeMode(next) {
   mode=next;
+  optionsLabel.textContent={cursor:'다른 기능 체험',file:'다른 기능 체험 · 파일',text:'다른 기능 체험 · 복사·붙여넣기',shot:'다른 기능 체험 · 캡처'}[mode];
   for (const b of modeButtons) b.setAttribute('aria-pressed',String(b.dataset.mode===mode));
   hint.textContent={
     file:'보내는 기기의 사진.jpg를 다른 화면으로 끌거나 버튼으로 보내세요.',
@@ -626,8 +625,16 @@ function perform() {
 }
 sendButton.addEventListener('click',perform);
 action.addEventListener('click',perform);
-modes.hidden=false;
+modes.hidden=options.hidden=false;
+function openDemoRoute() {
+  const selected={ '#cursor-demo':'cursor','#file-demo':'file','#text-demo':'text','#capture-demo':'shot' }[location.hash];
+  if(selected && selected!=='cursor')options.open=true;
+  if(selected==='cursor')options.open=false;
+  if(selected && selected!==mode)changeMode(selected);
+}
 changeMode('cursor');
+openDemoRoute();
+window.addEventListener('hashchange',openDemoRoute);
 </script>
 </body>
 </html>
