@@ -1,4 +1,6 @@
 (() => {
+  const captureNode = document.querySelector('[data-capture-inline]');
+  if(captureNode) window.OneMouseCaptureDemo?.mount?.(captureNode);
   const buttons = new Map();
   document.querySelectorAll('[data-feature-demo]').forEach(button => {
     const type = button.dataset.featureDemo;
@@ -6,7 +8,7 @@
     buttons.get(type).push(button);
   });
   const expand = (type, value) => buttons.get(type).forEach(button => button.setAttribute('aria-expanded', String(value)));
-  let active = null, opener = null, raceObserver = null, raceReadSize = null, capture = null;
+  let active = null, opener = null, raceObserver = null, raceReadSize = null;
   const panelFor = type => document.getElementById('feature-' + type + '-demo');
   const contentFor = type => panelFor(type).querySelector('[data-demo-content]');
   function mountRace(node) {
@@ -40,15 +42,12 @@
       if (raceReadSize) window.removeEventListener('resize', raceReadSize);
       raceObserver = raceReadSize = null;
       contentFor(type).replaceChildren();
-    } else {
-      capture?.reset?.();
     }
     panelFor(type).hidden = true;
     expand(type, false);
     if (restoreFocus) opener?.focus();
   }
   for (const [type, group] of buttons) for (const button of group) {
-    if (type === 'capture' && !window.OneMouseCaptureDemo?.mount) continue;
     button.hidden = false;
     button.addEventListener('click', () => {
       if (active === type) { close(true); return; }
@@ -59,10 +58,6 @@
       panel.hidden = false;
       expand(type, true);
       if (type === 'race') mountRace(contentFor(type));
-      else {
-        if (!capture) capture = window.OneMouseCaptureDemo.mount(contentFor(type));
-        capture?.start?.();
-      }
       panel.querySelector('h3').focus({preventScroll:true});
       panel.scrollIntoView({block:'start'});
     });

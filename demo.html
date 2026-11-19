@@ -22,7 +22,7 @@
 .demo-options:not([hidden]){margin:11px 0 3px;padding:4px 0 2px;border-top:1px solid var(--line)}.demo-options summary{min-height:44px;padding:8px 0;color:#31566a;cursor:pointer;font-size:.89rem;font-weight:720}.demo-options .demo-modes{margin:0 0 3px}.demo-options .demo-button{font-size:.8rem}.assist-controls .demo-button{border:0;background:transparent;color:#39586c;text-decoration:underline;text-underline-offset:3px;padding-inline:0;font-size:.8rem}.calm-link,.caption a,.section .card h3 a{color:var(--muted);text-underline-offset:4px}.section .card h3 a{color:var(--ink);text-decoration-color:#587387}.section .card h3 a:hover,.calm-link:hover,.caption a:hover{color:var(--green)}.download-links{align-items:center;margin-top:12px}.download-links .calm-link{font-size:.9rem}.visual>#demo-title{font-size:1.12rem;margin:0 0 4px}.mode-panel:not([hidden]){margin-top:8px}@media(max-width:480px){.hero{padding-block:31px 37px;gap:20px}.intro{margin:12px 0 16px}.visual{padding:12px}}.promo-video{max-width:640px;margin:14px 0 0}.promo-video-player{aspect-ratio:16/9;background:#080d18;border:1px solid var(--line);border-radius:12px;overflow:hidden}.promo-video-player iframe{display:block;width:100%;height:100%;border:0}.promo-video-play{position:relative;display:block;height:100%;color:#0a241c}.promo-video-play img{display:block;width:100%;height:100%;object-fit:cover}.promo-video-play span{position:absolute;bottom:10px;left:10px}.promo-video-play:focus-visible,.promo-video-player iframe:focus-visible{outline-offset:-4px}.promo-video-links{margin:8px 0 0;font-size:.9rem;color:var(--muted)}
 .stage{color-scheme:dark;--stage-focus:#68f1c4}.stage :focus-visible{outline-color:var(--stage-focus)}.caption a,.calm-link{color:var(--preview-accent)}
 
-.hero{align-items:center}.hero-copy{min-width:0}.hero .actions{align-items:center;gap:12px 18px}.hero h1{font-size:clamp(2.18rem,5.25vw,3.95rem);line-height:1.14}.hero h1 br{display:none}.hero .intro{max-width:30ch}.section{border-color:var(--line)}.section h2{margin-bottom:22px}.benefits,.stories{display:grid;gap:22px}.benefits h3,.story h3{font-size:1.17rem;margin:0 0 .36rem;line-height:1.35;letter-spacing:-.03em}.benefits p,.story p{margin:0;color:var(--muted);line-height:1.62}.section-link{margin:21px 0 0}.section-link a,.story a{color:var(--green);font-weight:720;text-underline-offset:.25em}.screen-stories{background:#edf3f7}.story{min-width:0;border:1px solid var(--line);border-radius:17px;overflow:hidden;background:var(--surface)}.story figure{margin:0;aspect-ratio:16/9;background:#d8e3ea}.story img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}.story:first-child img{object-position:center 54%}.story-copy{padding:17px 20px 20px}.story .story-note{font-size:.78rem;margin-bottom:8px}.story a{display:inline-block;padding-block:8px;margin-top:6px}.hero-demo{min-width:0}.hero-demo .visual{margin:0}.playground-link{font-size:.9rem;color:var(--muted)}.playground-link a{color:var(--green)}.hero-demo .visual [id]{scroll-margin-top:12px}
+.hero{align-items:center}.hero-copy{min-width:0}.hero .actions{align-items:center;gap:12px 18px}.hero h1{font-size:clamp(2.18rem,5.25vw,3.95rem);line-height:1.14}.hero h1 br{display:none}.hero .intro{max-width:30ch}.section{border-color:var(--line)}.section h2{margin-bottom:22px}.benefits,.stories{display:grid;gap:22px}.benefits h3,.story h3{font-size:1.17rem;margin:0 0 .36rem;line-height:1.35;letter-spacing:-.03em}.benefits p,.story p{margin:0;color:var(--muted);line-height:1.62}.section-link{margin:21px 0 0}.section-link a,.story a{color:var(--green);font-weight:720;text-underline-offset:.25em}.screen-stories{background:#edf3f7}.story{min-width:0;border:1px solid var(--line);border-radius:17px;overflow:hidden;background:var(--surface)}.story>figure{margin:0;aspect-ratio:16/9;background:#d8e3ea}.story>figure>img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}.story:first-child>figure>img{object-position:center 54%}.story-copy{padding:17px 20px 20px}.story .story-note{font-size:.78rem;margin-bottom:8px}.story a{display:inline-block;padding-block:8px;margin-top:6px}.hero-demo{min-width:0}.hero-demo .visual{margin:0}.playground-link{font-size:.9rem;color:var(--muted)}.playground-link a{color:var(--green)}.hero-demo .visual [id]{scroll-margin-top:12px}
 @media(min-width:630px){.benefits{grid-template-columns:repeat(3,minmax(0,1fr))}.stories{grid-template-columns:repeat(2,minmax(0,1fr))}.benefits article+article{padding-inline-start:20px;border-inline-start:1px solid var(--line)}}@media(min-width:875px){.hero h1 br{display:initial}}@media(max-width:629px){.benefits{gap:15px}.benefits article+article{border-top:1px solid var(--line);padding-top:15px}.section{padding-block:34px}}
 .example-actions{display:flex;align-items:center;gap:.55rem 1rem;flex-wrap:wrap;padding-top:.3rem}
 .try-feature,.close-inline{font:700 .92rem/1.25 system-ui,sans-serif;border:1px solid var(--preview-accent);padding:.55rem .75rem;min-height:44px;border-radius:.55rem;color:var(--preview-accent);background:#fff;cursor:pointer}
@@ -37,10 +37,14 @@
 .inline-feature-note{color:var(--preview-muted);font-size:.87rem;margin:.6rem 0 0}
 .inline-race{display:block;width:100%;height:36rem;border:0}
 .try-feature[hidden]{display:none}
+
+.capture-card-interactive{padding:.65rem .6rem .35rem;min-width:0;background:#f3f7fa;border-bottom:1px solid var(--preview-line);scroll-margin-top:14px}
+.capture-card-interactive:empty{aspect-ratio:3/2}
+@media(min-width:650px){.example-grid>.example,.screen-stories .story{align-self:start}.screen-stories .story>figure{aspect-ratio:3/2}}
 </style>
 <link rel="icon" href="/assets/preview/onemouse-android-icon.png" type="image/png" sizes="240x240">
 <link rel="stylesheet" href="/assets/preview/one-preview.css?v=light1">
-<link rel="stylesheet" href="/assets/preview/capture-demo.css?v=photo1">
+<link rel="stylesheet" href="/assets/preview/capture-demo.css?v=desktop1">
 </head>
 <body>
 <a class="skip btn primary" href="#main">본문으로 이동</a>
@@ -238,19 +242,16 @@
 <h2 id="screen-tools-title">찍어서 보내고, 폰에서 PC를 열고.</h2>
 <div class="stories">
 <article class="story">
-<figure><img src="/assets/feature-screenshot-share-photo.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="PC에서 캡처한 사진이 옆 Android 폰에도 나타나는 장면"></figure>
-<div class="story-copy"><p class="story-note">Wi-Fi·LAN · AI로 제작한 사용 예시</p><h3>필요한 화면만 찍어서 보내기</h3><p>PC에서 캡처한 부분을 복사하거나 연결된 기기로 보내세요.</p><div class="example-actions"><button class="try-feature" type="button" data-feature-demo="capture" aria-controls="feature-capture-demo" aria-expanded="false" hidden>캡처 체험</button><a href="/features-demo#screenshots">캡처하고 보내는 방법 →</a></div></div>
+<div class="capture-card-interactive" id="feature-capture-demo" data-capture-inline aria-label="사진 속 모니터에서 직접 캡처하기">
+<noscript><p>사진 속 화면을 직접 캡처하려면 JavaScript를 켜세요.</p></noscript>
+</div>
+<div class="story-copy"><p class="story-note">Wi-Fi·LAN · AI로 제작한 사용 예시</p><h3>필요한 화면만 찍어서 보내기</h3><p>PC에서 캡처한 부분을 복사하거나 연결된 기기로 보내세요.</p><div class="example-actions"><a href="/features-demo#screenshots">캡처하고 보내는 방법 →</a></div></div>
 </article>
 <article class="story">
 <figure><img src="/assets/preview/remote-racing-example.webp" width="1199" height="675" loading="lazy" decoding="async" alt="Windows PC와 가로로 든 폰에 같은 레이싱 화면이 보이고 폰 화면의 게임패드로 조작하는 장면"></figure>
 <div class="story-copy"><p class="story-note">Android → Windows · AI로 제작한 사용 예시</p><h3>폰에서 PC 화면을 열고 조작하기</h3><p>터치로 PC를 조작하고, 지원되는 게임은 화면 속 게임패드로 플레이하세요.</p><div class="example-actions"><button class="try-feature" type="button" data-feature-demo="race" aria-controls="feature-race-demo" aria-expanded="false" hidden>레이싱 체험</button><a href="/features-demo#mobile-pc-remote">폰에서 PC를 여는 방법 →</a></div></div>
 </article>
 </div>
-<section class="inline-feature" id="feature-capture-demo" aria-labelledby="inline-capture-title" hidden>
-    <div class="inline-feature-bar"><h3 id="inline-capture-title" tabindex="-1">캡처해서 폰으로 보내기</h3><button type="button" class="close-inline" data-close-demo="capture" aria-label="캡처 체험 닫기">닫기</button></div>
-    <div data-demo-content></div>
-    <p class="inline-feature-note">예시 이미지로만 동작해요. 실제 화면을 찍거나 파일을 보내지 않아요.</p>
-  </section>
   <section class="inline-feature" id="feature-race-demo" aria-labelledby="inline-race-title" hidden>
     <div class="inline-feature-bar"><h3 id="inline-race-title" tabindex="-1">폰으로 미니 레이싱 조작하기</h3><button type="button" class="close-inline" data-close-demo="race" aria-label="레이싱 체험 닫기">닫기</button></div>
     <div data-demo-content></div>
@@ -694,7 +695,7 @@ openDemoRoute();
 window.addEventListener('hashchange',openDemoRoute);
 </script>
 <script src="/js/promo-video.js" defer></script>
-<script src="/js/preview-capture-demo.js?v=photo1" defer></script>
-<script src="/js/preview-feature-demos.js?v=photo1" defer></script>
+<script src="/js/preview-capture-demo.js?v=desktop1" defer></script>
+<script src="/js/preview-feature-demos.js?v=desktop1" defer></script>
 </body>
 </html>
