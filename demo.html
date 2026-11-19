@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Windows 마우스와 키보드로 Android, Mac, 다른 Windows PC를 오가는 OneMouse.">
+<meta name="theme-color" content="#0b1020">
+<title>OneMouse 원마우스 · 홈페이지 시안</title>
+<style>
+:root{color-scheme:dark;--bg:#0b1020;--surface:#111a2c;--line:#2b3957;--ink:#f5f7ff;--muted:#b5c2dc;--green:#6bf5c6;--radius:20px}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:1rem/1.65 system-ui,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;word-break:keep-all;overflow-wrap:anywhere}a{color:inherit}button{font:inherit}a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--green);outline-offset:4px}a,button{touch-action:manipulation}.skip{position:absolute;left:12px;transform:translateY(-150%);z-index:3}.skip:focus{transform:none}.wrap{width:min(1120px,calc(100% - 40px));margin-inline:auto}.head{border-bottom:1px solid #202d48}.head .wrap,footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:18px;min-height:66px}.brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;letter-spacing:-.035em;font-size:1.18rem}.mark{display:grid;place-items:center;width:34px;height:34px;border-radius:11px;background:var(--green);color:#0a261d}.mark svg{width:19px}.head nav{display:flex;align-items:center;gap:18px}.head nav a,footer a{color:var(--muted);text-underline-offset:4px;font-size:.9rem}.hero{display:grid;grid-template-columns:1fr;gap:28px;padding-block:43px 52px}.eyebrow{color:var(--green);font-weight:750;font-size:.9rem;margin:0 0 14px}.badge{display:inline-block;color:#c5d3ed;background:#17243e;border:1px solid #34456c;border-radius:999px;padding:3px 9px;margin-left:9px;font-size:.8rem}.hero h1{font-size:clamp(2rem,6.4vw,4.1rem);line-height:1.14;letter-spacing:-.064em;margin:0}.hero h1 span{color:var(--green)}.intro{color:var(--muted);font-size:clamp(1rem,2.1vw,1.17rem);margin:16px 0 22px;max-width:36ch}.actions{display:flex;gap:9px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:45px;padding:8px 15px;border-radius:11px;border:1px solid transparent;font-weight:750;text-decoration:none;font-size:.95rem}.primary{background:var(--green);color:#08231a}.primary:hover{background:#9bffdd}.secondary{border-color:#465577;background:#151e33;color:var(--ink)}.secondary:hover{background:#233350} .desktop{display:none}.caption{margin:11px 0 0;color:var(--muted);font-size:.88rem}.visual{padding:16px;border-radius:var(--radius);border:1px solid var(--line);background:radial-gradient(ellipse at 77% 0%,#213c56,transparent 65%),var(--surface);align-self:center}.visual h2{font-size:1.05rem;margin:0 0 4px}.visual p{font-size:.9rem;color:var(--muted);margin:0}.stage{position:relative;width:100%;aspect-ratio:640/370;touch-action:pan-y;cursor:crosshair;margin-block:13px 7px}.stage>svg:first-child{display:block;width:100%;height:100%}.pointer{position:absolute;top:48%;left:43%;width:clamp(14px,4%,25px);height:auto;filter:drop-shadow(0 1px 5px #73ffcd80);transition:left .65s cubic-bezier(.22,.61,.36,1),top .65s cubic-bezier(.22,.61,.36,1)}.stage[data-device=android] .pointer{left:82%;top:47%}.stage[data-tracking] .pointer{transition:none}.pointer{pointer-events:none}.demo-foot{display:flex;gap:10px;align-items:center;flex-wrap:wrap;justify-content:space-between}.demo-button{background:#131e33;color:var(--ink);border:1px solid #546a88;border-radius:10px;padding:7px 10px;min-height:44px;cursor:pointer;font-weight:700;font-size:.88rem}.demo-button:hover{background:#243854}.status{font-size:.9rem;color:var(--green)}.section{padding:48px 0;border-top:1px solid #202d48}.section h2{font-size:clamp(1.65rem,4.2vw,2.5rem);line-height:1.25;letter-spacing:-.05em;margin:0 0 18px}.grid{display:grid;gap:12px}.card{border:1px solid var(--line);border-radius:16px;padding:19px;background:var(--surface)}.card .num{color:var(--green);font-size:.83rem;font-weight:750}.card h3{margin:5px 0;font-size:1.15rem;letter-spacing:-.04em}.card p{margin:0;color:var(--muted);font-size:.96rem}.store{display:flex;gap:7px;flex-wrap:wrap;margin-top:14px}.store a{font-size:.85rem}.help{margin:18px 0 0;color:var(--muted)}.help a,.extra a{color:var(--green);text-underline-offset:4px}.extra details{border-bottom:1px solid var(--line);padding:13px 0}.extra summary{cursor:pointer;font-weight:700}.extra p{color:var(--muted);margin:9px 0 2px}footer{border-top:1px solid #202d48;color:var(--muted);font-size:.84rem;padding-block:12px}footer .wrap{flex-wrap:wrap}
+@media(min-width:580px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(min-width:760px){.hero{padding-block:77px 80px;grid-template-columns:1.08fr 1fr;gap:40px;align-items:center}.desktop{display:inline-flex}.mobile{display:none}.visual{padding:23px}.section{padding-block:62px}}@media(max-width:350px){.wrap{width:calc(100% - 28px)}.head nav{gap:10px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.pointer{transition:none}}
+</style>
+</head>
+<body>
+<a class="skip btn primary" href="#main">본문으로 이동</a>
+<header class="head"><div class="wrap">
+<a class="brand" href="https://onemouse.pages.dev/" aria-label="OneMouse 공식 홈페이지"><span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 3v15l4-3 3 6 2.5-1.2-3-6H18z"/></svg></span>OneMouse</a>
+<nav aria-label="주요 메뉴"><a href="https://onemouse.pages.dev/guide">연결 방법</a><a href="#download">다운로드</a></nav>
+</div></header>
+<main id="main">
+<div class="hero wrap">
+<div>
+<p class="eyebrow">Windows에서 연결 시작<span class="badge">홈페이지 시안</span></p>
+<h1>마우스와 키보드 하나로,<br><span>여러 기기를 오가세요.</span></h1>
+<p class="intro">Windows 화면 끝으로 마우스를 밀면 Android, Mac, 다른 Windows PC로 커서가 넘어갑니다. 키보드도 그대로 쓸 수 있어요.</p>
+<div class="actions"><a class="btn primary desktop" href="#windows">Windows 앱 받기</a><a class="btn primary mobile" href="#android">Android 앱 받기</a><a class="btn secondary" href="https://onemouse.pages.dev/guide">연결 방법 보기</a></div>
+<p class="caption">Windows와 연결할 기기 양쪽에 설치하세요.</p>
+</div>
+<section class="visual" aria-labelledby="demo-title">
+<h2 id="demo-title">화면 끝에서 옆 기기로</h2>
+<p>마우스를 PC 화면에서 폰 쪽으로 옮겨 보세요. 폰에서는 좌우로 밀어보세요.</p>
+<div class="stage" id="stage" data-device="pc" aria-hidden="true">
+<svg viewBox="0 0 640 370" role="presentation">
+<defs>
+ <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#102137"/><stop offset="1" stop-color="#2a3245"/></linearGradient>
+ <linearGradient id="desk" x1="0" y1="0" x2=".6" y2="1"><stop stop-color="#695145"/><stop offset="1" stop-color="#392b33"/></linearGradient>
+ <linearGradient id="edge"><stop stop-color="#263140"/><stop offset=".55" stop-color="#a3acb8"/><stop offset="1" stop-color="#3a495c"/></linearGradient>
+ <linearGradient id="wp" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#183162"/><stop offset=".56" stop-color="#281d66"/><stop offset="1" stop-color="#6f46a2"/></linearGradient>
+ <linearGradient id="ph" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#164e56"/><stop offset=".61" stop-color="#244771"/><stop offset="1" stop-color="#443975"/></linearGradient>
+ <filter id="shadow"><feGaussianBlur stdDeviation="9"/></filter>
+</defs>
+<rect width="640" height="370" rx="17" fill="url(#wall)"/>
+<ellipse cx="389" cy="92" rx="153" ry="45" fill="#4e86ad" opacity=".17" filter="url(#shadow)"/>
+<path d="M0 240L640 223V353Q640 370 623 370H17Q0 370 0 353Z" fill="url(#desk)"/>
+<path d="M0 272 640 250M0 310l640-30M0 357l640-42" stroke="#ffca93" fill="none" opacity=".1"/>
+<ellipse cx="273" cy="303" rx="222" ry="29" fill="#0a0d17" opacity=".64" filter="url(#shadow)"/>
+<ellipse cx="538" cy="308" rx="79" ry="18" fill="#0a0d17" opacity=".66" filter="url(#shadow)"/>
+<path d="M206 235h43l1 32 48 13 2 6-128 4-4-7 41-14Z" fill="url(#edge)"/>
+<path d="M173 285l126-5 1 6-128 4z" fill="#394553"/>
+<rect x="43" y="37" width="367" height="213" rx="14" fill="url(#edge)"/>
+<rect x="46" y="39" width="361" height="207" rx="13" fill="#121721" stroke="#a3adbf" stroke-opacity=".5"/>
+<rect x="55" y="51" width="343" height="181" rx="7" fill="url(#wp)"/>
+<path d="M55 188Q127 82 246 138T398 82v150H55z" fill="#b08aed" opacity=".21"/>
+<path d="M55 197Q130 125 242 171T398 120v112H55z" fill="#7ba5fb" opacity=".18"/>
+<rect x="55" y="214" width="343" height="18" rx="4" fill="#111b30" opacity=".88"/>
+<g fill="#83bcff"><path d="M202 218h5v5h-5zm6 0h5v5h-5zm-6 6h5v5h-5zm6 0h5v5h-5z"/><circle cx="224" cy="223" r="4" fill="#95dcc5"/><rect x="235" y="219" width="10" height="7" rx="2" fill="#ffe2a2"/><circle cx="257" cy="223" r="4" fill="#86ccff"/></g>
+<text x="372" y="225" fill="#c5d6f4" font-size="6.5" font-family="system-ui">14:08</text>
+<g>
+ <rect x="75" y="70" width="169" height="116" rx="6" fill="#0e182b" stroke="#6a80a9" stroke-opacity=".72"/>
+ <path d="M81 70h157q6 0 6 6v13H75V76q0-6 6-6z" fill="#23324d"/>
+ <circle cx="84" cy="80" r="2.2" fill="#74edc4"/><text x="92" y="83" fill="#ecf2ff" font-size="8" font-family="system-ui">Workspace</text>
+ <path d="M217 79h4m5-2v4m7-4 4 4m0-4-4 4" stroke="#b9c7df" stroke-width="1"/>
+ <rect x="75" y="89" width="44" height="97" fill="#192943"/><rect x="79" y="105" width="35" height="12" rx="3" fill="#375074"/>
+ <g fill="#a6c2e3" opacity=".8"><rect x="84" y="110" width="22" height="2" rx="1"/><rect x="84" y="125" width="19" height="2" rx="1"/><rect x="84" y="137" width="24" height="2" rx="1"/><rect x="84" y="149" width="17" height="2" rx="1"/></g>
+ <text x="132" y="108" fill="#f1f5ff" font-size="9" font-family="system-ui" font-weight="bold">Project notes</text>
+ <g fill="#7692b7" opacity=".72"><rect x="132" y="118" width="83" height="3" rx="1.5"/><rect x="132" y="126" width="63" height="3" rx="1.5"/><rect x="132" y="135" width="73" height="3" rx="1.5"/></g>
+ <rect x="132" y="148" width="47" height="24" rx="4" fill="#1c425a"/><rect x="185" y="148" width="45" height="24" rx="4" fill="#302d61"/>
+ <path d="m136 166 8-8 7 4 8-10 15 5" fill="none" stroke="#6bf5c6" stroke-width="1.2"/>
+ <path d="m191 165 8-5 7 3 7-8 10 1" fill="none" stroke="#cf9af7" stroke-width="1.2"/>
+</g>
+<path d="M54 52h218L54 143z" fill="#fff" opacity=".045"/><circle cx="228" cy="240" r="2" fill="#6bf5c6" opacity=".8"/>
+<path d="m112 309 164-8 33 25-197 10-18-8z" fill="#1a2330" stroke="#6c798e"/><path d="m113 313 162-8 18 15-183 10z" fill="#97a7c6" opacity=".72"/>
+<path d="M110 319l177-9m-180 15 188-9m-168-4 0 17m16-18 1 17m15-18 2 17m15-18 3 17m15-18 4 17m14-18 5 17m14-18 6 17m11-18 7 17m10-18 8 17" stroke="#222d41" stroke-width="1.5"/>
+<path d="m328 304 18-2q10 0 17 7l7 6-6 8-31 2-12-8q0-9 7-13z" fill="#687989" stroke="#141d28"/>
+<path d="m340 304 9 10m-28 3 43-5" stroke="#202a38" stroke-width="1"/>
+<path d="M562 259h11l12 37 25 8-85 4-9-7 28-9z" fill="url(#edge)"/>
+<rect x="481" y="96" width="105" height="202" rx="19" fill="url(#edge)" stroke="#abb7c6"/>
+<rect x="484" y="96" width="99" height="198" rx="18" fill="#080d19" stroke="#526379"/>
+<rect x="491" y="105" width="85" height="181" rx="12" fill="url(#ph)"/>
+<path d="M491 226q39-37 85-58v118h-74q-11 0-11-10z" fill="#93c9c0" opacity=".21"/>
+<path d="M491 235q45-22 85-38v76q0 13-11 13h-63q-11 0-11-10z" fill="#6aabbb" opacity=".2"/>
+<circle cx="533.5" cy="112" r="3" fill="#0b1222"/>
+<text x="498" y="115" fill="#e4f4ff" font-size="6" font-family="system-ui">14:08</text>
+<text x="500" y="144" fill="#f6f9ff" font-size="15" font-family="system-ui" font-weight="bold">14:08</text>
+<text x="500" y="153" fill="#deecff" font-size="6" font-family="system-ui">Monday</text>
+<rect x="500" y="164" width="67" height="20" rx="6" fill="#cee8f2" opacity=".84"/>
+<g stroke="#2d4c6c" stroke-width="1" fill="none"><circle cx="509" cy="173" r="2.3"/><path d="m511 175 2 2"/></g><text x="517" y="176" fill="#294463" font-size="7" font-family="system-ui">Search</text>
+<g><circle cx="506" cy="239" r="7" fill="#9ce3a6"/><circle cx="524" cy="239" r="7" fill="#9ed3ff"/><circle cx="543" cy="239" r="7" fill="#e7b8f3"/><circle cx="561" cy="239" r="7" fill="#ffcda0"/><path d="M503 237h6v5h-6zm18 0h6v5h-6zm19 0h6v5h-6zm18 0h6v5h-6" fill="#38516e"/></g>
+<path d="M522 280h24" stroke="#e0e7fb" stroke-width="2" stroke-linecap="round"/>
+<path d="M491 108h55l-55 79z" fill="#fff" opacity=".065"/>
+<text x="73" y="267" fill="#e1eaff" font-size="14" font-family="system-ui" font-weight="bold">Windows</text>
+<text x="494" y="325" fill="#e0ffef" font-size="14" font-family="system-ui" font-weight="bold">Android</text>
+<path d="M415 175h58m-11-6 11 6-11 6" fill="none" stroke="#6bf5c6" stroke-width="2" stroke-dasharray="4 4" opacity=".65"/>
+</svg>
+<svg class="pointer" viewBox="0 0 22 25"><path d="M2 2v19l5-5 4 7 4-2-4-7h8z" fill="#f6fffb" stroke="#0b1020" stroke-width="1.6" stroke-linejoin="round"/></svg>
+</div>
+<div class="demo-foot"><span class="status" id="status" aria-live="polite">커서 위치: Windows</span><button class="demo-button" type="button" id="toggle" hidden>Android로 넘겨보기 →</button></div>
+<noscript><p>그림은 Windows 화면 끝에서 Android로 커서가 이동하는 모습을 보여줍니다.</p></noscript>
+</section>
+</div>
+<section class="section"><div class="wrap">
+<p class="eyebrow">주요 기능</p><h2>기기가 바뀌어도 하던 일은 그대로.</h2>
+<div class="grid">
+<article class="card"><span class="num">01 / 마우스</span><h3>화면 끝으로 넘기기</h3><p>기기를 책상 위에 놓인 순서대로 배치하세요. 마우스를 그 방향으로 밀면 옆 기기에서 클릭하고 스크롤할 수 있어요.</p></article>
+<article class="card"><span class="num">02 / 키보드</span><h3>같은 키보드로 입력</h3><p>폰에서 검색하거나 메시지에 답장할 때, 익숙한 PC 키보드로 바로 입력하세요.</p></article>
+<article class="card"><span class="num">03 / 파일과 클립보드</span><h3>파일과 복사한 글 보내기</h3><p>연결된 기기끼리 파일과 복사한 텍스트를 주고받으세요. 지원 방식은 기기와 연결 방법에 따라 달라요.</p></article>
+</div>
+</div></section>
+<section id="download" class="section"><div class="wrap">
+<p class="eyebrow">다운로드</p><h2>내 PC와 연결할 기기에 설치하세요.</h2>
+<div class="grid">
+<article id="windows" class="card"><h3>Windows</h3><p>Windows 10·11. 연결을 시작할 PC에 설치하세요.</p><div class="store"><a class="btn secondary" href="https://onemouse.pages.dev/#get">최신 설치 파일 안내</a><a class="btn secondary" href="https://apps.microsoft.com/detail/9MZHT0262V7Q">Microsoft Store</a></div></article>
+<article id="android" class="card"><h3>Android</h3><p>폰을 PC에서 조작하려면 OneMouse 접근성 권한을 켜 주세요.</p><div class="store"><a class="btn secondary" href="https://play.google.com/store/apps/details?id=com.mouselink.app">Google Play</a><a class="btn secondary" href="https://apps.samsung.com/appquery/appDetail.as?appId=com.mouselink.app.galaxy">Galaxy Store</a></div></article>
+<article id="macos" class="card"><h3>Mac</h3><p>Apple Silicon · macOS 13 이상. Windows PC와 같은 네트워크에서 연결하세요.</p><div class="store"><a class="btn secondary" href="https://github.com/sdlckdrl/mouselink-web/releases/tag/mac-v1.6.8">Mac 앱 받기</a></div></article>
+</div>
+<p class="help">어떤 방식으로 연결할지 모르겠다면 <a href="https://onemouse.pages.dev/guide#start">내 기기 연결 방법 고르기</a></p>
+</div></section>
+<section class="section extra"><div class="wrap"><h2>이런 것도 할 수 있어요.</h2>
+<details><summary>폰에서 Windows PC 조작하기</summary><p>폰에서 연결된 PC 화면을 열어 터치로 조작할 수 있어요. <a href="https://onemouse.pages.dev/guide#mobile-pc-remote">원격 화면 안내</a></p></details>
+<details><summary>스크린샷 보내기</summary><p>Windows에서 찍은 화면을 Wi-Fi나 LAN으로 연결한 기기에 보낼 수 있어요. <a href="https://onemouse.pages.dev/guide#screenshots">스크린샷 전송 안내</a></p></details>
+<details><summary>폰 알림을 PC에서 보기</summary><p>Android 알림을 PC에서도 확인할 수 있어요. <a href="https://onemouse.pages.dev/guide#notifications">알림 연결 안내</a></p></details>
+</div></section>
+</main>
+<footer><div class="wrap"><span>© 2026 OneMouse · 홈페이지 시안</span><span><a href="https://onemouse.pages.dev/">현재 홈페이지</a> · <a href="https://onemouse.pages.dev/help">도움말</a></span></div></footer>
+<script>
+const stage = document.getElementById('stage');
+const toggle = document.getElementById('toggle');
+const status = document.getElementById('status');
+toggle.hidden = false;
+const pointer = stage.querySelector('.pointer');
+let touchStart;
+function setDevice(device, coordinates) {
+  if (stage.dataset.device !== device) {
+    stage.dataset.device = device;
+    status.textContent = device === 'android' ? '커서 위치: Android' : '커서 위치: Windows';
+    toggle.textContent = device === 'android' ? '← Windows로 돌아가기' : 'Android로 넘겨보기 →';
+  }
+  if (coordinates) {
+    stage.dataset.tracking = '';
+    pointer.style.left = coordinates[0] + '%';
+    pointer.style.top = coordinates[1] + '%';
+  } else {
+    delete stage.dataset.tracking;
+    pointer.style.removeProperty('left');
+    pointer.style.removeProperty('top');
+  }
+}
+const clamp = (value, low, high) => Math.min(high, Math.max(low, value));
+function move(e) {
+  const bounds = stage.getBoundingClientRect();
+  const x = (e.clientX - bounds.left) / bounds.width * 640;
+  const y = (e.clientY - bounds.top) / bounds.height * 370;
+  const onAndroid = x > 445;
+  const plane = onAndroid ? [491, 555, 106, 267] : [55, 380, 51, 210];
+  setDevice(onAndroid ? 'android' : 'pc', [
+    clamp(x, plane[0], plane[1]) / 6.4,
+    clamp(y, plane[2], plane[3]) / 3.7
+  ]);
+}
+stage.addEventListener('pointermove', e => {
+  if (e.pointerType === 'mouse' || e.pointerType === 'pen') move(e);
+  else if (touchStart && touchStart.id === e.pointerId &&
+           Math.abs(e.clientX - touchStart.x) >= 10 &&
+           Math.abs(e.clientX - touchStart.x) > Math.abs(e.clientY - touchStart.y)) move(e);
+});
+stage.addEventListener('pointerdown', e => {
+  if (e.pointerType === 'touch' && e.isPrimary) touchStart = {x:e.clientX,y:e.clientY,id:e.pointerId};
+});
+stage.addEventListener('pointerup', e => {
+  if (touchStart && touchStart.id === e.pointerId) {
+    if (Math.abs(e.clientY - touchStart.y) < 15 || Math.abs(e.clientX - touchStart.x) > Math.abs(e.clientY - touchStart.y)) move(e);
+    touchStart = undefined;
+  }
+});
+stage.addEventListener('pointercancel', () => {touchStart = undefined;});
+toggle.addEventListener('click', () => setDevice(stage.dataset.device === 'pc' ? 'android' : 'pc'));
+</script>
+</body>
+</html>
