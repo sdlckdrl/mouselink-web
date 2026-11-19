@@ -41,7 +41,27 @@ h1,h2,h3{line-height:1.25;letter-spacing:-.04em}h1{font-size:clamp(2rem,4.8vw,3.
 .key-list{display:grid;gap:.45rem;margin:.25rem 0 1rem}.key-list div{padding:.42rem 0;border-bottom:1px solid var(--preview-line)}.key-list dt{font-weight:780}.key-list dd{margin:0}
 .fine{font-size:.9rem}.panel [id]:target,.subfeature:target{outline:2px solid #a2c9bb;outline-offset:2px;border-radius:.25rem}
 @media(min-width:770px){.hero-grid{grid-template-columns:minmax(0,1.2fr) minmax(0,1fr)}.key-list div{display:grid;align-items:baseline;grid-template-columns:13rem minmax(0,1fr);gap:1rem}}
-.gesture-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:12px 0}.gesture-card{min-width:0;background:#fff;border:1px solid #afc1cc;border-radius:10px;padding:8px}.gesture-card svg{display:block;width:min(100%,102px);margin:0 auto 6px;background:#0d1728;border-radius:7px}.gesture-card h4{margin:2px 0;font-size:.97rem}.gesture-card p{margin:3px 0;font-size:.83rem;line-height:1.35}.gesture-card .gesture-dir{color:#126051;font-weight:850}.gesture-edge,.gesture-head{fill:none;stroke:#69efc3;stroke-width:3.3;stroke-linecap:round;stroke-linejoin:round}.gesture-head{stroke:#c2ffed}.gesture-start{fill:#effffc;stroke:#103e3b;stroke-width:1.5}.gesture-card svg text{font:800 11px system-ui,sans-serif;fill:#f0f6ff;text-anchor:middle;paint-order:stroke;stroke:#0d1728;stroke-width:2.6px}.gesture-legend{color:var(--preview-muted);font-size:.86rem}.gesture-legend span{color:#204a44}.touch-cues{display:flex;flex-wrap:wrap;gap:5px;margin:8px 0;padding:0}.touch-cues span{display:flex;align-items:center;gap:3px;font-size:.82rem;color:#254958;padding:3px 5px;border:1px solid #91acb9;border-radius:5px}.touch-cues b{color:var(--preview-accent);font-size:1.25em}@media(min-width:710px){.gesture-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}</style>
+.gesture-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:12px 0}.gesture-card{min-width:0;background:#fff;border:1px solid #afc1cc;border-radius:10px;padding:8px}.gesture-card svg{display:block;width:min(100%,102px);margin:0 auto 6px;background:#0d1728;border-radius:7px}.gesture-card h4{margin:2px 0;font-size:.97rem}.gesture-card p{margin:3px 0;font-size:.83rem;line-height:1.35}.gesture-card .gesture-dir{color:#126051;font-weight:850}.gesture-edge,.gesture-head{fill:none;stroke:#69efc3;stroke-width:3.3;stroke-linecap:round;stroke-linejoin:round}.gesture-head{stroke:#c2ffed}.gesture-start{fill:#effffc;stroke:#103e3b;stroke-width:1.5}.gesture-card svg text{font:800 11px system-ui,sans-serif;fill:#f0f6ff;text-anchor:middle;paint-order:stroke;stroke:#0d1728;stroke-width:2.6px}.gesture-legend{color:var(--preview-muted);font-size:.86rem}.gesture-legend span{color:#204a44}.touch-cues{display:flex;flex-wrap:wrap;gap:5px;margin:8px 0;padding:0}.touch-cues span{display:flex;align-items:center;gap:3px;font-size:.82rem;color:#254958;padding:3px 5px;border:1px solid #91acb9;border-radius:5px}.touch-cues b{color:var(--preview-accent);font-size:1.25em}@media(min-width:710px){.gesture-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+/* Narrower reading column and clearer disclosure boundaries. */
+.overview{max-width:820px}.overview h2{margin-bottom:.4rem}.overview>p{margin-block:0 1.35rem}
+.feature-list{display:grid;gap:.5rem;border-top:0}
+.feature{min-width:0;background:var(--preview-panel);border:1px solid var(--preview-line);border-radius:.65rem}
+.feature[open]{border-color:#a7c6bf}
+.feature>summary{padding:.7rem 2.8rem .7rem 1rem;min-height:62px;border-radius:.65rem}
+.feature>summary::after{top:calc(50% - .38rem);right:1.1rem}
+.feature>summary:hover{background:#edf7f4}.feature[open]>summary{background:#eef7f4;border-bottom:1px solid #c8e3da;border-radius:.65rem .65rem 0 0}
+.feature-name{color:var(--preview-ink);line-height:1.35}.feature-desc{margin-top:.12rem;line-height:1.4}
+.feature>.panel{max-width:none;padding:.65rem 1rem .9rem}
+.reference-heading{margin:1.4rem 0 .55rem;color:var(--preview-muted);font-size:.95rem}
+.key-groups{display:grid;gap:.8rem;margin:.6rem 0 .8rem}
+.key-group h3{font-size:.9rem;color:#304c5d;margin:0 0 .4rem}
+.key-list{margin:0;gap:0}
+.key-list div{display:grid;grid-template-columns:minmax(0,1fr);gap:.28rem;padding:.54rem .07rem;align-items:baseline;border-bottom:1px solid var(--preview-line)}
+.key-list dt{color:var(--preview-ink);font-weight:700}.key-list dd{font-size:.79rem;color:var(--preview-muted);line-height:1.9}
+.key-list kbd{display:inline-block;white-space:nowrap;font:700 .76rem/1.35 system-ui,sans-serif;padding:.14rem .33rem;border-radius:.3rem;background:#edf3f8;color:#233c52;border:1px solid #a7bbc9;box-shadow:0 1px #a7bbc9}
+@media(min-width:580px){.key-list div{grid-template-columns:minmax(0,1fr) auto;gap:1rem}}
+@media(max-width:579px){.feature>summary{padding-inline-start:.85rem}.feature>.panel{padding-inline:.85rem}}
+</style>
 </head>
 <body>
 <a class="skip" href="#main">본문으로 이동</a>
@@ -82,11 +102,11 @@ h1,h2,h3{line-height:1.25;letter-spacing:-.04em}h1{font-size:clamp(2rem,4.8vw,3.
   </div>
 </section>
 <section class="layout overview" aria-labelledby="feature-jump">
-  <h2 id="feature-jump">연결하고 나서 할 수 있는 일</h2>
-  <p>필요한 기능을 눌러 사용 방법을 확인하세요.</p>
+  <h2 id="feature-jump">기능별 사용법</h2>
+  <p>하려는 일을 고르면 사용 순서가 보여요.</p>
   <div class="feature-list">
     <details class="feature" id="files">
-      <summary id="share-title"><span class="feature-name">파일·복사한 글·스크린샷 보내기</span><span class="feature-desc">하던 일을 옆 기기에서 이어서 하세요.</span></summary>
+      <summary id="share-title"><span class="feature-name">파일·클립보드 보내기</span><span class="feature-desc">파일, 복사한 글, 캡처한 화면</span></summary>
       <div class="panel">
         <h3>파일 보내기</h3><p>전송 탭이나 빠른 드롭존(<strong>Ctrl+Alt+D</strong>)에 파일을 놓고 받을 기기를 고르세요. 지원되는 Windows PC나 Mac으로는 화면 경계 너머로 파일을 끌어 놓을 수도 있어요. Android에서는 전송 탭이나 공유 메뉴의 OneMouse를 사용하세요.</p>
         <p class="fine" id="file-receive-folder"><strong>PC에서 받은 파일:</strong> 설정 → 일반 → 파일 전송 → 수신 파일 저장 위치 → 폴더 열기.</p>
@@ -96,7 +116,7 @@ h1,h2,h3{line-height:1.25;letter-spacing:-.04em}h1{font-size:clamp(2rem,4.8vw,3.
       </div>
     </details>
     <details class="feature" id="remote">
-      <summary id="remote-title"><span class="feature-name">다른 기기 화면 보고 조작하기</span><span class="feature-desc">폰에서 PC를 열거나 Windows에서 연결한 기기의 화면을 보세요.</span></summary>
+      <summary id="remote-title"><span class="feature-name">원격 화면 열기</span><span class="feature-desc">폰에서 PC 조작, PC에서 연결 기기 보기</span></summary>
       <div class="panel">
         <div id="mobile-pc-remote"><h3>Android에서 Windows 열기</h3><p>지원되는 양쪽 앱에서 로컬 네트워크나 Google 계정으로 연결하세요. Android의 등록된 PC에서 <strong>원격 화면</strong>을 열고, Windows에 허용 요청이 나오면 승인하세요. 보기만 할 때는 보기 전용을 켜세요.</p></div>
         <div id="windows-remote"><h3>Windows에서 연결 기기 화면 열기</h3><p>기기 관리에서 원격창을 여세요. Android는 폰에서 화면 캡처를 승인해야 해요. Mac 화면·창 공유는 같은 네트워크와 화면 녹화 권한이 필요해요.</p></div>
@@ -107,10 +127,10 @@ h1,h2,h3{line-height:1.25;letter-spacing:-.04em}h1{font-size:clamp(2rem,4.8vw,3.
       </div>
     </details>
     <details class="feature" id="notifications">
-      <summary id="alert-title"><span class="feature-name">Android 알림을 PC에서 보기</span><span class="feature-desc">폰을 집지 않고 새 알림을 확인하세요.</span></summary>
+      <summary id="alert-title"><span class="feature-name">안드로이드 알림 보기</span><span class="feature-desc">메시지 알림, 인증번호 복사</span></summary>
       <div class="panel"><p>Android에서 알림 접근을 허용하고 <strong>PC로 알림 보내기</strong>를 켜세요. 보낼 앱을 고르고 Windows에서도 기기 알림 표시를 켜세요. 지난 알림과 보관 기간은 Windows 설정에서 확인할 수 있어요.</p><p>지원되는 앱과 알림은 PC에서 답장하거나 인증번호를 복사할 수 있어요. Android 보호 정책에 따라 일부 알림이나 번호는 표시되지 않을 수 있어요.</p><p><a href="/help-demo#alerts">알림이 안 보일 때</a></p></div>
     </details>
-    <details class="feature" id="mouse-gestures"><summary><span class="feature-name">Android 마우스 제스처 쓰기</span><span class="feature-desc">우클릭한 채 그려서 뒤로 가거나 스크롤하세요.</span></summary>
+    <details class="feature" id="mouse-gestures"><summary><span class="feature-name">마우스 제스처 쓰기</span><span class="feature-desc">안드로이드에서 뒤로 가기, 스크롤</span></summary>
 <div class="panel">
 <p><strong>Android 화면으로 커서를 직접 넘겨서 쓰는 기능</strong>이에요. 지원되는 양쪽 앱에서 설정 → 입력 · 클립보드 → 마우스 제스처를 켜고 적용할 앱을 고르세요. 처음에는 꺼져 있어요.</p>
 <p>Android 화면에서 우클릭을 누른 채 그림처럼 움직인 뒤 버튼을 놓으세요.</p>
@@ -130,22 +150,34 @@ h1,h2,h3{line-height:1.25;letter-spacing:-.04em}h1{font-size:clamp(2rem,4.8vw,3.
 <p class="gesture-legend">새로고침은 마우스 오른쪽 버튼을 누른 채 위로 그은 뒤, 같은 선을 따라 아래로 돌아오는 한 동작이에요.</p>
 <p>Windows·Mac 제어나 미러링 창에서는 이 Android 제스처를 쓰지 않아요. <a href="/help-demo#cursor">커서가 Android로 안 넘어갈 때</a></p>
 </div></details>
+  </div>
+  <h3 class="reference-heading">설정과 단축키</h3>
+  <div class="feature-list">
     <details class="feature" id="shortcuts">
-      <summary id="keys-title"><span class="feature-name">Windows 기본 단축키 확인하기</span><span class="feature-desc">기기 연결, 캡처, 커서 복귀에 필요한 키를 확인하세요.</span></summary>
+      <summary id="keys-title"><span class="feature-name">Windows 단축키</span><span class="feature-desc">캡처, 커서 복귀, 기기 연결</span></summary>
       <div class="panel">
-        <dl class="key-list">
-          <div><dt>Ctrl+Alt+1~9</dt><dd>번호가 지정된 LAN 기기 입력에 연결하거나 해제해요.</dd></div>
-          <div><dt>Ctrl+Alt+Shift+1~9</dt><dd>해당 LAN 기기의 원격창을 열거나 앞으로 가져와요.</dd></div>
-          <div><dt>Ctrl+Alt+D</dt><dd>빠른 드롭존을 열거나 숨겨요.</dd></div>
-          <div><dt>Ctrl+Alt+S</dt><dd>캡처 도구를 열어요. 대상 기기와 권한에 따라 달라요.</dd></div>
-          <div><dt>Ctrl+Alt+V</dt><dd>폰 알림에 표시된 지원되는 인증번호를 복사해요.</dd></div>
-          <div id="shortcut-return"><dt>Ctrl+Alt+Backspace</dt><dd>다른 기기에서 마우스를 내 PC로 가져와요.</dd></div>
-        </dl>
+        <div class="key-groups">
+          <section class="key-group" aria-labelledby="shortcuts-quick"><h3 id="shortcuts-quick">바로 쓰는 단축키</h3>
+            <dl class="key-list">
+              <div id="shortcut-return"><dt>커서를 내 PC로 가져오기</dt><dd><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Backspace</kbd></dd></div>
+              <div><dt>캡처 도구 열기</dt><dd><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>S</kbd></dd></div>
+              <div><dt>빠른 파일 드롭존 열기·닫기</dt><dd><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>D</kbd></dd></div>
+              <div><dt>폰 알림의 인증번호 복사</dt><dd><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>V</kbd></dd></div>
+            </dl>
+          </section>
+          <section class="key-group" aria-labelledby="shortcuts-lan"><h3 id="shortcuts-lan">번호가 지정된 LAN 기기</h3>
+            <dl class="key-list">
+              <div><dt>입력 연결·해제</dt><dd><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>1–9</kbd></dd></div>
+              <div><dt>원격창 열기·앞으로 가져오기</dt><dd><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>1–9</kbd></dd></div>
+            </dl>
+          </section>
+        </div>
+        <p class="fine">캡처와 인증번호 복사는 기기와 권한에 따라 지원 범위가 달라요.</p>
         <p>설정 → 단축키에서 바꾸거나 끌 수 있어요. <a href="/help-demo#cursor">입력이 돌아오지 않을 때</a></p>
       </div>
     </details>
     <details class="feature" id="permissions">
-      <summary id="perm-title"><span class="feature-name">기기별로 필요한 권한 확인하기</span><span class="feature-desc">연결한 기기와 쓰려는 기능에 맞춰 켜세요.</span></summary>
+      <summary id="perm-title"><span class="feature-name">기기 권한 확인하기</span><span class="feature-desc">안드로이드 접근성, Mac 손쉬운 사용, 화면 녹화</span></summary>
       <div class="panel"><p>Android 입력은 <strong>접근성</strong>, Mac 입력은 <strong>손쉬운 사용</strong>이 필요해요. macOS 15 이상에서 Mac이 검색되지 않으면 로컬 네트워크 권한을 확인하세요. 화면 캡처·녹화는 원격 화면을 열 때 따로 승인해요.</p><p><a href="/compatibility-demo">지원 기기와 연결 방식</a></p></div>
     </details>
   </div>
