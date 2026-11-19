@@ -8,7 +8,7 @@
   <meta name="description" content="원마우스 문제 해결 시안. 연결·커서·파일 전송 문제를 증상별로 찾아보세요.">
   <title>문제 해결 시안 | OneMouse 원마우스</title>
   <style>
-    :root{color-scheme:dark;--bg:#0c1322;--panel:#111d30;--line:#2e415b;--text:#f3f7ff;--muted:#b5c5da;--mint:#68f1c4;--focus:#8bcfff;font-family:system-ui,-apple-system,"Malgun Gothic",sans-serif}
+    :root{color-scheme:light;--bg:var(--preview-bg);--panel:var(--preview-panel);--line:var(--preview-line);--text:var(--preview-ink);--muted:var(--preview-muted);--mint:var(--preview-accent);--focus:#08729d;font-family:system-ui,-apple-system,"Malgun Gothic",sans-serif}
     *{box-sizing:border-box}
     html,body{margin:0;background:var(--bg);color:var(--text)}
     a{color:var(--mint);text-underline-offset:.2em}
@@ -18,10 +18,10 @@
     .wrap{width:min(1120px,calc(100% - 2.5rem));margin-inline:auto}
     .skip{position:absolute;transform:translateY(-120%);padding:.8rem;background:var(--bg);z-index:1}
     .skip:focus{transform:none}
-    header{border-bottom:1px solid var(--line);background:#0d1627}
+    header{border-bottom:1px solid var(--line);background:#fff}
     .top{display:flex;align-items:center;justify-content:space-between;gap:.5rem 2rem;flex-wrap:wrap;padding-block:.55rem}
     .brand{display:inline-flex;align-items:center;gap:.55rem;font-weight:850;color:var(--text);text-decoration:none;min-height:44px}
-    .mark{width:30px;height:30px;border-radius:8px;display:grid;place-items:center;background:var(--mint);color:#082519}
+    .mark{width:30px;height:30px;border-radius:8px;display:grid;place-items:center;background:var(--mint);color:#fff}
     nav{display:flex;gap:.15rem 1rem;flex-wrap:wrap}
     nav a{font-size:.96rem;color:var(--muted);display:inline-flex;align-items:center;min-height:44px;text-decoration:none}
     nav a[aria-current],nav a:hover{color:var(--mint);text-decoration:underline}
@@ -33,10 +33,10 @@
     .eyebrow{display:block;font-size:.9rem;font-weight:800;color:var(--mint);margin-bottom:.6rem}
     .hero p,.muted,.steps li{color:var(--muted)}
     .hero p{margin-bottom:0}
-    .rescue{border:1px solid #426455;border-radius:16px;padding:1rem 1.15rem;background:#112b2b}
+    .rescue{border:1px solid #a9c9bd;border-radius:16px;padding:1rem 1.15rem;background:#e6f5f1}
     .rescue h2{font-size:1.05rem;margin-bottom:.5rem}
     .rescue p{font-size:.94rem}
-    kbd{display:inline-block;border:1px solid #5a7a86;border-radius:5px;padding:.2em .35em;font:700 .9em ui-monospace,monospace;color:#dffded;white-space:nowrap}
+    kbd{display:inline-block;border:1px solid #7b918d;border-radius:5px;padding:.2em .35em;font:700 .9em ui-monospace,monospace;color:#194b43;white-space:nowrap}
     .jump{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.65rem;margin-bottom:2rem}
     .jump a{display:flex;align-items:center;justify-content:space-between;gap:.45rem;padding:.72rem .8rem;min-height:55px;color:var(--text);text-decoration:none;font-weight:700;background:var(--panel);border:1px solid var(--line);border-radius:10px}
     .jump a:hover{border-color:var(--mint)} .arrow{color:var(--mint)}
@@ -56,7 +56,7 @@
     @media(max-width:410px){.wrap{width:calc(100% - 1.5rem)}.jump{grid-template-columns:1fr}.issue{padding:1rem}.top nav{gap:0 .75rem}}
   </style>
 <link rel="icon" href="/assets/preview/onemouse-android-icon.png" type="image/png" sizes="240x240">
-<link rel="stylesheet" href="/assets/preview/one-preview.css">
+<link rel="stylesheet" href="/assets/preview/one-preview.css?v=light1">
 </head>
 <body>
 <a class="skip" href="#main">본문으로 이동</a>
