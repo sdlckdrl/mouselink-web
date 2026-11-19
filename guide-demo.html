@@ -13,12 +13,13 @@
 @media(min-width:680px){.hero{padding-block:63px 34px}.panel{padding:25px}.steps,.group{grid-template-columns:repeat(2,minmax(0,1fr))}.shot img{max-height:250px}}
 @media(min-width:850px){.group{grid-template-columns:repeat(3,minmax(0,1fr))}}
 </style>
+<link rel="stylesheet" href="/assets/preview/one-preview.css">
 </head>
 <body>
 <a class="skip" href="#main">본문으로 이동</a>
-<header class="top"><div class="wrap">
-  <a class="brand" href="/" aria-label="OneMouse 공식 홈페이지"><span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 3v15l4-3 3 6 2.5-1.2-3-6H18z"/></svg></span>OneMouse</a>
-  <nav class="top-links" aria-label="참고 링크"><a href="/#get">앱 받기</a><a href="/guide">공식 가이드</a></nav>
+<header class="preview-header"><div class="preview-frame">
+  <a class="preview-brand" href="/demo" aria-label="OneMouse 홈 시안"><span class="preview-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 3v15l4-3 3 6 2.5-1.2-3-6H18z"/></svg></span>OneMouse</a>
+  <nav class="preview-nav" aria-label="홈페이지 시안 메뉴"><a href="/demo">홈 시안</a><a href="/guide-demo" aria-current="page">연결 가이드</a><a href="/help-demo">문제 해결</a><a href="/download-demo">다운로드</a></nav>
 </div></header>
 <main id="main">
   <div class="hero"><div class="wrap">
@@ -37,7 +38,7 @@
       <h2 id="android-title" tabindex="-1">Android 폰·태블릿 연결하기</h2>
       <p>QR 또는 6자리 번호, 둘 중 하나만 쓰면 돼요. PC가 유선이어도 같은 공유기에 연결돼 있으면 됩니다. Google 로그인은 필요 없어요.</p>
       <ol class="steps">
-        <li><h3>양쪽에서 OneMouse 열기</h3><p>Windows와 Android에 <a href="/#get">OneMouse를 설치</a>하고, 같은 공유기에 연결해요. Android에서 <span class="path">설정 → 접근성 → 설치된 앱 → OneMouse</span>를 켜세요. 기기에 따라 메뉴 이름이 다를 수 있어요.</p></li>
+        <li><h3>양쪽에서 OneMouse 열기</h3><p>Windows와 Android에 <a href="/download-demo">OneMouse를 설치</a>하고, 같은 공유기에 연결해요. Android에서 <span class="path">설정 → 접근성 → 설치된 앱 → OneMouse</span>를 켜세요. 기기에 따라 메뉴 이름이 다를 수 있어요.</p></li>
         <li><h3>Windows에서 QR·인증번호 열기</h3><p><span class="path">기기 관리 → 다른 방법으로 연결 → 이 PC의 QR·인증번호</span>를 누르세요.</p>
           <figure class="shot"><a href="/assets/pairing/pc-code-ko.webp" aria-label="Windows의 QR·인증번호 예시 화면 크게 보기"><img src="/assets/pairing/pc-code-ko.webp" alt="Windows OneMouse의 QR·6자리 인증번호 창" loading="lazy"></a><figcaption>화면의 번호 대신 내 PC의 번호를 쓰세요.</figcaption></figure></li>
         <li><h3>Android에서 번호 입력 또는 QR 스캔</h3><p><span class="path">홈 → 다른 방법으로 연결 → QR·인증번호로 PC 추가</span>를 누르세요. <strong>숫자 코드</strong>에서 번호를 입력하거나, <strong>QR 코드 스캔 → 카메라 실행</strong>으로 PC 화면을 스캔하세요.</p>
@@ -48,7 +49,7 @@
         <li><h3>기기 위치를 맞추고 마우스 넘기기</h3><p>Android 홈의 <strong>등록된 PC</strong>에서 연결을 확인하세요. Windows에서 폰·태블릿을 실제 놓인 방향으로 배치하고, 그쪽 가장자리의 진입 통로로 마우스를 밀어 보세요.</p>
           <figure class="shot"><a href="/assets/pairing/pc-position-ko.webp" aria-label="Android 기기 배치 예시 화면 크게 보기"><img src="/assets/pairing/pc-position-ko.webp" alt="Windows OneMouse에서 Android를 PC 오른쪽에 배치한 화면" loading="lazy"></a><figcaption>같은 방향으로 마우스를 넘겨요.</figcaption></figure></li>
       </ol>
-      <div class="tip"><strong>연결됐는데 커서가 안 넘어가나요?</strong> Android 접근성이 켜졌는지, 배치 방향과 진입 통로가 맞는지 확인해요. <a href="/help#cursor-not-crossing">문제 해결 보기</a></div>
+      <div class="tip"><strong>연결됐는데 커서가 안 넘어가나요?</strong> Android 접근성이 켜졌는지, 배치 방향과 진입 통로가 맞는지 확인해요. <a href="/help-demo#cursor">문제 해결 보기</a></div>
       <details><summary>다른 연결 방법: Google 계정 또는 Bluetooth</summary><p>같은 공유기를 쓸 수 없나요? 지원되는 Windows·Android 앱의 <a href="/guide#connect-account">Google 계정 연결</a>이나 <a href="/guide#connect-bluetooth">Bluetooth 연결</a>을 확인하세요. 연결 방식에 따라 쓸 수 있는 기능이 다릅니다.</p></details>
     </section>
     <section class="panel" id="mac" data-device-panel aria-labelledby="mac-title">
@@ -56,12 +57,12 @@
       <h2 id="mac-title" tabindex="-1">Windows에서 Mac 연결하기</h2>
       <p>Apple Silicon Mac과 macOS 13 이상이 필요해요. 두 기기를 같은 공유기의 Wi-Fi 또는 LAN에 연결하세요.</p>
       <ol class="steps">
-        <li><h3>Windows와 Mac에서 앱 열기</h3><p><a href="/#get">OneMouse를 설치</a>하고 두 기기에서 실행하세요. 연결은 Windows에서 시작해요.</p></li>
+        <li><h3>Windows와 Mac에서 앱 열기</h3><p><a href="/download-demo">OneMouse를 설치</a>하고 두 기기에서 실행하세요. 연결은 Windows에서 시작해요.</p></li>
         <li><h3>Mac에서 손쉬운 사용 허용</h3><p>입력을 받으려면 <strong>손쉬운 사용</strong>을 허용하세요. macOS 15 이상에서 기기 검색을 위한 <strong>로컬 네트워크</strong> 항목이 뜨면 함께 허용하세요.</p></li>
         <li><h3>Mac을 고르고 6자리 코드 입력</h3><p>Windows OneMouse의 <strong>기기 관리</strong>에서 Mac을 선택하고, Mac 화면에 나온 6자리 코드를 입력하세요.</p></li>
         <li><h3>Mac 방향으로 마우스 넘기기</h3><p>Windows의 배치 화면에서 Mac을 실제 놓인 방향에 배치하고, 그쪽 가장자리로 마우스를 밀어 보세요.</p></li>
       </ol>
-      <div class="tip"><strong>Mac이 목록에 안 뜨나요?</strong> 같은 네트워크인지 확인하고, macOS에서 요청한 로컬 네트워크 권한을 확인해요. <a href="/help#mac-help">Mac 문제 해결</a></div>
+      <div class="tip"><strong>Mac이 목록에 안 뜨나요?</strong> 같은 네트워크인지 확인하고, macOS에서 요청한 로컬 네트워크 권한을 확인해요. <a href="/help-demo#discovery">Mac 문제 해결</a></div>
       <details><summary>화면 녹화 권한도 켜야 하나요?</summary><p>기본 마우스·키보드 입력에는 필요하지 않아요. Windows에서 Mac 화면이나 창을 보는 기능을 사용할 때만 허용하세요. <a href="/guide#mac">공식 Mac 가이드</a></p></details>
     </section>
     <section class="panel" id="windows" data-device-panel aria-labelledby="windows-title">
@@ -69,14 +70,14 @@
       <h2 id="windows-title" tabindex="-1">다른 Windows PC 연결하기</h2>
       <p>마우스·키보드가 꽂힌 PC에서 시작해요. 같은 공유기에 연결하면 로그인 없이 번호로 연결할 수 있어요.</p>
       <ol class="steps">
-        <li><h3>두 PC에서 앱 열기</h3><p>양쪽 Windows에 <a href="/#get">OneMouse를 설치</a>하고 실행해요. 두 PC가 같은 공유기의 Wi-Fi 또는 LAN을 쓰는지 확인하세요.</p></li>
+        <li><h3>두 PC에서 앱 열기</h3><p>양쪽 Windows에 <a href="/download-demo">OneMouse를 설치</a>하고 실행해요. 두 PC가 같은 공유기의 Wi-Fi 또는 LAN을 쓰는지 확인하세요.</p></li>
         <li><h3>상대 PC에서 번호 확인</h3><p>제어할 PC에서 <span class="path">기기 관리 → 다른 방법으로 연결 → 이 PC의 QR·인증번호</span>로 가서 6자리 번호를 확인하세요.</p></li>
         <li><h3>내 PC에서 상대 PC 선택·연결</h3><p>내 PC의 <span class="path">기기 관리 → 다른 방법으로 연결</span>에서 상대 PC를 선택하고 코드를 넣으세요. 연결 상태를 확인하고 필요하면 연결 스위치를 켜세요.</p>
           <figure class="shot"><a href="/assets/pairing/pc-peer-ko.webp" aria-label="다른 PC 인증번호 입력 예시 화면 크게 보기"><img src="/assets/pairing/pc-peer-ko.webp" alt="Windows에서 다른 PC의 6자리 코드를 입력하는 화면" loading="lazy"></a><figcaption>화면의 이름과 코드는 예시예요.</figcaption></figure></li>
         <li><h3>다른 PC 방향으로 마우스 넘기기</h3><p>배치 편집기에서 상대 PC를 실제 놓인 위치에 두고, 그쪽 가장자리로 마우스를 밀어 보세요.</p>
           <figure class="shot"><a href="/assets/pairing/pc-peer-position-ko.webp" aria-label="다른 Windows PC 배치 예시 화면 크게 보기"><img src="/assets/pairing/pc-peer-position-ko.webp" alt="Windows 기기 관리에서 다른 PC를 배치하는 화면" loading="lazy"></a><figcaption>실제 놓인 방향을 맞춰요.</figcaption></figure></li>
       </ol>
-      <div class="tip"><strong>상대 PC가 보이지 않나요?</strong> 두 앱이 켜져 있고 같은 네트워크인지 먼저 확인하세요. <a href="/help#connection-symptoms">연결 문제 해결 보기</a></div>
+      <div class="tip"><strong>상대 PC가 보이지 않나요?</strong> 두 앱이 켜져 있고 같은 네트워크인지 먼저 확인하세요. <a href="/help-demo#discovery">연결 문제 해결 보기</a></div>
       <details><summary>Google 계정으로 연결하려면</summary><p>공식 가이드의 <a href="/guide#pcpc">Windows PC 간 연결 절차</a>에서 같은 Google 계정으로 연결하는 방법을 확인하세요.</p></details>
     </section>
     <section class="section" id="next" aria-labelledby="next-title">
@@ -86,12 +87,17 @@
         <article class="card"><h3>복사한 글 붙여넣기</h3><p>지원되는 연결에서 다른 기기로 복사한 텍스트를 이어서 써요.</p><a href="/guide#files">파일·클립보드 안내</a></article>
         <article class="card"><h3>필요한 영역만 캡처</h3><p>기본 단축키 <strong>Ctrl+Alt+S</strong>로 시작해요. 받는 기기와 연결별 사용 조건은 안내를 참고하세요.</p><a href="/guide#screenshots">캡처·전송 안내</a></article>
       </div>
-      <p><a href="/guide#shortcuts">단축키 더 보기</a> · <a href="/help">도움말 전체 보기</a></p>
+      <p><a href="/guide#shortcuts">단축키 더 보기</a> · <a href="/help-demo">도움말 시안 보기</a></p>
       <p><a href="/demo">브라우저에서 동작 체험하기</a>는 예시예요. 실제 기기를 연결하려면 양쪽에 OneMouse를 설치하세요.</p>
     </section>
   </div>
 </main>
-<footer class="foot"><div class="wrap"><span>OneMouse 연결 가이드 시안 · 화면의 기기·인증번호는 설명용 예시입니다.</span><nav aria-label="하단 링크"><a href="/guide">기존 가이드</a><a href="/help">도움말</a></nav></div></footer>
+<footer class="preview-footer"><div class="preview-frame">
+  <p>OneMouse 홈페이지 시안 · 기존 사이트와 별개예요.</p>
+  <nav class="preview-refs" aria-label="참고 링크">
+    <a href="/compatibility-demo">지원 기기·연결 방식</a><a href="/technical">기술·보안</a><a href="/pricing">요금 안내</a><a href="/privacy">개인정보</a><a href="/terms">이용약관</a><a href="/licenses">오픈소스 라이선스</a><a href="/">기존 홈페이지</a>
+  </nav>
+</div></footer>
 <script>
 (() => {
   const links = [...document.querySelectorAll('[data-device]')];

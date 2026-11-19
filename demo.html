@@ -20,12 +20,13 @@
 .transfer-choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}.transfer-choices label{display:grid;gap:3px;font-size:.82rem;color:#c3e9f3}.transfer-choices select{width:100%;min-width:0;min-height:44px;background:#131e33;color:var(--ink);border:1px solid #546a88;border-radius:7px;font:inherit;padding:3px}.phone-memo:not([hidden]){touch-action:auto}.windows-text:not([hidden]){max-height:none}.copy-hint:not([hidden]){overflow:hidden;padding-inline:2px;white-space:nowrap}.popup-send,.popup-send-small{font-size:clamp(4px,1.5cqw,9px)}
 @media(min-width:580px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(min-width:760px){.hero{padding-block:77px 80px;grid-template-columns:1.08fr 1fr;gap:40px;align-items:center}.desktop{display:inline-flex}.mobile{display:none}.visual{padding:23px}.section{padding-block:62px}}@media(max-width:350px){.wrap{width:calc(100% - 28px)}.head nav{gap:10px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.pointer{transition:none}}
 </style>
+<link rel="stylesheet" href="/assets/preview/one-preview.css">
 </head>
 <body>
 <a class="skip btn primary" href="#main">본문으로 이동</a>
-<header class="head"><div class="wrap">
-<a class="brand" href="https://onemouse.pages.dev/" aria-label="OneMouse 공식 홈페이지"><span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 3v15l4-3 3 6 2.5-1.2-3-6H18z"/></svg></span>OneMouse</a>
-<nav aria-label="주요 메뉴"><a href="https://onemouse.pages.dev/guide">연결 방법</a><a href="#download">다운로드</a></nav>
+<header class="preview-header"><div class="preview-frame">
+  <a class="preview-brand" href="/demo" aria-label="OneMouse 홈 시안"><span class="preview-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 3v15l4-3 3 6 2.5-1.2-3-6H18z"/></svg></span>OneMouse</a>
+  <nav class="preview-nav" aria-label="홈페이지 시안 메뉴"><a href="/demo" aria-current="page">홈 시안</a><a href="/guide-demo">연결 가이드</a><a href="/help-demo">문제 해결</a><a href="/download-demo">다운로드</a></nav>
 </div></header>
 <main id="main">
 <div class="hero wrap">
@@ -33,7 +34,7 @@
 <p class="eyebrow">Windows에서 연결 시작<span class="badge">홈페이지 시안</span></p>
 <h1>마우스와 키보드 하나로,<br><span>여러 기기를 오가세요.</span></h1>
 <p class="intro">Windows 화면 끝으로 마우스를 밀면 Android, Mac, 다른 Windows PC로 커서가 넘어갑니다. 키보드도 그대로 쓸 수 있어요.</p>
-<div class="actions"><a class="btn primary desktop" href="#windows">Windows 앱 받기</a><a class="btn primary mobile" href="#android">Android 앱 받기</a><a class="btn secondary" href="https://onemouse.pages.dev/guide">연결 방법 보기</a></div>
+<div class="actions"><a class="btn primary desktop" href="/download-demo#windows">Windows 앱 받기</a><a class="btn primary mobile" href="/download-demo#android">Android 앱 받기</a><a class="btn secondary" href="/guide-demo">연결 방법 보기</a></div>
 <p class="caption">Windows와 연결할 기기 양쪽에 설치하세요.</p>
 </div>
 <section class="visual" aria-labelledby="demo-title">
@@ -209,11 +210,11 @@
 <section id="download" class="section"><div class="wrap">
 <p class="eyebrow">다운로드</p><h2>내 PC와 연결할 기기에 설치하세요.</h2>
 <div class="grid">
-<article id="windows" class="card"><h3>Windows</h3><p>Windows 10·11. 연결을 시작할 PC에 설치하세요.</p><div class="store"><a class="btn secondary" href="https://onemouse.pages.dev/#get">최신 설치 파일 안내</a><a class="btn secondary" href="https://apps.microsoft.com/detail/9MZHT0262V7Q">Microsoft Store</a></div></article>
-<article id="android" class="card"><h3>Android</h3><p>폰을 PC에서 조작하려면 OneMouse 접근성 권한을 켜 주세요.</p><div class="store"><a class="btn secondary" href="https://play.google.com/store/apps/details?id=com.mouselink.app">Google Play</a><a class="btn secondary" href="https://apps.samsung.com/appquery/appDetail.as?appId=com.mouselink.app.galaxy">Galaxy Store</a></div></article>
-<article id="macos" class="card"><h3>Mac</h3><p>Apple Silicon · macOS 13 이상. Windows PC와 같은 네트워크에서 연결하세요.</p><div class="store"><a class="btn secondary" href="https://github.com/sdlckdrl/mouselink-web/releases/tag/mac-v1.6.8">Mac 앱 받기</a></div></article>
+<article id="windows" class="card"><h3>Windows</h3><p>마우스·키보드가 연결된 PC.</p><div class="store"><a class="btn secondary" href="/download-demo#windows">Windows 앱 받기</a></div></article>
+<article id="android" class="card"><h3>Android</h3><p>연결할 폰이나 태블릿.</p><div class="store"><a class="btn secondary" href="/download-demo#android">Android 앱 받기</a></div></article>
+<article id="macos" class="card"><h3>Mac</h3><p>Apple Silicon · macOS 13 이상.</p><div class="store"><a class="btn secondary" href="/download-demo#mac">Mac 앱 받기</a></div></article>
 </div>
-<p class="help">어떤 방식으로 연결할지 모르겠다면 <a href="https://onemouse.pages.dev/guide#start">내 기기 연결 방법 고르기</a></p>
+<p class="help"><a href="/compatibility-demo">지원 기기와 연결 방식 확인</a> · <a href="/guide-demo">연결 방법 보기</a></p>
 </div></section>
 <section class="section extra"><div class="wrap"><h2>이런 것도 할 수 있어요.</h2>
 <details><summary>폰에서 Windows PC 조작하기</summary><p>폰에서 연결된 PC 화면을 열어 터치로 조작할 수 있어요. <a href="https://onemouse.pages.dev/guide#mobile-pc-remote">원격 화면 안내</a></p></details>
@@ -221,7 +222,12 @@
 <details><summary>폰 알림을 PC에서 보기</summary><p>Android 알림을 PC에서도 확인할 수 있어요. <a href="https://onemouse.pages.dev/guide#notifications">알림 연결 안내</a></p></details>
 </div></section>
 </main>
-<footer><div class="wrap"><span>© 2026 OneMouse · 홈페이지 시안</span><span><a href="https://onemouse.pages.dev/">현재 홈페이지</a> · <a href="https://onemouse.pages.dev/help">도움말</a></span></div></footer>
+<footer class="preview-footer"><div class="preview-frame">
+  <p>OneMouse 홈페이지 시안 · 기존 사이트와 별개예요.</p>
+  <nav class="preview-refs" aria-label="참고 링크">
+    <a href="/compatibility-demo">지원 기기·연결 방식</a><a href="/technical">기술·보안</a><a href="/pricing">요금 안내</a><a href="/privacy">개인정보</a><a href="/terms">이용약관</a><a href="/licenses">오픈소스 라이선스</a><a href="/">기존 홈페이지</a>
+  </nav>
+</div></footer>
 <script>
 const get = id => document.getElementById(id);
 const stage = get('stage'), controls = get('controls'), status = get('status'), modes = get('modes');

@@ -1,0 +1,16 @@
+/* OneMouse preview routes only. The published help and home do not load this file. */
+:root{--preview-bg:#0b1020;--preview-panel:#111a2c;--preview-ink:#f5f7ff;--preview-muted:#c0cde3;--preview-line:#334761;--preview-mint:#6bf5c6}
+.preview-header,.preview-footer{color:var(--preview-ink);background:var(--preview-bg);border-color:var(--preview-line)}
+.preview-header{border-bottom:1px solid var(--preview-line)}
+.preview-footer{border-top:1px solid var(--preview-line);padding:16px 0}
+.preview-header .preview-frame,.preview-footer .preview-frame{width:min(1120px,calc(100% - 36px));margin-inline:auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 18px;padding-block:9px}
+.preview-brand{display:inline-flex;align-items:center;gap:8px;text-decoration:none;color:var(--preview-ink)!important;font-size:1.16rem;font-weight:850;letter-spacing:-.035em}
+.preview-mark{display:grid;place-items:center;width:33px;height:33px;border-radius:10px;background:var(--preview-mint);color:#08231a}.preview-mark svg{width:18px}
+.preview-nav,.preview-refs{display:flex;gap:4px 7px;flex-wrap:wrap}
+.preview-nav a,.preview-footer a{color:var(--preview-muted);font-size:.9rem;text-decoration:none;overflow-wrap:anywhere}
+.preview-nav a{display:inline-flex;min-height:44px;align-items:center;border:1px solid transparent;padding-inline:7px;border-radius:7px}
+.preview-nav a:hover,.preview-footer a:hover{color:var(--preview-ink);text-decoration:underline;text-underline-offset:3px}
+.preview-nav a[aria-current]{color:var(--preview-mint);border-color:#3f786b;background:#193833;font-weight:750}
+.preview-header a:focus-visible,.preview-footer a:focus-visible{outline:3px solid var(--preview-mint);outline-offset:3px}
+.preview-footer p{margin:0;color:var(--preview-muted);font-size:.88rem}.preview-refs{gap:7px 13px}.preview-refs a{padding-block:4px}
+@media (max-width:520px){.preview-header .preview-frame{display:grid}.preview-nav{display:flex;flex-wrap:wrap}.preview-nav a{font-size:.84rem;padding-inline:5px}.preview-footer .preview-frame{align-items:flex-start}}

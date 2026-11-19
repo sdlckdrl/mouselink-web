@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#0c1322">
+  <meta name="description" content="원마우스 문제 해결 시안. 연결·커서·파일 전송 문제를 증상별로 찾아보세요.">
+  <title>문제 해결 시안 | OneMouse 원마우스</title>
+  <style>
+    :root{color-scheme:dark;--bg:#0c1322;--panel:#111d30;--line:#2e415b;--text:#f3f7ff;--muted:#b5c5da;--mint:#68f1c4;--focus:#8bcfff;font-family:system-ui,-apple-system,"Malgun Gothic",sans-serif}
+    *{box-sizing:border-box}
+    html,body{margin:0;background:var(--bg);color:var(--text)}
+    a{color:var(--mint);text-underline-offset:.2em}
+    :focus-visible{outline:3px solid var(--focus);outline-offset:4px}
+    p,li{line-height:1.65}
+    h1,h2,h3,p{margin-top:0}
+    .wrap{width:min(1120px,calc(100% - 2.5rem));margin-inline:auto}
+    .skip{position:absolute;transform:translateY(-120%);padding:.8rem;background:var(--bg);z-index:1}
+    .skip:focus{transform:none}
+    header{border-bottom:1px solid var(--line);background:#0d1627}
+    .top{display:flex;align-items:center;justify-content:space-between;gap:.5rem 2rem;flex-wrap:wrap;padding-block:.55rem}
+    .brand{display:inline-flex;align-items:center;gap:.55rem;font-weight:850;color:var(--text);text-decoration:none;min-height:44px}
+    .mark{width:30px;height:30px;border-radius:8px;display:grid;place-items:center;background:var(--mint);color:#082519}
+    nav{display:flex;gap:.15rem 1rem;flex-wrap:wrap}
+    nav a{font-size:.96rem;color:var(--muted);display:inline-flex;align-items:center;min-height:44px;text-decoration:none}
+    nav a[aria-current],nav a:hover{color:var(--mint);text-decoration:underline}
+    main{padding-block:clamp(2.25rem,7vw,5rem) 3rem}
+    .hero{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:1rem 2.5rem;align-items:end;margin-bottom:2.35rem}
+    h1{font-size:clamp(2.15rem,5.3vw,4.25rem);line-height:1.12;letter-spacing:-.055em;word-break:keep-all;margin-bottom:1rem}
+    h2{font-size:clamp(1.25rem,2.5vw,1.64rem);letter-spacing:-.035em}
+    h3{font-size:1.05rem;margin-bottom:.45rem}
+    .eyebrow{display:block;font-size:.9rem;font-weight:800;color:var(--mint);margin-bottom:.6rem}
+    .hero p,.muted,.steps li{color:var(--muted)}
+    .hero p{margin-bottom:0}
+    .rescue{border:1px solid #426455;border-radius:16px;padding:1rem 1.15rem;background:#112b2b}
+    .rescue h2{font-size:1.05rem;margin-bottom:.5rem}
+    .rescue p{font-size:.94rem}
+    kbd{display:inline-block;border:1px solid #5a7a86;border-radius:5px;padding:.2em .35em;font:700 .9em ui-monospace,monospace;color:#dffded;white-space:nowrap}
+    .jump{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.65rem;margin-bottom:2rem}
+    .jump a{display:flex;align-items:center;justify-content:space-between;gap:.45rem;padding:.72rem .8rem;min-height:55px;color:var(--text);text-decoration:none;font-weight:700;background:var(--panel);border:1px solid var(--line);border-radius:10px}
+    .jump a:hover{border-color:var(--mint)} .arrow{color:var(--mint)}
+    .solutions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.8rem;align-items:start}
+    .issue{scroll-margin-top:1.25rem;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:1.15rem}
+    .issue:target{border-color:var(--mint)}
+    .issue h2{margin-bottom:.6rem;word-break:keep-all}
+    .steps{padding-left:1.35em;margin:.25rem 0 .85rem}
+    .steps li+li{margin-top:.35rem}.steps strong{color:var(--text)}
+    details{border-top:1px solid var(--line);padding-top:.2rem}
+    summary{cursor:pointer;color:var(--mint);padding:.65rem .2rem;min-height:44px;font-weight:750}
+    details p{margin-bottom:.55rem}.links a{display:inline-block;padding:.4rem .25rem .4rem 0;margin-right:.5rem}
+    .more{margin-top:2rem;border-top:1px solid var(--line);padding-top:1.2rem}
+    footer{border-top:1px solid var(--line);padding:1rem 0 1.5rem;color:var(--muted)}
+    footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.2rem 1rem}
+    @media(max-width:730px){.hero,.solutions{grid-template-columns:1fr}.jump{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{align-items:start}.top{column-gap:1rem}}
+    @media(max-width:410px){.wrap{width:calc(100% - 1.5rem)}.jump{grid-template-columns:1fr}.issue{padding:1rem}.top nav{gap:0 .75rem}}
+  </style>
+<link rel="stylesheet" href="/assets/preview/one-preview.css">
+</head>
+<body>
+<a class="skip" href="#main">본문으로 이동</a>
+<header class="preview-header"><div class="preview-frame">
+  <a class="preview-brand" href="/demo" aria-label="OneMouse 홈 시안"><span class="preview-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 3v15l4-3 3 6 2.5-1.2-3-6H18z"/></svg></span>OneMouse</a>
+  <nav class="preview-nav" aria-label="홈페이지 시안 메뉴"><a href="/demo">홈 시안</a><a href="/guide-demo">연결 가이드</a><a href="/help-demo" aria-current="page">문제 해결</a><a href="/download-demo">다운로드</a></nav>
+</div></header>
+<main class="wrap" id="main">
+  <div class="hero">
+    <div>
+      <span class="eyebrow">OneMouse · 도움말 시안</span>
+      <h1>어디에서 막혔나요?</h1>
+      <p>지금 겪는 증상을 고르세요. 로그인이나 기기 등록을 다시 하기 전에, 바로 확인할 수 있는 것부터 안내해요.</p>
+    </div>
+    <aside class="rescue" aria-labelledby="rescue-title">
+      <h2 id="rescue-title">커서가 내 PC로 안 돌아오나요?</h2>
+      <p>Windows에서 <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Backspace</kbd>를 눌러 보세요. 기본 복귀 키예요. 꺼뒀다면 마우스를 연결한 화면의 반대쪽 경계로 밀어 돌아오세요. <a href="/help#quick-help">복귀 조건 확인</a></p>
+    </aside>
+  </div>
+  <section aria-labelledby="jump-title">
+    <h2 id="jump-title">증상 바로 찾기</h2>
+    <nav class="jump" aria-label="증상 바로 찾기">
+      <a href="#discovery">기기가 안 보여요 <span class="arrow" aria-hidden="true">↓</span></a>
+      <a href="#cursor">커서가 안 넘어가요 <span class="arrow" aria-hidden="true">↓</span></a>
+      <a href="#drops">연결이 자주 끊겨요 <span class="arrow" aria-hidden="true">↓</span></a>
+      <a href="#sharing">파일·복사·캡처가 안 돼요 <span class="arrow" aria-hidden="true">↓</span></a>
+      <a href="#remote">원격 화면이 안 되거나 검어요 <span class="arrow" aria-hidden="true">↓</span></a>
+      <a href="#alerts">폰 알림이 안 보여요 <span class="arrow" aria-hidden="true">↓</span></a>
+    </nav>
+  </section>
+  <div class="solutions">
+    <section class="issue" id="discovery" aria-labelledby="discovery-title">
+      <h2 id="discovery-title">기기가 안 보여요</h2>
+      <ol class="steps">
+        <li>양쪽에서 <strong>OneMouse를 열어</strong> 주세요.</li>
+        <li>QR·번호 연결이면 <strong>같은 공유기</strong>에 연결했는지 확인하세요. PC는 유선이어도 같은 공유기면 됩니다.</li>
+        <li>Google 계정 연결이면 <strong>같은 계정과 인터넷 연결</strong>을 확인하고 기기 목록을 새로고침하세요.</li>
+      </ol>
+      <details><summary>Mac·Bluetooth·공용 Wi-Fi라면</summary>
+        <p class="muted">Mac의 로컬 네트워크 권한은 해당 설정 항목이 있을 때 확인하세요. Bluetooth 연결은 양쪽 설정에서 켜짐과 연결 상태를 확인하세요. 회사나 게스트 Wi-Fi는 같은 이름의 네트워크여도 기기끼리 통신을 막을 수 있어요.</p>
+        <div class="links"><a href="/help#mac-help">Mac 연결 점검</a><a href="/guide#connect-bluetooth">Bluetooth 연결 순서</a><a href="/help#account-connect-help">Google 연결 점검</a></div>
+      </details>
+    </section>
+    <section class="issue" id="cursor" aria-labelledby="cursor-title">
+      <h2 id="cursor-title">연결됐는데 커서가 안 넘어가요</h2>
+      <ol class="steps">
+        <li>Android라면 설정 → 접근성 → 설치된 앱에서 <strong>OneMouse</strong>가 켜졌는지 보세요.</li>
+        <li>Windows의 기기 배치가 <strong>책상 위 실제 방향</strong>과 같은지 확인하세요.</li>
+        <li>같은 방향이어도 화면 전체가 통로는 아니에요. 배치에 표시된 <strong>진입 통로</strong>로 마우스를 밀어 보세요.</li>
+      </ol>
+      <details><summary>Mac도 연결됐는데 클릭이 안 된다면</summary>
+        <p class="muted">Mac에서 OneMouse의 손쉬운 사용 권한을 확인하세요. 방금 허용했다면 Mac 앱을 종료하고 다시 열어 보세요.</p>
+        <div class="links"><a href="/help#mac-input-help">Mac 권한 확인</a><a href="/help#cursor-not-crossing">Android 입력 점검</a><a href="/guide#position">배치 화면 보기</a></div>
+      </details>
+    </section>
+    <section class="issue" id="drops" aria-labelledby="drops-title">
+      <h2 id="drops-title">연결이 자주 끊겨요</h2>
+      <ol class="steps">
+        <li><strong>화면이 꺼질 때만</strong> 끊긴다면 Android의 배터리·절전 설정을 확인하세요.</li>
+        <li><strong>집에서는 되지만 다른 장소에서만</strong> 끊긴다면 게스트·회사 Wi-Fi의 기기 간 통신 제한 여부를 확인하세요.</li>
+        <li>Bluetooth로 연결했다면 양쪽에서 연결 상태부터 확인하세요.</li>
+      </ol>
+      <details><summary>연결 방식별 점검 순서</summary>
+        <div class="links"><a href="/help#connection-drops">자주 끊기는 경우</a><a href="/help#screen-sleep">폰 화면이 꺼질 때</a><a href="/help#bluetooth-help">Bluetooth 문제</a></div>
+      </details>
+    </section>
+    <section class="issue" id="sharing" aria-labelledby="sharing-title">
+      <h2 id="sharing-title">파일·복사·캡처가 안 돼요</h2>
+      <ol class="steps">
+        <li>양쪽 앱이 연결됐고, <strong>받는 기기</strong>를 맞게 골랐는지 확인하세요.</li>
+        <li>파일을 화면 너머로 보내려면 연결한 기기를 배치한 뒤, 파일을 든 채 경계를 넘어 <strong>받는 화면 위에서 놓으세요.</strong></li>
+        <li>캡처를 받았다면 <strong>이미지 붙여넣기를 지원하는 앱</strong>을 열어 붙여넣으세요.</li>
+      </ol>
+      <details><summary>수신 폴더와 캡처 사용 조건</summary>
+        <p class="muted">전송 방법과 지원 기기는 앱 버전·연결 방식에 따라 달라요. 캡처는 붙여넣는 이미지와 파일로 저장하는 작업이 서로 달라요.</p>
+        <div class="links"><a href="/guide#files">파일·클립보드 안내</a><a href="/help#file-receive-folder-faq">PC 수신 폴더 찾기</a><a href="/guide#screenshots">캡처·전송 안내</a></div>
+      </details>
+    </section>
+    <section class="issue" id="remote" aria-labelledby="remote-title">
+      <h2 id="remote-title">원격 화면이 안 되거나 검어요</h2>
+      <ol class="steps">
+        <li>화면은 나오는데 폰에서 PC를 조작할 수 없다면 <strong>보기 전용</strong>이 꺼졌는지 확인하세요.</li>
+        <li>PC에서 Android 화면을 열 때는 폰에 뜨는 <strong>화면 캡처 승인</strong>을 확인하세요.</li>
+        <li>PC에서 Mac 화면이 검다면 Mac의 <strong>화면 녹화 권한</strong>을 확인하세요.</li>
+      </ol>
+      <details><summary>원격 화면과 권한 안내</summary>
+        <div class="links"><a href="/help#remote-control-help">폰으로 PC 조작 문제</a><a href="/guide#remote">PC에서 Android 화면 열기</a><a href="/help#mac-screen-help">Mac 화면이 검을 때</a></div>
+      </details>
+    </section>
+    <section class="issue" id="alerts" aria-labelledby="alerts-title">
+      <h2 id="alerts-title">폰 알림이 안 보여요</h2>
+      <ol class="steps">
+        <li>Android 설정에서 OneMouse의 <strong>알림 접근 권한</strong>을 확인하세요.</li>
+        <li>폰 쪽 OneMouse에서 <strong>PC로 알림 보내기</strong>, PC에서는 <strong>기기 알림 표시</strong>를 확인하세요.</li>
+        <li>알림을 보낼 앱 목록에 원하는 앱이 들어 있는지 확인하세요.</li>
+      </ol>
+      <details><summary>알림 답장·인증번호·기록</summary>
+        <div class="links"><a href="/help#phone-notifications">알림 설정과 기록</a><a href="/help#notification-reply-faq">답장 버튼이 없을 때</a></div>
+      </details>
+    </section>
+  </div>
+  <section class="more" aria-labelledby="more-title">
+    <h2 id="more-title">여전히 해결되지 않나요?</h2>
+    <p class="muted">처음부터 연결을 확인하려면 새 연결 시안을, 위에 없는 증상과 상세 설명을 찾으려면 기존 도움말을 열어 보세요.</p>
+    <div class="links"><a href="/guide-demo">연결 가이드 시안</a><a href="/help#faq">기존 도움말의 자주 묻는 질문</a><a href="/guide#permissions">기기별 권한 안내</a></div>
+  </section>
+</main>
+<footer class="preview-footer"><div class="preview-frame">
+  <p>OneMouse 홈페이지 시안 · 기존 사이트와 별개예요.</p>
+  <nav class="preview-refs" aria-label="참고 링크">
+    <a href="/compatibility-demo">지원 기기·연결 방식</a><a href="/technical">기술·보안</a><a href="/pricing">요금 안내</a><a href="/privacy">개인정보</a><a href="/terms">이용약관</a><a href="/licenses">오픈소스 라이선스</a><a href="/">기존 홈페이지</a>
+  </nav>
+</div></footer>
+</body>
+</html>
