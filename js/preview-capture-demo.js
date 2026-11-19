@@ -117,7 +117,6 @@
     if (existing) return existing;
 
     const root = el('div', 'demo');
-    const brief = el('p', 'intro', '예시 화면에서 캡처할 부분을 고르고 폰으로 보내 보세요. 실제 화면이나 파일에는 접근하지 않아요.');
     const figure = el('figure', 'photo');
     const stage = el('div', 'stage');
     const backdrop = el('img', 'backdrop');
@@ -145,9 +144,7 @@
     dialog.hidden = true;
     dialog.setAttribute('aria-label', '선택한 스크린샷 미리보기');
     const bar = el('div', 'window-bar');
-    const close = button('×', 'close');
-    close.setAttribute('aria-label','캡처 미리보기 닫기');
-    bar.append(el('span', 'window-brand', 'OneMouse'), close);
+    bar.append(el('span', 'window-brand', 'OneMouse'));
     const monitorPreview = el('div', 'monitor-preview');
     const monitorActions = el('div', 'monitor-actions');
     const mkActions = () => ({
@@ -155,11 +152,13 @@
       save: button('저장', 'button'),
       send: button('보내기', 'button om-capture-primary')
     });
-    const inside = mkActions(), outside = mkActions();
+    const inside = mkActions();
     monitorActions.append(inside.copy, inside.save, inside.send);
     dialog.append(bar, el('p', 'window-title', '스크린샷'), monitorPreview, monitorActions);
-    monitor.append(source, dialog);
+    monitor.append(source);
     monitorLayer.append(monitor);
+    const popupPlane = el('div', 'popup-plane');
+    popupPlane.append(dialog);
 
     const phone = el('div', 'phone');
     const phoneView = el('div', 'phone-view');
@@ -167,32 +166,16 @@
     phone.setAttribute('aria-label', '사진 속 예시 Android 폰');
     phoneView.append(phoneHint);
     phone.append(phoneView);
-    stage.append(backdrop, monitorLayer, phone);
-    const caption = el('figcaption', 'caption', '사진 속 모니터와 폰으로 체험해요. 배경은 AI로 제작한 사용 예시예요.');
+    stage.append(backdrop, monitorLayer, phone, popupPlane);
+    const caption = el('figcaption', 'caption', '바탕화면을 드래그하거나 한 번 눌러 캡처하세요. AI 배경의 예시 화면입니다.');
     figure.append(stage, caption);
-
-    const toolbar = el('div', 'tools');
-    const area = button('영역 선택', 'button');
-    area.setAttribute('aria-pressed', 'false');
-    const all = button('전체 캡처', 'button');
-    toolbar.append(area, all);
-
-    const tray = el('div', 'tray');
-    const compactActions = el('div','compact-actions');
-    compactActions.hidden = true;
-    compactActions.append(outside.copy, outside.save, outside.send);
-    const clear = button('다시 시작', 'button');
-    clear.disabled = true;
-    toolbar.append(clear);
-    const idleText = '마우스로 바탕화면을 드래그하거나 한 번 눌러 캡처하세요. 터치로 영역을 직접 그리려면 영역 선택을 눌러요.';
-    const status = el('p', 'status', idleText);
+    const status = el('p', 'status');
     status.setAttribute('role', 'status');
     status.setAttribute('aria-atomic', 'true');
-    tray.append(compactActions, status);
-    root.append(brief, figure, toolbar, tray);
+    root.append(figure, status);
     panel.append(root);
 
-    let armed = false, active = null, captured = null, sent = null, photoFail = false, monitorMap = null;
+    let active = null, captured = null, photoFail = false, monitorMap = null;
     let pendingPng = null, png = null, passiveTouch = null;
 
     function alignDevices() {
@@ -200,7 +183,8 @@
       const {width, height} = stage.getBoundingClientRect();
       if (!width || !height) return;
       monitorMap = projection(MONITOR_QUAD, width, height, W, H);
-      monitor.style.transform = monitorMap.css;
+      monitor.style.transform = popupPlane.style.transform = monitorMap.css;
+      popupPlane.style.setProperty('--oc-projected-hit', Math.max(45, Math.ceil(44*PHOTO_WIDTH*H/(width*603*.91))) + 'px');
       phone.style.transform = projection(PHONE_QUAD, width, height, PHONE_W, PHONE_H).css;
       stage.classList.add('om-capture-mapped');
     }
@@ -212,7 +196,7 @@
       photoFail = true;
       monitorMap = null;
       stage.classList.add('om-capture-photo-missing');
-      caption.textContent = '사진을 불러오지 못했어요. 대신 예시 PC와 폰으로 같은 방식의 캡처를 체험할 수 있어요.';
+      caption.textContent = '사진 없이도 예시 바탕화면을 드래그하거나 한 번 눌러 캡처할 수 있어요.';
     }
     backdrop.addEventListener('load', alignDevices);
     backdrop.addEventListener('error', missingPhoto);
@@ -239,62 +223,53 @@
       selection.style.width = `${box.w/W*100}%`;
       selection.style.height = `${box.h/H*100}%`;
     }
-    function setArmed(value) {
-      armed = value;
-      source.classList.toggle('om-capture-selecting', value);
-      area.setAttribute('aria-pressed', String(value));
-    }
     function dropActive() {
       if (!active) return;
       const id = active.id;
       active = null;
       if (source.hasPointerCapture?.(id)) source.releasePointerCapture(id);
     }
-    function cancelSelection(focusArea = false) {
-      dropActive();
-      setArmed(false);
-      drawSelection(null);
-      clear.disabled = !captured && !sent;
-      status.textContent = captured ? '영역 선택을 취소했어요. 기존 캡처를 보낼 수 있어요.' : '영역 선택을 취소했어요.';
-      if (focusArea) area.focus({ preventScroll: true });
+    function clearReceiver() {
+      phoneView.replaceChildren(phoneHint);
+      phoneView.classList.remove('om-capture-received');
     }
-    function showCapture(show) {
-      dialog.hidden = compactActions.hidden = !show;
-    }
-    function commit(box, note) {
+    function commit(box, note, focusActions = false) {
       dropActive();
-      setArmed(false);
       captured = box;
       drawSelection(null);
+      clearReceiver();
       monitorPreview.replaceChildren(picture(box));
-      showCapture(true);
+      dialog.hidden = false;
       png = null;
-      inside.save.disabled = outside.save.disabled = true;
-      clear.disabled = false;
+      inside.save.disabled = true;
       const current = pendingPng = pngBlob(box);
       current.then(blob => {
         if (pendingPng !== current) return;
         png = blob;
-        inside.save.disabled = outside.save.disabled = false;
-      }, () => {});
-      status.textContent = note + ' 모니터 창에서 복사, 저장 또는 보내기를 선택하세요.';
+        inside.save.disabled = false;
+      }, () => {
+        if (pendingPng === current) status.textContent = '이 브라우저에서 PNG를 만들지 못했어요. 예시 폰으로 보내기는 이용할 수 있어요.';
+      });
+      status.textContent = note;
+      if (focusActions) inside.copy.focus({preventScroll:true});
     }
     function closeCapture() {
       captured = png = pendingPng = null;
       drawSelection(null);
-      showCapture(false);
+      dialog.hidden = true;
       monitorPreview.replaceChildren();
-      clear.disabled = !sent;
+    }
+    function conclude(note) {
+      closeCapture();
+      source.focus({preventScroll:true});
+      status.textContent = note;
     }
     function reset() {
       passiveTouch = null;
       dropActive();
-      sent = null;
       closeCapture();
-      setArmed(false);
-      phoneView.replaceChildren(phoneHint);
-      phoneView.classList.remove('om-capture-received');
-      status.textContent = idleText;
+      clearReceiver();
+      status.textContent = '';
     }
     async function copyCapture() {
       if (!captured || !pendingPng) return;
@@ -302,7 +277,7 @@
       try {
         if (!navigator.clipboard?.write || typeof ClipboardItem !== 'function') throw new Error('Permission unavailable');
         await navigator.clipboard.write([new ClipboardItem({'image/png': png || selected})]);
-        if (selected === pendingPng) status.textContent = '예시 화면을 클립보드에 복사했어요.';
+        if (selected === pendingPng) conclude('클립보드에 복사했어요. 바탕화면에서 다시 캡처할 수 있어요.');
       } catch {
         if (selected === pendingPng) status.textContent = '이 브라우저에서 이미지 복사를 할 수 없어요. 저장을 이용해 보세요.';
       }
@@ -317,24 +292,16 @@
       download.click();
       download.remove();
       setTimeout(() => URL.revokeObjectURL(url), 30000);
-      status.textContent = '예시 캡처 PNG 다운로드를 시작했어요.';
+      conclude('예시 캡처 PNG 다운로드를 시작했어요.');
     }
     function sendCapture() {
       if (!captured) return;
-      sent = captured;
-      showReceiver(sent);
-      status.textContent = '고른 이미지가 사진 속 예시 폰에 전송됐어요.';
+      showReceiver(captured);
+      conclude('사진 속 폰에서 캡처를 받았어요.');
     }
-    for (const actions of [inside,outside]) {
-      actions.copy.addEventListener('click',copyCapture);
-      actions.save.addEventListener('click',saveCapture);
-      actions.send.addEventListener('click',sendCapture);
-    }
-    close.addEventListener('click', () => {
-      closeCapture();
-      source.focus({preventScroll:true});
-      status.textContent = idleText;
-    });
+    inside.copy.addEventListener('click',copyCapture);
+    inside.save.addEventListener('click',saveCapture);
+    inside.send.addEventListener('click',sendCapture);
     function tapCapture(event) {
       const end = point(event), w = Math.round(W/2), h = Math.round(H/2);
       commit({ x: Math.max(0, Math.min(W-w,end.x-w/2)), y: Math.max(0,Math.min(H-h,end.y-h/2)), w, h }, '누른 곳 주변을 캡처했어요.');
@@ -342,7 +309,7 @@
     source.addEventListener('pointerdown', event => {
       if (active || event.button !== 0 || event.isPrimary === false) return;
       // A single touch tap captures immediately, but a swipe stays native.
-      if (!armed && event.pointerType !== 'mouse') {
+      if (event.pointerType !== 'mouse') {
         passiveTouch = { id:event.pointerId, x:event.clientX, y:event.clientY, moved:false };
         return;
       }
@@ -376,33 +343,30 @@
       if (!active || active.id !== event.pointerId) return;
       dropActive();
       drawSelection(null);
-      status.textContent = armed ? '선택이 중단됐어요. 다시 드래그하거나 한 번 눌러 주세요.' : idleText;
+      status.textContent = '선택이 중단됐어요. 다시 드래그하거나 한 번 눌러 주세요.';
     }
     source.addEventListener('pointercancel', interrupted);
     source.addEventListener('lostpointercapture', interrupted);
     source.addEventListener('keydown', event => {
       if (event.key !== 'Enter' && event.key !== ' ') return;
       event.preventDefault();
-      commit(FULL, '전체 화면을 캡처했어요.');
+      commit(FULL, '전체 화면을 캡처했어요.', true);
     });
     source.addEventListener('click', event => {
       // Assistive technology may activate a role=button with a click only.
-      if (event.detail === 0) commit(FULL, '전체 화면을 캡처했어요.');
+      if (event.detail === 0) commit(FULL, '전체 화면을 캡처했어요.', true);
     });
-    area.addEventListener('click', () => {
-      if (armed) { cancelSelection(); return; }
-      closeCapture();
-      setArmed(true);
-      drawSelection(null);
-      clear.disabled = false;
-      status.textContent = '화면에서 드래그하거나 한 번 눌러 영역을 고르세요. 영역 선택 버튼을 다시 누르면 취소돼요.';
-    });
-    all.addEventListener('click', () => commit(FULL, '전체 화면을 캡처했어요.'));
-    clear.addEventListener('click', () => { reset(); area.focus({ preventScroll: true }); });
     root.addEventListener('keydown', event => {
       if (event.key !== 'Escape') return;
-      if (armed) { event.preventDefault(); cancelSelection(true); }
-      else if (captured) { event.preventDefault(); closeCapture(); source.focus({preventScroll:true}); status.textContent = idleText; }
+      if (active) {
+        event.preventDefault();
+        dropActive();
+        drawSelection(null);
+        status.textContent = '';
+      } else if (captured) {
+        event.preventDefault();
+        conclude('');
+      }
     });
 
     const instance = { reset, start: alignDevices };

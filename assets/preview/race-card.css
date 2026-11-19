@@ -1,0 +1,36 @@
+.om-race-card .race-scene{position:relative;aspect-ratio:1199/675;overflow:hidden;isolation:isolate;background:#132335}
+.om-race-card .race-backdrop{display:block;width:100%;height:100%;position:absolute;object-fit:fill;inset:0}
+.om-race-card .race-photo figcaption{margin:.45rem 0 0;color:var(--preview-muted);font-size:.84rem}
+.om-race-card .race-photo figcaption strong{color:var(--preview-ink)}
+.om-race-card .race-projection{position:absolute;inset:0;pointer-events:none}
+.om-race-card .race-projection--phone{clip-path:polygon(49.3745% 55.7037%, 49.7081% 54.6667%, 50.4587% 53.7778%, 51.7098% 53.3333%, 73.0609% 50.8148%, 73.9783% 50.9630%, 74.7289% 52.4444%, 76.6472% 62.2222%, 77.4812% 66.6667%, 75.9800% 66.8148%, 74.5621% 67.8519%, 73.8949% 69.0370%, 73.8115% 70.6667%, 74.3953% 72.0000%, 75.3962% 72.8889%, 76.6472% 73.1852%, 77.7314% 74.2222%, 76.9808% 74.8148%, 75.4796% 75.4074%, 52.4604% 78.8148%, 51.7098% 77.9259%, 51.9600% 76.5926%, 53.0442% 75.1111%, 54.2118% 74.2222%, 55.3795% 73.0370%, 55.7965% 71.4074%, 55.6297% 70.0741%, 55.2127% 69.1852%, 54.2952% 68.7407%, 53.2944% 69.0370%, 52.3770% 69.7778%, 51.2093% 71.1111%, 50.6255% 72.1481%, 50.2085% 68.4444%)}
+.om-race-card .race-display{position:absolute;top:0;left:0;width:400px;height:224px;overflow:hidden;transform-origin:0 0;background:#162437;container-type:inline-size}
+.om-race-card .race-projection--phone .race-display{border-radius:15px}
+.om-race-card .race-scene:not([data-mapped]):not(.photo-missing) .race-projection,
+.om-race-card .race-scene:not(.is-live):not(.photo-missing) .race-projection{visibility:hidden}
+.om-race-card .photo-missing .race-backdrop{display:none}
+.om-race-card .race-scene.photo-missing{aspect-ratio:1199/675;display:grid;grid-template-columns:1.35fr 1fr;align-items:end;gap:14px;padding:14px;background:linear-gradient(145deg,#293f55,#101b2b)}
+.om-race-card .photo-missing .race-projection{position:relative;inset:auto;clip-path:none;padding:8px;border-radius:13px;background:#080c15;border:1px solid #58738c}
+.om-race-card .photo-missing .race-display{position:relative;transform:none!important;width:100%;height:auto;aspect-ratio:400/224;border-radius:6px}
+.om-race-card .photo-missing .race-projection--phone .race-display{border-radius:9px}
+.om-race-card .game-frame{position:absolute;inset:0;overflow:hidden;background:#102c45}
+.om-race-card .game-frame svg{display:block;width:100%;height:100%;pointer-events:none}
+.om-race-card .game-title{position:absolute;left:6%;top:5%;color:#effffa;font-size:clamp(9px,4cqw,18px);font-weight:900;letter-spacing:.08em;text-shadow:0 1px 3px #081015}
+.om-race-card .game-score{position:absolute;right:6%;top:5%;color:#ffeeb4;font-size:clamp(8px,3.9cqw,17px);font-weight:860;text-shadow:0 1px 3px #081015}
+.om-race-card .game-overlay:not([hidden]){position:absolute;inset:23% 8% 17%;display:grid;align-content:center;justify-items:center;gap:3px;background:#0b162ddd;border:1px solid #aec5df;border-radius:6px;color:#f5faff;text-align:center;font:800 clamp(9px,4cqw,20px)/1.25 system-ui,sans-serif}
+.om-race-card .game-overlay small{display:block;color:#a6f8da;font-size:.86em}
+
+.om-race-card{min-width:0;overflow:hidden}
+.om-race-card .race-controls{position:absolute;z-index:2;inset:0;display:flex;align-items:flex-end;justify-content:space-between;gap:.35rem;padding:.45rem;pointer-events:none}
+.om-race-card button{pointer-events:auto;min-width:44px;min-height:44px;border:1px solid #cee2f4;border-radius:.52rem;background:#16273ae8;color:#fff;cursor:pointer;font:750 .82rem/1.2 system-ui,sans-serif;touch-action:manipulation;padding:0 .48rem;white-space:nowrap;text-shadow:0 1px 1px #061625}
+.om-race-card button:hover{background:#20504b}
+.om-race-card button:focus-visible,.om-race-card .race-controls:focus-visible{outline:3px solid #80f5cb;outline-offset:2px}
+.om-race-card .race-steering{display:flex;gap:.25rem}
+.om-race-card .race-steering button,.om-race-card .race-reset{font-size:1.23rem;padding:0}
+.om-race-card .race-toggle{color:#10392e;background:#a9f5dc;border-color:#d6fff2;text-shadow:none}
+.om-race-card .race-toggle:hover{background:#d6fff2}
+.om-race-card[data-phase="idle"] .race-controls{align-items:center;justify-content:center}
+.om-race-card[data-phase="idle"] .race-steering,.om-race-card[data-phase="idle"] .race-reset{display:none}
+.om-race-card[data-phase="idle"] .race-toggle{box-shadow:0 1px 15px #001b28a0;padding:.55rem .8rem}
+.om-race-card button:disabled{opacity:.55;cursor:default}
+.om-race-card .race-sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
