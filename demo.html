@@ -19,7 +19,7 @@
 .phone-memo:not([hidden]),.tablet-paste:not([hidden]){position:absolute;z-index:4;pointer-events:auto}.phone-memo:not([hidden]){left:48%;top:44%;width:7.45%;height:29%;padding:2px;border:1px solid #86bbef;background:#f4f9ff;color:#142c3f;border-radius:3px;resize:none;cursor:text;font:600 clamp(5px,1.8cqw,12px)/1.25 system-ui,sans-serif;overflow:auto}.phone-memo::placeholder{color:#455d75;opacity:1}.phone-memo:focus-visible,.tablet-paste:focus-visible{outline:2px solid #6bf5c6;outline-offset:1px}.tablet-paste:not([hidden]){left:61.65%;top:50%;width:11.6%;height:21%;padding:1px;border:1px solid #86bbef;border-radius:4px;background:#f0f8ff;color:#163450;font:750 clamp(6px,1.7cqw,11px)/1.15 system-ui,sans-serif;cursor:pointer;overflow:hidden}.tablet-paste[data-ready=true]{background:#d7ffe9;border-color:#31a58a}.stage:has(.tablet-paste:hover,.phone-memo:hover) .pointer{visibility:hidden}.stage[data-mode=text][data-copy=ready] .pointer{display:block}.assist-controls:not([hidden]){display:flex;flex-wrap:wrap;gap:6px;margin-top:7px}
 .transfer-choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}.transfer-choices label{display:grid;gap:3px;font-size:.82rem;color:#c3e9f3}.transfer-choices select{width:100%;min-width:0;min-height:44px;background:#131e33;color:var(--ink);border:1px solid #546a88;border-radius:7px;font:inherit;padding:3px}.phone-memo:not([hidden]){touch-action:auto}.windows-text:not([hidden]){max-height:none}.copy-hint:not([hidden]){overflow:hidden;padding-inline:2px;white-space:nowrap}.popup-send,.popup-send-small{font-size:clamp(4px,1.5cqw,9px)}
 @media(min-width:580px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(min-width:760px){.hero{padding-block:77px 80px;grid-template-columns:1.08fr 1fr;gap:40px;align-items:center}.visual{padding:23px}.section{padding-block:62px}}@media(max-width:350px){.wrap{width:calc(100% - 28px)}.head nav{gap:10px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.pointer{transition:none}}
-.demo-options:not([hidden]){margin:11px 0 3px;padding:4px 0 2px;border-top:1px solid var(--line)}.demo-options summary{min-height:44px;padding:8px 0;color:#c6e4f3;cursor:pointer;font-size:.89rem;font-weight:720}.demo-options .demo-modes{margin:0 0 3px}.demo-options .demo-button{font-size:.8rem}.assist-controls .demo-button{border:0;background:transparent;color:#b0ccdf;text-decoration:underline;text-underline-offset:3px;padding-inline:0;font-size:.8rem}.calm-link,.caption a,.section .card h3 a{color:var(--muted);text-underline-offset:4px}.section .card h3 a{color:var(--ink);text-decoration-color:#587387}.section .card h3 a:hover,.calm-link:hover,.caption a:hover{color:var(--green)}.download-links{align-items:center;margin-top:12px}.download-links .calm-link{font-size:.9rem}.visual>#demo-title{font-size:1.12rem}.mode-panel:not([hidden]){margin-top:8px}@media(max-width:480px){.hero{padding-block:31px 37px;gap:20px}.intro{margin:12px 0 16px}.visual{padding:12px}}.proof-video{max-width:500px;margin:14px 0 0}.proof-poster{display:block;width:100%;height:auto;margin-bottom:8px;border-radius:12px}.proof-video video{display:block;width:100%;height:auto;background:#070a12;border:1px solid var(--line);border-radius:12px}.proof-video figcaption{color:var(--muted);font-size:.89rem;margin:5px 0}</style>
+.demo-options:not([hidden]){margin:11px 0 3px;padding:4px 0 2px;border-top:1px solid var(--line)}.demo-options summary{min-height:44px;padding:8px 0;color:#c6e4f3;cursor:pointer;font-size:.89rem;font-weight:720}.demo-options .demo-modes{margin:0 0 3px}.demo-options .demo-button{font-size:.8rem}.assist-controls .demo-button{border:0;background:transparent;color:#b0ccdf;text-decoration:underline;text-underline-offset:3px;padding-inline:0;font-size:.8rem}.calm-link,.caption a,.section .card h3 a{color:var(--muted);text-underline-offset:4px}.section .card h3 a{color:var(--ink);text-decoration-color:#587387}.section .card h3 a:hover,.calm-link:hover,.caption a:hover{color:var(--green)}.download-links{align-items:center;margin-top:12px}.download-links .calm-link{font-size:.9rem}.visual>#demo-title{font-size:1.12rem}.mode-panel:not([hidden]){margin-top:8px}@media(max-width:480px){.hero{padding-block:31px 37px;gap:20px}.intro{margin:12px 0 16px}.visual{padding:12px}}.promo-video{max-width:640px;margin:14px 0 0}.promo-video-player{aspect-ratio:16/9;background:#080d18;border:1px solid var(--line);border-radius:12px;overflow:hidden}.promo-video-player iframe{display:block;width:100%;height:100%;border:0}.promo-video-play{position:relative;display:block;height:100%;color:#0a241c}.promo-video-play img{display:block;width:100%;height:100%;object-fit:cover}.promo-video-play span{position:absolute;bottom:10px;left:10px}.promo-video-play:focus-visible,.promo-video-player iframe:focus-visible{outline-offset:-4px}.promo-video-links{margin:8px 0 0;font-size:.9rem;color:var(--muted)}</style>
 <link rel="icon" href="/assets/preview/onemouse-android-icon.png" type="image/png" sizes="240x240">
 <link rel="stylesheet" href="/assets/preview/one-preview.css">
 </head>
@@ -205,14 +205,17 @@
 </section>
 </div>
 <section id="video" class="section" aria-labelledby="proof-title"><div class="wrap">
-<p class="eyebrow">실제 사용 영상</p><h2 id="proof-title">두 Windows PC 사이로 커서가 넘어가는 모습</h2>
-<figure class="proof-video" aria-describedby="proof-note">
-<img class="proof-poster" src="/assets/preview/kvm-handoff-poster.webp" width="288" height="192" alt="나란히 놓인 두 Windows PC의 화면 테두리" loading="lazy" decoding="async">
-<button id="play-proof" type="button" class="btn primary">8초 영상 재생</button>
-<template id="proof-media"><video controls playsinline preload="none" width="288" height="192" aria-label="Windows PC 두 대의 화면 사이로 커서 이동"><source src="/assets/preview/kvm-handoff.mp4" type="video/mp4">이 브라우저에서는 영상을 재생할 수 없어요.</video></template>
-<figcaption id="proof-note">이전 버전의 실제 OneMouse 시연이에요. 한 PC에서 움직인 커서가 옆 Windows PC 화면으로 넘어가요. 소리 없는 영상입니다.</figcaption>
+<p class="eyebrow">OneMouse 소개 영상</p><h2 id="proof-title">OneMouse, 어떻게 쓰는지 영상으로 보세요.</h2>
+<p class="help">마우스와 키보드 공유부터 파일 전송, 원격 제어까지 한 편에 담았어요.</p>
+<figure class="promo-video">
+<div class="promo-video-player" id="promo-video-player">
+<a class="promo-video-play" href="https://www.youtube.com/watch?v=lfrUuJgT5nw" target="_blank" rel="noopener" aria-label="OneMouse 전체 소개 영상 재생" aria-describedby="promo-video-note" data-promo-video-play data-video-title="OneMouse 전체 소개 영상">
+<img src="/assets/onemouse-promo-video.jpg" width="1280" height="720" loading="lazy" decoding="async" alt="OneMouse 소개 영상 미리보기">
+<span class="btn primary" aria-hidden="true">▶ 소개 영상 재생</span>
+</a>
+</div>
+<figcaption class="promo-video-links" id="promo-video-note">재생을 눌러야 YouTube 플레이어에 연결돼요. <a href="https://www.youtube.com/watch?v=lfrUuJgT5nw" target="_blank" rel="noopener">YouTube에서 직접 보기 ↗</a></figcaption>
 </figure>
-<noscript><p><a href="/assets/preview/kvm-handoff.mp4">영상 파일 열기</a></p></noscript>
 </div></section>
 
 <section class="section" id="use"><div class="wrap">
@@ -649,18 +652,6 @@ changeMode('cursor');
 openDemoRoute();
 window.addEventListener('hashchange',openDemoRoute);
 </script>
-<script>
-(() => {
-  const trigger = document.getElementById('play-proof');
-  const template = document.getElementById('proof-media');
-  trigger.addEventListener('click', () => {
-    const video = template.content.firstElementChild.cloneNode(true);
-    trigger.previousElementSibling.remove();
-    trigger.replaceWith(video);
-    video.focus();
-    video.play()?.catch(() => { /* Native controls also work if play is blocked. */ });
-  }, {once: true});
-})();
-</script>
+<script src="/js/promo-video.js" defer></script>
 </body>
 </html>
