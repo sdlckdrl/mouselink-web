@@ -9,7 +9,8 @@
 <title>OneMouse 원마우스 · 홈페이지 시안</title>
 <style>
 :root{color-scheme:dark;--bg:#0b1020;--surface:#111a2c;--line:#2b3957;--ink:#f5f7ff;--muted:#b5c2dc;--green:#6bf5c6;--radius:20px}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:1rem/1.65 system-ui,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;word-break:keep-all;overflow-wrap:anywhere}a{color:inherit}button{font:inherit}a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--green);outline-offset:4px}a,button{touch-action:manipulation}.skip{position:absolute;left:12px;transform:translateY(-150%);z-index:3}.skip:focus{transform:none}.wrap{width:min(1120px,calc(100% - 40px));margin-inline:auto}.head{border-bottom:1px solid #202d48}.head .wrap,footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:18px;min-height:66px}.brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;letter-spacing:-.035em;font-size:1.18rem}.mark{display:grid;place-items:center;width:34px;height:34px;border-radius:11px;background:var(--green);color:#0a261d}.mark svg{width:19px}.head nav{display:flex;align-items:center;gap:18px}.head nav a,footer a{color:var(--muted);text-underline-offset:4px;font-size:.9rem}.hero{display:grid;grid-template-columns:1fr;gap:28px;padding-block:43px 52px}.eyebrow{color:var(--green);font-weight:750;font-size:.9rem;margin:0 0 14px}.badge{display:inline-block;color:#c5d3ed;background:#17243e;border:1px solid #34456c;border-radius:999px;padding:3px 9px;margin-left:9px;font-size:.8rem}.hero h1{font-size:clamp(2rem,6.4vw,4.1rem);line-height:1.14;letter-spacing:-.064em;margin:0}.hero h1 span{color:var(--green)}.intro{color:var(--muted);font-size:clamp(1rem,2.1vw,1.17rem);margin:16px 0 22px;max-width:36ch}.actions{display:flex;gap:9px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:45px;padding:8px 15px;border-radius:11px;border:1px solid transparent;font-weight:750;text-decoration:none;font-size:.95rem}.primary{background:var(--green);color:#08231a}.primary:hover{background:#9bffdd}.secondary{border-color:#465577;background:#151e33;color:var(--ink)}.secondary:hover{background:#233350} .desktop{display:none}.caption{margin:11px 0 0;color:var(--muted);font-size:.88rem}.visual{padding:16px;border-radius:var(--radius);border:1px solid var(--line);background:radial-gradient(ellipse at 77% 0%,#213c56,transparent 65%),var(--surface);align-self:center}.visual h2{font-size:1.05rem;margin:0 0 4px}.visual p{font-size:.9rem;color:var(--muted);margin:0}.stage{position:relative;width:100%;aspect-ratio:940/370;touch-action:pan-y;cursor:crosshair;margin-block:13px 7px}.stage>svg:first-child{display:block;width:100%;height:100%}.pointer{position:absolute;top:43%;left:24%;width:clamp(11px,2.8%,24px);height:auto;filter:drop-shadow(0 1px 5px #73ffcd80);transition:left .65s cubic-bezier(.22,.61,.36,1),top .65s cubic-bezier(.22,.61,.36,1)}.stage[data-device=android] .pointer{left:51.7%;top:53%}.stage[data-device=tablet] .pointer{left:67.5%;top:57%}.stage[data-device=mac] .pointer{left:87%;top:45%}.stage[data-tracking] .pointer{transition:none}.pointer{pointer-events:none}.demo-foot{display:flex;gap:10px;align-items:center;flex-wrap:wrap;justify-content:space-between}.demo-button{background:#131e33;color:var(--ink);border:1px solid #546a88;border-radius:10px;padding:7px 10px;min-height:44px;cursor:pointer;font-weight:700;font-size:.88rem}.demo-button:hover{background:#243854}.demo-controls:not([hidden]){display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:5px;width:100%}.demo-button{padding-inline:5px}.demo-button[aria-pressed=true]{color:var(--green);border-color:var(--green);background:#193b37}.active-plane{fill:none;stroke:var(--green);stroke-width:2;opacity:0}.stage[data-device=pc] .plane-pc,.stage[data-device=android] .plane-android,.stage[data-device=tablet] .plane-tablet,.stage[data-device=mac] .plane-mac{opacity:.8}@media(min-width:460px){.demo-controls:not([hidden]){grid-template-columns:repeat(4,minmax(0,1fr))}}.status{font-size:.9rem;color:var(--green)}.section{padding:48px 0;border-top:1px solid #202d48}.section h2{font-size:clamp(1.65rem,4.2vw,2.5rem);line-height:1.25;letter-spacing:-.05em;margin:0 0 18px}.grid{display:grid;gap:12px}.card{border:1px solid var(--line);border-radius:16px;padding:19px;background:var(--surface)}.card .num{color:var(--green);font-size:.83rem;font-weight:750}.card h3{margin:5px 0;font-size:1.15rem;letter-spacing:-.04em}.card p{margin:0;color:var(--muted);font-size:.96rem}.store{display:flex;gap:7px;flex-wrap:wrap;margin-top:14px}.store a{font-size:.85rem}.help{margin:18px 0 0;color:var(--muted)}.help a,.extra a{color:var(--green);text-underline-offset:4px}.extra details{border-bottom:1px solid var(--line);padding:13px 0}.extra summary{cursor:pointer;font-weight:700}.extra p{color:var(--muted);margin:9px 0 2px}footer{border-top:1px solid #202d48;color:var(--muted);font-size:.84rem;padding-block:12px}footer .wrap{flex-wrap:wrap}
-.demo-modes:not([hidden]){display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:5px;margin-top:11px}.demo-modes button{font-size:.86rem}.demo-controls .demo-button:disabled{opacity:.48;cursor:not-allowed}.mode-panel:not([hidden]){display:grid;gap:7px;padding:11px;margin-top:10px;border-radius:10px;border:1px solid var(--line);background:#0e182a}.mode-panel button{justify-self:start}.mode-panel .result{color:var(--green);overflow-wrap:anywhere}.stage-overlay{position:absolute;inset:0;pointer-events:none}.sample-icon,.received-icon{position:absolute;border:1px solid #c0a0ff;background:#f2eaff;color:#311755;border-radius:4px;padding:3px 5px;font-size:clamp(.59rem,1.7vw,.8rem);font-weight:800;max-width:30%;overflow:hidden;line-height:1.2;z-index:1;white-space:nowrap}.sample-icon{left:22%;top:47%;pointer-events:auto;cursor:grab;touch-action:none}.sample-icon:active{cursor:grabbing}.sample-icon.dragging{cursor:grabbing}.received-icon{transform:translateX(-50%);top:66%;color:#084c37;background:#c6fbe7;border-color:#6bf5c6}.receipt-thumbnail:not([hidden]){display:grid;place-items:center;width:min(100%,160px);height:70px;border:1px solid #8fa7d0;border-radius:8px;background:radial-gradient(ellipse at 25% 20%,#8785da,#213655 70%);color:#fff;font-weight:800;text-shadow:0 1px 2px #000}.stage[data-mode=file][data-dragging] .pointer{opacity:.25}@media(min-width:600px){.demo-modes:not([hidden]){grid-template-columns:repeat(4,minmax(0,1fr))}}
+.demo-modes:not([hidden]){display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:5px;margin-top:11px}.demo-modes button{font-size:.86rem}.demo-controls .demo-button:disabled{opacity:.48;cursor:not-allowed}.mode-panel:not([hidden]){display:grid;gap:7px;padding:11px;margin-top:10px;border-radius:10px;border:1px solid var(--line);background:#0e182a}.mode-panel button{justify-self:start}.mode-panel .result{color:var(--green);overflow-wrap:anywhere}.stage-overlay{position:absolute;inset:0;pointer-events:none}.sample-icon{position:absolute;border:1px solid #c0a0ff;background:#f2eaff;color:#311755;border-radius:4px;padding:3px 5px;font-size:clamp(.59rem,1.7vw,.8rem);font-weight:800;max-width:30%;overflow:hidden;line-height:1.2;z-index:1;white-space:nowrap}.sample-icon{left:22%;top:47%;pointer-events:auto;cursor:grab;touch-action:none}.sample-icon:active{cursor:grabbing}.sample-icon.dragging{cursor:grabbing}.receipt-thumbnail:not([hidden]){display:grid;place-items:center;width:min(100%,160px);height:70px;border:1px solid #8fa7d0;border-radius:8px;background:radial-gradient(ellipse at 25% 20%,#8785da,#213655 70%);color:#fff;font-weight:800;text-shadow:0 1px 2px #000}.stage[data-mode=file][data-dragging] .pointer{opacity:.25}@media(min-width:600px){.demo-modes:not([hidden]){grid-template-columns:repeat(4,minmax(0,1fr))}}
+.crop-surface{position:absolute;left:5.8511%;top:13.7838%;width:36.4894%;height:48.9189%;border:1px dashed #6bf5c6;border-radius:3px;pointer-events:auto;touch-action:none;cursor:crosshair}.crop-selection{position:absolute;border:1.5px solid #6bf5c6;background:#6bf5c624;box-shadow:0 0 6px #000;border-radius:2px;pointer-events:none}.device-receipt{display:grid;grid-template-rows:1fr;place-items:center;position:absolute;min-width:0;min-height:0;overflow:hidden;border:1px solid #6bf5c6;border-radius:4px;background:#edf7ff;color:#14293b;padding:0;pointer-events:auto;cursor:zoom-in}.device-receipt[hidden]{display:none}.device-receipt svg,.visual-result svg,.result-dialog svg{width:100%;height:100%;display:block}.device-note{padding:2px;font-size:clamp(4px,1vw,13px);line-height:1.2;font-weight:800;text-align:left;white-space:normal;overflow-wrap:anywhere;word-break:normal}.visual-result:not([hidden]){width:min(100%,260px);min-height:44px;max-height:160px;display:grid;place-items:center;padding:5px 8px;border:1px solid #6b92ad;background:#e8f8ff;color:#193146;border-radius:8px;text-align:left;cursor:zoom-in;overflow:hidden}.visual-result svg{height:min(115px,35vw);width:100%}.mode-actions{display:flex;gap:6px;flex-wrap:wrap}.mode-panel .mode-eyebrow{font-weight:800;color:#c3e9f3;font-size:.86rem}.result-dialog{width:min(500px,calc(100% - 32px));padding:17px;border:1px solid #5c819d;border-radius:16px;background:#111a2c;color:#f5f7ff}.result-dialog::backdrop{background:#080d19bb}.result-dialog h2{margin-block:0 12px;font-size:1.25rem}.result-dialog .enlarged-visual{background:#e8f8ff;color:#132c3b;padding:8px;border-radius:8px;margin-bottom:14px}.result-dialog .device-note,.visual-result .device-note{font-size:1rem}.result-dialog svg{max-height:58vh}.stage[data-mode=shot] .pointer{display:none}
 @media(min-width:580px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(min-width:760px){.hero{padding-block:77px 80px;grid-template-columns:1.08fr 1fr;gap:40px;align-items:center}.desktop{display:inline-flex}.mobile{display:none}.visual{padding:23px}.section{padding-block:62px}}@media(max-width:350px){.wrap{width:calc(100% - 28px)}.head nav{gap:10px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.pointer{transition:none}}
 </style>
 </head>
@@ -57,7 +58,7 @@
 <path d="M173 285l126-5 1 6-128 4z" fill="#394553"/>
 <rect x="43" y="37" width="367" height="213" rx="14" fill="url(#edge)"/>
 <rect x="46" y="39" width="361" height="207" rx="13" fill="#121721" stroke="#a3adbf" stroke-opacity=".5"/>
-<rect x="55" y="51" width="343" height="181" rx="7" fill="url(#wp)"/>
+<g id="mock-windows-screen"><rect x="55" y="51" width="343" height="181" rx="7" fill="url(#wp)"/>
 <path d="M55 188Q127 82 246 138T398 82v150H55z" fill="#b08aed" opacity=".21"/>
 <path d="M55 197Q130 125 242 171T398 120v112H55z" fill="#7ba5fb" opacity=".18"/>
 <rect x="55" y="214" width="343" height="18" rx="4" fill="#111b30" opacity=".88"/>
@@ -76,7 +77,7 @@
  <path d="m136 166 8-8 7 4 8-10 15 5" fill="none" stroke="#6bf5c6" stroke-width="1.2"/>
  <path d="m191 165 8-5 7 3 7-8 10 1" fill="none" stroke="#cf9af7" stroke-width="1.2"/>
 </g>
-<path d="M54 52h218L54 143z" fill="#fff" opacity=".045"/><circle cx="228" cy="240" r="2" fill="#6bf5c6" opacity=".8"/>
+<path d="M55 52h217L55 143z" fill="#fff" opacity=".045"/></g><circle cx="228" cy="240" r="2" fill="#6bf5c6" opacity=".8"/>
 <path d="m112 309 164-8 33 25-197 10-18-8z" fill="#1a2330" stroke="#6c798e"/><path d="m113 313 162-8 18 15-183 10z" fill="#97a7c6" opacity=".72"/>
 <path d="M110 319l177-9m-180 15 188-9m-168-4 0 17m16-18 1 17m15-18 2 17m15-18 3 17m15-18 4 17m14-18 5 17m14-18 6 17m11-18 7 17m10-18 8 17" stroke="#222d41" stroke-width="1.5"/>
 <path d="m328 304 18-2q10 0 17 7l7 6-6 8-31 2-12-8q0-9 7-13z" fill="#687989" stroke="#141d28"/>
@@ -139,7 +140,9 @@
 <svg aria-hidden="true" class="pointer" viewBox="0 0 22 25"><path d="M2 2v19l5-5 4 7 4-2-4-7h8z" fill="#f6fffb" stroke="#0b1020" stroke-width="1.6" stroke-linejoin="round"/></svg>
 <div class="stage-overlay">
   <button id="sample-file" class="sample-icon" type="button" aria-label="예시 파일 사진.jpg 선택" hidden>사진.jpg</button>
-  <span id="received" class="received-icon" aria-hidden="true" hidden></span>
+  <div id="crop-surface" class="crop-surface" aria-hidden="true" hidden></div>
+  <div id="crop-selection" class="crop-selection" aria-hidden="true" hidden></div>
+  <button type="button" id="received" class="device-receipt" aria-label="받은 결과 크게 보기" hidden></button>
 </div>
 </div>
 <div class="demo-foot">
@@ -153,12 +156,18 @@
 </div>
 <div class="mode-panel" id="mode-panel" hidden>
   <p id="mode-hint"></p>
-  <button class="demo-button" id="mode-action" type="button"></button>
+  <div class="mode-actions"><button class="demo-button" id="mode-action" type="button"></button><button class="demo-button" id="mode-reset" type="button" hidden>다시 하기</button></div>
   <p class="result" id="mode-result" aria-live="polite"></p>
-  <div class="receipt-thumbnail" id="receipt-thumbnail" role="img" aria-label="전송된 예시 스크린샷" hidden>예시 스크린샷</div>
+  <p class="mode-eyebrow" id="visual-label" hidden></p>
+  <button type="button" class="visual-result" id="visual-result" aria-label="결과 크게 보기" hidden></button>
   <p>예시 체험이라 실제 파일, 클립보드, 화면에는 접근하지 않아요.</p>
 </div>
 <noscript><p>그림은 Windows에서 Android 폰·태블릿과 Mac으로 커서를 넘기는 예시입니다.</p></noscript>
+<dialog class="result-dialog" id="result-dialog" aria-labelledby="result-dialog-title">
+  <h2 id="result-dialog-title">예시 결과</h2>
+  <div class="enlarged-visual" id="enlarged-visual"></div>
+  <form method="dialog"><button class="demo-button" type="submit" autofocus>닫기</button></form>
+</dialog>
 </section>
 </div>
 <section class="section"><div class="wrap">
@@ -199,7 +208,23 @@ const action = document.getElementById('mode-action');
 const result = document.getElementById('mode-result');
 const sample = document.getElementById('sample-file');
 const received = document.getElementById('received');
-const thumbnail = document.getElementById('receipt-thumbnail');
+const visual = document.getElementById('visual-result');
+const visualLabel = document.getElementById('visual-label');
+const cropSurface = document.getElementById('crop-surface');
+const selection = document.getElementById('crop-selection');
+const windowsScreen = document.getElementById('mock-windows-screen');
+const reset = document.getElementById('mode-reset');
+const dialog = document.getElementById('result-dialog');
+const enlarged = document.getElementById('enlarged-visual');
+const dialogTitle = document.getElementById('result-dialog-title');
+const svgNS = 'http://www.w3.org/2000/svg';
+const sampleSentence = '회의는 오후 2시예요.';
+const displayBounds = {
+  android:[445,105,85,181],
+  tablet:[569,157,130,124],
+  mac:[742,115,167,126]
+};
+const defaultCrop = [75,70,169,116];
 const planes = [
   { id: 'pc', label: 'Windows', edge: 423, x: [55, 377], y: [51, 209] },
   { id: 'android', label: 'Android 폰', edge: 546, x: [445, 508], y: [105, 263] },
@@ -208,9 +233,11 @@ const planes = [
 ];
 controls.hidden = false;
 modes.hidden = false;
-let touchStart, dragStart, prepared = false;
+let touchStart, dragStart, selectionStart, crop, lastVisual, visualSequence = 0, prepared = false, finished = false;
 const activePlane = () => planes.find(p => p.id === stage.dataset.device) || planes[0];
 function updateAction() {
+  action.hidden = finished;
+  reset.hidden = !finished && !prepared;
   switch (stage.dataset.mode) {
     case 'file':
       action.textContent = prepared ? '선택한 기기로 보내기' : '예시 파일 선택';
@@ -221,7 +248,7 @@ function updateAction() {
       action.disabled = false;
       break;
     case 'shot':
-      action.textContent = prepared ? 'Android 폰으로 보내기' : '예시 화면 캡처';
+      action.textContent = prepared ? 'Android 폰으로 보내기' : crop ? '선택 영역 캡처' : '예시 영역 캡처';
       action.disabled = false;
       break;
   }
@@ -307,25 +334,116 @@ function resetDrag() {
   sample.style.removeProperty('left');
   sample.style.removeProperty('top');
 }
-function showReceipt(plane, label) {
-  setDevice(plane);
-  received.style.left = ((plane.x[0] + plane.x[1]) / 2 / 9.4) + '%';
-  received.textContent = label;
-  received.hidden = false;
+function createVisual(entry) {
+  if (entry.kind === 'text') {
+    const note = document.createElement('span');
+    note.className = 'device-note';
+    note.textContent = entry.text;
+    return note;
+  }
+  const svg = document.createElementNS(svgNS, 'svg');
+  svg.setAttribute('role', 'img');
+  svg.setAttribute('aria-label', entry.title);
+  if (entry.kind === 'shot') {
+    svg.setAttribute('viewBox', entry.crop.join(' '));
+    const [x,y,width,height] = entry.crop;
+    const uniqueId = 'crop-clip-' + (++visualSequence);
+    const clip = document.createElementNS(svgNS, 'clipPath');
+    const mask = document.createElementNS(svgNS, 'rect');
+    clip.setAttribute('id', uniqueId);
+    for (const [key, value] of Object.entries({x,y,width,height})) mask.setAttribute(key, value);
+    clip.append(mask);
+    const scene = windowsScreen.cloneNode(true);
+    scene.removeAttribute('id');
+    scene.setAttribute('clip-path', 'url(#' + uniqueId + ')');
+    svg.append(clip, scene);
+  } else {
+    svg.setAttribute('viewBox', '0 0 160 105');
+    const sky = document.createElementNS(svgNS, 'rect');
+    sky.setAttribute('width', '160'); sky.setAttribute('height', '105'); sky.setAttribute('fill', '#9fd9f2');
+    const sun = document.createElementNS(svgNS, 'circle');
+    sun.setAttribute('cx', '120'); sun.setAttribute('cy', '25'); sun.setAttribute('r', '13'); sun.setAttribute('fill', '#fff1ac');
+    const hills = document.createElementNS(svgNS, 'path');
+    hills.setAttribute('d', 'M0 80L46 38L76 74L109 48L160 81V105H0Z'); hills.setAttribute('fill', '#318977');
+    svg.append(sky, sun, hills);
+  }
+  return svg;
 }
+function showVisual(entry, label) {
+  lastVisual = entry;
+  visual.replaceChildren(createVisual(entry));
+  visual.hidden = false;
+  visualLabel.textContent = label + ' · ' + entry.title;
+  visualLabel.hidden = false;
+}
+function showReceipt(plane, entry, label) {
+  const rect = displayBounds[plane.id];
+  setDevice(plane);
+  received.style.left = ((rect[0] + rect[2] * .1) / 9.4) + '%';
+  received.style.top = ((rect[1] + rect[3] * .21) / 3.7) + '%';
+  received.style.width = (rect[2] * .8 / 9.4) + '%';
+  received.style.height = (rect[3] * .56 / 3.7) + '%';
+  received.setAttribute('aria-label', plane.label + '의 ' + entry.title + ' 크게 보기');
+  received.replaceChildren(createVisual(entry));
+  received.hidden = false;
+  showVisual(entry, plane.label + '의 ' + label);
+}
+function openVisual() {
+  if (!lastVisual) return;
+  dialogTitle.textContent = visualLabel.textContent;
+  enlarged.replaceChildren(createVisual(lastVisual));
+  if (typeof dialog.showModal === 'function' && !dialog.open) dialog.showModal();
+}
+received.addEventListener('click', openVisual);
+visual.addEventListener('click', openVisual);
 function sendSample(plane) {
   prepared = false;
-  showReceipt(plane, '사진.jpg');
+  finished = true;
+  showReceipt(plane, {kind:'file', title:'사진.jpg'}, '받은 파일');
   result.textContent = plane.label + '에서 예시 파일을 받았어요.';
   updateAction();
 }
+function showSelection(rect) {
+  selection.hidden = !rect;
+  if (!rect) return;
+  selection.style.left = (rect[0] / 9.4) + '%';
+  selection.style.top = (rect[1] / 3.7) + '%';
+  selection.style.width = (rect[2] / 9.4) + '%';
+  selection.style.height = (rect[3] / 3.7) + '%';
+}
+function dragCrop(e) {
+  const pos = readPosition(e);
+  if (!pos || !selectionStart) return null;
+  const x = clamp(pos.x, 55, 398), y = clamp(pos.y, 51, 232);
+  return [Math.min(selectionStart.x, x), Math.min(selectionStart.y, y), Math.abs(selectionStart.x - x), Math.abs(selectionStart.y - y)];
+}
+cropSurface.addEventListener('pointerdown', e => {
+  const pos = readPosition(e);
+  if (!pos || !e.isPrimary || e.button !== 0 || prepared || finished) return;
+  selectionStart = {id:e.pointerId, x:clamp(pos.x,55,398), y:clamp(pos.y,51,232)};
+  cropSurface.setPointerCapture(e.pointerId);
+  e.stopPropagation();
+});
+cropSurface.addEventListener('pointermove', e => {
+  if (selectionStart?.id === e.pointerId) showSelection(dragCrop(e));
+});
+cropSurface.addEventListener('pointerup', e => {
+  if (selectionStart?.id !== e.pointerId) return;
+  const rect = dragCrop(e);
+  selectionStart = undefined;
+  if (rect && rect[2] >= 6 && rect[3] >= 6) crop = rect;
+  showSelection(crop);
+  updateAction();
+});
+cropSurface.addEventListener('pointercancel', () => { selectionStart = undefined; showSelection(crop); });
 function selectFile() {
+  if (finished) return;
   prepared = true;
   result.textContent = '받을 기기를 고른 다음 보내기 버튼을 눌러 보세요.';
   updateAction();
 }
 sample.addEventListener('pointerdown', e => {
-  if (!e.isPrimary || e.button !== 0) return;
+  if (!e.isPrimary || e.button !== 0 || finished) return;
   setDevice(planes[0]);
   dragStart = { id: e.pointerId, x:e.clientX, y:e.clientY, moved:false, captured:false };
   if (e.pointerType === 'touch') {
@@ -339,15 +457,18 @@ function changeMode(mode) {
   stage.dataset.mode = mode;
   resetDrag();
   prepared = false;
-  received.hidden = true;
-  thumbnail.hidden = true;
+  finished = false;
+  selectionStart = crop = lastVisual = undefined;
+  showSelection();
+  received.hidden = visual.hidden = visualLabel.hidden = true;
+  cropSurface.hidden = mode !== 'shot';
   sample.hidden = mode !== 'file';
   panel.hidden = mode === 'cursor';
   result.textContent = '';
   hint.textContent = {
     file:'Windows 화면의 사진.jpg를 옆 기기로 끌어다 놓으세요. 아래 버튼으로도 보낼 수 있어요.',
     text:'Windows에서 “회의는 오후 2시예요.”를 복사해 Android 폰에 붙여넣어 보세요.',
-    shot:'Windows에서 예시 화면을 캡처해 Android 폰으로 보내 보세요. 실제 캡처 전송은 Wi-Fi나 LAN 연결에서 사용해요.'
+    shot:'Windows 화면에서 캡처할 곳을 드래그하거나 예시 영역 버튼을 누르세요. 실제 캡처 전송은 Wi-Fi나 LAN 연결에서 사용해요.'
   }[mode] || '';
   const singleTarget = mode === 'text' || mode === 'shot';
   buttons.forEach(button => { button.disabled = singleTarget && !['pc', 'android'].includes(button.dataset.target); });
@@ -356,7 +477,9 @@ function changeMode(mode) {
   updateAction();
 }
 modeButtons.forEach(button => button.addEventListener('click', () => changeMode(button.dataset.mode)));
+reset.addEventListener('click', () => { changeMode(stage.dataset.mode); action.focus(); });
 action.addEventListener('click', () => {
+  if (finished) return;
   const mode = stage.dataset.mode;
   if (mode === 'file') {
     if (!prepared) selectFile();
@@ -368,26 +491,29 @@ action.addEventListener('click', () => {
       prepared = true;
       result.textContent = 'Windows에서 예시 문장을 복사했어요.';
     } else {
-      showReceipt(planes[1], '문장 받음');
-      result.textContent = 'Android 폰에 붙여넣었어요: 회의는 오후 2시예요.';
+      showReceipt(planes[1], {kind:'text', title:'메모', text:sampleSentence}, '받은 메모');
+      result.textContent = 'Android 폰 메모에 붙여넣었어요.';
       prepared = false;
+      finished = true;
     }
   } else if (mode === 'shot') {
     if (!prepared) {
       setDevice(planes[0]);
       received.hidden = true;
       prepared = true;
-      thumbnail.setAttribute('aria-label', '캡처한 예시 화면 미리보기');
-      thumbnail.hidden = false;
-      result.textContent = 'Windows에서 예시 화면을 캡처했어요.';
+      crop ||= [...defaultCrop];
+      showSelection(crop);
+      showVisual({kind:'shot', title:'스크린샷', crop}, '캡처 미리보기');
+      result.textContent = '선택한 영역을 캡처했어요.';
     } else {
-      showReceipt(planes[1], '캡처 받음');
-      thumbnail.setAttribute('aria-label', 'Android 폰이 받은 예시 스크린샷');
-      result.textContent = 'Android 폰에서 예시 스크린샷을 받았어요.';
+      showReceipt(planes[1], {kind:'shot', title:'스크린샷', crop}, '받은 화면');
+      result.textContent = 'Android 폰에서 똑같은 영역을 받았어요.';
       prepared = false;
+      finished = true;
     }
   }
   updateAction();
+  if (finished && document.activeElement === action) reset.focus();
 });
 buttons.forEach(button => button.addEventListener('click', () => {
   const plane = planes.find(candidate => candidate.id === button.dataset.target);
