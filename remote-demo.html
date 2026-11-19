@@ -288,6 +288,18 @@
   desk.hidden=actions.hidden=gameControls.hidden=false;
   if(backdrop.complete&&!backdrop.naturalWidth)missingPhoto();
   alignScreens();
+  if(document.documentElement.classList.contains('race-embedded') && new URLSearchParams(location.search).get('play')==='1') {
+    let countdown=3;
+    toggle.textContent='3초 후 시작';
+    announce('곧 시작해요. 좌우 버튼으로 조작하세요.');
+    const ready=setInterval(()=>{
+      if(--countdown>0) {toggle.textContent=countdown+'초 후 시작';return;}
+      clearInterval(ready);
+      if(phase==='idle' && !document.hidden) setGame('playing');
+      else if(phase==='idle') renderGame();
+    },1000);
+    toggle.addEventListener('click',()=>clearInterval(ready),{once:true});
+  }
   if(typeof ResizeObserver==='function')new ResizeObserver(alignScreens).observe(scene);
   else window.addEventListener('resize',alignScreens,{passive:true});
 })();

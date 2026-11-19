@@ -6,15 +6,10 @@
   --oc-accent: #006b58;
   --oc-border: #c0d4df;
   color: var(--oc-ink);
-  container: om-capture / inline-size;
   line-height: 1.55;
 }
 .om-capture-intro,
 .om-capture-status { margin: 0 0 .65rem; color: var(--oc-muted); font-size: .88rem; }
-.om-capture-devices { display: grid; gap: .8rem; }
-.om-capture-desktop,
-.om-capture-phone { min-width: 0; }
-.om-capture-device-title { margin-bottom: .26rem; font-size: .82rem; font-weight: 800; }
 .om-capture-source {
   display: block;
   position: relative;
@@ -31,15 +26,15 @@
   user-select: none;
   -webkit-user-select: none;
 }
-.om-capture-source svg,
-.om-capture-preview-view svg,
-.om-capture-phone-view svg {
+.om-capture-source-fallback > svg,
+.om-capture-preview-view > svg,
+.om-capture-phone-view > svg {
   display: block;
   width: 100%;
   height: 100%;
   pointer-events: none;
 }
-.om-capture-source svg { position: absolute; inset: 0; }
+.om-capture-source-fallback > svg { position: absolute; inset: 0; }
 .om-capture-selection {
   position: absolute;
   border: 2px solid #fff;
@@ -66,12 +61,6 @@
 .om-capture-primary { color: #fff; background: var(--oc-accent); border-color: var(--oc-accent); }
 .om-capture-primary:hover { background: #005343; }
 .om-capture-button:disabled { color: #587183; background: #edf4f7; border-color: var(--oc-border); cursor: default; }
-.om-capture-phone-body {
-  border: 4px solid #183449;
-  border-radius: .85rem;
-  background: #101f31;
-  padding: .28rem;
-}
 .om-capture-phone-view {
   min-height: 4.3rem;
   display: grid;
@@ -81,8 +70,8 @@
   background: #e8f2f7;
 }
 .om-capture-phone-view.om-capture-received { gap: .23rem; }
-.om-capture-phone-view svg,
-.om-capture-preview-view svg { height: auto; max-height: 10rem; }
+.om-capture-phone-view > svg,
+.om-capture-preview-view > svg { height: auto; max-height: 10rem; }
 .om-capture-phone-hint { text-align: center; color: var(--oc-muted); font-size: .82rem; }
 .om-capture-delivered { color: #155a4b; font-size: .76rem; font-weight: 780; }
 .om-capture-tray { margin-top: .8rem; padding-top: .45rem; border-top: 1px solid var(--oc-border); }
@@ -92,9 +81,31 @@
 }
 .om-capture-preview-label { margin: 0; font-size: .8rem; font-weight: 780; }
 .om-capture-preview-view { display: grid; place-items: center; min-width: 0; }
-.om-capture-preview-view svg { max-height: 6rem; }
+.om-capture-preview-view > svg { max-height: 6rem; }
 .om-capture-status { margin: .45rem 0 0; }
-@container om-capture (min-width: 390px) {
-  .om-capture-devices { grid-template-columns: minmax(0,2fr) minmax(0,1fr); align-items: start; }
-  .om-capture-phone-view { min-height: 6.2rem; }
+/* Only the scenic rectangle in the photographed monitor is selectable. */
+.om-capture-photo { margin: 0; }
+.om-capture-stage { position: relative; aspect-ratio: 3/2; overflow: hidden; border-radius: .75rem; background: #dfedf2; }
+.om-capture-backdrop { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: fill; display: block; }
+.om-capture-source { position: absolute; border-radius: .25rem; overflow: hidden; box-shadow: inset 0 0 0 1px #c5fff2aa; }
+.om-capture-stage:not(.om-capture-photo-missing) .om-capture-source { background: transparent; }
+.om-capture-source-fallback { position: absolute; inset: 0; display: none; }
+.om-capture-caption { margin: .36rem 0 0; color: var(--oc-muted); font-size: .8rem; }
+.om-capture-phone {
+  position: absolute; top: 0; left: 0; width: 192px; height: 224px;
+  transform-origin: 0 0; overflow: hidden; border-radius: 7px;
+  pointer-events: none; background: #eaf2fd;
 }
+.om-capture-stage:not(.om-capture-mapped):not(.om-capture-photo-missing) .om-capture-phone { visibility: hidden; }
+.om-capture-phone-view { box-sizing: border-box; width: 100%; height: 100%; padding: 9px; align-content: center; background: transparent; }
+.om-capture-phone-view.om-capture-received { grid-template-rows: minmax(0,1fr) auto; gap: 5px; padding: 9px; }
+.om-capture-phone-view > svg { max-height: 100%; height: 100%; align-self: center; }
+.om-capture-phone-hint { font-size: .96rem; }
+.om-capture-delivered { font-size: .9rem; }
+.om-capture-stage.om-capture-photo-missing { display: grid; grid-template-columns: minmax(0,2fr) minmax(0,1fr); align-items: stretch; aspect-ratio: auto; gap: .45rem; padding: .5rem; }
+.om-capture-photo-missing .om-capture-backdrop { display: none; }
+.om-capture-photo-missing .om-capture-source { position: relative; inset: auto !important; width: 100% !important; height: auto !important; aspect-ratio: 508/262; background: #d4eff1; }
+.om-capture-photo-missing .om-capture-source-fallback { display: block; }
+.om-capture-photo-missing .om-capture-phone { position: relative; transform: none !important; width: 100%; height: auto; border: 3px solid #183449; border-radius: .65rem; }
+.om-capture-photo-missing .om-capture-phone-view { min-height: 4.4rem; }
+@media (any-pointer:fine) { .om-capture-source { cursor: crosshair; } }

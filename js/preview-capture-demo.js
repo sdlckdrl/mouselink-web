@@ -1,7 +1,13 @@
 (() => {
   'use strict';
   const NS = 'http://www.w3.org/2000/svg';
-  const W = 640, H = 360;
+  const PHOTO_WIDTH = 1536, PHOTO_HEIGHT = 1024;
+  const IMAGE = '/assets/feature-screenshot-share-photo.webp';
+  // Rectangle safely inside the coast shown on the photographed monitor.
+  const SAMPLE_X = 368, SAMPLE_Y = 248, W = 508, H = 262;
+  // Bounds of the received image inside the pictured phone, clockwise.
+  const PHONE_QUAD = [[1177,470],[1366,480],[1348,703],[1158,693]];
+  const PHONE_W = 192, PHONE_H = 224;
   const FULL = { x: 0, y: 0, w: W, h: H };
   const mounts = new WeakMap();
 
@@ -31,19 +37,42 @@
     item.type = 'button';
     return item;
   };
-  function picture(bounds) {
+  function picture(bounds, usePhoto) {
     const svg = document.createElementNS(NS, 'svg');
-    svg.setAttribute('viewBox', `${bounds.x} ${bounds.y} ${bounds.w} ${bounds.h}`);
+    const box = `${bounds.x} ${bounds.y} ${bounds.w} ${bounds.h}`;
+    svg.setAttribute('viewBox', box);
     svg.setAttribute('aria-hidden', 'true');
     svg.setAttribute('focusable', 'false');
     svg.setAttribute('preserveAspectRatio', 'xMidYMid meet');
     svg.setAttribute('width', bounds.w);
     svg.setAttribute('height', bounds.h);
+    // The nested viewport prevents neighbouring pixels filling letterbox areas
+    // when the crop shape differs from the photographed phone's rectangle.
+    const clip = document.createElementNS(NS, 'svg');
+    Object.entries({ x: bounds.x, y: bounds.y, width: bounds.w, height: bounds.h, viewBox: box, overflow: 'hidden' })
+      .forEach(([name, value]) => clip.setAttribute(name, value));
+    svg.append(clip);
+    if (usePhoto) {
+      // Re-render the same static photo in monitor-local coordinates. The
+      // outer viewBox clips it to the exact sample selection.
+      const staticPhoto = document.createElementNS(NS, 'image');
+      staticPhoto.setAttribute('href', IMAGE);
+      staticPhoto.setAttribute('x', -SAMPLE_X);
+      staticPhoto.setAttribute('y', -SAMPLE_Y);
+      staticPhoto.setAttribute('width', PHOTO_WIDTH);
+      staticPhoto.setAttribute('height', PHOTO_HEIGHT);
+      staticPhoto.setAttribute('preserveAspectRatio', 'none');
+      clip.append(staticPhoto);
+      return svg;
+    }
+    const fallback = document.createElementNS(NS, 'g');
+    fallback.setAttribute('transform', `scale(${W/640} ${H/360})`);
     scene.forEach(([tag, attrs]) => {
       const shape = document.createElementNS(NS, tag);
       Object.entries(attrs).forEach(([key, value]) => shape.setAttribute(key, value));
-      svg.append(shape);
+      fallback.append(shape);
     });
+    clip.append(fallback);
     return svg;
   }
 
@@ -54,34 +83,46 @@
 
     const root = el('div', 'demo');
     const brief = el('p', 'intro', '예시 화면에서 캡처할 부분을 고르고 폰으로 보내 보세요. 실제 화면이나 파일에는 접근하지 않아요.');
-    const grid = el('div', 'devices');
-    const desktop = el('div', 'desktop');
-    const desktopTitle = el('div', 'device-title', '예시 PC');
+    const figure = el('figure', 'photo');
+    const stage = el('div', 'stage');
+    const backdrop = el('img', 'backdrop');
+    backdrop.src = IMAGE;
+    backdrop.alt = '';
+    backdrop.width = PHOTO_WIDTH;
+    backdrop.height = PHOTO_HEIGHT;
+    backdrop.decoding = 'async';
+    backdrop.draggable = false;
+
     const source = el('div', 'source');
     source.tabIndex = 0;
     source.setAttribute('role', 'button');
-    source.setAttribute('aria-label', '예시 PC 화면. Enter 또는 스페이스로 전체 캡처');
+    source.setAttribute('aria-label', '사진 속 PC의 예시 화면. Enter 또는 스페이스로 전체 캡처');
+    source.style.left = `${SAMPLE_X/PHOTO_WIDTH*100}%`;
+    source.style.top = `${SAMPLE_Y/PHOTO_HEIGHT*100}%`;
+    source.style.width = `${W/PHOTO_WIDTH*100}%`;
+    source.style.height = `${H/PHOTO_HEIGHT*100}%`;
+    const sourceFallback = el('div', 'source-fallback');
+    sourceFallback.append(picture(FULL, false));
     const selection = el('div', 'selection');
     selection.hidden = true;
     selection.setAttribute('aria-hidden', 'true');
-    source.append(picture(FULL), selection);
+    source.append(sourceFallback, selection);
+
+    const phone = el('div', 'phone');
+    const phoneView = el('div', 'phone-view');
+    const phoneHint = el('div', 'phone-hint', '받은 캡처가 여기에 표시돼요.');
+    phone.setAttribute('aria-label', '사진 속 예시 Android 폰');
+    phoneView.append(phoneHint);
+    phone.append(phoneView);
+    stage.append(backdrop, source, phone);
+    const caption = el('figcaption', 'caption', '사진 속 모니터와 폰으로 체험해요. 배경은 AI로 제작한 사용 예시예요.');
+    figure.append(stage, caption);
 
     const toolbar = el('div', 'tools');
     const area = button('영역 선택', 'button');
     area.setAttribute('aria-pressed', 'false');
     const all = button('전체 캡처', 'button');
     toolbar.append(area, all);
-    desktop.append(desktopTitle, source, toolbar);
-
-    const phone = el('div', 'phone');
-    const phoneTitle = el('div', 'device-title', '예시 Android 폰');
-    const phoneBody = el('div', 'phone-body');
-    const phoneView = el('div', 'phone-view');
-    const phoneHint = el('div', 'phone-hint', '받은 캡처가 여기에 표시돼요.');
-    phoneView.append(phoneHint);
-    phoneBody.append(phoneView);
-    phone.append(phoneTitle, phoneBody);
-    grid.append(desktop, phone);
 
     const tray = el('div', 'tray');
     const preview = el('div', 'preview');
@@ -95,14 +136,49 @@
     const clear = button('다시 시작', 'button');
     clear.disabled = true;
     controls.append(send, clear);
-    const status = el('p', 'status', '영역을 직접 고르거나 전체 화면을 캡처하세요.');
+    const idleText = '마우스로 모니터 속 이미지를 바로 드래그하세요. 터치 화면에서는 영역 선택을 먼저 눌러요.';
+    const status = el('p', 'status', idleText);
     status.setAttribute('role', 'status');
     status.setAttribute('aria-atomic', 'true');
     tray.append(preview, controls, status);
-    root.append(brief, grid, tray);
+    root.append(brief, figure, toolbar, tray);
     panel.append(root);
 
-    let armed = false, active = null, captured = null;
+    let armed = false, active = null, captured = null, sent = null, photoFail = false;
+
+    function alignPhone() {
+      if (photoFail) return;
+      const {width, height} = stage.getBoundingClientRect();
+      if (!width || !height) return;
+      const [p0,p1,p2,p3] = PHONE_QUAD.map(([x,y]) => [x*width/PHOTO_WIDTH, y*height/PHOTO_HEIGHT]);
+      const dx1=p1[0]-p2[0], dx2=p3[0]-p2[0], dx3=p0[0]-p1[0]+p2[0]-p3[0];
+      const dy1=p1[1]-p2[1], dy2=p3[1]-p2[1], dy3=p0[1]-p1[1]+p2[1]-p3[1];
+      const det=dx1*dy2-dx2*dy1;
+      const g=(dx3*dy2-dx2*dy3)/det, h=(dx1*dy3-dx3*dy1)/det;
+      phone.style.transform = `matrix3d(${[
+        (p1[0]-p0[0]+g*p1[0])/PHONE_W,(p1[1]-p0[1]+g*p1[1])/PHONE_W,0,g/PHONE_W,
+        (p3[0]-p0[0]+h*p3[0])/PHONE_H,(p3[1]-p0[1]+h*p3[1])/PHONE_H,0,h/PHONE_H,
+        0,0,1,0,p0[0],p0[1],0,1
+      ].join(',')})`;
+      stage.classList.add('om-capture-mapped');
+    }
+    function showReceiver(crop) {
+      phoneView.replaceChildren(picture(crop, !photoFail), el('span', 'delivered', '캡처 받음'));
+      phoneView.classList.add('om-capture-received');
+    }
+    function missingPhoto() {
+      photoFail = true;
+      stage.classList.add('om-capture-photo-missing');
+      caption.textContent = '사진을 불러오지 못했어요. 대신 예시 PC와 폰으로 같은 방식의 캡처를 체험할 수 있어요.';
+      if (captured) previewView.replaceChildren(picture(captured, false));
+      if (sent) showReceiver(sent);
+    }
+    backdrop.addEventListener('load', alignPhone);
+    backdrop.addEventListener('error', missingPhoto);
+    if (backdrop.complete && !backdrop.naturalWidth) missingPhoto();
+    alignPhone();
+    if (typeof ResizeObserver === 'function') new ResizeObserver(alignPhone).observe(stage);
+    else window.addEventListener('resize', alignPhone, { passive:true });
 
     function point(event) {
       const r = source.getBoundingClientRect();
@@ -147,14 +223,14 @@
       setArmed(false);
       captured = box;
       drawSelection(box===FULL ? null : box);
-      previewView.replaceChildren(picture(box));
+      previewView.replaceChildren(picture(box, !photoFail));
       preview.hidden = false;
       send.disabled = clear.disabled = false;
       status.textContent = note + ' 폰으로 보낼 수 있어요.';
     }
     function reset() {
       dropActive();
-      captured = null;
+      captured = sent = null;
       setArmed(false);
       drawSelection(null);
       preview.hidden = true;
@@ -162,11 +238,11 @@
       phoneView.replaceChildren(phoneHint);
       phoneView.classList.remove('om-capture-received');
       send.disabled = clear.disabled = true;
-      status.textContent = '영역을 직접 고르거나 전체 화면을 캡처하세요.';
+      status.textContent = idleText;
     }
     source.addEventListener('pointerdown', event => {
-      // Only consume touch gestures after the user explicitly chooses an area.
-      if (!armed || active || event.button !== 0 || event.isPrimary === false) return;
+      // Desktop can capture immediately; touch keeps scrolling until armed.
+      if ((!armed && event.pointerType !== 'mouse') || active || event.button !== 0 || event.isPrimary === false) return;
       event.preventDefault();
       active = { id: event.pointerId, start: point(event), x: event.clientX, y: event.clientY };
       source.setPointerCapture?.(event.pointerId);
@@ -181,7 +257,7 @@
       const end = point(event), box = bounds(active.start, end);
       if (Math.abs(event.clientX-active.x)<7 || Math.abs(event.clientY-active.y)<7) {
         // Tap / very short movement: take a visible sample centred near the tap.
-        const w=320, h=180;
+        const w=Math.round(W/2), h=Math.round(H/2);
         commit({ x: Math.max(0, Math.min(W-w,end.x-w/2)), y: Math.max(0,Math.min(H-h,end.y-h/2)), w, h }, '누른 곳 주변을 캡처했어요.');
       } else commit(box, '선택한 영역을 캡처했어요.');
     });
@@ -189,7 +265,7 @@
       if (!active || active.id !== event.pointerId) return;
       dropActive();
       drawSelection(null);
-      status.textContent = '선택이 중단됐어요. 다시 드래그하거나 한 번 눌러 주세요.';
+      status.textContent = armed ? '선택이 중단됐어요. 다시 드래그하거나 한 번 눌러 주세요.' : idleText;
     }
     source.addEventListener('pointercancel', interrupted);
     source.addEventListener('lostpointercapture', interrupted);
@@ -212,8 +288,8 @@
     all.addEventListener('click', () => commit(FULL, '전체 화면을 캡처했어요.'));
     send.addEventListener('click', () => {
       if (!captured) return;
-      phoneView.replaceChildren(picture(captured), el('span', 'delivered', '캡처 받음'));
-      phoneView.classList.add('om-capture-received');
+      sent = captured;
+      showReceiver(sent);
       status.textContent = '고른 이미지가 예시 폰에 전송됐어요.';
     });
     clear.addEventListener('click', () => { reset(); area.focus({ preventScroll: true }); });
@@ -221,7 +297,7 @@
       if (event.key === 'Escape' && armed) { event.preventDefault(); cancelSelection(true); }
     });
 
-    const instance = { reset };
+    const instance = { reset, start: alignPhone };
     mounts.set(panel, instance);
     return instance;
   }

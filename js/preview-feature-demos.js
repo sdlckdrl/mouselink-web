@@ -1,13 +1,19 @@
 (() => {
-  const buttons = new Map([...document.querySelectorAll('[data-feature-demo]')].map(button => [button.dataset.featureDemo, button]));
-  let active = null, raceObserver = null, raceReadSize = null, capture = null;
+  const buttons = new Map();
+  document.querySelectorAll('[data-feature-demo]').forEach(button => {
+    const type = button.dataset.featureDemo;
+    if (!buttons.has(type)) buttons.set(type, []);
+    buttons.get(type).push(button);
+  });
+  const expand = (type, value) => buttons.get(type).forEach(button => button.setAttribute('aria-expanded', String(value)));
+  let active = null, opener = null, raceObserver = null, raceReadSize = null, capture = null;
   const panelFor = type => document.getElementById('feature-' + type + '-demo');
   const contentFor = type => panelFor(type).querySelector('[data-demo-content]');
   function mountRace(node) {
     const frame = document.createElement('iframe');
     frame.className = 'inline-race';
     frame.title = '폰으로 조작하는 미니 레이싱';
-    frame.src = '/remote-demo?embed=1';
+    frame.src = '/remote-demo?embed=1&play=1';
     frame.addEventListener('load', () => {
       if (!frame.isConnected) return;
       const main = frame.contentDocument?.getElementById('main');
@@ -38,21 +44,25 @@
       capture?.reset?.();
     }
     panelFor(type).hidden = true;
-    buttons.get(type).setAttribute('aria-expanded', 'false');
-    if (restoreFocus) buttons.get(type).focus();
+    expand(type, false);
+    if (restoreFocus) opener?.focus();
   }
-  for (const [type,button] of buttons) {
+  for (const [type, group] of buttons) for (const button of group) {
     if (type === 'capture' && !window.OneMouseCaptureDemo?.mount) continue;
     button.hidden = false;
     button.addEventListener('click', () => {
       if (active === type) { close(true); return; }
       close(false);
       active = type;
+      opener = button;
       const panel = panelFor(type);
       panel.hidden = false;
-      button.setAttribute('aria-expanded', 'true');
+      expand(type, true);
       if (type === 'race') mountRace(contentFor(type));
-      else if (!capture) capture = window.OneMouseCaptureDemo.mount(contentFor(type));
+      else {
+        if (!capture) capture = window.OneMouseCaptureDemo.mount(contentFor(type));
+        capture?.start?.();
+      }
       panel.querySelector('h3').focus({preventScroll:true});
       panel.scrollIntoView({block:'start'});
     });
