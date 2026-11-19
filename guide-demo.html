@@ -26,7 +26,7 @@
   <div class="hero"><div class="wrap">
     <p class="tag">OneMouse 연결 가이드 <em>시안</em></p>
     <h1>어떤 기기를 연결할까요?</h1>
-    <p>마우스와 키보드가 연결된 Windows PC에서 시작해요. 제어할 기기를 고르면 먼저 따라 하기 쉬운 연결 방법이 나와요.</p>
+    <p>마우스와 키보드가 연결된 Windows PC에서 시작해요. 제어할 기기를 골라 같은 공유기에서 연결하거나, <a href="#connect-account">Google 계정으로 내 기기 찾기</a>를 확인하세요.</p>
     <nav class="device-nav" aria-label="연결할 기기 유형">
       <a href="#android" data-device="android"><span class="number" aria-hidden="true">01</span>Android 폰·태블릿</a>
       <a href="#mac" data-device="mac"><span class="number" aria-hidden="true">02</span>Mac</a>
@@ -37,7 +37,7 @@
     <section class="panel" id="android" data-device-panel aria-labelledby="android-title">
       <p class="pill">추천 · 같은 공유기에서 연결</p>
       <h2 id="android-title" tabindex="-1">Android 폰·태블릿 연결하기</h2>
-      <p>QR 또는 6자리 번호, 둘 중 하나만 쓰면 돼요. PC가 유선이어도 같은 공유기에 연결돼 있으면 됩니다. Google 로그인은 필요 없어요.</p>
+      <p>QR 또는 6자리 번호, 둘 중 하나만 쓰면 돼요. PC가 유선이어도 같은 공유기에 연결돼 있으면 됩니다. Google 로그인은 필요 없어요. <a href="#connect-account">Google 계정으로 연결하려면</a></p>
       <ol class="steps">
         <li><h3>양쪽에서 OneMouse 열기</h3><p>Windows와 Android에 <a href="/download-demo">OneMouse를 설치</a>하고, 같은 공유기에 연결해요. Android에서 <span class="path">설정 → 접근성 → 설치된 앱 → OneMouse</span>를 켜세요. 기기에 따라 메뉴 이름이 다를 수 있어요.</p></li>
         <li><h3>Windows에서 QR·인증번호 열기</h3><p><span class="path">기기 관리 → 다른 방법으로 연결 → 이 PC의 QR·인증번호</span>를 누르세요.</p>
@@ -51,15 +51,14 @@
           <figure class="shot"><a href="/assets/pairing/pc-position-ko.webp" aria-label="Android 기기 배치 예시 화면 크게 보기"><img src="/assets/pairing/pc-position-ko.webp" width="2240" height="1800" alt="Windows OneMouse에서 Android를 PC 오른쪽에 배치한 화면" loading="lazy"></a><figcaption>같은 방향으로 마우스를 넘겨요.</figcaption></figure></li>
       </ol>
       <div class="tip"><strong>연결됐는데 커서가 안 넘어가나요?</strong> Android 접근성이 켜졌는지, 배치 방향과 진입 통로가 맞는지 확인해요. <a href="/help-demo#cursor">문제 해결 보기</a></div>
-      <details id="alternatives"><summary>다른 연결 방법: Google 계정 또는 Bluetooth</summary>
-        <div id="connect-account"><h3>Google 계정으로 연결</h3><p>지원되는 Windows와 Android 앱에서 같은 Google 계정으로 로그인하고, 두 기기가 인터넷에 연결됐는지 확인하세요. 폰의 등록된 PC 목록에서 내 PC를 선택하고 Windows의 배치를 맞춰요.</p><p><a href="/help-demo#discovery">계정 연결 기기가 안 보일 때</a></p></div>
+      <details id="alternatives"><summary>다른 연결 방법: Bluetooth</summary>
         <div id="connect-bluetooth"><h3>Bluetooth로 연결</h3><p>두 기기의 Bluetooth를 켜고 Android의 OneMouse 설정에서 Bluetooth 모드를 켜세요. Windows Bluetooth 설정에서 폰을 페어링한 뒤 OneMouse 기기 목록의 연결 상태와 배치를 확인해요. 원격 동영상은 Bluetooth로 전송되지 않아요.</p><p><a href="/compatibility-demo">연결별 사용 범위</a></p></div>
       </details>
     </section>
     <section class="panel" id="mac" data-device-panel aria-labelledby="mac-title">
       <p class="pill">추천 · 같은 네트워크에서 연결</p>
       <h2 id="mac-title" tabindex="-1">Windows에서 Mac 연결하기</h2>
-      <p>Apple Silicon Mac과 macOS 13 이상이 필요해요. 두 기기를 같은 공유기의 Wi-Fi 또는 LAN에 연결하세요.</p>
+      <p>Apple Silicon Mac과 macOS 13 이상이 필요해요. 두 기기를 같은 공유기의 Wi-Fi 또는 LAN에 연결하면 로그인 없이 사용할 수 있어요. <a href="#connect-account">Google 계정으로 Mac 연결하기</a></p>
       <ol class="steps">
         <li><h3>Windows와 Mac에서 앱 열기</h3><p><a href="/download-demo">OneMouse를 설치</a>하고 두 기기에서 실행하세요. 연결은 Windows에서 시작해요.</p></li>
         <li><h3>Mac에서 손쉬운 사용 허용</h3><p>입력을 받으려면 <strong>손쉬운 사용</strong>을 허용하세요. macOS 15 이상에서 기기 검색을 위한 <strong>로컬 네트워크</strong> 항목이 뜨면 함께 허용하세요.</p></li>
@@ -72,7 +71,7 @@
     <section class="panel" id="windows" data-device-panel aria-labelledby="windows-title">
       <p class="pill">추천 · 같은 네트워크에서 6자리 번호로 연결</p>
       <h2 id="windows-title" tabindex="-1">다른 Windows PC 연결하기</h2>
-      <p>마우스·키보드가 꽂힌 PC에서 시작해요. 같은 공유기에 연결하면 로그인 없이 번호로 연결할 수 있어요.</p>
+      <p>마우스·키보드가 꽂힌 PC에서 시작해요. 같은 공유기에 연결하면 로그인 없이 번호로 연결할 수 있어요. <a href="#connect-account">Google 계정으로 다른 PC 연결하기</a></p>
       <ol class="steps">
         <li><h3>두 PC에서 앱 열기</h3><p>양쪽 Windows에 <a href="/download-demo">OneMouse를 설치</a>하고 실행해요. 두 PC가 같은 공유기의 Wi-Fi 또는 LAN을 쓰는지 확인하세요.</p></li>
         <li><h3>상대 PC에서 번호 확인</h3><p>제어할 PC에서 <span class="path">기기 관리 → 다른 방법으로 연결 → 이 PC의 QR·인증번호</span>로 가서 6자리 번호를 확인하세요.</p></li>
@@ -82,7 +81,17 @@
           <figure class="shot"><a href="/assets/pairing/pc-peer-position-ko.webp" aria-label="다른 Windows PC 배치 예시 화면 크게 보기"><img src="/assets/pairing/pc-peer-position-ko.webp" width="2240" height="1800" alt="Windows 기기 관리에서 다른 PC를 배치하는 화면" loading="lazy"></a><figcaption>실제 놓인 방향을 맞춰요.</figcaption></figure></li>
       </ol>
       <div class="tip"><strong>상대 PC가 보이지 않나요?</strong> 두 앱이 켜져 있고 같은 네트워크인지 먼저 확인하세요. <a href="/help-demo#discovery">연결 문제 해결 보기</a></div>
-      <details><summary>Google 계정으로 연결하려면</summary><p>공식 가이드의 <a href="/guide-demo#windows">Windows PC 간 연결 절차</a>에서 같은 Google 계정으로 연결하는 방법을 확인하세요.</p></details>
+    </section>
+    <section class="panel" id="connect-account" aria-labelledby="account-title">
+      <p class="pill">선택 · QR·번호 대신</p>
+      <h2 id="account-title">Google 계정으로 내 기기 찾기</h2>
+      <p>Windows, Mac, Android의 OneMouse 앱에서 사용할 수 있어요. 양쪽 앱을 최신 버전으로 업데이트하고, 인터넷에 연결한 뒤 <strong>같은 Google 계정</strong>으로 로그인하세요.</p>
+      <div class="group">
+        <article class="card"><h3>Windows ↔ Windows</h3><p>두 PC의 <strong>기기 관리</strong>에서 로그인하세요. 마우스가 연결된 PC에서 상대 PC를 고르고, 필요하면 연결 스위치를 켜세요.</p></article>
+        <article class="card"><h3>Windows → Mac</h3><p>Windows의 <strong>기기 관리</strong>와 Mac 앱의 <strong>기기</strong> 화면에서 로그인하세요. Windows 기기 목록에서 Mac을 골라 연결하세요. Mac에서 입력을 받으려면 <strong>손쉬운 사용</strong>을 허용하세요.</p></article>
+        <article class="card"><h3>Windows → Android</h3><p>Windows의 <strong>기기 관리</strong>와 Android의 OneMouse 홈에서 로그인하세요. 폰의 <strong>등록된 PC</strong>에서 내 PC를 선택해 연결하고, Android의 <strong>접근성</strong>을 켜세요.</p></article>
+      </div>
+      <div class="tip">허용 요청이 나오면 상대 기기에서 확인하세요. 로그인은 기기를 찾는 방법이에요. 실제 연결 가능 여부와 쓸 수 있는 기능은 네트워크와 기기에 따라 달라요. <a href="/help-demo#discovery">기기가 안 보일 때</a></div>
     </section>
     <section class="section" id="next" aria-labelledby="next-title">
       <h2 id="next-title">연결했다면, 이렇게 써 보세요.</h2>
@@ -118,7 +127,12 @@
   }
   function applyHash() {
     const id = location.hash.slice(1).toLowerCase();
-    if (['connect-account','connect-bluetooth','alternatives'].includes(id)) {
+    if (id === 'connect-account') {
+      if (panels.every(panel => !panel.hidden)) showDevice('android');
+      document.getElementById(id).scrollIntoView({block:'start'});
+      return true;
+    }
+    if (['connect-bluetooth','alternatives'].includes(id)) {
       showDevice('android');
       document.getElementById('alternatives').open = true;
       document.getElementById(id).scrollIntoView({block:'start'});
