@@ -85,7 +85,7 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
     <section class="panel" id="android" data-device-panel aria-labelledby="android-title">
       <p class="pill">추천 · 같은 공유기에서 연결</p>
       <h2 id="android-title" tabindex="-1">Android 폰·태블릿 연결하기</h2>
-      <p>QR 또는 6자리 번호, 둘 중 하나만 쓰면 돼요. PC가 유선이어도 같은 공유기에 연결돼 있으면 됩니다. Google 로그인은 필요 없어요. <a href="#connect-account">Google 계정으로 연결하려면</a></p>
+      <p>QR 또는 6자리 번호, 둘 중 하나만 쓰면 돼요. PC가 유선이어도 같은 공유기에 연결돼 있으면 됩니다. Google 로그인은 필요 없어요. <a href="#connect-account">Google 계정으로 연결하려면</a> · <a href="#connect-bluetooth">Bluetooth로 연결하기 (베타)</a></p>
       <ol class="steps">
         <li id="android-access"><h3>앱 열고 Android 접근성 켜기</h3><p>Windows와 Android에 <a href="/download-demo">OneMouse를 설치</a>하고, 같은 공유기에 연결해요. 폰에서는 아래 순서로 OneMouse의 <strong>접근성</strong>을 켜세요. 갤럭시 기준이며, 메뉴 이름은 기기와 Android 버전에 따라 다를 수 있어요.</p>
           <figure class="shot shot--example shot--access-entry"><a href="/assets/preview/guide/android-access-entry-example.svg" aria-label="Android OneMouse 홈의 접근성 권한이 필요합니다 카드 크게 보기"><img src="/assets/preview/guide/android-access-entry-example.svg" width="480" height="161" alt="Android OneMouse 홈의 접근성 권한이 필요합니다 카드" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">앱 화면 재현</span>① 앱에 이 카드가 뜨면 눌러요. 카드가 없다면 폰 설정에서 ‘접근성’을 여세요.</figcaption></figure>
@@ -100,15 +100,15 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
         <li><h3>기기 위치를 맞추고 마우스 넘기기</h3><p>Android 홈의 <strong>등록된 PC</strong>에서 연결을 확인하세요. Windows에서 폰·태블릿을 실제 놓인 방향으로 배치하고, 그쪽 가장자리의 진입 통로로 마우스를 밀어 보세요.</p>
           <figure class="shot"><a href="/assets/pairing/pc-position-ko.webp" aria-label="Android 기기 배치 예시 화면 크게 보기"><img src="/assets/pairing/pc-position-ko.webp" width="2240" height="1800" alt="Windows OneMouse에서 Android를 PC 오른쪽에 배치한 화면" loading="lazy"></a><figcaption><span class="shot-label">앱 화면 예시</span>같은 방향으로 마우스를 넘겨요.</figcaption></figure></li>
       </ol>
-      <details id="alternatives"><summary>다른 연결 방법: Bluetooth</summary>
-        <div id="connect-bluetooth"><h3>Bluetooth로 연결</h3><p>두 기기의 Bluetooth를 켜세요. Android OneMouse의 <strong>블루투스 모드 시작</strong>과 Windows Bluetooth 설정의 기기 페어링이 필요해요. 연결한 뒤 OneMouse 기기 목록에서 상태와 배치를 확인하세요. 원격 동영상은 Bluetooth로 전송되지 않아요.</p><p><a href="/compatibility-demo">연결별 사용 범위</a></p>
+      <details id="alternatives"><summary>다른 연결 방법: Bluetooth (베타)</summary>
+        <div id="connect-bluetooth"><h3>Bluetooth로 연결 (베타)</h3><p>두 기기의 Bluetooth를 켜세요. Android OneMouse의 <strong>블루투스 모드 시작</strong>과 Windows Bluetooth 설정의 기기 페어링이 필요해요. 연결한 뒤 OneMouse 기기 목록에서 상태와 배치를 확인하세요. 원격 동영상은 Bluetooth로 전송되지 않아요.</p><p><a href="/compatibility-demo">연결별 사용 범위</a></p>
           <figure class="shot shot--detail"><a href="/assets/preview/guide/android-bluetooth-entry-ko.webp" aria-label="Android OneMouse의 다른 방법으로 연결에서 Bluetooth 설정을 여는 실제 화면 크게 보기"><img src="/assets/preview/guide/android-bluetooth-entry-ko.webp" width="1048" height="303" alt="Android OneMouse의 다른 방법으로 연결에서 Bluetooth 설정을 여는 실제 화면" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">실제 앱 · 이전 버전</span>홈의 ‘다른 방법으로 연결’을 펼치고 ‘Bluetooth 설정’을 누르세요.</figcaption></figure><figure class="shot shot--example"><a href="/assets/preview/guide/android-bt-start-example.svg" aria-label="Android OneMouse의 블루투스 모드 시작 버튼 크게 보기"><img src="/assets/preview/guide/android-bt-start-example.svg" width="480" height="281" alt="Android OneMouse 설정의 연결 영역과 블루투스 모드 시작 버튼" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">앱 화면 재현</span>설정의 ‘블루투스 모드 시작’을 누르세요.</figcaption></figure></div>
       </details>
     </section>
     <section class="panel" id="mac" data-device-panel aria-labelledby="mac-title">
       <p class="pill">추천 · 같은 네트워크에서 연결</p>
       <h2 id="mac-title" tabindex="-1">Windows에서 Mac 연결하기</h2>
-      <p>Apple Silicon Mac과 macOS 13 이상이 필요해요. 두 기기를 같은 공유기의 Wi-Fi 또는 LAN에 연결하면 로그인 없이 사용할 수 있어요. <a href="#connect-account">Google 계정으로 Mac 연결하기</a> · <a href="#mac-bluetooth">Bluetooth로 연결하기</a></p>
+      <p>Apple Silicon Mac과 macOS 13 이상이 필요해요. 두 기기를 같은 공유기의 Wi-Fi 또는 LAN에 연결하면 로그인 없이 사용할 수 있어요. <a href="#connect-account">Google 계정으로 Mac 연결하기</a> · <a href="#mac-bluetooth">Bluetooth로 연결하기 (베타)</a></p>
       <ol class="steps">
         <li><h3>Windows와 Mac에서 앱 열기</h3><p><a href="/download-demo">OneMouse를 설치</a>하고 두 기기에서 실행하세요. 연결은 Windows에서 시작해요.</p>
           <figure class="shot shot--diagram"><a href="/assets/preview/guide/mac-start.svg" aria-label="같은 네트워크의 Windows와 Mac에서 OneMouse를 여는 모습 크게 보기"><img src="/assets/preview/guide/mac-start.svg" width="760" height="450" alt="같은 네트워크의 Windows와 Mac에서 OneMouse를 여는 모습" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">설명 그림</span>연결은 마우스·키보드가 꽂힌 Windows에서 시작해요.</figcaption></figure></li>
@@ -143,7 +143,7 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
     <section class="panel" id="windows" data-device-panel aria-labelledby="windows-title">
       <p class="pill">추천 · 같은 네트워크에서 6자리 번호로 연결</p>
       <h2 id="windows-title" tabindex="-1">다른 Windows PC 연결하기</h2>
-      <p>마우스·키보드가 꽂힌 PC에서 시작해요. 같은 공유기에 연결하면 로그인 없이 번호로 연결할 수 있어요. <a href="#connect-account">Google 계정으로 다른 PC 연결하기</a></p>
+      <p>마우스·키보드가 꽂힌 PC에서 시작해요. 같은 공유기에 연결하면 로그인 없이 번호로 연결할 수 있어요. <a href="#connect-account">Google 계정으로 다른 PC 연결하기</a> · <a href="#windows-bluetooth">Bluetooth로 연결하기 (베타)</a></p>
       <ol class="steps">
         <li><h3>두 PC에서 기기 관리 열기</h3><p>같은 공유기에 연결한 두 Windows PC에서 <a href="/download-demo">OneMouse를 설치</a>·실행하고, 왼쪽 메뉴에서 <strong>기기 관리</strong>를 여세요.</p>
           <figure class="shot shot--example"><a href="/assets/preview/guide/windows-device-management-entry-ko.webp" aria-label="Windows OneMouse 왼쪽 기기 관리 메뉴의 실제 앱 화면 크게 보기"><img src="/assets/preview/guide/windows-device-management-entry-ko.webp" width="960" height="630" alt="Windows OneMouse 앱 왼쪽에서 기기 관리가 선택된 실제 화면" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">실제 앱 · 이전 버전</span>왼쪽 메뉴에서 ‘기기 관리’를 열어요.</figcaption></figure></li>
@@ -155,7 +155,7 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
           <figure class="shot"><a href="/assets/pairing/pc-peer-position-ko.webp" aria-label="다른 Windows PC 배치 예시 화면 크게 보기"><img src="/assets/pairing/pc-peer-position-ko.webp" width="2240" height="1800" alt="Windows 기기 관리에서 다른 PC를 배치하는 화면" loading="lazy"></a><figcaption><span class="shot-label">앱 화면 예시</span>실제 놓인 방향을 맞춰요.</figcaption></figure></li>
       </ol>
       <details id="windows-bluetooth">
-        <summary>두 Windows PC를 Bluetooth로 연결하기</summary>
+        <summary>두 Windows PC를 Bluetooth로 연결하기 (베타)</summary>
         <ol>
           <li>두 PC를 Windows의 Bluetooth 설정에서 먼저 페어링하세요.</li>
           <li>받는 PC의 OneMouse에서 <span class="path">기기 관리 → 다른 방법으로 연결 → Bluetooth</span>를 열고 <strong>마우스·키보드 입력 받기</strong>를 선택하세요. Bluetooth가 꺼져 있으면 켜세요.</li>
