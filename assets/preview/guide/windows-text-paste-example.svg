@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="520" viewBox="0 0 480 520" role="img">
+<title>Example of pasting clipboard text in Windows</title>
+<rect width="480" height="520" fill="#edf3fb"/>
+<rect x="21" y="39" width="438" height="327" rx="14" fill="#c6d4e7"/>
+<rect x="18" y="36" width="438" height="326" rx="14" fill="#fff" stroke="#aabbd1"/>
+<path d="M32 36h410q14 0 14 14v40H18V50q0-14 14-14z" fill="#e2edfb"/>
+<path d="M37 54h18v20H37z" fill="#2563eb"/><path d="M40 59h12m-12 4h12m-12 4h8" stroke="#fff" stroke-width="1.6"/>
+<text x="62" y="68" fill="#17243b" font-family="system-ui,sans-serif" font-size="18" font-weight="680">Notepad</text>
+<path d="M366 63h11m19-6h10v10h-10zm31 0 10 10m0-10-10 10" stroke="#526784" stroke-width="1.8" fill="none"/>
+<rect x="43" y="120" width="388" height="51" rx="8" fill="#ecf4ff" stroke="#2863da" stroke-width="2"/>
+<text x="60" y="151" fill="#17243b" font-family="monospace" font-size="22">OneMouse</text>
+<path d="M166 131v26" stroke="#2563eb" stroke-width="2"/>
+<path d="M240 397v-25m-7 8 7-8 7 8" stroke="#2563eb" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<g fill="#fff" stroke="#8297b6" stroke-width="2"><rect x="141" y="410" width="110" height="55" rx="9"/><rect x="277" y="410" width="62" height="55" rx="9"/></g>
+<g fill="#17243b" font-family="system-ui,sans-serif" font-size="24" font-weight="700" text-anchor="middle"><text x="196" y="446">Ctrl</text><text x="264" y="445">+</text><text x="308" y="446">V</text></g>
+</svg>

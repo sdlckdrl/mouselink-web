@@ -92,7 +92,16 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
 @media(min-width:640px){.guide-full .split{grid-template-columns:repeat(2,minmax(0,1fr))}}
 </style>
 <link rel="stylesheet" href="/css/official-footer.css?v=1">
-</head>
+<style>
+.text-transfer-walkthrough{margin:16px 0;scroll-margin-top:12px}
+.text-transfer-walkthrough h3{margin:0 0 4px;line-height:1.4}
+.text-transfer-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.text-transfer-grid .shot{min-width:0;margin:0}
+.text-transfer-grid .shot a{aspect-ratio:9/15;background:#edf4fb}
+.text-transfer-grid .shot img{position:absolute;inset:0;width:100%;height:100%;max-height:none;object-fit:contain}
+.text-transfer-grid .shot figcaption{margin-top:4px}
+@media(min-width:820px){.text-transfer-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+</style></head>
 <body>
 <a class="skip" href="#main">本文へ移動</a>
 <header class="preview-header"><div class="preview-frame">
@@ -247,6 +256,11 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
               to PCから送れます。
             </p>
           </div>
+          <section class="text-transfer-walkthrough" aria-labelledby="text-transfer-title">
+            <h3 id="text-transfer-title">テキスト送信の手順を画像で見る</h3><p>画像を選ぶと拡大できます。まずスマートフォンの OneMouse で、送信先の PC が接続されていることを確認してください。一部の画像は韓国語版の画面です。</p>
+            <div class="text-transfer-grid"><figure class="shot"><a href="/assets/text_to_pc_step_1.jpg" data-text-shot aria-label="拡大: 1. テキストを長押しして選択し、その他（⋮）を開きます。"><img src="/assets/text_to_pc_step_1.jpg" width="1080" height="2371" alt="1. テキストを長押しして選択し、その他（⋮）を開きます。" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">Android の実画面</span>1. テキストを長押しして選択し、その他（⋮）を開きます。</figcaption></figure><figure class="shot"><a href="/assets/text_to_pc_step_4.jpg" data-text-shot aria-label="拡大: 2. 「OneMouse to PC」を選びます。"><img src="/assets/text_to_pc_step_4.jpg" width="1080" height="2371" alt="2. 「OneMouse to PC」を選びます。" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">Android の実画面</span>2. 「OneMouse to PC」を選びます。</figcaption></figure><figure class="shot"><a href="/assets/text_to_pc_step_5.jpg" data-text-shot aria-label="拡大: 3. PC のクリップボードに送信されたという通知を確認します。"><img src="/assets/text_to_pc_step_5.jpg" width="1080" height="2371" alt="3. PC のクリップボードに送信されたという通知を確認します。" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">Android の実画面</span>3. PC のクリップボードに送信されたという通知を確認します。</figcaption></figure><figure class="shot"><a href="/assets/preview/guide/windows-text-paste-example.svg" data-text-shot aria-label="拡大: 4. Windows でメモ帳などを開き、Ctrl+V で貼り付けます。"><img src="/assets/preview/guide/windows-text-paste-example.svg" width="480" height="520" alt="4. Windows でメモ帳などを開き、Ctrl+V で貼り付けます。" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">Windows の画面例</span>4. Windows でメモ帳などを開き、Ctrl+V で貼り付けます。</figcaption></figure></div>
+            <details class="text-transfer-fix"><summary>「OneMouse to PC」が表示されない場合</summary><div class="text-transfer-grid"><figure class="shot"><a href="/assets/text_to_pc_step_2.jpg" data-text-shot aria-label="拡大: A. その他からアプリ管理を開きます。"><img src="/assets/text_to_pc_step_2.jpg" width="1080" height="2371" alt="A. その他からアプリ管理を開きます。" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">Android の実画面</span>A. その他からアプリ管理を開きます。</figcaption></figure><figure class="shot"><a href="/assets/text_to_pc_step_3.jpg" data-text-shot aria-label="拡大: B. OneMouse をオンにし、テキストを再度選択してください。"><img src="/assets/text_to_pc_step_3.jpg" width="1080" height="2481" alt="B. OneMouse をオンにし、テキストを再度選択してください。" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">Android の実画面</span>B. OneMouse をオンにし、テキストを再度選択してください。</figcaption></figure></div></details>
+          </section>
           <div class="split lead-left">
             <div class="panel">
               <h3>ファイルを送る</h3>
@@ -279,66 +293,7 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
               <a href="/ja/help#file-receive-folder-faq">保存先・フォルダーの問題</a>
             </p>
           </div>
-          <details class="fold">
-            <summary>
-              <span>テキスト送信画面を見る</span
-              ><small>Androidの選択メニューでOneMouse to PCを有効にして使う手順です。</small>
-            </summary>
-            <div
-              class="fold-body"
-              style="
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-                gap: 12px;
-              "
-            >
-              <figure>
-                <img
-                  src="/assets/text_to_pc_step_1.jpg"
-                  alt="テキストを選択してその他メニューを開く画面"
-                  loading="lazy"
-                  style="border-radius: 12px"
-                />
-                <figcaption>1. テキストを選択</figcaption>
-              </figure>
-              <figure>
-                <img
-                  src="/assets/text_to_pc_step_2.jpg"
-                  alt="テキスト選択メニューからアプリ管理を開く画面"
-                  loading="lazy"
-                  style="border-radius: 12px"
-                />
-                <figcaption>2. アプリ管理を開く</figcaption>
-              </figure>
-              <figure>
-                <img
-                  src="/assets/text_to_pc_step_3.jpg"
-                  alt="アプリ管理でOneMouseをオンにする画面"
-                  loading="lazy"
-                  style="border-radius: 12px"
-                />
-                <figcaption>3. OneMouseをオン</figcaption>
-              </figure>
-              <figure>
-                <img
-                  src="/assets/text_to_pc_step_4.jpg"
-                  alt="その他メニューでOneMouse to PCを選ぶ画面"
-                  loading="lazy"
-                  style="border-radius: 12px"
-                />
-                <figcaption>4. PCへ送信</figcaption>
-              </figure>
-              <figure>
-                <img
-                  src="/assets/text_to_pc_step_5.jpg"
-                  alt="PCのクリップボードへ送信完了した画面"
-                  loading="lazy"
-                  style="border-radius: 12px"
-                />
-                <figcaption>5. PCで貼り付け</figcaption>
-              </figure>
-            </div>
-          </details>
+          
         </div>
       </section>
 <span id="keyboard-shortcuts" aria-hidden="true"></span>
@@ -557,7 +512,7 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
     const image = viewer.querySelector('img');
     const close = viewer.querySelector('button');
     const status = viewer.querySelector('[role="status"]');
-    const imageLinks = [...document.querySelectorAll('a[href^="/assets/pairing/"], a[href^="/assets/preview/guide/"]')]
+    const imageLinks = [...document.querySelectorAll('a[href^="/assets/pairing/"], a[href^="/assets/preview/guide/"], a[data-text-shot]')]
       .filter(link => /\.(?:svg|webp|png|jpe?g)$/i.test(link.pathname));
     let opener = null;
     let startedOnBackdrop = false;

@@ -92,7 +92,16 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
 @media(min-width:640px){.guide-full .split{grid-template-columns:repeat(2,minmax(0,1fr))}}
 </style>
 <link rel="stylesheet" href="/css/official-footer.css?v=1">
-</head>
+<style>
+.text-transfer-walkthrough{margin:16px 0;scroll-margin-top:12px}
+.text-transfer-walkthrough h3{margin:0 0 4px;line-height:1.4}
+.text-transfer-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.text-transfer-grid .shot{min-width:0;margin:0}
+.text-transfer-grid .shot a{aspect-ratio:9/15;background:#edf4fb}
+.text-transfer-grid .shot img{position:absolute;inset:0;width:100%;height:100%;max-height:none;object-fit:contain}
+.text-transfer-grid .shot figcaption{margin-top:4px}
+@media(min-width:820px){.text-transfer-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+</style></head>
 <body>
 <a class="skip" href="#main">跳到正文</a>
 <header class="preview-header"><div class="preview-frame">
@@ -246,6 +255,11 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
               文件可从传输标签或 Android 分享菜单发送；文本可从选择菜单中的 OneMouse to PC 发送。
             </p>
           </div>
+          <section class="text-transfer-walkthrough" aria-labelledby="text-transfer-title">
+            <h3 id="text-transfer-title">按图发送文本</h3><p>点击图片可放大。先在手机的 OneMouse 中确认目标 PC 已连接。部分 Android 截图为韩语界面。</p>
+            <div class="text-transfer-grid"><figure class="shot"><a href="/assets/text_to_pc_step_1.jpg" data-text-shot aria-label="放大查看: 1. 长按选中文本，打开更多菜单（⋮）。"><img src="/assets/text_to_pc_step_1.jpg" width="1080" height="2371" alt="1. 长按选中文本，打开更多菜单（⋮）。" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">Android 实际截图</span>1. 长按选中文本，打开更多菜单（⋮）。</figcaption></figure><figure class="shot"><a href="/assets/text_to_pc_step_4.jpg" data-text-shot aria-label="放大查看: 2. 选择 OneMouse to PC。"><img src="/assets/text_to_pc_step_4.jpg" width="1080" height="2371" alt="2. 选择 OneMouse to PC。" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">Android 实际截图</span>2. 选择 OneMouse to PC。</figcaption></figure><figure class="shot"><a href="/assets/text_to_pc_step_5.jpg" data-text-shot aria-label="放大查看: 3. 确认出现已发送到 PC 剪贴板的提示。"><img src="/assets/text_to_pc_step_5.jpg" width="1080" height="2371" alt="3. 确认出现已发送到 PC 剪贴板的提示。" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">Android 实际截图</span>3. 确认出现已发送到 PC 剪贴板的提示。</figcaption></figure><figure class="shot"><a href="/assets/preview/guide/windows-text-paste-example.svg" data-text-shot aria-label="放大查看: 4. 在 Windows 打开记事本等应用，按 Ctrl+V 粘贴。"><img src="/assets/preview/guide/windows-text-paste-example.svg" width="480" height="520" alt="4. 在 Windows 打开记事本等应用，按 Ctrl+V 粘贴。" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">Windows 界面示例</span>4. 在 Windows 打开记事本等应用，按 Ctrl+V 粘贴。</figcaption></figure></div>
+            <details class="text-transfer-fix"><summary>菜单里没有 OneMouse to PC？</summary><div class="text-transfer-grid"><figure class="shot"><a href="/assets/text_to_pc_step_2.jpg" data-text-shot aria-label="放大查看: A. 在更多菜单中打开应用管理。"><img src="/assets/text_to_pc_step_2.jpg" width="1080" height="2371" alt="A. 在更多菜单中打开应用管理。" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">Android 实际截图</span>A. 在更多菜单中打开应用管理。</figcaption></figure><figure class="shot"><a href="/assets/text_to_pc_step_3.jpg" data-text-shot aria-label="放大查看: B. 开启 OneMouse，再重新选择文本。"><img src="/assets/text_to_pc_step_3.jpg" width="1080" height="2481" alt="B. 开启 OneMouse，再重新选择文本。" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">Android 实际截图</span>B. 开启 OneMouse，再重新选择文本。</figcaption></figure></div></details>
+          </section>
           <div class="split lead-left">
             <div class="panel">
               <h3>发送文件</h3>
@@ -274,66 +288,7 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
               <a href="/zh/help#file-receive-folder-faq">保存位置与文件夹问题</a>
             </p>
           </div>
-          <details class="fold">
-            <summary>
-              <span>查看文本发送界面</span
-              ><small>在 Android 选择菜单中启用并使用 OneMouse to PC 的步骤。</small>
-            </summary>
-            <div
-              class="fold-body"
-              style="
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-                gap: 12px;
-              "
-            >
-              <figure>
-                <img
-                  src="/assets/text_to_pc_step_1.jpg"
-                  alt="选择文本并打开更多菜单"
-                  loading="lazy"
-                  style="border-radius: 12px"
-                />
-                <figcaption>1. 选择文本</figcaption>
-              </figure>
-              <figure>
-                <img
-                  src="/assets/text_to_pc_step_2.jpg"
-                  alt="从文本选择菜单打开应用管理"
-                  loading="lazy"
-                  style="border-radius: 12px"
-                />
-                <figcaption>2. 打开应用管理</figcaption>
-              </figure>
-              <figure>
-                <img
-                  src="/assets/text_to_pc_step_3.jpg"
-                  alt="在应用管理中启用 OneMouse"
-                  loading="lazy"
-                  style="border-radius: 12px"
-                />
-                <figcaption>3. 启用 OneMouse</figcaption>
-              </figure>
-              <figure>
-                <img
-                  src="/assets/text_to_pc_step_4.jpg"
-                  alt="从更多菜单选择 OneMouse to PC"
-                  loading="lazy"
-                  style="border-radius: 12px"
-                />
-                <figcaption>4. 发送到 PC</figcaption>
-              </figure>
-              <figure>
-                <img
-                  src="/assets/text_to_pc_step_5.jpg"
-                  alt="已成功发送到 PC 剪贴板"
-                  loading="lazy"
-                  style="border-radius: 12px"
-                />
-                <figcaption>5. 在 PC 粘贴</figcaption>
-              </figure>
-            </div>
-          </details>
+          
         </div>
       </section>
 <span id="keyboard-shortcuts" aria-hidden="true"></span>
@@ -551,7 +506,7 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
     const image = viewer.querySelector('img');
     const close = viewer.querySelector('button');
     const status = viewer.querySelector('[role="status"]');
-    const imageLinks = [...document.querySelectorAll('a[href^="/assets/pairing/"], a[href^="/assets/preview/guide/"]')]
+    const imageLinks = [...document.querySelectorAll('a[href^="/assets/pairing/"], a[href^="/assets/preview/guide/"], a[data-text-shot]')]
       .filter(link => /\.(?:svg|webp|png|jpe?g)$/i.test(link.pathname));
     let opener = null;
     let startedOnBackdrop = false;

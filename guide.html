@@ -90,7 +90,16 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
 @media(min-width:640px){.guide-full .split{grid-template-columns:repeat(2,minmax(0,1fr))}}
 </style>
 <link rel="stylesheet" href="/css/official-footer.css?v=1">
-</head>
+<style>
+.text-transfer-walkthrough{margin:16px 0;scroll-margin-top:12px}
+.text-transfer-walkthrough h3{margin:0 0 4px;line-height:1.4}
+.text-transfer-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.text-transfer-grid .shot{min-width:0;margin:0}
+.text-transfer-grid .shot a{aspect-ratio:9/15;background:#edf4fb}
+.text-transfer-grid .shot img{position:absolute;inset:0;width:100%;height:100%;max-height:none;object-fit:contain}
+.text-transfer-grid .shot figcaption{margin-top:4px}
+@media(min-width:820px){.text-transfer-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+</style></head>
 <body>
 <a class="skip" href="#main">본문으로 이동</a>
 <header class="preview-header"><div class="preview-frame">
@@ -244,6 +253,11 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
               to PC에서 보낼 수 있습니다.
             </p>
           </div>
+          <section class="text-transfer-walkthrough" aria-labelledby="text-transfer-title">
+            <h3 id="text-transfer-title">텍스트 보내기: 화면으로 따라 하기</h3><p>이미지를 누르면 크게 볼 수 있어요. 먼저 폰의 OneMouse 홈에서 보낼 PC가 연결됐는지 확인하세요.</p>
+            <div class="text-transfer-grid"><figure class="shot"><a href="/assets/text_to_pc_step_1.jpg" data-text-shot aria-label="크게 보기: 1. 텍스트를 길게 눌러 선택한 뒤 더보기(⋮)를 열어요."><img src="/assets/text_to_pc_step_1.jpg" width="1080" height="2371" alt="1. 텍스트를 길게 눌러 선택한 뒤 더보기(⋮)를 열어요." loading="lazy" decoding="async"></a><figcaption><span class="shot-label">실제 Android 캡처</span>1. 텍스트를 길게 눌러 선택한 뒤 더보기(⋮)를 열어요.</figcaption></figure><figure class="shot"><a href="/assets/text_to_pc_step_4.jpg" data-text-shot aria-label="크게 보기: 2. OneMouse to PC를 눌러요."><img src="/assets/text_to_pc_step_4.jpg" width="1080" height="2371" alt="2. OneMouse to PC를 눌러요." loading="lazy" decoding="async"></a><figcaption><span class="shot-label">실제 Android 캡처</span>2. OneMouse to PC를 눌러요.</figcaption></figure><figure class="shot"><a href="/assets/text_to_pc_step_5.jpg" data-text-shot aria-label="크게 보기: 3. PC 클립보드로 보냈다는 알림을 확인해요."><img src="/assets/text_to_pc_step_5.jpg" width="1080" height="2371" alt="3. PC 클립보드로 보냈다는 알림을 확인해요." loading="lazy" decoding="async"></a><figcaption><span class="shot-label">실제 Android 캡처</span>3. PC 클립보드로 보냈다는 알림을 확인해요.</figcaption></figure><figure class="shot"><a href="/assets/preview/guide/windows-text-paste-example.svg" data-text-shot aria-label="크게 보기: 4. Windows에서 메모장 등을 열고 Ctrl+V로 붙여넣어요."><img src="/assets/preview/guide/windows-text-paste-example.svg" width="480" height="520" alt="4. Windows에서 메모장 등을 열고 Ctrl+V로 붙여넣어요." loading="lazy" decoding="async"></a><figcaption><span class="shot-label">Windows 화면 예시</span>4. Windows에서 메모장 등을 열고 Ctrl+V로 붙여넣어요.</figcaption></figure></div>
+            <details class="text-transfer-fix"><summary>OneMouse to PC가 메뉴에 안 보이나요?</summary><div class="text-transfer-grid"><figure class="shot"><a href="/assets/text_to_pc_step_2.jpg" data-text-shot aria-label="크게 보기: A. 더보기에서 앱 관리를 열어요."><img src="/assets/text_to_pc_step_2.jpg" width="1080" height="2371" alt="A. 더보기에서 앱 관리를 열어요." loading="lazy" decoding="async"></a><figcaption><span class="shot-label">실제 Android 캡처</span>A. 더보기에서 앱 관리를 열어요.</figcaption></figure><figure class="shot"><a href="/assets/text_to_pc_step_3.jpg" data-text-shot aria-label="크게 보기: B. OneMouse를 켠 뒤 텍스트를 다시 선택하세요."><img src="/assets/text_to_pc_step_3.jpg" width="1080" height="2481" alt="B. OneMouse를 켠 뒤 텍스트를 다시 선택하세요." loading="lazy" decoding="async"></a><figcaption><span class="shot-label">실제 Android 캡처</span>B. OneMouse를 켠 뒤 텍스트를 다시 선택하세요.</figcaption></figure></div></details>
+          </section>
           <div class="split lead-left">
             <div class="panel">
               <h3>파일 보내기</h3>
@@ -273,66 +287,7 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
               <a href="/help#file-receive-folder-faq">저장 위치·폴더 문제 해결</a>
             </p>
           </div>
-          <details class="fold">
-            <summary>
-              <span>텍스트 전송 화면 보기</span
-              ><small>선택 메뉴에서 OneMouse to PC를 켜고 사용하는 순서입니다.</small>
-            </summary>
-            <div
-              class="fold-body"
-              style="
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-                gap: 12px;
-              "
-            >
-              <figure>
-                <img
-                  src="/assets/text_to_pc_step_1.jpg"
-                  alt="텍스트를 선택하고 더보기 메뉴를 여는 화면"
-                  loading="lazy"
-                  style="border-radius: 12px"
-                />
-                <figcaption>1. 텍스트 선택</figcaption>
-              </figure>
-              <figure>
-                <img
-                  src="/assets/text_to_pc_step_2.jpg"
-                  alt="텍스트 선택 메뉴에서 앱 관리를 누르는 화면"
-                  loading="lazy"
-                  style="border-radius: 12px"
-                />
-                <figcaption>2. 앱 관리 열기</figcaption>
-              </figure>
-              <figure>
-                <img
-                  src="/assets/text_to_pc_step_3.jpg"
-                  alt="앱 관리에서 One Mouse 항목을 켜는 화면"
-                  loading="lazy"
-                  style="border-radius: 12px"
-                />
-                <figcaption>3. OneMouse 켜기</figcaption>
-              </figure>
-              <figure>
-                <img
-                  src="/assets/text_to_pc_step_4.jpg"
-                  alt="더보기 메뉴에서 OneMouse to PC를 누르는 화면"
-                  loading="lazy"
-                  style="border-radius: 12px"
-                />
-                <figcaption>4. PC로 보내기</figcaption>
-              </figure>
-              <figure>
-                <img
-                  src="/assets/text_to_pc_step_5.jpg"
-                  alt="PC 클립보드 전송 완료 메시지가 표시된 화면"
-                  loading="lazy"
-                  style="border-radius: 12px"
-                />
-                <figcaption>5. PC에서 붙여넣기</figcaption>
-              </figure>
-            </div>
-          </details>
+          
         </div>
       </section>
 <span id="keyboard-shortcuts" aria-hidden="true"></span>
@@ -557,7 +512,7 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
     const image = viewer.querySelector('img');
     const close = viewer.querySelector('button');
     const status = viewer.querySelector('[role="status"]');
-    const imageLinks = [...document.querySelectorAll('a[href^="/assets/pairing/"], a[href^="/assets/preview/guide/"]')]
+    const imageLinks = [...document.querySelectorAll('a[href^="/assets/pairing/"], a[href^="/assets/preview/guide/"], a[data-text-shot]')]
       .filter(link => /\.(?:svg|webp|png|jpe?g)$/i.test(link.pathname));
     let opener = null;
     let startedOnBackdrop = false;

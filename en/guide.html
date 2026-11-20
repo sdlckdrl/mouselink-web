@@ -91,7 +91,16 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
 @media(min-width:640px){.guide-full .split{grid-template-columns:repeat(2,minmax(0,1fr))}}
 </style>
 <link rel="stylesheet" href="/css/official-footer.css?v=1">
-</head>
+<style>
+.text-transfer-walkthrough{margin:16px 0;scroll-margin-top:12px}
+.text-transfer-walkthrough h3{margin:0 0 4px;line-height:1.4}
+.text-transfer-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.text-transfer-grid .shot{min-width:0;margin:0}
+.text-transfer-grid .shot a{aspect-ratio:9/15;background:#edf4fb}
+.text-transfer-grid .shot img{position:absolute;inset:0;width:100%;height:100%;max-height:none;object-fit:contain}
+.text-transfer-grid .shot figcaption{margin-top:4px}
+@media(min-width:820px){.text-transfer-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+</style></head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="preview-header"><div class="preview-frame">
@@ -246,6 +255,11 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
               share menu, and send text through OneMouse to PC in the selection menu.
             </p>
           </div>
+          <section class="text-transfer-walkthrough" aria-labelledby="text-transfer-title">
+            <h3 id="text-transfer-title">Send text: a visual walkthrough</h3><p>Select an image to enlarge it. First, check that the PC is connected in OneMouse on your phone. Some Android screenshots show the Korean interface.</p>
+            <div class="text-transfer-grid"><figure class="shot"><a href="/assets/text_to_pc_step_1.jpg" data-text-shot aria-label="Enlarge: 1. Touch and hold to select text, then open More (⋮)."><img src="/assets/text_to_pc_step_1.jpg" width="1080" height="2371" alt="1. Touch and hold to select text, then open More (⋮)." loading="lazy" decoding="async"></a><figcaption><span class="shot-label">Android screenshot</span>1. Touch and hold to select text, then open More (⋮).</figcaption></figure><figure class="shot"><a href="/assets/text_to_pc_step_4.jpg" data-text-shot aria-label="Enlarge: 2. Select OneMouse to PC."><img src="/assets/text_to_pc_step_4.jpg" width="1080" height="2371" alt="2. Select OneMouse to PC." loading="lazy" decoding="async"></a><figcaption><span class="shot-label">Android screenshot</span>2. Select OneMouse to PC.</figcaption></figure><figure class="shot"><a href="/assets/text_to_pc_step_5.jpg" data-text-shot aria-label="Enlarge: 3. Look for the confirmation that the text was sent to the PC clipboard."><img src="/assets/text_to_pc_step_5.jpg" width="1080" height="2371" alt="3. Look for the confirmation that the text was sent to the PC clipboard." loading="lazy" decoding="async"></a><figcaption><span class="shot-label">Android screenshot</span>3. Look for the confirmation that the text was sent to the PC clipboard.</figcaption></figure><figure class="shot"><a href="/assets/preview/guide/windows-text-paste-example.svg" data-text-shot aria-label="Enlarge: 4. On Windows, open Notepad or another app and press Ctrl+V to paste."><img src="/assets/preview/guide/windows-text-paste-example.svg" width="480" height="520" alt="4. On Windows, open Notepad or another app and press Ctrl+V to paste." loading="lazy" decoding="async"></a><figcaption><span class="shot-label">Windows example</span>4. On Windows, open Notepad or another app and press Ctrl+V to paste.</figcaption></figure></div>
+            <details class="text-transfer-fix"><summary>Don’t see OneMouse to PC in the menu?</summary><div class="text-transfer-grid"><figure class="shot"><a href="/assets/text_to_pc_step_2.jpg" data-text-shot aria-label="Enlarge: A. Open App management from the More menu."><img src="/assets/text_to_pc_step_2.jpg" width="1080" height="2371" alt="A. Open App management from the More menu." loading="lazy" decoding="async"></a><figcaption><span class="shot-label">Android screenshot</span>A. Open App management from the More menu.</figcaption></figure><figure class="shot"><a href="/assets/text_to_pc_step_3.jpg" data-text-shot aria-label="Enlarge: B. Turn on OneMouse, then select your text again."><img src="/assets/text_to_pc_step_3.jpg" width="1080" height="2481" alt="B. Turn on OneMouse, then select your text again." loading="lazy" decoding="async"></a><figcaption><span class="shot-label">Android screenshot</span>B. Turn on OneMouse, then select your text again.</figcaption></figure></div></details>
+          </section>
           <div class="split lead-left">
             <div class="panel">
               <h3>Send a file</h3>
@@ -283,66 +297,7 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
               <a href="/en/help#file-receive-folder-faq">Folder settings and troubleshooting</a>
             </p>
           </div>
-          <details class="fold">
-            <summary>
-              <span>See the text-transfer screens</span
-              ><small>How to enable and use OneMouse to PC from Android's selection menu.</small>
-            </summary>
-            <div
-              class="fold-body"
-              style="
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-                gap: 12px;
-              "
-            >
-              <figure>
-                <img
-                  src="/assets/text_to_pc_step_1.jpg"
-                  alt="Selecting text and opening the More menu"
-                  loading="lazy"
-                  style="border-radius: 12px"
-                />
-                <figcaption>1. Select text</figcaption>
-              </figure>
-              <figure>
-                <img
-                  src="/assets/text_to_pc_step_2.jpg"
-                  alt="Opening app management from the text selection menu"
-                  loading="lazy"
-                  style="border-radius: 12px"
-                />
-                <figcaption>2. Open app management</figcaption>
-              </figure>
-              <figure>
-                <img
-                  src="/assets/text_to_pc_step_3.jpg"
-                  alt="Turning on OneMouse in app management"
-                  loading="lazy"
-                  style="border-radius: 12px"
-                />
-                <figcaption>3. Enable OneMouse</figcaption>
-              </figure>
-              <figure>
-                <img
-                  src="/assets/text_to_pc_step_4.jpg"
-                  alt="Choosing OneMouse to PC from the More menu"
-                  loading="lazy"
-                  style="border-radius: 12px"
-                />
-                <figcaption>4. Send to PC</figcaption>
-              </figure>
-              <figure>
-                <img
-                  src="/assets/text_to_pc_step_5.jpg"
-                  alt="Text successfully sent to the PC clipboard"
-                  loading="lazy"
-                  style="border-radius: 12px"
-                />
-                <figcaption>5. Paste on the PC</figcaption>
-              </figure>
-            </div>
-          </details>
+          
         </div>
       </section>
 <span id="keyboard-shortcuts" aria-hidden="true"></span>
@@ -574,7 +529,7 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
     const image = viewer.querySelector('img');
     const close = viewer.querySelector('button');
     const status = viewer.querySelector('[role="status"]');
-    const imageLinks = [...document.querySelectorAll('a[href^="/assets/pairing/"], a[href^="/assets/preview/guide/"]')]
+    const imageLinks = [...document.querySelectorAll('a[href^="/assets/pairing/"], a[href^="/assets/preview/guide/"], a[data-text-shot]')]
       .filter(link => /\.(?:svg|webp|png|jpe?g)$/i.test(link.pathname));
     let opener = null;
     let startedOnBackdrop = false;

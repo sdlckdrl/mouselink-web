@@ -91,7 +91,16 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
 @media(min-width:640px){.guide-full .split{grid-template-columns:repeat(2,minmax(0,1fr))}}
 </style>
 <link rel="stylesheet" href="/css/official-footer.css?v=1">
-</head>
+<style>
+.text-transfer-walkthrough{margin:16px 0;scroll-margin-top:12px}
+.text-transfer-walkthrough h3{margin:0 0 4px;line-height:1.4}
+.text-transfer-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.text-transfer-grid .shot{min-width:0;margin:0}
+.text-transfer-grid .shot a{aspect-ratio:9/15;background:#edf4fb}
+.text-transfer-grid .shot img{position:absolute;inset:0;width:100%;height:100%;max-height:none;object-fit:contain}
+.text-transfer-grid .shot figcaption{margin-top:4px}
+@media(min-width:820px){.text-transfer-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+</style></head>
 <body>
 <a class="skip" href="#main">Saltar al contenido</a>
 <header class="preview-header"><div class="preview-frame">
@@ -247,6 +256,11 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
               PC desde el menú de selección.
             </p>
           </div>
+          <section class="text-transfer-walkthrough" aria-labelledby="text-transfer-title">
+            <h3 id="text-transfer-title">Envía texto paso a paso</h3><p>Selecciona una imagen para ampliarla. Comprueba primero en OneMouse del teléfono que el PC de destino esté conectado. Algunas capturas de Android muestran la interfaz en coreano.</p>
+            <div class="text-transfer-grid"><figure class="shot"><a href="/assets/text_to_pc_step_1.jpg" data-text-shot aria-label="Ampliar: 1. Mantén pulsado el texto para seleccionarlo y abre Más (⋮)."><img src="/assets/text_to_pc_step_1.jpg" width="1080" height="2371" alt="1. Mantén pulsado el texto para seleccionarlo y abre Más (⋮)." loading="lazy" decoding="async"></a><figcaption><span class="shot-label">Captura de Android</span>1. Mantén pulsado el texto para seleccionarlo y abre Más (⋮).</figcaption></figure><figure class="shot"><a href="/assets/text_to_pc_step_4.jpg" data-text-shot aria-label="Ampliar: 2. Selecciona OneMouse to PC."><img src="/assets/text_to_pc_step_4.jpg" width="1080" height="2371" alt="2. Selecciona OneMouse to PC." loading="lazy" decoding="async"></a><figcaption><span class="shot-label">Captura de Android</span>2. Selecciona OneMouse to PC.</figcaption></figure><figure class="shot"><a href="/assets/text_to_pc_step_5.jpg" data-text-shot aria-label="Ampliar: 3. Comprueba el aviso de envío al portapapeles del PC."><img src="/assets/text_to_pc_step_5.jpg" width="1080" height="2371" alt="3. Comprueba el aviso de envío al portapapeles del PC." loading="lazy" decoding="async"></a><figcaption><span class="shot-label">Captura de Android</span>3. Comprueba el aviso de envío al portapapeles del PC.</figcaption></figure><figure class="shot"><a href="/assets/preview/guide/windows-text-paste-example.svg" data-text-shot aria-label="Ampliar: 4. En Windows, abre el Bloc de notas u otra aplicación y pulsa Ctrl+V para pegar."><img src="/assets/preview/guide/windows-text-paste-example.svg" width="480" height="520" alt="4. En Windows, abre el Bloc de notas u otra aplicación y pulsa Ctrl+V para pegar." loading="lazy" decoding="async"></a><figcaption><span class="shot-label">Ejemplo de Windows</span>4. En Windows, abre el Bloc de notas u otra aplicación y pulsa Ctrl+V para pegar.</figcaption></figure></div>
+            <details class="text-transfer-fix"><summary>¿No aparece OneMouse to PC en el menú?</summary><div class="text-transfer-grid"><figure class="shot"><a href="/assets/text_to_pc_step_2.jpg" data-text-shot aria-label="Ampliar: A. Abre Gestión de apps desde el menú Más."><img src="/assets/text_to_pc_step_2.jpg" width="1080" height="2371" alt="A. Abre Gestión de apps desde el menú Más." loading="lazy" decoding="async"></a><figcaption><span class="shot-label">Captura de Android</span>A. Abre Gestión de apps desde el menú Más.</figcaption></figure><figure class="shot"><a href="/assets/text_to_pc_step_3.jpg" data-text-shot aria-label="Ampliar: B. Activa OneMouse y vuelve a seleccionar el texto."><img src="/assets/text_to_pc_step_3.jpg" width="1080" height="2481" alt="B. Activa OneMouse y vuelve a seleccionar el texto." loading="lazy" decoding="async"></a><figcaption><span class="shot-label">Captura de Android</span>B. Activa OneMouse y vuelve a seleccionar el texto.</figcaption></figure></div></details>
+          </section>
           <div class="split lead-left">
             <div class="panel">
               <h3>Enviar un archivo</h3>
@@ -286,68 +300,7 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
               <a href="/es/help#file-receive-folder-faq">Ajustes de carpeta y problemas</a>
             </p>
           </div>
-          <details class="fold">
-            <summary>
-              <span>Ver las pantallas de transferencia de texto</span
-              ><small
-                >Cómo activar y usar OneMouse al PC desde el menú de selección de Android.</small
-              >
-            </summary>
-            <div
-              class="fold-body"
-              style="
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-                gap: 12px;
-              "
-            >
-              <figure>
-                <img
-                  src="/assets/text_to_pc_step_1.jpg"
-                  alt="Selección de texto y apertura del menú Más"
-                  loading="lazy"
-                  style="border-radius: 12px"
-                />
-                <figcaption>1. Selecciona el texto</figcaption>
-              </figure>
-              <figure>
-                <img
-                  src="/assets/text_to_pc_step_2.jpg"
-                  alt="Apertura de la gestión de aplicaciones desde el menú de selección de texto"
-                  loading="lazy"
-                  style="border-radius: 12px"
-                />
-                <figcaption>2. Abre la gestión de aplicaciones</figcaption>
-              </figure>
-              <figure>
-                <img
-                  src="/assets/text_to_pc_step_3.jpg"
-                  alt="Activación de OneMouse en la gestión de aplicaciones"
-                  loading="lazy"
-                  style="border-radius: 12px"
-                />
-                <figcaption>3. Activa OneMouse</figcaption>
-              </figure>
-              <figure>
-                <img
-                  src="/assets/text_to_pc_step_4.jpg"
-                  alt="Elección de OneMouse al PC en el menú Más"
-                  loading="lazy"
-                  style="border-radius: 12px"
-                />
-                <figcaption>4. Envía al PC</figcaption>
-              </figure>
-              <figure>
-                <img
-                  src="/assets/text_to_pc_step_5.jpg"
-                  alt="Texto enviado correctamente al portapapeles del PC"
-                  loading="lazy"
-                  style="border-radius: 12px"
-                />
-                <figcaption>5. Pega en el PC</figcaption>
-              </figure>
-            </div>
-          </details>
+          
         </div>
       </section>
 <span id="keyboard-shortcuts" aria-hidden="true"></span>
@@ -584,7 +537,7 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
     const image = viewer.querySelector('img');
     const close = viewer.querySelector('button');
     const status = viewer.querySelector('[role="status"]');
-    const imageLinks = [...document.querySelectorAll('a[href^="/assets/pairing/"], a[href^="/assets/preview/guide/"]')]
+    const imageLinks = [...document.querySelectorAll('a[href^="/assets/pairing/"], a[href^="/assets/preview/guide/"], a[data-text-shot]')]
       .filter(link => /\.(?:svg|webp|png|jpe?g)$/i.test(link.pathname));
     let opener = null;
     let startedOnBackdrop = false;

@@ -18,98 +18,98 @@
     <link rel="alternate" hreflang="es" href="https://onemouse.pages.dev/es/compare" />
     <link rel="alternate" hreflang="x-default" href="https://onemouse.pages.dev/compare" />
     <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "ホーム",
-                "item": "https://onemouse.pages.dev/ja/"
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "比較",
-                "item": "https://onemouse.pages.dev/ja/compare"
-              }
-            ]
-          },
-          {
-            "@type": "FAQPage",
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "無料のマウス・キーボード共有ソフトはありますか？",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "あります。Mouse Without Borders（Windows専用、PowerToysの一部）、Deskflow（Windows、macOS、Linux。オープンソース）、ShareMouse Free（2台まで、個人利用）は無料です。OneMouseのWindowsアプリとMacアプリも無料です。OneMouseのAndroidアプリには広告と1日あたりのクリップボード・ファイル制限のあるFreeがあり、買い切りのProで解除できます。"
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "マウス・キーボード共有はインターネット接続なしで使えますか？",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "OneMouse、Synergy、Deskflow、Mouse Without BordersなどのソフトウェアKVMはローカルネットワーク上で動作し、インターネット接続を必要としません。OneMouseは対応デバイス同士なら、ルーターなしでBluetooth接続もできます。Googleアカウントで接続する場合はインターネットが必要です。メーカー製ツールでは、Apple Universal ControlにApple Account、Samsung Multi ControlにSamsungアカウントが必要で、Logitech Flowは初期設定にインターネット接続が必要です。"
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "PCからAndroidスマホを操作するのは、ミラーウィンドウですか、それとも本物のカーソルですか？",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "この2つは別物です。scrcpy、Vysor、Phone Linkなどのミラーリングツールは、スマホの画面をPC上のウィンドウに表示し、そのウィンドウの中でクリックします。OneMouseやSamsung Multi Controlなどのエッジクロッシング型ツールは、PCのカーソルをスマホ自身の画面へ送るため、スマホが追加のモニターのように振る舞います。OneMouseはエッジクロッシングで動作し、オプションのリモート操作ウィンドウも提供しています。"
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "OneMouseにアカウントやサーバーは必要ですか？",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "LAN・Bluetoothで接続する場合はログイン不要です。LANでは6桁のコードまたはQRコードでペアリングできます。対応バージョンでは、各デバイスで同じGoogleアカウントにログインして、インターネット経由で自分のデバイスを接続する方法も選べます。接続の詳細は技術・セキュリティをご覧ください。"
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Wi-Fiの代わりにBluetoothでマウスとキーボードを共有できますか？",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "OneMouseでは、Androidデバイスと別のWindows PCはWi-Fiの代わりにBluetoothで接続できます。Macアプリは既定ではローカルネットワークで接続します（Mac Bluetoothは既定オフのベータ機能）。BluetoothはWi-Fiより遅いため、大きなファイルはWi-Fiで送るほうが適しています。Synergy、Deskflow、Mouse Without Borders、ShareMouseなどのPC間ソフトウェアKVMはネットワーク経由でのみ動作します。Apple Universal ControlはBluetoothをWi-FiおよびHandoffと組み合わせて使います。"
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Mouse Without BordersとOneMouse、どちらを選ぶべきですか？",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Mouse Without Bordersは無料でMicrosoft PowerToysに含まれており、共有クリップボードと最大100MBの単一ファイル転送で最大4台のWindows PCをつなぎます。OneMouseもWindows PC同士をつなぎ、さらにAndroidスマホ・タブレット、Apple Silicon Mac、Bluetooth接続、PC間のフォルダー転送に対応します。すべてのマシンがWindowsで、PowerToysがすでにインストールされているならMouse Without Bordersで十分です。スマホ、タブレット、Macが机に加わるならOneMouseが向いています。"
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "SynergyとOneMouse、どちらを選ぶべきですか？",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "SynergyはWindows、macOS、Linux向けの有料ソフトウェアKVMで、どのコンピューターもサーバーになれます。OneMouseではWindows PCとApple Silicon Macのどちらからでもマウス・キーボードを共有でき、両方のアプリが無料です。OneMouseはAndroidスマホ・タブレットの操作にも対応しています。Synergyにはモバイルクライアントがありません。"
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "OneMouseはLinux、iPhone、iPadに対応していますか？",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "対応していません。OneMouseの共有元はWindows 10/11 PCまたはmacOS 13以降のApple Silicon Macです。対応するWindows・Mac・Androidデバイスを接続できます。Linuxの場合はDeskflowまたはSynergyを、MacとiPadの場合はApple Universal Controlをお使いください。"
-                }
-              }
-            ]
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "ホーム",
+          "item": "https://onemouse.pages.dev/ja/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "比較",
+          "item": "https://onemouse.pages.dev/ja/compare"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "無料のマウス・キーボード共有ソフトはありますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "あります。Mouse Without Borders（Windows専用、PowerToysの一部）、Deskflow（Windows、macOS、Linux。オープンソース）、ShareMouse Free（2台まで、個人利用）は無料です。OneMouseのWindowsアプリとMacアプリも無料です。OneMouseのAndroidアプリには広告と1日あたりのクリップボード・ファイル制限のあるFreeがあり、買い切りのProで解除できます。"
           }
-        ]
-      }
-    </script>
+        },
+        {
+          "@type": "Question",
+          "name": "マウス・キーボード共有はインターネット接続なしで使えますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "OneMouse、Synergy、Deskflow、Mouse Without BordersなどのソフトウェアKVMはローカルネットワーク上で動作し、インターネット接続を必要としません。OneMouseは対応デバイス同士なら、ルーターなしでBluetooth接続もできます。Googleアカウントで接続する場合はインターネットが必要です。メーカー製ツールでは、Apple Universal ControlにApple Account、Samsung Multi ControlにSamsungアカウントが必要で、Logitech Flowは初期設定にインターネット接続が必要です。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "PCからAndroidスマホを操作するのは、ミラーウィンドウですか、それとも本物のカーソルですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "この2つは別物です。scrcpy、Vysor、Phone Linkなどのミラーリングツールは、スマホの画面をPC上のウィンドウに表示し、そのウィンドウの中でクリックします。OneMouseやSamsung Multi Controlなどのエッジクロッシング型ツールは、PCのカーソルをスマホ自身の画面へ送るため、スマホが追加のモニターのように振る舞います。OneMouseはエッジクロッシングで動作し、オプションのリモート操作ウィンドウも提供しています。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "OneMouseにアカウントやサーバーは必要ですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "LAN・Bluetoothで接続する場合はログイン不要です。LANでは6桁のコードまたはQRコードでペアリングできます。対応バージョンでは、各デバイスで同じGoogleアカウントにログインして、インターネット経由で自分のデバイスを接続する方法も選べます。接続の詳細は技術・セキュリティをご覧ください。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wi-Fiの代わりにBluetoothでマウスとキーボードを共有できますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "対応する Android 機器や Windows PC 同士は Bluetooth（ベータ）で接続できます。Windows と Mac の Bluetooth も 1 対 1 のベータで、Mac 側は既定でオフです。安定した接続や遠隔画面には Wi-Fi または LAN を使用してください。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Mouse Without BordersとOneMouse、どちらを選ぶべきですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mouse Without Bordersは無料でMicrosoft PowerToysに含まれており、共有クリップボードと最大100MBの単一ファイル転送で最大4台のWindows PCをつなぎます。OneMouseもWindows PC同士をつなぎ、さらにAndroidスマホ・タブレット、Apple Silicon Mac、Bluetooth接続、PC間のフォルダー転送に対応します。すべてのマシンがWindowsで、PowerToysがすでにインストールされているならMouse Without Bordersで十分です。スマホ、タブレット、Macが机に加わるならOneMouseが向いています。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "SynergyとOneMouse、どちらを選ぶべきですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SynergyはWindows、macOS、Linux向けの有料ソフトウェアKVMで、どのコンピューターもサーバーになれます。OneMouseではWindows PCとApple Silicon Macのどちらからでもマウス・キーボードを共有でき、両方のアプリが無料です。OneMouseはAndroidスマホ・タブレットの操作にも対応しています。Synergyにはモバイルクライアントがありません。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "OneMouseはLinux、iPhone、iPadに対応していますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "対応していません。OneMouseの共有元はWindows 10/11 PCまたはmacOS 13以降のApple Silicon Macです。対応するWindows・Mac・Androidデバイスを接続できます。Linuxの場合はDeskflowまたはSynergyを、MacとiPadの場合はApple Universal Controlをお使いください。"
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
   <link rel="icon" href="/assets/preview/onemouse-android-icon.png" type="image/png" sizes="240x240">
 <link rel="stylesheet" href="/assets/preview/one-preview.css?v=light1">
 <meta name="theme-color" content="#f5f8fa">
@@ -148,6 +148,27 @@ html:lang(ko) body{word-break:keep-all}
 </style>
 
 <link rel="stylesheet" href="/css/official-footer.css?v=1">
+
+<style>
+#legal-content .compare-promise{margin:1.35rem 0 0;padding:clamp(16px,3vw,30px);border:1px solid #a9cfc1;border-radius:18px;background:var(--preview-soft)}
+#legal-content .compare-promise h2{font-size:clamp(1.35rem,3.5vw,2.05rem);line-height:1.25;color:var(--preview-ink)}
+#legal-content .compare-promise>p{margin:.45rem 0 .8rem}
+#legal-content .compare-scenarios{display:grid;grid-template-columns:minmax(0,1fr);gap:.7rem;padding:0;list-style:none;margin:1.03rem 0}
+#legal-content .compare-scenarios li{min-width:0;background:#fff;border:1px solid var(--preview-line);border-radius:12px;padding:.8rem .86rem;margin:0}
+#legal-content .compare-scenarios h3{font-size:1rem;line-height:1.3;margin:0 0 .35rem;color:var(--preview-ink)}
+#legal-content .compare-scenarios p{line-height:1.55;margin:0;color:var(--preview-muted);font-size:.92rem}
+#legal-content .compare-fit{font-size:.89rem;color:var(--preview-muted)}
+#legal-content .compare-actions{display:flex;align-items:center;flex-wrap:wrap;gap:.55rem .95rem}
+#legal-content .compare-actions .btn-pri{color:#fff;background:var(--preview-accent);text-decoration:none}
+#legal-content .compare-actions a{min-height:44px;display:inline-flex;align-items:center}
+#legal-content .compare-more{border:1px solid var(--preview-line);background:#fff;border-radius:14px;padding:.8rem}
+#legal-content .compare-more summary{min-height:44px;cursor:pointer;padding:.55rem .45rem;font-weight:750;color:var(--preview-ink)}
+#legal-content .compare-more summary:focus-visible,#legal-content .table-wrap:focus-visible{outline:3px solid var(--preview-accent);outline-offset:3px}
+#legal-content .compare-more[open] summary{margin-bottom:.55rem}
+#legal-content .compare-more .table-wrap{overflow-x:auto;max-width:100%}
+@media(min-width:760px){#legal-content .compare-scenarios{grid-template-columns:repeat(3,minmax(0,1fr))}}
+</style>
+
 </head>
   <body>
     <a class="legal-skip" href="#legal-content">本文へ移動</a>
@@ -165,13 +186,47 @@ html:lang(ko) body{word-break:keep-all}
           PC・スマホ・タブレットの組み合わせに合う共有ツールを比較します。
           <b>OneMouseの開発元による比較</b>で、他社製品の情報は公式ページとリポジトリで2026年9月に確認しました。
         </p>
-        <nav class="toc" aria-label="このページの目次">
+        <section class="compare-promise" aria-labelledby="one-fit-title"><h2 id="one-fit-title">WindowsのマウスとキーボードでAndroid・Mac・別のPCを操作するなら</h2><p>そんな組み合わせにはOneMouseが向いています。各端末の画面をそのまま使い、画面の端からカーソルとキーボード入力を切り替えられます。</p><ol class="compare-scenarios"><li><h3>画面の端からそのまま操作</h3><p>Androidスマホ・タブレット、Apple Silicon搭載Mac、別のWindows PCへカーソルを移動。ミラー画面を開かず、各端末の画面で操作できます。</p></li><li><h3>ファイルやコピーした文字も共有</h3><p>対応する接続方法なら、端末間でファイルを送ったり、コピーした文字を別の端末に貼り付けたりできます。</p></li><li><h3>スマホからPC画面を開く</h3><p>Androidのリモート画面でPCを表示・操作できます。カーソルを別の端末へ移す機能とは別です。対応するネットワーク接続が必要で、Bluetoothでは映像を表示できません。</p></li></ol><p class="compare-fit">対応範囲は端末の組み合わせ、アプリのバージョン、権限によって異なります。MacはApple SiliconとmacOS 13以降が必要です。</p><div class="compare-actions"><a class="btn btn-pri" href="/ja/download">お使いの端末で試す</a><a href="/ja/compatibility">対応端末と接続方法</a></div></section>
+<nav class="toc" aria-label="このページの目次">
+          <a href="#pick">状況別の選び方</a>
           <a href="#types">ツールの種類</a>
           <a href="#comparison">比較表</a>
           <a href="#products">製品ごとの補足</a>
-          <a href="#pick">状況別の選び方</a>
+          
           <a href="#faq">よくある質問</a>
         </nav>
+      </section>
+
+      <section class="section-alt" id="pick">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">状況別の選び方</p>
+            <h2 class="sec">お使いの端末に合わせて選びましょう。</h2>
+          </div>
+          <div class="panel">
+            <ul>
+              <li>
+                <b>Windows PCが2台：</b>Mouse Without Borders（PowerToys、最大4台）、OneMouse（Bluetooth・フォルダー転送）、ShareMouse Free（個人利用で2台）が候補です。
+              </li>
+              <li>
+                <b>Windows PC + Android：</b>スマホ自身の画面へカーソルを移すなら、OneMouse（Wi-Fi・Bluetooth・Googleアカウント接続、ブランド不問）とSamsung Multi Control（Galaxy・対応PC・Samsungアカウント）を比較してください。
+                ミラーウィンドウならscrcpy（USBデバッグ）とPhone Link（対応ブランド）が候補です。
+              </li>
+              <li>
+                <b>Windows PC + Mac：</b>Windows PCとmacOS 13以降のApple Silicon MacをLANでつなぎ、どちらのマウス・キーボードも共有元にできます。
+                Intel MacではSynergy、Deskflow、ShareMouse、または対応Logitechマウスを使うFlowを比較してください。
+              </li>
+              <li>
+                <b>Mac + iPad：</b>Apple Universal Controlが内蔵されています。
+                OneMouseはiPadに対応していません。
+              </li>
+              <li>
+                <b>Linuxを含む場合：</b>OneMouseは非対応で、Deskflow（無料）、Synergy（有料）、Lan Mouse（Wayland）が候補です。
+                Barrier・Input Leapのメンテナンス状況は比較表をご覧ください。
+              </li>
+            </ul>
+          </div>
+        </div>
       </section>
 
       <!-- TOOL TYPES -->
@@ -221,7 +276,7 @@ html:lang(ko) body{word-break:keep-all}
               2026年9月時点で各社の公式ページをもとに確認した内容です。変更の有無は各製品のサイトでご確認ください。ダッシュ（—）は確認できなかった項目を示します。
             </p>
           </div>
-          <div class="table-wrap">
+          <details class="compare-more"><summary>11製品の比較表を開く</summary><div class="table-wrap" tabindex="0" role="region" aria-label="11製品の比較表を開く">
             <table class="kt" style="min-width: 1080px">
               <thead>
                 <tr>
@@ -245,7 +300,7 @@ html:lang(ko) body{word-break:keep-all}
                     WindowsアプリとMacアプリは無料。AndroidはFree（広告・制限あり）または買い切りのPro
                   </td>
                   <td>不要</td>
-                  <td>Wi-Fi/LAN、Bluetooth（Macはベータ）、同じGoogleアカウント（任意）</td>
+                  <td>Wi-Fi/LAN、Bluetooth（すべてベータ）、Google アカウント（任意）</td>
                   <td>Linux、iPhone/iPadは非対応。LAN・Bluetoothのペアリングはログイン不要</td>
                 </tr>
                 <tr>
@@ -344,7 +399,7 @@ html:lang(ko) body{word-break:keep-all}
                 </tr>
               </tbody>
             </table>
-          </div>
+          </div></details>
         </div>
       </section>
 
@@ -355,7 +410,7 @@ html:lang(ko) body{word-break:keep-all}
             <p class="ey">製品ごとの補足</p>
             <h2 class="sec">各ツールの得意なことと、限界。</h2>
           </div>
-          <div class="cards">
+          <details class="compare-more"><summary>製品別の解説を開く</summary><div class="cards">
             <article class="card accent">
               <p class="card-lbl">PCとPC・PCとAndroid · 当社製品</p>
               <h3>OneMouse</h3>
@@ -433,42 +488,12 @@ html:lang(ko) body{word-break:keep-all}
                 Genymobile製のミラーリングツールで、Windows、macOS、Linuxのホスト上のウィンドウにAndroidの画面を音声付きで表示し、キーボードとマウスの入力を転送します。スマホ側には何もインストールしません。v4.1は2026年7月にリリースされました。主な制限：エッジクロッシングではなくミラーウィンドウであること、ケーブル経由のUSBデバッグまたはWi-Fi経由のADBが必要なことです（OTGモードはUSBのみ）。
               </p>
             </article>
-          </div>
+          </div></details>
         </div>
       </section>
 
       <!-- PICK BY SITUATION -->
-      <section class="section-alt" id="pick">
-        <div class="wrap narrow">
-          <div class="sec-head">
-            <p class="ey">状況別の選び方</p>
-            <h2 class="sec">机の上にあるデバイスから考えましょう。</h2>
-          </div>
-          <div class="panel">
-            <ul>
-              <li>
-                <b>Windows PCが2台：</b>Mouse Without Borders（PowerToys、最大4台）、OneMouse（Bluetooth・フォルダー転送）、ShareMouse Free（個人利用で2台）が候補です。
-              </li>
-              <li>
-                <b>Windows PC + Android：</b>スマホ自身の画面へカーソルを移すなら、OneMouse（Wi-Fi・Bluetooth・Googleアカウント接続、ブランド不問）とSamsung Multi Control（Galaxy・対応PC・Samsungアカウント）を比較してください。
-                ミラーウィンドウならscrcpy（USBデバッグ）とPhone Link（対応ブランド）が候補です。
-              </li>
-              <li>
-                <b>Windows PC + Mac：</b>Windows PCとmacOS 13以降のApple Silicon MacをLANでつなぎ、どちらのマウス・キーボードも共有元にできます。
-                Intel MacではSynergy、Deskflow、ShareMouse、または対応Logitechマウスを使うFlowを比較してください。
-              </li>
-              <li>
-                <b>Mac + iPad：</b>Apple Universal Controlが内蔵されています。
-                OneMouseはiPadに対応していません。
-              </li>
-              <li>
-                <b>Linuxを含む場合：</b>OneMouseは非対応で、Deskflow（無料）、Synergy（有料）、Lan Mouse（Wayland）が候補です。
-                Barrier・Input Leapのメンテナンス状況は比較表をご覧ください。
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
+      
 
       <!-- FAQ -->
       <section id="faq">
@@ -509,7 +534,7 @@ html:lang(ko) body{word-break:keep-all}
             <details>
               <summary>Wi-Fiの代わりにBluetoothでマウスとキーボードを共有できますか？</summary>
               <div class="a">
-                OneMouseでは、Androidデバイスと別のWindows PCはWi-Fiの代わりに<b>Bluetooth</b>で接続できます。Macアプリは既定ではローカルネットワークで接続します（Mac Bluetoothは既定オフのベータ機能）。BluetoothはWi-Fiより遅いため、大きなファイルはWi-Fiで送るほうが適しています。Synergy、Deskflow、Mouse Without Borders、ShareMouseなどのPC間ソフトウェアKVMはネットワーク経由でのみ動作します。Apple Universal ControlはBluetoothをWi-FiおよびHandoffと組み合わせて使います。
+                対応する Android 機器や Windows PC 同士は Bluetooth（ベータ）で接続できます。Windows と Mac の Bluetooth も 1 対 1 のベータで、Mac 側は既定でオフです。安定した接続や遠隔画面には Wi-Fi または LAN を使用してください。
               </div>
             </details>
             <details>
