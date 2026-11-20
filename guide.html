@@ -101,6 +101,21 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
 @media(min-width:820px){.text-transfer-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
 </style><link rel="stylesheet" href="/css/official-language-picker.css?v=1">
 <script src="/js/official-language-picker.js?v=1" defer></script>
+<style>
+/* Keep each physical key chord intact, even when listed alongside alternatives. */
+#shortcuts .kt th:first-child,#shortcuts .kt td:first-child{width:27%;min-width:14.6rem}
+#shortcuts .key-chord{display:inline-flex;align-items:center;gap:.14rem;white-space:nowrap;overflow-wrap:normal;word-break:normal;vertical-align:middle}
+#shortcuts .key-chord kbd{white-space:nowrap}
+@media(max-width:600px){
+  #shortcuts .table-wrap{overflow:visible}
+  #shortcuts .kt{display:block;min-width:0}
+  #shortcuts .kt thead{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+  #shortcuts .kt tbody{display:grid;gap:8px}
+  #shortcuts .kt tbody tr{display:grid;padding:8px 10px;gap:4px;background:#f6fafc;border:1px solid var(--line);border-radius:8px}
+  #shortcuts .kt tbody td{min-width:0;width:auto;padding:1px 0;border:0}
+  #shortcuts .kt tbody td:first-child{min-width:0;width:auto}
+}
+</style>
 </head>
 <body>
 <a class="skip" href="#main">본문으로 이동</a>
@@ -306,58 +321,58 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
           </div>
           <h3 id="pc-shortcuts-title">Windows 앱의 기본 단축키</h3>
           <div class="table-wrap">
-            <table class="kt" aria-labelledby="pc-shortcuts-title">
-              <thead>
-                <tr>
-                  <th scope="col">기본 단축키</th>
-                  <th scope="col">동작·조건</th>
+            <table role="table" class="kt" aria-labelledby="pc-shortcuts-title">
+              <thead role="rowgroup">
+                <tr role="row">
+                  <th role="columnheader" scope="col">기본 단축키</th>
+                  <th role="columnheader" scope="col">동작·조건</th>
                 </tr>
               </thead>
-              <tbody>
-                <tr>
-                  <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>1~9</kbd></td>
-                  <td>
+              <tbody role="rowgroup">
+                <tr role="row">
+                  <td role="cell"><span class="key-chord"><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>1~9</kbd></span></td>
+                  <td role="cell">
                     메인 PC: 목록의 해당 기기에 입력 제어를 연결합니다. 현재 제어 중인 기기의 같은
                     번호를 다시 누르면 제어를 해제합니다.
                   </td>
                 </tr>
-                <tr id="shortcuts-next-release" data-shortcut-action="remote-window">
-                  <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>1~9</kbd></td>
-                  <td>
+                <tr role="row" id="shortcuts-next-release" data-shortcut-action="remote-window">
+                  <td role="cell"><span class="key-chord"><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>1~9</kbd></span></td>
+                  <td role="cell">
                     메인 PC: 해당 기기의 원격창을 열거나 이미 열린 창을 앞으로 가져옵니다. 다시
                     눌러도 닫지 않습니다. 연결 단축키와 같은 LAN 기기 번호를 사용하며 Bluetooth
                     기기는 번호 배정에서 제외합니다.
                   </td>
                 </tr>
-                <tr>
-                  <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>D</kbd></td>
-                  <td>빠른 드롭존 보이기 / 숨기기.</td>
+                <tr role="row">
+                  <td role="cell"><span class="key-chord"><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>D</kbd></span></td>
+                  <td role="cell">빠른 드롭존 보이기 / 숨기기.</td>
                 </tr>
-                <tr>
-                  <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>S</kbd></td>
-                  <td>
+                <tr role="row">
+                  <td role="cell"><span class="key-chord"><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>S</kbd></span></td>
+                  <td role="cell">
                     제어 중인 Windows PC·Mac·Android의 화면에서 영역을 선택해 메인 PC로 받습니다.
                     다른 기기를 제어하지 않을 때는 내 PC를 캡처합니다. 양쪽 앱의 기능 지원과 대상
                     기기의 캡처 권한이 필요합니다.
                   </td>
                 </tr>
-                <tr>
-                  <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>V</kbd></td>
-                  <td>
+                <tr role="row">
+                  <td role="cell"><span class="key-chord"><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>V</kbd></span></td>
+                  <td role="cell">
                     메인 PC: 인증번호가 포함된 폰 알림이 PC에 떠 있는 동안 해당 번호를 복사합니다.
                     폰 알림 전송을 먼저 켜야 합니다.
                   </td>
                 </tr>
-                <tr>
-                  <td><kbd>Ctrl</kbd>+<kbd>V</kbd></td>
-                  <td>
+                <tr role="row">
+                  <td role="cell"><span class="key-chord"><kbd>Ctrl</kbd>+<kbd>V</kbd></span></td>
+                  <td role="cell">
                     다른 PC에서 복사한 공유 파일을 이 PC로 받아 붙여넣습니다. 받을 공유 파일이
                     없으면 일반 붙여넣기를 사용합니다.
                   </td>
                 </tr>
-                <tr>
-                  <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Backspace</kbd></td>
-                  <td>
+                <tr role="row">
+                  <td role="cell"><span class="key-chord"><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Backspace</kbd></span></td>
+                  <td role="cell">
                     메인 PC: 다른 기기 제어 중 커서를 내 PC의 모니터 중앙으로 즉시 되돌립니다.
                   </td>
                 </tr>
@@ -370,55 +385,55 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
             편집은 대상 앱·입력창의 지원에 따라 달라집니다.
           </p>
           <div class="table-wrap">
-            <table class="kt" aria-labelledby="android-shortcuts-title">
-              <thead>
-                <tr>
-                  <th scope="col">기본 단축키</th>
-                  <th scope="col">동작·조건</th>
+            <table role="table" class="kt" aria-labelledby="android-shortcuts-title">
+              <thead role="rowgroup">
+                <tr role="row">
+                  <th role="columnheader" scope="col">기본 단축키</th>
+                  <th role="columnheader" scope="col">동작·조건</th>
                 </tr>
               </thead>
-              <tbody>
-                <tr>
-                  <td><kbd>PrintScreen</kbd></td>
-                  <td>
+              <tbody role="rowgroup">
+                <tr role="row">
+                  <td role="cell"><span class="key-chord"><kbd>PrintScreen</kbd></span></td>
+                  <td role="cell">
                     Android 11 이상: 직접 제어 중인 폰 화면을 찍어 PC로 보냅니다. 접근성 권한이
                     필요합니다.
                   </td>
                 </tr>
-                <tr>
-                  <td>
-                    <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>↑</kbd> /
-                    <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>↓</kbd>
+                <tr role="row">
+                  <td role="cell">
+                    <span class="key-chord"><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>↑</kbd></span> /
+                    <span class="key-chord"><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>↓</kbd></span>
                   </td>
-                  <td>Android 화면 밝기 올리기 / 내리기. 시스템 설정 변경 권한이 필요합니다.</td>
+                  <td role="cell">Android 화면 밝기 올리기 / 내리기. 시스템 설정 변경 권한이 필요합니다.</td>
                 </tr>
-                <tr>
-                  <td><kbd>Alt</kbd>+<kbd>↑</kbd> / <kbd>Alt</kbd>+<kbd>↓</kbd></td>
-                  <td>Android 미디어 음량 올리기 / 내리기.</td>
+                <tr role="row">
+                  <td role="cell"><span class="key-chord"><kbd>Alt</kbd>+<kbd>↑</kbd></span> / <span class="key-chord"><kbd>Alt</kbd>+<kbd>↓</kbd></span></td>
+                  <td role="cell">Android 미디어 음량 올리기 / 내리기.</td>
                 </tr>
-                <tr>
-                  <td>
-                    <kbd>Alt</kbd>+<kbd>Tab</kbd> / <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>Tab</kbd>
+                <tr role="row">
+                  <td role="cell">
+                    <span class="key-chord"><kbd>Alt</kbd>+<kbd>Tab</kbd></span> / <span class="key-chord"><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>Tab</kbd></span>
                   </td>
-                  <td>최근 앱 전환 / 반대 방향 전환. Alt를 놓으면 선택한 앱으로 이동합니다.</td>
+                  <td role="cell">최근 앱 전환 / 반대 방향 전환. Alt를 놓으면 선택한 앱으로 이동합니다.</td>
                 </tr>
-                <tr>
-                  <td>
-                    <kbd>Ctrl</kbd>+<kbd>A</kbd> / <kbd>Ctrl</kbd>+<kbd>C</kbd> /
-                    <kbd>Ctrl</kbd>+<kbd>X</kbd> / <kbd>Ctrl</kbd>+<kbd>V</kbd>
+                <tr role="row">
+                  <td role="cell">
+                    <span class="key-chord"><kbd>Ctrl</kbd>+<kbd>A</kbd></span> / <span class="key-chord"><kbd>Ctrl</kbd>+<kbd>C</kbd></span> /
+                    <span class="key-chord"><kbd>Ctrl</kbd>+<kbd>X</kbd></span> / <span class="key-chord"><kbd>Ctrl</kbd>+<kbd>V</kbd></span>
                   </td>
-                  <td>지원하는 텍스트 입력창에서 전체 선택 / 복사 / 잘라내기 / 붙여넣기.</td>
+                  <td role="cell">지원하는 텍스트 입력창에서 전체 선택 / 복사 / 잘라내기 / 붙여넣기.</td>
                 </tr>
-                <tr>
-                  <td>
-                    <kbd>Ctrl</kbd>+<kbd>Insert</kbd> / <kbd>Shift</kbd>+<kbd>Insert</kbd> /
-                    <kbd>Shift</kbd>+<kbd>Delete</kbd>
+                <tr role="row">
+                  <td role="cell">
+                    <span class="key-chord"><kbd>Ctrl</kbd>+<kbd>Insert</kbd></span> / <span class="key-chord"><kbd>Shift</kbd>+<kbd>Insert</kbd></span> /
+                    <span class="key-chord"><kbd>Shift</kbd>+<kbd>Delete</kbd></span>
                   </td>
-                  <td>지원하는 텍스트 입력창에서 복사 / 붙여넣기 / 잘라내기.</td>
+                  <td role="cell">지원하는 텍스트 입력창에서 복사 / 붙여넣기 / 잘라내기.</td>
                 </tr>
-                <tr>
-                  <td><kbd>Ctrl</kbd>+<kbd>Z</kbd></td>
-                  <td>실행 취소. 지원하는 앱·입력창에서 동작합니다.</td>
+                <tr role="row">
+                  <td role="cell"><span class="key-chord"><kbd>Ctrl</kbd>+<kbd>Z</kbd></span></td>
+                  <td role="cell">실행 취소. 지원하는 앱·입력창에서 동작합니다.</td>
                 </tr>
               </tbody>
             </table>

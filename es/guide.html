@@ -102,6 +102,21 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
 @media(min-width:820px){.text-transfer-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
 </style><link rel="stylesheet" href="/css/official-language-picker.css?v=1">
 <script src="/js/official-language-picker.js?v=1" defer></script>
+<style>
+/* Keep each physical key chord intact, even when listed alongside alternatives. */
+#shortcuts .kt th:first-child,#shortcuts .kt td:first-child{width:27%;min-width:14.6rem}
+#shortcuts .key-chord{display:inline-flex;align-items:center;gap:.14rem;white-space:nowrap;overflow-wrap:normal;word-break:normal;vertical-align:middle}
+#shortcuts .key-chord kbd{white-space:nowrap}
+@media(max-width:600px){
+  #shortcuts .table-wrap{overflow:visible}
+  #shortcuts .kt{display:block;min-width:0}
+  #shortcuts .kt thead{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+  #shortcuts .kt tbody{display:grid;gap:8px}
+  #shortcuts .kt tbody tr{display:grid;padding:8px 10px;gap:4px;background:#f6fafc;border:1px solid var(--line);border-radius:8px}
+  #shortcuts .kt tbody td{min-width:0;width:auto;padding:1px 0;border:0}
+  #shortcuts .kt tbody td:first-child{min-width:0;width:auto}
+}
+</style>
 </head>
 <body>
 <a class="skip" href="#main">Saltar al contenido</a>
@@ -320,61 +335,61 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
           </div>
           <h3 id="pc-shortcuts-title">Atajos predeterminados de la app de Windows</h3>
           <div class="table-wrap">
-            <table class="kt" aria-labelledby="pc-shortcuts-title">
-              <thead>
-                <tr>
-                  <th scope="col">Atajo predeterminado</th>
-                  <th scope="col">Acción y condiciones</th>
+            <table role="table" class="kt" aria-labelledby="pc-shortcuts-title">
+              <thead role="rowgroup">
+                <tr role="row">
+                  <th role="columnheader" scope="col">Atajo predeterminado</th>
+                  <th role="columnheader" scope="col">Acción y condiciones</th>
                 </tr>
               </thead>
-              <tbody>
-                <tr>
-                  <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>1~9</kbd></td>
-                  <td>
+              <tbody role="rowgroup">
+                <tr role="row">
+                  <td role="cell"><span class="key-chord"><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>1~9</kbd></span></td>
+                  <td role="cell">
                     PC principal: conecta el control de entrada al dispositivo correspondiente de la
                     lista. Pulsa el mismo número otra vez para dejar de controlar el dispositivo
                     actual.
                   </td>
                 </tr>
-                <tr id="shortcuts-next-release" data-shortcut-action="remote-window">
-                  <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>1~9</kbd></td>
-                  <td>
+                <tr role="row" id="shortcuts-next-release" data-shortcut-action="remote-window">
+                  <td role="cell"><span class="key-chord"><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>1~9</kbd></span></td>
+                  <td role="cell">
                     PC principal: abre la ventana remota correspondiente o trae al frente una
                     ventana existente. Pulsarlo otra vez no cierra la ventana. Los atajos de
                     conexión y ventana remota comparten los números de los dispositivos LAN; los
                     dispositivos Bluetooth quedan fuera de esa numeración.
                   </td>
                 </tr>
-                <tr>
-                  <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>D</kbd></td>
-                  <td>Muestra / oculta la zona de envío rápido.</td>
+                <tr role="row">
+                  <td role="cell"><span class="key-chord"><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>D</kbd></span></td>
+                  <td role="cell">Muestra / oculta la zona de envío rápido.</td>
                 </tr>
-                <tr>
-                  <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>S</kbd></td>
-                  <td>
+                <tr role="row">
+                  <td role="cell"><span class="key-chord"><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>S</kbd></span></td>
+                  <td role="cell">
                     Selecciona un área de la pantalla del PC Windows, Mac o Android que controlas y
                     recíbela en el PC principal. Si no controlas otro dispositivo, captura este PC.
                     Ambas apps deben admitir la función y el destino necesita permiso de captura.
                   </td>
                 </tr>
-                <tr>
-                  <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>V</kbd></td>
-                  <td>
+                <tr role="row">
+                  <td role="cell"><span class="key-chord"><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>V</kbd></span></td>
+                  <td role="cell">
                     PC principal: copia el código de verificación mientras su notificación del
                     teléfono aparece en el PC. Activa primero el envío de notificaciones del
                     teléfono.
                   </td>
                 </tr>
-                <tr>
-                  <td><kbd>Ctrl</kbd>+<kbd>V</kbd></td>
-                  <td>
+                <tr role="row">
+                  <td role="cell"><span class="key-chord"><kbd>Ctrl</kbd>+<kbd>V</kbd></span></td>
+                  <td role="cell">
                     Recibe y pega archivos compartidos copiados en otro PC. Si no hay archivos
                     compartidos pendientes, el pegado normal sigue disponible.
                   </td>
                 </tr>
-                <tr>
-                  <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Backspace</kbd></td>
-                  <td>
+                <tr role="row">
+                  <td role="cell"><span class="key-chord"><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Backspace</kbd></span></td>
+                  <td role="cell">
                     PC principal: devuelve inmediatamente el cursor al centro de tu monitor mientras
                     controlas otro dispositivo.
                   </td>
@@ -388,61 +403,61 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
             app del PC. La edición de texto depende de la app y del campo de texto de destino.
           </p>
           <div class="table-wrap">
-            <table class="kt" aria-labelledby="android-shortcuts-title">
-              <thead>
-                <tr>
-                  <th scope="col">Atajo predeterminado</th>
-                  <th scope="col">Acción y condiciones</th>
+            <table role="table" class="kt" aria-labelledby="android-shortcuts-title">
+              <thead role="rowgroup">
+                <tr role="row">
+                  <th role="columnheader" scope="col">Atajo predeterminado</th>
+                  <th role="columnheader" scope="col">Acción y condiciones</th>
                 </tr>
               </thead>
-              <tbody>
-                <tr>
-                  <td><kbd>PrintScreen</kbd></td>
-                  <td>
+              <tbody role="rowgroup">
+                <tr role="row">
+                  <td role="cell"><span class="key-chord"><kbd>PrintScreen</kbd></span></td>
+                  <td role="cell">
                     Android 11 o posterior: captura la pantalla del teléfono durante el control
                     directo y envíala al PC. Requiere permiso de Accesibilidad.
                   </td>
                 </tr>
-                <tr>
-                  <td>
-                    <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>↑</kbd> /
-                    <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>↓</kbd>
+                <tr role="row">
+                  <td role="cell">
+                    <span class="key-chord"><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>↑</kbd></span> /
+                    <span class="key-chord"><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>↓</kbd></span>
                   </td>
-                  <td>
+                  <td role="cell">
                     Sube / baja el brillo de Android. Requiere permiso para modificar los ajustes
                     del sistema.
                   </td>
                 </tr>
-                <tr>
-                  <td><kbd>Alt</kbd>+<kbd>↑</kbd> / <kbd>Alt</kbd>+<kbd>↓</kbd></td>
-                  <td>Sube / baja el volumen multimedia de Android.</td>
+                <tr role="row">
+                  <td role="cell"><span class="key-chord"><kbd>Alt</kbd>+<kbd>↑</kbd></span> / <span class="key-chord"><kbd>Alt</kbd>+<kbd>↓</kbd></span></td>
+                  <td role="cell">Sube / baja el volumen multimedia de Android.</td>
                 </tr>
-                <tr>
-                  <td>
-                    <kbd>Alt</kbd>+<kbd>Tab</kbd> / <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>Tab</kbd>
+                <tr role="row">
+                  <td role="cell">
+                    <span class="key-chord"><kbd>Alt</kbd>+<kbd>Tab</kbd></span> / <span class="key-chord"><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>Tab</kbd></span>
                   </td>
-                  <td>
+                  <td role="cell">
                     Cambia entre apps recientes / recorre la lista en sentido inverso. Suelta Alt
                     para abrir la app seleccionada.
                   </td>
                 </tr>
-                <tr>
-                  <td>
-                    <kbd>Ctrl</kbd>+<kbd>A</kbd> / <kbd>Ctrl</kbd>+<kbd>C</kbd> /
-                    <kbd>Ctrl</kbd>+<kbd>X</kbd> / <kbd>Ctrl</kbd>+<kbd>V</kbd>
+                <tr role="row">
+                  <td role="cell">
+                    <span class="key-chord"><kbd>Ctrl</kbd>+<kbd>A</kbd></span> / <span class="key-chord"><kbd>Ctrl</kbd>+<kbd>C</kbd></span> /
+                    <span class="key-chord"><kbd>Ctrl</kbd>+<kbd>X</kbd></span> / <span class="key-chord"><kbd>Ctrl</kbd>+<kbd>V</kbd></span>
                   </td>
-                  <td>Selecciona todo / copia / corta / pega en un campo de texto compatible.</td>
+                  <td role="cell">Selecciona todo / copia / corta / pega en un campo de texto compatible.</td>
                 </tr>
-                <tr>
-                  <td>
-                    <kbd>Ctrl</kbd>+<kbd>Insert</kbd> / <kbd>Shift</kbd>+<kbd>Insert</kbd> /
-                    <kbd>Shift</kbd>+<kbd>Delete</kbd>
+                <tr role="row">
+                  <td role="cell">
+                    <span class="key-chord"><kbd>Ctrl</kbd>+<kbd>Insert</kbd></span> / <span class="key-chord"><kbd>Shift</kbd>+<kbd>Insert</kbd></span> /
+                    <span class="key-chord"><kbd>Shift</kbd>+<kbd>Delete</kbd></span>
                   </td>
-                  <td>Copia / pega / corta en un campo de texto compatible.</td>
+                  <td role="cell">Copia / pega / corta en un campo de texto compatible.</td>
                 </tr>
-                <tr>
-                  <td><kbd>Ctrl</kbd>+<kbd>Z</kbd></td>
-                  <td>Deshace una acción en apps y campos de texto compatibles.</td>
+                <tr role="row">
+                  <td role="cell"><span class="key-chord"><kbd>Ctrl</kbd>+<kbd>Z</kbd></span></td>
+                  <td role="cell">Deshace una acción en apps y campos de texto compatibles.</td>
                 </tr>
               </tbody>
             </table>

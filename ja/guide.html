@@ -103,6 +103,21 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
 @media(min-width:820px){.text-transfer-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
 </style><link rel="stylesheet" href="/css/official-language-picker.css?v=1">
 <script src="/js/official-language-picker.js?v=1" defer></script>
+<style>
+/* Keep each physical key chord intact, even when listed alongside alternatives. */
+#shortcuts .kt th:first-child,#shortcuts .kt td:first-child{width:27%;min-width:14.6rem}
+#shortcuts .key-chord{display:inline-flex;align-items:center;gap:.14rem;white-space:nowrap;overflow-wrap:normal;word-break:normal;vertical-align:middle}
+#shortcuts .key-chord kbd{white-space:nowrap}
+@media(max-width:600px){
+  #shortcuts .table-wrap{overflow:visible}
+  #shortcuts .kt{display:block;min-width:0}
+  #shortcuts .kt thead{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+  #shortcuts .kt tbody{display:grid;gap:8px}
+  #shortcuts .kt tbody tr{display:grid;padding:8px 10px;gap:4px;background:#f6fafc;border:1px solid var(--line);border-radius:8px}
+  #shortcuts .kt tbody td{min-width:0;width:auto;padding:1px 0;border:0}
+  #shortcuts .kt tbody td:first-child{min-width:0;width:auto}
+}
+</style>
 </head>
 <body>
 <a class="skip" href="#main">本文へ移動</a>
@@ -312,52 +327,52 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
           </div>
           <h3 id="pc-shortcuts-title">Windowsアプリの既定ショートカット</h3>
           <div class="table-wrap">
-            <table class="kt" aria-labelledby="pc-shortcuts-title">
-              <thead>
-                <tr>
-                  <th scope="col">既定ショートカット</th>
-                  <th scope="col">動作・条件</th>
+            <table role="table" class="kt" aria-labelledby="pc-shortcuts-title">
+              <thead role="rowgroup">
+                <tr role="row">
+                  <th role="columnheader" scope="col">既定ショートカット</th>
+                  <th role="columnheader" scope="col">動作・条件</th>
                 </tr>
               </thead>
-              <tbody>
-                <tr>
-                  <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>1~9</kbd></td>
-                  <td>
+              <tbody role="rowgroup">
+                <tr role="row">
+                  <td role="cell"><span class="key-chord"><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>1~9</kbd></span></td>
+                  <td role="cell">
                     メインPC：一覧の該当機器の入力操作を開始します。現在操作中の機器と同じ番号をもう一度押すと、操作を解除します。
                   </td>
                 </tr>
-                <tr id="shortcuts-next-release" data-shortcut-action="remote-window">
-                  <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>1~9</kbd></td>
-                  <td>
+                <tr role="row" id="shortcuts-next-release" data-shortcut-action="remote-window">
+                  <td role="cell"><span class="key-chord"><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>1~9</kbd></span></td>
+                  <td role="cell">
                     メインPC：該当するリモート画面を開くか、既存のウィンドウを前面に表示します。もう一度押しても閉じません。接続ショートカットと同じLAN機器番号を使い、Bluetooth機器は番号の対象から除外します。
                   </td>
                 </tr>
-                <tr>
-                  <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>D</kbd></td>
-                  <td>クイックドロップの表示 / 非表示。</td>
+                <tr role="row">
+                  <td role="cell"><span class="key-chord"><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>D</kbd></span></td>
+                  <td role="cell">クイックドロップの表示 / 非表示。</td>
                 </tr>
-                <tr>
-                  <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>S</kbd></td>
-                  <td>
+                <tr role="row">
+                  <td role="cell"><span class="key-chord"><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>S</kbd></span></td>
+                  <td role="cell">
                     操作中のWindows
                     PC・Mac・Androidの画面で範囲を選び、メインPCで受け取ります。他の機器を操作していない場合は、このPCを撮影します。両方のアプリの対応と、対象機器の撮影権限が必要です。
                   </td>
                 </tr>
-                <tr>
-                  <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>V</kbd></td>
-                  <td>
+                <tr role="row">
+                  <td role="cell"><span class="key-chord"><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>V</kbd></span></td>
+                  <td role="cell">
                     メインPC：認証コードを含むスマートフォンの通知がPCに表示されている間、そのコードをコピーします。先にスマートフォンの通知転送を有効にしてください。
                   </td>
                 </tr>
-                <tr>
-                  <td><kbd>Ctrl</kbd>+<kbd>V</kbd></td>
-                  <td>
+                <tr role="row">
+                  <td role="cell"><span class="key-chord"><kbd>Ctrl</kbd>+<kbd>V</kbd></span></td>
+                  <td role="cell">
                     別のPCでコピーした共有ファイルを、このPCで受信して貼り付けます。待機中の共有ファイルがなければ、通常の貼り付けを使用できます。
                   </td>
                 </tr>
-                <tr>
-                  <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Backspace</kbd></td>
-                  <td>
+                <tr role="row">
+                  <td role="cell"><span class="key-chord"><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Backspace</kbd></span></td>
+                  <td role="cell">
                     メインPC：他の機器の操作中に、カーソルを自分のモニター中央へすぐに戻します。
                   </td>
                 </tr>
@@ -369,58 +384,58 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
             以下はAndroidへ送る入力の組み合わせで、上のPCアプリのショートカット設定とは別です。テキスト編集は対象アプリ・入力欄の対応によって異なります。
           </p>
           <div class="table-wrap">
-            <table class="kt" aria-labelledby="android-shortcuts-title">
-              <thead>
-                <tr>
-                  <th scope="col">既定ショートカット</th>
-                  <th scope="col">動作・条件</th>
+            <table role="table" class="kt" aria-labelledby="android-shortcuts-title">
+              <thead role="rowgroup">
+                <tr role="row">
+                  <th role="columnheader" scope="col">既定ショートカット</th>
+                  <th role="columnheader" scope="col">動作・条件</th>
                 </tr>
               </thead>
-              <tbody>
-                <tr>
-                  <td><kbd>PrintScreen</kbd></td>
-                  <td>
+              <tbody role="rowgroup">
+                <tr role="row">
+                  <td role="cell"><span class="key-chord"><kbd>PrintScreen</kbd></span></td>
+                  <td role="cell">
                     Android
                     11以降：直接操作中のスマートフォン画面を撮影してPCへ送ります。アクセシビリティ権限が必要です。
                   </td>
                 </tr>
-                <tr>
-                  <td>
-                    <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>↑</kbd> /
-                    <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>↓</kbd>
+                <tr role="row">
+                  <td role="cell">
+                    <span class="key-chord"><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>↑</kbd></span> /
+                    <span class="key-chord"><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>↓</kbd></span>
                   </td>
-                  <td>Android画面の明るさを上げる / 下げる。システム設定の変更権限が必要です。</td>
+                  <td role="cell">Android画面の明るさを上げる / 下げる。システム設定の変更権限が必要です。</td>
                 </tr>
-                <tr>
-                  <td><kbd>Alt</kbd>+<kbd>↑</kbd> / <kbd>Alt</kbd>+<kbd>↓</kbd></td>
-                  <td>Androidのメディア音量を上げる / 下げる。</td>
+                <tr role="row">
+                  <td role="cell"><span class="key-chord"><kbd>Alt</kbd>+<kbd>↑</kbd></span> / <span class="key-chord"><kbd>Alt</kbd>+<kbd>↓</kbd></span></td>
+                  <td role="cell">Androidのメディア音量を上げる / 下げる。</td>
                 </tr>
-                <tr>
-                  <td>
-                    <kbd>Alt</kbd>+<kbd>Tab</kbd> / <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>Tab</kbd>
+                <tr role="row">
+                  <td role="cell">
+                    <span class="key-chord"><kbd>Alt</kbd>+<kbd>Tab</kbd></span> / <span class="key-chord"><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>Tab</kbd></span>
                   </td>
-                  <td>
+                  <td role="cell">
                     最近のアプリを切り替える /
                     逆方向へ切り替える。Altを離すと選択したアプリへ移ります。
                   </td>
                 </tr>
-                <tr>
-                  <td>
-                    <kbd>Ctrl</kbd>+<kbd>A</kbd> / <kbd>Ctrl</kbd>+<kbd>C</kbd> /
-                    <kbd>Ctrl</kbd>+<kbd>X</kbd> / <kbd>Ctrl</kbd>+<kbd>V</kbd>
+                <tr role="row">
+                  <td role="cell">
+                    <span class="key-chord"><kbd>Ctrl</kbd>+<kbd>A</kbd></span> / <span class="key-chord"><kbd>Ctrl</kbd>+<kbd>C</kbd></span> /
+                    <span class="key-chord"><kbd>Ctrl</kbd>+<kbd>X</kbd></span> / <span class="key-chord"><kbd>Ctrl</kbd>+<kbd>V</kbd></span>
                   </td>
-                  <td>対応する入力欄で、全選択 / コピー / 切り取り / 貼り付け。</td>
+                  <td role="cell">対応する入力欄で、全選択 / コピー / 切り取り / 貼り付け。</td>
                 </tr>
-                <tr>
-                  <td>
-                    <kbd>Ctrl</kbd>+<kbd>Insert</kbd> / <kbd>Shift</kbd>+<kbd>Insert</kbd> /
-                    <kbd>Shift</kbd>+<kbd>Delete</kbd>
+                <tr role="row">
+                  <td role="cell">
+                    <span class="key-chord"><kbd>Ctrl</kbd>+<kbd>Insert</kbd></span> / <span class="key-chord"><kbd>Shift</kbd>+<kbd>Insert</kbd></span> /
+                    <span class="key-chord"><kbd>Shift</kbd>+<kbd>Delete</kbd></span>
                   </td>
-                  <td>対応する入力欄で、コピー / 貼り付け / 切り取り。</td>
+                  <td role="cell">対応する入力欄で、コピー / 貼り付け / 切り取り。</td>
                 </tr>
-                <tr>
-                  <td><kbd>Ctrl</kbd>+<kbd>Z</kbd></td>
-                  <td>対応するアプリ・入力欄で元に戻します。</td>
+                <tr role="row">
+                  <td role="cell"><span class="key-chord"><kbd>Ctrl</kbd>+<kbd>Z</kbd></span></td>
+                  <td role="cell">対応するアプリ・入力欄で元に戻します。</td>
                 </tr>
               </tbody>
             </table>

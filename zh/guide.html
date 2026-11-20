@@ -103,6 +103,21 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
 @media(min-width:820px){.text-transfer-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
 </style><link rel="stylesheet" href="/css/official-language-picker.css?v=1">
 <script src="/js/official-language-picker.js?v=1" defer></script>
+<style>
+/* Keep each physical key chord intact, even when listed alongside alternatives. */
+#shortcuts .kt th:first-child,#shortcuts .kt td:first-child{width:27%;min-width:14.6rem}
+#shortcuts .key-chord{display:inline-flex;align-items:center;gap:.14rem;white-space:nowrap;overflow-wrap:normal;word-break:normal;vertical-align:middle}
+#shortcuts .key-chord kbd{white-space:nowrap}
+@media(max-width:600px){
+  #shortcuts .table-wrap{overflow:visible}
+  #shortcuts .kt{display:block;min-width:0}
+  #shortcuts .kt thead{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+  #shortcuts .kt tbody{display:grid;gap:8px}
+  #shortcuts .kt tbody tr{display:grid;padding:8px 10px;gap:4px;background:#f6fafc;border:1px solid var(--line);border-radius:8px}
+  #shortcuts .kt tbody td{min-width:0;width:auto;padding:1px 0;border:0}
+  #shortcuts .kt tbody td:first-child{min-width:0;width:auto}
+}
+</style>
 </head>
 <body>
 <a class="skip" href="#main">跳到正文</a>
@@ -307,54 +322,54 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
           </div>
           <h3 id="pc-shortcuts-title">Windows 应用默认快捷键</h3>
           <div class="table-wrap">
-            <table class="kt" aria-labelledby="pc-shortcuts-title">
-              <thead>
-                <tr>
-                  <th scope="col">默认快捷键</th>
-                  <th scope="col">操作与条件</th>
+            <table role="table" class="kt" aria-labelledby="pc-shortcuts-title">
+              <thead role="rowgroup">
+                <tr role="row">
+                  <th role="columnheader" scope="col">默认快捷键</th>
+                  <th role="columnheader" scope="col">操作与条件</th>
                 </tr>
               </thead>
-              <tbody>
-                <tr>
-                  <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>1~9</kbd></td>
-                  <td>
+              <tbody role="rowgroup">
+                <tr role="row">
+                  <td role="cell"><span class="key-chord"><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>1~9</kbd></span></td>
+                  <td role="cell">
                     主电脑：连接列表中对应设备的输入控制。再次按当前正在控制设备的同一编号，解除该设备的输入控制。
                   </td>
                 </tr>
-                <tr id="shortcuts-next-release" data-shortcut-action="remote-window">
-                  <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>1~9</kbd></td>
-                  <td>
+                <tr role="row" id="shortcuts-next-release" data-shortcut-action="remote-window">
+                  <td role="cell"><span class="key-chord"><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>1~9</kbd></span></td>
+                  <td role="cell">
                     主电脑：打开对应设备的远程窗口，或将已打开的窗口置于前台。再次按下不会关闭窗口。
                     与连接快捷键使用相同的 LAN 设备编号；Bluetooth 设备不参与编号。
                   </td>
                 </tr>
-                <tr>
-                  <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>D</kbd></td>
-                  <td>显示 / 隐藏快速拖放区。</td>
+                <tr role="row">
+                  <td role="cell"><span class="key-chord"><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>D</kbd></span></td>
+                  <td role="cell">显示 / 隐藏快速拖放区。</td>
                 </tr>
-                <tr>
-                  <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>S</kbd></td>
-                  <td>
+                <tr role="row">
+                  <td role="cell"><span class="key-chord"><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>S</kbd></span></td>
+                  <td role="cell">
                     在正在控制的 Windows PC、Mac 或 Android
                     屏幕上选择区域，并在主电脑接收截图。不控制其他设备时，截取本机屏幕。两端应用都需支持此功能，目标设备还需具有截图权限。
                   </td>
                 </tr>
-                <tr>
-                  <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>V</kbd></td>
-                  <td>
+                <tr role="row">
+                  <td role="cell"><span class="key-chord"><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>V</kbd></span></td>
+                  <td role="cell">
                     主电脑：手机验证码通知显示在 PC 上期间，复制其中的验证码。请先开启手机通知转发。
                   </td>
                 </tr>
-                <tr>
-                  <td><kbd>Ctrl</kbd>+<kbd>V</kbd></td>
-                  <td>
+                <tr role="row">
+                  <td role="cell"><span class="key-chord"><kbd>Ctrl</kbd>+<kbd>V</kbd></span></td>
+                  <td role="cell">
                     接收并粘贴在另一台 PC
                     上复制的共享文件。没有待接收的共享文件时，仍可使用普通粘贴。
                   </td>
                 </tr>
-                <tr>
-                  <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Backspace</kbd></td>
-                  <td>主电脑：控制其他设备时，立即将光标返回本机显示器中央。</td>
+                <tr role="row">
+                  <td role="cell"><span class="key-chord"><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Backspace</kbd></span></td>
+                  <td role="cell">主电脑：控制其他设备时，立即将光标返回本机显示器中央。</td>
                 </tr>
               </tbody>
             </table>
@@ -365,54 +380,54 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
             应用快捷键设置不同。文本编辑效果取决于目标应用和输入框的支持情况。
           </p>
           <div class="table-wrap">
-            <table class="kt" aria-labelledby="android-shortcuts-title">
-              <thead>
-                <tr>
-                  <th scope="col">默认快捷键</th>
-                  <th scope="col">操作与条件</th>
+            <table role="table" class="kt" aria-labelledby="android-shortcuts-title">
+              <thead role="rowgroup">
+                <tr role="row">
+                  <th role="columnheader" scope="col">默认快捷键</th>
+                  <th role="columnheader" scope="col">操作与条件</th>
                 </tr>
               </thead>
-              <tbody>
-                <tr>
-                  <td><kbd>PrintScreen</kbd></td>
-                  <td>
+              <tbody role="rowgroup">
+                <tr role="row">
+                  <td role="cell"><span class="key-chord"><kbd>PrintScreen</kbd></span></td>
+                  <td role="cell">
                     Android 11 及以上：直接控制手机时截取手机屏幕并发送到 PC。需要无障碍权限。
                   </td>
                 </tr>
-                <tr>
-                  <td>
-                    <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>↑</kbd> /
-                    <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>↓</kbd>
+                <tr role="row">
+                  <td role="cell">
+                    <span class="key-chord"><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>↑</kbd></span> /
+                    <span class="key-chord"><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>↓</kbd></span>
                   </td>
-                  <td>提高 / 降低 Android 屏幕亮度。需要修改系统设置的权限。</td>
+                  <td role="cell">提高 / 降低 Android 屏幕亮度。需要修改系统设置的权限。</td>
                 </tr>
-                <tr>
-                  <td><kbd>Alt</kbd>+<kbd>↑</kbd> / <kbd>Alt</kbd>+<kbd>↓</kbd></td>
-                  <td>提高 / 降低 Android 媒体音量。</td>
+                <tr role="row">
+                  <td role="cell"><span class="key-chord"><kbd>Alt</kbd>+<kbd>↑</kbd></span> / <span class="key-chord"><kbd>Alt</kbd>+<kbd>↓</kbd></span></td>
+                  <td role="cell">提高 / 降低 Android 媒体音量。</td>
                 </tr>
-                <tr>
-                  <td>
-                    <kbd>Alt</kbd>+<kbd>Tab</kbd> / <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>Tab</kbd>
+                <tr role="row">
+                  <td role="cell">
+                    <span class="key-chord"><kbd>Alt</kbd>+<kbd>Tab</kbd></span> / <span class="key-chord"><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>Tab</kbd></span>
                   </td>
-                  <td>切换最近应用 / 反向切换。松开 Alt 后进入选中的应用。</td>
+                  <td role="cell">切换最近应用 / 反向切换。松开 Alt 后进入选中的应用。</td>
                 </tr>
-                <tr>
-                  <td>
-                    <kbd>Ctrl</kbd>+<kbd>A</kbd> / <kbd>Ctrl</kbd>+<kbd>C</kbd> /
-                    <kbd>Ctrl</kbd>+<kbd>X</kbd> / <kbd>Ctrl</kbd>+<kbd>V</kbd>
+                <tr role="row">
+                  <td role="cell">
+                    <span class="key-chord"><kbd>Ctrl</kbd>+<kbd>A</kbd></span> / <span class="key-chord"><kbd>Ctrl</kbd>+<kbd>C</kbd></span> /
+                    <span class="key-chord"><kbd>Ctrl</kbd>+<kbd>X</kbd></span> / <span class="key-chord"><kbd>Ctrl</kbd>+<kbd>V</kbd></span>
                   </td>
-                  <td>在支持的输入框中全选 / 复制 / 剪切 / 粘贴。</td>
+                  <td role="cell">在支持的输入框中全选 / 复制 / 剪切 / 粘贴。</td>
                 </tr>
-                <tr>
-                  <td>
-                    <kbd>Ctrl</kbd>+<kbd>Insert</kbd> / <kbd>Shift</kbd>+<kbd>Insert</kbd> /
-                    <kbd>Shift</kbd>+<kbd>Delete</kbd>
+                <tr role="row">
+                  <td role="cell">
+                    <span class="key-chord"><kbd>Ctrl</kbd>+<kbd>Insert</kbd></span> / <span class="key-chord"><kbd>Shift</kbd>+<kbd>Insert</kbd></span> /
+                    <span class="key-chord"><kbd>Shift</kbd>+<kbd>Delete</kbd></span>
                   </td>
-                  <td>在支持的输入框中复制 / 粘贴 / 剪切。</td>
+                  <td role="cell">在支持的输入框中复制 / 粘贴 / 剪切。</td>
                 </tr>
-                <tr>
-                  <td><kbd>Ctrl</kbd>+<kbd>Z</kbd></td>
-                  <td>在支持的应用和输入框中撤销操作。</td>
+                <tr role="row">
+                  <td role="cell"><span class="key-chord"><kbd>Ctrl</kbd>+<kbd>Z</kbd></span></td>
+                  <td role="cell">在支持的应用和输入框中撤销操作。</td>
                 </tr>
               </tbody>
             </table>
