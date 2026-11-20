@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#f5f8fa">
+  <meta name="description" content="Vista previa de la ayuda de OneMouse. Encuentra soluciones a problemas de conexión, cursor, transferencia de archivos y más.">
+  <title>Solución de problemas: vista previa · OneMouse</title>
+  <style>
+    :root{color-scheme:light;--bg:var(--preview-bg);--panel:var(--preview-panel);--line:var(--preview-line);--text:var(--preview-ink);--muted:var(--preview-muted);--mint:var(--preview-accent);--focus:#08729d;font-family:system-ui,-apple-system,"Malgun Gothic",sans-serif}
+    *{box-sizing:border-box}
+    html,body{margin:0;background:var(--bg);color:var(--text)}
+    a{color:var(--mint);text-underline-offset:.2em}
+    :focus-visible{outline:3px solid var(--focus);outline-offset:4px}
+    p,li{line-height:1.65}
+    h1,h2,h3,p{margin-top:0}
+    .wrap{width:min(1120px,calc(100% - 2.5rem));margin-inline:auto}
+    .skip{position:absolute;transform:translateY(-120%);padding:.8rem;background:var(--bg);z-index:1}
+    .skip:focus{transform:none}
+    header{border-bottom:1px solid var(--line);background:#fff}
+    .top{display:flex;align-items:center;justify-content:space-between;gap:.5rem 2rem;flex-wrap:wrap;padding-block:.55rem}
+    .brand{display:inline-flex;align-items:center;gap:.55rem;font-weight:850;color:var(--text);text-decoration:none;min-height:44px}
+    .mark{width:30px;height:30px;border-radius:8px;display:grid;place-items:center;background:var(--mint);color:#fff}
+    nav{display:flex;gap:.15rem 1rem;flex-wrap:wrap}
+    nav a{font-size:.96rem;color:var(--muted);display:inline-flex;align-items:center;min-height:44px;text-decoration:none}
+    nav a[aria-current],nav a:hover{color:var(--mint);text-decoration:underline}
+    main{padding-block:clamp(2.25rem,7vw,5rem) 3rem}
+    .hero{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:1rem 2.5rem;align-items:end;margin-bottom:2.35rem}
+    h1{font-size:clamp(2.15rem,5.3vw,4.25rem);line-height:1.12;letter-spacing:-.055em;word-break:keep-all;margin-bottom:1rem}
+    h2{font-size:clamp(1.25rem,2.5vw,1.64rem);letter-spacing:-.035em}
+    h3{font-size:1.05rem;margin-bottom:.45rem}
+    .eyebrow{display:block;font-size:.9rem;font-weight:800;color:var(--mint);margin-bottom:.6rem}
+    .hero p,.muted,.steps li{color:var(--muted)}
+    .hero p{margin-bottom:0}
+    .rescue{border:1px solid #a9c9bd;border-radius:16px;padding:1rem 1.15rem;background:#e6f5f1}
+    .rescue h2{font-size:1.05rem;margin-bottom:.5rem}
+    .rescue p{font-size:.94rem}
+    kbd{display:inline-block;border:1px solid #7b918d;border-radius:5px;padding:.2em .35em;font:700 .9em ui-monospace,monospace;color:#194b43;white-space:nowrap}
+    .jump{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.65rem;margin-bottom:2rem}
+    .jump a{display:flex;align-items:center;justify-content:space-between;gap:.45rem;padding:.72rem .8rem;min-height:55px;color:var(--text);text-decoration:none;font-weight:700;background:var(--panel);border:1px solid var(--line);border-radius:10px}
+    .jump a:hover{border-color:var(--mint)} .arrow{color:var(--mint)}
+    .solutions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.8rem;align-items:start}
+    .issue{scroll-margin-top:1.25rem;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:1.15rem}
+    .issue:target{border-color:var(--mint)}
+    .issue h2{margin-bottom:.6rem;word-break:keep-all}
+    .steps{padding-left:1.35em;margin:.25rem 0 .85rem}
+    .steps li+li{margin-top:.35rem}.steps strong{color:var(--text)}
+    details{border-top:1px solid var(--line);padding-top:.2rem}
+    summary{cursor:pointer;color:var(--mint);padding:.65rem .2rem;min-height:44px;font-weight:750}
+    details p{margin-bottom:.55rem}.links a{display:inline-block;padding:.4rem .25rem .4rem 0;margin-right:.5rem}
+    .more{margin-top:2rem;border-top:1px solid var(--line);padding-top:1.2rem}
+    footer{border-top:1px solid var(--line);padding:1rem 0 1.5rem;color:var(--muted)}
+    footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.2rem 1rem}
+    @media(max-width:730px){.hero,.solutions{grid-template-columns:1fr}.jump{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{align-items:start}.top{column-gap:1rem}}
+    @media(max-width:410px){.wrap{width:calc(100% - 1.5rem)}.jump{grid-template-columns:1fr}.issue{padding:1rem}.top nav{gap:0 .75rem}}
+      [data-legacy-link]{display:none}
+    [data-legacy-link]:target{display:block;margin:1rem 0 1.75rem;padding:1rem 1.15rem;border:1px solid var(--preview-line);border-left:4px solid var(--preview-accent);border-radius:12px;background:var(--preview-panel);scroll-margin-top:1.5rem}
+    [data-legacy-link] h2{font-size:1.2rem;margin:0 0 .45rem}
+    [data-legacy-link] p{margin:.4rem 0}
+    [data-legacy-link] a{font-weight:700}
+  </style>
+<link rel="icon" href="/assets/preview/onemouse-android-icon.png" type="image/png" sizes="240x240">
+<link rel="stylesheet" href="/assets/preview/one-preview.css?v=light1">
+<style>.topic-language-links{padding:7px 0;display:flex;gap:8px;flex-wrap:wrap;width:min(980px,calc(100% - 36px));margin:auto;font-size:.9rem}.topic-language-links [aria-current]{font-weight:750}</style></head>
+<body>
+<a class="skip" href="#main">Saltar al contenido</a>
+<header class="preview-header"><div class="preview-frame">
+  <a class="preview-brand" href="/es/" aria-label="Inicio de OneMouse"><span class="preview-mark" aria-hidden="true"><img src="/assets/preview/onemouse-android-icon.png" alt="" width="33" height="33"></span>OneMouse</a>
+  <nav class="preview-nav" aria-label="Navegación de OneMouse"><a href="/es/">Inicio</a><a href="/es/features">Funciones</a><a href="/es/guide-new">Guía de conexión</a><a href="/es/help-new" aria-current="page">Solución de problemas</a><a href="/es/download">Descargas</a></nav>
+</div></header><nav class="topic-language-links" aria-label="Idioma"><a href="/help-demo" lang="ko" hreflang="ko">한국어</a> · <a href="/en/help-new" lang="en" hreflang="en">English</a> · <a href="/ja/help-new" lang="ja" hreflang="ja">日本語</a> · <a href="/zh/help-new" lang="zh" hreflang="zh">中文</a> · <span lang="es" aria-current="true">Español</span></nav>
+<main class="wrap" id="main">
+  <div class="hero">
+    <div>
+      <span class="eyebrow">OneMouse · Vista previa de la ayuda</span>
+      <h1>¿Qué problema tienes?</h1>
+      <p>Elige el síntoma que estás viendo. Empieza por estas comprobaciones rápidas antes de iniciar sesión o registrar tus dispositivos de nuevo.</p>
+    </div>
+    <aside class="rescue" aria-labelledby="rescue-title">
+      <h2 id="rescue-title">¿El cursor no vuelve a tu PC?</h2>
+      <p>En Windows, pulsa <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Backspace</kbd>. Es el atajo de retorno predeterminado. Si está desactivado, mueve el cursor de vuelta por el borde opuesto de la pantalla conectada. <a href="/es/features#shortcut-return">Consulta cuándo funciona el atajo</a></p>
+    </aside>
+  </div>
+    <section id="quick-help" data-legacy-link aria-label="Comprobaciones rápidas"><h2>Comprobaciones rápidas</h2><p>Consulta la ayuda original para ver los detalles de este tema.</p><p><a href="/es/help#quick-help">Ver la ayuda original</a></p></section>
+    <section id="android-input-help" data-legacy-link aria-label="¿Está conectado pero no responde?"><h2>¿Está conectado pero no responde?</h2><p>Abre las instrucciones de la vista previa o consulta el tema completo en la ayuda original.</p><p><a href="#cursor">Ver instrucciones de la vista previa</a> · <a href="/es/help#android-input-help">Ver la ayuda original</a></p></section>
+    <section id="connection-symptoms" data-legacy-link aria-label="Revisar síntomas de conexión"><h2>Revisar síntomas de conexión</h2><p>Consulta la ayuda original para ver los detalles de este tema.</p><p><a href="/es/help#connection-symptoms">Ver la ayuda original</a></p></section>
+    <section id="cursor-not-crossing" data-legacy-link aria-label="Está conectado, pero el cursor no pasa al teléfono"><h2>Está conectado, pero el cursor no pasa al teléfono</h2><p>Abre las instrucciones de la vista previa o consulta el tema completo en la ayuda original.</p><p><a href="#cursor">Ver instrucciones de la vista previa</a> · <a href="/es/help#cursor-not-crossing">Ver la ayuda original</a></p></section>
+    <section id="account-connect-help" data-legacy-link aria-label="Falta un dispositivo en mi cuenta de Google o no se conecta"><h2>Falta un dispositivo en mi cuenta de Google o no se conecta</h2><p>Consulta la ayuda original para ver los detalles de este tema.</p><p><a href="/es/help#account-connect-help">Ver la ayuda original</a></p></section>
+    <section id="remote-control-help" data-legacy-link aria-label="Veo la pantalla del PC en el teléfono, pero no puedo controlarlo"><h2>Veo la pantalla del PC en el teléfono, pero no puedo controlarlo</h2><p>Consulta la ayuda original para ver los detalles de este tema.</p><p><a href="/es/help#remote-control-help">Ver la ayuda original</a></p></section>
+    <section id="order" data-legacy-link aria-label="Pasos para revisar la conexión"><h2>Pasos para revisar la conexión</h2><p>Consulta la ayuda original para ver los detalles de este tema.</p><p><a href="/es/help#order">Ver la ayuda original</a></p></section>
+    <section id="mac-help" data-legacy-link aria-label="Solución de problemas de conexión en Mac"><h2>Solución de problemas de conexión en Mac</h2><p>Consulta la ayuda original para ver los detalles de este tema.</p><p><a href="/es/help#mac">Ver la ayuda original</a></p></section>
+    <section id="mac" data-legacy-link aria-label="Solución de problemas de conexión en Mac"><h2>Solución de problemas de conexión en Mac</h2><p>Consulta la ayuda original para ver los detalles de este tema.</p><p><a href="/es/help#mac">Ver la ayuda original</a></p></section>
+    <section id="mac-input-help" data-legacy-link aria-label="El Mac está conectado, pero el ratón y el teclado no funcionan."><h2>El Mac está conectado, pero el ratón y el teclado no funcionan.</h2><p>Consulta la ayuda original para ver los detalles de este tema.</p><p><a href="/es/help#mac-input-help">Ver la ayuda original</a></p></section>
+    <section id="mac-screen-help" data-legacy-link aria-label="La pantalla del Mac se ve en blanco en la ventana de control remoto de Windows."><h2>La pantalla del Mac se ve en blanco en la ventana de control remoto de Windows.</h2><p>Consulta la ayuda original para ver los detalles de este tema.</p><p><a href="/es/help#mac-screen-help">Ver la ayuda original</a></p></section>
+    <section id="phone-notifications" data-legacy-link aria-label="Cuando las notificaciones del teléfono no aparecen en el PC."><h2>Cuando las notificaciones del teléfono no aparecen en el PC.</h2><p>Abre las instrucciones de la vista previa o consulta el tema completo en la ayuda original.</p><p><a href="#alerts">Ver instrucciones de la vista previa</a> · <a href="/es/help#phone-notifications">Ver la ayuda original</a></p></section>
+    <section id="notification-history" data-legacy-link aria-label="Historial de notificaciones y borrado"><h2>Historial de notificaciones y borrado</h2><p>Consulta la ayuda original para ver los detalles de este tema.</p><p><a href="/es/help#notification-history">Ver la ayuda original</a></p></section>
+    <section id="faq" data-legacy-link aria-label="Preguntas habituales"><h2>Preguntas habituales</h2><p>Consulta la ayuda original para ver los detalles de este tema.</p><p><a href="/es/help#faq">Ver la ayuda original</a></p></section>
+    <section id="notification-reply-faq" data-legacy-link aria-label="No aparece Responder o la respuesta no se envía."><h2>No aparece Responder o la respuesta no se envía.</h2><p>Consulta la ayuda original para ver los detalles de este tema.</p><p><a href="/es/help#notification-reply-faq">Ver la ayuda original</a></p></section>
+    <section id="device-order-faq" data-legacy-link aria-label="¿Cómo cambio los números si no aparece Editar orden?"><h2>¿Cómo cambio los números si no aparece Editar orden?</h2><p>Consulta la ayuda original para ver los detalles de este tema.</p><p><a href="/es/help#device-order-faq">Ver la ayuda original</a></p></section>
+    <section id="windows-remote-gestures-faq" data-legacy-link aria-label="Los gestos del navegador no funcionan en la ventana remota de Windows."><h2>Los gestos del navegador no funcionan en la ventana remota de Windows.</h2><p>Consulta la ayuda original para ver los detalles de este tema.</p><p><a href="/es/help#windows-remote-gestures-faq">Ver la ayuda original</a></p></section>
+    <section id="default-pc-faq" data-legacy-link aria-label="Un archivo compartido desde el teléfono no llega al PC."><h2>Un archivo compartido desde el teléfono no llega al PC.</h2><p>Consulta la ayuda original para ver los detalles de este tema.</p><p><a href="/es/help#default-pc-faq">Ver la ayuda original</a></p></section>
+    <section id="file-receive-folder-faq" data-legacy-link aria-label="No puedo cambiar ni abrir la carpeta de archivos recibidos del PC."><h2>No puedo cambiar ni abrir la carpeta de archivos recibidos del PC.</h2><p>Consulta la ayuda original para ver los detalles de este tema.</p><p><a href="/es/help#file-receive-folder-faq">Ver la ayuda original</a></p></section>
+    <section id="screenshot-preview-faq" data-legacy-link aria-label="El cursor no vuelve tras capturar o la vista previa se cierra."><h2>El cursor no vuelve tras capturar o la vista previa se cierra.</h2><p>Consulta la ayuda original para ver los detalles de este tema.</p><p><a href="/es/help#screenshot-preview-faq">Ver la ayuda original</a></p></section>
+    <section id="mouse-gestures-faq" data-legacy-link aria-label="Los gestos del ratón no se inician."><h2>Los gestos del ratón no se inician.</h2><p>Consulta la ayuda original para ver los detalles de este tema.</p><p><a href="/es/help#mouse-gestures-faq">Ver la ayuda original</a></p></section>
+    <section id="mouse-gestures-history" data-legacy-link aria-label="Adelante o Recargar no funciona."><h2>Adelante o Recargar no funciona.</h2><p>Consulta la ayuda original para ver los detalles de este tema.</p><p><a href="/es/help#mouse-gestures-history">Ver la ayuda original</a></p></section>
+    <section id="mouse-gestures-minimize" data-legacy-link aria-label="¿Abajo → derecha cierra la app?"><h2>¿Abajo → derecha cierra la app?</h2><p>Consulta la ayuda original para ver los detalles de este tema.</p><p><a href="/es/help#mouse-gestures-minimize">Ver la ayuda original</a></p></section>
+    <section id="mouse-gestures-scroll" data-legacy-link aria-label="¿Cómo ajusto y detengo el desplazamiento arriba y abajo?"><h2>¿Cómo ajusto y detengo el desplazamiento arriba y abajo?</h2><p>Consulta la ayuda original para ver los detalles de este tema.</p><p><a href="/es/help#mouse-gestures-scroll">Ver la ayuda original</a></p></section>
+    <section id="connection-drops" data-legacy-link aria-label="Se desconecta cada 10 segundos aproximadamente."><h2>Se desconecta cada 10 segundos aproximadamente.</h2><p>Consulta la ayuda original para ver los detalles de este tema.</p><p><a href="/es/help#connection-drops">Ver la ayuda original</a></p></section>
+    <section id="firewall-help" data-legacy-link aria-label="El teléfono ve el PC, pero el PC no ve el teléfono."><h2>El teléfono ve el PC, pero el PC no ve el teléfono.</h2><p>Consulta la ayuda original para ver los detalles de este tema.</p><p><a href="/es/help#firewall-help">Ver la ayuda original</a></p></section>
+    <section id="screen-sleep" data-legacy-link aria-label="La conexión se corta cuando se apaga la pantalla."><h2>La conexión se corta cuando se apaga la pantalla.</h2><p>Consulta la ayuda original para ver los detalles de este tema.</p><p><a href="/es/help#screen-sleep">Ver la ayuda original</a></p></section>
+    <section id="bluetooth-help" data-legacy-link aria-label="La conexión Bluetooth o la pantalla remota no funcionan bien."><h2>La conexión Bluetooth o la pantalla remota no funcionan bien.</h2><p>Consulta la ayuda original para ver los detalles de este tema.</p><p><a href="/es/help#bluetooth-help">Ver la ayuda original</a></p></section>
+  <section aria-labelledby="jump-title">
+    <h2 id="jump-title">Buscar por síntoma</h2>
+    <nav class="jump" aria-label="Buscar por síntoma">
+      <a href="#discovery">No aparece un dispositivo <span class="arrow" aria-hidden="true">↓</span></a>
+      <a href="#cursor">El cursor no pasa a la otra pantalla <span class="arrow" aria-hidden="true">↓</span></a>
+      <a href="#drops">La conexión se interrumpe con frecuencia <span class="arrow" aria-hidden="true">↓</span></a>
+      <a href="#sharing">Problemas con archivos, copias o capturas <span class="arrow" aria-hidden="true">↓</span></a>
+      <a href="#remote">La pantalla remota no abre o se ve negra <span class="arrow" aria-hidden="true">↓</span></a>
+      <a href="#alerts">No aparecen las notificaciones del teléfono <span class="arrow" aria-hidden="true">↓</span></a>
+    </nav>
+  </section>
+  <div class="solutions">
+    <section class="issue" id="discovery" aria-labelledby="discovery-title">
+      <h2 id="discovery-title">No encuentro mi dispositivo</h2>
+      <ol class="steps">
+        <li><strong>Abre OneMouse</strong> en ambos dispositivos.</li>
+        <li>Si emparejas con un código QR o de conexión, comprueba que ambos dispositivos usen el <strong>mismo router</strong>. El PC puede estar conectado por cable al mismo router.</li>
+        <li>Si conectas con una cuenta de Google, comprueba que los dos dispositivos Windows, Mac o Android tengan conexión a Internet y que hayas <strong>iniciado sesión con la misma cuenta</strong> en ambos. Luego actualiza la lista de dispositivos.</li>
+      </ol>
+      <details><summary>Si usas Mac, Bluetooth (beta) o una red Wi-Fi pública</summary>
+        <p class="muted">En Mac, revisa el permiso de red local si aparece esa opción. Con Bluetooth (beta), comprueba que esté activado y conectado en ambos equipos. Una red Wi-Fi de trabajo o de invitados puede bloquear la comunicación entre dispositivos, aunque estén en la misma red.</p>
+        <div class="links"><a href="/es/guide-new#mac">Guía de conexión para Mac</a><a href="/es/guide-new#windows-bluetooth">Conexión por Bluetooth en Windows (beta)</a><a href="/es/guide-new#connect-bluetooth">Conexión por Bluetooth en Android (beta)</a><a href="/es/guide-new#mac-bluetooth">Conexión por Bluetooth en Mac (beta)</a><a href="/es/guide-new#connect-account">Conectar con una cuenta de Google</a></div>
+      </details>
+    </section>
+    <section class="issue" id="cursor" aria-labelledby="cursor-title">
+      <h2 id="cursor-title">Los dispositivos están conectados, pero el cursor no pasa</h2>
+      <ol class="steps">
+        <li>En Android, ve a Ajustes → Accesibilidad → Aplicaciones instaladas y comprueba que <strong>OneMouse</strong> esté activado.</li>
+        <li>Comprueba que la disposición de los dispositivos en Windows coincida con su <strong>posición real en el escritorio</strong>.</li>
+        <li>Aunque la orientación coincida, no todo el borde permite pasar a la otra pantalla. Lleva el cursor a la <strong>zona de entrada</strong> marcada en la disposición.</li>
+      </ol>
+      <details><summary>Mi Mac se conecta, pero no puedo hacer clic</summary>
+        <p class="muted">Revisa el permiso de Accesibilidad de OneMouse en tu Mac. Si acabas de concederlo, cierra y vuelve a abrir la aplicación.</p>
+        <div class="links"><a href="/es/features#permissions">Por qué son necesarios los permisos de Mac</a><a href="/es/guide-new#android">Preparar el control de Android</a><a href="/es/features#position">Ver la disposición de los dispositivos</a></div>
+      </details>
+    </section>
+    <section class="issue" id="drops" aria-labelledby="drops-title">
+      <h2 id="drops-title">La conexión se interrumpe con frecuencia</h2>
+      <ol class="steps">
+        <li>Si se interrumpe <strong>solo al apagarse la pantalla</strong>, revisa los ajustes de batería y ahorro de energía de Android.</li>
+        <li>Si <strong>funciona en casa pero no en otros lugares</strong>, comprueba si la red Wi-Fi de invitados o del trabajo restringe la comunicación entre dispositivos.</li>
+        <li>Si usas Bluetooth (beta), empieza por revisar el estado de conexión en ambos dispositivos.</li>
+      </ol>
+      <details><summary>Comprobaciones por tipo de conexión</summary>
+        <div class="links"><a href="/es/compatibility#connection-types">Probar otro método de conexión</a><a href="/es/compatibility#support">Dispositivos compatibles con Bluetooth (beta)</a></div>
+      </details>
+    </section>
+    <section class="issue" id="sharing" aria-labelledby="sharing-title">
+      <h2 id="sharing-title">No funcionan los archivos, las copias o las capturas</h2>
+      <ol class="steps">
+        <li>Comprueba que ambas aplicaciones estén conectadas y que hayas elegido el <strong>dispositivo receptor</strong> correcto.</li>
+        <li>Para enviar un archivo entre pantallas, coloca los dispositivos en la disposición, arrastra el archivo más allá del borde y <strong>suéltalo sobre la pantalla receptora</strong>.</li>
+        <li>Si has recibido una captura, abre una <strong>aplicación que admita pegar imágenes</strong> y pégala allí.</li>
+      </ol>
+      <details><summary>Carpeta de recepción y requisitos de las capturas</summary>
+        <p class="muted">Los métodos de transferencia y los dispositivos compatibles dependen de la versión de la aplicación y del tipo de conexión. Pegar una captura como imagen y guardarla como archivo son operaciones distintas.</p>
+        <div class="links"><a href="/es/features#files">Archivos y portapapeles</a><a href="/es/features#file-receive-folder">Buscar la carpeta de recepción en el PC</a><a href="/es/features#screenshots">Capturar y enviar imágenes</a></div>
+      </details>
+    </section>
+    <section class="issue" id="remote" aria-labelledby="remote-title">
+      <h2 id="remote-title">La pantalla remota no abre o se ve negra</h2>
+      <ol class="steps">
+        <li>Si puedes ver la pantalla del PC en el teléfono, pero no controlarlo, comprueba que <strong>Solo visualización</strong> esté desactivado.</li>
+        <li>Al abrir la pantalla de Android en el PC, acepta la <strong>solicitud de captura de pantalla</strong> que aparece en el teléfono.</li>
+        <li>Si la pantalla del Mac se ve negra en el PC, revisa en el Mac el <strong>permiso de grabación de pantalla</strong>.</li>
+      </ol>
+      <details><summary>Pantallas remotas y permisos</summary>
+        <div class="links"><a href="/es/features#mobile-pc-remote">Preparar el control del PC desde el teléfono</a><a href="/es/features#remote">Abrir la pantalla de Android en el PC</a><a href="/es/features#permissions">Revisar el permiso de grabación en Mac</a></div>
+      </details>
+    </section>
+    <section class="issue" id="alerts" aria-labelledby="alerts-title">
+      <h2 id="alerts-title">No aparecen las notificaciones del teléfono</h2>
+      <ol class="steps">
+        <li>En los ajustes de Android, comprueba el <strong>acceso a notificaciones</strong> de OneMouse.</li>
+        <li>En OneMouse, revisa <strong>Enviar notificaciones al PC</strong> en el teléfono y <strong>Mostrar notificaciones del dispositivo</strong> en el PC.</li>
+        <li>Comprueba que la aplicación que quieres usar esté en la lista de aplicaciones autorizadas para enviar notificaciones.</li>
+      </ol>
+      <details><summary>Respuestas, códigos de verificación e historial</summary>
+        <div class="links"><a href="/es/features#notifications">Notificaciones, respuestas y códigos de verificación</a></div>
+      </details>
+    </section>
+  </div>
+  <section class="more" aria-labelledby="more-title">
+    <h2 id="more-title">¿Sigues teniendo problemas?</h2>
+    <p class="muted">Usa la nueva guía para revisar la conexión desde el principio o abre la ayuda original para consultar otros síntomas.</p>
+    <div class="links"><a href="/es/guide-new">Nueva guía de conexión</a><a href="/es/help#faq">Ayuda original completa</a><a href="/es/features#permissions">Permisos por dispositivo</a></div>
+  </section>
+</main>
+<footer class="preview-footer"><div class="preview-frame">
+  <p>Vista previa del sitio de OneMouse, separada del sitio actual.</p>
+  <nav class="preview-refs" aria-label="Enlaces de referencia">
+    <a href="/es/compatibility">Dispositivos compatibles y tipos de conexión</a><a href="/es/technical">Tecnología y seguridad</a><a href="/es/pricing">Precios</a><a href="/es/privacy">Privacidad</a><a href="/es/terms">Términos de uso</a><a href="/es/licenses">Licencias de código abierto</a><a href="/es/">Página de inicio actual</a>
+  </nav>
+</div></footer>
+</body>
+</html>

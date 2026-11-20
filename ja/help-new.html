@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#f5f8fa">
+  <meta name="description" content="OneMouseのトラブルシューティング プレビュー。接続、カーソル、ファイル転送などの問題を確認できます。">
+  <title>トラブルシューティング プレビュー · OneMouse</title>
+  <style>
+    :root{color-scheme:light;--bg:var(--preview-bg);--panel:var(--preview-panel);--line:var(--preview-line);--text:var(--preview-ink);--muted:var(--preview-muted);--mint:var(--preview-accent);--focus:#08729d;font-family:system-ui,-apple-system,"Malgun Gothic",sans-serif}
+    *{box-sizing:border-box}
+    html,body{margin:0;background:var(--bg);color:var(--text)}
+    a{color:var(--mint);text-underline-offset:.2em}
+    :focus-visible{outline:3px solid var(--focus);outline-offset:4px}
+    p,li{line-height:1.65}
+    h1,h2,h3,p{margin-top:0}
+    .wrap{width:min(1120px,calc(100% - 2.5rem));margin-inline:auto}
+    .skip{position:absolute;transform:translateY(-120%);padding:.8rem;background:var(--bg);z-index:1}
+    .skip:focus{transform:none}
+    header{border-bottom:1px solid var(--line);background:#fff}
+    .top{display:flex;align-items:center;justify-content:space-between;gap:.5rem 2rem;flex-wrap:wrap;padding-block:.55rem}
+    .brand{display:inline-flex;align-items:center;gap:.55rem;font-weight:850;color:var(--text);text-decoration:none;min-height:44px}
+    .mark{width:30px;height:30px;border-radius:8px;display:grid;place-items:center;background:var(--mint);color:#fff}
+    nav{display:flex;gap:.15rem 1rem;flex-wrap:wrap}
+    nav a{font-size:.96rem;color:var(--muted);display:inline-flex;align-items:center;min-height:44px;text-decoration:none}
+    nav a[aria-current],nav a:hover{color:var(--mint);text-decoration:underline}
+    main{padding-block:clamp(2.25rem,7vw,5rem) 3rem}
+    .hero{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:1rem 2.5rem;align-items:end;margin-bottom:2.35rem}
+    h1{font-size:clamp(2.15rem,5.3vw,4.25rem);line-height:1.12;letter-spacing:-.055em;word-break:keep-all;margin-bottom:1rem}
+    h2{font-size:clamp(1.25rem,2.5vw,1.64rem);letter-spacing:-.035em}
+    h3{font-size:1.05rem;margin-bottom:.45rem}
+    .eyebrow{display:block;font-size:.9rem;font-weight:800;color:var(--mint);margin-bottom:.6rem}
+    .hero p,.muted,.steps li{color:var(--muted)}
+    .hero p{margin-bottom:0}
+    .rescue{border:1px solid #a9c9bd;border-radius:16px;padding:1rem 1.15rem;background:#e6f5f1}
+    .rescue h2{font-size:1.05rem;margin-bottom:.5rem}
+    .rescue p{font-size:.94rem}
+    kbd{display:inline-block;border:1px solid #7b918d;border-radius:5px;padding:.2em .35em;font:700 .9em ui-monospace,monospace;color:#194b43;white-space:nowrap}
+    .jump{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.65rem;margin-bottom:2rem}
+    .jump a{display:flex;align-items:center;justify-content:space-between;gap:.45rem;padding:.72rem .8rem;min-height:55px;color:var(--text);text-decoration:none;font-weight:700;background:var(--panel);border:1px solid var(--line);border-radius:10px}
+    .jump a:hover{border-color:var(--mint)} .arrow{color:var(--mint)}
+    .solutions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.8rem;align-items:start}
+    .issue{scroll-margin-top:1.25rem;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:1.15rem}
+    .issue:target{border-color:var(--mint)}
+    .issue h2{margin-bottom:.6rem;word-break:keep-all}
+    .steps{padding-left:1.35em;margin:.25rem 0 .85rem}
+    .steps li+li{margin-top:.35rem}.steps strong{color:var(--text)}
+    details{border-top:1px solid var(--line);padding-top:.2rem}
+    summary{cursor:pointer;color:var(--mint);padding:.65rem .2rem;min-height:44px;font-weight:750}
+    details p{margin-bottom:.55rem}.links a{display:inline-block;padding:.4rem .25rem .4rem 0;margin-right:.5rem}
+    .more{margin-top:2rem;border-top:1px solid var(--line);padding-top:1.2rem}
+    footer{border-top:1px solid var(--line);padding:1rem 0 1.5rem;color:var(--muted)}
+    footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.2rem 1rem}
+    @media(max-width:730px){.hero,.solutions{grid-template-columns:1fr}.jump{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{align-items:start}.top{column-gap:1rem}}
+    @media(max-width:410px){.wrap{width:calc(100% - 1.5rem)}.jump{grid-template-columns:1fr}.issue{padding:1rem}.top nav{gap:0 .75rem}}
+      [data-legacy-link]{display:none}
+    [data-legacy-link]:target{display:block;margin:1rem 0 1.75rem;padding:1rem 1.15rem;border:1px solid var(--preview-line);border-left:4px solid var(--preview-accent);border-radius:12px;background:var(--preview-panel);scroll-margin-top:1.5rem}
+    [data-legacy-link] h2{font-size:1.2rem;margin:0 0 .45rem}
+    [data-legacy-link] p{margin:.4rem 0}
+    [data-legacy-link] a{font-weight:700}
+  </style>
+<link rel="icon" href="/assets/preview/onemouse-android-icon.png" type="image/png" sizes="240x240">
+<link rel="stylesheet" href="/assets/preview/one-preview.css?v=light1">
+<style>.topic-language-links{padding:7px 0;display:flex;gap:8px;flex-wrap:wrap;width:min(980px,calc(100% - 36px));margin:auto;font-size:.9rem}.topic-language-links [aria-current]{font-weight:750}</style></head>
+<body>
+<a class="skip" href="#main">本文へ移動</a>
+<header class="preview-header"><div class="preview-frame">
+  <a class="preview-brand" href="/ja/" aria-label="OneMouse ホーム"><span class="preview-mark" aria-hidden="true"><img src="/assets/preview/onemouse-android-icon.png" alt="" width="33" height="33"></span>OneMouse</a>
+  <nav class="preview-nav" aria-label="OneMouse メニュー"><a href="/ja/">ホーム</a><a href="/ja/features">機能</a><a href="/ja/guide-new">接続ガイド</a><a href="/ja/help-new" aria-current="page">トラブルシューティング</a><a href="/ja/download">ダウンロード</a></nav>
+</div></header><nav class="topic-language-links" aria-label="言語"><a href="/help-demo" lang="ko" hreflang="ko">한국어</a> · <a href="/en/help-new" lang="en" hreflang="en">English</a> · <span lang="ja" aria-current="true">日本語</span> · <a href="/zh/help-new" lang="zh" hreflang="zh">中文</a> · <a href="/es/help-new" lang="es" hreflang="es">Español</a></nav>
+<main class="wrap" id="main">
+  <div class="hero">
+    <div>
+      <span class="eyebrow">OneMouse · ヘルプ プレビュー</span>
+      <h1>どのような問題が起きていますか？</h1>
+      <p>今の症状を選んでください。ログインや機器の登録をやり直す前に、すぐに確認できる項目からご案内します。</p>
+    </div>
+    <aside class="rescue" aria-labelledby="rescue-title">
+      <h2 id="rescue-title">カーソルが自分のPCに戻らない場合</h2>
+      <p>Windowsで <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Backspace</kbd> を押してください。これが既定の復帰ショートカットです。無効にしている場合は、接続先画面の反対側の端からカーソルを戻してください。 <a href="/ja/features#shortcut-return">ショートカットの動作条件</a></p>
+    </aside>
+  </div>
+    <section id="quick-help" data-legacy-link aria-label="すぐに試せる対処法"><h2>すぐに試せる対処法</h2><p>詳しい説明は既存のヘルプをご覧ください。</p><p><a href="/ja/help#quick-help">既存のヘルプを見る</a></p></section>
+    <section id="android-input-help" data-legacy-link aria-label="接続はできたのに入力できないとき"><h2>接続はできたのに入力できないとき</h2><p>プレビューの関連項目または既存のヘルプの詳しい説明をご覧ください。</p><p><a href="#cursor">プレビューの案内を見る</a> · <a href="/ja/help#android-input-help">既存のヘルプを見る</a></p></section>
+    <section id="connection-symptoms" data-legacy-link aria-label="接続の症状を確認"><h2>接続の症状を確認</h2><p>詳しい説明は既存のヘルプをご覧ください。</p><p><a href="/ja/help#connection-symptoms">既存のヘルプを見る</a></p></section>
+    <section id="cursor-not-crossing" data-legacy-link aria-label="接続済みなのにカーソルがスマホへ移動しません"><h2>接続済みなのにカーソルがスマホへ移動しません</h2><p>プレビューの関連項目または既存のヘルプの詳しい説明をご覧ください。</p><p><a href="#cursor">プレビューの案内を見る</a> · <a href="/ja/help#cursor-not-crossing">既存のヘルプを見る</a></p></section>
+    <section id="account-connect-help" data-legacy-link aria-label="Googleアカウントにデバイスが表示されない・接続できません"><h2>Googleアカウントにデバイスが表示されない・接続できません</h2><p>詳しい説明は既存のヘルプをご覧ください。</p><p><a href="/ja/help#account-connect-help">既存のヘルプを見る</a></p></section>
+    <section id="remote-control-help" data-legacy-link aria-label="スマホでPC画面は見えるのに操作できません"><h2>スマホでPC画面は見えるのに操作できません</h2><p>詳しい説明は既存のヘルプをご覧ください。</p><p><a href="/ja/help#remote-control-help">既存のヘルプを見る</a></p></section>
+    <section id="order" data-legacy-link aria-label="接続の確認手順"><h2>接続の確認手順</h2><p>詳しい説明は既存のヘルプをご覧ください。</p><p><a href="/ja/help#order">既存のヘルプを見る</a></p></section>
+    <section id="mac-help" data-legacy-link aria-label="Mac接続のトラブルシューティング"><h2>Mac接続のトラブルシューティング</h2><p>詳しい説明は既存のヘルプをご覧ください。</p><p><a href="/ja/help#mac">既存のヘルプを見る</a></p></section>
+    <section id="mac" data-legacy-link aria-label="Mac接続のトラブルシューティング"><h2>Mac接続のトラブルシューティング</h2><p>詳しい説明は既存のヘルプをご覧ください。</p><p><a href="/ja/help#mac">既存のヘルプを見る</a></p></section>
+    <section id="mac-input-help" data-legacy-link aria-label="接続済みでも入力・画面が動かない"><h2>接続済みでも入力・画面が動かない</h2><p>詳しい説明は既存のヘルプをご覧ください。</p><p><a href="/ja/help#mac-input-help">既存のヘルプを見る</a></p></section>
+    <section id="mac-screen-help" data-legacy-link aria-label="画面収録"><h2>画面収録</h2><p>詳しい説明は既存のヘルプをご覧ください。</p><p><a href="/ja/help#mac-screen-help">既存のヘルプを見る</a></p></section>
+    <section id="phone-notifications" data-legacy-link aria-label="スマホの通知がPCに表示されないとき。"><h2>スマホの通知がPCに表示されないとき。</h2><p>プレビューの関連項目または既存のヘルプの詳しい説明をご覧ください。</p><p><a href="#alerts">プレビューの案内を見る</a> · <a href="/ja/help#phone-notifications">既存のヘルプを見る</a></p></section>
+    <section id="notification-history" data-legacy-link aria-label="通知履歴の保存・削除"><h2>通知履歴の保存・削除</h2><p>詳しい説明は既存のヘルプをご覧ください。</p><p><a href="/ja/help#notification-history">既存のヘルプを見る</a></p></section>
+    <section id="faq" data-legacy-link aria-label="よくある質問"><h2>よくある質問</h2><p>詳しい説明は既存のヘルプをご覧ください。</p><p><a href="/ja/help#faq">既存のヘルプを見る</a></p></section>
+    <section id="notification-reply-faq" data-legacy-link aria-label="返信ボタンが表示されない、または送信できません。"><h2>返信ボタンが表示されない、または送信できません。</h2><p>詳しい説明は既存のヘルプをご覧ください。</p><p><a href="/ja/help#notification-reply-faq">既存のヘルプを見る</a></p></section>
+    <section id="device-order-faq" data-legacy-link aria-label="番号を変えたいのに、順序の編集が見つかりません。"><h2>番号を変えたいのに、順序の編集が見つかりません。</h2><p>詳しい説明は既存のヘルプをご覧ください。</p><p><a href="/ja/help#device-order-faq">既存のヘルプを見る</a></p></section>
+    <section id="windows-remote-gestures-faq" data-legacy-link aria-label="Windowsのリモートウィンドウでブラウザーのジェスチャーが使えません。"><h2>Windowsのリモートウィンドウでブラウザーのジェスチャーが使えません。</h2><p>詳しい説明は既存のヘルプをご覧ください。</p><p><a href="/ja/help#windows-remote-gestures-faq">既存のヘルプを見る</a></p></section>
+    <section id="default-pc-faq" data-legacy-link aria-label="スマホで共有したファイルがPCに届きません。"><h2>スマホで共有したファイルがPCに届きません。</h2><p>詳しい説明は既存のヘルプをご覧ください。</p><p><a href="/ja/help#default-pc-faq">既存のヘルプを見る</a></p></section>
+    <section id="file-receive-folder-faq" data-legacy-link aria-label="PCの受信フォルダーを変更・開くことができません。"><h2>PCの受信フォルダーを変更・開くことができません。</h2><p>詳しい説明は既存のヘルプをご覧ください。</p><p><a href="/ja/help#file-receive-folder-faq">既存のヘルプを見る</a></p></section>
+    <section id="screenshot-preview-faq" data-legacy-link aria-label="撮影後にカーソルが戻らない、またはプレビューが閉じます。"><h2>撮影後にカーソルが戻らない、またはプレビューが閉じます。</h2><p>詳しい説明は既存のヘルプをご覧ください。</p><p><a href="/ja/help#screenshot-preview-faq">既存のヘルプを見る</a></p></section>
+    <section id="mouse-gestures-faq" data-legacy-link aria-label="マウスジェスチャーが始まりません。"><h2>マウスジェスチャーが始まりません。</h2><p>詳しい説明は既存のヘルプをご覧ください。</p><p><a href="/ja/help#mouse-gestures-faq">既存のヘルプを見る</a></p></section>
+    <section id="mouse-gestures-history" data-legacy-link aria-label="進む・再読み込みが使えません。"><h2>進む・再読み込みが使えません。</h2><p>詳しい説明は既存のヘルプをご覧ください。</p><p><a href="/ja/help#mouse-gestures-history">既存のヘルプを見る</a></p></section>
+    <section id="mouse-gestures-minimize" data-legacy-link aria-label="下 → 右はアプリを閉じる操作ですか？"><h2>下 → 右はアプリを閉じる操作ですか？</h2><p>詳しい説明は既存のヘルプをご覧ください。</p><p><a href="/ja/help#mouse-gestures-minimize">既存のヘルプを見る</a></p></section>
+    <section id="mouse-gestures-scroll" data-legacy-link aria-label="上下のスクロール量の調整と停止方法は？"><h2>上下のスクロール量の調整と停止方法は？</h2><p>詳しい説明は既存のヘルプをご覧ください。</p><p><a href="/ja/help#mouse-gestures-scroll">既存のヘルプを見る</a></p></section>
+    <section id="connection-drops" data-legacy-link aria-label="10秒おきくらいに切れ続けます。"><h2>10秒おきくらいに切れ続けます。</h2><p>詳しい説明は既存のヘルプをご覧ください。</p><p><a href="/ja/help#connection-drops">既存のヘルプを見る</a></p></section>
+    <section id="firewall-help" data-legacy-link aria-label="スマホではPCが見えるのに、PCからスマホが見えません。"><h2>スマホではPCが見えるのに、PCからスマホが見えません。</h2><p>詳しい説明は既存のヘルプをご覧ください。</p><p><a href="/ja/help#firewall-help">既存のヘルプを見る</a></p></section>
+    <section id="screen-sleep" data-legacy-link aria-label="画面がオフになると接続が切れます。"><h2>画面がオフになると接続が切れます。</h2><p>詳しい説明は既存のヘルプをご覧ください。</p><p><a href="/ja/help#screen-sleep">既存のヘルプを見る</a></p></section>
+    <section id="bluetooth-help" data-legacy-link aria-label="Bluetooth接続・リモート画面がうまく動きません。"><h2>Bluetooth接続・リモート画面がうまく動きません。</h2><p>詳しい説明は既存のヘルプをご覧ください。</p><p><a href="/ja/help#bluetooth-help">既存のヘルプを見る</a></p></section>
+  <section aria-labelledby="jump-title">
+    <h2 id="jump-title">症状から探す</h2>
+    <nav class="jump" aria-label="症状から探す">
+      <a href="#discovery">機器が表示されない <span class="arrow" aria-hidden="true">↓</span></a>
+      <a href="#cursor">カーソルが移動しない <span class="arrow" aria-hidden="true">↓</span></a>
+      <a href="#drops">接続がよく切れる <span class="arrow" aria-hidden="true">↓</span></a>
+      <a href="#sharing">ファイル・コピー・キャプチャが使えない <span class="arrow" aria-hidden="true">↓</span></a>
+      <a href="#remote">リモート画面が開かない、または黒い <span class="arrow" aria-hidden="true">↓</span></a>
+      <a href="#alerts">スマートフォンの通知が表示されない <span class="arrow" aria-hidden="true">↓</span></a>
+    </nav>
+  </section>
+  <div class="solutions">
+    <section class="issue" id="discovery" aria-labelledby="discovery-title">
+      <h2 id="discovery-title">機器が表示されない</h2>
+      <ol class="steps">
+        <li>両方の機器で<strong>OneMouseを開いて</strong>ください。</li>
+        <li>QRコードや接続番号を使う場合は、両方の機器が<strong>同じルーター</strong>に接続されているか確認してください。PCは同じルーターにつながっていれば有線でもかまいません。</li>
+        <li>Googleアカウントで接続する場合は、Windows、Mac、Androidのうち接続する2台で<strong>同じアカウントにログイン</strong>し、両方がインターネットにつながっているか確認します。その後、機器一覧を更新してください。</li>
+      </ol>
+      <details><summary>Mac、Bluetooth（ベータ）、公共Wi-Fiの場合</summary>
+        <p class="muted">Macに「ローカルネットワーク」の項目がある場合は権限を確認してください。Bluetooth（ベータ）では、両方でBluetoothがオンになり、接続されているか確認してください。職場やゲスト用のWi-Fiは、同じネットワーク名でも機器間通信を遮断することがあります。</p>
+        <div class="links"><a href="/ja/guide-new#mac">Macの接続ガイド</a><a href="/ja/guide-new#windows-bluetooth">WindowsのBluetooth接続（ベータ）</a><a href="/ja/guide-new#connect-bluetooth">AndroidのBluetooth接続（ベータ）</a><a href="/ja/guide-new#mac-bluetooth">MacのBluetooth接続（ベータ）</a><a href="/ja/guide-new#connect-account">Googleアカウントでの接続手順</a></div>
+      </details>
+    </section>
+    <section class="issue" id="cursor" aria-labelledby="cursor-title">
+      <h2 id="cursor-title">接続済みなのにカーソルが移動しない</h2>
+      <ol class="steps">
+        <li>Androidでは、設定 → ユーザー補助 → インストール済みアプリで<strong>OneMouse</strong>がオンになっているか確認してください。</li>
+        <li>Windowsの機器配置が<strong>デスク上の実際の位置</strong>と一致しているか確認してください。</li>
+        <li>向きが同じでも、画面の端全体から移動できるとは限りません。配置に表示される<strong>進入可能な範囲</strong>にカーソルを移動してください。</li>
+      </ol>
+      <details><summary>Macに接続できてもクリックできない場合</summary>
+        <p class="muted">MacでOneMouseのアクセシビリティ権限を確認してください。設定したばかりなら、Macのアプリを終了してから開き直してください。</p>
+        <div class="links"><a href="/ja/features#permissions">Macで各権限が必要な理由</a><a href="/ja/guide-new#android">Androidの入力を準備する</a><a href="/ja/features#position">配置画面を見る</a></div>
+      </details>
+    </section>
+    <section class="issue" id="drops" aria-labelledby="drops-title">
+      <h2 id="drops-title">接続がよく切れる</h2>
+      <ol class="steps">
+        <li><strong>画面がオフになったときだけ</strong>切れる場合は、Androidのバッテリーや省電力設定を確認してください。</li>
+        <li><strong>自宅では使えるのに他の場所で切れる</strong>場合は、ゲスト用・職場のWi-Fiが機器間通信を制限していないか確認してください。</li>
+        <li>Bluetooth（ベータ）では、まず両方の機器の接続状態を確認してください。</li>
+      </ol>
+      <details><summary>接続方法ごとの確認</summary>
+        <div class="links"><a href="/ja/compatibility#connection-types">別の接続方法を試す</a><a href="/ja/compatibility#support">Bluetooth（ベータ）対応機器</a></div>
+      </details>
+    </section>
+    <section class="issue" id="sharing" aria-labelledby="sharing-title">
+      <h2 id="sharing-title">ファイル・コピー・キャプチャが使えない</h2>
+      <ol class="steps">
+        <li>両方のアプリが接続され、正しい<strong>受信先の機器</strong>を選んでいるか確認してください。</li>
+        <li>画面をまたいでファイルを送るには、接続した機器を配置し、ファイルを画面の端の向こうへドラッグして<strong>受信側の画面でドロップ</strong>してください。</li>
+        <li>キャプチャを受信したら、<strong>画像の貼り付けに対応するアプリ</strong>を開いて貼り付けてください。</li>
+      </ol>
+      <details><summary>受信フォルダーとキャプチャの利用条件</summary>
+        <p class="muted">転送方法と対応機器は、アプリのバージョンや接続方法によって異なります。キャプチャを画像として貼り付ける操作と、ファイルに保存する操作は別です。</p>
+        <div class="links"><a href="/ja/features#files">ファイルとクリップボード</a><a href="/ja/features#file-receive-folder">PCの受信フォルダーを探す</a><a href="/ja/features#screenshots">画面キャプチャと転送</a></div>
+      </details>
+    </section>
+    <section class="issue" id="remote" aria-labelledby="remote-title">
+      <h2 id="remote-title">リモート画面が開かない、または黒い</h2>
+      <ol class="steps">
+        <li>スマートフォンにPC画面が表示されても操作できない場合は、<strong>表示のみ</strong>がオフか確認してください。</li>
+        <li>PCでAndroid画面を開く際は、スマートフォン側の<strong>画面キャプチャの確認</strong>で許可してください。</li>
+        <li>PC上でMacの画面が黒い場合は、Macの<strong>画面収録の権限</strong>を確認してください。</li>
+      </ol>
+      <details><summary>リモート画面と権限</summary>
+        <div class="links"><a href="/ja/features#mobile-pc-remote">スマートフォンからPCを操作する準備</a><a href="/ja/features#remote">PCでAndroid画面を開く</a><a href="/ja/features#permissions">Macの画面収録の権限を確認する</a></div>
+      </details>
+    </section>
+    <section class="issue" id="alerts" aria-labelledby="alerts-title">
+      <h2 id="alerts-title">スマートフォンの通知が表示されない</h2>
+      <ol class="steps">
+        <li>Androidの設定でOneMouseの<strong>通知へのアクセス権限</strong>を確認してください。</li>
+        <li>スマートフォンのOneMouseで<strong>PCに通知を送信</strong>、PCのOneMouseで<strong>機器の通知を表示</strong>を確認してください。</li>
+        <li>通知を送信するアプリの一覧に、対象のアプリが含まれているか確認してください。</li>
+      </ol>
+      <details><summary>通知への返信・認証コード・履歴</summary>
+        <div class="links"><a href="/ja/features#notifications">通知・返信・認証コードの案内</a></div>
+      </details>
+    </section>
+  </div>
+  <section class="more" aria-labelledby="more-title">
+    <h2 id="more-title">まだ解決しない場合</h2>
+    <p class="muted">最初から接続を確認するには新しい接続ガイドを、ここにない症状を調べるには既存のヘルプをご覧ください。</p>
+    <div class="links"><a href="/ja/guide-new">新しい接続ガイド</a><a href="/ja/help#faq">既存のヘルプ（全文）</a><a href="/ja/features#permissions">機器別の権限</a></div>
+  </section>
+</main>
+<footer class="preview-footer"><div class="preview-frame">
+  <p>OneMouse サイトのプレビューです。現在の公開サイトとは異なります。</p>
+  <nav class="preview-refs" aria-label="参考リンク">
+    <a href="/ja/compatibility">対応機器と接続方法</a><a href="/ja/technical">技術とセキュリティ</a><a href="/ja/pricing">料金</a><a href="/ja/privacy">プライバシー</a><a href="/ja/terms">利用規約</a><a href="/ja/licenses">オープンソースライセンス</a><a href="/ja/">現在のホームページ</a>
+  </nav>
+</div></footer>
+</body>
+</html>

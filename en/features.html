@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Explore OneMouse: shared input, files, screenshots, and remote screens.">
+<meta name="theme-color" content="#f5f8fa">
+<title>Features · OneMouse</title>
+<link rel="icon" href="/assets/preview/onemouse-android-icon.png" type="image/png" sizes="240x240">
+<link rel="stylesheet" href="/assets/preview/one-preview.css?v=light1">
+<style>
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--preview-bg);color:var(--preview-ink);color-scheme:light;font:1rem/1.65 system-ui,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;word-break:keep-all;overflow-wrap:anywhere}
+a{color:var(--preview-accent);text-underline-offset:.2em}
+a:focus-visible,summary:focus-visible{outline:3px solid var(--preview-accent);outline-offset:3px}
+.layout{width:min(1020px,calc(100% - 36px));margin-inline:auto}
+.skip{position:absolute;left:12px;top:-80px;z-index:3;background:var(--preview-accent);color:#fff;padding:7px}.skip:focus{top:7px}
+main [id]{scroll-margin-top:1rem}
+.hero{padding-block:clamp(2.2rem,7vw,5.4rem) clamp(1.75rem,5vw,4rem);background:linear-gradient(145deg,#f0f8f5,var(--preview-bg) 70%)}
+.hero-grid{display:grid;align-items:center;gap:clamp(1.5rem,5vw,4rem)}
+.eyebrow{margin:0 0 .6rem;color:var(--preview-accent);font-size:.9rem;font-weight:800}
+h1,h2,h3{line-height:1.25;letter-spacing:-.04em}h1{font-size:clamp(2rem,4.8vw,3.35rem);margin:0;line-height:1.14}h2{font-size:clamp(1.55rem,3vw,2.15rem);margin:0 0 .45rem}h3{font-size:1.08rem;margin:1rem 0 .25rem}
+.lede{max-width:38ch;font-size:clamp(1.05rem,1.8vw,1.2rem);color:var(--preview-muted);margin:1rem 0 1.15rem}
+.primary{display:inline-flex;min-height:44px;align-items:center;padding:.55rem .85rem;border-radius:.55rem;background:var(--preview-accent);color:#fff;font-weight:750;text-decoration:none}.primary:hover{background:var(--preview-accent-hover)}
+.kvm-more{padding-block:.5rem 1.5rem}.kvm-more p,.panel p,.panel dd{margin:.35rem 0 .7rem;color:var(--preview-muted)}
+.examples{padding-block:1.25rem 1.8rem}.examples h2{margin-bottom:.9rem}
+.example-grid{display:grid;gap:1.2rem}
+.example{min-width:0;border:1px solid var(--preview-line);background:var(--preview-panel);border-radius:.8rem;overflow:hidden}
+.example>figure{margin:0}.example>figure>img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;display:block;background:#e5eff1}
+.example>figure>figcaption{font-size:.8rem;color:var(--preview-muted);padding:.45rem .9rem 0}
+.example-copy{padding:.1rem .9rem 1rem}.example-copy h3{margin:.35rem 0}.example-copy p{margin:0 0 .5rem;color:var(--preview-muted)}
+@media(min-width:920px){.example-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.overview{padding-block:1.55rem 3.5rem}.overview>p{margin:0 0 1.15rem;color:var(--preview-muted)}
+.feature-list{border-top:1px solid var(--preview-line)}
+.feature{border-bottom:1px solid var(--preview-line)}
+.feature>summary{position:relative;list-style:none;padding:.85rem 2.6rem .85rem 0;min-height:60px;cursor:pointer}
+.feature>summary::-webkit-details-marker{display:none}.feature>summary:hover .feature-name{text-decoration:underline;text-underline-offset:.18em}.feature>summary::after{content:'';position:absolute;top:1.5rem;right:.5rem;width:.65rem;height:.65rem;border-right:2px solid var(--preview-accent);border-bottom:2px solid var(--preview-accent);transform:rotate(45deg)}.feature[open]>summary::after{transform:rotate(225deg);top:1.75rem}.feature-name{display:block;color:var(--preview-ink);font-size:1.13rem;font-weight:800}.feature-desc{display:block;color:var(--preview-muted);font-weight:400}
+.panel{padding:0 0 1.15rem;max-width:72ch}
+.subfeature{margin-top:.55rem;border-top:1px solid var(--preview-line)}.subfeature>summary{min-height:44px;padding:.55rem 0;font-weight:740;cursor:pointer}.subfeature p{margin:.45rem 0 .65rem;color:var(--preview-muted)}
+.key-list{display:grid;gap:.45rem;margin:.25rem 0 1rem}.key-list div{padding:.42rem 0;border-bottom:1px solid var(--preview-line)}.key-list dt{font-weight:780}.key-list dd{margin:0}
+.fine{font-size:.9rem}.panel [id]:target,.subfeature:target{outline:2px solid #a2c9bb;outline-offset:2px;border-radius:.25rem}
+@media(min-width:770px){.hero-grid{grid-template-columns:minmax(0,1.2fr) minmax(0,1fr)}.key-list div{display:grid;align-items:baseline;grid-template-columns:13rem minmax(0,1fr);gap:1rem}}
+.gesture-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:12px 0}.gesture-card{min-width:0;background:#fff;border:1px solid #afc1cc;border-radius:10px;padding:8px}.gesture-card svg{display:block;width:min(100%,102px);margin:0 auto 6px;background:#0d1728;border-radius:7px}.gesture-card h4{margin:2px 0;font-size:.97rem}.gesture-card p{margin:3px 0;font-size:.83rem;line-height:1.35}.gesture-card .gesture-dir{color:#126051;font-weight:850}.gesture-edge,.gesture-head{fill:none;stroke:#69efc3;stroke-width:3.3;stroke-linecap:round;stroke-linejoin:round}.gesture-head{stroke:#c2ffed}.gesture-start{fill:#effffc;stroke:#103e3b;stroke-width:1.5}.gesture-card svg text{font:800 11px system-ui,sans-serif;fill:#f0f6ff;text-anchor:middle;paint-order:stroke;stroke:#0d1728;stroke-width:2.6px}.gesture-legend{color:var(--preview-muted);font-size:.86rem}.gesture-legend span{color:#204a44}.touch-cues{display:flex;flex-wrap:wrap;gap:5px;margin:8px 0;padding:0}.touch-cues span{display:flex;align-items:center;gap:3px;font-size:.82rem;color:#254958;padding:3px 5px;border:1px solid #91acb9;border-radius:5px}.touch-cues b{color:var(--preview-accent);font-size:1.25em}@media(min-width:710px){.gesture-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+/* Narrower reading column and clearer disclosure boundaries. */
+.overview h2{margin-bottom:.4rem}.overview>p{margin-block:0 1.35rem}
+.feature-list{display:grid;gap:.5rem;border-top:0}
+.feature{min-width:0;background:var(--preview-panel);border:1px solid var(--preview-line);border-radius:.65rem}
+.feature[open]{border-color:#a7c6bf}
+.feature>summary{padding:.7rem 2.8rem .7rem 1rem;min-height:62px;border-radius:.65rem}
+.feature>summary::after{top:calc(50% - .38rem);right:1.1rem}
+.feature>summary:hover{background:#edf7f4}.feature[open]>summary{background:#eef7f4;border-bottom:1px solid #c8e3da;border-radius:.65rem .65rem 0 0}
+.feature-name{color:var(--preview-ink);line-height:1.35}.feature-desc{margin-top:.12rem;line-height:1.4}
+.feature>.panel{max-width:none;padding:.65rem 1rem .9rem}
+.reference-heading{margin:1.4rem 0 .55rem;color:var(--preview-muted);font-size:.95rem}
+.key-groups{display:grid;gap:.8rem;margin:.6rem 0 .8rem}
+.key-group h3{font-size:.9rem;color:#304c5d;margin:0 0 .4rem}
+.key-list{margin:0;gap:0}
+.key-list div{display:grid;grid-template-columns:minmax(0,1fr);gap:.28rem;padding:.54rem .07rem;align-items:baseline;border-bottom:1px solid var(--preview-line)}
+.key-list dt{color:var(--preview-ink);font-weight:700}.key-list dd{font-size:.79rem;color:var(--preview-muted);line-height:1.9}
+.key-list kbd{display:inline-block;white-space:nowrap;font:700 .76rem/1.35 system-ui,sans-serif;padding:.14rem .33rem;border-radius:.3rem;background:#edf3f8;color:#233c52;border:1px solid #a7bbc9;box-shadow:0 1px #a7bbc9}
+@media(min-width:580px){.key-list div{grid-template-columns:minmax(0,1fr) auto;gap:1rem}}
+@media(max-width:579px){.feature>summary{padding-inline-start:.85rem}.feature>.panel{padding-inline:.85rem}}
+
+.example-actions{display:flex;align-items:center;gap:.55rem 1rem;flex-wrap:wrap;padding-top:.3rem}
+
+.capture-card-interactive{padding:.65rem .6rem .35rem;min-width:0;background:#f3f7fa;border-bottom:1px solid var(--preview-line);scroll-margin-top:14px}
+.capture-card-interactive:empty{aspect-ratio:3/2}
+@media(min-width:650px){.example-grid>.example,.screen-stories .story{align-self:start}.screen-stories .story figure{aspect-ratio:3/2}}
+.race-card-interactive{padding:.65rem .6rem .45rem;min-width:0;background:#f3f7fa;border-bottom:1px solid var(--preview-line)}.race-card-interactive:empty{aspect-ratio:1199/675}.race-card-interactive noscript img{display:block;width:100%;height:auto}
+.file-demo-shell{min-width:0}.file-demo-shell:empty{aspect-ratio:3/2}.file-demo-shell noscript img{width:100%;height:auto;display:block;border-radius:.8rem}.file-demo-link{margin:.6rem 0 0}
+.android-desk-shell{min-width:0}.android-desk-shell:empty{aspect-ratio:3/2}.android-desk-shell noscript img{display:block;width:100%;height:auto;border-radius:.8rem}.android-desk-links{margin:.6rem 0 0}
+.tablet-gesture-shell{min-width:0}.tablet-gesture-shell:empty{aspect-ratio:3/2}.tablet-gesture-shell noscript img{display:block;width:100%;height:auto;border-radius:.8rem}.tablet-gesture-link{margin:.6rem 0 0}
+/* Two columns only where each interactive desktop remains usable. */
+.demo-showcase .example-grid{align-items:start}
+.demo-showcase .demo-visual{padding:.6rem;background:#f1f6f8;min-width:0;border-bottom:1px solid var(--preview-line)}
+.demo-showcase :is(.capture-card-interactive,.race-card-interactive){padding:0;border:0;background:none}
+.demo-showcase .race-scene{border-radius:.65rem}
+.demo-showcase .example-copy{padding:.85rem .95rem 1rem}
+.demo-showcase .example-copy .demo-app-tag{margin:0 0 .25rem;color:#345669;font-size:.79rem;font-weight:770;letter-spacing:.01em}
+.demo-showcase .example-copy h3{margin:0 0 .35rem;font-size:1.12rem}
+.demo-showcase .example-actions{padding-top:.15rem;font-size:.88rem}
+.demo-showcase :is(.demo-how,.om-capture-caption,.om-file-hint,.om-android-hint,.tg-note){
+  margin:.4rem .1rem 0;color:#36596b;font-size:.82rem;line-height:1.45
+}
+.demo-examples-note{color:#36596b;font-size:.82rem;margin:-.34rem 0 .9rem}
+</style>
+<link rel="stylesheet" href="/assets/preview/capture-demo.css?v=touch1">
+<link rel="stylesheet" href="/assets/preview/race-card.css?v=allpad1">
+<link rel="stylesheet" href="/assets/preview/file-demo.css?v=3">
+<link rel="stylesheet" href="/assets/preview/android-demo.css?v=compact2">
+<link rel="stylesheet" href="/assets/preview/tablet-gesture-demo.css?v=cursor2">
+<link rel="stylesheet" href="/assets/preview/layout-demo.css?v=native1">
+<style>.topic-language-links{padding:7px 0;display:flex;gap:8px;flex-wrap:wrap;width:min(980px,calc(100% - 36px));margin:auto;font-size:.9rem}.topic-language-links [aria-current]{font-weight:750}</style></head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="preview-header"><div class="preview-frame">
+  <a class="preview-brand" href="/en/" aria-label="OneMouse home"><span class="preview-mark" aria-hidden="true"><img src="/assets/preview/onemouse-android-icon.png" alt="" width="33" height="33"></span>OneMouse</a>
+  <nav class="preview-nav" aria-label="Main navigation"><a href="/en/">Home</a><a href="/en/features" aria-current="page">Features</a><a href="/en/guide-new">Connection guide</a><a href="/en/help-new">Troubleshooting</a><a href="/en/download">Downloads</a></nav>
+</div></header><nav class="topic-language-links" aria-label="Language"><a href="/features-demo" lang="ko" hreflang="ko">한국어</a> · <span lang="en" aria-current="true">English</span> · <a href="/ja/features" lang="ja" hreflang="ja">日本語</a> · <a href="/zh/features" lang="zh" hreflang="zh">中文</a> · <a href="/es/features" lang="es" hreflang="es">Español</a></nav>
+<main id="main">
+<section class="hero" id="position" aria-labelledby="kvm-title">
+  <div class="layout hero-grid">
+    <div>
+      <p class="eyebrow">OneMouse features</p>
+      <h1 id="kvm-title">Use one mouse and keyboard across your devices.</h1>
+      <p class="lede">Move the pointer past the edge of your Windows screen to click and type on a nearby Android device, Mac, or another Windows PC. Each device keeps its own screen.</p>
+      <a class="primary" href="/en/guide-new">Connect my devices</a>
+    </div>
+    <div class="layout-demo" id="layout-demo" data-layout-demo>
+      <div class="layout-window">
+        <aside class="layout-sidebar" aria-hidden="true">
+          <div class="layout-app-brand"><img src="/assets/preview/onemouse-android-icon.png" alt="" width="22" height="22"><strong>OneMouse</strong></div>
+          <div class="layout-app-nav">
+            <span><b>⌂</b><span>Dashboard</span></span>
+            <span class="is-selected"><b>▦</b><span>Device layout</span></span>
+            <span><b>⇄</b><span>File transfer</span></span>
+            <span><b>▤</b><span>Device management</span></span>
+            <span><b>⚙</b><span>Settings</span></span>
+          </div>
+        </aside>
+        <div class="layout-app-main">
+          <div class="layout-demo-top">
+            <div><h2 id="layout-demo-title">Device layout</h2><p>Choose where the pointer crosses between screens.</p></div>
+            <button type="button" class="layout-demo-reset" data-layout-reset>Reset layout</button>
+          </div>
+          <div class="layout-native-panel">
+            <p class="layout-panel-title">Device layout / pointer entry</p>
+      <div class="layout-board" data-layout-board tabindex="0" role="group" aria-labelledby="layout-demo-title" aria-describedby="layout-demo-help">
+        <svg class="layout-lines" data-layout-lines viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"></svg>
+        <div class="layout-device" data-layout-device="pc"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M12 17v4M8 21h8"/></svg>My PC</div>
+        <button type="button" class="layout-device" data-layout-device="mac"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 17V6a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v11M3 17h18l-1 3H4z"/></svg>Mac</button>
+        <button type="button" class="layout-device" data-layout-device="phone"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2"/><path d="M11 18.5h2"/></svg>Phone</button>
+        <button type="button" class="layout-device" data-layout-device="tablet"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="M18.5 11v2"/></svg>Tablet</button>
+        <span class="layout-cursor" data-layout-cursor data-device="pc" aria-hidden="true" hidden><svg viewBox="0 0 24 30" width="24" height="30" aria-hidden="true" focusable="false"><path class="layout-cursor-arrow" d="M1 1L22 19 13 18.4 17 26 13.6 28 9.3 20.3 3 27Z" fill="#fff" stroke="#142a43" stroke-width="2" stroke-linejoin="round"/><circle class="layout-cursor-dot" cx="12" cy="15" r="7.5" fill="#fff" stroke="#142a43" stroke-width="2"/></svg></span>
+      </div>
+          </div>
+        </div>
+      </div>
+      <p class="layout-demo-help" id="layout-demo-help">Drag a device to snap it to an edge of your PC. Then move the pointer from your PC toward that device.</p>
+      <p class="layout-demo-sr" role="status" aria-atomic="true" data-layout-status></p>
+      <noscript><p class="layout-demo-help">Enable JavaScript to try the layout.</p></noscript>
+      <a class="layout-demo-shot" href="/assets/pairing/pc-position-ko.webp">View an actual app screenshot (Korean)</a>
+    </div>
+  </div>
+</section>
+<div class="layout kvm-more">
+  <p><strong>Getting started:</strong> Connect your devices in the app and arrange them as they sit on your desk. Move the pointer through the active edge shown in the app. <a href="/en/help-new#cursor">If the pointer will not cross</a></p>
+  <details class="subfeature" id="quick"><summary>Device order and quick connect</summary><p>Reordering LAN devices in Device management on your main PC also changes their connection and remote-window shortcuts. Auto-reconnect connects again when a device is ready.</p></details>
+</div>
+<section class="layout examples demo-showcase" aria-labelledby="examples-title">
+  <h2 id="examples-title">Try it on screen</h2>
+<p class="demo-examples-note">These interactive examples use AI-generated scenery and do not connect to your devices.</p>
+  <div class="example-grid">
+    <article class="example" aria-labelledby="capture-example-title">
+      <div class="demo-visual">
+        <div class="capture-card-interactive" id="feature-capture-demo" data-capture-inline aria-label="Practice capturing the monitor in the image">
+          <noscript><p>Enable JavaScript to try capturing the example screen.</p></noscript>
+        </div>
+      </div>
+      <div class="example-copy">
+        <p class="demo-app-tag">App feature · Wi-Fi or LAN</p>
+        <h3 id="capture-example-title">Capture just what you need</h3>
+        <p>Copy the area you captured on your PC or send it to a connected device.</p>
+        <div class="example-actions"><a href="#screenshots">How to capture and send</a></div>
+      </div>
+    </article>
+    <article class="example" aria-labelledby="race-example-title">
+      <div class="demo-visual">
+        <div class="race-card-interactive" id="feature-race-demo" data-race-inline aria-label="Remote game demo on a simulated PC and phone">
+          <noscript><img src="/assets/preview/remote-racing-example.webp" width="1199" height="675" loading="lazy" decoding="async" alt="A racing game shown on both Windows and an Android phone"></noscript>
+        </div>
+        <p class="demo-how">Pick a game on the PC. Watch the same game appear on the phone and monitor.</p>
+      </div>
+      <div class="example-copy">
+        <p class="demo-app-tag">App feature · Android → Windows</p>
+        <h3 id="race-example-title">Control a Windows PC from your phone</h3>
+        <p>Open a connected PC’s screen on your phone and control it by touch or with a gamepad.</p>
+        <div class="example-actions"><a href="#mobile-pc-remote">How to open your PC screen</a> <a href="/en/remote#try-remote">Play all three games</a></div>
+      </div>
+    </article>
+    <article class="example file-demo-story" id="file-transfer-demo" aria-labelledby="file-transfer-title">
+      <div class="demo-visual">
+        <div class="file-demo-shell" data-file-inline aria-label="Simulated Windows-to-Mac file transfer">
+          <noscript><img src="/assets/preview/file-transfer-desk.webp" width="1536" height="1024" alt="Windows monitor and Mac on a bright desk"><p>Enable JavaScript to drag the example files.</p></noscript>
+        </div>
+      </div>
+      <div class="example-copy">
+        <p class="demo-app-tag">App feature · Windows → Mac</p>
+        <h3 id="file-transfer-title">Drag files onto the next screen</h3>
+        <p>On supported connections, drag a file past the screen edge to send it to another device.</p>
+        <div class="example-actions"><a href="#files">How to send files</a></div>
+      </div>
+    </article>
+    <article class="example" id="android-desk-demo" aria-labelledby="android-desk-demo-title">
+      <div class="demo-visual">
+        <div class="android-desk-shell" data-android-demo aria-label="Windows and Android notification and clipboard demo">
+          <noscript><img src="/assets/preview/android-notification-desk.webp" width="1536" height="1024" alt="Windows monitor and Android phone seen from an angle"><p>Enable JavaScript to try this demo.</p></noscript>
+        </div>
+      </div>
+      <div class="example-copy">
+        <p class="demo-app-tag">App feature · Android ↔ Windows</p>
+        <h3 id="android-desk-demo-title">Phone notifications and copied text on your PC</h3>
+        <p>See phone notifications on your PC. On supported connections, paste copied text on the other device.</p>
+        <div class="example-actions"><a href="#notifications">Phone notification settings</a><a href="#text-to-pc">How to copy and paste</a></div>
+      </div>
+    </article>
+    <article class="example" id="tablet-gesture-demo" aria-labelledby="tablet-gesture-demo-title">
+      <div class="demo-visual">
+        <div class="tablet-gesture-shell" data-tablet-gesture-demo aria-label="Practice Android tablet gestures with a mouse or the right-click button">
+          <noscript><img src="/assets/preview/android-tablet-gesture-desk.webp" width="1536" height="1024" alt="Windows screen and landscape Android tablet on a wooden desk"><p>Enable JavaScript to try the gestures.</p></noscript>
+        </div>
+      </div>
+      <div class="example-copy">
+        <p class="demo-app-tag">App feature · Android mouse gestures</p>
+        <h3 id="tablet-gesture-demo-title">Draw gestures in a tablet browser</h3>
+        <p>Move the pointer to Android, then go back or scroll with the mouse.</p>
+        <div class="example-actions"><a href="#mouse-gestures">How to use gestures</a></div>
+      </div>
+    </article>
+  </div>
+</section>
+<section class="layout overview" aria-labelledby="feature-jump">
+  <h2 id="feature-jump">How to use each feature</h2>
+  <p>Choose what you want to do to see the steps.</p>
+  <div class="feature-list">
+    <details class="feature" id="files">
+      <summary id="share-title"><span class="feature-name">Send files or share the clipboard</span><span class="feature-desc">Files, copied text, screenshots</span></summary>
+      <div class="panel">
+        <h3>Send files</h3><p>Drop files into the Transfer tab or Quick Drop (<strong>Ctrl+Alt+D</strong>) and choose a recipient. You can also drag files across the screen edge to a supported Windows PC or Mac. On Android, use the Transfer tab or OneMouse in the share menu.</p>
+        <p class="fine" id="file-receive-folder"><strong>Files received on your PC:</strong> Settings → General → File transfer → Received files location → Open folder.</p>
+        <div id="text-to-pc"><h3>Use copied text on another device</h3><p>On supported connections, copy text on one device and paste on the other. To send selected Android text directly to a PC, open the selection menu and choose More → <strong>OneMouse to PC</strong>.</p></div>
+        <div id="screenshots"><h3>Capture only the area you need</h3><p>On Windows, use <strong>Ctrl+Alt+S</strong>to capture an area, then copy or save it from the preview. You can send it over a supported Wi-Fi or LAN connection. Paste the received image into an app that accepts images.</p></div>
+        <p><a href="/en/help-new#sharing">If files, copy or capture does not work</a></p>
+      </div>
+    </details>
+    <details class="feature" id="remote">
+      <summary id="remote-title"><span class="feature-name">Open a remote screen</span><span class="feature-desc">Control a PC from a phone, or view devices from a PC</span></summary>
+      <div class="panel">
+        <div id="mobile-pc-remote"><h3>Open Windows from Android</h3><p>On both supported apps, connect over a local network or through your Google account. In the list of registered PCs on Android, open <strong>Remote screen</strong>and accept the request in Windows if prompted. Turn on View only if you do not want to control the PC.</p></div>
+        <div id="windows-remote"><h3>View a connected device from Windows</h3><p>Open the remote window in Device management. On Android, approve screen capture on the phone. Sharing a Mac screen or window requires the same network and screen recording permission.</p></div>
+        <details class="subfeature" id="remote-gesture-examples"><summary>Touch and pointer controls on Android</summary><p>Touch mode clicks where you tap. In pointer mode, swipe to move the pointer, then tap. Touch and hold, then release for a right-click. At 1× zoom, move two fingers to scroll.</p><div class="touch-cues" aria-label="Three ways to control the PC from your phone"><span><b aria-hidden="true">◎</b>Tap to click</span><span><b aria-hidden="true">↔</b>Swipe to move the pointer</span><span><b aria-hidden="true">⇅</b>Scroll with two fingers</span></div></details>
+        <details class="subfeature" id="remote-gamepad"><summary>Control the PC with an Android gamepad</summary><p>Supported Windows and Android apps can use an Xbox-style on-screen gamepad or a physical controller.</p></details>
+        <p class="fine">Bluetooth (beta) does not carry remote video. Supported apps can adjust quality and frame rate in the control panel.</p>
+        <p><a href="/en/help-new#remote">If the remote screen does not appear</a></p>
+      </div>
+    </details>
+    <details class="feature" id="notifications">
+      <summary id="alert-title"><span class="feature-name">View Android notifications</span><span class="feature-desc">Message alerts and verification codes</span></summary>
+      <div class="panel"><p>Grant notification access on Android and turn on <strong>Send notifications to PC</strong>. Choose which apps to include and turn on device notifications in Windows. Check past alerts and the retention period in Windows Settings.</p><p>For supported apps and notifications, reply or copy a verification code from your PC. Android protections may hide some notifications or codes.</p><p><a href="/en/help-new#alerts">If notifications are missing</a></p></div>
+    </details>
+    <details class="feature" id="mouse-gestures"><summary><span class="feature-name">Use mouse gestures</span><span class="feature-desc">Go back or scroll on Android</span></summary>
+<div class="panel">
+<p><strong>These gestures use the pointer on your Android screen</strong>. In both supported apps, go to Settings → Input &amp; clipboard → Mouse gestures and choose the apps. Gestures start off disabled.</p>
+<p>While holding right-click on the Android screen, trace the gesture, then release.</p>
+<p class="gesture-legend"><span aria-hidden="true">●</span> The dot marks the start and arrows show the direction. Follow 1 → 2 without releasing for a two-part gesture.</p>
+<div class="gesture-grid" aria-label="Seven Android mouse gestures">
+<article class="gesture-card" data-gesture="back"><svg viewBox="0 0 100 88" aria-hidden="true"><path class="gesture-edge" d="M70 44 L29 44"/><path class="gesture-head" d="M37 39L29 44L37 49"/><circle class="gesture-start" cx="70" cy="44" r="4.6"/></svg><h4>Back</h4><p class="gesture-dir">← Left</p><p>Return to the previous page or screen.</p></article>
+<article class="gesture-card" data-gesture="forward"><svg viewBox="0 0 100 88" aria-hidden="true"><path class="gesture-edge" d="M29 44 L70 44"/><path class="gesture-head" d="M62 49L70 44L62 39"/><circle class="gesture-start" cx="29" cy="44" r="4.6"/></svg><h4>Forward</h4><p class="gesture-dir">→ Right</p><p>Return to the page you went back from.</p></article>
+<article class="gesture-card" data-gesture="scroll_up"><svg viewBox="0 0 100 88" aria-hidden="true"><path class="gesture-edge" d="M50 68 L50 22"/><path class="gesture-head" d="M55 30L50 22L45 30"/><circle class="gesture-start" cx="50" cy="68" r="4.6"/></svg><h4>Scroll up</h4><p class="gesture-dir">↑ Up</p><p>Draw upward and release. A longer stroke scrolls farther.</p></article>
+<article class="gesture-card" data-gesture="scroll_down"><svg viewBox="0 0 100 88" aria-hidden="true"><path class="gesture-edge" d="M50 22 L50 68"/><path class="gesture-head" d="M45 60L50 68L55 60"/><circle class="gesture-start" cx="50" cy="22" r="4.6"/></svg><h4>Scroll down</h4><p class="gesture-dir">↓ Down</p><p>Draw downward and release. A longer stroke scrolls farther.</p></article>
+<article class="gesture-card" data-gesture="minimize"><svg viewBox="0 0 100 88" aria-hidden="true"><path class="gesture-edge" d="M30 19 L30 65 L72 65"/><path class="gesture-head" d="M64 70L72 65L64 60"/><path class="gesture-head" d="M25 40L30 48L35 40"/><text x="16" y="42">1</text><text x="54" y="79">2</text><circle class="gesture-start" cx="30" cy="19" r="4.6"/></svg><h4>Minimize app</h4><p class="gesture-dir">↓ Down → Right</p><p>Return to Home without closing the app.</p></article>
+<article class="gesture-card" data-gesture="reload"><svg viewBox="0 0 100 88" aria-hidden="true">
+  <g><rect x="4" y="4" width="42" height="80" rx="7" fill="#12213a"/><text x="25" y="19">1</text><path class="gesture-edge" d="M25 70V31"/><path class="gesture-head" d="M20 39L25 31L30 39"/><circle class="gesture-start" cx="25" cy="70" r="4.6"/></g>
+  <g transform="translate(50 0)"><rect x="4" y="4" width="42" height="80" rx="7" fill="#12213a"/><text x="25" y="19">2</text><path class="gesture-edge" d="M25 31V70"/><path class="gesture-head" d="M20 62L25 70L30 62"/><circle class="gesture-start" cx="25" cy="31" r="4.6"/></g>
+</svg><h4>Refresh</h4><p class="gesture-dir">① Up, ② back down the same line</p><p>Reload the page in supported browsers.</p></article>
+<article class="gesture-card" data-gesture="recents"><svg viewBox="0 0 100 88" aria-hidden="true"><path class="gesture-edge" d="M30 68 L30 23 L72 23"/><path class="gesture-head" d="M64 28L72 23L64 18"/><path class="gesture-head" d="M35 47L30 39L25 47"/><text x="16" y="46">1</text><text x="54" y="37">2</text><circle class="gesture-start" cx="30" cy="68" r="4.6"/></svg><h4>Recent apps</h4><p class="gesture-dir">↑ Up → Right</p><p>Open the list of recently used apps.</p></article>
+</div>
+<p class="gesture-legend">To refresh, hold the right mouse button, draw upward, then return downward along the same line in one gesture.</p>
+<p>These Android gestures do not apply to Windows, Mac, or mirrored windows. <a href="/en/help-new#cursor">If the pointer does not reach Android</a></p>
+</div></details>
+  </div>
+  <h3 class="reference-heading">Settings and shortcuts</h3>
+  <div class="feature-list">
+    <details class="feature" id="shortcuts">
+      <summary id="keys-title"><span class="feature-name">Windows shortcuts</span><span class="feature-desc">Capture, return the pointer, connect</span></summary>
+      <div class="panel">
+        <div class="key-groups">
+          <section class="key-group" aria-labelledby="shortcuts-quick"><h3 id="shortcuts-quick">Quick shortcuts</h3>
+            <dl class="key-list">
+              <div id="shortcut-return"><dt>Return the pointer to my PC</dt><dd><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Backspace</kbd></dd></div>
+              <div><dt>Open the capture tool</dt><dd><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>S</kbd></dd></div>
+              <div><dt>Toggle Quick Drop</dt><dd><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>D</kbd></dd></div>
+              <div><dt>Copy the code from a phone notification</dt><dd><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>V</kbd></dd></div>
+            </dl>
+          </section>
+          <section class="key-group" aria-labelledby="shortcuts-lan"><h3 id="shortcuts-lan">Numbered LAN devices</h3>
+            <dl class="key-list">
+              <div><dt>Connect or disconnect input</dt><dd><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>1–9</kbd></dd></div>
+              <div><dt>Open or focus the remote window</dt><dd><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>1–9</kbd></dd></div>
+            </dl>
+          </section>
+        </div>
+        <p class="fine">Capture and code copying depend on the device and its permissions.</p>
+        <p>Change or disable shortcuts in Settings → Shortcuts. <a href="/en/help-new#cursor">If input does not return</a></p>
+      </div>
+    </details>
+    <details class="feature" id="permissions">
+      <summary id="perm-title"><span class="feature-name">Check device permissions</span><span class="feature-desc">Android and Mac accessibility, screen recording</span></summary>
+      <div class="panel"><p>Android input requires <strong>Accessibility</strong>, and Mac input requires <strong>Accessibility permission</strong>. On macOS 15 or later, check Local Network permission if the Mac is not found. Screen capture or recording requires separate approval when you open a remote screen.</p><p><a href="/en/compatibility">Supported devices and connections</a></p></div>
+    </details>
+  </div>
+</section>
+</main>
+<footer class="preview-footer"><div class="preview-frame">
+  <p>OneMouse interactive examples. Demos do not connect to your devices.</p>
+  <nav class="preview-refs" aria-label="Related links">
+    <a href="/en/compatibility">Device and connection support</a><a href="/en/technical">Technical and security details</a><a href="/en/pricing">Pricing</a><a href="/en/privacy">Privacy</a><a href="/en/terms">Terms</a><a href="/en/licenses">Open source licenses</a><a href="/en/">OneMouse home</a>
+  </nav>
+</div></footer>
+<script>
+(() => {
+  function showLinkedFeature() {
+    const target = document.getElementById(location.hash.slice(1));
+    if (!target || !target.closest('main')) return;
+    let detail = target.closest('details');
+    let opened = false;
+    while (detail) {
+      if (!detail.open) { detail.open = true; opened = true; }
+      detail = detail.parentElement.closest('details');
+    }
+    if (opened) requestAnimationFrame(() => target.scrollIntoView({block:'start'}));
+  }
+  showLinkedFeature();
+  window.addEventListener('hashchange', showLinkedFeature);
+})();
+</script>
+<script src="/js/onemouse-demos-en.js?v=1" defer></script>
+<script src="/js/preview-arcade-games.js?v=endless1" defer></script>
+<script src="/js/onemouse-race-en.js?v=1" defer></script>
+<script src="/js/preview-feature-demos.js?v=simple1" defer></script>
+<script defer src="/js/preview-file-mount.js?v=1"></script>
+<script src="/js/preview-android-mount.js?v=1" defer></script>
+<script src="/js/preview-tablet-gesture-mount.js?v=1" defer></script>
+</body>
+</html>

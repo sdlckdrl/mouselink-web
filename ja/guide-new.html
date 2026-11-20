@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="OneMouse で Android、Mac、別の Windows PC にマウスとキーボードをつなぐためのガイドです。">
+<meta name="theme-color" content="#f5f8fa">
+<title>OneMouse · 接続ガイド（プレビュー）</title>
+<style>
+:root{color-scheme:light;--bg:var(--preview-bg);--surface:var(--preview-panel);--ink:var(--preview-ink);--muted:var(--preview-muted);--mint:var(--preview-accent);--line:var(--preview-line);--radius:18px}*{box-sizing:border-box}[hidden]{display:none!important}body{margin:0;background:var(--bg);color:var(--ink);font:1rem/1.65 system-ui,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;word-break:keep-all;overflow-wrap:anywhere}a{color:var(--mint);text-underline-offset:.2em}a:focus-visible,summary:focus-visible{outline:3px solid var(--mint);outline-offset:4px}a,summary{touch-action:manipulation}.wrap{width:min(980px,calc(100% - 36px));margin-inline:auto}.top{border-bottom:1px solid var(--preview-line)}.top .wrap,.foot .wrap{min-height:62px;display:flex;gap:14px;justify-content:space-between;align-items:center;flex-wrap:wrap}.top a,.foot a{color:var(--ink)}.brand{display:inline-flex;align-items:center;gap:.59rem;font-size:1.12rem;font-weight:850;text-decoration:none;letter-spacing:-.035em}.mark{display:grid;place-items:center;width:32px;height:32px;background:var(--mint);color:#fff;border-radius:10px}.mark svg{width:18px}.top-links{display:flex;gap:12px;font-size:.9rem}.skip{position:absolute;left:12px;top:-160px;background:var(--mint);color:#fff;padding:9px;border-radius:8px;z-index:3}.skip:focus{top:8px}.hero{padding:44px 0 27px;background:radial-gradient(ellipse at 79% 0%,#e3f4f1 0,transparent 67%)}.tag{display:inline-flex;gap:8px;align-items:center;font-size:.82rem;letter-spacing:.04em;color:var(--mint);font-weight:800;margin:0 0 10px}.tag em{font-style:normal;color:var(--muted);border:1px solid #afc3ce;border-radius:999px;padding:1px 7px}.hero h1{font-size:clamp(2.05rem,6vw,3.66rem);line-height:1.14;letter-spacing:-.062em;margin:0}.hero p:not(.tag){color:var(--muted);margin:14px 0 18px;max-width:42ch}.device-nav{display:grid;gap:7px;grid-template-columns:1fr}.device-nav a{display:flex;min-height:46px;align-items:center;gap:10px;border-radius:11px;border:1px solid #7b929f;background:#fff;color:var(--ink);text-decoration:none;padding:8px 11px;font-size:.95rem;font-weight:760}.device-nav a[aria-current]{border-color:var(--mint);background:var(--preview-soft);color:#115c4d}.device-nav a:hover{border-color:var(--preview-accent)}.device-nav .number{display:inline-grid;place-items:center;min-width:27px;height:27px;border-radius:50%;background:#e7eef4;color:#2d4960;font-size:.76rem}.device-nav a[aria-current] .number{color:#fff;background:var(--mint)}.body{padding:20px 0 56px}.panel{border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);padding:17px;margin-bottom:20px;scroll-margin-top:14px}.panel h2,.section h2{font-size:clamp(1.55rem,4vw,2.18rem);line-height:1.22;letter-spacing:-.045em;margin:0 0 10px}.pill{display:inline-block;border-radius:999px;padding:2px 9px;color:var(--mint);background:var(--preview-soft);font-size:.84rem;font-weight:800;margin:0 0 9px}.panel p{color:var(--muted);margin:0 0 12px}.steps{list-style:none;padding:0;margin:20px 0 0;display:grid;gap:11px;counter-reset:guide}.steps>li{min-width:0;counter-increment:guide;position:relative;border:1px solid var(--preview-line);border-radius:12px;padding:15px 13px 10px 44px;background:#f8fbfc}.steps>li::before{content:counter(guide);display:grid;place-items:center;position:absolute;left:11px;top:14px;width:24px;height:24px;border-radius:50%;background:var(--preview-soft);color:#115c4d;font-weight:800;font-size:.79rem}.steps h3{font-size:1.08rem;line-height:1.35;margin:0 0 6px;letter-spacing:-.025em}.steps p{font-size:.95rem;margin-bottom:9px}.path{color:var(--ink);font-weight:690}.shot{margin:10px 0 7px}.shot a{display:block;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#e9f1f4;line-height:0}.shot img{width:100%;height:auto;max-height:230px;display:block;object-fit:contain}.shot figcaption{font-size:.82rem;color:var(--muted);margin-top:4px}.split-shot{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.tip{color:#194b43;background:#e6f5f1;border-left:3px solid var(--mint);border-radius:8px;padding:9px 11px;margin:12px 0;font-size:.9rem}.tip a{white-space:normal}.panel details{border-top:1px solid var(--line);margin-top:15px;padding:10px 0 0}.panel summary{font-weight:770;cursor:pointer;min-height:44px;display:list-item;padding:6px 0;color:var(--ink)}.panel details p{font-size:.94rem}.section{margin:34px 0 0;padding-top:23px;border-top:1px solid var(--line)}.group{display:grid;gap:9px}.card{border:1px solid var(--line);border-radius:11px;padding:12px;background:#fff}.card h3{margin:0 0 5px;font-size:1rem}.card p{color:var(--muted);font-size:.9rem;margin:0 0 6px}.card a{font-weight:700}.section>p{color:var(--muted);font-size:.92rem}.foot{border-top:1px solid var(--line);color:var(--muted);font-size:.88rem;padding-block:7px}.foot nav{display:flex;gap:13px;flex-wrap:wrap}
+@media(min-width:500px){.device-nav{grid-template-columns:repeat(3,minmax(0,1fr))}.device-nav a{justify-content:center;padding-inline:6px}}
+@media(min-width:680px){.hero{padding-block:63px 34px}.panel{padding:25px}.steps,.group{grid-template-columns:repeat(2,minmax(0,1fr))}.shot img{max-height:250px}}
+@media(min-width:850px){.group{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.steps>li,.panel .group .card{display:flex;flex-direction:column}
+.steps>li>.shot,.steps>li>.split-shot,.panel .group .card .shot{margin-top:auto;padding-top:8px}
+.shot a{position:relative;aspect-ratio:16/10;display:block}
+.shot img{position:absolute;inset:0;width:100%;height:100%;max-height:none;min-height:0;object-fit:contain}
+.split-shot .shot a{aspect-ratio:8/10}
+.shot--diagram a{background:#edf4f6}
+.shot--example a{background:#eef4ff}
+.shot--access-entry a{aspect-ratio:3/1}
+.shot--screen-recording a{aspect-ratio:15/7}
+.access-flow{display:grid;gap:8px;margin-top:4px}
+.access-flow .shot{margin:0}
+.access-flow .shot a{aspect-ratio:15/7;background:#eff3fa}
+.access-flow .shot-label{margin-right:.25rem}
+@media(min-width:560px){.access-flow{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.shot--example .shot-label{background:#e7efff;color:#244683}
+.shot--detail a{aspect-ratio:3/1;background:#f2f6fa}
+.panel details .shot--detail{max-width:640px}
+.shot-label{display:inline-block;margin-inline-end:.4rem;padding:.02rem .35rem;background:#e4eef3;color:#345264;border-radius:.25rem;font-size:.72rem;font-weight:760}
+.shot--diagram .shot-label{background:#e2f2ec;color:#196254}
+.panel details>.shot,.panel details #connect-bluetooth .shot{max-width:540px}
+@media(max-width:410px){.steps>li{padding:13px 10px 10px 36px}.steps>li::before{left:7px}.shot-label{font-size:.68rem}}
+
+.shot-dialog{padding:0;border:0;background:transparent;color:white;max-width:calc(100vw - 24px);max-height:calc(100dvh - 72px);overflow:visible}
+.shot-dialog::backdrop{background:rgba(9,18,33,.91)}
+.shot-dialog img{display:block;width:auto;height:auto;min-width:0;max-width:min(1100px,calc(100vw - 24px));max-height:calc(100dvh - 84px);object-fit:contain;border-radius:8px;background:#f1f5f9}
+.shot-dialog p{margin:0;padding:14px;text-align:center;background:#17243b;border-radius:8px}
+.shot-dialog button{position:fixed;z-index:1;top:max(8px,env(safe-area-inset-top));right:max(12px,env(safe-area-inset-right));width:44px;height:44px;display:grid;place-items:center;padding:0;border:1px solid #8091a8;border-radius:50%;background:#17243b;color:#fff;font:400 27px/1 system-ui;cursor:pointer}
+.shot-dialog button:focus-visible{outline:3px solid #9bc4ff;outline-offset:2px}.shot-dialog:not([open]){display:none}.shot-dialog [hidden]{display:none}
+html:has(.shot-dialog[open]){overflow:hidden;overscroll-behavior:none}
+a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
+
+.pairing-flow{display:grid;grid-template-columns:minmax(0,1fr);gap:10px}
+.pairing-flow .shot{margin:0}
+.pairing-flow .shot a{aspect-ratio:8/5}
+.guide-checks{list-style:none;counter-reset:cursor-check;margin:12px 0 10px;padding:0;display:grid;gap:8px}
+.guide-checks li{counter-increment:cursor-check;border:1px solid var(--line);border-radius:10px;background:#f8fbfc;padding:8px 10px;display:flex;align-items:baseline;gap:8px;font-size:.93rem;color:var(--muted)}
+.guide-checks li::before{content:counter(cursor-check);display:grid;place-items:center;flex:none;width:21px;height:21px;border-radius:50%;background:var(--preview-soft);color:#115c4d;font-size:.74rem;font-weight:780}
+.guide-checks li strong{color:var(--ink)}
+#cursor-check h2{font-size:clamp(1.17rem,3vw,1.5rem);margin-bottom:6px}
+#cursor-check p{margin-bottom:0}
+@media(min-width:560px){.pairing-flow{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(min-width:680px){
+  .guide-checks{grid-template-columns:repeat(3,minmax(0,1fr))}
+  #mac-pairing,#mac-handoff{grid-column:1/-1}
+  #mac-handoff{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.08fr);grid-template-rows:auto 1fr;column-gap:16px}
+  #mac-handoff>.shot{grid-column:2;grid-row:1/3;margin:0;padding:0}
+}
+#mac-pairing>.pairing-flow+p{margin:7px 0 0}
+    [data-legacy-link]{display:none}
+    [data-legacy-link]:target{display:block;margin:1rem 0 1.75rem;padding:1rem 1.15rem;border:1px solid var(--preview-line);border-left:4px solid var(--preview-accent);border-radius:12px;background:var(--preview-panel);scroll-margin-top:1.5rem}
+    [data-legacy-link] h2{font-size:1.2rem;margin:0 0 .45rem}
+    [data-legacy-link] p{margin:.4rem 0}
+    [data-legacy-link] a{font-weight:700}
+  body{word-break:normal}
+</style>
+<link rel="icon" href="/assets/preview/onemouse-android-icon.png" type="image/png" sizes="240x240">
+<link rel="stylesheet" href="/assets/preview/one-preview.css?v=light1">
+<style>.topic-language-links{padding:7px 0;display:flex;gap:8px;flex-wrap:wrap;width:min(980px,calc(100% - 36px));margin:auto;font-size:.9rem}.topic-language-links [aria-current]{font-weight:750}</style></head>
+<body>
+<a class="skip" href="#main">本文へ移動</a>
+<header class="preview-header"><div class="preview-frame">
+  <a class="preview-brand" href="/ja/" aria-label="OneMouse ホーム"><span class="preview-mark" aria-hidden="true"><img src="/assets/preview/onemouse-android-icon.png" alt="" width="33" height="33"></span>OneMouse</a>
+  <nav class="preview-nav" aria-label="サイトメニュー"><a href="/ja/">ホーム</a><a href="/ja/features">機能紹介</a><a href="/ja/guide-new" aria-current="page">接続ガイド</a><a href="/ja/help-new">トラブルシューティング</a><a href="/ja/download">ダウンロード</a></nav>
+</div></header><nav class="topic-language-links" aria-label="言語"><a href="/guide-demo" lang="ko" hreflang="ko">한국어</a> · <a href="/en/guide-new" lang="en" hreflang="en">English</a> · <span lang="ja" aria-current="true">日本語</span> · <a href="/zh/guide-new" lang="zh" hreflang="zh">中文</a> · <a href="/es/guide-new" lang="es" hreflang="es">Español</a></nav>
+<main id="main">
+  <div class="hero"><div class="wrap">
+    <p class="tag">OneMouse 接続ガイド <em>プレビュー</em></p>
+    <h1>どの端末を接続しますか？</h1>
+    <p>マウスとキーボードをつないだ Windows PC から始めます。操作したい端末を選び、同じルーターで接続するか、 <a href="#connect-account">Google アカウントで自分の端末を探す方法</a>をご確認ください。</p>
+    <nav class="device-nav" aria-label="接続する端末の種類">
+      <a href="#android" data-device="android"><span class="number" aria-hidden="true">01</span>Android スマートフォン・タブレット</a>
+      <a href="#mac" data-device="mac"><span class="number" aria-hidden="true">02</span>Mac</a>
+      <a href="#windows" data-device="windows"><span class="number" aria-hidden="true">03</span>別の Windows PC</a>
+    </nav>
+  </div></div>
+  <div class="body wrap">
+    <p class="tip">一部のスクリーンショットは韓国語版の画面です。お使いの言語によってメニュー名が異なる場合があります。</p>
+    <section id="position" data-legacy-link aria-label="端末の配置とカーソルが通る位置"><h2>端末の配置とカーソルが通る位置</h2><p>詳しくは既存のガイドをご覧ください。</p><p><a href="/ja/guide#position">既存の詳しいガイドを見る</a></p></section>
+    <section id="remote" data-legacy-link aria-label="リモート画面を開く"><h2>リモート画面を開く</h2><p>詳しくは既存のガイドをご覧ください。</p><p><a href="/ja/guide#remote">既存の詳しいガイドを見る</a></p></section>
+    <section id="windows-remote" data-legacy-link aria-label="Windows のリモートウィンドウを操作する"><h2>Windows のリモートウィンドウを操作する</h2><p>詳しくは既存のガイドをご覧ください。</p><p><a href="/ja/guide#windows-remote">既存の詳しいガイドを見る</a></p></section>
+    <section id="mobile-pc-remote" data-legacy-link aria-label="スマートフォンから PC を操作する"><h2>スマートフォンから PC を操作する</h2><p>詳しくは既存のガイドをご覧ください。</p><p><a href="/ja/guide#mobile-pc-remote">既存の詳しいガイドを見る</a></p></section>
+    <section id="remote-gesture-examples" data-legacy-link aria-label="リモート操作のジェスチャー"><h2>リモート操作のジェスチャー</h2><p>詳しくは既存のガイドをご覧ください。</p><p><a href="/ja/guide#remote-gesture-examples">既存の詳しいガイドを見る</a></p></section>
+    <section id="mouse-gestures" data-legacy-link aria-label="マウスジェスチャー"><h2>マウスジェスチャー</h2><p>詳しくは既存のガイドをご覧ください。</p><p><a href="/ja/guide#mouse-gestures">既存の詳しいガイドを見る</a></p></section>
+    <section id="mouse-gestures-title" data-legacy-link aria-label="マウスジェスチャー"><h2>マウスジェスチャー</h2><p>詳しくは既存のガイドをご覧ください。</p><p><a href="/ja/guide#mouse-gestures-title">既存の詳しいガイドを見る</a></p></section>
+    <section id="files" data-legacy-link aria-label="ファイルとクリップボード"><h2>ファイルとクリップボード</h2><p>詳しくは既存のガイドをご覧ください。</p><p><a href="/ja/guide#files">既存の詳しいガイドを見る</a></p></section>
+    <section id="screenshots" data-legacy-link aria-label="スクリーンショットの撮影・送信"><h2>スクリーンショットの撮影・送信</h2><p>詳しくは既存のガイドをご覧ください。</p><p><a href="/ja/guide#screenshots">既存の詳しいガイドを見る</a></p></section>
+    <section id="text-to-pc" data-legacy-link aria-label="Android から PC にテキスト・ファイルを送る"><h2>Android から PC にテキスト・ファイルを送る</h2><p>選んだテキストを PC に送れます。ファイルとテキストの詳しい送信手順は既存のガイドをご覧ください。</p><p><a href="/ja/guide#text-to-pc">既存の詳しいガイドを見る</a></p></section>
+    <section id="file-receive-folder" data-legacy-link aria-label="PC で受信したファイルを探す"><h2>PC で受信したファイルを探す</h2><p>詳しくは既存のガイドをご覧ください。</p><p><a href="/ja/guide#file-receive-folder">既存の詳しいガイドを見る</a></p></section>
+    <section id="notifications" data-legacy-link aria-label="スマートフォンの通知と返信"><h2>スマートフォンの通知と返信</h2><p>詳しくは既存のガイドをご覧ください。</p><p><a href="/ja/guide#notifications">既存の詳しいガイドを見る</a></p></section>
+    <section id="quick" data-legacy-link aria-label="端末の並び順とクイック接続"><h2>端末の並び順とクイック接続</h2><p>詳しくは既存のガイドをご覧ください。</p><p><a href="/ja/guide#quick">既存の詳しいガイドを見る</a></p></section>
+    <section id="device-order" data-legacy-link aria-label="端末の並び順とショートカットの番号"><h2>端末の並び順とショートカットの番号</h2><p>詳しくは既存のガイドをご覧ください。</p><p><a href="/ja/guide#device-order">既存の詳しいガイドを見る</a></p></section>
+    <section id="bluetooth" data-legacy-link aria-label="Bluetooth で接続"><h2>Bluetooth で接続</h2><p>詳しくは既存のページをご覧ください。</p><p><a href="#connect-bluetooth">Android</a> · <a href="#windows-bluetooth">Windows PC</a> · <a href="#mac-bluetooth">Mac</a> · <a href="/ja/guide#bluetooth">既存の詳しいガイドを見る</a></p></section>
+    <section id="permissions" data-legacy-link aria-label="端末ごとに必要な権限"><h2>端末ごとに必要な権限</h2><p>詳しくは既存のガイドをご覧ください。</p><p><a href="/ja/guide#permissions">既存の詳しいガイドを見る</a></p></section>
+    <section id="keyboard-shortcuts" data-legacy-link aria-label="キーボードショートカット"><h2>キーボードショートカット</h2><p>新しいショートカットの概要、または Windows・Android のショートカット一覧をご覧ください。</p><p><a href="/ja/guide#keyboard-shortcuts">既存の詳しいガイドを見る</a></p></section>
+    <section id="shortcuts" data-legacy-link aria-label="キーボードショートカット"><h2>キーボードショートカット</h2><p>新しいショートカットの概要、または Windows・Android のショートカット一覧をご覧ください。</p><p><a href="/ja/guide#shortcuts">既存の詳しいガイドを見る</a></p></section>
+    <section id="pc-shortcuts-title" data-legacy-link aria-label="Windows アプリの既定のショートカット"><h2>Windows アプリの既定のショートカット</h2><p>詳しくは既存のページをご覧ください。</p><p><a href="/ja/guide#pc-shortcuts-title">既存の詳しいガイドを見る</a></p></section>
+    <section id="shortcuts-next-release" data-legacy-link aria-label="端末ごとのリモートウィンドウのショートカット"><h2>端末ごとのリモートウィンドウのショートカット</h2><p>詳しくは既存のページをご覧ください。</p><p><a href="/ja/guide#shortcuts-next-release">既存の詳しいガイドを見る</a></p></section>
+    <section id="android-shortcuts-title" data-legacy-link aria-label="Android 操作のショートカット"><h2>Android 操作のショートカット</h2><p>詳しくは既存のページをご覧ください。</p><p><a href="/ja/guide#android-shortcuts-title">既存の詳しいガイドを見る</a></p></section>
+    <section class="panel" id="android" data-device-panel aria-labelledby="android-title">
+      <p class="pill">おすすめ · 同じルーターで接続</p>
+      <span id="start" aria-hidden="true"></span>
+      <span id="connect-wifi" aria-hidden="true"></span>
+      <h2 id="android-title" tabindex="-1">Android スマートフォン・タブレットを接続する</h2>
+      <p>QR コードか 6 桁のコードのどちらかを使います。PC が有線接続でも、同じルーターにつながっていれば使えます。Google ログインは不要です。 <a href="#connect-account">Google アカウントで接続する場合</a> · <a href="#connect-bluetooth">Bluetooth で接続する（ベータ版）</a></p>
+      <ol class="steps">
+        <li id="android-access"><h3>アプリを開いて Android のユーザー補助を有効にする</h3><p>Windows と Android に <a href="/ja/#get">OneMouse をインストール</a>し、同じルーターに接続します。スマートフォンでは次の手順で OneMouse の <strong>ユーザー補助</strong>を有効にします。画面は Galaxy の例です。項目名は端末や Android のバージョンによって異なります。</p>
+          <figure class="shot shot--example shot--access-entry"><a href="/assets/preview/guide/android-access-entry-example.svg" aria-label="Android 版 OneMouse ホームのユーザー補助の権限を求めるカードを拡大"><img src="/assets/preview/guide/android-access-entry-example.svg" width="480" height="161" alt="Android 版 OneMouse ホームのユーザー補助の権限を求めるカード" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">アプリ画面の再現（韓国語）</span>① カードが出たらタップします。出ない場合はスマートフォンの設定から「ユーザー補助」を開きます。</figcaption></figure>
+          <div class="access-flow"><figure class="shot shot--example"><a href="/assets/preview/guide/galaxy-accessibility-installed-apps-example.svg" aria-label="Galaxy のユーザー補助で、インストール済みアプリ一覧から One Mouse を選ぶ画面を拡大"><img src="/assets/preview/guide/galaxy-accessibility-installed-apps-example.svg" width="480" height="224" alt="Galaxy のユーザー補助で、インストール済みアプリ一覧から One Mouse を選ぶ画面" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">Galaxy の画面例（韓国語）</span>② 「インストール済みアプリ」で One Mouse を選びます。</figcaption></figure><figure class="shot shot--example"><a href="/assets/preview/guide/galaxy-accessibility-onemouse-switch-example.svg" aria-label="Galaxy の One Mouse のユーザー補助設定で上部のスイッチをオンにする画面を拡大"><img src="/assets/preview/guide/galaxy-accessibility-onemouse-switch-example.svg" width="480" height="224" alt="Galaxy の One Mouse のユーザー補助設定で上部のスイッチをオンにする画面" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">Galaxy の画面例（韓国語）</span>③ 上部のスイッチをオンにして、確認画面が出たら「許可」をタップします。</figcaption></figure></div></li>
+        <li><h3>Windows で QR コード・認証コードを開く</h3><p><span class="path">デバイス管理 → 別の方法で接続 → この PC の QR コード・認証コード</span>を選びます。</p>
+          <figure class="shot"><a href="/assets/pairing/pc-code-ja.webp" aria-label="Windows の QR コード・認証コードの画面例を拡大"><img src="/assets/pairing/pc-code-ja.webp" width="888" height="744" alt="Windows 版 OneMouse の QR コード・6 桁の認証コードのウィンドウ" loading="lazy"></a><figcaption><span class="shot-label">アプリの画面例（韓国語）</span>画像の番号ではなく、自分の PC に表示された番号を使います。</figcaption></figure></li>
+        <li><h3>Android で認証コードを入力するか QR コードを読み取る</h3><p><span class="path">ホーム → 別の方法で接続 → QR コード・認証コードで PC を追加</span>を選びます。 <strong>数字コード</strong>にコードを入力するか、 <strong>QR コードをスキャン → カメラを起動</strong>から PC 画面を読み取ります。 <a href="/assets/preview/guide/android-bluetooth-entry-ko.webp">「QR コード・認証コードで PC を追加」ボタンの位置</a></p>
+          <div class="split-shot">
+            <figure class="shot"><a href="/assets/pairing/android-code-ja.webp" aria-label="Android で数字コードを入力する画面例を拡大"><img src="/assets/pairing/android-code-ja.webp" width="1080" height="2400" alt="Android 版 OneMouse の数字コードタブ" loading="lazy"></a><figcaption><span class="shot-label">アプリの画面例（韓国語）</span>6 桁のコード</figcaption></figure>
+            <figure class="shot"><a href="/assets/pairing/android-qr-ja.webp" aria-label="Android の QR コード読み取り画面例を拡大"><img src="/assets/pairing/android-qr-ja.webp" width="1080" height="2400" alt="Android 版 OneMouse の QR コード読み取りタブ" loading="lazy"></a><figcaption><span class="shot-label">アプリの画面例（韓国語）</span>QR コード</figcaption></figure>
+          </div></li>
+        <li><h3>端末の位置を合わせ、カーソルを移動する</h3><p>Android のホームにある <strong>登録済み PC</strong>で接続を確認します。Windows でスマートフォンやタブレットを実際に置いた方向に配置し、その側の画面端の通り道へカーソルを動かします。</p>
+          <figure class="shot"><a href="/assets/pairing/pc-position-ja.webp" aria-label="Android 端末の配置例を拡大"><img src="/assets/pairing/pc-position-ja.webp" width="2240" height="1800" alt="Windows 版 OneMouse で Android を PC の右に配置した画面" loading="lazy"></a><figcaption><span class="shot-label">アプリの画面例（韓国語）</span>実際に端末を置いた方向へカーソルを移動します。</figcaption></figure></li>
+      </ol>
+      <details id="alternatives"><summary>別の接続方法：Bluetooth（ベータ版）</summary>
+        <div id="connect-bluetooth"><h3>Bluetooth で接続（ベータ版）</h3><p>両方の端末で Bluetooth をオンにします。Android 版 OneMouse の <strong>Bluetooth モードを開始</strong>と、Windows の Bluetooth 設定でのペアリングが必要です。接続後は OneMouse の端末一覧で接続状態と配置を確認します。リモート画面の映像は Bluetooth では送信できません。</p><p><a href="/ja/technical">接続方法ごとに使える機能</a></p>
+          <figure class="shot shot--detail"><a href="/assets/preview/guide/android-bluetooth-entry-ko.webp" aria-label="Android 版 OneMouse の「別の方法で接続」から Bluetooth 設定を開く実際の画面を拡大"><img src="/assets/preview/guide/android-bluetooth-entry-ko.webp" width="1048" height="303" alt="Android 版 OneMouse の「別の方法で接続」から Bluetooth 設定を開く実際の画面" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">旧バージョンの実際の画面（韓国語）</span>ホームで「別の方法で接続」を開き、「Bluetooth 設定」をタップします。</figcaption></figure><figure class="shot shot--example"><a href="/assets/preview/guide/android-bt-start-example.svg" aria-label="Android 版 OneMouse の Bluetooth モード開始ボタンを拡大"><img src="/assets/preview/guide/android-bt-start-example.svg" width="480" height="281" alt="Android 版 OneMouse の接続設定と Bluetooth モード開始ボタン" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">アプリ画面の再現（韓国語）</span>設定で「Bluetooth モードを開始」をタップします。</figcaption></figure></div>
+      </details>
+    </section>
+    <section class="panel" id="mac" data-device-panel aria-labelledby="mac-title">
+      <p class="pill">おすすめ · 同じネットワークで接続</p>
+      <h2 id="mac-title" tabindex="-1">Windows から Mac を接続する</h2>
+      <p>Apple シリコン搭載の Mac と macOS 13 以降が必要です。両方の端末を同じルーターの Wi-Fi または LAN につなげば、ログインせずに使えます。 <a href="#connect-account">Google アカウントで Mac を接続する</a> · <a href="#mac-bluetooth">Bluetooth で接続する（ベータ版）</a></p>
+      <ol class="steps">
+        <li><h3>Windows と Mac でアプリを開く</h3><p><a href="/ja/#get">OneMouse をインストール</a>し、両方の端末で起動します。接続は Windows から始めます。</p>
+          <figure class="shot shot--diagram"><a href="/assets/preview/guide/mac-start.svg" aria-label="同じネットワーク上の Windows と Mac で OneMouse を開く説明画像を拡大"><img src="/assets/preview/guide/mac-start.svg" width="760" height="450" alt="同じネットワーク上の Windows と Mac で OneMouse を開く説明画像" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">説明図</span>マウスとキーボードをつないだ Windows から接続を始めます。</figcaption></figure></li>
+        <li id="mac-access"><h3>Mac でアクセシビリティを許可する</h3><p>Windows のマウスとキーボードの入力を受け取るには、Mac で <strong>アクセシビリティ</strong>を許可します。画面の配置は macOS のバージョンによって異なります。</p>
+          <figure class="shot shot--example"><a href="/assets/preview/guide/mac-app-permissions-ko.svg" aria-label="Mac 版 OneMouse の設定の「詳細」タブにある macOS 権限を拡大"><img src="/assets/preview/guide/mac-app-permissions-ko.svg" width="800" height="466" alt="Mac 版 OneMouse の設定の「詳細」タブにある macOS 権限" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">アプリ画面の再現（韓国語）</span>① OneMouse の「設定 → 詳細 → macOS の権限」で「アクセシビリティ」の横にあるボタンを押します。</figcaption></figure>
+          <div class="access-flow"><figure class="shot shot--example"><a href="/assets/preview/guide/macos-privacy-accessibility-example.svg" aria-label="Mac のシステム設定の「プライバシーとセキュリティ」で「アクセシビリティ」を選ぶ画面を拡大"><img src="/assets/preview/guide/macos-privacy-accessibility-example.svg" width="480" height="224" alt="Mac のシステム設定の「プライバシーとセキュリティ」で「アクセシビリティ」を選ぶ画面" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">macOS の画面例（韓国語）</span>② 「プライバシーとセキュリティ」で「アクセシビリティ」を開きます。</figcaption></figure><figure class="shot shot--example"><a href="/assets/preview/guide/macos-accessibility-onemouse-switch-example.svg" aria-label="Mac のシステム設定の「アクセシビリティ」で OneMouse をオンにした画面を拡大"><img src="/assets/preview/guide/macos-accessibility-onemouse-switch-example.svg" width="480" height="224" alt="Mac のシステム設定の「アクセシビリティ」で OneMouse をオンにした画面" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">macOS の画面例（韓国語）</span>③ 一覧で OneMouse をオンにします。</figcaption></figure></div>
+          <p>一覧に OneMouse がない場合は <strong>+</strong>を押して、インストール済みの OneMouse を追加します。macOS 15 以降では、 <strong>ローカルネットワーク</strong> へのアクセスを求められた場合も許可します。</p></li>
+        <li id="mac-pairing"><h3>Mac の認証コードを Windows に入力する</h3><p>Mac 版 OneMouse の <span class="path">デバイス管理 → 別の方法で接続 → この Mac の認証コードを表示</span>でコードを確認します。Windows 版 OneMouse で <span class="path">デバイス管理 → 別の方法で接続</span>を開き、「同じ Wi-Fi · ペアリング」に表示された Mac の横に 6 桁のコードを入力して、 <strong>ペアリング</strong>を押します。</p>
+          <div class="pairing-flow"><figure class="shot shot--example"><a href="/assets/preview/guide/mac-app-pairing-ko.svg" aria-label="Mac 版 OneMouse の「この Mac の認証コード」ウィンドウを拡大"><img src="/assets/preview/guide/mac-app-pairing-ko.svg" width="800" height="482" alt="Mac 版 OneMouse の「この Mac の認証コード」ウィンドウ" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">アプリ画面の再現（韓国語）</span>① Mac に表示された 6 桁のコードを確認します。</figcaption></figure><figure class="shot shot--example"><a href="/assets/preview/guide/windows-mac-pairing-entry-example-ko.svg" aria-label="Windows 版 OneMouse で Mac の認証コードを入力する例を拡大"><img src="/assets/preview/guide/windows-mac-pairing-entry-example-ko.svg" width="800" height="482" alt="Windows 版 OneMouse のデバイス管理で Mac を選び、6 桁のコードを入力する例" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">アプリ画面の再現（韓国語）</span>② Windows でそのコードを入力します。</figcaption></figure></div><p>画像の数字ではなく、自分の Mac に表示されたコードを使います。</p></li>
+        <li id="mac-handoff"><h3>Mac の方向へカーソルを移動する</h3><p>Windows の配置画面で Mac を実際に置いた方向に配置し、その側の画面端へカーソルを動かします。</p>
+          <figure class="shot shot--diagram"><a href="/assets/preview/guide/mac-placement.svg" aria-label="Windows で Mac の配置を実際の方向に合わせ、画面端を越える例を拡大"><img src="/assets/preview/guide/mac-placement.svg" width="760" height="450" alt="Windows で Mac の配置を実際の方向に合わせ、画面端を越える例" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">説明図</span>Mac を置いた側へカーソルを動かします。</figcaption></figure></li>
+      </ol>
+      <div class="tip"><strong>一覧に Mac が表示されませんか？</strong> 同じネットワークかどうか確認し、macOS でローカルネットワークのアクセス権限が必要なら許可します。 <a href="/ja/help#connection-symptoms">Mac のトラブルシューティング</a></div>
+      <details id="mac-bluetooth">
+        <summary>Windows と Mac を Bluetooth で接続する（ベータ版）</summary>
+        <p>1 対 1 の直接接続です。同じ Wi-Fi や Google ログインは不要です。まず、両方の端末を OS の Bluetooth 設定でペアリングします。</p>
+        <p>Mac 版 OneMouse の <span class="path">デバイス管理 → 別の方法で接続</span>を開き、 <strong>Bluetooth</strong> カードで <strong>オンにする</strong>を押します。接続中はカードが「デバイス管理」に直接表示されることがあります。</p>
+        <ul>
+          <li><strong>Windows から Mac を操作：</strong> Mac で入力方向を <strong>マウス・キーボードの入力を受け取る</strong>に切り替え、Windows の <strong>デバイス管理</strong>の Bluetooth 一覧で Mac への接続をオンにします。</li>
+          <li><strong>Mac から Windows を操作：</strong> Windows の <strong>デバイス管理 → 別の方法で接続 → Bluetooth</strong>で <strong>マウス・キーボードの入力を受け取る</strong>をオンにします。Mac で入力方向を <strong>マウス・キーボードの入力を送る</strong>に切り替え、一覧から Windows PC を選びます。</li>
+        </ul>
+        <p>Mac は入力を受け取るときに <strong>アクセシビリティ</strong> の権限が必要です。送るときは <strong>入力監視</strong> の権限も必要です。マウス・キーボード入力、テキストのクリップボード、ファイル・フォルダの転送に対応します。</p>
+        <p><strong>Mac の画面・ウィンドウ共有は Wi-Fi・LAN 専用</strong>です。Bluetooth では画面やウィンドウを表示できません。</p>
+        <figure class="shot shot--example"><a href="/assets/preview/guide/mac-app-bluetooth-ko.svg" aria-label="Mac 版 OneMouse のデバイス管理で Bluetooth をオンにする位置を拡大"><img src="/assets/preview/guide/mac-app-bluetooth-ko.svg" width="800" height="520" alt="Mac 版 OneMouse のデバイス管理で Bluetooth をオンにする位置" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">アプリ画面の再現（韓国語）</span>Bluetooth カードの「オンにする」を押し、入力の方向を選びます。</figcaption></figure>
+      </details>
+      <details id="mac-screen-recording"><summary>画面収録の権限も必要ですか？</summary>
+        <p><strong>マウス・キーボード操作だけなら不要です。</strong> Windows から Mac の画面やウィンドウを見る場合や、Mac で OneMouse を使ってスクリーンショットを撮る場合は、 <strong>対象の Mac</strong>で許可します。</p>
+        <p>Mac の <span class="path">システム設定 → プライバシーとセキュリティ → 画面とシステムオーディオ録音</span>で OneMouse をオンにします。項目名は macOS のバージョンによって異なることがあります。 <a href="/ja/guide#windows-remote">リモート画面のガイド</a></p>
+        <figure class="shot shot--example shot--screen-recording"><a href="/assets/preview/guide/macos-screen-recording-onemouse-switch-example.svg" aria-label="Mac のシステム設定で OneMouse の画面収録を許可する位置を拡大"><img src="/assets/preview/guide/macos-screen-recording-onemouse-switch-example.svg" width="480" height="224" alt="Mac の画面とシステムオーディオ録音の設定で OneMouse をオンにした例" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">macOS の画面例（韓国語）</span>画面を取り込む Mac で OneMouse を許可します。</figcaption></figure>
+      </details>
+    </section>
+    <section class="panel" id="windows" data-device-panel aria-labelledby="windows-title">
+      <p class="pill">おすすめ · 同じネットワークで 6 桁のコードを使って接続</p>
+      <span id="pcpc" aria-hidden="true"></span>
+      <h2 id="windows-title" tabindex="-1">別の Windows PC を接続する</h2>
+      <p>マウス・キーボードをつないだ PC から始めます。同じルーターなら、ログインせずにコードで接続できます。 <a href="#connect-account">Google アカウントで別の PC を接続する</a> · <a href="#windows-bluetooth">Bluetooth で接続する（ベータ版）</a></p>
+      <ol class="steps">
+        <li><h3>両方の PC でデバイス管理を開く</h3><p>同じルーターにつないだ両方の Windows PC で <a href="/ja/#get">OneMouse をインストール</a>して起動し、左側のメニューから <strong>デバイス管理</strong>を開きます。</p>
+          <figure class="shot shot--example"><a href="/assets/preview/guide/windows-device-management-entry-ko.webp" aria-label="Windows 版 OneMouse 左側のデバイス管理メニューを拡大"><img src="/assets/preview/guide/windows-device-management-entry-ko.webp" width="960" height="630" alt="Windows 版 OneMouse の左側でデバイス管理を選択した実際の画面" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">旧バージョンの実際の画面（韓国語）</span>左側のメニューで「デバイス管理」を開きます。</figcaption></figure></li>
+        <li><h3>相手側の PC で認証コードを確認する</h3><p>操作される側の PC で <span class="path">デバイス管理 → 別の方法で接続 → この PC の QR コード・認証コード</span>を開き、6 桁のコードを確認します。</p>
+          <figure class="shot"><a href="/assets/pairing/pc-code-ja.webp" aria-label="相手側の Windows PC で QR コード・6 桁の認証コードを確認する画面を拡大"><img src="/assets/pairing/pc-code-ja.webp" width="888" height="744" alt="相手側の Windows PC で QR コード・6 桁の認証コードを確認する画面" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">アプリの画面例（韓国語）</span>操作される側の PC でこのウィンドウを開きます。画像のコードは例です。</figcaption></figure></li>
+        <li><h3>操作する側の PC で相手の PC を選んで接続する</h3><p>操作する側の PC の <span class="path">デバイス管理 → 別の方法で接続</span>で相手の PC を選び、コードを入力します。接続状態を確認し、必要なら接続スイッチをオンにします。</p>
+          <figure class="shot"><a href="/assets/pairing/pc-peer-ja.webp" aria-label="別の PC の認証コードを入力する例を拡大"><img src="/assets/pairing/pc-peer-ja.webp" width="2240" height="1800" alt="Windows で別の PC の 6 桁のコードを入力する画面" loading="lazy"></a><figcaption><span class="shot-label">アプリの画面例（韓国語）</span>画面の端末名とコードは例です。</figcaption></figure></li>
+        <li><h3>別の PC の方向へカーソルを移動する</h3><p>配置エディターで相手の PC を実際に置いた方向に配置し、その側の画面端へカーソルを動かします。</p>
+          <figure class="shot"><a href="/assets/pairing/pc-peer-position-ja.webp" aria-label="別の Windows PC の配置例を拡大"><img src="/assets/pairing/pc-peer-position-ja.webp" width="2240" height="1800" alt="Windows のデバイス管理で別の PC を配置する画面" loading="lazy"></a><figcaption><span class="shot-label">アプリの画面例（韓国語）</span>実際に端末がある方向に合わせます。</figcaption></figure></li>
+      </ol>
+      <details id="windows-bluetooth">
+        <summary>2 台の Windows PC を Bluetooth で接続する（ベータ版）</summary>
+        <ol>
+          <li>まず、2 台の PC を Windows の Bluetooth 設定でペアリングします。</li>
+          <li>入力を受け取る PC の OneMouse で <span class="path">デバイス管理 → 別の方法で接続 → Bluetooth</span>を開き、 <strong>マウス・キーボードの入力を受け取る</strong>を選びます。Bluetooth がオフならオンにします。</li>
+          <li>入力を送る PC の同じメニューで、必要なら <strong>マウス・キーボードの入力を送る</strong>に切り替えます。一覧で受信側 PC の接続をオンにして、実際に置いた方向に配置します。</li>
+        </ol>
+        <p>Google ログインやルーターは不要です。リモート画面には同じネットワークを使います。</p>
+      </details>
+      <div class="tip"><strong>相手の PC が表示されませんか？</strong> まず両方のアプリが開いていて、同じネットワークに接続されていることを確認します。 <a href="/ja/help#connection-symptoms">接続のトラブルシューティング</a></div>
+    </section>
+    <section class="panel" id="cursor-check" aria-labelledby="cursor-check-title">
+      <h2 id="cursor-check-title">接続できたのにカーソルが移動しませんか？</h2>
+      <ol class="guide-checks">
+        <li><span><strong>配置の方向：</strong> Windows のデバイス配置と実際に置いた方向が同じか確認します。</span></li>
+        <li><span><strong>カーソルの通り道：</strong> 配置で示された画面端の範囲へカーソルを動かします。</span></li>
+        <li><span><strong>入力を受け取る端末の権限：</strong> Android では OneMouse のユーザー補助、Mac ではアクセシビリティを確認します。</span></li>
+      </ol>
+      <p><a href="/ja/help#cursor-not-crossing">カーソルのトラブルシューティング</a></p>
+    </section>
+    <section class="panel" id="connect-account" aria-labelledby="account-title">
+      <p class="pill">オプション · QR コードや数字コードを使わずに接続</p>
+      <h2 id="account-title">Google アカウントで自分の端末を探す方法</h2>
+      <p>Windows、Mac、Android の OneMouse アプリで使えます。両方のアプリを最新版に更新し、インターネットにつないで、 <strong>同じ Google アカウント</strong>でログインします。</p>
+      <div class="group">
+        <article class="card" id="account-windows"><h3>Windows ↔ Windows</h3><p>両方の PC の <strong>デバイス管理</strong>でログインします。マウスをつないだ PC で相手の PC を選び、必要なら接続スイッチをオンにします。</p>
+          <figure class="shot shot--detail"><a href="/assets/preview/guide/windows-google-account-entry-ko.webp" aria-label="Windows 版 OneMouse のデバイス管理にある Google アカウントカードと「Google でログイン」ボタンを拡大"><img src="/assets/preview/guide/windows-google-account-entry-ko.webp" width="2240" height="526" alt="Windows 版 OneMouse のデバイス管理にある Google アカウントカードと「Google でログイン」ボタン" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">旧バージョンの実際の画面（韓国語）</span>デバイス管理で「Google でログイン」を押します。</figcaption></figure></article>
+        <article class="card" id="account-mac"><h3>Windows → Mac</h3><p>Windows の <strong>デバイス管理</strong>と Mac アプリの <strong>デバイス管理</strong>でログインします。Windows の端末一覧から Mac を選んで接続します。 <a href="/assets/preview/guide/windows-google-account-entry-ko.webp">Windows のログインボタンの位置</a>  · Mac で入力を受け取るには、 <strong>アクセシビリティ</strong>を許可します。</p>
+          <figure class="shot shot--example"><a href="/assets/preview/guide/mac-app-account-ko.svg" aria-label="Mac 版 OneMouse のデバイス管理にある「Google でログイン」ボタンを拡大"><img src="/assets/preview/guide/mac-app-account-ko.svg" width="800" height="424" alt="Mac 版 OneMouse のデバイス管理にある「Google でログイン」ボタン" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">アプリ画面の再現（韓国語）</span>Mac で「Google でログイン」を押します。</figcaption></figure></article>
+        <article class="card" id="account-android"><h3>Windows → Android</h3><p>Windows の <strong>デバイス管理</strong>と Android 版 OneMouse のホームでログインします。スマートフォンの <strong>登録済み PC</strong>で自分の PC を選んで接続し、Android の <strong>ユーザー補助</strong>を有効にします。</p>
+          <figure class="shot shot--detail"><a href="/assets/preview/guide/android-account-home-ko.webp" aria-label="Android 版 OneMouse のホームにある「Google でログイン」ボタンと登録済み PC の欄を拡大"><img src="/assets/preview/guide/android-account-home-ko.webp" width="1048" height="223" alt="Android 版 OneMouse のホームにある「Google でログイン」ボタンと登録済み PC の欄" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">旧バージョンの実際の画面（韓国語）</span>ホームでログインし、下にある「登録済み PC」で自分の PC を選びます。</figcaption></figure></article>
+      </div>
+      /ja/help#account-connect-help">端末が表示されない場合</a></div>
+    </section>
+    <section class="section" id="next" aria-labelledby="next-title">
+      <h2 id="next-title">接続できたら、こんな使い方をお試しください。</h2>
+      <div class="group">
+        <article class="card"><h3>ファイルを送る</h3><p>転送画面やクイックドロップゾーンにファイルを置いて送信します。</p><a href="/ja/guide#files">ファイル転送ガイド（韓国語）</a></article>
+        <article class="card"><h3>コピーしたテキストを貼り付ける</h3><p>対応する接続方法なら、コピーしたテキストを別の端末でも使えます。</p><a href="/ja/guide#files">ファイルとクリップボードのガイド（韓国語）</a></article>
+        <article class="card"><h3>必要な範囲だけを撮影する</h3><p>既定のショートカット <strong>Ctrl+Alt+S</strong>から始めます。受信する端末や接続方法ごとの条件はガイドをご覧ください。</p><a href="/ja/guide#screenshots">撮影・送信ガイド（韓国語）</a></article>
+      </div>
+      <p><a href="/ja/guide#shortcuts">ショートカット一覧（韓国語）</a> · <a href="/ja/help">ヘルプのプレビューを見る</a></p>
+      <p>端末を接続するには、両方に <a href="/ja/#get">OneMouse をインストール</a>してください。</p>
+    </section>
+  </div>
+</main>
+<footer class="preview-footer"><div class="preview-frame">
+  <p>OneMouse · 新しいサイトのプレビューです。</p>
+  <nav class="preview-refs" aria-label="関連リンク">
+    <a href="/ja/technical">対応端末・接続方法（韓国語）</a><a href="/ja/technical">技術・セキュリティ</a><a href="/ja/privacy">プライバシー</a><a href="/ja/terms">利用規約</a><a href="/ja/licenses">オープンソースライセンス</a><a href="/ja/">既存のホームページ</a>
+  </nav>
+</div></footer>
+<dialog id="guide-image-viewer" class="shot-dialog" aria-label="ガイド画像の拡大表示">
+  <button type="button" aria-label="画像を閉じる" autofocus>×</button>
+  <img alt="" hidden>
+  <p role="status" hidden></p>
+</dialog>
+<script>
+(() => {
+  const links = [...document.querySelectorAll('[data-device]')];
+  const panels = [...document.querySelectorAll('[data-device-panel]')];
+  function showDevice(id) {
+    const target = panels.find(panel => panel.id === id);
+    if (!target) return false;
+    panels.forEach(panel => { panel.hidden = panel !== target; });
+    links.forEach(link => {
+      if (link.dataset.device === id) link.setAttribute('aria-current', 'location');
+      else link.removeAttribute('aria-current');
+    });
+    return true;
+  }
+  function applyHash() {
+    const id = location.hash.slice(1).toLowerCase();
+    if (['start','connect-wifi','pcpc'].includes(id)) {
+      showDevice(id === 'pcpc' ? 'windows' : 'android');
+      document.getElementById(id).scrollIntoView({block:'start'});
+      return true;
+    }
+    if (id === 'connect-account' || ['account-windows','account-mac','account-android'].includes(id)) {
+      if (panels.every(panel => !panel.hidden)) showDevice('android');
+      document.getElementById(id).scrollIntoView({block:'start'});
+      return true;
+    }
+    if (id === 'android-access') return showDevice('android');
+    if (['mac-access','mac-pairing'].includes(id)) {
+      showDevice('mac');
+      document.getElementById(id).scrollIntoView({block:'start'});
+      return true;
+    }
+    if (['windows-bluetooth','mac-bluetooth','mac-screen-recording'].includes(id)) {
+      showDevice(id === 'windows-bluetooth' ? 'windows' : 'mac');
+      const disclosure = document.getElementById(id);
+      disclosure.open = true;
+      disclosure.scrollIntoView({block:'start'});
+      return true;
+    }
+    if (['connect-bluetooth','alternatives'].includes(id)) {
+      showDevice('android');
+      document.getElementById('alternatives').open = true;
+      document.getElementById(id).scrollIntoView({block:'start'});
+      return true;
+    }
+    return showDevice(id);
+  }
+  if (!applyHash()) showDevice('android');
+  window.addEventListener('hashchange', () => {
+    if (!location.hash) showDevice('android');
+    else applyHash();
+  });
+  links.forEach(link => link.addEventListener('click', e => {
+    if (e.defaultPrevented || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+    showDevice(link.dataset.device);
+  }));
+
+  const viewer = document.getElementById('guide-image-viewer');
+  if (typeof viewer.showModal === 'function') {
+    const image = viewer.querySelector('img');
+    const close = viewer.querySelector('button');
+    const status = viewer.querySelector('[role="status"]');
+    const imageLinks = [...document.querySelectorAll('a[href^="/assets/pairing/"], a[href^="/assets/preview/guide/"]')]
+      .filter(link => /\.(?:svg|webp|png|jpe?g)$/i.test(link.pathname));
+    let opener = null;
+    let startedOnBackdrop = false;
+    for (const link of imageLinks) {
+      link.setAttribute('aria-haspopup', 'dialog');
+      link.addEventListener('click', event => {
+        if (event.defaultPrevented || event.button !== 0 || viewer.open) return;
+        event.preventDefault();
+        opener = link;
+        startedOnBackdrop = false;
+        const thumb = link.querySelector('img') || imageLinks.find(other => other.href === link.href && other.querySelector('img'))?.querySelector('img');
+        image.alt = thumb?.alt || link.textContent.trim();
+        status.textContent = '画像を読み込んでいます…';
+        status.hidden = false;
+        image.hidden = true;
+        viewer.showModal();
+        image.src = link.href;
+      });
+    }
+    image.addEventListener('load', () => {
+      if (!viewer.open) return;
+      image.hidden = false;
+      status.hidden = true;
+    });
+    image.addEventListener('error', () => {
+      if (!viewer.open) return;
+      image.hidden = true;
+      status.textContent = '画像を読み込めませんでした。';
+      status.hidden = false;
+    });
+    close.addEventListener('click', () => viewer.close());
+    viewer.addEventListener('pointerdown', event => { startedOnBackdrop = event.target === viewer; });
+    viewer.addEventListener('click', event => {
+      if (startedOnBackdrop && event.target === viewer) viewer.close();
+      startedOnBackdrop = false;
+    });
+    viewer.addEventListener('close', () => {
+      if (viewer.open) return;
+      image.removeAttribute('src');
+      image.hidden = true;
+      status.hidden = true;
+      opener?.focus({preventScroll:true});
+      opener = null;
+    });
+  }
+})();
+</script>
+</body>
+</html>

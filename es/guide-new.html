@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Guía preliminar para compartir el ratón y el teclado con Android, Mac u otro PC con Windows mediante OneMouse.">
+<meta name="theme-color" content="#f5f8fa">
+<title>OneMouse · Vista previa de la guía de conexión</title>
+<style>
+:root{color-scheme:light;--bg:var(--preview-bg);--surface:var(--preview-panel);--ink:var(--preview-ink);--muted:var(--preview-muted);--mint:var(--preview-accent);--line:var(--preview-line);--radius:18px}*{box-sizing:border-box}[hidden]{display:none!important}body{margin:0;background:var(--bg);color:var(--ink);font:1rem/1.65 system-ui,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;word-break:keep-all;overflow-wrap:anywhere}a{color:var(--mint);text-underline-offset:.2em}a:focus-visible,summary:focus-visible{outline:3px solid var(--mint);outline-offset:4px}a,summary{touch-action:manipulation}.wrap{width:min(980px,calc(100% - 36px));margin-inline:auto}.top{border-bottom:1px solid var(--preview-line)}.top .wrap,.foot .wrap{min-height:62px;display:flex;gap:14px;justify-content:space-between;align-items:center;flex-wrap:wrap}.top a,.foot a{color:var(--ink)}.brand{display:inline-flex;align-items:center;gap:.59rem;font-size:1.12rem;font-weight:850;text-decoration:none;letter-spacing:-.035em}.mark{display:grid;place-items:center;width:32px;height:32px;background:var(--mint);color:#fff;border-radius:10px}.mark svg{width:18px}.top-links{display:flex;gap:12px;font-size:.9rem}.skip{position:absolute;left:12px;top:-160px;background:var(--mint);color:#fff;padding:9px;border-radius:8px;z-index:3}.skip:focus{top:8px}.hero{padding:44px 0 27px;background:radial-gradient(ellipse at 79% 0%,#e3f4f1 0,transparent 67%)}.tag{display:inline-flex;gap:8px;align-items:center;font-size:.82rem;letter-spacing:.04em;color:var(--mint);font-weight:800;margin:0 0 10px}.tag em{font-style:normal;color:var(--muted);border:1px solid #afc3ce;border-radius:999px;padding:1px 7px}.hero h1{font-size:clamp(2.05rem,6vw,3.66rem);line-height:1.14;letter-spacing:-.062em;margin:0}.hero p:not(.tag){color:var(--muted);margin:14px 0 18px;max-width:42ch}.device-nav{display:grid;gap:7px;grid-template-columns:1fr}.device-nav a{display:flex;min-height:46px;align-items:center;gap:10px;border-radius:11px;border:1px solid #7b929f;background:#fff;color:var(--ink);text-decoration:none;padding:8px 11px;font-size:.95rem;font-weight:760}.device-nav a[aria-current]{border-color:var(--mint);background:var(--preview-soft);color:#115c4d}.device-nav a:hover{border-color:var(--preview-accent)}.device-nav .number{display:inline-grid;place-items:center;min-width:27px;height:27px;border-radius:50%;background:#e7eef4;color:#2d4960;font-size:.76rem}.device-nav a[aria-current] .number{color:#fff;background:var(--mint)}.body{padding:20px 0 56px}.panel{border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);padding:17px;margin-bottom:20px;scroll-margin-top:14px}.panel h2,.section h2{font-size:clamp(1.55rem,4vw,2.18rem);line-height:1.22;letter-spacing:-.045em;margin:0 0 10px}.pill{display:inline-block;border-radius:999px;padding:2px 9px;color:var(--mint);background:var(--preview-soft);font-size:.84rem;font-weight:800;margin:0 0 9px}.panel p{color:var(--muted);margin:0 0 12px}.steps{list-style:none;padding:0;margin:20px 0 0;display:grid;gap:11px;counter-reset:guide}.steps>li{min-width:0;counter-increment:guide;position:relative;border:1px solid var(--preview-line);border-radius:12px;padding:15px 13px 10px 44px;background:#f8fbfc}.steps>li::before{content:counter(guide);display:grid;place-items:center;position:absolute;left:11px;top:14px;width:24px;height:24px;border-radius:50%;background:var(--preview-soft);color:#115c4d;font-weight:800;font-size:.79rem}.steps h3{font-size:1.08rem;line-height:1.35;margin:0 0 6px;letter-spacing:-.025em}.steps p{font-size:.95rem;margin-bottom:9px}.path{color:var(--ink);font-weight:690}.shot{margin:10px 0 7px}.shot a{display:block;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#e9f1f4;line-height:0}.shot img{width:100%;height:auto;max-height:230px;display:block;object-fit:contain}.shot figcaption{font-size:.82rem;color:var(--muted);margin-top:4px}.split-shot{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.tip{color:#194b43;background:#e6f5f1;border-left:3px solid var(--mint);border-radius:8px;padding:9px 11px;margin:12px 0;font-size:.9rem}.tip a{white-space:normal}.panel details{border-top:1px solid var(--line);margin-top:15px;padding:10px 0 0}.panel summary{font-weight:770;cursor:pointer;min-height:44px;display:list-item;padding:6px 0;color:var(--ink)}.panel details p{font-size:.94rem}.section{margin:34px 0 0;padding-top:23px;border-top:1px solid var(--line)}.group{display:grid;gap:9px}.card{border:1px solid var(--line);border-radius:11px;padding:12px;background:#fff}.card h3{margin:0 0 5px;font-size:1rem}.card p{color:var(--muted);font-size:.9rem;margin:0 0 6px}.card a{font-weight:700}.section>p{color:var(--muted);font-size:.92rem}.foot{border-top:1px solid var(--line);color:var(--muted);font-size:.88rem;padding-block:7px}.foot nav{display:flex;gap:13px;flex-wrap:wrap}
+@media(min-width:500px){.device-nav{grid-template-columns:repeat(3,minmax(0,1fr))}.device-nav a{justify-content:center;padding-inline:6px}}
+@media(min-width:680px){.hero{padding-block:63px 34px}.panel{padding:25px}.steps,.group{grid-template-columns:repeat(2,minmax(0,1fr))}.shot img{max-height:250px}}
+@media(min-width:850px){.group{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.steps>li,.panel .group .card{display:flex;flex-direction:column}
+.steps>li>.shot,.steps>li>.split-shot,.panel .group .card .shot{margin-top:auto;padding-top:8px}
+.shot a{position:relative;aspect-ratio:16/10;display:block}
+.shot img{position:absolute;inset:0;width:100%;height:100%;max-height:none;min-height:0;object-fit:contain}
+.split-shot .shot a{aspect-ratio:8/10}
+.shot--diagram a{background:#edf4f6}
+.shot--example a{background:#eef4ff}
+.shot--access-entry a{aspect-ratio:3/1}
+.shot--screen-recording a{aspect-ratio:15/7}
+.access-flow{display:grid;gap:8px;margin-top:4px}
+.access-flow .shot{margin:0}
+.access-flow .shot a{aspect-ratio:15/7;background:#eff3fa}
+.access-flow .shot-label{margin-right:.25rem}
+@media(min-width:560px){.access-flow{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.shot--example .shot-label{background:#e7efff;color:#244683}
+.shot--detail a{aspect-ratio:3/1;background:#f2f6fa}
+.panel details .shot--detail{max-width:640px}
+.shot-label{display:inline-block;margin-inline-end:.4rem;padding:.02rem .35rem;background:#e4eef3;color:#345264;border-radius:.25rem;font-size:.72rem;font-weight:760}
+.shot--diagram .shot-label{background:#e2f2ec;color:#196254}
+.panel details>.shot,.panel details #connect-bluetooth .shot{max-width:540px}
+@media(max-width:410px){.steps>li{padding:13px 10px 10px 36px}.steps>li::before{left:7px}.shot-label{font-size:.68rem}}
+
+.shot-dialog{padding:0;border:0;background:transparent;color:white;max-width:calc(100vw - 24px);max-height:calc(100dvh - 72px);overflow:visible}
+.shot-dialog::backdrop{background:rgba(9,18,33,.91)}
+.shot-dialog img{display:block;width:auto;height:auto;min-width:0;max-width:min(1100px,calc(100vw - 24px));max-height:calc(100dvh - 84px);object-fit:contain;border-radius:8px;background:#f1f5f9}
+.shot-dialog p{margin:0;padding:14px;text-align:center;background:#17243b;border-radius:8px}
+.shot-dialog button{position:fixed;z-index:1;top:max(8px,env(safe-area-inset-top));right:max(12px,env(safe-area-inset-right));width:44px;height:44px;display:grid;place-items:center;padding:0;border:1px solid #8091a8;border-radius:50%;background:#17243b;color:#fff;font:400 27px/1 system-ui;cursor:pointer}
+.shot-dialog button:focus-visible{outline:3px solid #9bc4ff;outline-offset:2px}.shot-dialog:not([open]){display:none}.shot-dialog [hidden]{display:none}
+html:has(.shot-dialog[open]){overflow:hidden;overscroll-behavior:none}
+a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
+
+.pairing-flow{display:grid;grid-template-columns:minmax(0,1fr);gap:10px}
+.pairing-flow .shot{margin:0}
+.pairing-flow .shot a{aspect-ratio:8/5}
+.guide-checks{list-style:none;counter-reset:cursor-check;margin:12px 0 10px;padding:0;display:grid;gap:8px}
+.guide-checks li{counter-increment:cursor-check;border:1px solid var(--line);border-radius:10px;background:#f8fbfc;padding:8px 10px;display:flex;align-items:baseline;gap:8px;font-size:.93rem;color:var(--muted)}
+.guide-checks li::before{content:counter(cursor-check);display:grid;place-items:center;flex:none;width:21px;height:21px;border-radius:50%;background:var(--preview-soft);color:#115c4d;font-size:.74rem;font-weight:780}
+.guide-checks li strong{color:var(--ink)}
+#cursor-check h2{font-size:clamp(1.17rem,3vw,1.5rem);margin-bottom:6px}
+#cursor-check p{margin-bottom:0}
+@media(min-width:560px){.pairing-flow{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(min-width:680px){
+  .guide-checks{grid-template-columns:repeat(3,minmax(0,1fr))}
+  #mac-pairing,#mac-handoff{grid-column:1/-1}
+  #mac-handoff{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.08fr);grid-template-rows:auto 1fr;column-gap:16px}
+  #mac-handoff>.shot{grid-column:2;grid-row:1/3;margin:0;padding:0}
+}
+#mac-pairing>.pairing-flow+p{margin:7px 0 0}
+    [data-legacy-link]{display:none}
+    [data-legacy-link]:target{display:block;margin:1rem 0 1.75rem;padding:1rem 1.15rem;border:1px solid var(--preview-line);border-left:4px solid var(--preview-accent);border-radius:12px;background:var(--preview-panel);scroll-margin-top:1.5rem}
+    [data-legacy-link] h2{font-size:1.2rem;margin:0 0 .45rem}
+    [data-legacy-link] p{margin:.4rem 0}
+    [data-legacy-link] a{font-weight:700}
+  </style>
+<link rel="icon" href="/assets/preview/onemouse-android-icon.png" type="image/png" sizes="240x240">
+<link rel="stylesheet" href="/assets/preview/one-preview.css?v=light1">
+<style>.topic-language-links{padding:7px 0;display:flex;gap:8px;flex-wrap:wrap;width:min(980px,calc(100% - 36px));margin:auto;font-size:.9rem}.topic-language-links [aria-current]{font-weight:750}</style></head>
+<body>
+<a class="skip" href="#main">Saltar al contenido</a>
+<header class="preview-header"><div class="preview-frame">
+  <a class="preview-brand" href="/es/" aria-label="Inicio de OneMouse"><span class="preview-mark" aria-hidden="true"><img src="/assets/preview/onemouse-android-icon.png" alt="" width="33" height="33"></span>OneMouse</a>
+  <nav class="preview-nav" aria-label="Menú principal"><a href="/es/">Inicio</a><a href="/es/features">Funciones</a><a href="/es/guide-new" aria-current="page">Guía de conexión</a><a href="/es/help-new">Solución de problemas</a><a href="/es/download">Descargas</a></nav>
+</div></header><nav class="topic-language-links" aria-label="Idioma"><a href="/guide-demo" lang="ko" hreflang="ko">한국어</a> · <a href="/en/guide-new" lang="en" hreflang="en">English</a> · <a href="/ja/guide-new" lang="ja" hreflang="ja">日本語</a> · <a href="/zh/guide-new" lang="zh" hreflang="zh">中文</a> · <span lang="es" aria-current="true">Español</span></nav>
+<main id="main">
+  <div class="hero"><div class="wrap">
+    <p class="tag">Guía de conexión de OneMouse <em>Vista previa</em></p>
+    <h1>¿Qué dispositivo quieres conectar?</h1>
+    <p>Empieza en el PC con Windows al que están conectados el ratón y el teclado. Elige el dispositivo que quieres controlar y conéctalo a la misma red, o consulta cómo <a href="#connect-account">encontrar tus dispositivos con tu cuenta de Google</a>.</p>
+    <nav class="device-nav" aria-label="Tipo de dispositivo que quieres conectar">
+      <a href="#android" data-device="android"><span class="number" aria-hidden="true">01</span> Teléfono o tableta Android</a>
+      <a href="#mac" data-device="mac"><span class="number" aria-hidden="true">02</span>Mac</a>
+      <a href="#windows" data-device="windows"><span class="number" aria-hidden="true">03</span> Otro PC con Windows</a>
+    </nav>
+  </div></div>
+  <div class="body wrap">
+    <p class="tip">Algunas capturas muestran la interfaz en coreano. Los nombres de los menús pueden variar según tu idioma.</p>
+    <section id="position" data-legacy-link aria-label="Posición de los dispositivos y zona de paso del cursor"><h2>Posición de los dispositivos y zona de paso del cursor</h2><p>Consulta el resumen de la vista previa o las instrucciones detalladas de la guía.</p><p><a href="/es/guide#position">Ver la guía detallada</a></p></section>
+    <section id="remote" data-legacy-link aria-label="Abrir una pantalla remota"><h2>Abrir una pantalla remota</h2><p>Consulta el resumen de la vista previa o las instrucciones detalladas de la guía.</p><p><a href="/es/guide#remote">Ver la guía detallada</a></p></section>
+    <section id="windows-remote" data-legacy-link aria-label="Controlar la ventana remota en Windows"><h2>Controlar la ventana remota en Windows</h2><p>Consulta el resumen de la vista previa o las instrucciones detalladas de la guía.</p><p><a href="/es/guide#windows-remote">Ver la guía detallada</a></p></section>
+    <section id="mobile-pc-remote" data-legacy-link aria-label="Controlar el PC desde el teléfono"><h2>Controlar el PC desde el teléfono</h2><p>Consulta el resumen de la vista previa o las instrucciones detalladas de la guía.</p><p><a href="/es/guide#mobile-pc-remote">Ver la guía detallada</a></p></section>
+    <section id="remote-gesture-examples" data-legacy-link aria-label="Gestos de control remoto"><h2>Gestos de control remoto</h2><p>Consulta el resumen de la vista previa o las instrucciones detalladas de la guía.</p><p><a href="/es/guide#remote-gesture-examples">Ver la guía detallada</a></p></section>
+    <section id="mouse-gestures" data-legacy-link aria-label="Gestos del ratón"><h2>Gestos del ratón</h2><p>Consulta el resumen de la vista previa o las instrucciones detalladas de la guía.</p><p><a href="/es/guide#mouse-gestures">Ver la guía detallada</a></p></section>
+    <section id="mouse-gestures-title" data-legacy-link aria-label="Gestos del ratón"><h2>Gestos del ratón</h2><p>Consulta el resumen de la vista previa o las instrucciones detalladas de la guía.</p><p><a href="/es/guide#mouse-gestures-title">Ver la guía detallada</a></p></section>
+    <section id="files" data-legacy-link aria-label="Archivos y portapapeles"><h2>Archivos y portapapeles</h2><p>Consulta el resumen de la vista previa o las instrucciones detalladas de la guía.</p><p><a href="/es/guide#files">Ver la guía detallada</a></p></section>
+    <section id="screenshots" data-legacy-link aria-label="Capturar y enviar capturas de pantalla"><h2>Capturar y enviar capturas de pantalla</h2><p>Consulta el resumen de la vista previa o las instrucciones detalladas de la guía.</p><p><a href="/es/guide#screenshots">Ver la guía detallada</a></p></section>
+    <section id="text-to-pc" data-legacy-link aria-label="Enviar texto y archivos de Android al PC"><h2>Enviar texto y archivos de Android al PC</h2><p>Puedes enviar texto seleccionado al PC. Consulta la guía detallada para ver todos los pasos para enviar archivos y texto.</p><p><a href="/es/guide#text-to-pc">Ver la guía detallada</a></p></section>
+    <section id="file-receive-folder" data-legacy-link aria-label="Encontrar los archivos recibidos en el PC"><h2>Encontrar los archivos recibidos en el PC</h2><p>Consulta el resumen de la vista previa o las instrucciones detalladas de la guía.</p><p><a href="/es/guide#file-receive-folder">Ver la guía detallada</a></p></section>
+    <section id="notifications" data-legacy-link aria-label="Notificaciones y respuestas del teléfono"><h2>Notificaciones y respuestas del teléfono</h2><p>Consulta el resumen de la vista previa o las instrucciones detalladas de la guía.</p><p><a href="/es/guide#notifications">Ver la guía detallada</a></p></section>
+    <section id="quick" data-legacy-link aria-label="Orden de dispositivos y conexión rápida"><h2>Orden de dispositivos y conexión rápida</h2><p>Consulta el resumen de la vista previa o las instrucciones detalladas de la guía.</p><p><a href="/es/guide#quick">Ver la guía detallada</a></p></section>
+    <section id="device-order" data-legacy-link aria-label="Orden de dispositivos y números de acceso directo"><h2>Orden de dispositivos y números de acceso directo</h2><p>Consulta el resumen de la vista previa o las instrucciones detalladas de la guía.</p><p><a href="/es/guide#device-order">Ver la guía detallada</a></p></section>
+    <section id="bluetooth" data-legacy-link aria-label="Conexión por Bluetooth"><h2>Conexión por Bluetooth</h2><p>Consulta la guía detallada para saber más sobre este tema.</p><p><a href="#connect-bluetooth">Android</a> · <a href="#windows-bluetooth">Windows PC</a> · <a href="#mac-bluetooth">Mac</a> · <a href="/es/guide#bluetooth">Ver la guía detallada</a></p></section>
+    <section id="permissions" data-legacy-link aria-label="Permisos por dispositivo"><h2>Permisos por dispositivo</h2><p>Consulta el resumen de la vista previa o las instrucciones detalladas de la guía.</p><p><a href="/es/guide#permissions">Ver la guía detallada</a></p></section>
+    <section id="keyboard-shortcuts" data-legacy-link aria-label="Atajos de teclado"><h2>Atajos de teclado</h2><p>Consulta el nuevo resumen de atajos o la tabla completa para Windows y Android.</p><p><a href="/es/guide#keyboard-shortcuts">Ver la guía detallada</a></p></section>
+    <section id="shortcuts" data-legacy-link aria-label="Atajos de teclado"><h2>Atajos de teclado</h2><p>Consulta el nuevo resumen de atajos o la tabla completa para Windows y Android.</p><p><a href="/es/guide#shortcuts">Ver la guía detallada</a></p></section>
+    <section id="pc-shortcuts-title" data-legacy-link aria-label="Atajos predeterminados de la aplicación de Windows"><h2>Atajos predeterminados de la aplicación de Windows</h2><p>Consulta la guía detallada para saber más sobre este tema.</p><p><a href="/es/guide#pc-shortcuts-title">Ver la guía detallada</a></p></section>
+    <section id="shortcuts-next-release" data-legacy-link aria-label="Atajos para las ventanas remotas de cada dispositivo"><h2>Atajos para las ventanas remotas de cada dispositivo</h2><p>Consulta la guía detallada para saber más sobre este tema.</p><p><a href="/es/guide#shortcuts-next-release">Ver la guía detallada</a></p></section>
+    <section id="android-shortcuts-title" data-legacy-link aria-label="Atajos para controlar Android"><h2>Atajos para controlar Android</h2><p>Consulta la guía detallada para saber más sobre este tema.</p><p><a href="/es/guide#android-shortcuts-title">Ver la guía detallada</a></p></section>
+    <section class="panel" id="android" data-device-panel aria-labelledby="android-title">
+      <p class="pill">Recomendado · Conexión en la misma red</p>
+      <span id="start" aria-hidden="true"></span>
+      <span id="connect-wifi" aria-hidden="true"></span>
+      <h2 id="android-title" tabindex="-1">Conectar un teléfono o una tableta Android</h2>
+      <p>Solo necesitas el código QR o el código de seis dígitos. El PC puede usar un cable de red, siempre que esté conectado al mismo router. No es necesario iniciar sesión con Google. <a href="#connect-account">Conectar con una cuenta de Google</a> · <a href="#connect-bluetooth">Conectar por Bluetooth (beta)</a></p>
+      <ol class="steps">
+        <li id="android-access"><h3>Abre OneMouse y activa Accesibilidad en Android</h3><p>En Windows y Android, <a href="/es/#get">instala OneMouse</a> y conecta ambos dispositivos al mismo router. En el teléfono, activa el servicio de <strong>Accesibilidad</strong> de OneMouse siguiendo los pasos de abajo. El ejemplo es de un Galaxy; los nombres de los menús pueden variar según el dispositivo y la versión de Android.</p>
+          <figure class="shot shot--example shot--access-entry"><a href="/assets/preview/guide/android-access-entry-example.svg" aria-label="Ampliar la tarjeta «Se necesita permiso de Accesibilidad» en el inicio de OneMouse para Android"><img src="/assets/preview/guide/android-access-entry-example.svg" width="480" height="161" alt="Tarjeta «Se necesita permiso de Accesibilidad» en el inicio de OneMouse para Android" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">Recreación de la interfaz</span> ① Toca esta tarjeta si aparece en la aplicación. Si no aparece, abre «Accesibilidad» en los ajustes del teléfono.</figcaption></figure>
+          <div class="access-flow"><figure class="shot shot--example"><a href="/assets/preview/guide/galaxy-accessibility-installed-apps-example.svg" aria-label="Ampliar la pantalla donde se selecciona One Mouse en las aplicaciones instaladas de Accesibilidad de Galaxy"><img src="/assets/preview/guide/galaxy-accessibility-installed-apps-example.svg" width="480" height="224" alt="Selección de One Mouse en las aplicaciones instaladas de Accesibilidad de Galaxy" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">Ejemplo en Galaxy</span> ② En «Aplicaciones instaladas», elige One Mouse.</figcaption></figure><figure class="shot shot--example"><a href="/assets/preview/guide/galaxy-accessibility-onemouse-switch-example.svg" aria-label="Ampliar la pantalla donde se activa el interruptor superior de Accesibilidad para One Mouse en Galaxy"><img src="/assets/preview/guide/galaxy-accessibility-onemouse-switch-example.svg" width="480" height="224" alt="Interruptor superior de Accesibilidad para One Mouse en Galaxy" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">Ejemplo en Galaxy</span> ③ Activa el interruptor de arriba y, si aparece una confirmación, toca «Permitir».</figcaption></figure></div></li>
+        <li><h3>Abre el QR o el código de verificación en Windows</h3><p><span class="path">Gestión de dispositivos → Otras formas de conectar → QR y código de este PC</span>.</p>
+          <figure class="shot"><a href="/assets/pairing/pc-code-es.webp" aria-label="Ampliar el ejemplo del QR y el código en Windows"><img src="/assets/pairing/pc-code-es.webp" width="888" height="742" alt="Ventana con el QR y el código de seis dígitos en OneMouse para Windows" loading="lazy"></a><figcaption><span class="shot-label">Ejemplo de la interfaz</span> Usa el código de tu PC, no el que aparece en la imagen.</figcaption></figure></li>
+        <li><h3>Introduce el código o escanea el QR desde Android</h3><p><span class="path">Inicio → Otras formas de conectar → Añadir un PC por QR o código</span>. <strong>Código numérico</strong> para introducir el código, o elige <strong>Escanear QR → Abrir cámara</strong> para escanear la pantalla del PC. <a href="/assets/preview/guide/android-bluetooth-entry-ko.webp">Ubicación del botón «Añadir un PC por QR o código»</a></p>
+          <div class="split-shot">
+            <figure class="shot"><a href="/assets/pairing/android-code-es.webp" aria-label="Ampliar el ejemplo de introducción del código en Android"><img src="/assets/pairing/android-code-es.webp" width="1080" height="2400" alt="Pestaña «Código numérico» de OneMouse para Android" loading="lazy"></a><figcaption><span class="shot-label">Ejemplo de la interfaz</span> Código de seis dígitos</figcaption></figure>
+            <figure class="shot"><a href="/assets/pairing/android-qr-es.webp" aria-label="Ampliar el ejemplo de escaneo del QR en Android"><img src="/assets/pairing/android-qr-es.webp" width="1080" height="2400" alt="Pestaña «Escanear QR» de OneMouse para Android" loading="lazy"></a><figcaption><span class="shot-label">Ejemplo de la interfaz</span> Código QR</figcaption></figure>
+          </div></li>
+        <li><h3>Coloca el dispositivo y pasa el cursor al otro lado</h3><p>En el inicio de Android, comprueba la conexión en <strong>PC registrados</strong>. En Windows, coloca el teléfono o la tableta en el lado en el que está físicamente. Mueve el cursor hacia la zona de paso en ese borde.</p>
+          <figure class="shot"><a href="/assets/pairing/pc-position-es.webp" aria-label="Ampliar el ejemplo de colocación del dispositivo Android"><img src="/assets/pairing/pc-position-es.webp" width="2240" height="1800" alt="Dispositivo Android colocado a la derecha del PC en OneMouse para Windows" loading="lazy"></a><figcaption><span class="shot-label">Ejemplo de la interfaz</span> Mueve el cursor en esa misma dirección.</figcaption></figure></li>
+      </ol>
+      <details id="alternatives"><summary>Otro método de conexión: Bluetooth (beta)</summary>
+        <div id="connect-bluetooth"><h3>Conexión por Bluetooth (beta)</h3><p>Activa Bluetooth en ambos dispositivos. En OneMouse para Android, pulsa <strong>Iniciar modo Bluetooth</strong> y vincula los dispositivos desde los ajustes Bluetooth de Windows. Una vez conectados, comprueba el estado y la posición en la lista de OneMouse. La imagen de la pantalla remota no se transmite por Bluetooth.</p><p><a href="/es/technical">Funciones disponibles según la conexión</a></p>
+          <figure class="shot shot--detail"><a href="/assets/preview/guide/android-bluetooth-entry-ko.webp" aria-label="Ampliar la pantalla donde se abren los ajustes Bluetooth desde «Otras formas de conectar» en Android"><img src="/assets/preview/guide/android-bluetooth-entry-ko.webp" width="1048" height="303" alt="Ajustes Bluetooth en «Otras formas de conectar» de OneMouse para Android" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">Captura real · Versión anterior</span> Desde Inicio, despliega «Otras formas de conectar» y pulsa «Ajustes de Bluetooth».</figcaption></figure><figure class="shot shot--example"><a href="/assets/preview/guide/android-bt-start-example.svg" aria-label="Ampliar el botón «Iniciar modo Bluetooth» de OneMouse para Android"><img src="/assets/preview/guide/android-bt-start-example.svg" width="480" height="281" alt="Sección de conexión y botón «Iniciar modo Bluetooth» en los ajustes de OneMouse para Android" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">Recreación de la interfaz</span> En Ajustes, pulsa «Iniciar modo Bluetooth».</figcaption></figure></div>
+      </details>
+    </section>
+    <section class="panel" id="mac" data-device-panel aria-labelledby="mac-title">
+      <p class="pill">Recomendado · Conexión en la misma red</p>
+      <h2 id="mac-title" tabindex="-1">Conectar un Mac desde Windows</h2>
+      <p>Necesitas un Mac con chip de Apple y macOS 13 o posterior. Conecta ambos dispositivos al mismo router por Wi-Fi o cable de red para usarlos sin iniciar sesión. <a href="#connect-account">Conectar el Mac con una cuenta de Google</a> · <a href="#mac-bluetooth">Conectar por Bluetooth (beta)</a></p>
+      <ol class="steps">
+        <li><h3>Abre OneMouse en Windows y Mac</h3><p><a href="/es/#get">instala OneMouse</a> y abre la aplicación en ambos dispositivos. Empieza la conexión en Windows.</p>
+          <figure class="shot shot--diagram"><a href="/assets/preview/guide/mac-start.svg" aria-label="Ampliar el diagrama de OneMouse abierto en Windows y Mac en la misma red"><img src="/assets/preview/guide/mac-start.svg" width="760" height="450" alt="OneMouse abierto en Windows y Mac en la misma red" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">Diagrama explicativo</span> Empieza en el PC con Windows al que están conectados el ratón y el teclado.</figcaption></figure></li>
+        <li id="mac-access"><h3>Concede el permiso de Accesibilidad en el Mac</h3><p>Para recibir la entrada del ratón y del teclado de Windows, concede al Mac el permiso de <strong>Accesibilidad</strong>. La pantalla puede variar según la versión de macOS.</p>
+          <figure class="shot shot--example"><a href="/assets/preview/guide/mac-app-permissions-ko.svg" aria-label="Ampliar los permisos de macOS en Ajustes → Avanzado de OneMouse para Mac"><img src="/assets/preview/guide/mac-app-permissions-ko.svg" width="800" height="466" alt="Permisos de macOS en Ajustes → Avanzado de OneMouse para Mac" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">Recreación de la interfaz</span> ① En OneMouse, ve a «Ajustes → Avanzado → Permisos de macOS» y pulsa el botón junto a «Accesibilidad».</figcaption></figure>
+          <div class="access-flow"><figure class="shot shot--example"><a href="/assets/preview/guide/macos-privacy-accessibility-example.svg" aria-label="Ampliar la pantalla donde se selecciona Accesibilidad en Privacidad y seguridad de macOS"><img src="/assets/preview/guide/macos-privacy-accessibility-example.svg" width="480" height="224" alt="Accesibilidad dentro de Privacidad y seguridad en Ajustes del Sistema de macOS" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">Ejemplo en macOS</span> ② En «Privacidad y seguridad», abre «Accesibilidad».</figcaption></figure><figure class="shot shot--example"><a href="/assets/preview/guide/macos-accessibility-onemouse-switch-example.svg" aria-label="Ampliar la pantalla con OneMouse habilitado en Accesibilidad de macOS"><img src="/assets/preview/guide/macos-accessibility-onemouse-switch-example.svg" width="480" height="224" alt="OneMouse habilitado en Accesibilidad de macOS" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">Ejemplo en macOS</span> ③ Activa OneMouse en la lista.</figcaption></figure></div>
+          <p>Si OneMouse no está en la lista, pulsa <strong>+</strong> para añadir la aplicación instalada. En macOS 15 o posterior, si se solicita acceso a la <strong>red local</strong> , concédelo también.</p></li>
+        <li id="mac-pairing"><h3>Comprueba el código en el Mac e introdúcelo en Windows</h3><p>En OneMouse para Mac, abre <span class="path">Gestión de dispositivos → Otras formas de conectar → Ver el código de este Mac</span> para consultar el código. En OneMouse para Windows, abre <span class="path">Gestión de dispositivos → Otras formas de conectar</span> e introduce los seis dígitos junto al Mac que aparece en «Misma red Wi-Fi · Vinculación». Después, pulsa <strong>Vincular</strong>.</p>
+          <div class="pairing-flow"><figure class="shot shot--example"><a href="/assets/preview/guide/mac-app-pairing-ko.svg" aria-label="Ampliar la ventana «Código de este Mac» de OneMouse"><img src="/assets/preview/guide/mac-app-pairing-ko.svg" width="800" height="482" alt="Ventana «Código de este Mac» de OneMouse" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">Recreación de la interfaz</span> ① Comprueba el código de seis dígitos en el Mac.</figcaption></figure><figure class="shot shot--example"><a href="/assets/preview/guide/windows-mac-pairing-entry-example-ko.svg" aria-label="Ampliar el ejemplo de introducción del código del Mac en OneMouse para Windows"><img src="/assets/preview/guide/windows-mac-pairing-entry-example-ko.svg" width="800" height="482" alt="Selección del Mac e introducción del código de seis dígitos en Gestión de dispositivos de Windows" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">Recreación de la interfaz</span> ② Introduce ese código en Windows.</figcaption></figure></div><p>Usa el código que aparece en tu Mac, no el de la imagen.</p></li>
+        <li id="mac-handoff"><h3>Mueve el cursor hacia el Mac</h3><p>En la pantalla de distribución de Windows, coloca el Mac en el mismo lado en el que está físicamente. Después, mueve el cursor hacia ese borde.</p>
+          <figure class="shot shot--diagram"><a href="/assets/preview/guide/mac-placement.svg" aria-label="Ampliar el ejemplo de colocación del Mac en Windows y del paso del cursor por el borde"><img src="/assets/preview/guide/mac-placement.svg" width="760" height="450" alt="Ejemplo de colocación del Mac en Windows y del paso del cursor por el borde" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">Diagrama explicativo</span> Mueve el cursor hacia el lado donde está el Mac.</figcaption></figure></li>
+      </ol>
+      <div class="tip"><strong>¿El Mac no aparece en la lista?</strong> Comprueba que ambos equipos estén en la misma red y que macOS tenga el permiso de red local si lo solicitó. <a href="/es/help#connection-symptoms">Solución de problemas del Mac</a></div>
+      <details id="mac-bluetooth">
+        <summary>Conectar Windows y Mac por Bluetooth (beta)</summary>
+        <p>Esta conexión es directa entre dos equipos. No requiere la misma red Wi-Fi ni iniciar sesión con Google. Primero, vincula ambos equipos en los ajustes Bluetooth del sistema operativo.</p>
+        <p>En OneMouse para Mac, abre <span class="path">Gestión de dispositivos → Otras formas de conectar</span> y, en la tarjeta <strong>Bluetooth</strong> , pulsa <strong>Activar</strong>. Si hay una conexión en curso, la tarjeta puede aparecer directamente en «Gestión de dispositivos».</p>
+        <ul>
+          <li><strong>Controlar el Mac desde Windows:</strong> en el Mac, cambia la dirección de entrada a <strong>Recibir entrada del ratón y del teclado</strong> y, en Windows, abre <strong>Gestión de dispositivos</strong> para activar la conexión con el Mac en la lista Bluetooth.</li>
+          <li><strong>Controlar Windows desde el Mac:</strong> abre <strong>Gestión de dispositivos → Otras formas de conectar → Bluetooth</strong> y activa <strong>Recibir entrada del ratón y del teclado</strong>. En el Mac, cambia la dirección a <strong>Enviar entrada del ratón y del teclado</strong> y selecciona el PC con Windows en la lista.</li>
+        </ul>
+        <p>Para recibir entrada, el Mac necesita el permiso de <strong>Accesibilidad</strong> . Para enviarla, necesita también <strong>Monitorización de entrada</strong> . Se admite el ratón y el teclado, el portapapeles de texto y la transferencia de archivos y carpetas.</p>
+        <p><strong>Compartir la pantalla o las ventanas del Mac requiere Wi-Fi o LAN</strong>. No se pueden ver por Bluetooth.</p>
+        <figure class="shot shot--example"><a href="/assets/preview/guide/mac-app-bluetooth-ko.svg" aria-label="Ampliar la ubicación del control de Bluetooth en Gestión de dispositivos de OneMouse para Mac"><img src="/assets/preview/guide/mac-app-bluetooth-ko.svg" width="800" height="520" alt="Ubicación del control de Bluetooth en Gestión de dispositivos de OneMouse para Mac" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">Recreación de la interfaz</span> En la tarjeta Bluetooth, pulsa «Activar» y elige la dirección de entrada.</figcaption></figure>
+      </details>
+      <details id="mac-screen-recording"><summary>¿También necesito el permiso de grabación de pantalla?</summary>
+        <p><strong>No es necesario si solo vas a usar el ratón y el teclado.</strong> Si quieres ver la pantalla o una ventana del Mac desde Windows, o tomar capturas en el Mac con OneMouse, concede el permiso en <strong>ese Mac</strong>.</p>
+        <p>En el Mac, ve a <span class="path">Ajustes del Sistema → Privacidad y seguridad → Grabación de pantalla y audio del sistema</span> y habilita OneMouse. El nombre del apartado puede variar según la versión de macOS. <a href="/es/guide#windows-remote">Guía de pantalla remota</a></p>
+        <figure class="shot shot--example shot--screen-recording"><a href="/assets/preview/guide/macos-screen-recording-onemouse-switch-example.svg" aria-label="Ampliar la pantalla donde se concede el permiso de grabación de pantalla a OneMouse en macOS"><img src="/assets/preview/guide/macos-screen-recording-onemouse-switch-example.svg" width="480" height="224" alt="Ejemplo con OneMouse activado para grabar pantalla y audio del sistema en macOS" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">Ejemplo en macOS</span> Habilita OneMouse en el Mac cuya pantalla vas a capturar.</figcaption></figure>
+      </details>
+    </section>
+    <section class="panel" id="windows" data-device-panel aria-labelledby="windows-title">
+      <p class="pill">Recomendado · Misma red y código de seis dígitos</p>
+      <span id="pcpc" aria-hidden="true"></span>
+      <h2 id="windows-title" tabindex="-1">Conectar otro PC con Windows</h2>
+      <p>Empieza en el PC al que están conectados el ratón y el teclado. Si ambos equipos están en el mismo router, puedes conectarlos con un código, sin iniciar sesión. <a href="#connect-account">Conectar el otro PC con una cuenta de Google</a> · <a href="#windows-bluetooth">Conectar por Bluetooth (beta)</a></p>
+      <ol class="steps">
+        <li><h3>Abre Gestión de dispositivos en ambos PC</h3><p>En ambos PC con Windows, conectados al mismo router, <a href="/es/#get">instala OneMouse</a> y abre la aplicación. En el menú de la izquierda, elige <strong>Gestión de dispositivos</strong>.</p>
+          <figure class="shot shot--example"><a href="/assets/preview/guide/windows-device-management-entry-ko.webp" aria-label="Ampliar la captura real de Gestión de dispositivos en el menú izquierdo de OneMouse para Windows"><img src="/assets/preview/guide/windows-device-management-entry-ko.webp" width="960" height="630" alt="Captura de OneMouse para Windows con Gestión de dispositivos seleccionado en el menú izquierdo" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">Captura real · Versión anterior</span> Abre «Gestión de dispositivos» en el menú de la izquierda.</figcaption></figure></li>
+        <li><h3>Consulta el código en el otro PC</h3><p>En el PC que quieres controlar, abre <span class="path">Gestión de dispositivos → Otras formas de conectar → QR y código de este PC</span> y consulta el código de seis dígitos.</p>
+          <figure class="shot"><a href="/assets/pairing/pc-code-es.webp" aria-label="Ampliar la pantalla con el QR y el código de seis dígitos del otro PC con Windows"><img src="/assets/pairing/pc-code-es.webp" width="888" height="742" alt="Pantalla con el QR y el código de seis dígitos del otro PC con Windows" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">Ejemplo de la interfaz</span> Abre esta ventana en el PC que quieres controlar. El código de la imagen es solo un ejemplo.</figcaption></figure></li>
+        <li><h3>Selecciona el otro PC y conéctalo desde tu PC</h3><p>En tu PC, abre <span class="path">Gestión de dispositivos → Otras formas de conectar</span>, selecciona el otro PC e introduce el código. Comprueba el estado y activa el interruptor de conexión si hace falta.</p>
+          <figure class="shot"><a href="/assets/pairing/pc-peer-es.webp" aria-label="Ampliar el ejemplo de introducción del código de otro PC"><img src="/assets/pairing/pc-peer-es.webp" width="2240" height="1800" alt="Introducción del código de seis dígitos de otro PC en Windows" loading="lazy"></a><figcaption><span class="shot-label">Ejemplo de la interfaz</span> El nombre y el código de la pantalla son ejemplos.</figcaption></figure></li>
+        <li><h3>Mueve el cursor hacia el otro PC</h3><p>En el editor de distribución, coloca el otro PC donde está físicamente y mueve el cursor hacia ese borde.</p>
+          <figure class="shot"><a href="/assets/pairing/pc-peer-position-es.webp" aria-label="Ampliar el ejemplo de colocación de otro PC con Windows"><img src="/assets/pairing/pc-peer-position-es.webp" width="2240" height="1800" alt="Colocación de otro PC en Gestión de dispositivos de Windows" loading="lazy"></a><figcaption><span class="shot-label">Ejemplo de la interfaz</span> Coloca el otro PC en el lado en el que está físicamente.</figcaption></figure></li>
+      </ol>
+      <details id="windows-bluetooth">
+        <summary>Conectar dos PC con Windows por Bluetooth (beta)</summary>
+        <ol>
+          <li>Primero, vincula los dos PC desde los ajustes Bluetooth de Windows.</li>
+          <li>En OneMouse del PC receptor, abre <span class="path">Gestión de dispositivos → Otras formas de conectar → Bluetooth</span> y elige <strong>Recibir entrada del ratón y del teclado</strong>. Activa Bluetooth si está apagado.</li>
+          <li>En el mismo menú del PC emisor, si hace falta, cambia a <strong>Enviar entrada del ratón y del teclado</strong>. Después, activa la conexión del PC receptor en la lista y ajusta su posición.</li>
+        </ol>
+        <p>No necesitas un router ni iniciar sesión con Google. Si quieres ver una pantalla remota, usa la misma red.</p>
+      </details>
+      <div class="tip"><strong>¿No aparece el otro PC?</strong> Comprueba primero que ambas aplicaciones estén abiertas y los dos equipos estén en la misma red. <a href="/es/help#connection-symptoms">Solucionar problemas de conexión</a></div>
+    </section>
+    <section class="panel" id="cursor-check" aria-labelledby="cursor-check-title">
+      <h2 id="cursor-check-title">¿Hay conexión pero el cursor no pasa al otro dispositivo?</h2>
+      <ol class="guide-checks">
+        <li><span><strong>Posición:</strong> Comprueba que la distribución de dispositivos en Windows coincida con su posición real.</span></li>
+        <li><span><strong>Zona de paso:</strong> Mueve el cursor hacia el tramo del borde que has configurado en la distribución.</span></li>
+        <li><span><strong>Permisos en el dispositivo receptor:</strong> Comprueba el permiso de Accesibilidad de OneMouse en Android o en el Mac.</span></li>
+      </ol>
+      <p><a href="/es/help#cursor-not-crossing">Solucionar problemas del cursor</a></p>
+    </section>
+    <section class="panel" id="connect-account" aria-labelledby="account-title">
+      <p class="pill">Opcional · En lugar del QR o del código</p>
+      <h2 id="account-title">encontrar tus dispositivos con tu cuenta de Google</h2>
+      <p>Disponible en OneMouse para Windows, Mac y Android. Actualiza ambas aplicaciones, conéctalas a Internet e inicia sesión con <strong>la misma cuenta de Google</strong>.</p>
+      <div class="group">
+        <article class="card" id="account-windows"><h3>Windows ↔ Windows</h3><p>En ambos PC, inicia sesión en <strong>Gestión de dispositivos</strong>. En el PC al que está conectado el ratón, selecciona el otro PC y activa el interruptor de conexión si hace falta.</p>
+          <figure class="shot shot--detail"><a href="/assets/preview/guide/windows-google-account-entry-ko.webp" aria-label="Ampliar la tarjeta de la cuenta de Google y su botón de inicio de sesión en Gestión de dispositivos de Windows"><img src="/assets/preview/guide/windows-google-account-entry-ko.webp" width="2240" height="526" alt="Tarjeta de la cuenta de Google y botón de inicio de sesión en Gestión de dispositivos de OneMouse para Windows" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">Captura real · Versión anterior</span> En Gestión de dispositivos, pulsa «Iniciar sesión con Google».</figcaption></figure></article>
+        <article class="card" id="account-mac"><h3>Windows → Mac</h3><p>abre <strong>Gestión de dispositivos</strong> de Windows y <strong>Gestión de dispositivos</strong> de OneMouse para Mac e inicia sesión en ambos. Selecciona el Mac en la lista de dispositivos de Windows para conectarlo. <a href="/assets/preview/guide/windows-google-account-entry-ko.webp">Ubicación del botón de inicio de sesión en Windows</a> · Para recibir entrada en el Mac, permite <strong>Accesibilidad</strong>.</p>
+          <figure class="shot shot--example"><a href="/assets/preview/guide/mac-app-account-ko.svg" aria-label="Ampliar el botón «Iniciar sesión con Google» en Gestión de dispositivos de OneMouse para Mac"><img src="/assets/preview/guide/mac-app-account-ko.svg" width="800" height="424" alt="Botón «Iniciar sesión con Google» en Gestión de dispositivos de OneMouse para Mac" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">Recreación de la interfaz</span> En el Mac, pulsa «Iniciar sesión con Google».</figcaption></figure></article>
+        <article class="card" id="account-android"><h3>Windows → Android</h3><p>abre <strong>Gestión de dispositivos</strong> de Windows e inicia sesión allí y en la pantalla de inicio de OneMouse para Android. En el teléfono, abre <strong>PC registrados</strong>, selecciona tu PC para conectarlo y activa <strong>Accesibilidad</strong> en Android.</p>
+          <figure class="shot shot--detail"><a href="/assets/preview/guide/android-account-home-ko.webp" aria-label="Ampliar el inicio de OneMouse para Android con el botón de inicio de sesión con Google y los PC registrados"><img src="/assets/preview/guide/android-account-home-ko.webp" width="1048" height="223" alt="Botón de inicio de sesión con Google y PC registrados en el inicio de OneMouse para Android" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">Captura real · Versión anterior</span> Inicia sesión en Inicio y selecciona tu PC en la lista «PC registrados» de abajo.</figcaption></figure></article>
+      </div>
+      /es/help#account-connect-help">Qué hacer si no aparece un dispositivo</a></div>
+    </section>
+    <section class="section" id="next" aria-labelledby="next-title">
+      <h2 id="next-title">Una vez conectado, prueba estas funciones</h2>
+      <div class="group">
+        <article class="card"><h3>Enviar archivos</h3><p>Suelta archivos en la pantalla de transferencia o en la zona de envío rápido para enviarlos.</p><a href="/es/guide#files">Guía de transferencia de archivos</a></article>
+        <article class="card"><h3>Pegar texto copiado</h3><p>Con una conexión compatible, puedes usar en otro dispositivo el texto que has copiado.</p><a href="/es/guide#files">Guía de archivos y portapapeles</a></article>
+        <article class="card"><h3>Capturar solo el área que necesitas</h3><p>Usa el atajo predeterminado <strong>Ctrl+Alt+S</strong> para empezar. Consulta la guía para saber qué se requiere según el dispositivo receptor y el tipo de conexión.</p><a href="/es/guide#screenshots">Guía para capturar y enviar</a></article>
+      </div>
+      <p><a href="/es/guide#shortcuts">Ver más atajos</a> · <a href="/es/help">Ver la ayuda</a></p>
+      <p>Para conectar dos dispositivos, <a href="/es/#get">instala OneMouse</a> en ambos.</p>
+    </section>
+  </div>
+</main>
+<footer class="preview-footer"><div class="preview-frame">
+  <p>Esta es una vista previa de OneMouse, independiente del sitio principal.</p>
+  <nav class="preview-refs" aria-label="Enlaces relacionados">
+    <a href="/es/technical">Dispositivos y conexiones</a><a href="/es/technical">Tecnología y seguridad</a><a href="/es/privacy">Privacidad</a><a href="/es/terms">Términos de uso</a><a href="/es/licenses">Licencias de código abierto</a><a href="/es/">Inicio del sitio principal</a>
+  </nav>
+</div></footer>
+<dialog id="guide-image-viewer" class="shot-dialog" aria-label="Ampliación de la imagen de la guía">
+  <button type="button" aria-label="Cerrar imagen" autofocus>×</button>
+  <img alt="" hidden>
+  <p role="status" hidden></p>
+</dialog>
+<script>
+(() => {
+  const links = [...document.querySelectorAll('[data-device]')];
+  const panels = [...document.querySelectorAll('[data-device-panel]')];
+  function showDevice(id) {
+    const target = panels.find(panel => panel.id === id);
+    if (!target) return false;
+    panels.forEach(panel => { panel.hidden = panel !== target; });
+    links.forEach(link => {
+      if (link.dataset.device === id) link.setAttribute('aria-current', 'location');
+      else link.removeAttribute('aria-current');
+    });
+    return true;
+  }
+  function applyHash() {
+    const id = location.hash.slice(1).toLowerCase();
+    if (['start','connect-wifi','pcpc'].includes(id)) {
+      showDevice(id === 'pcpc' ? 'windows' : 'android');
+      document.getElementById(id).scrollIntoView({block:'start'});
+      return true;
+    }
+    if (id === 'connect-account' || ['account-windows','account-mac','account-android'].includes(id)) {
+      if (panels.every(panel => !panel.hidden)) showDevice('android');
+      document.getElementById(id).scrollIntoView({block:'start'});
+      return true;
+    }
+    if (id === 'android-access') return showDevice('android');
+    if (['mac-access','mac-pairing'].includes(id)) {
+      showDevice('mac');
+      document.getElementById(id).scrollIntoView({block:'start'});
+      return true;
+    }
+    if (['windows-bluetooth','mac-bluetooth','mac-screen-recording'].includes(id)) {
+      showDevice(id === 'windows-bluetooth' ? 'windows' : 'mac');
+      const disclosure = document.getElementById(id);
+      disclosure.open = true;
+      disclosure.scrollIntoView({block:'start'});
+      return true;
+    }
+    if (['connect-bluetooth','alternatives'].includes(id)) {
+      showDevice('android');
+      document.getElementById('alternatives').open = true;
+      document.getElementById(id).scrollIntoView({block:'start'});
+      return true;
+    }
+    return showDevice(id);
+  }
+  if (!applyHash()) showDevice('android');
+  window.addEventListener('hashchange', () => {
+    if (!location.hash) showDevice('android');
+    else applyHash();
+  });
+  links.forEach(link => link.addEventListener('click', e => {
+    if (e.defaultPrevented || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+    showDevice(link.dataset.device);
+  }));
+
+  const viewer = document.getElementById('guide-image-viewer');
+  if (typeof viewer.showModal === 'function') {
+    const image = viewer.querySelector('img');
+    const close = viewer.querySelector('button');
+    const status = viewer.querySelector('[role="status"]');
+    const imageLinks = [...document.querySelectorAll('a[href^="/assets/pairing/"], a[href^="/assets/preview/guide/"]')]
+      .filter(link => /\.(?:svg|webp|png|jpe?g)$/i.test(link.pathname));
+    let opener = null;
+    let startedOnBackdrop = false;
+    for (const link of imageLinks) {
+      link.setAttribute('aria-haspopup', 'dialog');
+      link.addEventListener('click', event => {
+        if (event.defaultPrevented || event.button !== 0 || viewer.open) return;
+        event.preventDefault();
+        opener = link;
+        startedOnBackdrop = false;
+        const thumb = link.querySelector('img') || imageLinks.find(other => other.href === link.href && other.querySelector('img'))?.querySelector('img');
+        image.alt = thumb?.alt || link.textContent.trim();
+        status.textContent = 'Cargando imagen…';
+        status.hidden = false;
+        image.hidden = true;
+        viewer.showModal();
+        image.src = link.href;
+      });
+    }
+    image.addEventListener('load', () => {
+      if (!viewer.open) return;
+      image.hidden = false;
+      status.hidden = true;
+    });
+    image.addEventListener('error', () => {
+      if (!viewer.open) return;
+      image.hidden = true;
+      status.textContent = 'No se pudo cargar la imagen.';
+      status.hidden = false;
+    });
+    close.addEventListener('click', () => viewer.close());
+    viewer.addEventListener('pointerdown', event => { startedOnBackdrop = event.target === viewer; });
+    viewer.addEventListener('click', event => {
+      if (startedOnBackdrop && event.target === viewer) viewer.close();
+      startedOnBackdrop = false;
+    });
+    viewer.addEventListener('close', () => {
+      if (viewer.open) return;
+      image.removeAttribute('src');
+      image.hidden = true;
+      status.hidden = true;
+      opener?.focus({preventScroll:true});
+      opener = null;
+    });
+  }
+})();
+</script>
+</body>
+</html>

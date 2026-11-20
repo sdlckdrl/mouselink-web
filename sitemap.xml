@@ -270,4 +270,36 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://onemouse.pages.dev/en/compatibility</loc>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://onemouse.pages.dev/en/download</loc>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://onemouse.pages.dev/es/compatibility</loc>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://onemouse.pages.dev/es/download</loc>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://onemouse.pages.dev/ja/compatibility</loc>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://onemouse.pages.dev/ja/download</loc>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://onemouse.pages.dev/zh/compatibility</loc>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://onemouse.pages.dev/zh/download</loc>
+    <lastmod>2026-11-20</lastmod>
+  </url>
 </urlset>

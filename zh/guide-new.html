@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="OneMouse 连接预览指南：与 Android、Mac 和其他 Windows 电脑共享鼠标和键盘。">
+<meta name="theme-color" content="#f5f8fa">
+<title>OneMouse · 连接指南预览</title>
+<style>
+:root{color-scheme:light;--bg:var(--preview-bg);--surface:var(--preview-panel);--ink:var(--preview-ink);--muted:var(--preview-muted);--mint:var(--preview-accent);--line:var(--preview-line);--radius:18px}*{box-sizing:border-box}[hidden]{display:none!important}body{margin:0;background:var(--bg);color:var(--ink);font:1rem/1.65 system-ui,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;word-break:keep-all;overflow-wrap:anywhere}a{color:var(--mint);text-underline-offset:.2em}a:focus-visible,summary:focus-visible{outline:3px solid var(--mint);outline-offset:4px}a,summary{touch-action:manipulation}.wrap{width:min(980px,calc(100% - 36px));margin-inline:auto}.top{border-bottom:1px solid var(--preview-line)}.top .wrap,.foot .wrap{min-height:62px;display:flex;gap:14px;justify-content:space-between;align-items:center;flex-wrap:wrap}.top a,.foot a{color:var(--ink)}.brand{display:inline-flex;align-items:center;gap:.59rem;font-size:1.12rem;font-weight:850;text-decoration:none;letter-spacing:-.035em}.mark{display:grid;place-items:center;width:32px;height:32px;background:var(--mint);color:#fff;border-radius:10px}.mark svg{width:18px}.top-links{display:flex;gap:12px;font-size:.9rem}.skip{position:absolute;left:12px;top:-160px;background:var(--mint);color:#fff;padding:9px;border-radius:8px;z-index:3}.skip:focus{top:8px}.hero{padding:44px 0 27px;background:radial-gradient(ellipse at 79% 0%,#e3f4f1 0,transparent 67%)}.tag{display:inline-flex;gap:8px;align-items:center;font-size:.82rem;letter-spacing:.04em;color:var(--mint);font-weight:800;margin:0 0 10px}.tag em{font-style:normal;color:var(--muted);border:1px solid #afc3ce;border-radius:999px;padding:1px 7px}.hero h1{font-size:clamp(2.05rem,6vw,3.66rem);line-height:1.14;letter-spacing:-.062em;margin:0}.hero p:not(.tag){color:var(--muted);margin:14px 0 18px;max-width:42ch}.device-nav{display:grid;gap:7px;grid-template-columns:1fr}.device-nav a{display:flex;min-height:46px;align-items:center;gap:10px;border-radius:11px;border:1px solid #7b929f;background:#fff;color:var(--ink);text-decoration:none;padding:8px 11px;font-size:.95rem;font-weight:760}.device-nav a[aria-current]{border-color:var(--mint);background:var(--preview-soft);color:#115c4d}.device-nav a:hover{border-color:var(--preview-accent)}.device-nav .number{display:inline-grid;place-items:center;min-width:27px;height:27px;border-radius:50%;background:#e7eef4;color:#2d4960;font-size:.76rem}.device-nav a[aria-current] .number{color:#fff;background:var(--mint)}.body{padding:20px 0 56px}.panel{border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);padding:17px;margin-bottom:20px;scroll-margin-top:14px}.panel h2,.section h2{font-size:clamp(1.55rem,4vw,2.18rem);line-height:1.22;letter-spacing:-.045em;margin:0 0 10px}.pill{display:inline-block;border-radius:999px;padding:2px 9px;color:var(--mint);background:var(--preview-soft);font-size:.84rem;font-weight:800;margin:0 0 9px}.panel p{color:var(--muted);margin:0 0 12px}.steps{list-style:none;padding:0;margin:20px 0 0;display:grid;gap:11px;counter-reset:guide}.steps>li{min-width:0;counter-increment:guide;position:relative;border:1px solid var(--preview-line);border-radius:12px;padding:15px 13px 10px 44px;background:#f8fbfc}.steps>li::before{content:counter(guide);display:grid;place-items:center;position:absolute;left:11px;top:14px;width:24px;height:24px;border-radius:50%;background:var(--preview-soft);color:#115c4d;font-weight:800;font-size:.79rem}.steps h3{font-size:1.08rem;line-height:1.35;margin:0 0 6px;letter-spacing:-.025em}.steps p{font-size:.95rem;margin-bottom:9px}.path{color:var(--ink);font-weight:690}.shot{margin:10px 0 7px}.shot a{display:block;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#e9f1f4;line-height:0}.shot img{width:100%;height:auto;max-height:230px;display:block;object-fit:contain}.shot figcaption{font-size:.82rem;color:var(--muted);margin-top:4px}.split-shot{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.tip{color:#194b43;background:#e6f5f1;border-left:3px solid var(--mint);border-radius:8px;padding:9px 11px;margin:12px 0;font-size:.9rem}.tip a{white-space:normal}.panel details{border-top:1px solid var(--line);margin-top:15px;padding:10px 0 0}.panel summary{font-weight:770;cursor:pointer;min-height:44px;display:list-item;padding:6px 0;color:var(--ink)}.panel details p{font-size:.94rem}.section{margin:34px 0 0;padding-top:23px;border-top:1px solid var(--line)}.group{display:grid;gap:9px}.card{border:1px solid var(--line);border-radius:11px;padding:12px;background:#fff}.card h3{margin:0 0 5px;font-size:1rem}.card p{color:var(--muted);font-size:.9rem;margin:0 0 6px}.card a{font-weight:700}.section>p{color:var(--muted);font-size:.92rem}.foot{border-top:1px solid var(--line);color:var(--muted);font-size:.88rem;padding-block:7px}.foot nav{display:flex;gap:13px;flex-wrap:wrap}
+@media(min-width:500px){.device-nav{grid-template-columns:repeat(3,minmax(0,1fr))}.device-nav a{justify-content:center;padding-inline:6px}}
+@media(min-width:680px){.hero{padding-block:63px 34px}.panel{padding:25px}.steps,.group{grid-template-columns:repeat(2,minmax(0,1fr))}.shot img{max-height:250px}}
+@media(min-width:850px){.group{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.steps>li,.panel .group .card{display:flex;flex-direction:column}
+.steps>li>.shot,.steps>li>.split-shot,.panel .group .card .shot{margin-top:auto;padding-top:8px}
+.shot a{position:relative;aspect-ratio:16/10;display:block}
+.shot img{position:absolute;inset:0;width:100%;height:100%;max-height:none;min-height:0;object-fit:contain}
+.split-shot .shot a{aspect-ratio:8/10}
+.shot--diagram a{background:#edf4f6}
+.shot--example a{background:#eef4ff}
+.shot--access-entry a{aspect-ratio:3/1}
+.shot--screen-recording a{aspect-ratio:15/7}
+.access-flow{display:grid;gap:8px;margin-top:4px}
+.access-flow .shot{margin:0}
+.access-flow .shot a{aspect-ratio:15/7;background:#eff3fa}
+.access-flow .shot-label{margin-right:.25rem}
+@media(min-width:560px){.access-flow{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.shot--example .shot-label{background:#e7efff;color:#244683}
+.shot--detail a{aspect-ratio:3/1;background:#f2f6fa}
+.panel details .shot--detail{max-width:640px}
+.shot-label{display:inline-block;margin-inline-end:.4rem;padding:.02rem .35rem;background:#e4eef3;color:#345264;border-radius:.25rem;font-size:.72rem;font-weight:760}
+.shot--diagram .shot-label{background:#e2f2ec;color:#196254}
+.panel details>.shot,.panel details #connect-bluetooth .shot{max-width:540px}
+@media(max-width:410px){.steps>li{padding:13px 10px 10px 36px}.steps>li::before{left:7px}.shot-label{font-size:.68rem}}
+
+.shot-dialog{padding:0;border:0;background:transparent;color:white;max-width:calc(100vw - 24px);max-height:calc(100dvh - 72px);overflow:visible}
+.shot-dialog::backdrop{background:rgba(9,18,33,.91)}
+.shot-dialog img{display:block;width:auto;height:auto;min-width:0;max-width:min(1100px,calc(100vw - 24px));max-height:calc(100dvh - 84px);object-fit:contain;border-radius:8px;background:#f1f5f9}
+.shot-dialog p{margin:0;padding:14px;text-align:center;background:#17243b;border-radius:8px}
+.shot-dialog button{position:fixed;z-index:1;top:max(8px,env(safe-area-inset-top));right:max(12px,env(safe-area-inset-right));width:44px;height:44px;display:grid;place-items:center;padding:0;border:1px solid #8091a8;border-radius:50%;background:#17243b;color:#fff;font:400 27px/1 system-ui;cursor:pointer}
+.shot-dialog button:focus-visible{outline:3px solid #9bc4ff;outline-offset:2px}.shot-dialog:not([open]){display:none}.shot-dialog [hidden]{display:none}
+html:has(.shot-dialog[open]){overflow:hidden;overscroll-behavior:none}
+a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
+
+.pairing-flow{display:grid;grid-template-columns:minmax(0,1fr);gap:10px}
+.pairing-flow .shot{margin:0}
+.pairing-flow .shot a{aspect-ratio:8/5}
+.guide-checks{list-style:none;counter-reset:cursor-check;margin:12px 0 10px;padding:0;display:grid;gap:8px}
+.guide-checks li{counter-increment:cursor-check;border:1px solid var(--line);border-radius:10px;background:#f8fbfc;padding:8px 10px;display:flex;align-items:baseline;gap:8px;font-size:.93rem;color:var(--muted)}
+.guide-checks li::before{content:counter(cursor-check);display:grid;place-items:center;flex:none;width:21px;height:21px;border-radius:50%;background:var(--preview-soft);color:#115c4d;font-size:.74rem;font-weight:780}
+.guide-checks li strong{color:var(--ink)}
+#cursor-check h2{font-size:clamp(1.17rem,3vw,1.5rem);margin-bottom:6px}
+#cursor-check p{margin-bottom:0}
+@media(min-width:560px){.pairing-flow{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(min-width:680px){
+  .guide-checks{grid-template-columns:repeat(3,minmax(0,1fr))}
+  #mac-pairing,#mac-handoff{grid-column:1/-1}
+  #mac-handoff{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.08fr);grid-template-rows:auto 1fr;column-gap:16px}
+  #mac-handoff>.shot{grid-column:2;grid-row:1/3;margin:0;padding:0}
+}
+#mac-pairing>.pairing-flow+p{margin:7px 0 0}
+    [data-legacy-link]{display:none}
+    [data-legacy-link]:target{display:block;margin:1rem 0 1.75rem;padding:1rem 1.15rem;border:1px solid var(--preview-line);border-left:4px solid var(--preview-accent);border-radius:12px;background:var(--preview-panel);scroll-margin-top:1.5rem}
+    [data-legacy-link] h2{font-size:1.2rem;margin:0 0 .45rem}
+    [data-legacy-link] p{margin:.4rem 0}
+    [data-legacy-link] a{font-weight:700}
+  body{word-break:normal}
+</style>
+<link rel="icon" href="/assets/preview/onemouse-android-icon.png" type="image/png" sizes="240x240">
+<link rel="stylesheet" href="/assets/preview/one-preview.css?v=light1">
+<style>.topic-language-links{padding:7px 0;display:flex;gap:8px;flex-wrap:wrap;width:min(980px,calc(100% - 36px));margin:auto;font-size:.9rem}.topic-language-links [aria-current]{font-weight:750}</style></head>
+<body>
+<a class="skip" href="#main">跳到正文</a>
+<header class="preview-header"><div class="preview-frame">
+  <a class="preview-brand" href="/zh/" aria-label="OneMouse 首页预览"><span class="preview-mark" aria-hidden="true"><img src="/assets/preview/onemouse-android-icon.png" alt="" width="33" height="33"></span>OneMouse</a>
+  <nav class="preview-nav" aria-label="网站预览菜单"><a href="/zh/">首页预览</a><a href="/zh/features">功能介绍</a><a href="/zh/guide-new" aria-current="page">连接指南</a><a href="/zh/help-new">问题排查</a><a href="/zh/download">下载</a></nav>
+</div></header><nav class="topic-language-links" aria-label="语言"><a href="/guide-demo" lang="ko" hreflang="ko">한국어</a> · <a href="/en/guide-new" lang="en" hreflang="en">English</a> · <a href="/ja/guide-new" lang="ja" hreflang="ja">日本語</a> · <span lang="zh" aria-current="true">中文</span> · <a href="/es/guide-new" lang="es" hreflang="es">Español</a></nav>
+<main id="main">
+  <div class="hero"><div class="wrap">
+    <p class="tag">OneMouse 连接指南 <em>预览</em></p>
+    <h1>你要连接哪台设备？</h1>
+    <p>请从接有鼠标和键盘的 Windows 电脑开始。选择要控制的设备，连接到同一个路由器，或者查看 <a href="#connect-account">如何通过 Google 账号找到自己的设备</a>。</p>
+    <nav class="device-nav" aria-label="要连接的设备类型">
+      <a href="#android" data-device="android"><span class="number" aria-hidden="true">01</span>Android 手机或平板</a>
+      <a href="#mac" data-device="mac"><span class="number" aria-hidden="true">02</span>Mac</a>
+      <a href="#windows" data-device="windows"><span class="number" aria-hidden="true">03</span>另一台 Windows 电脑</a>
+    </nav>
+  </div></div>
+  <div class="body wrap">
+    <p class="tip">部分示例截图显示的是韩语界面。不同语言的菜单名称可能不同。</p>
+    <section id="position" data-legacy-link aria-label="设备布局与光标切换区域"><h2>设备布局与光标切换区域</h2><p>你可以查看新版简要说明或原有指南中的详细步骤。</p><p><a href="/zh/guide#position">查看现有详细指南</a></p></section>
+    <section id="remote" data-legacy-link aria-label="打开远程画面"><h2>打开远程画面</h2><p>你可以查看新版简要说明或原有指南中的详细步骤。</p><p><a href="/zh/guide#remote">查看现有详细指南</a></p></section>
+    <section id="windows-remote" data-legacy-link aria-label="操作 Windows 远程窗口"><h2>操作 Windows 远程窗口</h2><p>你可以查看新版简要说明或原有指南中的详细步骤。</p><p><a href="/zh/guide#windows-remote">查看现有详细指南</a></p></section>
+    <section id="mobile-pc-remote" data-legacy-link aria-label="用手机操作电脑"><h2>用手机操作电脑</h2><p>你可以查看新版简要说明或原有指南中的详细步骤。</p><p><a href="/zh/guide#mobile-pc-remote">查看现有详细指南</a></p></section>
+    <section id="remote-gesture-examples" data-legacy-link aria-label="远程操作手势"><h2>远程操作手势</h2><p>你可以查看新版简要说明或原有指南中的详细步骤。</p><p><a href="/zh/guide#remote-gesture-examples">查看现有详细指南</a></p></section>
+    <section id="mouse-gestures" data-legacy-link aria-label="鼠标手势"><h2>鼠标手势</h2><p>你可以查看新版简要说明或原有指南中的详细步骤。</p><p><a href="/zh/guide#mouse-gestures">查看现有详细指南</a></p></section>
+    <section id="mouse-gestures-title" data-legacy-link aria-label="鼠标手势"><h2>鼠标手势</h2><p>你可以查看新版简要说明或原有指南中的详细步骤。</p><p><a href="/zh/guide#mouse-gestures-title">查看现有详细指南</a></p></section>
+    <section id="files" data-legacy-link aria-label="文件与剪贴板"><h2>文件与剪贴板</h2><p>你可以查看新版简要说明或原有指南中的详细步骤。</p><p><a href="/zh/guide#files">查看现有详细指南</a></p></section>
+    <section id="screenshots" data-legacy-link aria-label="截取与发送截图"><h2>截取与发送截图</h2><p>你可以查看新版简要说明或原有指南中的详细步骤。</p><p><a href="/zh/guide#screenshots">查看现有详细指南</a></p></section>
+    <section id="text-to-pc" data-legacy-link aria-label="从 Android 发送文字和文件到电脑"><h2>从 Android 发送文字和文件到电脑</h2><p>你可以将选中的文字发送到电脑。完整的文件和文字传输步骤请见现有指南。</p><p><a href="/zh/guide#text-to-pc">查看现有详细指南</a></p></section>
+    <section id="file-receive-folder" data-legacy-link aria-label="在电脑上查找收到的文件"><h2>在电脑上查找收到的文件</h2><p>你可以查看新版简要说明或原有指南中的详细步骤。</p><p><a href="/zh/guide#file-receive-folder">查看现有详细指南</a></p></section>
+    <section id="notifications" data-legacy-link aria-label="手机通知与回复"><h2>手机通知与回复</h2><p>你可以查看新版简要说明或原有指南中的详细步骤。</p><p><a href="/zh/guide#notifications">查看现有详细指南</a></p></section>
+    <section id="quick" data-legacy-link aria-label="设备排序与快速连接"><h2>设备排序与快速连接</h2><p>你可以查看新版简要说明或原有指南中的详细步骤。</p><p><a href="/zh/guide#quick">查看现有详细指南</a></p></section>
+    <section id="device-order" data-legacy-link aria-label="设备排序与数字快捷键"><h2>设备排序与数字快捷键</h2><p>你可以查看新版简要说明或原有指南中的详细步骤。</p><p><a href="/zh/guide#device-order">查看现有详细指南</a></p></section>
+    <section id="bluetooth" data-legacy-link aria-label="通过蓝牙连接"><h2>通过蓝牙连接</h2><p>有关此主题的详细说明，请查看现有页面。</p><p><a href="#connect-bluetooth">Android</a> · <a href="#windows-bluetooth">Windows PC</a> · <a href="#mac-bluetooth">Mac</a> · <a href="/zh/guide#bluetooth">查看现有详细指南</a></p></section>
+    <section id="permissions" data-legacy-link aria-label="各设备所需权限"><h2>各设备所需权限</h2><p>你可以查看新版简要说明或原有指南中的详细步骤。</p><p><a href="/zh/guide#permissions">查看现有详细指南</a></p></section>
+    <section id="keyboard-shortcuts" data-legacy-link aria-label="键盘快捷键"><h2>键盘快捷键</h2><p>可查看新版快捷键摘要，或查看完整的 Windows 和 Android 快捷键表。</p><p><a href="/zh/guide#keyboard-shortcuts">查看现有详细指南</a></p></section>
+    <section id="shortcuts" data-legacy-link aria-label="键盘快捷键"><h2>键盘快捷键</h2><p>可查看新版快捷键摘要，或查看完整的 Windows 和 Android 快捷键表。</p><p><a href="/zh/guide#shortcuts">查看现有详细指南</a></p></section>
+    <section id="pc-shortcuts-title" data-legacy-link aria-label="Windows 应用默认快捷键"><h2>Windows 应用默认快捷键</h2><p>有关此主题的详细说明，请查看现有页面。</p><p><a href="/zh/guide#pc-shortcuts-title">查看现有详细指南</a></p></section>
+    <section id="shortcuts-next-release" data-legacy-link aria-label="不同设备的远程窗口快捷键"><h2>不同设备的远程窗口快捷键</h2><p>有关此主题的详细说明，请查看现有页面。</p><p><a href="/zh/guide#shortcuts-next-release">查看现有详细指南</a></p></section>
+    <section id="android-shortcuts-title" data-legacy-link aria-label="Android 控制快捷键"><h2>Android 控制快捷键</h2><p>有关此主题的详细说明，请查看现有页面。</p><p><a href="/zh/guide#android-shortcuts-title">查看现有详细指南</a></p></section>
+    <section class="panel" id="android" data-device-panel aria-labelledby="android-title">
+      <p class="pill">推荐 · 连接到同一个路由器</p>
+      <span id="start" aria-hidden="true"></span>
+      <span id="connect-wifi" aria-hidden="true"></span>
+      <h2 id="android-title" tabindex="-1">连接 Android 手机或平板</h2>
+      <p>二维码和 6 位数验证码任选一种即可。电脑使用网线也可以，只要连接到同一个路由器。无需登录 Google。 <a href="#connect-account">使用 Google 账号连接</a> · <a href="#connect-bluetooth">通过蓝牙连接（测试版）</a></p>
+      <ol class="steps">
+        <li id="android-access"><h3>打开应用并开启 Android 无障碍服务</h3><p>在 Windows 和 Android 上 <a href="/zh/#get">安装 OneMouse</a>，并连接到同一个路由器。接着在手机上按以下步骤开启 OneMouse 的 <strong>无障碍服务</strong>。以下以三星 Galaxy 为例，菜单名称可能因设备和 Android 版本而异。</p>
+          <figure class="shot shot--example shot--access-entry"><a href="/assets/preview/guide/android-access-entry-example.svg" aria-label="放大 Android OneMouse 首页的“需要无障碍权限”卡片"><img src="/assets/preview/guide/android-access-entry-example.svg" width="480" height="161" alt="Android OneMouse 首页的“需要无障碍权限”卡片" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">应用界面示意（韩语）</span>① 应用出现这张卡片时，点击打开。如果没有，请在手机设置中打开“无障碍”。</figcaption></figure>
+          <div class="access-flow"><figure class="shot shot--example"><a href="/assets/preview/guide/galaxy-accessibility-installed-apps-example.svg" aria-label="放大三星 Galaxy 无障碍设置中从已安装应用列表选择 One Mouse 的界面"><img src="/assets/preview/guide/galaxy-accessibility-installed-apps-example.svg" width="480" height="224" alt="三星 Galaxy 无障碍设置中从已安装应用列表选择 One Mouse 的界面" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">Galaxy 界面示例（韩语）</span>② 在“已安装的应用”中选择 One Mouse。</figcaption></figure><figure class="shot shot--example"><a href="/assets/preview/guide/galaxy-accessibility-onemouse-switch-example.svg" aria-label="放大三星 Galaxy 中开启 One Mouse 无障碍开关的界面"><img src="/assets/preview/guide/galaxy-accessibility-onemouse-switch-example.svg" width="480" height="224" alt="三星 Galaxy 中开启 One Mouse 无障碍开关的界面" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">Galaxy 界面示例（韩语）</span>③ 打开顶部开关，弹出确认提示时点击“允许”。</figcaption></figure></div></li>
+        <li><h3>在 Windows 上打开二维码和验证码</h3><p><span class="path">设备管理 → 通过其他方式连接 → 本机二维码和验证码</span>。</p>
+          <figure class="shot"><a href="/assets/pairing/pc-code-zh.webp" aria-label="放大 Windows 二维码和验证码示例"><img src="/assets/pairing/pc-code-zh.webp" width="888" height="742" alt="Windows OneMouse 的二维码和 6 位数验证码窗口" loading="lazy"></a><figcaption><span class="shot-label">应用界面示例（韩语）</span>请使用自己电脑上的验证码，不要使用示例中的号码。</figcaption></figure></li>
+        <li><h3>在 Android 上输入验证码或扫描二维码</h3><p><span class="path">首页 → 通过其他方式连接 → 用二维码或验证码添加电脑</span>。 <strong>数字验证码</strong>中输入验证码，或选择 <strong>扫描二维码 → 打开相机</strong>并扫描电脑屏幕。 <a href="/assets/preview/guide/android-bluetooth-entry-ko.webp">“用二维码或验证码添加电脑”按钮的位置（韩语界面）</a></p>
+          <div class="split-shot">
+            <figure class="shot"><a href="/assets/pairing/android-code-zh.webp" aria-label="放大 Android 数字验证码输入示例"><img src="/assets/pairing/android-code-zh.webp" width="1080" height="2400" alt="Android OneMouse 的数字验证码标签页" loading="lazy"></a><figcaption><span class="shot-label">应用界面示例（韩语）</span>6 位数验证码</figcaption></figure>
+            <figure class="shot"><a href="/assets/pairing/android-qr-zh.webp" aria-label="放大 Android 二维码扫描示例"><img src="/assets/pairing/android-qr-zh.webp" width="1080" height="2400" alt="Android OneMouse 的二维码扫描标签页" loading="lazy"></a><figcaption><span class="shot-label">应用界面示例（韩语）</span>二维码</figcaption></figure>
+          </div></li>
+        <li><h3>按设备的实际位置摆放布局并移过去</h3><p>在 Android 首页的 <strong>已注册的电脑</strong>中确认连接。在 Windows 中按手机或平板的实际摆放方向调整布局，然后把光标移向那一侧屏幕边缘的切换区域。</p>
+          <figure class="shot"><a href="/assets/pairing/pc-position-zh.webp" aria-label="放大 Android 设备布局示例"><img src="/assets/pairing/pc-position-zh.webp" width="2240" height="1800" alt="Windows OneMouse 中将 Android 设备放在电脑右侧的界面" loading="lazy"></a><figcaption><span class="shot-label">应用界面示例（韩语）</span>把光标移向设备所在的方向。</figcaption></figure></li>
+      </ol>
+      <details id="alternatives"><summary>其他连接方式：蓝牙（测试版）</summary>
+        <div id="connect-bluetooth"><h3>通过蓝牙连接（测试版）</h3><p>打开两台设备的蓝牙。在 Android OneMouse 中选择 <strong>启动蓝牙模式</strong>，然后在 Windows 的蓝牙设置中配对设备。连接后，在 OneMouse 的设备列表中确认状态与布局。蓝牙不能传输远程视频。</p><p><a href="/zh/technical">各连接方式的功能范围</a></p>
+          <figure class="shot shot--detail"><a href="/assets/preview/guide/android-bluetooth-entry-ko.webp" aria-label="放大 Android OneMouse 中从“通过其他方式连接”打开蓝牙设置的实际界面"><img src="/assets/preview/guide/android-bluetooth-entry-ko.webp" width="1048" height="303" alt="Android OneMouse 中从“通过其他方式连接”打开蓝牙设置的实际界面" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">应用实拍 · 旧版本（韩语）</span>在首页展开“通过其他方式连接”，然后点击“蓝牙设置”。</figcaption></figure><figure class="shot shot--example"><a href="/assets/preview/guide/android-bt-start-example.svg" aria-label="放大 Android OneMouse 中的“启动蓝牙模式”按钮"><img src="/assets/preview/guide/android-bt-start-example.svg" width="480" height="281" alt="Android OneMouse 设置中的连接区域和“启动蓝牙模式”按钮" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">应用界面示意（韩语）</span>点击设置中的“启动蓝牙模式”。</figcaption></figure></div>
+      </details>
+    </section>
+    <section class="panel" id="mac" data-device-panel aria-labelledby="mac-title">
+      <p class="pill">推荐 · 连接到同一个网络</p>
+      <h2 id="mac-title" tabindex="-1">从 Windows 连接 Mac</h2>
+      <p>需要搭载 Apple 芯片且运行 macOS 13 或更高版本的 Mac。将两台设备连到同一个路由器的 Wi-Fi 或有线网络，即可免登录使用。 <a href="#connect-account">使用 Google 账号连接 Mac</a> · <a href="#mac-bluetooth">通过蓝牙连接（测试版）</a></p>
+      <ol class="steps">
+        <li><h3>在 Windows 和 Mac 上打开应用</h3><p><a href="/zh/#get">安装 OneMouse</a>，并在两台设备上打开。请在 Windows 上发起连接。</p>
+          <figure class="shot shot--diagram"><a href="/assets/preview/guide/mac-start.svg" aria-label="放大在同一网络的 Windows 和 Mac 上打开 OneMouse 的示意图"><img src="/assets/preview/guide/mac-start.svg" width="760" height="450" alt="在同一网络的 Windows 和 Mac 上打开 OneMouse 的示意图" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">操作示意图</span>在接有鼠标和键盘的 Windows 电脑上发起连接。</figcaption></figure></li>
+        <li id="mac-access"><h3>在 Mac 上授予辅助功能权限</h3><p>要让 Mac 接收 Windows 的鼠标和键盘输入，请在 Mac 上授予 <strong>辅助功能</strong>权限。界面布局可能因 macOS 版本而异。</p>
+          <figure class="shot shot--example"><a href="/assets/preview/guide/mac-app-permissions-ko.svg" aria-label="放大 Mac OneMouse 高级设置中的 macOS 权限"><img src="/assets/preview/guide/mac-app-permissions-ko.svg" width="800" height="466" alt="Mac OneMouse 高级设置中的 macOS 权限" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">应用界面示意（韩语）</span>① 在 OneMouse 中打开“设置 → 高级 → macOS 权限”，点击“辅助功能”旁边的按钮。</figcaption></figure>
+          <div class="access-flow"><figure class="shot shot--example"><a href="/assets/preview/guide/macos-privacy-accessibility-example.svg" aria-label="放大 Mac 系统设置中“隐私与安全性 → 辅助功能”的界面"><img src="/assets/preview/guide/macos-privacy-accessibility-example.svg" width="480" height="224" alt="Mac 系统设置中“隐私与安全性 → 辅助功能”的界面" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">macOS 界面示例（韩语）</span>② 在“隐私与安全性”中打开“辅助功能”。</figcaption></figure><figure class="shot shot--example"><a href="/assets/preview/guide/macos-accessibility-onemouse-switch-example.svg" aria-label="放大 Mac 系统设置中开启 OneMouse 辅助功能开关的界面"><img src="/assets/preview/guide/macos-accessibility-onemouse-switch-example.svg" width="480" height="224" alt="Mac 系统设置中开启 OneMouse 辅助功能开关的界面" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">macOS 界面示例（韩语）</span>③ 在列表中开启 OneMouse。</figcaption></figure></div>
+          <p>如果列表中没有 OneMouse，请点击 <strong>+</strong>并添加已安装的 OneMouse。在 macOS 15 或更高版本中，如果系统请求访问 <strong>本地网络</strong> ，也请允许。</p></li>
+        <li id="mac-pairing"><h3>在 Mac 上查看验证码，在 Windows 上输入</h3><p>在 Mac OneMouse 的 <span class="path">设备管理 → 通过其他方式连接 → 查看这台 Mac 的验证码</span>中查看验证码。再打开 Windows OneMouse 的 <span class="path">设备管理 → 通过其他方式连接</span>，在“同一 Wi-Fi · 配对”部分找到 Mac，输入 6 位数验证码，然后点击 <strong>配对</strong>。</p>
+          <div class="pairing-flow"><figure class="shot shot--example"><a href="/assets/preview/guide/mac-app-pairing-ko.svg" aria-label="放大 Mac OneMouse 的本机验证码窗口"><img src="/assets/preview/guide/mac-app-pairing-ko.svg" width="800" height="482" alt="Mac OneMouse 的本机验证码窗口" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">应用界面示意（韩语）</span>① 在 Mac 上查看自己的 6 位数验证码。</figcaption></figure><figure class="shot shot--example"><a href="/assets/preview/guide/windows-mac-pairing-entry-example-ko.svg" aria-label="放大在 Windows OneMouse 中输入 Mac 验证码的示例"><img src="/assets/preview/guide/windows-mac-pairing-entry-example-ko.svg" width="800" height="482" alt="在 Windows OneMouse 的设备管理中选择 Mac 并输入 6 位数验证码的示例" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">应用界面示意（韩语）</span>② 在 Windows 上输入该验证码。</figcaption></figure></div><p>使用你自己的 Mac 上显示的验证码，不要使用示例中的数字。</p></li>
+        <li id="mac-handoff"><h3>将光标移向 Mac 所在的一侧</h3><p>在 Windows 的布局界面中按 Mac 的实际摆放方向设置位置，再把光标移向该侧的屏幕边缘。</p>
+          <figure class="shot shot--diagram"><a href="/assets/preview/guide/mac-placement.svg" aria-label="放大在 Windows 上调整 Mac 位置并把光标移过屏幕边缘的示意图"><img src="/assets/preview/guide/mac-placement.svg" width="760" height="450" alt="在 Windows 上调整 Mac 位置并把光标移过屏幕边缘的示意图" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">操作示意图</span>将光标移向 Mac 所在的一侧。</figcaption></figure></li>
+      </ol>
+      <div class="tip"><strong>列表中找不到 Mac？</strong> 确认两台设备连接到同一个网络，并检查 macOS 请求的本地网络权限。 <a href="/zh/help#connection-symptoms">排查 Mac 连接问题</a></div>
+      <details id="mac-bluetooth">
+        <summary>通过蓝牙连接 Windows 和 Mac（测试版）</summary>
+        <p>此方式每次直连一台设备。无需连接同一个 Wi-Fi，也无需登录 Google。请先在两台设备各自的系统蓝牙设置中完成配对。</p>
+        <p>在 Mac OneMouse 的 <span class="path">设备管理 → 通过其他方式连接</span>，展开后在 <strong>Bluetooth</strong> 卡片上点击 <strong>开启</strong>。连接期间，卡片可能会直接出现在“设备管理”中。</p>
+        <ul>
+          <li><strong>从 Windows 控制 Mac：</strong> 将 Mac 的输入方向切换为 <strong>接收鼠标和键盘输入</strong>，然后在 Windows 的 <strong>设备管理</strong>蓝牙列表中开启 Mac 的连接。</li>
+          <li><strong>从 Mac 控制 Windows：</strong> 在 Windows 的 <strong>设备管理 → 通过其他方式连接 → 蓝牙</strong>中开启 <strong>接收鼠标和键盘输入</strong>。然后将 Mac 的输入方向切换为 <strong>发送鼠标和键盘输入</strong>，再从列表中选择 Windows 电脑。</li>
+        </ul>
+        <p>Mac 接收输入时需要 <strong>辅助功能</strong> 权限；发送输入时还需要 <strong>输入监控</strong> 权限。支持鼠标和键盘、文字剪贴板以及文件和文件夹传输。</p>
+        <p><strong>Mac 屏幕和窗口共享仅支持 Wi-Fi 或有线局域网</strong>，无法通过蓝牙查看屏幕或窗口。</p>
+        <figure class="shot shot--example"><a href="/assets/preview/guide/mac-app-bluetooth-ko.svg" aria-label="放大 Mac OneMouse 设备管理中开启蓝牙的位置"><img src="/assets/preview/guide/mac-app-bluetooth-ko.svg" width="800" height="520" alt="Mac OneMouse 设备管理中开启蓝牙的位置" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">应用界面示意（韩语）</span>在蓝牙卡片上点击“开启”，然后选择输入方向。</figcaption></figure>
+      </details>
+      <details id="mac-screen-recording"><summary>也需要授权屏幕录制吗？</summary>
+        <p><strong>只用鼠标和键盘时不需要。</strong> 如果要在 Windows 上查看 Mac 的屏幕或窗口，或用 OneMouse 在 Mac 上截图，请在 <strong>相关 Mac</strong>上授权。</p>
+        <p>在 Mac 的 <span class="path">系统设置 → 隐私与安全性 → 屏幕与系统音频录制</span>中开启 OneMouse。菜单名称可能因 macOS 版本而异。 <a href="/zh/guide#windows-remote">远程画面指南</a></p>
+        <figure class="shot shot--example shot--screen-recording"><a href="/assets/preview/guide/macos-screen-recording-onemouse-switch-example.svg" aria-label="放大 Mac 系统设置中为 OneMouse 开启屏幕录制权限的界面"><img src="/assets/preview/guide/macos-screen-recording-onemouse-switch-example.svg" width="480" height="224" alt="Mac“屏幕与系统音频录制”中已开启 OneMouse 的示例" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">macOS 界面示例（韩语）</span>在要截取画面的 Mac 上开启 OneMouse 的权限。</figcaption></figure>
+      </details>
+    </section>
+    <section class="panel" id="windows" data-device-panel aria-labelledby="windows-title">
+      <p class="pill">推荐 · 在同一网络中使用 6 位数验证码</p>
+      <span id="pcpc" aria-hidden="true"></span>
+      <h2 id="windows-title" tabindex="-1">连接另一台 Windows 电脑</h2>
+      <p>从接有鼠标和键盘的电脑开始。两台电脑接入同一个路由器，即可免登录使用验证码连接。 <a href="#connect-account">使用 Google 账号连接另一台电脑</a> · <a href="#windows-bluetooth">通过蓝牙连接（测试版）</a></p>
+      <ol class="steps">
+        <li><h3>在两台电脑上打开设备管理</h3><p>在接入同一个路由器的两台 Windows 电脑上 <a href="/zh/#get">安装 OneMouse</a>并打开应用，然后在左侧菜单中选择 <strong>设备管理</strong>。</p>
+          <figure class="shot shot--example"><a href="/assets/preview/guide/windows-device-management-entry-ko.webp" aria-label="放大 Windows OneMouse 左侧的设备管理菜单实际界面"><img src="/assets/preview/guide/windows-device-management-entry-ko.webp" width="960" height="630" alt="Windows OneMouse 左侧选中设备管理时的实际界面" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">应用实拍 · 旧版本（韩语）</span>在左侧菜单中打开“设备管理”。</figcaption></figure></li>
+        <li><h3>在另一台电脑上查看验证码</h3><p>在要控制的电脑上，打开 <span class="path">设备管理 → 通过其他方式连接 → 本机二维码和验证码</span>并查看 6 位数验证码。</p>
+          <figure class="shot"><a href="/assets/pairing/pc-code-zh.webp" aria-label="放大另一台 Windows 电脑上显示二维码和 6 位数验证码的应用界面"><img src="/assets/pairing/pc-code-zh.webp" width="888" height="742" alt="在另一台 Windows 电脑上查看二维码和 6 位数验证码的应用界面" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">应用界面示例（韩语）</span>请在要控制的电脑上打开此窗口。图中的号码仅供示例。</figcaption></figure></li>
+        <li><h3>在自己的电脑上选择并连接另一台电脑</h3><p>在自己的电脑上打开 <span class="path">设备管理 → 通过其他方式连接</span>，选择另一台电脑并输入验证码。确认连接状态，必要时打开连接开关。</p>
+          <figure class="shot"><a href="/assets/pairing/pc-peer-zh.webp" aria-label="放大输入另一台电脑验证码的示例"><img src="/assets/pairing/pc-peer-zh.webp" width="2240" height="1800" alt="在 Windows 上输入另一台电脑的 6 位数验证码" loading="lazy"></a><figcaption><span class="shot-label">应用界面示例（韩语）</span>图中的设备名称与验证码仅供示例。</figcaption></figure></li>
+        <li><h3>将光标移向另一台电脑</h3><p>在布局编辑器中按另一台电脑的实际摆放方向设置位置，再把光标移向对应的屏幕边缘。</p>
+          <figure class="shot"><a href="/assets/pairing/pc-peer-position-zh.webp" aria-label="放大另一台 Windows 电脑的布局示例"><img src="/assets/pairing/pc-peer-position-zh.webp" width="2240" height="1800" alt="在 Windows 设备管理中设置另一台电脑位置的界面" loading="lazy"></a><figcaption><span class="shot-label">应用界面示例（韩语）</span>布局应与设备实际摆放方向一致。</figcaption></figure></li>
+      </ol>
+      <details id="windows-bluetooth">
+        <summary>通过蓝牙连接两台 Windows 电脑（测试版）</summary>
+        <ol>
+          <li>先在 Windows 的蓝牙设置中配对两台电脑。</li>
+          <li>在接收方电脑的 OneMouse 中，打开 <span class="path">设备管理 → 通过其他方式连接 → 蓝牙</span>并选择 <strong>接收鼠标和键盘输入</strong>。蓝牙未开启时请先开启。</li>
+          <li>在发送方电脑的同一菜单中，按需切换为 <strong>发送鼠标和键盘输入</strong>，再在列表中打开接收方电脑的连接开关，并调整设备布局。</li>
+        </ol>
+        <p>无需登录 Google，也不需要路由器。要查看远程画面，请使用同一个网络。</p>
+      </details>
+      <div class="tip"><strong>找不到另一台电脑？</strong> 先确认两台电脑上的应用都在运行，而且都连到了同一个网络。 <a href="/zh/help#connection-symptoms">查看连接排查步骤</a></div>
+    </section>
+    <section class="panel" id="cursor-check" aria-labelledby="cursor-check-title">
+      <h2 id="cursor-check-title">已经连接，但光标移不到另一块屏幕？</h2>
+      <ol class="guide-checks">
+        <li><span><strong>布局方向：</strong> 检查 Windows 中的设备布局是否与实际摆放方向一致。</span></li>
+        <li><span><strong>切换区域：</strong> 将光标移向布局中标出的屏幕边缘区域。</span></li>
+        <li><span><strong>接收设备的权限：</strong> 在 Android 上检查 OneMouse 的无障碍服务；在 Mac 上检查辅助功能权限。</span></li>
+      </ol>
+      <p><a href="/zh/help#cursor-not-crossing">查看光标问题的排查步骤</a></p>
+    </section>
+    <section class="panel" id="connect-account" aria-labelledby="account-title">
+      <p class="pill">可选 · 无需二维码或验证码</p>
+      <h2 id="account-title">如何通过 Google 账号找到自己的设备</h2>
+      <p>Windows、Mac 和 Android 上的 OneMouse 都支持此方式。更新两端应用并接通互联网，然后使用 <strong>同一个 Google 账号</strong>登录。</p>
+      <div class="group">
+        <article class="card" id="account-windows"><h3>Windows ↔ Windows</h3><p>在两台电脑的 <strong>设备管理</strong>中登录。在连接鼠标的电脑上选中另一台电脑，必要时打开连接开关。</p>
+          <figure class="shot shot--detail"><a href="/assets/preview/guide/windows-google-account-entry-ko.webp" aria-label="放大 Windows OneMouse 设备管理中的 Google 账号卡片和登录按钮"><img src="/assets/preview/guide/windows-google-account-entry-ko.webp" width="2240" height="526" alt="Windows OneMouse 设备管理中的 Google 账号卡片和登录按钮" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">应用实拍 · 旧版本（韩语）</span>在设备管理中点击“使用 Google 登录”。</figcaption></figure></article>
+        <article class="card" id="account-mac"><h3>Windows → Mac</h3><p>在 Windows 的 <strong>设备管理</strong>和 Mac 应用的 <strong>设备管理</strong>中登录。然后在 Windows 的设备列表中选择 Mac 并连接。 <a href="/assets/preview/guide/windows-google-account-entry-ko.webp">Windows 登录按钮的位置（韩语界面）</a>  · 要让 Mac 接收输入，请授予 <strong>辅助功能</strong>权限。</p>
+          <figure class="shot shot--example"><a href="/assets/preview/guide/mac-app-account-ko.svg" aria-label="放大 Mac OneMouse 设备管理中的 Google 登录按钮"><img src="/assets/preview/guide/mac-app-account-ko.svg" width="800" height="424" alt="Mac OneMouse 设备管理中的 Google 登录按钮" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">应用界面示意（韩语）</span>在 Mac 上点击“使用 Google 登录”。</figcaption></figure></article>
+        <article class="card" id="account-android"><h3>Windows → Android</h3><p>在 Windows 的 <strong>设备管理</strong>和 Android 的 OneMouse 首页登录。在手机的 <strong>已注册的电脑</strong>中选中自己的电脑并连接，然后开启 Android 的 <strong>无障碍服务</strong>。</p>
+          <figure class="shot shot--detail"><a href="/assets/preview/guide/android-account-home-ko.webp" aria-label="放大 Android OneMouse 首页的 Google 登录按钮和已注册电脑区域"><img src="/assets/preview/guide/android-account-home-ko.webp" width="1048" height="223" alt="Android OneMouse 首页的 Google 登录按钮和已注册电脑区域" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">应用实拍 · 旧版本（韩语）</span>在首页登录，然后在下方的“已注册的电脑”中选择自己的电脑。</figcaption></figure></article>
+      </div>
+      /zh/help#account-connect-help">找不到设备怎么办</a></div>
+    </section>
+    <section class="section" id="next" aria-labelledby="next-title">
+      <h2 id="next-title">连接后，试试这些功能</h2>
+      <div class="group">
+        <article class="card"><h3>发送文件</h3><p>把文件拖到传输界面或快速拖放区即可发送。</p><a href="/zh/guide#files">文件传输指南</a></article>
+        <article class="card"><h3>粘贴已复制的文字</h3><p>通过支持的连接方式，可在另一台设备上使用已复制的文字。</p><a href="/zh/guide#files">文件与剪贴板指南</a></article>
+        <article class="card"><h3>仅截取需要的区域</h3><p>按默认快捷键 <strong>Ctrl+Alt+S</strong>开始。有关支持的接收设备与连接方式，请查看指南。</p><a href="/zh/guide#screenshots">截图与发送指南</a></article>
+      </div>
+      <p><a href="/zh/guide#shortcuts">查看更多快捷键</a> · <a href="/zh/help">查看帮助</a></p>
+      <p>要连接设备，请在两端 <a href="/zh/#get">安装 OneMouse</a>。</p>
+    </section>
+  </div>
+</main>
+<footer class="preview-footer"><div class="preview-frame">
+  <p>这是 OneMouse 网站的预览版，与现有官网分开。</p>
+  <nav class="preview-refs" aria-label="相关链接">
+    <a href="/zh/technical">支持的设备和连接方式</a><a href="/zh/technical">技术与安全</a><a href="/zh/privacy">隐私政策</a><a href="/zh/terms">使用条款</a><a href="/zh/licenses">开源许可证</a><a href="/zh/">现有官网</a>
+  </nav>
+</div></footer>
+<dialog id="guide-image-viewer" class="shot-dialog" aria-label="放大指南图片">
+  <button type="button" aria-label="关闭图片" autofocus>×</button>
+  <img alt="" hidden>
+  <p role="status" hidden></p>
+</dialog>
+<script>
+(() => {
+  const links = [...document.querySelectorAll('[data-device]')];
+  const panels = [...document.querySelectorAll('[data-device-panel]')];
+  function showDevice(id) {
+    const target = panels.find(panel => panel.id === id);
+    if (!target) return false;
+    panels.forEach(panel => { panel.hidden = panel !== target; });
+    links.forEach(link => {
+      if (link.dataset.device === id) link.setAttribute('aria-current', 'location');
+      else link.removeAttribute('aria-current');
+    });
+    return true;
+  }
+  function applyHash() {
+    const id = location.hash.slice(1).toLowerCase();
+    if (['start','connect-wifi','pcpc'].includes(id)) {
+      showDevice(id === 'pcpc' ? 'windows' : 'android');
+      document.getElementById(id).scrollIntoView({block:'start'});
+      return true;
+    }
+    if (id === 'connect-account' || ['account-windows','account-mac','account-android'].includes(id)) {
+      if (panels.every(panel => !panel.hidden)) showDevice('android');
+      document.getElementById(id).scrollIntoView({block:'start'});
+      return true;
+    }
+    if (id === 'android-access') return showDevice('android');
+    if (['mac-access','mac-pairing'].includes(id)) {
+      showDevice('mac');
+      document.getElementById(id).scrollIntoView({block:'start'});
+      return true;
+    }
+    if (['windows-bluetooth','mac-bluetooth','mac-screen-recording'].includes(id)) {
+      showDevice(id === 'windows-bluetooth' ? 'windows' : 'mac');
+      const disclosure = document.getElementById(id);
+      disclosure.open = true;
+      disclosure.scrollIntoView({block:'start'});
+      return true;
+    }
+    if (['connect-bluetooth','alternatives'].includes(id)) {
+      showDevice('android');
+      document.getElementById('alternatives').open = true;
+      document.getElementById(id).scrollIntoView({block:'start'});
+      return true;
+    }
+    return showDevice(id);
+  }
+  if (!applyHash()) showDevice('android');
+  window.addEventListener('hashchange', () => {
+    if (!location.hash) showDevice('android');
+    else applyHash();
+  });
+  links.forEach(link => link.addEventListener('click', e => {
+    if (e.defaultPrevented || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+    showDevice(link.dataset.device);
+  }));
+
+  const viewer = document.getElementById('guide-image-viewer');
+  if (typeof viewer.showModal === 'function') {
+    const image = viewer.querySelector('img');
+    const close = viewer.querySelector('button');
+    const status = viewer.querySelector('[role="status"]');
+    const imageLinks = [...document.querySelectorAll('a[href^="/assets/pairing/"], a[href^="/assets/preview/guide/"]')]
+      .filter(link => /\.(?:svg|webp|png|jpe?g)$/i.test(link.pathname));
+    let opener = null;
+    let startedOnBackdrop = false;
+    for (const link of imageLinks) {
+      link.setAttribute('aria-haspopup', 'dialog');
+      link.addEventListener('click', event => {
+        if (event.defaultPrevented || event.button !== 0 || viewer.open) return;
+        event.preventDefault();
+        opener = link;
+        startedOnBackdrop = false;
+        const thumb = link.querySelector('img') || imageLinks.find(other => other.href === link.href && other.querySelector('img'))?.querySelector('img');
+        image.alt = thumb?.alt || link.textContent.trim();
+        status.textContent = '正在加载图片…';
+        status.hidden = false;
+        image.hidden = true;
+        viewer.showModal();
+        image.src = link.href;
+      });
+    }
+    image.addEventListener('load', () => {
+      if (!viewer.open) return;
+      image.hidden = false;
+      status.hidden = true;
+    });
+    image.addEventListener('error', () => {
+      if (!viewer.open) return;
+      image.hidden = true;
+      status.textContent = '无法加载图片。';
+      status.hidden = false;
+    });
+    close.addEventListener('click', () => viewer.close());
+    viewer.addEventListener('pointerdown', event => { startedOnBackdrop = event.target === viewer; });
+    viewer.addEventListener('click', event => {
+      if (startedOnBackdrop && event.target === viewer) viewer.close();
+      startedOnBackdrop = false;
+    });
+    viewer.addEventListener('close', () => {
+      if (viewer.open) return;
+      image.removeAttribute('src');
+      image.hidden = true;
+      status.hidden = true;
+      opener?.focus({preventScroll:true});
+      opener = null;
+    });
+  }
+})();
+</script>
+</body>
+</html>

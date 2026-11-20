@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#f5f8fa">
+  <meta name="description" content="OneMouse 故障排查预览。按症状查找连接、光标、文件传输等问题的解决方法。">
+  <title>故障排查预览 · OneMouse</title>
+  <style>
+    :root{color-scheme:light;--bg:var(--preview-bg);--panel:var(--preview-panel);--line:var(--preview-line);--text:var(--preview-ink);--muted:var(--preview-muted);--mint:var(--preview-accent);--focus:#08729d;font-family:system-ui,-apple-system,"Malgun Gothic",sans-serif}
+    *{box-sizing:border-box}
+    html,body{margin:0;background:var(--bg);color:var(--text)}
+    a{color:var(--mint);text-underline-offset:.2em}
+    :focus-visible{outline:3px solid var(--focus);outline-offset:4px}
+    p,li{line-height:1.65}
+    h1,h2,h3,p{margin-top:0}
+    .wrap{width:min(1120px,calc(100% - 2.5rem));margin-inline:auto}
+    .skip{position:absolute;transform:translateY(-120%);padding:.8rem;background:var(--bg);z-index:1}
+    .skip:focus{transform:none}
+    header{border-bottom:1px solid var(--line);background:#fff}
+    .top{display:flex;align-items:center;justify-content:space-between;gap:.5rem 2rem;flex-wrap:wrap;padding-block:.55rem}
+    .brand{display:inline-flex;align-items:center;gap:.55rem;font-weight:850;color:var(--text);text-decoration:none;min-height:44px}
+    .mark{width:30px;height:30px;border-radius:8px;display:grid;place-items:center;background:var(--mint);color:#fff}
+    nav{display:flex;gap:.15rem 1rem;flex-wrap:wrap}
+    nav a{font-size:.96rem;color:var(--muted);display:inline-flex;align-items:center;min-height:44px;text-decoration:none}
+    nav a[aria-current],nav a:hover{color:var(--mint);text-decoration:underline}
+    main{padding-block:clamp(2.25rem,7vw,5rem) 3rem}
+    .hero{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:1rem 2.5rem;align-items:end;margin-bottom:2.35rem}
+    h1{font-size:clamp(2.15rem,5.3vw,4.25rem);line-height:1.12;letter-spacing:-.055em;word-break:keep-all;margin-bottom:1rem}
+    h2{font-size:clamp(1.25rem,2.5vw,1.64rem);letter-spacing:-.035em}
+    h3{font-size:1.05rem;margin-bottom:.45rem}
+    .eyebrow{display:block;font-size:.9rem;font-weight:800;color:var(--mint);margin-bottom:.6rem}
+    .hero p,.muted,.steps li{color:var(--muted)}
+    .hero p{margin-bottom:0}
+    .rescue{border:1px solid #a9c9bd;border-radius:16px;padding:1rem 1.15rem;background:#e6f5f1}
+    .rescue h2{font-size:1.05rem;margin-bottom:.5rem}
+    .rescue p{font-size:.94rem}
+    kbd{display:inline-block;border:1px solid #7b918d;border-radius:5px;padding:.2em .35em;font:700 .9em ui-monospace,monospace;color:#194b43;white-space:nowrap}
+    .jump{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.65rem;margin-bottom:2rem}
+    .jump a{display:flex;align-items:center;justify-content:space-between;gap:.45rem;padding:.72rem .8rem;min-height:55px;color:var(--text);text-decoration:none;font-weight:700;background:var(--panel);border:1px solid var(--line);border-radius:10px}
+    .jump a:hover{border-color:var(--mint)} .arrow{color:var(--mint)}
+    .solutions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.8rem;align-items:start}
+    .issue{scroll-margin-top:1.25rem;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:1.15rem}
+    .issue:target{border-color:var(--mint)}
+    .issue h2{margin-bottom:.6rem;word-break:keep-all}
+    .steps{padding-left:1.35em;margin:.25rem 0 .85rem}
+    .steps li+li{margin-top:.35rem}.steps strong{color:var(--text)}
+    details{border-top:1px solid var(--line);padding-top:.2rem}
+    summary{cursor:pointer;color:var(--mint);padding:.65rem .2rem;min-height:44px;font-weight:750}
+    details p{margin-bottom:.55rem}.links a{display:inline-block;padding:.4rem .25rem .4rem 0;margin-right:.5rem}
+    .more{margin-top:2rem;border-top:1px solid var(--line);padding-top:1.2rem}
+    footer{border-top:1px solid var(--line);padding:1rem 0 1.5rem;color:var(--muted)}
+    footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.2rem 1rem}
+    @media(max-width:730px){.hero,.solutions{grid-template-columns:1fr}.jump{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{align-items:start}.top{column-gap:1rem}}
+    @media(max-width:410px){.wrap{width:calc(100% - 1.5rem)}.jump{grid-template-columns:1fr}.issue{padding:1rem}.top nav{gap:0 .75rem}}
+      [data-legacy-link]{display:none}
+    [data-legacy-link]:target{display:block;margin:1rem 0 1.75rem;padding:1rem 1.15rem;border:1px solid var(--preview-line);border-left:4px solid var(--preview-accent);border-radius:12px;background:var(--preview-panel);scroll-margin-top:1.5rem}
+    [data-legacy-link] h2{font-size:1.2rem;margin:0 0 .45rem}
+    [data-legacy-link] p{margin:.4rem 0}
+    [data-legacy-link] a{font-weight:700}
+  </style>
+<link rel="icon" href="/assets/preview/onemouse-android-icon.png" type="image/png" sizes="240x240">
+<link rel="stylesheet" href="/assets/preview/one-preview.css?v=light1">
+<style>.topic-language-links{padding:7px 0;display:flex;gap:8px;flex-wrap:wrap;width:min(980px,calc(100% - 36px));margin:auto;font-size:.9rem}.topic-language-links [aria-current]{font-weight:750}</style></head>
+<body>
+<a class="skip" href="#main">跳至正文</a>
+<header class="preview-header"><div class="preview-frame">
+  <a class="preview-brand" href="/zh/" aria-label="OneMouse 首页"><span class="preview-mark" aria-hidden="true"><img src="/assets/preview/onemouse-android-icon.png" alt="" width="33" height="33"></span>OneMouse</a>
+  <nav class="preview-nav" aria-label="OneMouse 导航"><a href="/zh/">首页</a><a href="/zh/features">功能</a><a href="/zh/guide-new">连接指南</a><a href="/zh/help-new" aria-current="page">故障排查</a><a href="/zh/download">下载</a></nav>
+</div></header><nav class="topic-language-links" aria-label="语言"><a href="/help-demo" lang="ko" hreflang="ko">한국어</a> · <a href="/en/help-new" lang="en" hreflang="en">English</a> · <a href="/ja/help-new" lang="ja" hreflang="ja">日本語</a> · <span lang="zh" aria-current="true">中文</span> · <a href="/es/help-new" lang="es" hreflang="es">Español</a></nav>
+<main class="wrap" id="main">
+  <div class="hero">
+    <div>
+      <span class="eyebrow">OneMouse · 帮助预览</span>
+      <h1>遇到什么问题了？</h1>
+      <p>请选择你遇到的症状。重新登录或注册设备前，先进行几项简单检查。</p>
+    </div>
+    <aside class="rescue" aria-labelledby="rescue-title">
+      <h2 id="rescue-title">光标无法回到自己的电脑？</h2>
+      <p>在 Windows 上按 <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Backspace</kbd>。这是默认的返回快捷键。如果已关闭，请从已连接屏幕的另一侧边缘移回光标。 <a href="/zh/features#shortcut-return">查看快捷键的生效条件</a></p>
+    </aside>
+  </div>
+    <section id="quick-help" data-legacy-link aria-label="快速排查"><h2>快速排查</h2><p>请参阅原版帮助了解此主题的详细说明。</p><p><a href="/zh/help#quick-help">查看原版帮助</a></p></section>
+    <section id="android-input-help" data-legacy-link aria-label="已连接但无法输入时"><h2>已连接但无法输入时</h2><p>查看相关的预览说明，或前往原版帮助了解详细内容。</p><p><a href="#cursor">查看预览说明</a> · <a href="/zh/help#android-input-help">查看原版帮助</a></p></section>
+    <section id="connection-symptoms" data-legacy-link aria-label="检查连接症状"><h2>检查连接症状</h2><p>请参阅原版帮助了解此主题的详细说明。</p><p><a href="/zh/help#connection-symptoms">查看原版帮助</a></p></section>
+    <section id="cursor-not-crossing" data-legacy-link aria-label="显示已连接，但光标无法移到手机"><h2>显示已连接，但光标无法移到手机</h2><p>查看相关的预览说明，或前往原版帮助了解详细内容。</p><p><a href="#cursor">查看预览说明</a> · <a href="/zh/help#cursor-not-crossing">查看原版帮助</a></p></section>
+    <section id="account-connect-help" data-legacy-link aria-label="Google 账号中看不到设备或无法连接"><h2>Google 账号中看不到设备或无法连接</h2><p>请参阅原版帮助了解此主题的详细说明。</p><p><a href="/zh/help#account-connect-help">查看原版帮助</a></p></section>
+    <section id="remote-control-help" data-legacy-link aria-label="手机能看到 PC 画面，但无法操作"><h2>手机能看到 PC 画面，但无法操作</h2><p>请参阅原版帮助了解此主题的详细说明。</p><p><a href="/zh/help#remote-control-help">查看原版帮助</a></p></section>
+    <section id="order" data-legacy-link aria-label="连接排查步骤"><h2>连接排查步骤</h2><p>请参阅原版帮助了解此主题的详细说明。</p><p><a href="/zh/help#order">查看原版帮助</a></p></section>
+    <section id="mac-help" data-legacy-link aria-label="Mac 连接故障排查"><h2>Mac 连接故障排查</h2><p>请参阅原版帮助了解此主题的详细说明。</p><p><a href="/zh/help#mac">查看原版帮助</a></p></section>
+    <section id="mac" data-legacy-link aria-label="Mac 连接故障排查"><h2>Mac 连接故障排查</h2><p>请参阅原版帮助了解此主题的详细说明。</p><p><a href="/zh/help#mac">查看原版帮助</a></p></section>
+    <section id="mac-input-help" data-legacy-link aria-label="已经配对，但鼠标和键盘无法控制 Mac。"><h2>已经配对，但鼠标和键盘无法控制 Mac。</h2><p>请参阅原版帮助了解此主题的详细说明。</p><p><a href="/zh/help#mac-input-help">查看原版帮助</a></p></section>
+    <section id="mac-screen-help" data-legacy-link aria-label="Windows 上看不到 Mac 屏幕或窗口。"><h2>Windows 上看不到 Mac 屏幕或窗口。</h2><p>请参阅原版帮助了解此主题的详细说明。</p><p><a href="/zh/help#mac-screen-help">查看原版帮助</a></p></section>
+    <section id="phone-notifications" data-legacy-link aria-label="手机通知没有显示在电脑上时。"><h2>手机通知没有显示在电脑上时。</h2><p>查看相关的预览说明，或前往原版帮助了解详细内容。</p><p><a href="#alerts">查看预览说明</a> · <a href="/zh/help#phone-notifications">查看原版帮助</a></p></section>
+    <section id="notification-history" data-legacy-link aria-label="通知历史保存与删除"><h2>通知历史保存与删除</h2><p>请参阅原版帮助了解此主题的详细说明。</p><p><a href="/zh/help#notification-history">查看原版帮助</a></p></section>
+    <section id="faq" data-legacy-link aria-label="常见问题"><h2>常见问题</h2><p>请参阅原版帮助了解此主题的详细说明。</p><p><a href="/zh/help#faq">查看原版帮助</a></p></section>
+    <section id="notification-reply-faq" data-legacy-link aria-label="没有回复按钮，或回复无法发送。"><h2>没有回复按钮，或回复无法发送。</h2><p>请参阅原版帮助了解此主题的详细说明。</p><p><a href="/zh/help#notification-reply-faq">查看原版帮助</a></p></section>
+    <section id="device-order-faq" data-legacy-link aria-label="想更改设备编号，却找不到编辑顺序。"><h2>想更改设备编号，却找不到编辑顺序。</h2><p>请参阅原版帮助了解此主题的详细说明。</p><p><a href="/zh/help#device-order-faq">查看原版帮助</a></p></section>
+    <section id="windows-remote-gestures-faq" data-legacy-link aria-label="Windows远程窗口中的浏览器手势不起作用。"><h2>Windows远程窗口中的浏览器手势不起作用。</h2><p>请参阅原版帮助了解此主题的详细说明。</p><p><a href="/zh/help#windows-remote-gestures-faq">查看原版帮助</a></p></section>
+    <section id="default-pc-faq" data-legacy-link aria-label="从手机分享的文件没有发送到电脑。"><h2>从手机分享的文件没有发送到电脑。</h2><p>请参阅原版帮助了解此主题的详细说明。</p><p><a href="/zh/help#default-pc-faq">查看原版帮助</a></p></section>
+    <section id="file-receive-folder-faq" data-legacy-link aria-label="无法更改或打开电脑的接收文件夹。"><h2>无法更改或打开电脑的接收文件夹。</h2><p>请参阅原版帮助了解此主题的详细说明。</p><p><a href="/zh/help#file-receive-folder-faq">查看原版帮助</a></p></section>
+    <section id="screenshot-preview-faq" data-legacy-link aria-label="截图后光标没有返回，或预览窗口关闭了。"><h2>截图后光标没有返回，或预览窗口关闭了。</h2><p>请参阅原版帮助了解此主题的详细说明。</p><p><a href="/zh/help#screenshot-preview-faq">查看原版帮助</a></p></section>
+    <section id="mouse-gestures-faq" data-legacy-link aria-label="鼠标手势无法启动。"><h2>鼠标手势无法启动。</h2><p>请参阅原版帮助了解此主题的详细说明。</p><p><a href="/zh/help#mouse-gestures-faq">查看原版帮助</a></p></section>
+    <section id="mouse-gestures-history" data-legacy-link aria-label="前进或刷新不起作用。"><h2>前进或刷新不起作用。</h2><p>请参阅原版帮助了解此主题的详细说明。</p><p><a href="/zh/help#mouse-gestures-history">查看原版帮助</a></p></section>
+    <section id="mouse-gestures-minimize" data-legacy-link aria-label="下 → 右会关闭应用吗？"><h2>下 → 右会关闭应用吗？</h2><p>请参阅原版帮助了解此主题的详细说明。</p><p><a href="/zh/help#mouse-gestures-minimize">查看原版帮助</a></p></section>
+    <section id="mouse-gestures-scroll" data-legacy-link aria-label="如何调整和停止上下滚动？"><h2>如何调整和停止上下滚动？</h2><p>请参阅原版帮助了解此主题的详细说明。</p><p><a href="/zh/help#mouse-gestures-scroll">查看原版帮助</a></p></section>
+    <section id="connection-drops" data-legacy-link aria-label="每隔 10 秒左右就一直断开。"><h2>每隔 10 秒左右就一直断开。</h2><p>请参阅原版帮助了解此主题的详细说明。</p><p><a href="/zh/help#connection-drops">查看原版帮助</a></p></section>
+    <section id="firewall-help" data-legacy-link aria-label="手机能看到电脑，但电脑看不到手机。"><h2>手机能看到电脑，但电脑看不到手机。</h2><p>请参阅原版帮助了解此主题的详细说明。</p><p><a href="/zh/help#firewall-help">查看原版帮助</a></p></section>
+    <section id="screen-sleep" data-legacy-link aria-label="屏幕一息屏，连接就断了。"><h2>屏幕一息屏，连接就断了。</h2><p>请参阅原版帮助了解此主题的详细说明。</p><p><a href="/zh/help#screen-sleep">查看原版帮助</a></p></section>
+    <section id="bluetooth-help" data-legacy-link aria-label="Bluetooth 连接或远程画面不正常。"><h2>Bluetooth 连接或远程画面不正常。</h2><p>请参阅原版帮助了解此主题的详细说明。</p><p><a href="/zh/help#bluetooth-help">查看原版帮助</a></p></section>
+  <section aria-labelledby="jump-title">
+    <h2 id="jump-title">按症状查找</h2>
+    <nav class="jump" aria-label="按症状查找">
+      <a href="#discovery">找不到设备 <span class="arrow" aria-hidden="true">↓</span></a>
+      <a href="#cursor">光标移不过去 <span class="arrow" aria-hidden="true">↓</span></a>
+      <a href="#drops">连接经常断开 <span class="arrow" aria-hidden="true">↓</span></a>
+      <a href="#sharing">文件、复制或截图无法使用 <span class="arrow" aria-hidden="true">↓</span></a>
+      <a href="#remote">远程画面打不开或黑屏 <span class="arrow" aria-hidden="true">↓</span></a>
+      <a href="#alerts">看不到手机通知 <span class="arrow" aria-hidden="true">↓</span></a>
+    </nav>
+  </section>
+  <div class="solutions">
+    <section class="issue" id="discovery" aria-labelledby="discovery-title">
+      <h2 id="discovery-title">找不到设备</h2>
+      <ol class="steps">
+        <li>在两台设备上<strong>打开 OneMouse</strong>。</li>
+        <li>用二维码或连接码配对时，确认两台设备连接到<strong>同一台路由器</strong>。电脑使用有线连接也没问题，只要接入同一台路由器即可。</li>
+        <li>使用 Google 账号连接时，请确认要连接的两台 Windows、Mac 或 Android 设备已<strong>登录同一个账号</strong>，且均已联网。然后刷新设备列表。</li>
+      </ol>
+      <details><summary>使用 Mac、蓝牙（测试版）或公共 Wi-Fi</summary>
+        <p class="muted">如果 Mac 上有“本地网络”设置，请检查是否已授权。使用蓝牙（测试版）时，请检查两台设备上的蓝牙是否打开、连接是否正常。公司或访客 Wi-Fi 即使名称相同，也可能阻止设备之间的通信。</p>
+        <div class="links"><a href="/zh/guide-new#mac">Mac 连接指南</a><a href="/zh/guide-new#windows-bluetooth">Windows 蓝牙连接（测试版）</a><a href="/zh/guide-new#connect-bluetooth">Android 蓝牙连接（测试版）</a><a href="/zh/guide-new#mac-bluetooth">Mac 蓝牙连接（测试版）</a><a href="/zh/guide-new#connect-account">使用 Google 账号连接</a></div>
+      </details>
+    </section>
+    <section class="issue" id="cursor" aria-labelledby="cursor-title">
+      <h2 id="cursor-title">设备已连接，但光标移不过去</h2>
+      <ol class="steps">
+        <li>在 Android 上前往设置 → 无障碍 → 已安装的应用，确认已启用 <strong>OneMouse</strong>。</li>
+        <li>确认 Windows 中的设备布局与<strong>桌面上的实际位置</strong>一致。</li>
+        <li>即使方向正确，也不一定能从屏幕的任意边缘位置切换。请从布局中标记的<strong>进入区域</strong>移过光标。</li>
+      </ol>
+      <details><summary>Mac 已连接但无法点击</summary>
+        <p class="muted">在 Mac 上检查 OneMouse 的辅助功能权限。如果刚刚授权，请退出并重新打开 Mac 应用。</p>
+        <div class="links"><a href="/zh/features#permissions">为什么需要 Mac 权限</a><a href="/zh/guide-new#android">设置 Android 输入</a><a href="/zh/features#position">查看设备布局</a></div>
+      </details>
+    </section>
+    <section class="issue" id="drops" aria-labelledby="drops-title">
+      <h2 id="drops-title">连接经常断开</h2>
+      <ol class="steps">
+        <li>如果<strong>只有在熄屏时</strong>断开，请检查 Android 的电池和省电设置。</li>
+        <li>如果<strong>在家可以用，但在其他地方会断开</strong>，请检查访客或公司 Wi-Fi 是否限制了设备间通信。</li>
+        <li>使用蓝牙（测试版）时，请先检查两台设备的连接状态。</li>
+      </ol>
+      <details><summary>按连接方式排查</summary>
+        <div class="links"><a href="/zh/compatibility#connection-types">尝试其他连接方式</a><a href="/zh/compatibility#support">支持蓝牙（测试版）的设备</a></div>
+      </details>
+    </section>
+    <section class="issue" id="sharing" aria-labelledby="sharing-title">
+      <h2 id="sharing-title">文件、复制或截图无法使用</h2>
+      <ol class="steps">
+        <li>确认两端应用已连接，并选择了正确的<strong>接收设备</strong>。</li>
+        <li>要跨屏发送文件，请先设置设备布局，将文件拖过屏幕边缘，然后<strong>在接收屏幕上松开</strong>。</li>
+        <li>收到截图后，请打开<strong>支持粘贴图片的应用</strong>，再粘贴截图。</li>
+      </ol>
+      <details><summary>接收文件夹与截图使用条件</summary>
+        <p class="muted">传输方式和支持的设备取决于应用版本及连接方式。将截图作为图片粘贴和保存为文件是不同的操作。</p>
+        <div class="links"><a href="/zh/features#files">文件与剪贴板</a><a href="/zh/features#file-receive-folder">查找电脑上的接收文件夹</a><a href="/zh/features#screenshots">截图与传输说明</a></div>
+      </details>
+    </section>
+    <section class="issue" id="remote" aria-labelledby="remote-title">
+      <h2 id="remote-title">远程画面打不开或黑屏</h2>
+      <ol class="steps">
+        <li>如果手机能看到电脑画面，但无法控制电脑，请确认已关闭<strong>仅查看</strong>。</li>
+        <li>在电脑上打开 Android 画面时，请在手机上确认<strong>屏幕捕获请求</strong>。</li>
+        <li>如果电脑上的 Mac 画面是黑屏，请检查 Mac 的<strong>屏幕录制权限</strong>。</li>
+      </ol>
+      <details><summary>远程画面与权限</summary>
+        <div class="links"><a href="/zh/features#mobile-pc-remote">设置用手机控制电脑</a><a href="/zh/features#remote">在电脑上打开 Android 画面</a><a href="/zh/features#permissions">检查 Mac 屏幕录制权限</a></div>
+      </details>
+    </section>
+    <section class="issue" id="alerts" aria-labelledby="alerts-title">
+      <h2 id="alerts-title">看不到手机通知</h2>
+      <ol class="steps">
+        <li>在 Android 设置中检查 OneMouse 的<strong>通知访问权限</strong>。</li>
+        <li>在手机端 OneMouse 检查<strong>向电脑发送通知</strong>，在电脑端检查<strong>显示设备通知</strong>。</li>
+        <li>确认允许发送通知的应用列表中包含所需的应用。</li>
+      </ol>
+      <details><summary>通知回复、验证码和历史记录</summary>
+        <div class="links"><a href="/zh/features#notifications">通知、回复及验证码说明</a></div>
+      </details>
+    </section>
+  </div>
+  <section class="more" aria-labelledby="more-title">
+    <h2 id="more-title">问题仍未解决？</h2>
+    <p class="muted">要从头检查连接，请查看新版连接指南。要查找此处未列出的症状，请查看原版帮助。</p>
+    <div class="links"><a href="/zh/guide-new">新版连接指南</a><a href="/zh/help#faq">原版帮助全文</a><a href="/zh/features#permissions">各设备所需权限</a></div>
+  </section>
+</main>
+<footer class="preview-footer"><div class="preview-frame">
+  <p>OneMouse 网站预览，与当前网站分开。</p>
+  <nav class="preview-refs" aria-label="参考链接">
+    <a href="/zh/compatibility">支持的设备和连接方式</a><a href="/zh/technical">技术与安全</a><a href="/zh/pricing">价格</a><a href="/zh/privacy">隐私</a><a href="/zh/terms">使用条款</a><a href="/zh/licenses">开源许可证</a><a href="/zh/">当前首页</a>
+  </nav>
+</div></footer>
+</body>
+</html>
