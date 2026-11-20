@@ -193,3 +193,33 @@ body {
   #legal-content .cmp-table th,
   #legal-content .cmp-table td { padding-inline: .48em; }
 }
+
+
+#legal-content .cmp-fit-actions {
+  margin-top: 1rem;
+}
+
+#legal-content .cmp-context {
+  margin: 0 0 .75rem;
+  line-height: 1.5;
+}
+
+#legal-content .cmp-sources {
+  margin-top: 1.75rem;
+  border-top: 1px solid var(--preview-line);
+  padding-top: .5rem;
+  font-size: .9rem;
+}
+
+#legal-content .cmp-sources summary {
+  cursor: pointer;
+  font-weight: 650;
+  padding: .45rem 0;
+}
+
+#legal-content .cmp-sources ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr));
+  gap: .35rem .85rem;
+  padding-inline-start: 1.4rem;
+}

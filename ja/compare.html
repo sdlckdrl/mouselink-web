@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>マウス・キーボード共有ツールの比較 | OneMouse</title>
+    <title>マウス・キーボード共有比較：OneMouse、Synergy、Deskflow</title>
     <meta
       name="description"
-      content="Windows・Mac・Androidで使えるツールを比較。Androidの実画面にカーソルを移す方式と、PC上のミラーリング画面で操作する方式の違いがわかります。"
+      content="OneMouse、Synergy、Deskflow、Mouse Without Bordersなどの対応機器と接続方式を比較。Android操作向けのSamsung Multi Controlとscrcpyの違いも紹介します。"
     />
     <meta name="robots" content="index,follow,max-image-preview:large" />
     <link rel="canonical" href="https://onemouse.pages.dev/ja/compare" />
@@ -94,42 +94,48 @@
           <li>近くのWindows → Android：ルーターなしでBluetooth接続（ベータ）</li>
           <li>対応する接続では、コピーしたテキストやファイルも共有</li>
         </ul>
+        <div class="cmp-actions cmp-fit-actions">
+          <a class="cmp-primary" href="/ja/#cursor-scene">OneMouseのカーソルを体験</a>
+          <a href="/ja/download">OneMouseをダウンロード</a>
+        </div>
       </section>
       <section class="cmp-wrap cmp-section" id="comparison" aria-labelledby="cmp-android-title">
         <h2 id="cmp-android-title">Androidの操作方法を比較</h2>
+        <p class="cmp-context">OneMouseとSamsung Multi Controlでは端末の画面にカーソルを移動します。scrcpyではPCのミラーリング画面から操作します。</p>
         <div class="cmp-card">
           <table class="cmp-table" aria-labelledby="cmp-android-title">
             <colgroup><col><col><col></colgroup>
             <thead><tr><th scope="col">ツール</th><th scope="col">Androidの操作方法</th><th scope="col">接続方法・条件</th></tr></thead>
             <tbody>
-              <tr class="cmp-onemouse"><th scope="row"><a href="/ja/compatibility">OneMouse</a></th><td>端末の実画面にカーソルを移動</td><td>対応Android端末、ユーザー補助権限、Wi-Fi/LANまたはBluetooth（ベータ）</td></tr>
-              <tr><th scope="row"><a href="https://www.samsung.com/us/support/answer/ANS10001485/">Samsung Multi Control</a></th><td>対応するGalaxy端末の実画面にカーソルを移動</td><td>対応Galaxy端末、同じSamsungアカウント、Wi-FiとBluetooth</td></tr>
-              <tr><th scope="row"><a href="https://github.com/Genymobile/scrcpy">scrcpy</a></th><td>PC上のミラーリングウィンドウで操作</td><td>Windows・macOS・LinuxからUSBまたはTCP/IPネットワークで接続</td></tr>
+              <tr class="cmp-onemouse"><th scope="row">OneMouse</th><td>端末の実画面にカーソルを移動</td><td>対応Android端末、ユーザー補助権限、Wi-Fi/LANまたはBluetooth（ベータ）</td></tr>
+              <tr><th scope="row">Samsung Multi Control</th><td>対応するGalaxy端末の実画面にカーソルを移動</td><td>対応Galaxy端末、同じSamsungアカウント、Wi-FiとBluetooth</td></tr>
+              <tr><th scope="row">scrcpy</th><td>PC上のミラーリングウィンドウで操作</td><td>Windows・macOS・LinuxからUSBまたはTCP/IPネットワークで接続</td></tr>
             </tbody>
           </table>
         </div>
       </section>
       <section class="cmp-wrap cmp-section" id="products" aria-labelledby="cmp-desktop-title">
         <h2 id="cmp-desktop-title">パソコン・iPadの入力共有を比較</h2>
+        <p class="cmp-context">Synergy、Deskflow、PowerToysのMouse Without Bordersなどを、接続したい機器の組み合わせで比較できます。</p>
         <div class="cmp-card">
           <table class="cmp-table" aria-labelledby="cmp-desktop-title">
             <colgroup><col><col><col></colgroup>
             <thead><tr><th scope="col">ツール</th><th scope="col">対応機器</th><th scope="col">主な特徴</th></tr></thead>
             <tbody>
-              <tr class="cmp-onemouse"><th scope="row"><a href="/ja/compatibility">OneMouse</a></th><td>Windows · Apple Silicon Mac</td><td>同じネットワークでWindows同士、またはWindowsとMacの間で操作を共有</td></tr>
-              <tr><th scope="row"><a href="https://symless.com/synergy">Synergy</a></th><td>Windows · macOS · Linux</td><td>同じネットワーク上のパソコン間で入力を共有</td></tr>
-              <tr><th scope="row"><a href="https://github.com/deskflow/deskflow">Deskflow</a></th><td>Windows · macOS · Linux</td><td>Wayland対応、TLS暗号化が標準で有効</td></tr>
-              <tr><th scope="row"><a href="https://learn.microsoft.com/en-us/windows/powertoys/mouse-without-borders">Mouse Without Borders</a></th><td>Windows</td><td>PowerToysで最大4台のWindows PCを接続</td></tr>
-              <tr><th scope="row"><a href="https://www.sharemouse.com/doc/installation/">ShareMouse</a></th><td>Windows · macOS</td><td>同じWi-Fiまたは有線ネットワーク</td></tr>
-              <tr><th scope="row"><a href="https://support.logi.com/hc/en-us/articles/1500005634742-What-is-Logitech-Flow-and-how-do-I-set-it-up-and-troubleshoot-it">Logitech Flow</a></th><td>Windows · macOS</td><td>Flow対応のLogitechマウスと同じネットワークが必要</td></tr>
-              <tr><th scope="row"><a href="https://support.apple.com/en-us/102459">Apple Universal Control</a></th><td>Mac · iPad</td><td>同じApple Account、Wi-Fi・Bluetooth・Handoffが必要</td></tr>
-              <tr><th scope="row"><a href="https://github.com/input-leap/input-leap">Input Leap</a></th><td>Windows · macOS · Linux</td><td>公式リポジトリはアーカイブ済みで読み取り専用</td></tr>
-              <tr><th scope="row"><a href="https://github.com/debauchee/barrier">Barrier</a></th><td>Windows · macOS · Linux</td><td>Input Leapの元になったプロジェクト</td></tr>
+              <tr class="cmp-onemouse"><th scope="row">OneMouse</th><td>Windows · Apple Silicon Mac</td><td>同じネットワークでWindows同士、またはWindowsとMacの間で操作を共有</td></tr>
+              <tr><th scope="row">Synergy</th><td>Windows · macOS · Linux</td><td>同じネットワーク上のパソコン間で入力を共有</td></tr>
+              <tr><th scope="row">Deskflow</th><td>Windows · macOS · Linux</td><td>Wayland対応、TLS暗号化が標準で有効</td></tr>
+              <tr><th scope="row">Mouse Without Borders</th><td>Windows</td><td>PowerToysで最大4台のWindows PCを接続</td></tr>
+              <tr><th scope="row">ShareMouse</th><td>Windows · macOS</td><td>同じWi-Fiまたは有線ネットワーク</td></tr>
+              <tr><th scope="row">Logitech Flow</th><td>Windows · macOS</td><td>Flow対応のLogitechマウスと同じネットワークが必要</td></tr>
+              <tr><th scope="row">Apple Universal Control</th><td>Mac · iPad</td><td>同じApple Account、Wi-Fi・Bluetooth・Handoffが必要</td></tr>
+              <tr><th scope="row">Input Leap</th><td>Windows · macOS · Linux</td><td>公式リポジトリはアーカイブ済みで読み取り専用</td></tr>
+              <tr><th scope="row">Barrier</th><td>Windows · macOS · Linux</td><td>Input Leapの元になったプロジェクト</td></tr>
             </tbody>
           </table>
         </div>
       </section>
-      <p class="cmp-wrap cmp-credit">OneMouseの開発元が作成しました。ツール名から公式資料を確認できます。</p>
+      <p class="cmp-wrap cmp-credit">OneMouseの開発元が作成した比較です。</p>
       <section class="cmp-wrap cmp-section cmp-faq" id="faq" aria-labelledby="cmp-faq-title">
         <h2 id="cmp-faq-title">接続前の確認</h2>
         <details><summary>実画面での操作とミラーリングは何が違いますか？</summary><p class="a">実画面で操作する場合は端末そのものの画面を見ます。ミラーリングではPCに表示したウィンドウで端末を操作します。</p></details>
@@ -138,10 +144,25 @@
       <section class="cmp-wrap cmp-section" id="next" aria-labelledby="cmp-next-title">
         <h2 id="cmp-next-title">OneMouseで接続する</h2>
         <div class="cmp-actions">
-          <a class="cmp-primary" href="/ja/download">ダウンロード</a>
+          <a class="cmp-primary" href="/ja/download">OneMouseをダウンロード</a>
           <a href="/ja/compatibility">対応機器と接続方法</a>
         </div>
       </section>
+      <details class="cmp-wrap cmp-sources">
+        <summary>出典：公式資料</summary>
+        <ul>
+          <li><a href="https://www.samsung.com/us/support/answer/ANS10001485/">Samsung Multi Control</a></li>
+          <li><a href="https://github.com/Genymobile/scrcpy">scrcpy</a></li>
+          <li><a href="https://symless.com/synergy">Synergy</a></li>
+          <li><a href="https://github.com/deskflow/deskflow">Deskflow</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/windows/powertoys/mouse-without-borders">Mouse Without Borders</a></li>
+          <li><a href="https://www.sharemouse.com/doc/installation/">ShareMouse</a></li>
+          <li><a href="https://support.logi.com/hc/en-us/articles/1500005634742-What-is-Logitech-Flow-and-how-do-I-set-it-up-and-troubleshoot-it">Logitech Flow</a></li>
+          <li><a href="https://support.apple.com/en-us/102459">Apple Universal Control</a></li>
+          <li><a href="https://github.com/input-leap/input-leap">Input Leap</a></li>
+          <li><a href="https://github.com/debauchee/barrier">Barrier</a></li>
+        </ul>
+      </details>
     </main>
 
     <footer class="preview-footer official-footer"><div class="preview-frame">

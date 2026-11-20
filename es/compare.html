@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Comparativa de herramientas para compartir ratón y teclado | OneMouse</title>
+    <title>Compartir ratón y teclado: OneMouse, Synergy y Deskflow</title>
     <meta
       name="description"
-      content="Compara opciones para Windows, Mac y Android. Descubre cuáles mueven el cursor a la pantalla del dispositivo y cuáles lo controlan desde una ventana duplicada."
+      content="Compara OneMouse, Synergy, Deskflow y Mouse Without Borders para compartir ratón y teclado, y consulta Samsung Multi Control y scrcpy para Android."
     />
     <meta name="robots" content="index,follow,max-image-preview:large" />
     <link rel="canonical" href="https://onemouse.pages.dev/es/compare" />
@@ -94,42 +94,48 @@
           <li>De Windows a un Android cercano: Bluetooth sin router (beta)</li>
           <li>Comparte texto copiado y archivos en conexiones compatibles</li>
         </ul>
+        <div class="cmp-actions cmp-fit-actions">
+          <a class="cmp-primary" href="/es/#cursor-scene">Probar la demo del cursor</a>
+          <a href="/es/download">Descargar OneMouse</a>
+        </div>
       </section>
       <section class="cmp-wrap cmp-section" id="comparison" aria-labelledby="cmp-android-title">
         <h2 id="cmp-android-title">Formas de controlar Android</h2>
+        <p class="cmp-context">OneMouse y Samsung Multi Control llevan el cursor a la pantalla del móvil. Con scrcpy, controlas Android desde una ventana del ordenador.</p>
         <div class="cmp-card">
           <table class="cmp-table" aria-labelledby="cmp-android-title">
             <colgroup><col><col><col></colgroup>
             <thead><tr><th scope="col">Herramienta</th><th scope="col">Cómo se controla Android</th><th scope="col">Conexión y requisitos</th></tr></thead>
             <tbody>
-              <tr class="cmp-onemouse"><th scope="row"><a href="/es/compatibility">OneMouse</a></th><td>El cursor pasa a la pantalla del dispositivo</td><td>Android compatible; permiso de accesibilidad; Wi-Fi/LAN o Bluetooth (beta)</td></tr>
-              <tr><th scope="row"><a href="https://www.samsung.com/us/support/answer/ANS10001485/">Samsung Multi Control</a></th><td>El cursor pasa a la pantalla de un dispositivo Galaxy compatible</td><td>Dispositivos Galaxy compatibles, misma cuenta de Samsung, Wi-Fi y Bluetooth</td></tr>
-              <tr><th scope="row"><a href="https://github.com/Genymobile/scrcpy">scrcpy</a></th><td>Control desde una ventana que duplica la pantalla de Android</td><td>Windows, macOS o Linux mediante USB o una red TCP/IP</td></tr>
+              <tr class="cmp-onemouse"><th scope="row">OneMouse</th><td>El cursor pasa a la pantalla del dispositivo</td><td>Android compatible; permiso de accesibilidad; Wi-Fi/LAN o Bluetooth (beta)</td></tr>
+              <tr><th scope="row">Samsung Multi Control</th><td>El cursor pasa a la pantalla de un dispositivo Galaxy compatible</td><td>Dispositivos Galaxy compatibles, misma cuenta de Samsung, Wi-Fi y Bluetooth</td></tr>
+              <tr><th scope="row">scrcpy</th><td>Control desde una ventana que duplica la pantalla de Android</td><td>Windows, macOS o Linux mediante USB o una red TCP/IP</td></tr>
             </tbody>
           </table>
         </div>
       </section>
       <section class="cmp-wrap cmp-section" id="products" aria-labelledby="cmp-desktop-title">
         <h2 id="cmp-desktop-title">Compartir ratón y teclado entre ordenadores y iPad</h2>
+        <p class="cmp-context">Compara Synergy, Deskflow, Mouse Without Borders de PowerToys y otras opciones según los dispositivos que quieras conectar.</p>
         <div class="cmp-card">
           <table class="cmp-table" aria-labelledby="cmp-desktop-title">
             <colgroup><col><col><col></colgroup>
             <thead><tr><th scope="col">Herramienta</th><th scope="col">Dispositivos compatibles</th><th scope="col">Qué conviene saber</th></tr></thead>
             <tbody>
-              <tr class="cmp-onemouse"><th scope="row"><a href="/es/compatibility">OneMouse</a></th><td>Windows · Apple Silicon Mac</td><td>Comparte el control entre PC con Windows o entre Windows y Mac en la misma red</td></tr>
-              <tr><th scope="row"><a href="https://symless.com/synergy">Synergy</a></th><td>Windows · macOS · Linux</td><td>Comparte ratón y teclado entre ordenadores de la misma red</td></tr>
-              <tr><th scope="row"><a href="https://github.com/deskflow/deskflow">Deskflow</a></th><td>Windows · macOS · Linux</td><td>Compatibilidad con Wayland y cifrado TLS por defecto</td></tr>
-              <tr><th scope="row"><a href="https://learn.microsoft.com/en-us/windows/powertoys/mouse-without-borders">Mouse Without Borders</a></th><td>Windows</td><td>Conecta hasta cuatro PC con Windows mediante PowerToys</td></tr>
-              <tr><th scope="row"><a href="https://www.sharemouse.com/doc/installation/">ShareMouse</a></th><td>Windows · macOS</td><td>Misma red Wi-Fi o por cable</td></tr>
-              <tr><th scope="row"><a href="https://support.logi.com/hc/en-us/articles/1500005634742-What-is-Logitech-Flow-and-how-do-I-set-it-up-and-troubleshoot-it">Logitech Flow</a></th><td>Windows · macOS</td><td>Requiere un ratón Logitech compatible con Flow y la misma red</td></tr>
-              <tr><th scope="row"><a href="https://support.apple.com/en-us/102459">Apple Universal Control</a></th><td>Mac · iPad</td><td>Misma cuenta de Apple, Wi-Fi, Bluetooth y Handoff</td></tr>
-              <tr><th scope="row"><a href="https://github.com/input-leap/input-leap">Input Leap</a></th><td>Windows · macOS · Linux</td><td>El repositorio oficial está archivado y es de solo lectura</td></tr>
-              <tr><th scope="row"><a href="https://github.com/debauchee/barrier">Barrier</a></th><td>Windows · macOS · Linux</td><td>Proyecto del que se derivó Input Leap</td></tr>
+              <tr class="cmp-onemouse"><th scope="row">OneMouse</th><td>Windows · Apple Silicon Mac</td><td>Comparte el control entre PC con Windows o entre Windows y Mac en la misma red</td></tr>
+              <tr><th scope="row">Synergy</th><td>Windows · macOS · Linux</td><td>Comparte ratón y teclado entre ordenadores de la misma red</td></tr>
+              <tr><th scope="row">Deskflow</th><td>Windows · macOS · Linux</td><td>Compatibilidad con Wayland y cifrado TLS por defecto</td></tr>
+              <tr><th scope="row">Mouse Without Borders</th><td>Windows</td><td>Conecta hasta cuatro PC con Windows mediante PowerToys</td></tr>
+              <tr><th scope="row">ShareMouse</th><td>Windows · macOS</td><td>Misma red Wi-Fi o por cable</td></tr>
+              <tr><th scope="row">Logitech Flow</th><td>Windows · macOS</td><td>Requiere un ratón Logitech compatible con Flow y la misma red</td></tr>
+              <tr><th scope="row">Apple Universal Control</th><td>Mac · iPad</td><td>Misma cuenta de Apple, Wi-Fi, Bluetooth y Handoff</td></tr>
+              <tr><th scope="row">Input Leap</th><td>Windows · macOS · Linux</td><td>El repositorio oficial está archivado y es de solo lectura</td></tr>
+              <tr><th scope="row">Barrier</th><td>Windows · macOS · Linux</td><td>Proyecto del que se derivó Input Leap</td></tr>
             </tbody>
           </table>
         </div>
       </section>
-      <p class="cmp-wrap cmp-credit">Comparativa elaborada por el equipo de OneMouse. Los nombres enlazan a la documentación oficial.</p>
+      <p class="cmp-wrap cmp-credit">Comparativa elaborada por el equipo de OneMouse.</p>
       <section class="cmp-wrap cmp-section cmp-faq" id="faq" aria-labelledby="cmp-faq-title">
         <h2 id="cmp-faq-title">Antes de conectar</h2>
         <details><summary>¿En qué se diferencia el control directo de la duplicación de pantalla?</summary><p class="a">Con el control directo miras la pantalla del dispositivo. Con la duplicación lo controlas desde una ventana del ordenador.</p></details>
@@ -138,10 +144,25 @@
       <section class="cmp-wrap cmp-section" id="next" aria-labelledby="cmp-next-title">
         <h2 id="cmp-next-title">Conecta tus dispositivos con OneMouse</h2>
         <div class="cmp-actions">
-          <a class="cmp-primary" href="/es/download">Descargar</a>
+          <a class="cmp-primary" href="/es/download">Descargar OneMouse</a>
           <a href="/es/compatibility">Dispositivos y opciones de conexión</a>
         </div>
       </section>
+      <details class="cmp-wrap cmp-sources">
+        <summary>Fuentes: documentación oficial</summary>
+        <ul>
+          <li><a href="https://www.samsung.com/us/support/answer/ANS10001485/">Samsung Multi Control</a></li>
+          <li><a href="https://github.com/Genymobile/scrcpy">scrcpy</a></li>
+          <li><a href="https://symless.com/synergy">Synergy</a></li>
+          <li><a href="https://github.com/deskflow/deskflow">Deskflow</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/windows/powertoys/mouse-without-borders">Mouse Without Borders</a></li>
+          <li><a href="https://www.sharemouse.com/doc/installation/">ShareMouse</a></li>
+          <li><a href="https://support.logi.com/hc/en-us/articles/1500005634742-What-is-Logitech-Flow-and-how-do-I-set-it-up-and-troubleshoot-it">Logitech Flow</a></li>
+          <li><a href="https://support.apple.com/en-us/102459">Apple Universal Control</a></li>
+          <li><a href="https://github.com/input-leap/input-leap">Input Leap</a></li>
+          <li><a href="https://github.com/debauchee/barrier">Barrier</a></li>
+        </ul>
+      </details>
     </main>
 
     <footer class="preview-footer official-footer"><div class="preview-frame">

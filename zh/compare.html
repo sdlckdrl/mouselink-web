@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>鼠标和键盘共享工具对比 | OneMouse</title>
+    <title>键鼠共享对比：OneMouse、Synergy 和 Deskflow</title>
     <meta
       name="description"
-      content="对比 Windows、Mac 和 Android 上可用的工具，看看哪些能把光标移到安卓设备的实际屏幕上，哪些需要在电脑的投屏窗口中操作。"
+      content="对比 OneMouse、Synergy、Deskflow 和 Mouse Without Borders 支持的设备与连接方式，并了解 Samsung Multi Control 和 scrcpy 如何操控安卓设备。"
     />
     <meta name="robots" content="index,follow,max-image-preview:large" />
     <link rel="canonical" href="https://onemouse.pages.dev/zh/compare" />
@@ -94,42 +94,48 @@
           <li>附近的 Windows → Android：无需路由器的蓝牙连接（测试版）</li>
           <li>在支持的连接方式下，可共享复制的文本和文件</li>
         </ul>
+        <div class="cmp-actions cmp-fit-actions">
+          <a class="cmp-primary" href="/zh/#cursor-scene">体验 OneMouse 光标切换</a>
+          <a href="/zh/download">下载 OneMouse</a>
+        </div>
       </section>
       <section class="cmp-wrap cmp-section" id="comparison" aria-labelledby="cmp-android-title">
         <h2 id="cmp-android-title">安卓设备操控方式</h2>
+        <p class="cmp-context">OneMouse 和 Samsung Multi Control 会把光标移到手机屏幕上，scrcpy 则通过电脑里的投屏窗口操控安卓设备。</p>
         <div class="cmp-card">
           <table class="cmp-table" aria-labelledby="cmp-android-title">
             <colgroup><col><col><col></colgroup>
             <thead><tr><th scope="col">工具</th><th scope="col">如何操控安卓设备</th><th scope="col">连接方式和要求</th></tr></thead>
             <tbody>
-              <tr class="cmp-onemouse"><th scope="row"><a href="/zh/compatibility">OneMouse</a></th><td>光标移到设备的实际屏幕上</td><td>兼容的安卓设备、无障碍权限、Wi-Fi/LAN 或蓝牙（测试版）</td></tr>
-              <tr><th scope="row"><a href="https://www.samsung.com/us/support/answer/ANS10001485/">Samsung Multi Control</a></th><td>光标移到受支持的 Galaxy 设备的实际屏幕上</td><td>受支持的 Galaxy 设备、同一个三星账号、Wi-Fi 和蓝牙</td></tr>
-              <tr><th scope="row"><a href="https://github.com/Genymobile/scrcpy">scrcpy</a></th><td>在电脑的投屏窗口中操控</td><td>Windows、macOS 或 Linux，通过 USB 或 TCP/IP 网络连接</td></tr>
+              <tr class="cmp-onemouse"><th scope="row">OneMouse</th><td>光标移到设备的实际屏幕上</td><td>兼容的安卓设备、无障碍权限、Wi-Fi/LAN 或蓝牙（测试版）</td></tr>
+              <tr><th scope="row">Samsung Multi Control</th><td>光标移到受支持的 Galaxy 设备的实际屏幕上</td><td>受支持的 Galaxy 设备、同一个三星账号、Wi-Fi 和蓝牙</td></tr>
+              <tr><th scope="row">scrcpy</th><td>在电脑的投屏窗口中操控</td><td>Windows、macOS 或 Linux，通过 USB 或 TCP/IP 网络连接</td></tr>
             </tbody>
           </table>
         </div>
       </section>
       <section class="cmp-wrap cmp-section" id="products" aria-labelledby="cmp-desktop-title">
         <h2 id="cmp-desktop-title">电脑和 iPad 的键鼠共享</h2>
+        <p class="cmp-context">按要连接的设备，对比 Synergy、Deskflow、PowerToys 的 Mouse Without Borders 等工具。</p>
         <div class="cmp-card">
           <table class="cmp-table" aria-labelledby="cmp-desktop-title">
             <colgroup><col><col><col></colgroup>
             <thead><tr><th scope="col">工具</th><th scope="col">支持的设备</th><th scope="col">主要特点</th></tr></thead>
             <tbody>
-              <tr class="cmp-onemouse"><th scope="row"><a href="/zh/compatibility">OneMouse</a></th><td>Windows · Apple Silicon Mac</td><td>在同一网络中，可在 Windows 电脑之间或 Windows 和 Mac 之间共享键鼠</td></tr>
-              <tr><th scope="row"><a href="https://symless.com/synergy">Synergy</a></th><td>Windows · macOS · Linux</td><td>在同一网络的电脑之间共享键鼠</td></tr>
-              <tr><th scope="row"><a href="https://github.com/deskflow/deskflow">Deskflow</a></th><td>Windows · macOS · Linux</td><td>支持 Wayland，默认启用 TLS 加密</td></tr>
-              <tr><th scope="row"><a href="https://learn.microsoft.com/en-us/windows/powertoys/mouse-without-borders">Mouse Without Borders</a></th><td>Windows</td><td>通过 PowerToys 连接最多四台 Windows 电脑</td></tr>
-              <tr><th scope="row"><a href="https://www.sharemouse.com/doc/installation/">ShareMouse</a></th><td>Windows · macOS</td><td>连接同一 Wi-Fi 或有线网络</td></tr>
-              <tr><th scope="row"><a href="https://support.logi.com/hc/en-us/articles/1500005634742-What-is-Logitech-Flow-and-how-do-I-set-it-up-and-troubleshoot-it">Logitech Flow</a></th><td>Windows · macOS</td><td>需要兼容 Flow 的罗技鼠标，电脑需在同一网络</td></tr>
-              <tr><th scope="row"><a href="https://support.apple.com/en-us/102459">Apple Universal Control</a></th><td>Mac · iPad</td><td>同一个 Apple 账户，并启用 Wi-Fi、蓝牙和接力</td></tr>
-              <tr><th scope="row"><a href="https://github.com/input-leap/input-leap">Input Leap</a></th><td>Windows · macOS · Linux</td><td>官方仓库已归档，只读</td></tr>
-              <tr><th scope="row"><a href="https://github.com/debauchee/barrier">Barrier</a></th><td>Windows · macOS · Linux</td><td>Input Leap 由这个早期项目衍生而来</td></tr>
+              <tr class="cmp-onemouse"><th scope="row">OneMouse</th><td>Windows · Apple Silicon Mac</td><td>在同一网络中，可在 Windows 电脑之间或 Windows 和 Mac 之间共享键鼠</td></tr>
+              <tr><th scope="row">Synergy</th><td>Windows · macOS · Linux</td><td>在同一网络的电脑之间共享键鼠</td></tr>
+              <tr><th scope="row">Deskflow</th><td>Windows · macOS · Linux</td><td>支持 Wayland，默认启用 TLS 加密</td></tr>
+              <tr><th scope="row">Mouse Without Borders</th><td>Windows</td><td>通过 PowerToys 连接最多四台 Windows 电脑</td></tr>
+              <tr><th scope="row">ShareMouse</th><td>Windows · macOS</td><td>连接同一 Wi-Fi 或有线网络</td></tr>
+              <tr><th scope="row">Logitech Flow</th><td>Windows · macOS</td><td>需要兼容 Flow 的罗技鼠标，电脑需在同一网络</td></tr>
+              <tr><th scope="row">Apple Universal Control</th><td>Mac · iPad</td><td>同一个 Apple 账户，并启用 Wi-Fi、蓝牙和接力</td></tr>
+              <tr><th scope="row">Input Leap</th><td>Windows · macOS · Linux</td><td>官方仓库已归档，只读</td></tr>
+              <tr><th scope="row">Barrier</th><td>Windows · macOS · Linux</td><td>Input Leap 由这个早期项目衍生而来</td></tr>
             </tbody>
           </table>
         </div>
       </section>
-      <p class="cmp-wrap cmp-credit">本页由 OneMouse 开发团队编写。点击工具名称可查看官方资料。</p>
+      <p class="cmp-wrap cmp-credit">本比较由 OneMouse 开发团队编写。</p>
       <section class="cmp-wrap cmp-section cmp-faq" id="faq" aria-labelledby="cmp-faq-title">
         <h2 id="cmp-faq-title">连接前常见问题</h2>
         <details><summary>直接操作与投屏有什么区别？</summary><p class="a">直接操作时，你看的是设备自己的屏幕。投屏时，你在电脑里的窗口中操作设备。</p></details>
@@ -138,10 +144,25 @@
       <section class="cmp-wrap cmp-section" id="next" aria-labelledby="cmp-next-title">
         <h2 id="cmp-next-title">使用 OneMouse 连接设备</h2>
         <div class="cmp-actions">
-          <a class="cmp-primary" href="/zh/download">下载</a>
+          <a class="cmp-primary" href="/zh/download">下载 OneMouse</a>
           <a href="/zh/compatibility">支持的设备与连接方式</a>
         </div>
       </section>
+      <details class="cmp-wrap cmp-sources">
+        <summary>来源：官方资料</summary>
+        <ul>
+          <li><a href="https://www.samsung.com/us/support/answer/ANS10001485/">Samsung Multi Control</a></li>
+          <li><a href="https://github.com/Genymobile/scrcpy">scrcpy</a></li>
+          <li><a href="https://symless.com/synergy">Synergy</a></li>
+          <li><a href="https://github.com/deskflow/deskflow">Deskflow</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/windows/powertoys/mouse-without-borders">Mouse Without Borders</a></li>
+          <li><a href="https://www.sharemouse.com/doc/installation/">ShareMouse</a></li>
+          <li><a href="https://support.logi.com/hc/en-us/articles/1500005634742-What-is-Logitech-Flow-and-how-do-I-set-it-up-and-troubleshoot-it">Logitech Flow</a></li>
+          <li><a href="https://support.apple.com/en-us/102459">Apple Universal Control</a></li>
+          <li><a href="https://github.com/input-leap/input-leap">Input Leap</a></li>
+          <li><a href="https://github.com/debauchee/barrier">Barrier</a></li>
+        </ul>
+      </details>
     </main>
 
     <footer class="preview-footer official-footer"><div class="preview-frame">

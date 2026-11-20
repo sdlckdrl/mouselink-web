@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>마우스·키보드 공유 프로그램 비교 | OneMouse</title>
+    <title>마우스·키보드 공유 비교: OneMouse, Synergy, Deskflow</title>
     <meta
       name="description"
-      content="Windows·Mac·Android를 연결하는 도구를 비교하세요. 실제 Android 화면으로 커서를 옮기는 방식과 PC 미러링 창의 차이도 한눈에 볼 수 있어요."
+      content="OneMouse, Synergy, Deskflow, Mouse Without Borders 등의 지원 기기와 연결 방식을 비교하세요. Android는 Samsung Multi Control과 scrcpy도 함께 살펴볼 수 있어요."
     />
     <meta name="robots" content="index,follow,max-image-preview:large" />
     <link rel="canonical" href="https://onemouse.pages.dev/compare" />
@@ -94,42 +94,48 @@
           <li>가까운 Windows → Android: 공유기 없이 Bluetooth 연결(베타)</li>
           <li>지원되는 연결: 복사한 텍스트와 파일도 공유</li>
         </ul>
+        <div class="cmp-actions cmp-fit-actions">
+          <a class="cmp-primary" href="/#cursor-scene">OneMouse 커서 체험</a>
+          <a href="/download">OneMouse 다운로드</a>
+        </div>
       </section>
       <section class="cmp-wrap cmp-section" id="comparison" aria-labelledby="cmp-android-title">
         <h2 id="cmp-android-title">Android 조작 방식 비교</h2>
+        <p class="cmp-context">OneMouse와 Samsung Multi Control은 휴대폰 화면으로 커서를 넘기고, scrcpy는 PC에 띄운 미러링 창에서 조작해요.</p>
         <div class="cmp-card">
           <table class="cmp-table" aria-labelledby="cmp-android-title">
             <colgroup><col><col><col></colgroup>
             <thead><tr><th scope="col">프로그램</th><th scope="col">Android 조작 방식</th><th scope="col">연결·조건</th></tr></thead>
             <tbody>
-              <tr class="cmp-onemouse"><th scope="row"><a href="/compatibility">OneMouse</a></th><td>기기의 실제 화면으로 커서 이동</td><td>호환 Android 기기, 접근성 권한, Wi-Fi/LAN 또는 Bluetooth(베타)</td></tr>
-              <tr><th scope="row"><a href="https://www.samsung.com/us/support/answer/ANS10001485/">Samsung Multi Control</a></th><td>지원 Galaxy 기기의 실제 화면으로 커서 이동</td><td>지원 Galaxy 기기, 같은 Samsung 계정, Wi-Fi 및 Bluetooth</td></tr>
-              <tr><th scope="row"><a href="https://github.com/Genymobile/scrcpy">scrcpy</a></th><td>PC에 띄운 미러링 창에서 조작</td><td>Windows·macOS·Linux에서 USB 또는 네트워크(TCP/IP)</td></tr>
+              <tr class="cmp-onemouse"><th scope="row">OneMouse</th><td>기기의 실제 화면으로 커서 이동</td><td>호환 Android 기기, 접근성 권한, Wi-Fi/LAN 또는 Bluetooth(베타)</td></tr>
+              <tr><th scope="row">Samsung Multi Control</th><td>지원 Galaxy 기기의 실제 화면으로 커서 이동</td><td>지원 Galaxy 기기, 같은 Samsung 계정, Wi-Fi 및 Bluetooth</td></tr>
+              <tr><th scope="row">scrcpy</th><td>PC에 띄운 미러링 창에서 조작</td><td>Windows·macOS·Linux에서 USB 또는 네트워크(TCP/IP)</td></tr>
             </tbody>
           </table>
         </div>
       </section>
       <section class="cmp-wrap cmp-section" id="products" aria-labelledby="cmp-desktop-title">
         <h2 id="cmp-desktop-title">컴퓨터·iPad 입력 공유 비교</h2>
+        <p class="cmp-context">Synergy, Deskflow, PowerToys의 Mouse Without Borders 등을 연결하려는 기기 조합에 맞춰 비교하세요.</p>
         <div class="cmp-card">
           <table class="cmp-table" aria-labelledby="cmp-desktop-title">
             <colgroup><col><col><col></colgroup>
             <thead><tr><th scope="col">프로그램</th><th scope="col">지원 기기</th><th scope="col">주요 특징</th></tr></thead>
             <tbody>
-              <tr class="cmp-onemouse"><th scope="row"><a href="/compatibility">OneMouse</a></th><td>Windows · Apple Silicon Mac</td><td>같은 네트워크에서 Windows끼리 또는 Windows↔Mac 입력 공유</td></tr>
-              <tr><th scope="row"><a href="https://symless.com/synergy">Synergy</a></th><td>Windows · macOS · Linux</td><td>같은 네트워크에서 컴퓨터 간 입력 공유</td></tr>
-              <tr><th scope="row"><a href="https://github.com/deskflow/deskflow">Deskflow</a></th><td>Windows · macOS · Linux</td><td>Wayland 지원, 기본 TLS 암호화</td></tr>
-              <tr><th scope="row"><a href="https://learn.microsoft.com/en-us/windows/powertoys/mouse-without-borders">Mouse Without Borders</a></th><td>Windows</td><td>PowerToys로 Windows PC 최대 4대 연결</td></tr>
-              <tr><th scope="row"><a href="https://www.sharemouse.com/doc/installation/">ShareMouse</a></th><td>Windows · macOS</td><td>같은 Wi-Fi 또는 유선 네트워크</td></tr>
-              <tr><th scope="row"><a href="https://support.logi.com/hc/en-us/articles/1500005634742-What-is-Logitech-Flow-and-how-do-I-set-it-up-and-troubleshoot-it">Logitech Flow</a></th><td>Windows · macOS</td><td>Flow 호환 Logitech 마우스와 같은 네트워크 필요</td></tr>
-              <tr><th scope="row"><a href="https://support.apple.com/en-us/102459">Apple Universal Control</a></th><td>Mac · iPad</td><td>같은 Apple 계정, Wi-Fi·Bluetooth·Handoff 필요</td></tr>
-              <tr><th scope="row"><a href="https://github.com/input-leap/input-leap">Input Leap</a></th><td>Windows · macOS · Linux</td><td>공식 저장소가 읽기 전용으로 전환됨</td></tr>
-              <tr><th scope="row"><a href="https://github.com/debauchee/barrier">Barrier</a></th><td>Windows · macOS · Linux</td><td>Input Leap의 기반이 된 이전 프로젝트</td></tr>
+              <tr class="cmp-onemouse"><th scope="row">OneMouse</th><td>Windows · Apple Silicon Mac</td><td>같은 네트워크에서 Windows끼리 또는 Windows↔Mac 입력 공유</td></tr>
+              <tr><th scope="row">Synergy</th><td>Windows · macOS · Linux</td><td>같은 네트워크에서 컴퓨터 간 입력 공유</td></tr>
+              <tr><th scope="row">Deskflow</th><td>Windows · macOS · Linux</td><td>Wayland 지원, 기본 TLS 암호화</td></tr>
+              <tr><th scope="row">Mouse Without Borders</th><td>Windows</td><td>PowerToys로 Windows PC 최대 4대 연결</td></tr>
+              <tr><th scope="row">ShareMouse</th><td>Windows · macOS</td><td>같은 Wi-Fi 또는 유선 네트워크</td></tr>
+              <tr><th scope="row">Logitech Flow</th><td>Windows · macOS</td><td>Flow 호환 Logitech 마우스와 같은 네트워크 필요</td></tr>
+              <tr><th scope="row">Apple Universal Control</th><td>Mac · iPad</td><td>같은 Apple 계정, Wi-Fi·Bluetooth·Handoff 필요</td></tr>
+              <tr><th scope="row">Input Leap</th><td>Windows · macOS · Linux</td><td>공식 저장소가 읽기 전용으로 전환됨</td></tr>
+              <tr><th scope="row">Barrier</th><td>Windows · macOS · Linux</td><td>Input Leap의 기반이 된 이전 프로젝트</td></tr>
             </tbody>
           </table>
         </div>
       </section>
-      <p class="cmp-wrap cmp-credit">OneMouse 제작사가 작성했습니다. 제품명을 누르면 공식 문서를 볼 수 있어요.</p>
+      <p class="cmp-wrap cmp-credit">OneMouse 제작사가 작성한 비교입니다.</p>
       <section class="cmp-wrap cmp-section cmp-faq" id="faq" aria-labelledby="cmp-faq-title">
         <h2 id="cmp-faq-title">연결 전 확인</h2>
         <details><summary>실제 화면 조작과 미러링은 어떻게 달라요?</summary><p class="a">실제 화면 조작은 기기의 화면을 직접 보며 쓰는 방식이고, 미러링은 컴퓨터에 띄운 창을 보며 조작하는 방식이에요.</p></details>
@@ -138,10 +144,25 @@
       <section class="cmp-wrap cmp-section" id="next" aria-labelledby="cmp-next-title">
         <h2 id="cmp-next-title">OneMouse 연결하기</h2>
         <div class="cmp-actions">
-          <a class="cmp-primary" href="/download">다운로드</a>
+          <a class="cmp-primary" href="/download">OneMouse 다운로드</a>
           <a href="/compatibility">지원 기기와 연결 방법</a>
         </div>
       </section>
+      <details class="cmp-wrap cmp-sources">
+        <summary>출처: 공식 문서</summary>
+        <ul>
+          <li><a href="https://www.samsung.com/us/support/answer/ANS10001485/">Samsung Multi Control</a></li>
+          <li><a href="https://github.com/Genymobile/scrcpy">scrcpy</a></li>
+          <li><a href="https://symless.com/synergy">Synergy</a></li>
+          <li><a href="https://github.com/deskflow/deskflow">Deskflow</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/windows/powertoys/mouse-without-borders">Mouse Without Borders</a></li>
+          <li><a href="https://www.sharemouse.com/doc/installation/">ShareMouse</a></li>
+          <li><a href="https://support.logi.com/hc/en-us/articles/1500005634742-What-is-Logitech-Flow-and-how-do-I-set-it-up-and-troubleshoot-it">Logitech Flow</a></li>
+          <li><a href="https://support.apple.com/en-us/102459">Apple Universal Control</a></li>
+          <li><a href="https://github.com/input-leap/input-leap">Input Leap</a></li>
+          <li><a href="https://github.com/debauchee/barrier">Barrier</a></li>
+        </ul>
+      </details>
     </main>
 
     <footer class="preview-footer official-footer"><div class="preview-frame">
