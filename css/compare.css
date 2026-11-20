@@ -1,0 +1,195 @@
+:root {
+  color-scheme: light;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--preview-bg);
+  color: var(--preview-ink);
+  font: 1rem/1.6 system-ui, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+}
+
+#legal-content {
+  color: var(--preview-ink);
+  padding-block: clamp(1.5rem, 6vw, 4rem) 3rem;
+  overflow-wrap: anywhere;
+}
+
+#legal-content .cmp-wrap {
+  width: min(1070px, calc(100% - 2rem));
+  margin-inline: auto;
+}
+
+#legal-content .cmp-head {
+  margin-bottom: 1.25rem;
+}
+
+#legal-content h1 {
+  margin: 0;
+  font-size: clamp(1.8rem, 4.8vw, 3.4rem);
+  line-height: 1.16;
+  letter-spacing: -.04em;
+}
+
+#legal-content h2 {
+  font-size: clamp(1.22rem, 3vw, 1.65rem);
+  line-height: 1.25;
+  margin: 0 0 .5rem;
+}
+
+#legal-content p {
+  margin: .45rem 0 0;
+  color: var(--preview-muted);
+}
+
+#legal-content a {
+  color: var(--preview-accent);
+  text-decoration: underline;
+  text-underline-offset: .17em;
+}
+
+#legal-content a:focus-visible,
+#legal-content summary:focus-visible,
+.cmp-skip:focus-visible {
+  outline: 3px solid var(--preview-accent);
+  outline-offset: 3px;
+}
+
+.cmp-skip {
+  position: absolute;
+  left: .5rem;
+  top: .5rem;
+  z-index: 20;
+  padding: .5rem .75rem;
+  background: white;
+  color: var(--preview-accent);
+  transform: translateY(-180%);
+}
+
+.cmp-skip:focus {
+  transform: none;
+}
+
+#legal-content .cmp-section {
+  margin-top: clamp(1.5rem, 4vw, 2.65rem);
+}
+
+#legal-content [id] {
+  scroll-margin-top: 5rem;
+}
+
+#legal-content .cmp-fit {
+  margin-top: 0;
+  border: 1px solid #a6cbbd;
+  border-left: 4px solid var(--preview-accent);
+  border-radius: 14px;
+  background: var(--preview-soft);
+  padding: clamp(.9rem, 3vw, 1.45rem);
+}
+
+#legal-content .cmp-facts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: .55rem;
+  list-style: none;
+  margin: .9rem 0 0;
+  padding: 0;
+}
+
+#legal-content .cmp-facts li {
+  background: var(--preview-panel);
+  border: 1px solid var(--preview-line);
+  border-radius: 8px;
+  padding: .48rem .63rem;
+  font-size: .9rem;
+  line-height: 1.45;
+}
+
+#legal-content .cmp-card {
+  border: 1px solid var(--preview-line);
+  border-radius: 12px;
+  background: var(--preview-panel);
+  overflow: hidden;
+}
+
+#legal-content .cmp-table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  font-size: clamp(.82rem, 1.6vw, .96rem);
+  line-height: 1.42;
+  margin: 0;
+}
+
+#legal-content .cmp-table col:first-child { width: 24%; }
+#legal-content .cmp-table col:nth-child(2) { width: 33%; }
+
+#legal-content .cmp-table th,
+#legal-content .cmp-table td {
+  text-align: start;
+  vertical-align: top;
+  padding: .72em .85em;
+  overflow-wrap: anywhere;
+}
+
+#legal-content .cmp-table thead { background: #eaf1f5; }
+#legal-content .cmp-table tbody tr { border-top: 1px solid var(--preview-line); }
+#legal-content .cmp-table tbody tr:nth-child(even) { background: #f7fafb; }
+#legal-content .cmp-table tbody .cmp-onemouse { background: #eaf7ef; }
+#legal-content .cmp-table .cmp-onemouse th { box-shadow: inset 3px 0 var(--preview-accent); }
+
+#legal-content .cmp-credit {
+  margin-top: .8rem;
+  font-size: .86rem;
+}
+
+#legal-content .cmp-faq details {
+  margin-top: .55rem;
+  border: 1px solid var(--preview-line);
+  background: var(--preview-panel);
+  border-radius: 8px;
+  padding: .65rem .75rem;
+}
+
+#legal-content .cmp-faq summary {
+  font-weight: 650;
+  cursor: pointer;
+}
+
+#legal-content .cmp-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .65rem 1rem;
+}
+
+#legal-content .cmp-actions a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+
+#legal-content .cmp-actions .cmp-primary {
+  padding: .4rem .9rem;
+  border-radius: 9px;
+  background: var(--preview-accent);
+  color: white;
+  text-decoration: none;
+  font-weight: 750;
+}
+
+#legal-content .cmp-actions .cmp-primary:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 620px) {
+  #legal-content .cmp-facts { grid-template-columns: minmax(0, 1fr); }
+  #legal-content .cmp-table col:first-child { width: 27%; }
+  #legal-content .cmp-table col:nth-child(2) { width: 32%; }
+  #legal-content .cmp-table th,
+  #legal-content .cmp-table td { padding-inline: .48em; }
+}

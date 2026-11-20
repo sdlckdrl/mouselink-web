@@ -3,13 +3,12 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>마우스·키보드 공유 프로그램(소프트웨어 KVM) 비교 (2026) | OneMouse</title>
+    <title>마우스·키보드 공유 프로그램 비교 | OneMouse</title>
     <meta
       name="description"
-      content="마우스·키보드 공유 프로그램 비교: OneMouse를 Synergy, Deskflow, Mouse Without Borders, ShareMouse, Logitech Flow, Universal Control, scrcpy와 나란히 정리했습니다."
+      content="Windows·Mac·Android를 연결하는 도구를 비교하세요. 실제 Android 화면으로 커서를 옮기는 방식과 PC 미러링 창의 차이도 한눈에 볼 수 있어요."
     />
     <meta name="robots" content="index,follow,max-image-preview:large" />
-    <link rel="stylesheet" href="./css/onemouse.css" />
     <link rel="canonical" href="https://onemouse.pages.dev/compare" />
     <link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/compare" />
     <link rel="alternate" hreflang="en" href="https://onemouse.pages.dev/en/compare" />
@@ -43,66 +42,18 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "무료 마우스·키보드 공유 프로그램이 있습니까?",
+          "name": "실제 화면 조작과 미러링은 어떻게 달라요?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "예. Mouse Without Borders(Windows 전용, PowerToys에 포함), Deskflow(Windows·macOS·Linux, 오픈소스), ShareMouse Free(컴퓨터 2대, 개인용)는 비용이 들지 않습니다. OneMouse의 Windows·Mac 앱도 무료입니다. OneMouse Android 앱에는 광고와 하루 클립보드·파일 제한이 있는 Free 모드가 있고, Pro를 한 번 구매하면 이 제한이 사라집니다."
+            "text": "실제 화면 조작은 기기의 화면을 직접 보며 쓰는 방식이고, 미러링은 컴퓨터에 띄운 창을 보며 조작하는 방식이에요."
           }
         },
         {
           "@type": "Question",
-          "name": "인터넷 연결 없이도 마우스·키보드 공유가 됩니까?",
+          "name": "OneMouse는 Google 로그인이 필요한가요?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "OneMouse, Synergy, Deskflow, Mouse Without Borders의 로컬 네트워크 연결에는 인터넷이 필요 없습니다. OneMouse는 호환 기기를 공유기 없이 블루투스로 연결할 수도 있습니다. OneMouse에서 같은 Google 계정으로 연결하려면 인터넷이 필요합니다. Apple Universal Control은 Apple 계정, Samsung Multi Control은 Samsung 계정이 필요하고, Logitech Flow는 초기 설정에 인터넷 접속이 필요합니다."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "PC에서 Android 폰 제어: 미러 창입니까, 실제 커서입니까?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "서로 다른 것입니다. scrcpy, Vysor, Phone Link 같은 미러링 도구는 PC의 창에 폰 화면을 띄우고 그 창 안에서 클릭합니다. OneMouse, Samsung Multi Control 같은 경계 넘기 도구는 PC 커서를 폰의 실제 화면으로 보내므로 폰이 추가 모니터처럼 동작합니다. OneMouse는 경계 넘기 방식으로 동작하며, 선택 사항으로 원격 제어 창도 제공합니다."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "OneMouse는 계정이나 서버가 필요합니까?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "로컬 Wi-Fi/LAN에서 QR 코드나 6자리 코드로 페어링하거나 블루투스로 연결할 때는 Google 계정이 필요 없습니다. 같은 Google 계정으로 연결하는 방법도 있습니다. 양쪽 기기에 로그인하면 인터넷을 통해 기기 목록에서 상대 기기를 찾을 수 있습니다. 자세한 절차는 사용법을 보세요."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Wi-Fi 대신 블루투스로 마우스·키보드를 공유할 수 있습니까?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "호환 Android 기기와 Windows PC끼리는 Bluetooth(베타)로 연결할 수 있어요. Windows와 Mac의 Bluetooth도 1:1 베타이며 Mac에서는 기본으로 꺼져 있어요. 안정적인 연결과 원격 화면에는 Wi-Fi·LAN을 사용하세요."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Mouse Without Borders입니까, OneMouse입니까?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Mouse Without Borders는 무료이고 Microsoft PowerToys에 포함되어 있으며, 클립보드 공유와 최대 100MB 단일 파일 전송으로 Windows PC 최대 네 대를 연결합니다. OneMouse도 Windows PC를 연결하며, 여기에 Android 폰·태블릿, Apple Silicon Mac, 블루투스 연결, PC 간 폴더 전송이 더해집니다. 모든 기기가 Windows이고 PowerToys가 이미 설치되어 있다면 Mouse Without Borders로 충분하고, 폰·태블릿·Mac이 책상에 합류할 때는 OneMouse가 맞습니다."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Synergy입니까, OneMouse입니까?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Synergy는 Windows·macOS·Linux용 유료 소프트웨어 KVM으로 어느 컴퓨터든 서버가 될 수 있습니다. OneMouse는 Windows와 Apple Silicon Mac 모두 마우스·키보드를 공유하는 메인 기기로 쓸 수 있으며, 두 앱은 무료입니다. OneMouse는 Android 폰·태블릿도 지원합니다. Synergy에는 모바일 클라이언트가 없습니다."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "OneMouse는 Linux, iPhone, iPad를 지원합니까?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "OneMouse에서 입력을 보낼 수 있는 기기는 Windows 10/11 PC와 macOS 13 이상을 실행하는 Apple Silicon Mac입니다. 입력 대상은 Windows·Mac 컴퓨터와 Android 폰·태블릿입니다. Linux는 Deskflow나 Synergy를, Mac과 iPad는 Apple Universal Control을 쓰십시오."
+            "text": "같은 네트워크에서 QR이나 인증번호로 페어링하거나 호환 기기를 Bluetooth로 연결할 때는 Google 로그인이 필요 없어요."
           }
         }
       ]
@@ -114,66 +65,14 @@
 <link rel="stylesheet" href="/assets/preview/one-preview.css?v=light1">
 <meta name="theme-color" content="#f5f8fa">
 
-<style>
-:root{color-scheme:light;--paper:var(--preview-bg);--paper2:#eaf3f4;--card:var(--preview-panel);--ink:var(--preview-ink);--muted:var(--preview-muted);--line:var(--preview-line);--line-soft:#eaf1f4;--coral-deep:var(--preview-accent);--coral:#68a892;--blue:#224d96;--shadow-soft:0 9px 20px -18px #152c4055;--shadow:0 16px 32px -25px #152c4070}
-*,*::before,*::after{box-sizing:border-box}
-body{margin:0;background:var(--preview-bg);color:var(--preview-ink);font:1rem/1.68 system-ui,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;overflow-wrap:anywhere}
-html:lang(ko) body{word-break:keep-all}
-.legal-skip{position:absolute;top:6px;left:8px;z-index:4;transform:translateY(-180%);padding:.55rem .8rem;border-radius:.45rem;color:white;background:var(--preview-accent)}
-.legal-skip:focus{transform:none}
-#legal-content{padding:0 0 3rem}
-#legal-content .wrap{width:min(880px,calc(100% - 36px));margin-inline:auto}
-#legal-content.main-grid-aligned .wrap:not(.narrow){width:min(1070px,calc(100% - 36px))}
-#legal-content .phero{padding:clamp(32px,6vw,68px) 0 1.45rem}
-#legal-content .ey{padding:0;background:none;color:var(--preview-accent);font-size:.9rem;font-weight:800;letter-spacing:.02em;margin:0 0 .4rem}
-#legal-content h1{font-size:clamp(2rem,5vw,3.55rem);font-weight:800;letter-spacing:-.045em;margin:0;line-height:1.14}
-#legal-content h2{font-size:clamp(1.15rem,3vw,1.55rem);line-height:1.3;letter-spacing:-.025em;margin:0 0 .6rem}
-#legal-content .lead{font-size:1.06rem;margin:.85rem 0 .65rem}
-#legal-content .lead,#legal-content .policy-date{color:var(--preview-muted)}
-#legal-content .policy-date{font-size:.9rem;margin:.55rem 0 0}
-#legal-content .legal{display:grid;grid-template-columns:minmax(0,1fr);gap:12px}
-#legal-content .phero+section{padding-top:0}
-#legal-content .lcard p,#legal-content .lcard ul,#legal-content .lcard ol{font-size:inherit;color:inherit}
-#legal-content .lcard{background:var(--preview-panel);border:1px solid var(--preview-line);border-radius:14px;padding:clamp(16px,3vw,25px);scroll-margin-top:1rem}
-#legal-content .lcard p,#legal-content .lcard ul,#legal-content .lcard ol{margin:.3rem 0 .65rem}
-#legal-content .lcard li+li{margin-top:.4rem}
-#legal-content .num{display:inline-block;font-size:.84em;color:var(--preview-accent);margin-inline-end:.4em}
-#legal-content a,.legal-languages a{color:var(--preview-accent);text-decoration:underline;text-underline-offset:.2em}
-#legal-content a:focus-visible,.legal-languages a:focus-visible{outline:3px solid var(--preview-accent);outline-offset:3px}
-.legal-languages{width:min(880px,calc(100% - 36px));display:flex;flex-wrap:wrap;gap:.3rem .95rem;margin:.75rem auto 0;color:var(--preview-muted);font-size:.85rem}
-.legal-languages a,.legal-languages span{display:inline-flex;align-items:center;min-height:36px}
-.legal-languages [aria-current]{font-weight:800;color:var(--preview-ink)}
-.preview-footer a[aria-current]{font-weight:800;color:var(--preview-accent)}
-.preview-footer .ato-badge img{display:block;max-width:100%;object-fit:contain}
-</style>
-
 <link rel="stylesheet" href="/css/official-footer.css?v=1">
-
-<style>
-#legal-content .compare-promise{margin:1.35rem 0 0;padding:clamp(16px,3vw,30px);border:1px solid #a9cfc1;border-radius:18px;background:var(--preview-soft)}
-#legal-content .compare-promise h2{font-size:clamp(1.35rem,3.5vw,2.05rem);line-height:1.25;color:var(--preview-ink)}
-#legal-content .compare-promise>p{margin:.45rem 0 .8rem}
-#legal-content .compare-scenarios{display:grid;grid-template-columns:minmax(0,1fr);gap:.7rem;padding:0;list-style:none;margin:1.03rem 0}
-#legal-content .compare-scenarios li{min-width:0;background:#fff;border:1px solid var(--preview-line);border-radius:12px;padding:.8rem .86rem;margin:0}
-#legal-content .compare-scenarios h3{font-size:1rem;line-height:1.3;margin:0 0 .35rem;color:var(--preview-ink)}
-#legal-content .compare-scenarios p{line-height:1.55;margin:0;color:var(--preview-muted);font-size:.92rem}
-#legal-content .compare-fit{font-size:.89rem;color:var(--preview-muted)}
-#legal-content .compare-actions{display:flex;align-items:center;flex-wrap:wrap;gap:.55rem .95rem}
-#legal-content .compare-actions .btn-pri{color:#fff;background:var(--preview-accent);text-decoration:none}
-#legal-content .compare-actions a{min-height:44px;display:inline-flex;align-items:center}
-#legal-content .compare-more{border:1px solid var(--preview-line);background:#fff;border-radius:14px;padding:.8rem}
-#legal-content .compare-more summary{min-height:44px;cursor:pointer;padding:.55rem .45rem;font-weight:750;color:var(--preview-ink)}
-#legal-content .compare-more summary:focus-visible,#legal-content .table-wrap:focus-visible{outline:3px solid var(--preview-accent);outline-offset:3px}
-#legal-content .compare-more[open] summary{margin-bottom:.55rem}
-#legal-content .compare-more .table-wrap{overflow-x:auto;max-width:100%}
-@media(min-width:760px){#legal-content .compare-scenarios{grid-template-columns:repeat(3,minmax(0,1fr))}}
-</style>
 
 <link rel="stylesheet" href="/css/official-language-picker.css?v=1">
 <script src="/js/official-language-picker.js?v=1" defer></script>
+<link rel="stylesheet" href="/css/compare.css">
 </head>
   <body>
-    <a class="legal-skip" href="#legal-content">본문으로 이동</a>
+    <a class="cmp-skip" href="#legal-content">본문으로 이동</a>
 <header class="preview-header"><div class="preview-frame">
   <a class="preview-brand" href="/" aria-label="OneMouse 홈"><span class="preview-mark" aria-hidden="true"><img src="/assets/preview/onemouse-android-icon.png" alt="" width="33" height="33"></span>OneMouse</a>
   <nav class="preview-nav" aria-label="주 메뉴"><a href="/">홈</a><a href="/features">기능 체험</a><a href="/guide">연결 가이드</a><a href="/help">도움말</a><a href="/download">다운로드</a></nav>
@@ -182,470 +81,65 @@ html:lang(ko) body{word-break:keep-all}
 </div></header>
 
 
-    <main id="legal-content" class="main-grid-aligned">
-      <section class="phero wrap">
-        <p class="ey">비교</p>
-        <h1 class="page">마우스·키보드 공유 프로그램(소프트웨어 KVM) 비교 (2026)</h1>
-        <p class="lead">
-          PC·폰·태블릿 조합에 맞는 공유 도구를 비교합니다.
-          <b>OneMouse 제작사가 작성한 비교</b>이며, 다른 제품 정보는 공식 페이지와 저장소에서
-          2026년 9월에 확인했습니다.
-        </p>
-        <section class="compare-promise" aria-labelledby="one-fit-title"><h2 id="one-fit-title">Windows 키보드와 마우스로 Android·Mac·PC를 오가고 싶다면</h2><p>그런 조합이라면 OneMouse가 잘 맞아요. 각 기기의 화면은 그대로 쓰고, 커서와 키보드는 화면 가장자리를 넘어갑니다.</p><ol class="compare-scenarios"><li><h3>화면 끝으로 밀어 바로 조작</h3><p>PC 옆의 Android 폰·태블릿, Apple Silicon Mac 또는 다른 Windows PC로 커서를 넘겨요. 별도 미러 창 없이 그 기기의 화면에서 조작합니다.</p></li><li><h3>파일과 복사한 텍스트도 이동</h3><p>지원되는 연결에서는 기기 사이로 파일을 보내고, 한 기기에서 복사한 텍스트를 다른 기기에서 붙여넣을 수 있어요.</p></li><li><h3>폰에서 PC 화면 보기</h3><p>폰에서 PC 화면을 보고 싶으면 Android의 원격 화면을 열어요. 커서를 옆 기기로 넘기는 것과는 별도 기능입니다. 지원되는 네트워크 연결이 필요하며 Bluetooth로는 화면을 볼 수 없어요.</p></li></ol><p class="compare-fit">기기 조합·버전·권한에 따라 지원 범위가 달라요. Mac은 Apple Silicon과 macOS 13 이상이 필요합니다.</p><div class="compare-actions"><a class="btn btn-pri" href="/download">내 기기에서 써보기</a><a href="/compatibility">연결 방식과 지원 기기</a></div></section>
-<nav class="toc" aria-label="이 페이지 목차">
-          <a href="#pick">상황별 선택</a>
-          <a href="#types">도구 유형</a>
-          <a href="#comparison">비교표</a>
-          <a href="#products">제품별 메모</a>
-          
-          <a href="#faq">자주 묻는 질문</a>
-        </nav>
+    <main id="legal-content" tabindex="-1">
+      <div class="cmp-wrap cmp-head">
+        <h1>마우스·키보드 공유 프로그램 비교</h1>
+        <p>Windows·Mac·Android에서 쓸 마우스·키보드 공유 도구를 비교했어요.</p>
+      </div>
+      <section id="pick" class="cmp-wrap cmp-fit" aria-labelledby="one-fit-title">
+        <h2 id="one-fit-title">Windows에서 Android·Mac·PC까지</h2>
+        <p>OneMouse는 Windows PC의 커서를 화면 끝으로 밀어 Android 폰·태블릿, 다른 Windows PC 또는 Mac의 실제 화면에서 조작할 수 있어요. Mac은 Apple Silicon과 macOS 13 이상이 필요해요.</p>
+        <ul id="types" class="cmp-facts">
+          <li>같은 네트워크: QR 또는 인증번호로 로그인 없이 페어링</li>
+          <li>가까운 Windows → Android: 공유기 없이 Bluetooth 연결(베타)</li>
+          <li>지원되는 연결: 복사한 텍스트와 파일도 공유</li>
+        </ul>
       </section>
-
-      <section class="section-alt" id="pick">
-        <div class="wrap narrow">
-          <div class="sec-head">
-            <p class="ey">상황별 선택</p>
-            <h2 class="sec">기기 조합부터 보고 고르세요.</h2>
-          </div>
-          <div class="panel">
-            <ul>
-              <li>
-                <b>Windows PC 두 대:</b> Mouse Without Borders(PowerToys, 최대 4대),
-                OneMouse(블루투스·폴더 전송), ShareMouse Free(개인용 2대)가 후보입니다.
-              </li>
-              <li>
-                <b>Windows PC + Android:</b> 실제 폰 화면으로 커서를 옮기려면 OneMouse(Wi-Fi, 블루투스,
-                Google 계정 연결, 브랜드 조건 없음)나 Samsung Multi Control(Galaxy·지원 PC·Samsung 계정)이
-                후보입니다.
-                미러 창 방식은 scrcpy(USB 디버깅)와 Phone Link(지원 브랜드)를 비교하세요.
-              </li>
-              <li>
-                <b>Windows PC + Mac:</b> macOS 13 이상을 실행하는 Apple Silicon Mac과 Windows PC를
-                OneMouse로 연결하면 어느 쪽의 마우스·키보드든 공유할 수 있습니다. Intel Mac은 Synergy,
-                Deskflow, ShareMouse 또는 호환 Logitech 마우스가 필요한 Flow를 비교하세요.
-              </li>
-              <li>
-                <b>Mac + iPad:</b> Apple Universal Control이 내장되어 있습니다.
-              </li>
-              <li>
-                <b>Linux가 포함된 경우:</b> OneMouse는 지원하지 않으며, Deskflow(무료), Synergy(유료),
-                Lan Mouse(Wayland)가 후보입니다. Barrier·Input Leap의 유지보수 상태는 비교표를 확인하세요.
-              </li>
-            </ul>
-          </div>
+      <section class="cmp-wrap cmp-section" id="comparison" aria-labelledby="cmp-android-title">
+        <h2 id="cmp-android-title">Android 조작 방식 비교</h2>
+        <div class="cmp-card">
+          <table class="cmp-table" aria-labelledby="cmp-android-title">
+            <colgroup><col><col><col></colgroup>
+            <thead><tr><th scope="col">프로그램</th><th scope="col">Android 조작 방식</th><th scope="col">연결·조건</th></tr></thead>
+            <tbody>
+              <tr class="cmp-onemouse"><th scope="row"><a href="/compatibility">OneMouse</a></th><td>기기의 실제 화면으로 커서 이동</td><td>호환 Android 기기, 접근성 권한, Wi-Fi/LAN 또는 Bluetooth(베타)</td></tr>
+              <tr><th scope="row"><a href="https://www.samsung.com/us/support/answer/ANS10001485/">Samsung Multi Control</a></th><td>지원 Galaxy 기기의 실제 화면으로 커서 이동</td><td>지원 Galaxy 기기, 같은 Samsung 계정, Wi-Fi 및 Bluetooth</td></tr>
+              <tr><th scope="row"><a href="https://github.com/Genymobile/scrcpy">scrcpy</a></th><td>PC에 띄운 미러링 창에서 조작</td><td>Windows·macOS·Linux에서 USB 또는 네트워크(TCP/IP)</td></tr>
+            </tbody>
+          </table>
         </div>
       </section>
-
-      <!-- TOOL TYPES -->
-      <section id="types">
-        <div class="wrap">
-          <div class="sec-head">
-            <p class="ey">도구 유형</p>
-            <h2 class="sec">어떤 종류의 도구가 필요하십니까?</h2>
-            <p class="sec-lead">연결할 기기와 제어 방식부터 확인하세요.</p>
-          </div>
-          <div class="cards">
-            <article class="card">
-              <p class="card-lbl">PC ↔ PC</p>
-              <h3>한 책상에 컴퓨터 두 대</h3>
-              <p>
-                여러 컴퓨터가 로컬 네트워크로 마우스·키보드 하나를 공유합니다.
-                화면 가장자리로 커서를 밀면 다른 컴퓨터로 이동하는 소프트웨어 KVM 방식입니다.
-              </p>
-            </article>
-            <article class="card">
-              <p class="card-lbl">PC ↔ 폰·태블릿</p>
-              <h3>PC에서 Android 제어</h3>
-              <p>
-                미러링 도구는 폰 화면을 PC 창에 띄워 제어합니다.
-                OneMouse 같은 경계 넘기 도구는 커서를 폰의 실제 화면으로 옮깁니다.
-              </p>
-            </article>
-            <article class="card">
-              <p class="card-lbl">생태계 · 제조사</p>
-              <h3>한 브랜드의 기기 안에서만</h3>
-              <p>
-                해당 제조사의 하드웨어나 계정 조건을 충족해야 하는 공유 기능입니다.
-                사용 중인 모든 기기가 지원 대상인지 확인하세요.
-              </p>
-            </article>
-          </div>
+      <section class="cmp-wrap cmp-section" id="products" aria-labelledby="cmp-desktop-title">
+        <h2 id="cmp-desktop-title">컴퓨터·iPad 입력 공유 비교</h2>
+        <div class="cmp-card">
+          <table class="cmp-table" aria-labelledby="cmp-desktop-title">
+            <colgroup><col><col><col></colgroup>
+            <thead><tr><th scope="col">프로그램</th><th scope="col">지원 기기</th><th scope="col">주요 특징</th></tr></thead>
+            <tbody>
+              <tr class="cmp-onemouse"><th scope="row"><a href="/compatibility">OneMouse</a></th><td>Windows · Apple Silicon Mac</td><td>같은 네트워크에서 Windows끼리 또는 Windows↔Mac 입력 공유</td></tr>
+              <tr><th scope="row"><a href="https://symless.com/synergy">Synergy</a></th><td>Windows · macOS · Linux</td><td>같은 네트워크에서 컴퓨터 간 입력 공유</td></tr>
+              <tr><th scope="row"><a href="https://github.com/deskflow/deskflow">Deskflow</a></th><td>Windows · macOS · Linux</td><td>Wayland 지원, 기본 TLS 암호화</td></tr>
+              <tr><th scope="row"><a href="https://learn.microsoft.com/en-us/windows/powertoys/mouse-without-borders">Mouse Without Borders</a></th><td>Windows</td><td>PowerToys로 Windows PC 최대 4대 연결</td></tr>
+              <tr><th scope="row"><a href="https://www.sharemouse.com/doc/installation/">ShareMouse</a></th><td>Windows · macOS</td><td>같은 Wi-Fi 또는 유선 네트워크</td></tr>
+              <tr><th scope="row"><a href="https://support.logi.com/hc/en-us/articles/1500005634742-What-is-Logitech-Flow-and-how-do-I-set-it-up-and-troubleshoot-it">Logitech Flow</a></th><td>Windows · macOS</td><td>Flow 호환 Logitech 마우스와 같은 네트워크 필요</td></tr>
+              <tr><th scope="row"><a href="https://support.apple.com/en-us/102459">Apple Universal Control</a></th><td>Mac · iPad</td><td>같은 Apple 계정, Wi-Fi·Bluetooth·Handoff 필요</td></tr>
+              <tr><th scope="row"><a href="https://github.com/input-leap/input-leap">Input Leap</a></th><td>Windows · macOS · Linux</td><td>공식 저장소가 읽기 전용으로 전환됨</td></tr>
+              <tr><th scope="row"><a href="https://github.com/debauchee/barrier">Barrier</a></th><td>Windows · macOS · Linux</td><td>Input Leap의 기반이 된 이전 프로젝트</td></tr>
+            </tbody>
+          </table>
         </div>
       </section>
-
-      <!-- COMPARISON TABLE -->
-      <section class="section-alt" id="comparison">
-        <div class="wrap">
-          <div class="sec-head">
-            <p class="ey">비교표</p>
-            <h2 class="sec">열한 가지 도구를 나란히 놓았습니다.</h2>
-            <p class="sec-lead">
-              2026년 9월 기준으로 공식 페이지에서 확인한 내용이며, 변경 사항은 각 제품 사이트에서
-              확인해 주십시오. 대시(—)는 저희가 확인하지 못한 항목입니다.
-            </p>
-          </div>
-          <details class="compare-more"><summary>11개 도구 비교표 펼치기</summary><div class="table-wrap" tabindex="0" role="region" aria-label="11개 도구 비교표 펼치기">
-            <table class="kt" style="min-width: 1080px">
-              <thead>
-                <tr>
-                  <th>제품</th>
-                  <th>호스트 / 지원 OS</th>
-                  <th>Android</th>
-                  <th>가격 모델</th>
-                  <th>특정 하드웨어 필요</th>
-                  <th>연결</th>
-                  <th>비고</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><b>OneMouse</b> (자사)</td>
-                  <td>
-                    메인: Windows 10/11, Apple Silicon Mac(macOS 13+). 대상: Windows, Mac, Android
-                  </td>
-                  <td>예, 커서가 화면 경계를 넘어감</td>
-                  <td>
-                    Windows·Mac 앱 무료; Android는 Free 모드(광고, 제한) 또는 Pro 1회 구매
-                  </td>
-                  <td>아니요</td>
-                  <td>Wi-Fi/LAN, Bluetooth(모든 연결 베타), 선택형 Google 계정</td>
-                  <td>로컬 페어링은 로그인 없이 사용. Linux, iPhone/iPad 미지원</td>
-                </tr>
-                <tr>
-                  <td><b>Synergy</b></td>
-                  <td>Windows, macOS, Linux; 어느 컴퓨터든 서버 가능</td>
-                  <td>아니요(제조사는 계획 중이라고 밝혔으나 일정 없음)</td>
-                  <td>유료; 개인용은 1회 구매, 기업용은 좌석당</td>
-                  <td>아니요</td>
-                  <td>LAN</td>
-                  <td>Synergy 1 v1.20.4, Synergy 3 v3.6.3(2026년 6월); 클로즈드 소스</td>
-                </tr>
-                <tr>
-                  <td><b>Deskflow</b></td>
-                  <td>Windows 10 1809+, macOS 12+(Apple Silicon은 13+), Linux, FreeBSD</td>
-                  <td>공식 아님; 서드파티 클라이언트 있음, 마지막 릴리스 2025년 7월</td>
-                  <td>무료, 오픈소스(GPL-2.0)</td>
-                  <td>아니요</td>
-                  <td>LAN, TLS 기본 켜짐</td>
-                  <td>v1.26.0(2026년 2월); Synergy의 기반이 되는 오픈소스 코어</td>
-                </tr>
-                <tr>
-                  <td><b>Input Leap</b></td>
-                  <td>Windows 10/11 64비트, macOS 10.12+, Linux, FreeBSD, OpenBSD</td>
-                  <td>아니요</td>
-                  <td>무료, 오픈소스(GPL-2.0)</td>
-                  <td>아니요</td>
-                  <td>LAN</td>
-                  <td>저장소 2026년 7월 보관 처리(읽기 전용); 마지막 릴리스 v3.0.3(2025년 6월)</td>
-                </tr>
-                <tr>
-                  <td><b>Barrier</b></td>
-                  <td>Windows 7–11 64비트, macOS 10.12+, Linux, FreeBSD, OpenBSD</td>
-                  <td>아니요</td>
-                  <td>무료, 오픈소스(GPL-2.0)</td>
-                  <td>아니요</td>
-                  <td>LAN</td>
-                  <td>유지보수 중단; 마지막 릴리스 v2.4.0(2021년 11월)</td>
-                </tr>
-                <tr>
-                  <td><b>Mouse Without Borders</b></td>
-                  <td>Windows 10(2004+)·11 전용; 최대 4대</td>
-                  <td>아니요(기능 요청 열려 있음)</td>
-                  <td>무료, 오픈소스(PowerToys, MIT)</td>
-                  <td>아니요</td>
-                  <td>LAN</td>
-                  <td>
-                    클립보드 공유, 단일 파일 전송 최대 100MB; PowerToys v0.101(2026년 8월)
-                  </td>
-                </tr>
-                <tr>
-                  <td><b>ShareMouse</b></td>
-                  <td>Windows 10/11, macOS 13–15 및 26</td>
-                  <td>아니요(제조사 계획 없음)</td>
-                  <td>개인용 Free 등급(컴퓨터 2대); Standard·Pro는 1회 구매</td>
-                  <td>아니요</td>
-                  <td>LAN</td>
-                  <td>v7.0.27(2026년 8월); Linux 계획 없음</td>
-                </tr>
-                <tr>
-                  <td><b>Logitech Flow</b></td>
-                  <td>Windows 10/11 및 macOS(최소 버전 —); 컴퓨터 2–3대</td>
-                  <td>아니요(폰·태블릿 불가)</td>
-                  <td>소프트웨어 무료</td>
-                  <td>예: Easy-Switch를 갖춘 Flow 지원 Logitech 마우스; Flow 키보드는 선택</td>
-                  <td>LAN; 초기 설정에 인터넷 필요</td>
-                  <td>Logi Options+에 포함</td>
-                </tr>
-                <tr>
-                  <td><b>Apple Universal Control</b></td>
-                  <td>macOS 12.4+ 및 iPadOS 15.4+; Mac 1대 + Mac 또는 iPad 최대 2대</td>
-                  <td>아니요</td>
-                  <td>무료, 기본 내장</td>
-                  <td>예: 지원 모델의 Mac·iPad, 2단계 인증을 켠 같은 Apple 계정</td>
-                  <td>블루투스 + Wi-Fi + Handoff, 10m 이내</td>
-                  <td>Windows, iPhone, Android 단말 불가</td>
-                </tr>
-                <tr>
-                  <td><b>Samsung Multi Control</b></td>
-                  <td>
-                    Galaxy Book(2021+, Windows 10/11) 또는 Samsung 앱을 설치한 Windows 11 PC;
-                    Galaxy 태블릿→폰
-                  </td>
-                  <td>One UI 5.1+ Galaxy 폰·태블릿만</td>
-                  <td>무료</td>
-                  <td>예: Galaxy 기기와 Samsung 계정; PC에 블루투스·Wi-Fi 필요</td>
-                  <td>Wi-Fi + 블루투스</td>
-                  <td>스토어 앱 2026년 8월 업데이트; Galaxy 외 Android는 목록에 없음</td>
-                </tr>
-                <tr>
-                  <td><b>scrcpy</b></td>
-                  <td>호스트: Windows, macOS, Linux</td>
-                  <td>입력 가능한 미러 창; 경계 넘기 아님</td>
-                  <td>무료, 오픈소스(Apache-2.0)</td>
-                  <td>아니요(USB 케이블 또는 Wi-Fi)</td>
-                  <td>USB(ADB) 또는 Wi-Fi(ADB TCP/IP)</td>
-                  <td>v4.1(2026년 7월); OTG 모드 외에는 USB 디버깅 필요</td>
-                </tr>
-              </tbody>
-            </table>
-          </div></details>
-        </div>
+      <p class="cmp-wrap cmp-credit">OneMouse 제작사가 작성했습니다. 제품명을 누르면 공식 문서를 볼 수 있어요.</p>
+      <section class="cmp-wrap cmp-section cmp-faq" id="faq" aria-labelledby="cmp-faq-title">
+        <h2 id="cmp-faq-title">연결 전 확인</h2>
+        <details><summary>실제 화면 조작과 미러링은 어떻게 달라요?</summary><p class="a">실제 화면 조작은 기기의 화면을 직접 보며 쓰는 방식이고, 미러링은 컴퓨터에 띄운 창을 보며 조작하는 방식이에요.</p></details>
+        <details><summary>OneMouse는 Google 로그인이 필요한가요?</summary><p class="a">같은 네트워크에서 QR이나 인증번호로 페어링하거나 호환 기기를 Bluetooth로 연결할 때는 Google 로그인이 필요 없어요.</p></details>
       </section>
-
-      <!-- PRODUCT NOTES -->
-      <section id="products">
-        <div class="wrap">
-          <div class="sec-head">
-            <p class="ey">제품별 메모</p>
-            <h2 class="sec">각 도구가 잘하는 것과 멈추는 지점.</h2>
-          </div>
-          <details class="compare-more"><summary>제품별 설명 펼치기</summary><div class="cards">
-            <article class="card accent">
-              <p class="card-lbl">PC ↔ PC, PC ↔ Android · 자사 제품</p>
-              <h3>OneMouse</h3>
-              <p>
-                Windows 10/11 PC와 Apple Silicon Mac(macOS 13+) 모두 마우스·키보드를 공유하는
-                메인 기기로 쓸 수 있습니다. 화면 경계로 커서를 넘겨 연결된 컴퓨터나 Android
-                폰·태블릿을 제어하고, 파일 전송과 클립보드 동기화도 사용할 수 있습니다. 로컬 Wi-Fi/LAN에서는
-                QR 코드나 6자리 코드로 페어링하고, 호환 기기는 블루투스로도 연결할 수 있습니다(베타).
-                지원되는 앱에서 같은 Google 계정에 로그인하면 인터넷을 통해 기기 목록에서 상대 기기를 찾을 수 있습니다.
-                사용할 수 있는 연결 방식은 기기 조합과 기능에 따라 달라집니다.
-                Android Free 모드에는 광고와 하루 클립보드·파일 제한이 있으며, Pro를 한 번 구매하면 해제됩니다.
-              </p>
-            </article>
-            <article class="card">
-              <p class="card-lbl">PC ↔ PC · 유료</p>
-              <h3>Synergy</h3>
-              <p>
-                Symless의 상용 소프트웨어 KVM으로 Windows, macOS, Linux를 지원하며 어느 컴퓨터든
-                서버가 될 수 있습니다. 개인용 라이선스는 1회 구매, 기업용 라이선스는 좌석당
-                과금입니다. Synergy 1과 Synergy 3 모두 2026년 6월에 업데이트됐습니다. 주요 한계:
-                Android, iOS, ChromeOS 클라이언트가 없습니다. 다만 Symless는 향후 지원할 계획이라고
-                밝히고 있습니다.
-              </p>
-            </article>
-            <article class="card">
-              <p class="card-lbl">PC ↔ PC · 무료, 오픈소스</p>
-              <h3>Deskflow</h3>
-              <p>
-                Synergy의 기반이 되는 오픈소스 코어입니다. GPL-2.0이고 TLS가 기본으로 켜져 있으며
-                Windows, macOS, Linux, FreeBSD 빌드를 제공합니다. Barrier와 Input Leap 계보에서
-                현재 활발히 유지보수되는 프로젝트이며, 2026년 2월에 v1.26.0이 나왔습니다. 주요
-                한계: 공식 Android 클라이언트가 없습니다. Android 14+용 서드파티 클라이언트가
-                있지만 2025년 7월 이후 릴리스가 없습니다.
-              </p>
-            </article>
-            <article class="card">
-              <p class="card-lbl">PC ↔ PC · 무료, 오픈소스 · 보관됨</p>
-              <h3>Input Leap</h3>
-              <p>
-                Wayland 빌드를 포함해 Windows, macOS, Linux, BSD를 지원하는 Barrier의 포크입니다.
-                GitHub 저장소는 2026년 7월에 보관 처리되어 읽기 전용이며, 마지막 릴리스는 2025년
-                6월의 v3.0.3입니다. 이전 기여자들은 대신 Deskflow를 권합니다. 이미 설치한 곳에서는
-                계속 동작하지만 보안 수정은 더 이상 받지 못합니다.
-              </p>
-            </article>
-            <article class="card">
-              <p class="card-lbl">PC ↔ PC · 무료, 오픈소스 · 유지보수 중단</p>
-              <h3>Barrier</h3>
-              <p>
-                2026년의 여러 비교 기사가 여전히 추천하는 Synergy 1.9 포크입니다. 마지막 릴리스
-                v2.4.0은 2021년 11월 것이고, 그 릴리스 페이지에는 Barrier가 더 이상 유지보수되지
-                않으며 보안 수정을 받지 않는다고 적혀 있습니다. 후속작인 Input Leap마저 2026년에
-                보관 처리됐으므로, 이 계열에서 살아 있는 선택지는 Deskflow입니다.
-              </p>
-            </article>
-            <article class="card">
-              <p class="card-lbl">PC ↔ PC · 무료, 오픈소스</p>
-              <h3>Mouse Without Borders</h3>
-              <p>
-                Microsoft의 Windows 전용 도구로, 지금은 PowerToys(MIT)에 포함되어 있습니다. 같은
-                네트워크의 Windows 10/11 PC를 최대 네 대까지 연결하며 클립보드 공유와 최대 100MB
-                단일 파일 전송을 지원하고, 2026년 8월에 암호화 업데이트를 받았습니다. 주요 한계:
-                Windows 전용입니다. Android 지원은 열려 있는 기능 요청일 뿐, 기능이 아닙니다.
-              </p>
-            </article>
-            <article class="card">
-              <p class="card-lbl">PC ↔ PC · 무료 등급과 유료</p>
-              <h3>ShareMouse</h3>
-              <p>
-                Bartels Media의 Windows·macOS 소프트웨어 KVM으로, 2026년 8월에 7.0.27로
-                업데이트됐습니다. ShareMouse Free는 개인·비상업 용도로 컴퓨터 2대와 디스플레이
-                2개까지 지원하며, Standard와 Professional은 12개월 업데이트가 포함된 1회 구매입니다.
-                주요 한계: Linux, Android, iPhone/iPad를 지원하지 않으며, 제조사는 지원 계획이
-                없다고 밝히고 있습니다.
-              </p>
-            </article>
-            <article class="card">
-              <p class="card-lbl">생태계 · 소프트웨어 무료, 하드웨어 필요</p>
-              <h3>Logitech Flow</h3>
-              <p>
-                Flow를 지원하는 Logitech 마우스가 Logi Options+를 통해 같은 네트워크의
-                Windows·macOS 컴퓨터 두세 대 사이를 옮겨 다니고, 호환되는 Logitech 키보드가
-                마우스를 따라갑니다. 주요 한계: Easy-Switch를 갖춘 Logitech 하드웨어가 필요하고,
-                초기 설정에 인터넷 접속이 필요하며, 태블릿과 폰은 지원하지 않습니다.
-              </p>
-            </article>
-            <article class="card">
-              <p class="card-lbl">생태계 · 무료, 기본 내장</p>
-              <h3>Apple Universal Control</h3>
-              <p>
-                macOS 12.4+와 iPadOS 15.4+에 기본 내장되어 있어, Mac 한 대가 키보드·마우스 하나로
-                Mac 또는 iPad를 최대 두 대까지 더 제어합니다. 주요 한계: Apple의 지원 모델 목록에
-                있는 Mac과 iPad만 가능하고, 모든 기기가 2단계 인증을 켠 같은 Apple 계정으로
-                로그인한 채 10m 이내에 있어야 합니다. Windows, iPhone, Android 단말은 없습니다.
-              </p>
-            </article>
-            <article class="card">
-              <p class="card-lbl">생태계 · 무료, Galaxy 전용</p>
-              <h3>Samsung Multi Control</h3>
-              <p>
-                PC에서 폰을 제어하는 Samsung의 방식입니다. Galaxy Book(2021년 이후) 또는 Microsoft
-                Store의 Samsung Multi Control 앱을 실행하는 Windows 11 PC가 Galaxy 폰·태블릿으로
-                커서를 옮기며, 클립보드 공유와 파일 드래그 앤 드롭을 지원합니다. 주요 한계:
-                Samsung은 One UI 5.1 이상 Galaxy 기기만 목록에 올리고 있으며, 모든 기기에 같은
-                Samsung 계정과 블루투스·Wi-Fi가 필요합니다.
-              </p>
-            </article>
-            <article class="card">
-              <p class="card-lbl">PC ↔ 폰 · 무료, 오픈소스</p>
-              <h3>scrcpy</h3>
-              <p>
-                Genymobile의 미러링 도구로, Windows·macOS·Linux 호스트의 창에 Android 화면을
-                오디오와 함께 표시하고 키보드·마우스 입력을 전달합니다. 폰에는 아무것도 설치하지
-                않습니다. 2026년 7월에 v4.1이 나왔습니다. 주요 한계: 경계 넘기가 아니라 미러 창
-                방식이며, 케이블을 통한 USB 디버깅 또는 Wi-Fi ADB가 필요합니다(OTG 모드는 USB
-                전용).
-              </p>
-            </article>
-          </div></details>
-        </div>
-      </section>
-
-      <!-- PICK BY SITUATION -->
-      
-
-      <!-- FAQ -->
-      <section id="faq">
-        <div class="wrap narrow">
-          <div class="sec-head">
-            <p class="ey">자주 묻는 질문</p>
-            <h2 class="sec">선택하기 전에 자주 묻는 질문.</h2>
-          </div>
-          <div class="faq">
-            <details>
-              <summary>무료 마우스·키보드 공유 프로그램이 있습니까?</summary>
-              <div class="a">
-                예. <b>Mouse Without Borders</b>(Windows 전용, PowerToys에 포함),
-                <b>Deskflow</b>(Windows·macOS·Linux, 오픈소스), <b>ShareMouse Free</b>(컴퓨터 2대,
-                개인용)는 비용이 들지 않습니다. OneMouse의 Windows·Mac 앱도 무료입니다. OneMouse
-                Android 앱에는 광고와 하루 클립보드·파일 제한이 있는 Free 모드가 있고, Pro를 한 번
-                구매하면 이 제한이 사라집니다.
-              </div>
-            </details>
-            <details>
-              <summary>인터넷 연결 없이도 마우스·키보드 공유가 됩니까?</summary>
-              <div class="a">
-                OneMouse, Synergy, Deskflow, Mouse Without Borders의 로컬 네트워크 연결에는
-                인터넷이 필요 없습니다. OneMouse는 호환 기기를 <b>공유기 없이 블루투스</b>로 연결할
-                수도 있습니다. OneMouse에서 같은 Google 계정으로 연결하려면 인터넷이 필요합니다.
-                Apple Universal Control은 Apple 계정, Samsung Multi Control은
-                Samsung 계정이 필요하고, Logitech Flow는 초기 설정에 인터넷 접속이 필요합니다.
-              </div>
-            </details>
-            <details>
-              <summary>PC에서 Android 폰 제어: 미러 창입니까, 실제 커서입니까?</summary>
-              <div class="a">
-                서로 다른 것입니다. scrcpy, Vysor, Phone Link 같은 <b>미러링</b> 도구는 PC의 창에 폰
-                화면을 띄우고 그 창 안에서 클릭합니다. OneMouse, Samsung Multi Control 같은
-                <b>경계 넘기</b> 도구는 PC 커서를 폰의 실제 화면으로 보내므로 폰이 추가 모니터처럼
-                동작합니다. OneMouse는 경계 넘기 방식으로 동작하며, 선택 사항으로 원격 제어 창도
-                제공합니다.
-              </div>
-            </details>
-            <details>
-              <summary>OneMouse는 계정이나 서버가 필요합니까?</summary>
-              <div class="a">
-                로컬 Wi-Fi/LAN에서 <b>QR 코드나 6자리 코드</b>로 페어링하거나 블루투스로 연결할 때는
-                Google 계정이 필요 없습니다. <b>같은 Google 계정으로 연결</b>하는 방법도 있습니다.
-                양쪽 기기에 로그인하면 인터넷을 통해 기기 목록에서 상대 기기를 찾을 수 있습니다.
-                자세한 절차는 <a class="text-link" href="./guide#connect-account">사용법</a>을 보세요.
-              </div>
-            </details>
-            <details>
-              <summary>Wi-Fi 대신 블루투스로 마우스·키보드를 공유할 수 있습니까?</summary>
-              <div class="a">
-                호환 Android 기기와 Windows PC끼리는 Bluetooth(베타)로 연결할 수 있어요. Windows와 Mac의 Bluetooth도 1:1 베타이며 Mac에서는 기본으로 꺼져 있어요. 안정적인 연결과 원격 화면에는 Wi-Fi·LAN을 사용하세요.
-              </div>
-            </details>
-            <details>
-              <summary>Mouse Without Borders입니까, OneMouse입니까?</summary>
-              <div class="a">
-                Mouse Without Borders는 무료이고 Microsoft PowerToys에 포함되어 있으며, 클립보드
-                공유와 최대 100MB 단일 파일 전송으로 Windows PC 최대 네 대를 연결합니다. OneMouse도
-                Windows PC를 연결하며, 여기에 <b>Android 폰·태블릿</b>, <b>Apple Silicon Mac</b>,
-                블루투스 연결, PC 간 폴더 전송이 더해집니다. 모든 기기가 Windows이고 PowerToys가
-                이미 설치되어 있다면 Mouse Without Borders로 충분하고, 폰·태블릿·Mac이 책상에
-                합류할 때는 OneMouse가 맞습니다.
-              </div>
-            </details>
-            <details>
-              <summary>Synergy입니까, OneMouse입니까?</summary>
-              <div class="a">
-                Synergy는 Windows·macOS·Linux용 유료 소프트웨어 KVM으로 어느 컴퓨터든 서버가 될 수
-                있습니다. OneMouse는 Windows와 Apple Silicon Mac 모두 마우스·키보드를 공유하는 메인
-                기기로 쓸 수 있으며, 두 앱은 무료입니다. OneMouse는 <b>Android 폰·태블릿</b>도 지원합니다.
-                Synergy에는 모바일 클라이언트가 없습니다.
-              </div>
-            </details>
-            <details>
-              <summary>OneMouse는 Linux, iPhone, iPad를 지원합니까?</summary>
-              <div class="a">
-                OneMouse에서 입력을 보낼 수 있는 기기는 Windows 10/11 PC와 macOS 13 이상을 실행하는
-                Apple Silicon Mac입니다. 입력 대상은 Windows·Mac 컴퓨터와 Android 폰·태블릿입니다.
-                Linux는 Deskflow나 Synergy를, Mac과 iPad는 Apple Universal Control을 쓰십시오.
-              </div>
-            </details>
-          </div>
-        </div>
-      </section>
-
-      <!-- NEXT STEP -->
-      <section class="section-alt" id="next">
-        <div class="wrap narrow">
-          <div class="sec-head">
-            <p class="ey">다음 단계</p>
-            <h2 class="sec">Windows, Android, Mac을 한 책상에서, 로컬로만.</h2>
-            <p class="sec-lead">
-              Windows 앱을 먼저 설치한 다음, 연결하려는 폰·PC·Mac을 추가하십시오. 페어링과 배치는
-              사용 가이드에서 순서대로 안내합니다.
-            </p>
-          </div>
-          <div style="display: flex; gap: 12px; flex-wrap: wrap">
-            <a class="btn btn-pri" href="./#get">다운로드</a>
-            <a class="btn btn-sec" href="./guide">사용 가이드 읽기</a>
-          </div>
+      <section class="cmp-wrap cmp-section" id="next" aria-labelledby="cmp-next-title">
+        <h2 id="cmp-next-title">OneMouse 연결하기</h2>
+        <div class="cmp-actions">
+          <a class="cmp-primary" href="/download">다운로드</a>
+          <a href="/compatibility">지원 기기와 연결 방법</a>
         </div>
       </section>
     </main>
