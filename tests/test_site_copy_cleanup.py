@@ -67,7 +67,8 @@ class SiteCopyCleanupTest(unittest.TestCase):
                             cache[target].by_id(unquote(url.fragment))
 
     def test_home_features_and_android_setup_stay_concise(self):
-        for locale in LOCALES:
+        # The redesigned Korean home has its own concise-layout and routing assertions.
+        for locale in filter(None, LOCALES):
             with self.subTest(locale=locale or "ko"):
                 home = Document(ROOT / locale / "index.html")
                 use = home.by_id("use")
@@ -94,7 +95,8 @@ class SiteCopyCleanupTest(unittest.TestCase):
                                     for node in permissions.walk()))
 
     def test_shortened_home_references_have_visible_link_styling(self):
-        for locale in LOCALES:
+        # The redesigned Korean home has its own concise-layout and routing assertions.
+        for locale in filter(None, LOCALES):
             with self.subTest(locale=locale or "ko"):
                 home = Document(ROOT / locale / "index.html")
                 for href in ("./guide#files", "./guide#notifications", "./guide#mac",
