@@ -56,26 +56,14 @@
     backdrop.addEventListener('error',()=>stage.classList.add('om-file-photo-missing'));
     if (backdrop.complete&&!backdrop.naturalWidth)stage.classList.add('om-file-photo-missing');
 
-    const mobile=node('div','mobile');
-    const mobileGroup=node('div','mobile-files');
-    mobileGroup.setAttribute('role','group');
-    mobileGroup.setAttribute('aria-label','옮길 예시 파일 선택');
-    const mobileSend=button('mobile-send','Mac으로 보내기');
-    mobile.append(mobileGroup,mobileSend);
-
     const hint=node('p','hint','파일을 Mac으로 끌어 보세요. 폴더 빈 곳에서 끌면 여러 개를 고를 수 있어요.');
-    const foot=node('div','foot');
     const status=node('p','status');
     status.setAttribute('role','status');status.setAttribute('aria-atomic','true');
-    const resetButton=button('reset','초기화');
-    resetButton.hidden=true;
-    foot.append(status,resetButton);
-    root.append(stage,hint,mobile,foot);
+    root.append(stage,hint,status);
     panel.append(root);
     const selected=new Set();
     const placed=new Map();
     const items=new Map();
-    const mobileItems=new Map();
     let gesture=null, suppressClickUntil=0, cursorTimer;
 
     files.forEach(file=>{
@@ -83,20 +71,14 @@
       item.dataset.omFile=file.id;
       item.append(fileIcon(file),node('span','filename',file.name));
       grid.append(item); items.set(file.id,item);
-      const simple=button('mobile-file',file.name);
-      mobileGroup.append(simple);mobileItems.set(file.id,simple);
-      simple.addEventListener('click',()=>flip(file.id));
     });
     function update() {
       for (const file of files) {
         const active=selected.has(file.id);
         items.get(file.id).setAttribute('aria-pressed',String(active));
-        mobileItems.get(file.id).setAttribute('aria-pressed',String(active));
       }
       drop.classList.toggle('om-file-target-ready',selected.size>0);
       drop.setAttribute('aria-disabled',String(selected.size===0));
-      mobileSend.disabled=selected.size===0;
-      resetButton.hidden=placed.size===0;
     }
     function flip(id) {
       if (selected.has(id))selected.delete(id);else selected.add(id);
@@ -200,8 +182,6 @@
       if(file)flip(file.dataset.omFile);
     });
     drop.addEventListener('click',event=>{if(Date.now()>=suppressClickUntil||event.detail===0)send();});
-    mobileSend.addEventListener('click',()=>send());
-    resetButton.addEventListener('click',()=>{reset();items.get(files[0].id).focus({preventScroll:true});});
     stage.addEventListener('pointerdown',()=>{if(!gesture)suppressClickUntil=0;},{capture:true});
     stage.addEventListener('lostpointercapture',event=>{if(gesture?.id===event.pointerId&&event.target===stage)interruptGesture();});
     window.addEventListener('blur',interruptGesture);

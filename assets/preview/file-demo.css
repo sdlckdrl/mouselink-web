@@ -77,32 +77,13 @@
   color:#173348; font:750 clamp(9px,1.65cqw,16px)/1 system-ui,sans-serif; pointer-events:none;
 }
 .om-file-ghost-label { border:1px solid #2d6499; border-radius:.28em; background:#e1f4ff; padding:.2em; }
-.om-file-hint,.om-file-status { color:#3c586d; font-size:.87rem; margin:.5rem 0 0; }
-.om-file-foot { display:flex; align-items:start; flex-wrap:wrap; justify-content:space-between; gap:.25rem .65rem; }
-.om-file-status:empty { margin:0; }
-.om-file-reset {
-  min-height:44px; border:0; appearance:none; background:none; color:#006653; cursor:pointer;
-  font:750 .84rem/1.2 system-ui,sans-serif; padding:.3rem .45rem; text-decoration:underline;
-}
-.om-file-mobile { display:none; }
+.om-file-hint { color:#3c586d; font-size:.87rem; margin:.5rem 0 0; }
+.om-file-status { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip-path:inset(50%); white-space:nowrap; }
 .om-file-photo-missing { background:linear-gradient(150deg,#eae2d8,#d3b89c); }
 .om-file-photo-missing .om-file-backdrop { display:none; }
 .om-file-photo-missing .om-file-windows-screen { background:linear-gradient(120deg,#052e65,#2076c6); }
 .om-file-photo-missing .om-file-mac-screen { background:linear-gradient(20deg,#00376e,#30988d); }
 .om-file-photo-missing :is(.om-file-windows-screen,.om-file-mac-screen) { border:2px solid #304660; border-radius:5px; }
-@container om-file-demo (max-width:600px) {
-  .om-file-mobile { display:flex; flex-wrap:wrap; gap:.35rem; margin-top:.6rem; align-items:center; }
-  .om-file-mobile-files { display:flex; flex-wrap:wrap; gap:.3rem; }
-  .om-file-mobile-file,.om-file-mobile-send {
-    min-height:44px; border:1px solid #799aac; border-radius:.46rem; padding:.3rem .55rem;
-    background:#f8fcff; color:#173348; font:750 .8rem/1.15 system-ui,sans-serif; cursor:pointer; touch-action:manipulation;
-  }
-  .om-file-mobile-file[aria-pressed="true"] { background:#d3ecfb; border-color:#09669e; }
-  .om-file-mobile-send { background:#006653; border-color:#006653; color:#fff; }
-  .om-file-mobile-send:disabled { background:#eef5f8; border-color:#abc0cb; color:#4a6576; cursor:default; }
-  .om-file-mobile :focus-visible { outline:2px solid #00588b; outline-offset:2px; }
-}
-
 .om-file-cursor {
   position:absolute; z-index:4; width:24px; height:28px; pointer-events:none;
   filter:drop-shadow(0 2px 2px #06203986);
