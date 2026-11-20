@@ -68,9 +68,11 @@ h1,h2,h3{line-height:1.25;letter-spacing:-.04em}h1{font-size:clamp(2rem,4.8vw,3.
 .capture-card-interactive:empty{aspect-ratio:3/2}
 @media(min-width:650px){.example-grid>.example,.screen-stories .story{align-self:start}.screen-stories .story figure{aspect-ratio:3/2}}
 .race-card-interactive{padding:.65rem .6rem .45rem;min-width:0;background:#f3f7fa;border-bottom:1px solid var(--preview-line)}.race-card-interactive:empty{aspect-ratio:1199/675}.race-card-interactive noscript img{display:block;width:100%;height:auto}
+.file-demo-shell{min-width:0}.file-demo-shell:empty{aspect-ratio:3/2}.file-demo-shell noscript img{width:100%;height:auto;display:block;border-radius:.8rem}.file-demo-link{margin:.6rem 0 0}
 </style>
 <link rel="stylesheet" href="/assets/preview/capture-demo.css?v=simple1">
 <link rel="stylesheet" href="/assets/preview/race-card.css?v=simple1">
+<link rel="stylesheet" href="/assets/preview/file-demo.css?v=1">
 </head>
 <body>
 <a class="skip" href="#main">본문으로 이동</a>
@@ -114,6 +116,13 @@ h1,h2,h3{line-height:1.25;letter-spacing:-.04em}h1{font-size:clamp(2rem,4.8vw,3.
     </article>
   </div>
     </section>
+<section class="layout examples file-demo-story" id="file-transfer-demo" aria-labelledby="file-transfer-title">
+  <h2 id="file-transfer-title">파일을 옆 화면으로 끌어 놓기</h2>
+  <div class="file-demo-shell" data-file-inline aria-label="Windows에서 Mac으로 파일을 보내는 체험">
+    <noscript><img src="/assets/preview/file-transfer-desk.webp" width="1536" height="1024" alt="밝은 책상 위의 Windows 모니터와 Mac"><p>파일을 끌어 놓으려면 JavaScript를 켜세요.</p></noscript>
+  </div>
+  <p class="file-demo-link"><a href="#files">실제 파일 보내는 방법 →</a></p>
+</section>
 <section class="layout overview" aria-labelledby="feature-jump">
   <h2 id="feature-jump">기능별 사용법</h2>
   <p>하려는 일을 고르면 사용 순서가 보여요.</p>
@@ -222,5 +231,7 @@ h1,h2,h3{line-height:1.25;letter-spacing:-.04em}h1{font-size:clamp(2rem,4.8vw,3.
 <script src="/js/preview-capture-demo.js?v=simple1" defer></script>
 <script src="/js/preview-race-card.js?v=simple1" defer></script>
 <script src="/js/preview-feature-demos.js?v=simple1" defer></script>
+<script src="/js/preview-file-demo.js?v=1" defer></script>
+<script defer src="/js/preview-file-mount.js?v=1"></script>
 </body>
 </html>
