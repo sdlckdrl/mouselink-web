@@ -7,7 +7,7 @@ const assert = require('node:assert/strict');
 const test = require('node:test');
 const source = fs.readFileSync(path.join(__dirname, '../js/preview-cursor-mode.js'), 'utf8');
 
-function harness({selector='.om-file-stage', initial=[.31,.37], target='.om-file-grid', params={}} = {}) {
+function harness({selector='.om-file-stage', initial=[.31,.37], target='.om-file-file-grid', params={}} = {}) {
   const counts = [];
   class Event {
     constructor(type, input={}) { Object.assign(this, {type, isTrusted:false}, input); }

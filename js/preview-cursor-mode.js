@@ -201,7 +201,7 @@
   for (const [selector, options] of [
     ['[data-layout-board]', {marker:'[data-layout-cursor]', drag:'[data-layout-device]:not([data-layout-device="pc"])'}],
     ['.om-capture-stage', {start:[.5,.36], mobile:'.om-capture-phone', drag:'.om-capture-source'}],
-    ['.om-file-stage', {start:[.31,.37], drag:'.om-file-grid'}],
+    ['.om-file-stage', {start:[.31,.37], drag:'.om-file-file-grid'}],
     ['.om-android-stage', {start:[.5,.37], mobile:'.om-android-screen-phone'}],
     ['.tg-scene', {marker:'.tg-cursor', start:[.75,.56], direct:'[data-right-button]', arm:'[data-right-button]', eager:'.tg-surface.tg-armed'}],
     ['.race-scene', {start:[.33,.32], mobile:'[data-phone]', direct:'button,.race-joystick,[data-slide]'}],
