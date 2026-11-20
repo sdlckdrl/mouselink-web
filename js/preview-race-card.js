@@ -23,15 +23,26 @@
     <span class="game-score" data-score>통과 0 / 8</span>
     <div class="game-overlay" data-game-overlay><span data-game-title>미니 레이싱</span><small data-game-subtitle>Android 게임패드로 시작</small></div>
   </div>`;
+  const picks=[
+    {id:'race',name:'레이싱',hint:'차선 바꾸기',icon:'<path d="M4 17h16M6 16l1.5-5 2-3h5l2 3 1.5 5M8 17v2m8-2v2M8 13h8"/><path d="M10 4h4"/>'},
+    {id:'breakout',name:'벽돌 깨기',hint:'손가락으로 끌기',icon:'<path d="M4 6h4v3H4zM10 6h4v3h-4zM16 6h4v3h-4zM7 18h10"/><circle cx="14" cy="13" r="1.4"/>'},
+    {id:'rabbit',name:'토끼 점프',hint:'탭해서 점프',icon:'<path d="M7 13C5 10 5 5 7 4c2 0 3 4 3 7m2 0c1-4 3-7 5-6 2 2 0 6-2 8m-8 0a6 4 0 1 0 8 0"/><path d="M9 16h.01m4 0h.01"/>'},
+  ];
+  function library(interactive){
+    return '<div class="arcade-library"><div class="arcade-brand">ONEMOUSE ARCADE</div><div class="arcade-tiles">'+picks.map(game=>{
+      const content='<svg viewBox="0 0 24 24" width="40" height="40" aria-hidden="true">'+game.icon+'</svg><b>'+game.name+'</b><small>'+game.hint+'</small>';
+      return interactive?'<button type="button" class="arcade-tile" data-pick="'+game.id+'" aria-label="'+game.name+'">'+content+'</button>':'<div class="arcade-tile" data-cover="'+game.id+'">'+content+'</div>';
+    }).join('')+'</div></div>';
+  }
   function mount(node) {
     if (!node || node.nodeType !== 1) throw new TypeError('A racing card element is required.');
     if (instances.has(node)) return instances.get(node);
     const desk = document.createElement('div');
     desk.className='om-race-card';
     desk.innerHTML=`
-      <div class="race-scene" data-scene role="group" aria-label="사진 속 모니터와 폰에서 같은 레이싱을 체험">
+      <div class="race-scene" data-scene role="group" aria-label="사진 속 PC와 폰의 원격 게임 체험">
         <img class="race-backdrop" data-backdrop src="/assets/preview/remote-racing-example.webp" width="1199" height="675" alt="" decoding="async">
-        <div class="race-projection race-projection--monitor" aria-hidden="true"><div class="race-display" data-monitor></div></div>
+        <div class="race-projection race-projection--monitor"><div class="race-display" data-monitor></div></div>
         <div class="race-projection race-projection--phone" aria-hidden="true"><div class="race-display" data-phone><div data-phone-screen></div></div></div>
         <div class="race-controls" data-controls tabindex="0" role="group" aria-label="게임 조작. 시작한 뒤 방향 버튼이나 키보드 방향키로 차선을 바꿔요.">
           <span class="race-steering" aria-label="차선 이동" role="group">
@@ -41,12 +52,25 @@
           <button class="race-toggle" type="button" data-toggle>게임 시작</button>
           <button class="race-reset" type="button" data-reset aria-label="레이싱 초기화" title="레이싱 초기화">↻</button>
         </div>
+        <div class="arcade-slide" data-slide hidden aria-hidden="true"></div>
+        <button class="arcade-list" type="button" data-list hidden>게임 목록</button>
+        <div class="arcade-controls" data-arcade-controls tabindex="0" role="group" aria-label="미니게임 조작" hidden>
+          <span class="arcade-steering" role="group" aria-label="패들 이동">
+            <button type="button" data-arcade-left aria-label="패들 왼쪽">←</button>
+            <button type="button" data-arcade-right aria-label="패들 오른쪽">→</button>
+          </span>
+          <button class="arcade-action" type="button" data-action>점프</button>
+          <button type="button" data-arcade-pause>일시정지</button>
+          <button type="button" data-arcade-reset aria-label="게임 다시 시작">↻</button>
+        </div>
         <span data-status class="race-sr" role="status"></span>
       </div>`;
     node.replaceChildren(desk);
     const $=name=>desk.querySelector('[data-'+name+']');
     const scene=$('scene'),backdrop=$('backdrop'),phoneDisplay=$('phone'),mirror=$('monitor'),control=$('phone-screen');
     const live=$('status'),gameControls=$('controls'),toggle=$('toggle'),gameReset=$('reset');
+    const list=$('list'),slide=$('slide'),arcadeControls=$('arcade-controls'),primary=$('action'),arcadePause=$('arcade-pause'),arcadeReset=$('arcade-reset');
+    const pad=arcadeControls.querySelector('.arcade-steering');
     const dirs=[...desk.querySelectorAll('[data-direction]')];
   // Corners are measured in the published 1199×675 photo (top-left clockwise).
   const screenQuads = [
@@ -83,7 +107,7 @@
   function stop(){if(timer!==undefined){clearInterval(timer);timer=undefined;}}
   function drive(){stop();timer=setInterval(step,145);}
   function step(){
-    if(phase!=='playing')return;
+    if(mode!=='race'||phase!=='playing')return;
     frame++;
     if(frame===1||frame%6===0){traffic.push({lane:trafficLanes[spawnCount%trafficLanes.length],at:0});spawnCount++;}
     traffic.forEach(car=>{car.at+=speed;});
@@ -97,6 +121,7 @@
     renderGame();
     if(phase!=='playing' && desk.contains(document.activeElement))toggle.focus({preventScroll:true});
   }
+  let mode='library', engine=null, arcadeViews=[], animation=0, lastTick=0, paused=false, result='';
   let game;
   let phase, lastScore;
   function setGame(next) { stop(); frame=passed=spawnCount=0; lane=1; traffic=[]; phase=next; lastScore=0; renderGame(); if(next==='playing')drive(); }
@@ -163,7 +188,7 @@
   }
   dirs.forEach(btn=>btn.addEventListener('click',()=>move(btn.dataset.direction)));
   desk.addEventListener('keydown',e=>{
-    if(phase!=='playing'||e.altKey||e.ctrlKey||e.metaKey)return;
+    if(mode!=='race'||phase!=='playing'||e.altKey||e.ctrlKey||e.metaKey)return;
     const aliases={ArrowLeft:'left',ArrowRight:'right'};
     if(!aliases[e.key])return;
     e.preventDefault(); move(aliases[e.key]);
@@ -176,7 +201,8 @@
     gameControls.focus({preventScroll:true});
   }
   function pause(){
-    if(phase==='playing'){phase='paused';stop();renderGame();}
+    if(mode==='breakout'||mode==='rabbit'){pauseArcade();return;}
+    if(mode==='race'&&phase==='playing'){phase='paused';stop();renderGame();}
   }
   toggle.addEventListener('click',()=>{
     if(phase==='playing')pause();
@@ -186,7 +212,130 @@
   document.addEventListener('visibilitychange',()=>{
     if(document.hidden)pause();
   });
-  setupGame();
+  function stopArcade(){
+    if(animation)cancelAnimationFrame(animation);
+    animation=0;lastTick=0;
+  }
+  function activate(next){
+    mode=next;desk.dataset.game=mode;
+    gameControls.hidden=mode!=='race';
+    arcadeControls.hidden=mode!=='breakout'&&mode!=='rabbit';
+    list.hidden=mode==='library';
+    mirror.setAttribute('aria-hidden',String(mode!=='library'));
+    slide.hidden=mode!=='breakout';
+  }
+  function openLibrary(focusId){
+    stop();stopArcade();engine=null;arcadeViews=[];
+    activate('library');scene.classList.add('is-live');
+    mirror.innerHTML=library(true);control.innerHTML=library(false);
+    announce('OneMouse 아케이드에서 게임을 고르세요.');
+    if(focusId)mirror.querySelector('[data-pick="'+focusId+'"]')?.focus({preventScroll:true});
+  }
+  function paintArcade(){
+    if(!engine)return;
+    const snapshot=engine.state();
+    for(const view of arcadeViews){
+      engine.draw(view.ctx);
+      view.score.textContent='점수 '+snapshot.score;
+      view.overlay.hidden=!paused&&!result;
+      view.overlay.textContent=paused?'잠시 쉬는 중':result==='won'?'성공!':'게임 끝';
+    }
+  }
+  function updateArcadeControls(){
+    const locked=paused||Boolean(result);
+    primary.textContent=result?'다시 도전':mode==='breakout'?'공 발사':'점프';
+    primary.disabled=paused;
+    arcadePause.textContent=paused?'계속하기':'일시정지';
+    arcadePause.disabled=Boolean(result);
+    slide.hidden=mode!=='breakout'||locked;
+    for(const b of pad.querySelectorAll('button'))b.disabled=locked;
+  }
+  function frameArcade(now){
+    animation=0;
+    if(!engine||paused||result||document.hidden)return;
+    const dt=lastTick?Math.min(.032,(now-lastTick)/1000):0;
+    lastTick=now;engine.step(dt);
+    result=engine.state().result;paintArcade();
+    if(result){
+      updateArcadeControls();announce(result==='won'?'성공했어요.':'게임이 끝났어요. 다시 도전할 수 있어요.');
+    }else animation=requestAnimationFrame(frameArcade);
+  }
+  function queueArcade(){if(!animation&&!paused&&!result)animation=requestAnimationFrame(frameArcade);}
+  function pauseArcade(){
+    if(!engine||paused||result)return;
+    paused=true;stopArcade();updateArcadeControls();paintArcade();announce('게임을 일시정지했어요.');
+  }
+  function prepareArcade(id){
+    stop();stopArcade();
+    engine=window.OneMouseArcadeGames?.create(id);
+    if(!engine){announce('게임을 불러오지 못했어요. 새로고침해 주세요.');return false;}
+    activate(id);scene.classList.add('is-live');paused=false;result='';
+    pad.hidden=id!=='breakout';
+    arcadeViews=stage.map(screen=>{
+      screen.innerHTML='<div class="game-frame"><canvas width="640" height="360"></canvas><span class="game-title" data-arcade-title></span><span class="game-score" data-points></span><div class="game-overlay" data-arcade-overlay hidden></div></div>';
+      const canvas=screen.querySelector('canvas');
+      screen.querySelector('[data-arcade-title]').textContent=picks.find(game=>game.id===id).name;
+      return {ctx:canvas.getContext('2d'),score:screen.querySelector('[data-points]'),overlay:screen.querySelector('[data-arcade-overlay]')};
+    });
+    updateArcadeControls();paintArcade();queueArcade();return true;
+  }
+  function pick(id){
+    if(id==='race'){
+      stopArcade();engine=null;arcadeViews=[];activate('race');setupGame();start();
+    }else if(id==='breakout'||id==='rabbit'){
+      if(!prepareArcade(id))return;
+      arcadeControls.focus({preventScroll:true});
+      announce(id==='breakout'?'패들을 끌거나 좌우 방향키로 옮기고 공을 발사하세요.':'점프 버튼이나 스페이스 키로 장애물을 넘으세요.');
+    }
+  }
+  mirror.addEventListener('click',event=>{
+    const button=event.target.closest('[data-pick]');
+    if(mode==='library'&&button)pick(button.dataset.pick);
+  });
+  list.addEventListener('click',()=>openLibrary(mode));
+  function action(){
+    if(!engine||paused)return;
+    if(result){prepareArcade(mode);return;}
+    engine.action();paintArcade();
+  }
+  function nudge(direction){
+    if(mode!=='breakout'||!engine||paused||result)return;
+    engine.nudge(direction);paintArcade();
+  }
+  primary.addEventListener('click',action);
+  $('arcade-left').addEventListener('click',()=>nudge(-1));
+  $('arcade-right').addEventListener('click',()=>nudge(1));
+  arcadePause.addEventListener('click',()=>{
+    if(!engine||result)return;
+    if(!paused){pauseArcade();return;}
+    paused=false;updateArcadeControls();paintArcade();queueArcade();announce('게임을 재개했어요.');
+  });
+  arcadeReset.addEventListener('click',()=>{if(engine){prepareArcade(mode);announce('게임을 초기화했어요.');}});
+  let tracking=null;
+  function slideTo(event){
+    if(!engine||paused||result)return;
+    const r=slide.getBoundingClientRect();
+    if(r.width)engine.move(Math.max(0,Math.min(1,(event.clientX-r.left)/r.width)));
+    paintArcade();
+  }
+  slide.addEventListener('pointerdown',event=>{
+    if(event.button!==0||event.isPrimary===false)return;
+    tracking=event.pointerId;slide.setPointerCapture(tracking);slideTo(event);
+  });
+  slide.addEventListener('pointermove',event=>{if(tracking===event.pointerId)slideTo(event);});
+  for(const type of ['pointerup','pointercancel','lostpointercapture'])slide.addEventListener(type,event=>{
+    if(tracking===event.pointerId){if(event.type==='pointerup')slideTo(event);tracking=null;}
+  });
+  desk.addEventListener('keydown',event=>{
+    if(event.altKey||event.ctrlKey||event.metaKey)return;
+    if(event.key==='Escape'&&mode!=='library'){event.preventDefault();openLibrary(mode);return;}
+    if(!engine||paused||event.target.closest('button'))return;
+    if((event.key===' '||(mode==='rabbit'&&event.key==='ArrowUp'))&&!event.repeat){event.preventDefault();action();}
+    if(mode==='breakout'&&(event.key==='ArrowLeft'||event.key==='ArrowRight')){
+      event.preventDefault();nudge(event.key==='ArrowLeft'?-1:1);
+    }
+  });
+  openLibrary();
   if(backdrop.complete&&!backdrop.naturalWidth)missingPhoto();
   alignScreens();
   if(typeof ResizeObserver==='function')new ResizeObserver(alignScreens).observe(scene);
@@ -194,7 +343,7 @@
   if(typeof IntersectionObserver==='function')new IntersectionObserver(entries=>{
     if(entries.some(entry=>!entry.isIntersecting))pause();
   },{threshold:.05}).observe(scene);
-  const controller={start};
+  const controller={start(){pick('race');}};
   instances.set(node,controller);
   return controller;
   }
