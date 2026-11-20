@@ -55,8 +55,6 @@
     }
     const android=alertCard('phone-alert','Android · 메일');
     const windows=alertCard('pc-alert','Windows · OneMouse');
-    const smallPhone=alertCard('compact-alert','Android · 메일');
-    const smallPC=alertCard('compact-alert','Windows · OneMouse');
 
     function clipBox(kind,title,isSource){
       const box=el('div',kind);
@@ -77,8 +75,6 @@
     pcScreen.append(dest.box,windows.shell);
     stage.append(img,pcScreen,phoneScreen);
 
-    const compactNotifications=el('div','compact-alerts');
-    compactNotifications.append(smallPhone.shell,smallPC.shell);
     const compactSource=clipBox('compact-note','Android · 예시 메모',true);
     const compactDest=clipBox('compact-note','Windows · 메모장',false);
     const compactClipboard=el('div','compact-clipboard');
@@ -87,14 +83,14 @@
     const hint=el('p','hint','알림은 자동으로 뜹니다. 폰에서 복사하고 PC 메모장에 붙여넣어 보세요.');
     const status=el('p','status');
     status.setAttribute('role','status');status.setAttribute('aria-atomic','true');
-    root.append(stage,hint,compactNotifications,compactClipboard,status);
+    root.append(stage,hint,compactClipboard,status);
     panel.append(root);
 
     let copied=null, pasted='', visible=false, mailIndex=0;
     let timers=[];
     const schedule=(fn,delay)=>{const id=window.setTimeout(fn,delay);timers.push(id);};
     const clearTimers=()=>{timers.forEach(id=>window.clearTimeout(id));timers=[];};
-    const allAlerts=[android,windows,smallPhone,smallPC];
+    const allAlerts=[android,windows];
     function hideAlerts(){for(const card of allAlerts)card.shell.hidden=true;}
     function stopTimers(){clearTimers();hideAlerts();}
     function allowed(){return visible&&!document.hidden;}
@@ -119,10 +115,10 @@
       clearTimers();hideAlerts();
       if(!allowed())return;
       const mail=MAILS[mailIndex++%MAILS.length];
-      for(const card of [android,smallPhone])present(card,mail);
-      schedule(()=>{if(allowed())for(const card of [windows,smallPC])present(card,mail);},450);
-      schedule(()=>{for(const card of [android,smallPhone])card.shell.hidden=true;},3950);
-      schedule(()=>{for(const card of [windows,smallPC])card.shell.hidden=true;},4700);
+      present(android,mail);
+      schedule(()=>{if(allowed())present(windows,mail);},450);
+      schedule(()=>{android.shell.hidden=true;},3950);
+      schedule(()=>{windows.shell.hidden=true;},4700);
       schedule(fire,10000);
     }
     function syncAlerts(delay=550){
