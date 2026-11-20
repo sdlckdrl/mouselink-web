@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="ja">
-  <head>
+<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="naver-site-verification" content="8f3cbe8a89ca9969cc81ecf1ef5e0aae01858816" />
@@ -14,7 +14,6 @@
       name="keywords"
       content="OneMouse, MouseLink, share mouse, ソフトウェアKVM, KVM ソフト, マウス共有, PC マウス 共有, Android PC 操作, PCのマウスでスマホ操作, Android キーボード入力, PC to PC マウス, Windows Mac 接続, Wi-Fi ファイル転送"
     />
-    <link rel="stylesheet" href="../css/onemouse.css" />
     <link rel="canonical" href="https://onemouse.pages.dev/ja/" />
     <link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/" />
     <link rel="alternate" hreflang="en" href="https://onemouse.pages.dev/en/" />
@@ -68,16 +67,17 @@
           "Sync clipboard text between paired devices",
           "Capture a screenshot and send it to another device over Wi-Fi/LAN",
           "View and control a Windows PC from an Android phone or tablet",
-          "Connect over Wi-Fi/LAN or Bluetooth (Mac: LAN)",
+          "Connect over Wi-Fi/LAN or Bluetooth (beta)",
           "LAN/Bluetooth pairing without sign-in; optional Google account linking",
           "Show phone SMS and messenger notifications on the PC, with one-click copy for verification codes"
         ],
-        "isAccessibleForFree": true,
+
         "offers": {
           "@type": "Offer",
           "price": "0",
           "priceCurrency": "USD",
-          "url": "https://onemouse.pages.dev/ja/pricing"
+          "name": "Windows app",
+          "url": "https://onemouse.pages.dev/ja/#windows"
         },
         "author": {
           "@type": "Organization",
@@ -97,1164 +97,226 @@
         ]
       }
     </script>
-  </head>
-  <body>
-    <header class="site">
-      <div class="wrap hd">
-        <a class="brand" href="./" aria-label="OneMouse ホーム"
-          ><span class="om">OM</span>OneMouse</a
-        >
-        <nav class="nav" aria-label="メインメニュー">
-          <a href="./" class="on">概要</a>
-          <a href="#use">機能</a>
-          <a href="./guide">使い方</a>
-          <a href="./help">ヘルプ</a>
-        </nav>
-        <div class="hd-right">
-          <div class="lang" aria-label="言語">
-            <a href="../">KOR</a><a href="../en/">ENG</a><span class="on">JPN</span
-            ><a href="../zh/">CHN</a>
-            <a href="../es/">ESP</a>
-          </div>
-          <a class="hd-cta" href="#get">ダウンロード</a>
-        </div>
-      </div>
-    </header>
+  <meta name="theme-color" content="#f5f8fa">
+<style>
+:root{color-scheme:light;--bg:var(--preview-bg);--surface:var(--preview-panel);--line:var(--preview-line);--ink:var(--preview-ink);--muted:var(--preview-muted);--green:var(--preview-accent);--radius:20px}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:1rem/1.65 system-ui,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;word-break:keep-all;overflow-wrap:anywhere}a{color:inherit}button{font:inherit}a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--green);outline-offset:4px}a,button{touch-action:manipulation}.skip{position:absolute;left:12px;transform:translateY(-150%);z-index:3}.skip:focus{transform:none}.wrap{width:min(1120px,calc(100% - 40px));margin-inline:auto}.head{border-bottom:1px solid #202d48}.head .wrap,footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:18px;min-height:66px}.brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;letter-spacing:-.035em;font-size:1.18rem}.mark{display:grid;place-items:center;width:34px;height:34px;border-radius:11px;background:var(--green);color:#fff}.mark svg{width:19px}.head nav{display:flex;align-items:center;gap:18px}.head nav a,footer a{color:var(--muted);text-underline-offset:4px;font-size:.9rem}.hero{display:grid;grid-template-columns:1fr;gap:28px;padding-block:43px 52px}.eyebrow{color:var(--green);font-weight:750;font-size:.9rem;margin:0 0 14px}.badge{display:inline-block;color:#3d566b;background:#eaf1f6;border:1px solid #c5d6e0;border-radius:999px;padding:3px 9px;margin-left:9px;font-size:.8rem}.hero h1{font-size:clamp(2rem,6.4vw,4.1rem);line-height:1.14;letter-spacing:-.064em;margin:0}.hero h1 span{color:var(--green)}.intro{color:var(--muted);font-size:clamp(1rem,2.1vw,1.17rem);margin:16px 0 22px;max-width:36ch}.actions{display:flex;gap:9px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:45px;padding:8px 15px;border-radius:11px;border:1px solid transparent;font-weight:750;text-decoration:none;font-size:.95rem}.primary{background:var(--green);color:#fff}.primary:hover{background:var(--preview-accent-hover)}.secondary{border-color:#78909f;background:#fff;color:var(--ink)}.secondary:hover{background:#eaf2f6} .caption{margin:11px 0 0;color:var(--muted);font-size:.88rem}.visual{padding:16px;border-radius:var(--radius);border:1px solid var(--line);background:radial-gradient(ellipse at 77% 0%,#e3f4f1,transparent 65%),var(--surface);align-self:center}.visual h2{font-size:1.05rem;margin:0 0 4px}.visual p{font-size:.9rem;color:var(--muted);margin:0}.section{padding:48px 0;border-top:1px solid #202d48}.section h2{font-size:clamp(1.65rem,4.2vw,2.5rem);line-height:1.25;letter-spacing:-.05em;margin:0 0 18px}.grid{display:grid;gap:12px}.card{border:1px solid var(--line);border-radius:16px;padding:19px;background:var(--surface)}.card .num{color:var(--green);font-size:.83rem;font-weight:750}.card h3{margin:5px 0;font-size:1.15rem;letter-spacing:-.04em}.card p{margin:0;color:var(--muted);font-size:.96rem}.store{display:flex;gap:7px;flex-wrap:wrap;margin-top:14px}.store a{font-size:.85rem}.help{margin:18px 0 0;color:var(--muted)}.help a,.extra a{color:var(--green);text-underline-offset:4px}.extra details{border-bottom:1px solid var(--line);padding:13px 0}.extra summary{cursor:pointer;font-weight:700}.extra p{color:var(--muted);margin:9px 0 2px}footer{border-top:1px solid #202d48;color:var(--muted);font-size:.84rem;padding-block:12px}footer .wrap{flex-wrap:wrap}
+@media(min-width:580px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(min-width:760px){.hero{padding-block:77px 80px;grid-template-columns:1.08fr 1fr;gap:40px;align-items:center}.visual{padding:23px}.section{padding-block:62px}}@media(max-width:350px){.wrap{width:calc(100% - 28px)}.head nav{gap:10px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.pointer{transition:none}}
+.hero{align-items:center}.hero-copy{min-width:0}.hero .actions{align-items:center;gap:12px 18px}.hero h1{font-size:clamp(2.18rem,5.25vw,3.95rem);line-height:1.14}.hero h1 br{display:none}.hero .intro{max-width:30ch}.section{border-color:var(--line)}.section h2{margin-bottom:22px}.benefits{display:grid;gap:22px}.benefits h3{font-size:1.17rem;margin:0 0 .36rem;line-height:1.35;letter-spacing:-.03em}.benefits p{margin:0;color:var(--muted);line-height:1.62}.section-link{margin:21px 0 0}.section-link a{color:var(--green);font-weight:720;text-underline-offset:.25em}.hero-demo{min-width:0}.hero-demo .visual{margin:0}.hero-demo .visual [id]{scroll-margin-top:12px}
+@media(min-width:630px){.benefits{grid-template-columns:repeat(3,minmax(0,1fr))}.benefits article+article{padding-inline-start:20px;border-inline-start:1px solid var(--line)}}@media(min-width:875px){.hero h1 br{display:initial}}@media(max-width:629px){.benefits{gap:15px}.benefits article+article{border-top:1px solid var(--line);padding-top:15px}.section{padding-block:34px}}
+/* The only artwork over the approved desk photo is the movable cursor. */
+.hero-demo{min-width:0}
+.cursor-figure{margin:0}
+.cursor-figure h2{font-size:1.06rem;margin:.0rem 0 .35rem;letter-spacing:-.028em}
+.cursor-scene{position:relative;width:100%;aspect-ratio:3/2;overflow:hidden;box-shadow:0 0 0 1px #b3c8d4;border-radius:14px;background:#edf3f6;touch-action:pan-y;user-select:none;outline-offset:4px}
+.cursor-scene[data-ready]{touch-action:none}
+.cursor-scene:focus-visible{outline:3px solid var(--preview-accent)}
+.cursor-scene img{position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:contain;pointer-events:none}
+.cursor-scene .cursor-mark{position:absolute;z-index:2;display:block;top:37%;left:51%;width:clamp(17px,4.4%,26px);aspect-ratio:24/30;pointer-events:none;filter:drop-shadow(0 1px 2px #0a1a30aa)}
+.cursor-mark svg{display:block;width:100%;height:100%}
+.cursor-mark .cursor-dot{display:none}
+.cursor-scene:is([data-device=phone],[data-device=tablet]) .cursor-mark{transform:translate(-50%,-50%)}
+.cursor-scene:is([data-device=phone],[data-device=tablet]) .cursor-arrow{display:none}
+.cursor-scene:is([data-device=phone],[data-device=tablet]) .cursor-dot{display:inline}
+.cursor-scene [hidden]{display:none!important}
+@media (any-pointer:fine){.cursor-scene[data-pointer]{cursor:none}}
+.cursor-help{margin:.48rem 0 0;color:var(--preview-muted);font-size:.84rem}
+.cursor-sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.anchor-alias,.legacy-fallback{display:block;scroll-margin-top:1rem}
+.legacy-fallback:not(:target){display:none}
+.legacy-fallback:has(:target){display:block}
+#cursor-demo{scroll-margin-top:1rem}
+@media(min-width:850px){.hero{grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:35px;padding-block:56px 63px}}
+/* Keep the same responsive frame when the poster becomes a YouTube iframe. */
+.promo-video{width:min(100%,760px);margin:1rem 0 0}
+.promo-video-player{position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;border-radius:.8rem;background:#102437}
+.promo-video-player :is(.promo-video-play,iframe){position:absolute;inset:0;display:block;width:100%;height:100%;border:0}
+.promo-video-play img{display:block;width:100%;height:100%;object-fit:cover}
+.promo-video-play .btn{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);white-space:nowrap;box-shadow:0 2px 16px #10243788}
+.promo-video-play:focus-visible{outline:3px solid #8af3d7;outline-offset:-4px}
+.promo-video-links{margin:.45rem 0 0;color:var(--muted);font-size:.84rem}
+</style>
+<link rel="icon" href="/assets/preview/onemouse-android-icon.png" type="image/png" sizes="240x240">
+<link rel="stylesheet" href="/assets/preview/one-preview.css?v=light1">
 
-    <main class="main-grid-aligned">
-      <!-- HERO + SIMULATOR -->
-      <section class="hero wrap" aria-label="概要">
-        <span class="tagpill">● Android・Windows・Apple Silicon Mac対応</span>
-        <h1>
-          Windowsのマウス1つで<br class="hero-break" />
-          <span class="flow">スマホ・タブレット・Macを操作。</span>
-        </h1>
-        <p class="sub">
-          マウス・キーボードを複数のデバイスで共有し、スクリーンショットもすぐに送信。スマホからPCの画面を開いて操作することもできます。
-        </p>
-
-        <div class="hero-cta">
-          <a class="btn btn-pri" href="#get">Windowsアプリを入手</a>
-          <a class="btn btn-sec" href="./guide">接続方法を見る</a>
-        </div>
-        <div class="role-map" aria-label="対応デバイス">
-          <div class="role-main"><span>接続元</span><strong>Windows 10/11</strong></div>
-          <span class="role-link" aria-hidden="true">→</span>
-          <div class="role-targets">
-            <span><b>Android</b> 対応</span>
-            <span><b>別のWindows PC</b> 対応</span>
-            <span class="mac-role"><b>macOS 13+</b> 対応</span>
-          </div>
-        </div>
-
-        <div class="play">
-          <div class="play-head">
-            <div class="steps">
-              <span><span class="n">1</span><b>マウスを動かして</b>カーソルを渡してみましょう</span>
-              <span
-                ><span class="n">2</span
-                ><b>デバイスの名札をドラッグして</b>位置を変えてみましょう</span
-              >
-              <span
-                ><span class="n">3</span
-                ><b>ファイルをドラッグ</b>して別のデバイスへ送りましょう</span
-              >
-            </div>
-            <button class="reset" id="reset" type="button">最初の配置に戻す</button>
-          </div>
-          <div class="desk" id="desk">
-            <div class="stage" id="stage">
-              <div class="snapedge" id="snapedge"></div>
-              <div class="dev monitor" data-id="pc">
-                <span class="pin">Windows</span>
-                <div class="screen">
-                  <div
-                    class="apps"
-                    style="grid-template-columns: repeat(6, 1fr); padding: 12px 12px 22px"
-                  >
-                    <i style="background: #ffffff55"></i><i style="background: #ffd16655"></i
-                    ><i style="background: #7ee0b955"></i> <i style="background: #ff9e7a55"></i
-                    ><i style="background: #8ab4ff55"></i><i style="background: #ffffff33"></i>
-                  </div>
-                  <div class="bar"><i></i><i></i><i></i></div>
-                </div>
-              </div>
-              <div class="dev tablet grab" data-id="tab">
-                <span class="pin">Galaxy Tab</span>
-                <div class="screen">
-                  <div class="apps">
-                    <i style="background: #5b8cff88"></i><i style="background: #57e0ab88"></i
-                    ><i style="background: #ffcf5e88"></i><i style="background: #ff8f6b88"></i>
-                    <i style="background: #ffffff33"></i><i style="background: #ffffff33"></i
-                    ><i style="background: #ffffff33"></i><i style="background: #ffffff33"></i>
-                  </div>
-                </div>
-              </div>
-              <div class="dev phone grab" data-id="phone">
-                <span class="pin">スマホ</span>
-                <div class="screen">
-                  <div class="apps">
-                    <i style="background: #57e0ab88"></i><i style="background: #ffcf5e88"></i
-                    ><i style="background: #ff8f6b88"></i> <i style="background: #8ab4ff88"></i
-                    ><i style="background: #ffffff33"></i><i style="background: #ffffff33"></i>
-                  </div>
-                </div>
-              </div>
-              <div class="dev subpc grab" data-id="subpc">
-                <span class="pin">別のPC</span>
-                <div class="screen">
-                  <div
-                    class="apps"
-                    style="grid-template-columns: repeat(5, 1fr); padding: 9px 9px 18px"
-                  >
-                    <i style="background: #ff9e7a55"></i><i style="background: #c7a0ff55"></i
-                    ><i style="background: #8ab4ff55"></i><i style="background: #ffffff33"></i
-                    ><i style="background: #ffffff22"></i>
-                  </div>
-                  <div class="bar"><i></i><i></i></div>
-                </div>
-              </div>
-              <div class="dev mac grab" data-id="mac">
-                <span class="pin">Mac</span>
-                <div class="screen">
-                  <div
-                    class="apps"
-                    style="grid-template-columns: repeat(5, 1fr); padding: 9px 9px 18px"
-                  >
-                    <i style="background: #8ab4ff66"></i><i style="background: #c7a0ff66"></i
-                    ><i style="background: #57e0ab66"></i><i style="background: #ffffff33"></i
-                    ><i style="background: #ffffff22"></i>
-                  </div>
-                  <div class="bar"><i></i><i></i></div>
-                </div>
-              </div>
-              <div id="cursor">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path
-                    d="M4 2l6.5 17 2.4-6.8L19.5 10z"
-                    fill="#fff"
-                    stroke="#241a12"
-                    stroke-width="1.3"
-                    stroke-linejoin="round"
-                  /></svg
-                ><span class="dot"></span>
-              </div>
-              <div class="filechip" id="filechip">
-                <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true">
-                  <path
-                    d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"
-                    fill="#e9f0ff"
-                    stroke="#3a5bd0"
-                    stroke-width="1.6"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M13 2v7h7"
-                    fill="none"
-                    stroke="#3a5bd0"
-                    stroke-width="1.6"
-                    stroke-linejoin="round"
-                  /></svg
-                ><span>写真.jpg</span>
-              </div>
-            </div>
-          </div>
-          <div class="play-foot">
-            <div id="status">
-              <span class="dotnow"></span>今のカーソル位置 → <span class="where">Windows</span>
-            </div>
-            <span class="hint"
-              >隣り合ったデバイスへ移ります · カーソルが画面の外に消えることはありません</span
-            >
-          </div>
-        </div>
-
-        <p class="hero-note">デバイス配置とカーソル移動を体験できるブラウザー上のデモです。</p>
-      </section>
-
-      <!-- PROMOTIONAL VIDEO -->
-      <section id="video" aria-labelledby="promo-video-title">
-        <div class="wrap">
-          <div class="sec-head promo-video-heading">
-            <div>
-              <p class="ey">OneMouse紹介動画</p>
-              <h2 class="sec" id="promo-video-title">使い方を、まずは動画で。</h2>
-              <p class="sec-lead">
-                マウス・キーボードの共有からファイル転送、リモート操作まで、実際の使い方をご覧ください。
-              </p>
-            </div>
-            <a
-              class="text-link"
-              href="https://www.youtube.com/watch?v=lfrUuJgT5nw"
-              target="_blank"
-              rel="noopener"
-              >YouTubeで見る ↗</a
-            >
-          </div>
-          <div class="promo-video-player" id="promo-video-player">
-            <a
-              class="promo-video-play"
-              href="https://www.youtube.com/watch?v=lfrUuJgT5nw"
-              target="_blank"
-              rel="noopener"
-              aria-label="OneMouseの紹介動画を再生"
-              aria-describedby="promo-video-note"
-              data-promo-video-play
-              data-video-title="OneMouse紹介動画 — マウス・キーボード共有、ファイル転送とリモート操作"
-              ><img
-                src="../assets/onemouse-promo-video.jpg"
-                alt="Windows・Mac・AndroidをつなぐOneMouse紹介動画のプレビュー"
-                width="1280"
-                height="720"
-                loading="lazy"
-                decoding="async"
-              /><span class="promo-video-action" aria-hidden="true"
-                ><svg viewBox="0 0 24 24" width="28" height="28">
-                  <path d="m9 5 11 7-11 7z" fill="currentColor" /></svg
-                ><span>紹介動画を再生</span></span
-              ></a
-            >
-          </div>
-          <p class="feature-note" id="promo-video-note">
-            再生を押すとYouTubeプレーヤーを読み込みます。再生するまではYouTubeに接続しません。
-          </p>
-        </div>
-      </section>
-
-      <!-- USE CASES -->
-      <section id="use">
-        <div class="wrap">
-          <div class="sec-head">
-            <p class="ey">こんなときに便利</p>
-            <h2 class="sec">Windowsでしていた作業を、スマホ・別のPC・Macまで。</h2>
-          </div>
-          <div class="cards">
-            <article class="card">
-              <div class="card-ic" style="background: #e9f0ff; color: #3a5bd0">
-                <svg
-                  width="22"
-                  height="22"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.8"
-                >
-                  <rect x="6" y="3" width="12" height="18" rx="3" />
-                  <path d="M11 6h2" />
-                </svg>
-              </div>
-              <h3>スマホを隣の画面のように操作</h3>
-              <p>
-                PCモニターの端へマウスを押し込むとAndroidへ移り、クリック・スクロール・ドラッグまでそのまま続きます。
-              </p>
-            </article>
-            <article class="card">
-              <div class="card-ic" style="background: #eafaf1; color: #15845f">
-                <svg
-                  width="22"
-                  height="22"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.8"
-                >
-                  <rect x="2" y="6" width="20" height="12" rx="2" />
-                  <path d="M6 10h.01M10 10h.01M14 10h.01M8 14h8" />
-                </svg>
-              </div>
-              <h3>長い文章もPCキーボードで</h3>
-              <p>
-                検索ワード、メッセンジャーの返信、アプリの入力欄まで、スマホで打ちたい瞬間にPCのキーボードをそのまま使えます。
-              </p>
-            </article>
-            <article class="card">
-              <div class="card-ic" style="background: #fff0e8; color: #ff7a4d">
-                <svg
-                  width="22"
-                  height="22"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.8"
-                >
-                  <path d="M4 5h6l2 2h8v11H4z" />
-                </svg>
-              </div>
-              <h3>ファイル・クリップボードをすぐ転送</h3>
-              <p>
-                デバイス間でファイルを転送し、クリップボードのテキストを共有できます。<a
-                  class="text-link"
-                  href="./guide#files"
-                  >ファイル転送ガイド</a
-                >
-              </p>
-            </article>
-            <article class="card">
-              <div class="card-ic" style="background: #f3ecff; color: #7a52d0">
-                <svg
-                  width="22"
-                  height="22"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.8"
-                >
-                  <rect x="2" y="7" width="9" height="10" rx="1.5" />
-                  <rect x="13" y="4" width="9" height="7" rx="1.5" />
-                </svg>
-              </div>
-              <h3>別のWindows PCも一緒に</h3>
-              <p>
-                サブPCを配置しておけば、マウスを渡して別のPCを操作し、ファイルもやり取りできます。
-              </p>
-            </article>
-            <article class="card">
-              <div class="card-ic" style="background: #eef0ff; color: #6750a4">
-                <svg
-                  width="22"
-                  height="22"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.8"
-                >
-                  <rect x="3" y="4" width="18" height="13" rx="2" />
-                  <path d="M8 21h8M12 17v4" />
-                </svg>
-              </div>
-              <h3>Apple Silicon Macにも接続</h3>
-              <p>
-                カーソル移動、キーボード入力、ファイル、クリップボードをWindowsからMacへ引き継げます。
-              </p>
-            </article>
-            <article class="card">
-              <div class="card-ic" style="background: #eef0f4; color: #4a5978">
-                <svg
-                  width="22"
-                  height="22"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.8"
-                >
-                  <path d="M8 5l8 7-5 4V4l5 4-8 7" />
-                </svg>
-              </div>
-              <h3>Bluetoothでもつながります</h3>
-              <p>
-                Androidと別のWindows
-                PCはBluetoothでも接続できます。Macは同じネットワークで接続します。
-              </p>
-            </article>
-            <article class="card">
-              <div class="card-ic" style="background: #fff4e5; color: #d97706">
-                <svg
-                  width="22"
-                  height="22"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.8"
-                >
-                  <path d="M6 16v-5a6 6 0 0 1 12 0v5l2 2H4z" />
-                  <path d="M10 20a2 2 0 0 0 4 0" />
-                </svg>
-              </div>
-              <h3>スマホの通知と認証コードをPCで</h3>
-              <p>
-                スマホの通知をPCで確認し、対応する認証コードをコピーできます。<a
-                  class="text-link"
-                  href="./guide#notifications"
-                  >通知の設定</a
-                >
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- SCREENSHOT SHARING + MOBILE PC REMOTE -->
-      <section class="section-alt" id="screen-tools" aria-labelledby="screen-tools-title">
-        <div class="wrap">
-          <div class="sec-head">
-            <p class="ey">画面を通して、作業をつなぐ</p>
-            <h2 class="sec" id="screen-tools-title">撮って送る。スマホからPCを開く。</h2>
-          </div>
-          <div class="feature-stories">
-            <article class="feature-story" aria-labelledby="screenshot-share-title">
-              <figure class="feature-figure">
-                <img
-                  class="feature-visual"
-                  src="../assets/feature-screenshot-share-photo.webp"
-                  width="1536"
-                  height="1024"
-                  alt="PCのキャプチャープレビューと同じ画像を受け取ったAndroidスマホの実写風の使用イメージ"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <figcaption>スクリーンショットの撮影・送信 · AIで制作した使用イメージ</figcaption>
-              </figure>
-              <div class="feature-story-body">
-                <p class="feature-kicker">スクリーンショット · Wi-Fi / LAN</p>
-                <h3 id="screenshot-share-title">必要な部分だけ撮って、別のデバイスへ。</h3>
-                <p>
-                  初期設定の<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>S</kbd>で撮影し、プレビューからコピー・保存したり、接続したデバイスへ送信できます。スマホでは画像の貼り付けに対応したアプリで使えます。
-                </p>
-                <a class="text-link" href="./guide#screenshots">撮影・送信の手順 →</a>
-              </div>
-            </article>
-            <article class="feature-story" aria-labelledby="mobile-pc-remote-title">
-              <figure class="feature-figure">
-                <img
-                  class="feature-visual"
-                  src="../assets/feature-mobile-pc-remote-photo.webp"
-                  width="1536"
-                  height="1024"
-                  alt="Androidスマホを横向きに持ち、Windows PCの画面を操作する実写風の使用イメージ"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <figcaption>スマホからPCをリモート操作 · AIで制作した使用イメージ</figcaption>
-              </figure>
-              <div class="feature-story-body">
-                <p class="feature-kicker">Android → Windows</p>
-                <h3 id="mobile-pc-remote-title">今度はスマホからPCを操作。</h3>
-                <p>
-                  スマホやタブレットで接続したPCの画面を開き、クリック・スクロール・文字入力ができます。直接タッチとカーソルモードを選べ、画面の拡大や画質の調整にも対応します。
-                </p>
-                <a class="text-link" href="./guide#mobile-pc-remote">スマホからPCを開く手順 →</a>
-              </div>
-            </article>
-          </div>
-          <p class="feature-note">
-            両方のデバイスに各機能に対応したOneMouseが必要です。スクリーンショットの送信はWi-Fi・LAN接続で、PCのリモート画面はLANまたは対応するGoogleアカウント接続で利用できます。
-          </p>
-        </div>
-      </section>
-
-      <!-- SETUP -->
-      <section class="section-alt" id="setup">
-        <div class="wrap">
-          <div class="sec-head">
-            <p class="ey">接続方法</p>
-            <h2 class="sec">Androidとの接続は4ステップ。</h2>
-            <p class="sec-lead">
-              Macは<a class="text-link" href="./guide#mac">Mac接続ガイド</a>をご覧ください。
-            </p>
-          </div>
-          <div class="flow4">
-            <div class="step">
-              <div class="badge">01</div>
-              <h4>両方のアプリとWi-Fiを確認</h4>
-              <p>
-                PCとスマホでOneMouseを起動します。QR・番号を使う場合は、両方を同じWi-Fiにつないでください。
-              </p>
-            </div>
-            <div class="step">
-              <div class="badge">02</div>
-              <h4>Androidの権限を許可</h4>
-              <p>PCのマウス・キーボードで操作するには、OneMouseのアクセシビリティを許可します。</p>
-            </div>
-            <div class="step">
-              <div class="badge">03</div>
-              <h4>接続方法を選びます</h4>
-              <p>
-                両方で同じGoogleアカウントにログインするか、<b>ほかの接続方法</b>からQR・6桁コードでLANペアリングします。
-              </p>
-            </div>
-            <div class="step">
-              <div class="badge">04</div>
-              <h4>接続を確認して配置</h4>
-              <p>
-                PCが登録されたことを確認し、<b>スマホの配置</b>を合わせて、その方向へマウスを移動します。
-              </p>
-            </div>
-          </div>
-          <details class="fold pairing-screens">
-            <summary>
-              <span>最新のペアリング画面を見る</span
-              ><small>PCコード → スマホで追加 → 番号コードまたはQR</small>
-            </summary>
-            <div class="fold-body">
-              <p>方法Aと方法Bは選択肢です。番号の入力とQRスキャンを両方行う必要はありません。</p>
-              <div class="pairing-gallery">
-                <figure class="pairing-shot pairing-shot-pc">
-                  <a href="../assets/pairing/pc-code-ja.webp" target="_blank" rel="noopener">
-                    <img
-                      src="../assets/pairing/pc-code-ja.webp"
-                      alt="PCで「このPCのQR・認証番号」を開いた現在のペアリング画面"
-                      width="888"
-                      height="744"
-                      loading="lazy"
-                    />
-                  </a>
-                  <figcaption>
-                    <b>1. PCのQR・認証番号</b
-                    ><span>デバイス管理から「ほかの接続方法」を開きます。</span>
-                  </figcaption>
-                </figure>
-                <figure class="pairing-shot pairing-overview-shot">
-                  <a href="../assets/pairing/android-other-ja.webp" target="_blank" rel="noopener">
-                    <img
-                      src="../assets/pairing/android-other-ja.webp"
-                      alt="Androidホームの「別の方法で接続」と「QR・ペアリングコードで PC を追加」"
-                      width="1080"
-                      height="2400"
-                      loading="lazy"
-                    />
-                  </a>
-                  <figcaption>
-                    <b>2. Androidで接続方法を開く</b
-                    ><span>ホームの「別の方法で接続」からPCを追加します。</span>
-                  </figcaption>
-                </figure>
-                <figure class="pairing-shot pairing-dialog-shot">
-                  <a href="../assets/pairing/android-code-ja.webp" target="_blank" rel="noopener">
-                    <img
-                      src="../assets/pairing/android-code-ja.webp"
-                      alt="Androidの番号コード入力画面と接続するボタン"
-                      width="1080"
-                      height="2400"
-                      loading="lazy"
-                    />
-                  </a>
-                  <figcaption>
-                    <b>3. 方法A：番号コード</b
-                    ><span>PCの6桁コードを入力して「接続する」を押します。</span>
-                  </figcaption>
-                </figure>
-                <figure class="pairing-shot pairing-dialog-shot">
-                  <a href="../assets/pairing/android-qr-ja.webp" target="_blank" rel="noopener">
-                    <img
-                      src="../assets/pairing/android-qr-ja.webp"
-                      alt="AndroidのQRスキャン画面とカメラを開くボタン"
-                      width="1080"
-                      height="2400"
-                      loading="lazy"
-                    />
-                  </a>
-                  <figcaption>
-                    <b>またはQRスキャン</b
-                    ><span>「カメラを開く」からPCに表示されたQRを読み取ります。</span>
-                  </figcaption>
-                </figure>
-              </div>
-              <p class="pairing-example-note">
-                画像のコードやデバイス名は説明用の例です。ご自身のPCアプリに現在表示されているコードを使用してください。
-                画像を押すと原寸で確認できます。
-              </p>
-            </div>
-          </details>
-          <div style="margin-top: 20px">
-            <a class="btn btn-sec sm" href="./guide">詳しい使い方ガイドを見る</a>
-          </div>
-        </div>
-      </section>
-
-      <!-- TRUST -->
-      <section id="trust">
-        <div class="wrap">
-          <div class="sec-head">
-            <p class="ey">安心してお使いください</p>
-            <h2 class="sec">自分のデバイス同士で、自分のネットワークの中で。</h2>
-          </div>
-          <div class="trust">
-            <div class="t">
-              <span class="ic"
-                ><svg
-                  width="18"
-                  height="18"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path d="M12 3l7 4v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V7z" /></svg
-              ></span>
-              <div>
-                <b>デバイス間で直接転送</b
-                ><span
-                  >入力・ファイル・クリップボードのテキストはペアリングしたデバイス間で直接やり取りします。</span
-                >
-              </div>
-            </div>
-            <div class="t">
-              <span class="ic"
-                ><svg
-                  width="18"
-                  height="18"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <rect x="4" y="10" width="16" height="10" rx="2" />
-                  <path d="M8 10V7a4 4 0 0 1 8 0v3" /></svg
-              ></span>
-              <div>
-                <b>必要な権限のみ</b
-                ><span>AndroidやMacのアクセシビリティなど、機能に必要な権限を使用します。</span>
-              </div>
-            </div>
-            <div class="t">
-              <span class="ic"
-                ><svg
-                  width="18"
-                  height="18"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path d="M5 13l4 4L19 7" /></svg
-              ></span>
-              <div>
-                <b>アクセシビリティデータの用途</b
-                ><span>アクセシビリティデータを広告や画面の収集に使用しません。</span>
-              </div>
-            </div>
-          </div>
-          <p>
-            LAN・Bluetoothのペアリングはログイン不要です。対応バージョンではGoogleアカウントで自分のデバイスを接続する機能を任意で使えます。<a
-              class="text-link"
-              href="./privacy#google-account"
-              >アカウント情報の取り扱い</a
-            >と<a class="text-link" href="./privacy#account-deletion">削除方法</a>をご確認ください。
-          </p>
-          <div style="margin-top: 20px">
-            <a class="btn btn-sec sm" href="./technical">技術・セキュリティを詳しく見る</a>
-          </div>
-        </div>
-      </section>
-
-      <!-- DOWNLOAD -->
-      <section class="section-alt" id="get">
-        <div class="wrap">
-          <div class="sec-head">
-            <p class="ey">ダウンロード</p>
-            <h2 class="sec">Windowsと接続するデバイスにインストール。</h2>
-          </div>
-          <div class="dl">
-            <article class="dcard first download-card">
-              <span
-                class="dtag"
-                style="background: linear-gradient(135deg, var(--blue), var(--green))"
-                >PC</span
-              >
-              <h3>Windows</h3>
-              <p data-download-filename>最新のSetupファイルを確認中です。</p>
-              <a
-                class="btn btn-pri"
-                href="https://github.com/sdlckdrl/mouselink-web/releases/download/v1.7.0/OneMouse-Setup-1.7.0-x64.exe"
-                data-latest-windows-download
-                download
-                >Windowsをダウンロード</a
-              >
-              <a
-                class="btn btn-sec"
-                href="https://apps.microsoft.com/detail/9MZHT0262V7Q?cid=onemouse_homepage"
-                target="_blank"
-                rel="noopener"
-                >Microsoft Store</a
-              >
-            </article>
-            <article class="dcard">
-              <span class="dtag" style="background: #15845f">A</span>
-              <h3>Android</h3>
-              <p>Google PlayまたはGalaxy Storeからインストールします。</p>
-              <div class="store-actions">
-                <a
-                  class="btn btn-sec"
-                  href="https://play.google.com/store/apps/details?id=com.mouselink.app"
-                  >Google Playで見る</a
-                >
-                <a
-                  class="btn btn-sec"
-                  href="https://apps.samsung.com/appquery/appDetail.as?appId=com.mouselink.app.galaxy"
-                  >Galaxy Storeで見る</a
-                >
-              </div>
-            </article>
-            <article class="dcard mac-download-card">
-              <span class="dtag" style="background: #596273">Mac</span>
-              <h3>macOS</h3>
-              <p data-macos-download-filename>Apple Silicon・macOS 13+</p>
-              <a
-                class="btn btn-sec"
-                href="https://github.com/sdlckdrl/mouselink-web/releases/download/mac-v1.6.8/OneMouse-macOS-1.6.8-Apple-Silicon.dmg"
-                data-latest-macos-download
-                data-ready-label="Apple Silicon版をダウンロード"
-                download
-                >Apple Silicon版をダウンロード</a
-              >
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- FAQ PREVIEW -->
-      <section id="faq">
-        <div class="wrap narrow">
-          <div class="sec-head">
-            <p class="ey">よくある質問</p>
-            <h2 class="sec">接続の前に気になること。</h2>
-          </div>
-          <div class="faq">
-            <details>
-              <summary>Macとの接続はどこから始めますか？</summary>
-              <div class="a">
-                接続は<b>Windows 10/11から開始・管理</b
-                >します。Windowsのデバイス管理でMacを選び、Macに表示された6桁コードを入力します。
-              </div>
-            </details>
-            <details>
-              <summary>ルート化や開発者設定は必要ですか？</summary>
-              <div class="a">
-                いいえ。Androidで<b>アクセシビリティサービス</b>を一度オンにするだけです。USB接続やADBも必要ありません。
-              </div>
-            </details>
-            <details>
-              <summary>同じWi-Fiがなくても使えますか？</summary>
-              <div class="a">
-                対応するWindows・Androidアプリは、同じ<b>Googleアカウント</b>でインターネット接続を利用できます。Androidと別のWindows
-                PCは<b>Bluetooth</b>でも直接接続できます。QR・番号のペアリングは同じWi-Fi/LANを使い、公開版Macの公式な接続範囲は同じネットワーク内です。<a
-                  class="text-link"
-                  href="./guide#start"
-                  >接続方法を選ぶ</a
-                >
-              </div>
-            </details>
-            <details>
-              <summary>接続がよく切れます。</summary>
-              <div class="a">
-                多くは<b>バッテリー最適化</b>や<b>ファイアウォール・ゲストWi-Fiのクライアント分離</b>が原因です。ヘルプのトラブル解決手順に沿って、段階的に絞り込んでみてください。
-              </div>
-            </details>
-            <details>
-              <summary>スマホのSMS認証コードをPCでそのまま使えますか？</summary>
-              <div class="a">
-                対応する認証コードはコピーできます。設定とAndroid 15以降の保護については<a
-                  class="text-link"
-                  href="./help#phone-notifications"
-                  >通知のヘルプ</a
-                >をご覧ください。
-              </div>
-            </details>
-            <details>
-              <summary>ソフトウェアKVMとは？OneMouseもそうですか？</summary>
-              <div class="a">
-                専用機器なしで、複数のデバイスでマウス・キーボードを共有するソフトです。各デバイスの画面はそのまま使用します。
-              </div>
-            </details>
-          </div>
-          <div style="margin-top: 20px">
-            <a class="btn btn-sec sm" href="./help">ヘルプをすべて見る</a>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site">
-      <div class="wrap ft">
-        <span>© 2026 OneMouse</span>
-        <a
-          class="ato-badge"
-          href="https://alternativeto.net/software/onemouse/about/?utm_source=badge&amp;utm_medium=referral"
-          target="_blank"
-          rel="noopener"
-          ><img
-            src="https://alternativeto.net/static/badges/badge-compact-color.svg"
-            alt="OneMouse | AlternativeTo"
-            width="171"
-            height="55"
-            loading="lazy"
-        /></a>
-        <span class="links"
-          ><a href="./compare">比較</a><a href="./technical">技術・セキュリティ</a
-          ><a href="./privacy">プライバシーポリシー</a><a href="./terms">利用規約</a
-          ><a href="./licenses">オープンソースライセンス</a></span
-        >
-      </div>
-    </footer>
-
-    <script>
-      (() => {
-        const VW = 760,
-          VH = 440;
-        const desk = document.getElementById('desk'),
-          stage = document.getElementById('stage');
-        const cursorEl = document.getElementById('cursor'),
-          statusWhere = document.querySelector('#status .where');
-        const snapedge = document.getElementById('snapedge');
-        if (!desk) return;
-        const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-        const HOME = {
-          pc: { x: 250, y: 150, w: 206, h: 132, label: 'Windows', drag: false },
-          tab: { x: 456, y: 160, w: 150, h: 112, label: 'Galaxy Tab', drag: true },
-          phone: { x: 606, y: 153, w: 66, h: 126, label: 'スマホ', drag: true },
-          subpc: { x: 268, y: 40, w: 170, h: 110, label: '別のPC', drag: true },
-          mac: { x: 95, y: 166, w: 155, h: 100, label: 'Mac', drag: true },
-        };
-        const devs = {};
-        ['pc', 'tab', 'phone', 'subpc', 'mac'].forEach((id) => {
-          devs[id] = Object.assign({}, HOME[id]);
-          devs[id].el = stage.querySelector('.dev[data-id="' + id + '"]');
-        });
-        let scale = 1;
-        const fit = () => {
-          scale = desk.clientWidth / VW;
-          stage.style.transform = 'scale(' + scale + ')';
-        };
-        const layout = () => {
-          for (const id in devs) {
-            const d = devs[id];
-            d.el.style.left = d.x + 'px';
-            d.el.style.top = d.y + 'px';
-            d.el.style.width = d.w + 'px';
-            d.el.style.height = d.h + 'px';
-          }
-        };
-        const rectOf = (d) => ({ l: d.x, t: d.y, r: d.x + d.w, b: d.y + d.h });
-        const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
-        function deviceAt(p) {
-          const inside = [];
-          for (const id in devs) {
-            const r = rectOf(devs[id]);
-            if (p.x >= r.l && p.x <= r.r && p.y >= r.t && p.y <= r.b) inside.push(id);
-          }
-          if (!inside.length) return null;
-          if (inside.length === 1) return inside[0];
-          let best = inside[0],
-            bd = Infinity;
-          for (const id of inside) {
-            const d = devs[id];
-            const dd = (d.x + d.w / 2 - p.x) ** 2 + (d.y + d.h / 2 - p.y) ** 2;
-            if (dd < bd) {
-              bd = dd;
-              best = id;
-            }
-          }
-          return best;
-        }
-        let active = 'pc',
-          cx = devs.pc.x + devs.pc.w / 2,
-          cy = devs.pc.y + devs.pc.h / 2;
-        function paint() {
-          cursorEl.style.transform = 'translate(' + cx + 'px,' + cy + 'px) translate(-50%,-50%)';
-          cursorEl.classList.toggle('mobile', active === 'phone' || active === 'tab');
-          for (const id in devs) devs[id].el.classList.toggle('lit', id === active);
-        }
-        function setCursor(vx, vy) {
-          let target = deviceAt({ x: vx, y: vy });
-          if (target) {
-            cx = vx;
-            cy = vy;
-          } else {
-            const r = rectOf(devs[active]);
-            cx = clamp(vx, r.l, r.r);
-            cy = clamp(vy, r.t, r.b);
-            target = active;
-          }
-          if (target !== active) {
-            cross(target, cx, cy);
-            active = target;
-          }
-          paint();
-        }
-        /* 드래그 중엔 커서를 잡고 있는 기기에 붙여 함께 움직인다. 커서가 제자리에 얼어붙었다가 놓는 순간 튀는 것을 막는다. */
-        function rideCursor(id, vx, vy) {
-          const r = rectOf(devs[id]);
-          cx = clamp(vx, r.l, r.r);
-          cy = clamp(vy, r.t, r.b);
-          if (id !== active) {
-            cross(id, cx, cy);
-            active = id;
-          }
-          paint();
-        }
-        function cross(to, x, y) {
-          statusWhere.textContent = devs[to].label;
-          if (reduce) return;
-          const p = document.createElement('div');
-          p.className = 'pulse';
-          p.style.left = x + 'px';
-          p.style.top = y + 'px';
-          stage.appendChild(p);
-          setTimeout(() => p.remove(), 600);
-          cursorEl.classList.remove('squash');
-          void cursorEl.offsetWidth;
-          cursorEl.classList.add('squash');
-        }
-        /* ファイル転送デモ: ファイルチップを別のデバイスへドラッグして「送信」。スマホの上ではカーソルがドットになる。 */
-        let fileOwner = 'pc',
-          fdrag = null;
-        const fileEl = document.getElementById('filechip');
-        function renderFile() {
-          const d = devs[fileOwner];
-          fileEl.style.left = d.x + d.w / 2 + 'px';
-          fileEl.style.top = d.y + d.h / 2 + 'px';
-        }
-        function moveFile(vx, vy) {
-          cx = vx;
-          cy = vy;
-          fileEl.style.left = vx + 'px';
-          fileEl.style.top = vy + 'px';
-          const over = deviceAt({ x: vx, y: vy });
-          for (const id in devs)
-            devs[id].el.classList.toggle('drop', over === id && id !== fileOwner);
-          if (over && over !== active) {
-            active = over;
-            statusWhere.textContent = devs[over].label;
-          }
-          paint();
-        }
-        function sentBadge(id) {
-          const d = devs[id],
-            b = document.createElement('div');
-          b.className = 'sentbadge';
-          b.textContent = '✓ ' + devs[id].label + 'へ送信完了';
-          b.style.left = d.x + d.w / 2 + 'px';
-          b.style.top = d.y + 'px';
-          stage.appendChild(b);
-          setTimeout(() => b.remove(), reduce ? 900 : 1200);
-        }
-        function endFileDrag() {
-          if (!fdrag) return;
-          fdrag = null;
-          fileEl.classList.remove('dragging');
-          const over = deviceAt({ x: cx, y: cy });
-          for (const id in devs) devs[id].el.classList.remove('drop');
-          if (over && over !== fileOwner) {
-            fileOwner = over;
-            sentBadge(over);
-            statusWhere.textContent = devs[over].label;
-          }
-          fileEl.classList.add('settling');
-          renderFile();
-          setTimeout(() => fileEl.classList.remove('settling'), 340);
-        }
-        let drag = null;
-        const toV = (e) => {
-          const rc = desk.getBoundingClientRect();
-          return {
-            x: clamp((e.clientX - rc.left) / scale, 0, VW),
-            y: clamp((e.clientY - rc.top) / scale, 0, VH),
-          };
-        };
-        desk.addEventListener('pointerdown', (e) => {
-          const p = toV(e);
-          if (e.target.closest('#filechip')) {
-            fdrag = {};
-            fileEl.classList.remove('settling');
-            fileEl.classList.add('dragging');
-            try {
-              desk.setPointerCapture(e.pointerId);
-            } catch (_) {}
-            e.preventDefault();
-            moveFile(p.x, p.y);
-            return;
-          }
-          const pinEl = e.target.closest('.pin');
-          const el = pinEl ? pinEl.closest('.dev.grab') : null;
-          if (el) {
-            const id = el.dataset.id,
-              d = devs[id];
-            drag = { id, dx: p.x - d.x, dy: p.y - d.y, px: p.x, py: p.y };
-            d.el.classList.add('drag');
-            try {
-              desk.setPointerCapture(e.pointerId);
-            } catch (_) {}
-            e.preventDefault();
-            rideCursor(id, p.x, p.y);
-          } else setCursor(p.x, p.y);
-        });
-        desk.addEventListener('pointermove', (e) => {
-          const p = toV(e);
-          if (fdrag) {
-            moveFile(p.x, p.y);
-            return;
-          }
-          if (drag) {
-            const d = devs[drag.id];
-            drag.px = p.x;
-            drag.py = p.y;
-            d.x = clamp(p.x - drag.dx, 0, VW - d.w);
-            d.y = clamp(p.y - drag.dy, 0, VH - d.h);
-            d.el.style.left = d.x + 'px';
-            d.el.style.top = d.y + 'px';
-            showSnap(drag.id);
-            rideCursor(drag.id, p.x, p.y);
-            if (drag.id === fileOwner) renderFile();
-          } else setCursor(p.x, p.y);
-        });
-        /* pointercancel은 좌표가 없을 수 있으므로 마지막 pointermove 좌표를 쓴다. */
-        function endDrag() {
-          if (!drag) return;
-          const id = drag.id,
-            px = drag.px,
-            py = drag.py,
-            d = devs[id];
-          d.el.classList.remove('drag');
-          snap(id);
-          layout();
-          renderFile();
-          snapedge.style.opacity = 0;
-          drag = null;
-          active = id;
-          setCursor(px, py);
-        }
-        desk.addEventListener('pointerup', () => {
-          if (fdrag) endFileDrag();
-          else endDrag();
-        });
-        desk.addEventListener('pointercancel', () => {
-          if (fdrag) endFileDrag();
-          else endDrag();
-        });
-        function collides(id, x, y) {
-          const d = devs[id],
-            T = 1.5;
-          for (const oid in devs) {
-            if (oid === id) continue;
-            const o = rectOf(devs[oid]);
-            const ox = Math.min(x + d.w, o.r) - Math.max(x, o.l),
-              oy = Math.min(y + d.h, o.b) - Math.max(y, o.t);
-            if (ox > T && oy > T) return true;
-          }
-          return false;
-        }
-        function bestDock(id) {
-          const d = devs[id],
-            cx0 = d.x + d.w / 2,
-            cy0 = d.y + d.h / 2;
-          let best = null,
-            bd = Infinity;
-          for (const oid in devs) {
-            if (oid === id) continue;
-            const a = rectOf(devs[oid]);
-            const yC = (a.t + a.b) / 2 - d.h / 2,
-              xC = (a.l + a.r) / 2 - d.w / 2;
-            const cands = [
-              { side: 'right', x: a.r, y: yC, ax: oid },
-              { side: 'left', x: a.l - d.w, y: yC, ax: oid },
-              { side: 'bottom', x: xC, y: a.b, ax: oid },
-              { side: 'top', x: xC, y: a.t - d.h, ax: oid },
-            ];
-            for (let k = 0; k < cands.length; k++) {
-              const c = cands[k],
-                x = clamp(c.x, 0, VW - d.w),
-                y = clamp(c.y, 0, VH - d.h);
-              const dist =
-                (x + d.w / 2 - cx0) ** 2 +
-                (y + d.h / 2 - cy0) ** 2 +
-                (collides(id, x, y) ? 1e9 : 0);
-              if (dist < bd) {
-                bd = dist;
-                best = { x: x, y: y, side: c.side, ax: c.ax };
-              }
-            }
-          }
-          return best;
-        }
-        function inRow(id) {
-          const d = devs[id],
-            p = devs.pc,
-            dc = d.y + d.h / 2;
-          return dc > p.y - 24 && dc < p.y + p.h + 24;
-        }
-        function placeRow(id) {
-          const p = devs.pc,
-            cy = p.y + p.h / 2,
-            sx = devs[id].x + devs[id].w / 2;
-          const cenX = (oid) =>
-            oid === id ? sx : oid === 'pc' ? p.x + p.w / 2 : devs[oid].x + devs[oid].w / 2;
-          const row = ['pc'];
-          for (const oid in devs) {
-            if (oid === id || oid === 'pc') continue;
-            const m = devs[oid];
-            if (m.y + m.h / 2 > p.y - 24 && m.y + m.h / 2 < p.y + p.h + 24) row.push(oid);
-          }
-          row.push(id);
-          row.sort((a, b) => cenX(a) - cenX(b));
-          let total = 0;
-          for (const oid of row) total += devs[oid].w;
-          if (total > VW) return false;
-          let before = 0;
-          for (const oid of row) {
-            if (oid === 'pc') break;
-            before += devs[oid].w;
-          }
-          let x = clamp(p.x - before, 0, VW - total);
-          for (const oid of row) {
-            const m = devs[oid];
-            m.x = x;
-            m.y = clamp(cy - m.h / 2, 0, VH - m.h);
-            x += m.w;
-          }
-          return true;
-        }
-        function snap(id) {
-          const d = devs[id];
-          if (!(inRow(id) && placeRow(id))) {
-            const b = bestDock(id);
-            if (b) {
-              d.x = b.x;
-              d.y = b.y;
-            }
-          }
-          d.x = clamp(d.x, 0, VW - d.w);
-          d.y = clamp(d.y, 0, VH - d.h);
-        }
-        function showSnap(id) {
-          const d = devs[id],
-            p = devs.pc;
-          if (inRow(id)) {
-            const T = 4,
-              x = clamp(d.x + d.w / 2, p.x - 140, p.x + p.w + 140);
-            snapedge.style.left = x - T / 2 + 'px';
-            snapedge.style.top = p.y + 'px';
-            snapedge.style.width = T + 'px';
-            snapedge.style.height = p.h + 'px';
-            snapedge.style.opacity = 0.9;
-            return;
-          }
-          const b = bestDock(id);
-          if (!b) {
-            snapedge.style.opacity = 0;
-            return;
-          }
-          const a = rectOf(devs[b.ax]),
-            T = 4;
-          let s;
-          if (b.side === 'right') s = { l: a.r - T / 2, t: a.t, w: T, h: a.b - a.t };
-          else if (b.side === 'left') s = { l: a.l - T / 2, t: a.t, w: T, h: a.b - a.t };
-          else if (b.side === 'bottom') s = { l: a.l, t: a.b - T / 2, w: a.r - a.l, h: T };
-          else s = { l: a.l, t: a.t - T / 2, w: a.r - a.l, h: T };
-          snapedge.style.left = s.l + 'px';
-          snapedge.style.top = s.t + 'px';
-          snapedge.style.width = s.w + 'px';
-          snapedge.style.height = s.h + 'px';
-          snapedge.style.opacity = 0.9;
-        }
-        document.getElementById('reset').addEventListener('click', () => {
-          for (const id in devs) Object.assign(devs[id], HOME[id]);
-          fileOwner = 'pc';
-          layout();
-          renderFile();
-          active = 'pc';
-          cx = devs.pc.x + devs.pc.w / 2;
-          cy = devs.pc.y + devs.pc.h / 2;
-          statusWhere.textContent = 'Windows';
-          setCursor(cx, cy);
-        });
-        addEventListener('resize', fit);
-        fit();
-        layout();
-        renderFile();
-        setCursor(cx, cy);
-      })();
-    </script>
-    <script src="../js/downloads.js"></script>
-    <script src="../js/promo-video.js" defer></script>
-  </body>
+<style>
+.home-languages{margin-block:12px 0;display:flex;gap:0 14px;flex-wrap:wrap;align-items:center;font-size:.83rem;color:var(--muted)}
+.home-languages a,.home-languages span{display:inline-flex;min-height:36px;align-items:center}
+.home-languages [aria-current]{font-weight:800;color:var(--ink)}
+.home-download-grid{display:grid;gap:12px;margin:20px 0}.home-download-grid article{padding:16px;border:1px solid var(--line);border-radius:14px;background:var(--surface);scroll-margin-top:12px}.home-download-grid h3{margin:0}.home-download-grid p{margin:4px 0 12px;color:var(--muted);font-size:.93rem}
+.home-download-grid .actions .btn{font-size:.88rem;padding:7px 10px}
+.home-setup,.home-faq{margin-top:16px}.home-setup,.home-faq,.home-help{scroll-margin-top:12px}
+@media(min-width:680px){.home-download-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+</style>
+<style>:lang(ja) body,:lang(zh) body{word-break:normal}</style>
+</head>
+<body>
+<a class="skip btn primary" href="#main">本文へ移動</a>
+<header class="preview-header"><div class="preview-frame">
+  <a class="preview-brand" href="/ja/" aria-label="OneMouse ホーム"><span class="preview-mark" aria-hidden="true"><img src="/assets/preview/onemouse-android-icon.png" alt="" width="33" height="33"></span>OneMouse</a>
+  <nav class="preview-nav" aria-label="メインメニュー"><a href="/ja/" aria-current="page">ホーム</a><a href="#use">機能紹介</a><a href="/ja/guide">接続ガイド</a><a href="/ja/help">ヘルプ</a><a href="#get">ダウンロード</a></nav>
+</div></header>
+<main id="main">
+<div class="hero wrap">
+<div class="hero-copy">
+<p class="eyebrow">マウス・キーボード共有 · ソフトウェア KVM</p>
+<h1>ひと組のマウスとキーボードで、<br> 複数の端末を操作。</h1>
+<p class="intro">Windows の画面端からカーソルを押し出すと、Android、Mac、別の PC をそのまま操作できます。</p>
+<div class="actions"><a class="btn primary" href="#get">端末に合ったアプリを入手</a><a class="calm-link" href="/ja/guide">接続方法を見る</a></div>
+<nav class="home-languages" aria-label="言語"><a href="/" lang="ko" hreflang="ko">한국어</a><a href="/en/" lang="en" hreflang="en">English</a><span lang="ja" aria-current="true">日本語</span><a href="/zh/" lang="zh" hreflang="zh">中文</a><a href="/es/" lang="es" hreflang="es">Español</a></nav>
+</div>
+<div class="hero-demo" id="more-features"><div id="playground">
+<section id="cursor-demo" aria-labelledby="demo-title">
+<figure class="cursor-figure">
+<h2 id="demo-title">カーソルを別の画面に移してみよう</h2>
+<div class="cursor-scene" id="cursor-scene" aria-label="Windows、Mac、Android スマホ・タブレット間のカーソル移動" aria-describedby="cursor-help">
+<img src="/assets/preview/home-cursor-desk.webp" width="1536" height="1024" fetchpriority="high" decoding="async" alt="Windows モニターが中央、Mac が左、Android スマホが下、Android タブレットが右にある机">
+<span class="cursor-mark" id="cursor-mark" aria-hidden="true" hidden><svg viewBox="0 0 24 30" width="24" height="30" focusable="false"><path class="cursor-arrow" d="M1 1L22 19 13 18.4 17 26 13.6 28 9.3 20.3 3 27Z" fill="#fff" stroke="#142a43" stroke-width="2" stroke-linejoin="round"/><circle class="cursor-dot" cx="12" cy="15" r="7.5" fill="#fff" fill-opacity=".82" stroke="#142a43" stroke-width="2"/></svg></span>
+</div>
+<figcaption class="cursor-help" id="cursor-help">マウスや指で別の画面へ移動してみましょう。キーボードの矢印キーでも操作できます。</figcaption>
+</figure>
+<p class="cursor-sr" id="cursor-status" role="status" aria-live="polite"></p>
+</section>
+</div></div>
+</div>
+<section class="section" id="use"><div class="wrap">
+<h2>つないだあとにできること</h2>
+<div class="benefits">
+<article><h3>隣の端末にすぐ切り替え</h3><p>端末を置いた方向にカーソルを動かすだけです。</p></article>
+<article><h3>同じキーボードで入力</h3><p>スマホのメッセージも、いつものキーボードで入力できます。</p></article>
+<article><h3>ファイルとコピーしたテキストを共有</h3><p>対応する接続方法なら、別の端末に直接送れます。</p><p class="legacy-fallback" id="file-demo"><a href="/features-demo#file-transfer-demo">ファイル転送を試す（韓国語デモ）</a></p><p class="legacy-fallback" id="text-demo"><a href="/features-demo#android-desk-demo">コピーと貼り付けを試す（韓国語デモ）</a></p></article>
+</div>
+<p class="section-link"><a href="/ja/guide">機能と使い方を詳しく見る →</a></p>
+<p class="legacy-fallback" id="screen-tools"><span id="screen-tools-title">画面ツール：</span><a id="screenshot-share-title" href="/features-demo#feature-capture-demo">画面キャプチャ共有を試す（韓国語デモ）</a> · <a id="mobile-pc-remote-title" href="/ja/guide#mobile-pc-remote">スマホから PC を遠隔操作</a></p>
+<p class="legacy-fallback" id="capture-demo"><a href="/features-demo#feature-capture-demo">画面キャプチャを試す（韓国語デモ）</a></p>
+<p class="legacy-fallback" id="feature-capture-demo"><a href="/features-demo#feature-capture-demo">画面キャプチャを試す（韓国語デモ）</a></p>
+<p class="legacy-fallback" id="feature-race-demo"><a href="/features-demo#feature-race-demo">遠隔操作を試す（韓国語デモ）</a></p>
+</div></section>
+<section id="download" class="section"><div class="wrap">
+<span class="anchor-alias" id="get" aria-hidden="true"></span>
+<h2>端末にインストール</h2>
+<p class="help">Windows PC と、接続したい端末の両方に OneMouse をインストールしてください。</p>
+<div class="home-download-grid">
+  <article id="windows" class="download-card"><h3>Windows</h3><p>Windows 10·11</p><div class="actions"><a class="btn primary" href="https://apps.microsoft.com/detail/9MZHT0262V7Q?cid=onemouse_homepage">Microsoft Store</a><a class="btn secondary" href="https://github.com/sdlckdrl/mouselink-web/releases/download/v1.7.0/OneMouse-Setup-1.7.0-x64.exe" data-latest-windows-download download>x64 インストーラー</a></div></article>
+  <article id="android"><h3>Android</h3><p>Android スマホ・タブレット</p><div class="actions"><a class="btn secondary" href="https://play.google.com/store/apps/details?id=com.mouselink.app">Google Play</a><a class="btn secondary" href="https://apps.samsung.com/appquery/appDetail.as?appId=com.mouselink.app.galaxy">Galaxy Store</a></div></article>
+  <article id="macos" class="mac-download-card"><span class="anchor-alias" id="mac" aria-hidden="true"></span><h3>Mac</h3><p>Apple Silicon · macOS 13+</p><div class="actions"><a class="btn secondary" href="https://github.com/sdlckdrl/mouselink-web/releases/download/mac-v1.6.8/OneMouse-macOS-1.6.8-Apple-Silicon.dmg" data-latest-macos-download data-ready-label="Apple Silicon 版をダウンロード" download>Apple Silicon 版をダウンロード</a></div></article>
+</div>
+<p id="setup" class="home-setup"><a href="/ja/guide">端末を接続する手順</a> · <a href="/ja/guide#connect-account">Google アカウントで接続</a> · <a href="/compatibility-demo">対応端末と接続方法（韓国語）</a></p>
+<p id="help" class="home-help"><a href="/ja/help">接続のトラブルを解決</a> · <a id="faq" class="home-faq" href="/ja/help#faq">よくある質問</a></p>
+</div></section>
+<section id="video" class="section" aria-labelledby="proof-title"><div class="wrap">
+<h2 id="proof-title"><span id="promo-video-title">OneMouse の使い方を動画で見る</span></h2>
+<p class="help">マウスとキーボードの共有、ファイル転送、遠隔操作を 1 本の動画で紹介します（韓国語）。</p>
+<figure class="promo-video">
+<div class="promo-video-player" id="promo-video-player">
+<a class="promo-video-play" href="https://www.youtube.com/watch?v=lfrUuJgT5nw" target="_blank" rel="noopener" aria-label="OneMouse の紹介動画を再生（韓国語）" aria-describedby="promo-video-note" data-promo-video-play data-video-title="OneMouse の紹介動画（韓国語）">
+<img src="/assets/onemouse-promo-video.jpg" width="1280" height="720" loading="lazy" decoding="async" alt="OneMouse 紹介動画のプレビュー">
+<span class="btn primary" aria-hidden="true">▶ 紹介動画を再生</span>
+</a>
+</div>
+<figcaption class="promo-video-links" id="promo-video-note">再生を押すと YouTube プレーヤーを読み込みます。 <a href="https://www.youtube.com/watch?v=lfrUuJgT5nw" target="_blank" rel="noopener">YouTube で直接見る ↗</a></figcaption>
+</figure>
+</div></section>
+</main>
+<footer class="preview-footer"><div class="preview-frame">
+  <p>OneMouse</p>
+  <nav id="trust" class="preview-refs" aria-label="関連リンク">
+    <a href="/compatibility-demo">対応端末・接続方法（韓国語）</a><a href="/ja/technical">技術・セキュリティ</a><a href="/ja/privacy">プライバシー</a><a href="/ja/terms">利用規約</a><a href="/ja/licenses">オープンソースライセンス</a>
+  </nav>
+</div></footer>
+<script>
+(() => {
+  const scene=document.getElementById('cursor-scene');
+  const mark=document.getElementById('cursor-mark'), status=document.getElementById('cursor-status');
+  const W=1536,H=1024;
+  // Map only the display glass, not the bezels or the gaps between devices.
+  const screens={
+    pc:{name:'Windows',poly:[[438,167],[1201,167],[1196,591],[438,590]],center:[821,377],keys:{ArrowLeft:'mac',ArrowRight:'tablet',ArrowDown:'phone'}},
+    mac:{name:'Mac',poly:[[32,455],[402,445],[428,705],[50,731]],center:[224,576],keys:{ArrowRight:'pc',ArrowUp:'pc',ArrowDown:'phone'}},
+    phone:{name:'Android スマホ',poly:[[692,695],[952,695],[955,801],[692,805]],center:[824,748],keys:{ArrowUp:'pc',ArrowLeft:'mac',ArrowRight:'tablet'}},
+    tablet:{name:'Android タブレット',poly:[[1245,383],[1500,387],[1478,771],[1218,756]],center:[1354,557],keys:{ArrowLeft:'pc',ArrowUp:'pc',ArrowDown:'phone'}}
+  };
+  function inside(p,polygon){
+    let sign=0;
+    for(let i=0;i<polygon.length;i++){
+      const a=polygon[i],b=polygon[(i+1)%polygon.length];
+      const cross=(b[0]-a[0])*(p[1]-a[1])-(b[1]-a[1])*(p[0]-a[0]);
+      if(cross){const direction=Math.sign(cross);if(sign&&sign!==direction)return false;sign=direction;}
+    }
+    return true;
+  }
+  function edge(p,polygon){
+    let nearest=null;
+    for(let i=0;i<polygon.length;i++){
+      const a=polygon[i],b=polygon[(i+1)%polygon.length],dx=b[0]-a[0],dy=b[1]-a[1];
+      const t=Math.max(0,Math.min(1,((p[0]-a[0])*dx+(p[1]-a[1])*dy)/(dx*dx+dy*dy)));
+      const x=a[0]+t*dx,y=a[1]+t*dy,d=(x-p[0])**2+(y-p[1])**2;
+      if(!nearest||d<nearest.d)nearest={p:[x,y],d};
+    }
+    return nearest;
+  }
+  let current='pc',touch=null,hasPosition=false;
+  function place(id,p,input){
+    // Toggle visibility on the HTML wrapper; SVGElement does not reflect .hidden.
+    mark.hidden=false;hasPosition=true;
+    scene.dataset.pointer=input;
+    mark.style.left=`${100*p[0]/W}%`;mark.style.top=`${100*p[1]/H}%`;
+    if(current!==id || !status.textContent)status.textContent='カーソル：'+screens[id].name;
+    current=id;scene.dataset.device=id;
+  }
+  function hide(){
+    mark.hidden=true;delete scene.dataset.pointer;hasPosition=false;
+  }
+  function move(event,input){
+    const r=scene.getBoundingClientRect();
+    if(!r.width||!r.height)return;
+    const p=[(event.clientX-r.left)*W/r.width,(event.clientY-r.top)*H/r.height];
+    const direct=Object.keys(screens).find(id=>inside(p,screens[id].poly));
+    if(direct){place(direct,p,input);return;}
+    // Keep one cursor parked at a nearby screen edge while crossing the physical
+    // gaps. Never render an extra arrow or put the custom cursor on the desk.
+    if(hasPosition){
+      const e=edge(p,screens[current].poly);
+      const nearGlass=e.d<=155**2||Object.keys(screens).some(id=>id!==current&&edge(p,screens[id].poly).d<=155**2);
+      if(nearGlass){
+        const q=screens[current].center;
+        place(current,[e.p[0]*.993+q[0]*.007,e.p[1]*.993+q[1]*.007],input);
+        return;
+      }
+    }
+    hide();
+  }
+  scene.dataset.ready='true';
+  scene.tabIndex=0;
+  place('pc',screens.pc.center,'keyboard');
+  scene.addEventListener('pointermove',event=>{
+    if(event.pointerType==='mouse')move(event,'mouse');
+    else if(touch===event.pointerId)move(event,'touch');
+  });
+  scene.addEventListener('pointerdown',event=>{
+    if(event.pointerType==='mouse'||event.isPrimary===false||touch!==null||event.button!==0)return;
+    touch=event.pointerId;
+    scene.setPointerCapture?.(event.pointerId);
+    move(event,'touch');
+  });
+  scene.addEventListener('pointerleave',event=>{if(event.pointerType==='mouse')hide();});
+  scene.addEventListener('pointerup',event=>{
+    if(event.pointerId!==touch)return;
+    move(event,'touch');touch=null;
+  });
+  function cancel(event){if(event.pointerId===touch){touch=null;hide();}}
+  scene.addEventListener('pointercancel',cancel);
+  scene.addEventListener('lostpointercapture',cancel);
+  scene.addEventListener('focus',()=>{if(!hasPosition)place(current,screens[current].center,'keyboard');});
+  scene.addEventListener('keydown',event=>{
+    if(!['ArrowLeft','ArrowRight','ArrowUp','ArrowDown'].includes(event.key))return;
+    if(event.ctrlKey||event.metaKey||event.altKey)return;
+    event.preventDefault();
+    const id=screens[current].keys[event.key]||current;
+    place(id,screens[id].center,'keyboard');
+  });
+})();
+</script>
+<script src="/js/downloads.js" defer></script>
+<script src="/js/promo-video.js" defer></script>
+</body>
 </html>
