@@ -7,7 +7,7 @@
 .om-tablet-gesture .tg-scene[data-mapped] .tg-tablet,.om-tablet-gesture .tg-no-photo .tg-tablet{visibility:visible}
 .om-tablet-gesture .tg-surface{width:100%;height:100%;position:relative;overflow:hidden;border-radius:12px;background:linear-gradient(120deg,#57cdc5,#075484);touch-action:pan-y}
 /* Restrict page-scroll interception to the simulated browser glass, before the first pointerdown. */
-.om-tablet-gesture .tg-surface[data-mode="browser"]{touch-action:none}
+.om-tablet-gesture .tg-surface[data-mode="browser"].tg-armed{touch-action:none}
 .om-tablet-gesture .tg-surface.tg-drawing-touch .tg-path polyline{stroke:#ee283c;stroke-width:12}
 .om-tablet-gesture .tg-surface.tg-drawing-touch .tg-path circle{fill:#d91d30;stroke:#fff}
 .om-tablet-gesture .tg-surface.tg-drawing{cursor:crosshair}
@@ -26,8 +26,6 @@
 .om-tablet-gesture .tg-internet{display:grid;place-items:center;gap:3px;min-width:125px;min-height:116px;padding:5px;color:#fff;background:transparent;border:0;cursor:pointer;font:800 23px/1.3 system-ui,sans-serif}
 .om-tablet-gesture .tg-globe{display:grid;place-items:center;width:74px;height:74px;border-radius:17px;background:#fff;color:#16769f;font-size:57px;line-height:1}
 .om-tablet-gesture .tg-path{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;filter:drop-shadow(0 1px 3px #15344088)}
-.om-tablet-gesture .tg-cue{position:absolute;bottom:16px;right:16px;display:flex;align-items:center;gap:6px;padding:4px 9px;background:#153440ed;border-radius:9px;color:#fff;pointer-events:none;font:750 19px/1.25 system-ui,sans-serif}
-.om-tablet-gesture .tg-cue svg{width:26px;height:37px}
 .om-tablet-gesture .tg-controls{display:flex;flex-wrap:wrap;gap:.35rem;margin:.45rem 0 0}
 .om-tablet-gesture .tg-controls button{min-height:44px;padding:.3rem .57rem;border:1px solid #6e9eac;border-radius:.4rem;background:#f6fbfc;color:#194050;font:750 .83rem/1.25 system-ui,sans-serif;cursor:pointer;touch-action:manipulation}
 .om-tablet-gesture :focus-visible{outline:3px solid #006d72;outline-offset:-3px}
@@ -40,3 +38,16 @@
 .om-tablet-gesture .tg-no-photo .tg-page{min-height:550px;padding:12px 15px}
 .om-tablet-gesture .tg-no-photo .tg-page h3{font-size:1.1rem}
 .om-tablet-gesture .tg-no-photo .tg-page h4{font-size:1rem}
+
+.om-tablet-gesture .tg-right-button{
+  position:absolute;right:8%;bottom:25%;z-index:3;display:inline-flex;align-items:center;gap:.26rem;
+  min-width:44px;min-height:44px;padding:.26rem .48rem;border:1px solid #e8f2ff;
+  border-radius:.6rem;background:#173849ee;color:#fff;font:750 .78rem/1 system-ui,sans-serif;
+  cursor:pointer;touch-action:manipulation;white-space:nowrap;box-shadow:0 2px 7px #0b213550
+}
+.om-tablet-gesture .tg-right-button svg{width:18px;height:26px;pointer-events:none}
+.om-tablet-gesture .tg-right-fill{fill:#26cbae}
+.om-tablet-gesture .tg-right-button[aria-pressed="true"]{background:#a5192c;border:2px solid #fff}
+.om-tablet-gesture .tg-right-button[aria-pressed="true"] .tg-right-fill{fill:#fb3547}
+.om-tablet-gesture .tg-right-button:focus-visible{outline:3px solid #fff;outline-offset:-5px}
+.om-tablet-gesture .tg-no-photo .tg-right-button{right:.4rem;bottom:.4rem}

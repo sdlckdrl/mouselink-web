@@ -46,12 +46,12 @@
             </div>
             <div class="tg-home" data-home hidden><button type="button" class="tg-internet" data-internet><span class="tg-globe" aria-hidden="true">◎</span>인터넷</button></div>
             <svg class="tg-path" viewBox="0 0 640 440" aria-hidden="true"><polyline data-path points="" fill="none" stroke="#00c3a0" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><circle data-origin cx="0" cy="0" r="7" fill="#00605b" stroke="#dbfff5" stroke-width="2" visibility="hidden"/></svg>
-            <div class="tg-cue" data-cue hidden aria-hidden="true">
-              <svg viewBox="0 0 40 56"><rect x="3" y="2" width="34" height="51" rx="16" fill="#fff" stroke="#214257" stroke-width="3"/><path d="M20 3v22h16V17C35 9 29 4 20 3Z" fill="#22cda7"/><path d="M20 3v22m-16 0h32" stroke="#214257" stroke-width="2"/><path d="M20 9v7" stroke="#214257" stroke-width="3" stroke-linecap="round"/></svg>
-              <span>우클릭한 채 그리기</span>
-            </div>
           </div>
         </div>
+        <button type="button" class="tg-right-button" data-right-button aria-pressed="false" aria-label="우클릭" hidden>
+          <svg viewBox="0 0 40 56" aria-hidden="true"><rect x="3" y="2" width="34" height="51" rx="16" fill="#fff" stroke="#214257" stroke-width="3"/><path class="tg-right-fill" d="M20 3v22h16V17C35 9 29 4 20 3Z"/><path d="M20 3v22m-16 0h32" stroke="#214257" stroke-width="2"/><path d="M20 9v7" stroke="#214257" stroke-width="3" stroke-linecap="round"/></svg>
+          <span>우클릭</span>
+        </button>
       </div>
       <div class="tg-controls" role="group" aria-label="제스처 도움 조작">
         <button type="button" data-action="back">← 뒤로</button>
@@ -60,17 +60,17 @@
         <button type="button" data-action="home">↓→ 앱 최소화</button>
         <button type="button" data-reopen hidden>인터넷 열기</button>
       </div>
-      <p class="tg-note">아래로 긋고 떼면 페이지가 아래로 스크롤돼요. 실제 기기에 연결하지 않는 체험 화면이에요.</p>
+      <p class="tg-note">손가락이나 마우스 왼쪽 버튼으로 아래로 긋고 떼면 아래로 스크롤돼요. 마우스 오른쪽 버튼을 누른 채 곧바로 그려도 돼요.</p>
       <p class="tg-status" data-status role="status" aria-atomic="true"></p>`;
     host.append(root);
     const $=name=>root.querySelector('[data-'+name+']');
-    const scene=$('scene'),photo=$('photo'),tablet=$('tablet'),surface=$('surface'),scroll=$('scroll'),page=$('page'),browser=$('browser'),home=$('home'),internet=$('internet'),reopenButton=$('reopen'),cue=$('cue'),path=$('path'),origin=$('origin'),status=$('status');
+    const scene=$('scene'),photo=$('photo'),tablet=$('tablet'),surface=$('surface'),scroll=$('scroll'),page=$('page'),browser=$('browser'),home=$('home'),internet=$('internet'),reopenButton=$('reopen'),rightButton=$('right-button'),path=$('path'),origin=$('origin'),status=$('status');
     const actions=[...root.querySelectorAll('[data-action]')];
     const articles=[
       {where:'여행 기록',tag:'01 / 바다',title:'파도가 잔잔한 해변',text:'바람이 잦아들고 물결이 모래 위로 느리게 밀려왔어요.'},
       {where:'여행 기록',tag:'02 / 산책',title:'아침의 산책길',text:'나무 사이에 햇빛이 번지고 길 끝에 잠깐 쉬어 갈 벤치가 보여요.'}
     ];
-    let map=null,fallback=false,index=1,saved=[0,0],onHome=false,drag=null;
+    let map=null,fallback=false,index=1,saved=[0,0],onHome=false,armed=false,drag=null;
     function tell(text){status.textContent=text;}
     function renderPage(){
       const a=articles[index];
@@ -82,7 +82,7 @@
       browser.hidden=onHome;home.hidden=!onHome;reopenButton.hidden=!onHome;
       surface.dataset.mode=onHome?'home':'browser';actions.forEach(button=>button.hidden=onHome);
       if(!onHome)scroll.scrollTop=saved[index];
-      else cue.hidden=true;
+      rightButton.hidden=onHome;
     }
     function reopen(focus){
       if(!onHome)return;
@@ -101,7 +101,7 @@
         saved[index]=scroll.scrollTop;
         tell(before===scroll.scrollTop?(action==='up'?'페이지 맨 위예요.':'페이지 맨 아래예요.'):(action==='up'?'위로 스크롤했어요.':'아래로 스크롤했어요.'));
       }else if(action==='home'){
-        saved[index]=scroll.scrollTop;onHome=true;renderMode();
+        saved[index]=scroll.scrollTop;onHome=true;setArmed(false);renderMode();
         tell('앱을 최소화했어요. 태블릿의 인터넷을 누르면 다시 열려요.');
         if(focus)internet.focus({preventScroll:true});
       }
@@ -126,23 +126,31 @@
       origin.setAttribute('visibility',points.length?'visible':'hidden');
       if(points.length){origin.setAttribute('cx',points[0].x);origin.setAttribute('cy',points[0].y);}
     }
-    function cancel(){
-      if(!drag)return;
-      const id=drag.id;drag=null;paint([]);surface.classList.remove('tg-drawing');surface.classList.remove('tg-drawing-touch');
-      if(surface.hasPointerCapture?.(id))surface.releasePointerCapture(id);
+    function setArmed(value){
+      armed=value;surface.classList.toggle('tg-armed',value);
+      rightButton.setAttribute('aria-pressed',String(value));
     }
-    surface.addEventListener('pointerenter',e=>{if(e.pointerType==='mouse'&&!onHome)cue.hidden=false;});
-    surface.addEventListener('pointerleave',()=>{if(!drag)cue.hidden=true;});
+    rightButton.addEventListener('click',()=>{
+      if(onHome)return;
+      if(armed){cancel();tell('우클릭을 취소했어요.');}
+      else {setArmed(true);tell('우클릭을 눌렀어요. 태블릿 화면에서 방향을 그리세요.');}
+    });
+    function cancel(){
+      const id=drag?.id;drag=null;setArmed(false);paint([]);surface.classList.remove('tg-drawing');surface.classList.remove('tg-drawing-touch');
+      if(id!==undefined&&surface.hasPointerCapture?.(id))surface.releasePointerCapture(id);
+    }
     surface.addEventListener('contextmenu',e=>{if(!onHome&&e.button===2)e.preventDefault();});
     surface.addEventListener('pointerdown',e=>{
       if(onHome||drag||e.isPrimary===false)return;
       const mouse=e.pointerType==='mouse';
       const touch=e.pointerType==='touch'||e.pointerType==='pen';
-      if(mouse?e.button!==2:!touch||e.button!==0)return;
-      e.preventDefault();cue.hidden=true;
+      const physical=mouse&&e.button===2;
+      const simulated=armed&&(mouse||touch)&&e.button===0;
+      if(!physical&&!simulated)return;
+      e.preventDefault();
       drag={id:e.pointerId,points:[point(e)]};paint(drag.points);
       surface.classList.add('tg-drawing');
-      surface.classList.toggle('tg-drawing-touch',touch);
+      surface.classList.toggle('tg-drawing-touch',simulated);
       surface.setPointerCapture?.(e.pointerId);
     });
     surface.addEventListener('pointermove',e=>{
@@ -161,8 +169,11 @@
       else tell('←, ↑, ↓ 또는 아래로 그은 뒤 오른쪽으로 그려 보세요.');
     });
     for(const event of ['pointercancel','lostpointercapture'])surface.addEventListener(event,e=>{if(drag?.id===e.pointerId)cancel();});
+    window.addEventListener('keydown',e=>{
+      if(e.key==='Escape'&&(armed||drag)){e.preventDefault();cancel();tell('우클릭을 취소했어요.');}
+    });
+    window.addEventListener('blur',cancel);
     surface.addEventListener('keydown',e=>{
-      if(e.key==='Escape'){cancel();return;}
       if(e.target!==surface||e.altKey||e.ctrlKey||e.metaKey)return;
       const a={ArrowLeft:'back',ArrowUp:'up',ArrowDown:'down',Home:'home'}[e.key];
       if(!onHome&&a){e.preventDefault();act(a,true);}
