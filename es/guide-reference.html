@@ -1,0 +1,1556 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Guía | OneMouse — Conecta Android, PC con Windows y Mac</title>
+    <meta
+      name="description"
+      content="Guía de OneMouse: conecta dispositivos, captura y envía imágenes, controla el PC desde Android y comparte archivos y portapapeles por LAN o Bluetooth."
+    />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <link rel="stylesheet" href="../css/onemouse.css" />
+    <link rel="stylesheet" href="../css/guide-help.css" />
+    <script src="../js/guide-help.js" defer></script>
+    <link rel="canonical" href="https://onemouse.pages.dev/es/guide" />
+    <link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/guide" />
+    <link rel="alternate" hreflang="en" href="https://onemouse.pages.dev/en/guide" />
+    <link rel="alternate" hreflang="ja" href="https://onemouse.pages.dev/ja/guide" />
+    <link rel="alternate" hreflang="zh" href="https://onemouse.pages.dev/zh/guide" />
+    <link rel="alternate" hreflang="es" href="https://onemouse.pages.dev/es/guide" />
+    <link rel="alternate" hreflang="x-default" href="https://onemouse.pages.dev/guide" />
+  </head>
+  <body>
+    <header class="site">
+      <div class="wrap hd">
+        <a class="brand" href="./" aria-label="Inicio de OneMouse"
+          ><span class="om">OM</span>OneMouse</a
+        >
+        <nav class="nav" aria-label="Navegación principal">
+          <a href="./">Resumen</a>
+          <a href="./#use">Funciones</a>
+          <a href="./guide" class="on">Guía</a>
+          <a href="./help">Ayuda</a>
+        </nav>
+        <div class="hd-right">
+          <div class="lang" aria-label="Idioma">
+            <a href="../guide">KOR</a><a href="../en/guide">ENG</a><a href="../ja/guide">JPN</a
+            ><a href="../zh/guide">CHN</a>
+            <span class="on">ESP</span>
+          </div>
+          <a class="hd-cta" href="./#get">Descargar</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="main-grid-aligned">
+      <section class="phero wrap">
+        <p class="ey">Guía</p>
+        <h1 class="page">De la primera conexión al uso diario, paso a paso.</h1>
+        <p class="lead">
+          A la mayoría le basta con seguir este orden. Para los detalles de red más complicados,
+          consulta
+          <a href="./technical" style="color: var(--coral-deep); font-weight: 700"
+            >Aspectos técnicos y seguridad</a
+          >, y cuando algo no funcione, revisa
+          <a href="./help" style="color: var(--coral-deep); font-weight: 700">Ayuda</a>
+          por separado.
+        </p>
+        <nav class="toc" aria-label="En esta página">
+          <a href="#start">Configuración en 5 minutos</a>
+          <a href="#position">Coloca tu teléfono</a>
+          <a href="#remote">Pantallas remotas</a>
+          <a href="#mobile-pc-remote">Controlar el PC desde el móvil</a>
+          <a href="#mouse-gestures">Gestos del ratón</a>
+          <a href="#files">Archivos y portapapeles</a>
+          <a href="#screenshots">Capturar y enviar</a>
+          <a href="#text-to-pc">Del móvil al PC</a>
+          <a href="#notifications">Notificaciones y respuestas</a>
+          <a href="#quick">Atajos numéricos</a>
+          <a href="#bluetooth">Conexión Bluetooth</a>
+          <a href="#pcpc">Conectar otro PC</a>
+          <a href="#mac">Conectar un Mac</a>
+          <a href="#shortcuts">Tabla de atajos</a>
+        </nav>
+      </section>
+
+      <!-- QUICK START -->
+      <section id="start">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">Configuración de Android</p>
+            <h2 class="sec">Elige cómo conectar en la aplicación actual.</h2>
+            <p class="sec-lead">
+              Elige una cuenta de Google, la vinculación por QR o código en la misma red Wi-Fi, o
+              Bluetooth. Todos los métodos necesitan Accesibilidad de Android para controlar el
+              teléfono con el ratón y el teclado del PC.
+            </p>
+          </div>
+          <div class="connection-picker" data-connection-picker>
+            <div
+              class="connection-options"
+              data-connection-options
+              aria-label="Método de conexión"
+              hidden
+            >
+              <button
+                type="button"
+                data-connection-choice="account"
+                aria-controls="connect-account"
+                hidden
+              >
+                Cuenta de Google
+              </button>
+              <button
+                type="button"
+                data-connection-choice="wifi"
+                aria-controls="connect-wifi"
+                hidden
+              >
+                Wi-Fi · QR/código
+              </button>
+              <button
+                type="button"
+                data-connection-choice="bluetooth"
+                aria-controls="connect-bluetooth"
+                hidden
+              >
+                Bluetooth
+              </button>
+            </div>
+            <section class="connection-panel" id="connect-account" data-connection-panel="account">
+              <h3>Conecta con la misma cuenta de Google</h3>
+              <p class="connection-description">
+                Encuentra tus dispositivos conectados a Internet en la lista de la cuenta. No
+                necesitas escanear un QR ni introducir un código.
+              </p>
+              <ol class="connection-steps">
+                <li>
+                  Inicia sesión con la <b>misma cuenta de Google</b> en <b>Dispositivos</b> de
+                  Windows y en la pantalla de inicio de OneMouse del teléfono.
+                </li>
+                <li>
+                  Mantén abiertas ambas aplicaciones y comprueba la lista de dispositivos. Si falta
+                  el otro dispositivo, revisa la dirección de la cuenta y la conexión a Internet y
+                  pulsa <b>Actualizar</b>.
+                </li>
+                <li>
+                  En <b>PC registrados</b> de la pantalla de inicio del teléfono, pulsa
+                  <b>Conectar dispositivo</b> en el PC correspondiente y comprueba que esté
+                  conectado. Si ya lo está, continúa con el siguiente paso. Confirma cualquier
+                  solicitud de permiso en el otro dispositivo.
+                </li>
+                <li>
+                  Activa el servicio de Accesibilidad del teléfono y ajusta la
+                  <b>Posición del teléfono</b> en el PC. Cruza con el ratón por la
+                  <b>zona de entrada del cursor</b> configurada en ese borde.
+                </li>
+              </ol>
+              <p class="connection-note">
+                Se necesita acceso a Internet. La posibilidad de conectar depende de la red. Elige
+                Wi-Fi o Bluetooth para usar OneMouse sin iniciar sesión.
+              </p>
+              <a class="text-link" href="./help#account-connect-help"
+                >¿Falta un dispositivo en la cuenta o no se conecta? →</a
+              >
+            </section>
+            <section class="connection-panel" id="connect-wifi" data-connection-panel="wifi">
+              <h3>Vincula con QR o un código de seis dígitos en la misma red Wi-Fi</h3>
+              <p class="connection-description">
+                No necesitas iniciar sesión con Google. El PC puede usar LAN por cable si está
+                conectado al mismo router que el teléfono.
+              </p>
+              <div class="timeline">
+                <div class="tstep">
+                  <div class="rail"><span class="num">1</span><span class="line"></span></div>
+                  <div class="body">
+                    <h4>Abre ambas apps en la misma red Wi-Fi</h4>
+                    <p>
+                      Ejecuta OneMouse en Windows y en Android y conecta ambos a la misma red Wi-Fi.
+                    </p>
+                  </div>
+                </div>
+                <div class="tstep">
+                  <div class="rail"><span class="num">2</span><span class="line"></span></div>
+                  <div class="body">
+                    <h4>Permite Accesibilidad en Android</h4>
+                    <p>
+                      Activa el servicio en Ajustes de Android → Accesibilidad → Aplicaciones
+                      instaladas (o Aplicaciones descargadas) → OneMouse. Los nombres de los menús
+                      varían según el fabricante. Comprueba también los permisos de búsqueda, como
+                      Dispositivos Wi-Fi cercanos.
+                    </p>
+                  </div>
+                </div>
+                <div class="tstep">
+                  <div class="rail"><span class="num">3</span><span class="line"></span></div>
+                  <div class="body">
+                    <h4>Abre el QR y el código del PC</h4>
+                    <p>
+                      En el PC, abre
+                      <b
+                        >Gestión de dispositivos → Otras formas de conectar → QR y código de este
+                        PC</b
+                      >
+                      y consulta el código de 6 dígitos o el QR que aparece en ese momento.
+                    </p>
+                  </div>
+                </div>
+                <div class="tstep">
+                  <div class="rail"><span class="num">4</span><span class="line"></span></div>
+                  <div class="body">
+                    <h4>Añade el PC desde el móvil</h4>
+                    <p>
+                      En Inicio de Android, abre
+                      <b>Otras formas de conectar → Añadir PC con QR o código</b>. En
+                      <b>Código numérico</b>, introduce los 6 dígitos y pulsa <b>Conectar</b>; o
+                      abre la pestaña de QR, pulsa <b>Abrir cámara</b> y escanea el QR del PC. Basta
+                      con una de las dos opciones.
+                    </p>
+                  </div>
+                </div>
+                <div class="tstep">
+                  <div class="rail"><span class="num">5</span><span class="line"></span></div>
+                  <div class="body">
+                    <h4>Comprueba el PC registrado y la conexión</h4>
+                    <p>
+                      Confirma que el PC aparezca en <b>PC registrados</b> en Android y comprueba su
+                      estado de conexión.
+                    </p>
+                  </div>
+                </div>
+                <div class="tstep">
+                  <div class="rail"><span class="num">6</span></div>
+                  <div class="body">
+                    <h4>Ajusta la posición y empieza a usarlo</h4>
+                    <p>
+                      Ajusta la Posición del teléfono para que coincida con su ubicación real y
+                      cruza con el ratón por la <b>zona de entrada del cursor configurada</b> en ese
+                      borde. Si la zona es estrecha, prueba primero en el centro del borde.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <details class="fold pairing-screens">
+                <summary>
+                  <span>Ver las pantallas de vinculación actuales</span
+                  ><small>Código del PC → Añadir en el móvil → Código numérico o QR</small>
+                </summary>
+                <div class="fold-body">
+                  <p>
+                    Las opciones A y B son alternativas: no hace falta introducir el código y
+                    después escanear el QR.
+                  </p>
+                  <div class="pairing-gallery">
+                    <figure class="pairing-shot pairing-shot-pc">
+                      <a href="../assets/pairing/pc-code-es.webp" target="_blank" rel="noopener">
+                        <img
+                          src="../assets/pairing/pc-code-es.webp"
+                          alt="Interfaz actual de vinculación del PC con QR y código de este PC"
+                          width="888"
+                          height="742"
+                          loading="lazy"
+                        />
+                      </a>
+                      <figcaption>
+                        <b>1. QR y código del PC</b
+                        ><span>Abre «Otras formas de conectar» desde Gestión de dispositivos.</span>
+                      </figcaption>
+                    </figure>
+                    <figure class="pairing-shot pairing-overview-shot">
+                      <a
+                        href="../assets/pairing/android-other-es.webp"
+                        target="_blank"
+                        rel="noopener"
+                      >
+                        <img
+                          src="../assets/pairing/android-other-es.webp"
+                          alt="Inicio de Android con Otras formas de conectar y Añadir PC con QR o código"
+                          width="1080"
+                          height="2400"
+                          loading="lazy"
+                        />
+                      </a>
+                      <figcaption>
+                        <b>2. Abre las opciones en Android</b
+                        ><span>Añade el PC desde «Otras formas de conectar» en Inicio.</span>
+                      </figcaption>
+                    </figure>
+                    <figure class="pairing-shot pairing-dialog-shot">
+                      <a
+                        href="../assets/pairing/android-code-es.webp"
+                        target="_blank"
+                        rel="noopener"
+                      >
+                        <img
+                          src="../assets/pairing/android-code-es.webp"
+                          alt="Pantalla de Android para introducir el código de vinculación y botón Conectar"
+                          width="1080"
+                          height="2400"
+                          loading="lazy"
+                        />
+                      </a>
+                      <figcaption>
+                        <b>3. Opción A: código numérico</b
+                        ><span>Introduce los 6 dígitos del PC y pulsa «Conectar».</span>
+                      </figcaption>
+                    </figure>
+                    <figure class="pairing-shot pairing-dialog-shot">
+                      <a href="../assets/pairing/android-qr-es.webp" target="_blank" rel="noopener">
+                        <img
+                          src="../assets/pairing/android-qr-es.webp"
+                          alt="Pantalla de escaneo QR de Android y botón Abrir cámara"
+                          width="1080"
+                          height="2400"
+                          loading="lazy"
+                        />
+                      </a>
+                      <figcaption>
+                        <b>O escanear QR</b
+                        ><span>Pulsa «Abrir cámara» y escanea el QR que aparece en el PC.</span>
+                      </figcaption>
+                    </figure>
+                  </div>
+                  <p class="pairing-example-note">
+                    Los códigos y los nombres de dispositivos de las imágenes son ejemplos. Usa el
+                    código que muestre actualmente tu propia app de PC. Pulsa una imagen para verla
+                    a tamaño completo.
+                  </p>
+                </div>
+              </details>
+            </section>
+            <section
+              class="connection-panel"
+              id="connect-bluetooth"
+              data-connection-panel="bluetooth"
+            >
+              <h3>Conecta por Bluetooth sin router</h3>
+              <ol class="connection-steps">
+                <li>
+                  Activa Bluetooth en Windows y Android y vincula los dispositivos siguiendo la
+                  <a class="text-link" href="#bluetooth">guía de conexión Bluetooth</a> de abajo.
+                </li>
+                <li>
+                  Conecta el otro dispositivo desde la lista de dispositivos Bluetooth de OneMouse.
+                  No necesitas iniciar sesión con Google.
+                </li>
+                <li>
+                  Activa el servicio de Accesibilidad del teléfono, comprueba su posición y la zona
+                  de entrada del cursor en el PC y cruza con el ratón.
+                </li>
+              </ol>
+              <p class="connection-note">
+                Estos pasos son para Windows ↔ Android. Bluetooth no transmite vídeo remoto. Para
+                ver la pantalla del PC en el teléfono, usa Wi-Fi/LAN o una conexión de cuenta
+                compatible.
+              </p>
+              <a class="text-link" href="#bluetooth">Ajustes de Bluetooth y pasos detallados →</a>
+            </section>
+          </div>
+          <p class="connection-followup">
+            Permiso de entrada: Ajustes de Android → Accesibilidad → Aplicaciones instaladas (o
+            Aplicaciones descargadas) → OneMouse.
+            <a class="text-link" href="./help#cursor-not-crossing"
+              >¿Está conectado, pero el ratón no cruza? →</a
+            >
+          </p>
+        </div>
+      </section>
+
+      <!-- POSITION -->
+      <section class="section-alt" id="position">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">Posición del teléfono</p>
+            <h2 class="sec">
+              Después de conectar, solo tienes que colocar el teléfono donde está de verdad.
+            </h2>
+          </div>
+          <p class="sec-lead" style="max-width: 60ch">
+            Arrastra cada dispositivo a su posición real en el editor. Cruza por la
+            <b>zona de entrada del cursor</b> configurada en ese borde. La zona puede ocupar solo
+            una parte del borde.
+          </p>
+          <details class="fold">
+            <summary><span>Ver la pantalla de disposición</span></summary>
+            <div class="fold-body">
+              <a href="../assets/pairing/pc-position-es.webp" target="_blank" rel="noopener"
+                ><img
+                  src="../assets/pairing/pc-position-es.webp"
+                  alt="Distribución actual de OneMouse con un Android de ejemplo situado a la derecha del PC"
+                  width="2240"
+                  height="1800"
+                  loading="lazy"
+                  style="border-radius: 12px"
+              /></a>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <!-- REMOTE CONTROL -->
+      <section id="remote">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="ey">Control remoto</p>
+            <h2 class="sec">Abre pantallas remotas desde Dispositivos.</h2>
+          </div>
+          <div class="split lead-left">
+            <div>
+              <p class="sec-lead" style="margin-bottom: 16px">
+                En Dispositivos, toca el icono de control remoto en la fila de un Android vinculado
+                y se abrirá una ventana aparte con la pantalla del teléfono. La primera vez que la
+                abras, hay que aprobar la captura de pantalla en Android.
+              </p>
+              <div class="panel">
+                <h3>Controles de una ventana de Android</h3>
+                <ul>
+                  <li>El clic izquierdo, el arrastre y la rueda pasan directamente.</li>
+                  <li><b>Clic derecho = Atrás</b>, <b>clic de rueda = Inicio</b>.</li>
+                  <li>
+                    El teclado de tu PC —incluidos el IME y la escritura no latina— va al campo de
+                    texto activo del teléfono.
+                  </li>
+                  <li>
+                    Si la pantalla se ve en blanco, revisa la ventana emergente de aprobación de
+                    captura y apaga y vuelve a encender el control remoto.
+                  </li>
+                </ul>
+              </div>
+              <div class="panel tip" style="margin-top: 18px">
+                <h3 id="windows-remote">
+                  Arrastrar con el botón derecho en una ventana remota de Windows
+                </h3>
+                <p>
+                  Abre una ventana desde su icono remoto en Dispositivos o con
+                  <b>Ctrl+Alt+Shift+1~9</b> por defecto. Arrastrar con el botón derecho permite usar
+                  las extensiones de gestos del navegador del PC de destino, aparte de los gestos de
+                  Android.
+                </p>
+                <p>
+                  <a href="./help#windows-remote-gestures-faq">Ayuda de ventanas remotas</a>
+                </p>
+              </div>
+            </div>
+            <div>
+              <details class="fold" open>
+                <summary><span>La fila del dispositivo y el icono</span></summary>
+                <div class="fold-body">
+                  <a
+                    href="../assets/guide_remote_control_devices.jpg"
+                    target="_blank"
+                    rel="noopener"
+                    ><img
+                      src="../assets/guide_remote_control_devices.jpg"
+                      alt="El icono de control remoto en Dispositivos"
+                      loading="lazy"
+                      style="border-radius: 12px"
+                  /></a>
+                </div>
+              </details>
+              <details class="fold">
+                <summary><span>La ventana de control remoto abierta</span></summary>
+                <div class="fold-body">
+                  <a
+                    href="../assets/guide_mobile_remote_control_window.jpg"
+                    target="_blank"
+                    rel="noopener"
+                    ><img
+                      src="../assets/guide_mobile_remote_control_window.jpg"
+                      alt="La ventana de control remoto del móvil abierta"
+                      loading="lazy"
+                      style="border-radius: 12px"
+                  /></a>
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MOBILE TO PC REMOTE CONTROL -->
+      <section class="section-alt" id="mobile-pc-remote">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="ey">Android → Windows</p>
+            <h2 class="sec">Abre y controla la pantalla del PC desde el móvil.</h2>
+            <p class="sec-lead">
+              Toca para hacer clic, mueve el cursor y escribe con el teclado del móvil mientras ves
+              la pantalla del PC. Tanto el PC como Android necesitan una versión reciente de la app
+              compatible con esta función.
+            </p>
+          </div>
+          <div class="split lead-left">
+            <div>
+              <div class="panel">
+                <h3>Abrir la pantalla remota</h3>
+                <ol>
+                  <li>
+                    Inicia OneMouse en el PC. Vincula los dispositivos en la misma red Wi-Fi o
+                    conéctalos con la misma cuenta de Google.
+                  </li>
+                  <li>
+                    En la lista de PC registrados de la app de Android, pulsa
+                    <b>Pantalla remota</b> en el PC que quieras abrir.
+                  </li>
+                  <li>
+                    Si aparece una solicitud en el PC, pulsa <b>Permitir</b>. Para usar ese teléfono
+                    de nuevo, puedes marcar <b>Permitir siempre este dispositivo</b>.
+                  </li>
+                  <li>
+                    Cuando se conecte la pantalla, contrólala con gestos táctiles. Abre el panel de
+                    control con el icono de ajustes de la derecha.
+                  </li>
+                </ol>
+              </div>
+              <div class="panel" style="margin-top: 18px">
+                <h3>Elige el modo de control que prefieras</h3>
+                <ul>
+                  <li>
+                    <b>Modo táctil:</b> toca una posición para hacer clic y desliza para arrastrar.
+                  </li>
+                  <li>
+                    <b>Modo cursor:</b> desliza el dedo para mover el puntero y toca para hacer
+                    clic.
+                  </li>
+                  <li>
+                    Mantén el dedo pulsado sin moverlo y levántalo para hacer clic derecho. En modo
+                    cursor, mantén pulsado y luego mueve el dedo para arrastrar. También puedes
+                    tocar dos veces y mover el dedo sin levantarlo en el segundo toque.
+                  </li>
+                  <li>
+                    Pellizca con dos dedos para ampliar o reducir. A tamaño 1×, desliza dos dedos
+                    para desplazar el contenido del PC; con la imagen ampliada, ese gesto mueve la
+                    vista.
+                  </li>
+                  <li>
+                    Usa <b>Teclado</b> para escribir y activa <b>Solo ver</b> si solo quieres mirar.
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div>
+              <figure class="feature-figure">
+                <img
+                  class="feature-visual"
+                  src="../assets/feature-mobile-pc-remote-photo.webp"
+                  alt="Ejemplo de estilo fotográfico de un teléfono Android que controla la pantalla de un PC con Windows"
+                  width="1536"
+                  height="1024"
+                  loading="lazy"
+                />
+                <figcaption>
+                  Ejemplo de uso creado con IA · La pantalla real puede variar según la versión de
+                  la app.
+                </figcaption>
+              </figure>
+              <div class="panel tip" style="margin-top: 18px">
+                <h3>Calidad, fotogramas por segundo y desconexión</h3>
+                <p>
+                  El panel permite elegir la calidad y la velocidad máxima de fotogramas. En PC
+                  compatibles, la calidad se aplica sin interrumpir la conexión. La resolución y los
+                  fotogramas por segundo reales dependen del dispositivo y la red.
+                </p>
+                <p>
+                  Para terminar, pulsa <b>Panel de control → Desconectar</b>. El PC permanece
+                  encendido al cerrar la conexión remota. Bluetooth no transmite el vídeo de la
+                  pantalla remota.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-alt" id="remote-gesture-examples">
+        <div class="wrap gesture-guide" data-animation-playing="false">
+          <div class="gesture-guide-heading">
+            <div>
+              <h3>Aprende el control remoto siguiendo los movimientos</h3>
+              <p>
+                Estas animaciones explicativas muestran los gestos básicos del modo cursor. No son
+                grabaciones de la aplicación.
+              </p>
+            </div>
+            <button
+              type="button"
+              class="btn btn-sec sm"
+              data-demo-toggle
+              data-play-label="Reproducir ejemplos"
+              data-pause-label="Pausar"
+              aria-pressed="false"
+              hidden
+            >
+              Reproducir ejemplos
+            </button>
+          </div>
+          <div class="gesture-demo-grid">
+            <article class="gesture-demo" data-gesture-demo="move">
+              <div class="gesture-stage" aria-hidden="true">
+                <div class="demo-window"><i></i><span></span><span></span></div>
+                <b class="demo-pointer"></b><i class="demo-finger"></i>
+              </div>
+              <h4>1. Mover el cursor</h4>
+              <p>
+                Desliza un dedo para mover el puntero. Levanta el dedo y apóyalo de nuevo para
+                seguir moviéndolo.
+              </p>
+            </article>
+            <article class="gesture-demo" data-gesture-demo="click">
+              <div class="gesture-stage" aria-hidden="true">
+                <div class="demo-window"><i></i><span></span><span></span></div>
+                <b class="demo-pointer"></b><i class="demo-finger"></i><i class="demo-tap-ring"></i>
+              </div>
+              <h4>2. Hacer clic</h4>
+              <p>
+                Lleva el puntero a un botón y toca una vez. El clic se hace en la posición del
+                puntero, no en la del dedo.
+              </p>
+            </article>
+            <article class="gesture-demo" data-gesture-demo="drag">
+              <div class="gesture-stage" aria-hidden="true">
+                <div class="demo-window"><i></i><span></span><span></span></div>
+                <b class="demo-pointer"></b><i class="demo-finger"></i>
+              </div>
+              <h4>3. Arrastrar una ventana o un elemento</h4>
+              <p>
+                Sitúa el puntero sobre la barra de título o el elemento y mantén el dedo pulsado sin
+                moverlo hasta que el puntero se vuelva azul. Mueve el dedo para arrastrar y
+                levántalo para soltar.
+              </p>
+            </article>
+            <article class="gesture-demo" data-gesture-demo="scroll">
+              <div class="gesture-stage" aria-hidden="true">
+                <div class="demo-window">
+                  <i></i>
+                  <div class="demo-lines">
+                    <span></span><span></span><span></span><span></span><span></span>
+                  </div>
+                </div>
+                <i class="demo-finger"></i><i class="demo-finger demo-finger-second"></i>
+              </div>
+              <h4>4. Desplazar y ampliar</h4>
+              <p>
+                A tamaño 1×, desliza dos dedos juntos para desplazar el contenido del PC. Sepáralos
+                para ampliar; con la imagen ampliada, muévelos juntos para desplazar la vista.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ANDROID MOUSE GESTURES -->
+      <section id="mouse-gestures">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">Gestos del ratón en Android</p>
+            <h2 class="sec" id="mouse-gestures-title">
+              Mantén el botón derecho y dibuja para navegar.
+            </h2>
+            <p class="sec-lead">Cómo activar los gestos, sus siete trazos y las limitaciones.</p>
+          </div>
+          <div class="panel gesture-setup">
+            <h3>1. Activar los gestos</h3>
+            <p>
+              En Ajustes → Escritura y portapapeles, activa Gestos del ratón y selecciona las apps
+              (desactivados por defecto). El PC y Android necesitan versiones compatibles con
+              gestos.
+            </p>
+            <p>
+              Selecciona <b>Todas las apps</b> para usarlos en apps y en la pantalla de inicio.
+              <a href="./help#mouse-gestures-faq">Ver las limitaciones</a>
+            </p>
+            <h3>2. Mantener, dibujar y soltar</h3>
+            <p>Mueve el cursor del PC al teléfono o tableta Android y abre una app seleccionada.</p>
+            <ol class="gesture-steps">
+              <li>Mantén pulsado el botón derecho sobre el contenido de la página.</li>
+              <li>Dibuja las direcciones en orden; comprueba la acción junto al trazo rojo.</li>
+              <li>Suelta para ejecutar. La página no se desplaza mientras dibujas.</li>
+            </ol>
+            <p>
+              La flecha y el indicador vertical muestran la dirección y la intensidad según la
+              longitud del trazo, no la posición en la página ni una distancia exacta.
+            </p>
+          </div>
+          <div class="table-wrap gesture-patterns">
+            <table class="kt gesture-table" aria-labelledby="mouse-gestures-title">
+              <thead>
+                <tr>
+                  <th scope="col">Gesto</th>
+                  <th scope="col">Acción</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr data-gesture-action="back">
+                  <td><span role="img" aria-label="Izquierda">←</span></td>
+                  <td>
+                    <b>Atrás</b
+                    ><small
+                      >Dibuja hacia la izquierda para volver a la página o pantalla anterior.</small
+                    >
+                  </td>
+                </tr>
+                <tr data-gesture-action="forward">
+                  <td><span role="img" aria-label="Derecha">→</span></td>
+                  <td>
+                    <b>Adelante</b
+                    ><small
+                      >Dibuja hacia la derecha para volver a una página tras retroceder.</small
+                    >
+                  </td>
+                </tr>
+                <tr data-gesture-action="scroll_up">
+                  <td><span role="img" aria-label="Arriba">↑</span></td>
+                  <td>
+                    <b>Desplazar arriba</b
+                    ><small
+                      >Dibuja arriba y suelta. Un trazo largo desplaza más; uno corto, menos.</small
+                    >
+                  </td>
+                </tr>
+                <tr data-gesture-action="scroll_down">
+                  <td><span role="img" aria-label="Abajo">↓</span></td>
+                  <td>
+                    <b>Desplazar abajo</b
+                    ><small
+                      >Dibuja abajo y suelta. Un trazo largo desplaza más; uno corto, menos.</small
+                    >
+                  </td>
+                </tr>
+                <tr data-gesture-action="minimize">
+                  <td><span role="img" aria-label="Abajo, después derecha">↓ →</span></td>
+                  <td><b>Minimizar app</b><small>Ve a Inicio sin cerrar la app.</small></td>
+                </tr>
+                <tr data-gesture-action="reload">
+                  <td><span role="img" aria-label="Arriba, después abajo">↑ ↓</span></td>
+                  <td>
+                    <b>Recargar</b><small>Actualiza la página en un navegador compatible.</small>
+                  </td>
+                </tr>
+                <tr data-gesture-action="recents">
+                  <td><span role="img" aria-label="Arriba, después derecha">↑ →</span></td>
+                  <td>
+                    <b>Apps recientes</b
+                    ><small>Abre las apps recientes para elegir otra app.</small>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="panel gesture-notes">
+            <h3>Si un gesto no funciona</h3>
+            <ul>
+              <li>
+                Para el control directo de Android, no Windows/Mac ni ventanas de duplicación.
+              </li>
+              <li>
+                Adelante restaura el historial. Adelante y Recargar requieren un navegador
+                compatible.
+              </li>
+              <li>
+                Empieza sobre el contenido. Un clic derecho breve conserva su función habitual.
+              </li>
+              <li>
+                La distancia varía según la app; Inicio y el cajón de apps usan un solo
+                deslizamiento.
+              </li>
+            </ul>
+            <p>
+              <a href="./help#mouse-gestures-faq">Ayuda de gestos</a> ·
+              <a href="./help#mouse-gestures-scroll">Límites y cancelación del desplazamiento</a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- FILES -->
+      <section class="section-alt" id="files">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="ey">Archivos y portapapeles</p>
+            <h2 class="sec">
+              Envía archivos desde la pantalla de transferencia, la zona de envío rápido o
+              arrastrando de un escritorio a otro.
+            </h2>
+          </div>
+          <div class="split lead-left">
+            <div>
+              <ul class="panel" style="list-style: none; padding-left: 22px">
+                <li style="margin: 0 0 8px">
+                  Suelta archivos en la <b>pantalla de transferencia</b> o en la pequeña
+                  <b>zona de envío rápido</b> para enviarlos al Android, PC con Windows o Mac
+                  seleccionado.
+                </li>
+                <li style="margin: 8px 0">
+                  <b>De Windows a Windows o de Windows a Mac por LAN</b>: mantén pulsado un archivo,
+                  arrástralo cruzando el límite entre las pantallas y suéltalo en el destino.
+                </li>
+                <li style="margin: 8px 0">
+                  <a class="text-link" href="#text-to-pc">Enviar de Android al PC</a>
+                </li>
+                <li style="margin: 8px 0 0">
+                  Si no arranca, revisa el estado de la conexión y el dispositivo seleccionado.
+                </li>
+              </ul>
+            </div>
+            <div>
+              <div class="panel tip">
+                <h3>Zona de envío rápido</h3>
+                <ul>
+                  <li>Pulsa <b>Ctrl+Alt+D</b> para ocultar o mostrar la zona de envío rápido.</li>
+                  <li>Su posición y su estado se guardan en la aplicación de PC.</li>
+                </ul>
+              </div>
+              <details class="fold">
+                <summary><span>La pantalla de la zona de envío rápido</span></summary>
+                <div class="fold-body">
+                  <a href="../assets/guide_quick_drop_send.png" target="_blank" rel="noopener"
+                    ><img
+                      src="../assets/guide_quick_drop_send.png"
+                      alt="Enviar archivos con la zona de envío rápido"
+                      loading="lazy"
+                      style="border-radius: 12px"
+                  /></a>
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SCREENSHOT CAPTURE AND SHARING -->
+      <section id="screenshots">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="ey">Capturar y enviar</p>
+            <h2 class="sec">Captura lo que necesitas y envíalo al dispositivo donde lo usarás.</h2>
+            <p class="sec-lead">
+              Captura la pantalla de tu PC o la de otro dispositivo que estés controlando. Desde la
+              vista previa puedes copiar la imagen, guardarla o enviarla al portapapeles de un
+              dispositivo conectado.
+            </p>
+          </div>
+          <div class="split lead-left">
+            <div>
+              <div class="panel">
+                <h3>Cómo capturar y enviar una imagen</h3>
+                <ol>
+                  <li>
+                    Pulsa el atajo predeterminado <b>Ctrl+Alt+S</b> en Windows. Si estás controlando
+                    otro dispositivo, capturarás su pantalla; en caso contrario, la de tu PC.
+                  </li>
+                  <li>
+                    Arrastra para seleccionar una zona o pulsa <b>Pantalla completa</b> en la barra
+                    de herramientas.
+                  </li>
+                  <li>
+                    En la vista previa del PC, pulsa <b>Copiar</b> o <b>Guardar</b>. Para usarla en
+                    otro dispositivo, pulsa <b>Enviar</b> y elige el destinatario.
+                  </li>
+                  <li>
+                    En el dispositivo receptor, abre una app que admita pegar imágenes y pega la
+                    captura.
+                  </li>
+                </ol>
+                <p>
+                  Si has cambiado el atajo, utiliza la combinación configurada. Durante la
+                  selección, pulsa <b>Esc</b>
+                  o el botón de cancelar para cerrar sin enviar ninguna imagen.
+                </p>
+              </div>
+            </div>
+            <figure class="feature-figure">
+              <img
+                class="feature-visual"
+                src="../assets/feature-screenshot-share-photo.webp"
+                alt="Ejemplo de estilo fotográfico de una captura de pantalla compartida entre un PC y un teléfono Android"
+                width="1536"
+                height="1024"
+                loading="lazy"
+              />
+              <figcaption>
+                Ejemplo de uso creado con IA · La pantalla real puede variar según la versión de la
+                app.
+              </figcaption>
+            </figure>
+          </div>
+          <div class="panel tip" style="margin-top: 18px">
+            <h3>Comprueba la conexión y los permisos</h3>
+            <ul>
+              <li>
+                <b>Enviar imágenes requiere una conexión Wi-Fi o LAN</b> y versiones compatibles en
+                ambos dispositivos. Los dispositivos conectados solo por Bluetooth no pueden
+                recibirlas con esta función.
+              </li>
+              <li>
+                Para capturar la pantalla de Android se requiere
+                <b>Android 11 o posterior y el permiso de Accesibilidad</b>; en Mac, el permiso de
+                grabación de pantalla. Es posible que las pantallas protegidas no se puedan
+                capturar.
+              </li>
+              <li>
+                En Android, usa una app que admita pegar imágenes. La imagen recibida no se pega
+                automáticamente ni se guarda en la galería.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- MOBILE TO PC -->
+      <section id="text-to-pc">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="ey">Del móvil al PC</p>
+            <h2 class="sec">Envía archivos y el texto seleccionado del teléfono a tu PC.</h2>
+            <p class="sec-lead">
+              Para enviar por LAN, elige el <b>PC predeterminado</b> en el inicio de la app móvil y
+              comprueba que está vinculado y conectado. Envía archivos desde la pestaña de
+              transferencia o desde el menú de compartir de Android, y envía texto con OneMouse al
+              PC desde el menú de selección.
+            </p>
+          </div>
+          <div class="split lead-left">
+            <div class="panel">
+              <h3>Enviar un archivo</h3>
+              <ol>
+                <li>
+                  En la pestaña <b>Transferencia</b> de la aplicación móvil, toca
+                  <b>Elegir archivos y enviar al PC</b>.
+                </li>
+                <li>Selecciona los archivos y se enviarán al PC seleccionado en ese momento.</li>
+                <li>
+                  Desde una aplicación de fotos o documentos también puedes elegir
+                  <b>Compartir</b> y seleccionar OneMouse.
+                </li>
+              </ol>
+            </div>
+            <div class="panel">
+              <h3>Enviar texto</h3>
+              <ol>
+                <li>Mantén pulsado el texto en Android, selecciónalo y abre <b>Más</b>.</li>
+                <li>Toca <b>OneMouse al PC</b> para copiarlo al portapapeles del PC.</li>
+                <li>
+                  Si no aparece la primera vez, activa OneMouse una vez en la gestión de
+                  aplicaciones y vuelve a seleccionarlo.
+                </li>
+              </ol>
+            </div>
+          </div>
+          <div class="panel tip" style="margin-top: 18px">
+            <h3 id="file-receive-folder">Encontrar los archivos recibidos en el PC</h3>
+            <p>
+              En
+              <b>Ajustes → General → Transferencia de archivos → Ubicación de archivos recibidos</b>
+              del PC, usa <b>Cambiar carpeta</b> para elegir el destino y <b>Abrir carpeta</b> para
+              verlo. Está disponible tanto en el PC principal como en el secundario.
+            </p>
+            <p>
+              <a href="./help#file-receive-folder-faq">Ajustes de carpeta y problemas</a>
+            </p>
+          </div>
+          <details class="fold">
+            <summary>
+              <span>Ver las pantallas de transferencia de texto</span
+              ><small
+                >Cómo activar y usar OneMouse al PC desde el menú de selección de Android.</small
+              >
+            </summary>
+            <div
+              class="fold-body"
+              style="
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 12px;
+              "
+            >
+              <figure>
+                <img
+                  src="../assets/text_to_pc_step_1.jpg"
+                  alt="Selección de texto y apertura del menú Más"
+                  loading="lazy"
+                  style="border-radius: 12px"
+                />
+                <figcaption>1. Selecciona el texto</figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="../assets/text_to_pc_step_2.jpg"
+                  alt="Apertura de la gestión de aplicaciones desde el menú de selección de texto"
+                  loading="lazy"
+                  style="border-radius: 12px"
+                />
+                <figcaption>2. Abre la gestión de aplicaciones</figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="../assets/text_to_pc_step_3.jpg"
+                  alt="Activación de OneMouse en la gestión de aplicaciones"
+                  loading="lazy"
+                  style="border-radius: 12px"
+                />
+                <figcaption>3. Activa OneMouse</figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="../assets/text_to_pc_step_4.jpg"
+                  alt="Elección de OneMouse al PC en el menú Más"
+                  loading="lazy"
+                  style="border-radius: 12px"
+                />
+                <figcaption>4. Envía al PC</figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="../assets/text_to_pc_step_5.jpg"
+                  alt="Texto enviado correctamente al portapapeles del PC"
+                  loading="lazy"
+                  style="border-radius: 12px"
+                />
+                <figcaption>5. Pega en el PC</figcaption>
+              </figure>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <!-- NOTIFICATIONS -->
+      <section class="section-alt" id="notifications">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">Notificaciones y respuestas</p>
+            <h2 class="sec">Lee las notificaciones del teléfono y responde cuando se admita.</h2>
+          </div>
+          <div class="split">
+            <div class="panel">
+              <h3>Recibir notificaciones y ver el historial</h3>
+              <p>
+                En Android, activa <b>Enviar notificaciones al PC</b>, permite el acceso a
+                notificaciones y selecciona las apps que se enviarán. En el PC principal, activa las
+                notificaciones de dispositivos en <b>Ajustes → Notificaciones</b>.
+              </p>
+              <p>
+                En esa misma pantalla están el historial y su conservación.
+                <a href="./help#phone-notifications">Más sobre las notificaciones</a>
+              </p>
+            </div>
+            <div class="panel">
+              <h3>Responder a una notificación en tiempo real</h3>
+              <p>
+                <b>Responder</b> aparece si el PC y Android admiten respuestas y la notificación
+                original ofrece texto libre. Escribe y pulsa <b>Enviar</b> o <b>Ctrl+Enter</b> para
+                enviar por la app original del teléfono (<b>Enter</b> añade un salto de línea).
+              </p>
+              <p>
+                <a href="./help#notification-reply-faq"
+                  >¿Falta Responder o no se envía la respuesta?</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- QUICK CONNECT -->
+      <section id="quick">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">Atajos numéricos</p>
+            <h2 class="sec">Conecta al instante con el número de tu lista de dispositivos.</h2>
+          </div>
+          <div class="split">
+            <div class="panel">
+              <h3>Ctrl + Alt + 1~9</h3>
+              <ul>
+                <li>
+                  De forma predeterminada, los 9 primeros dispositivos LAN de la lista del PC
+                  principal reciben <b>Ctrl+Alt+1~9</b>. Consulta los
+                  <a href="#shortcuts">ajustes de atajos</a> para cambiar las teclas.
+                </li>
+                <li>Pulsa un número para conectar con ese dispositivo.</li>
+                <li>
+                  Pulsa el mismo número otra vez para dejar de controlar el dispositivo que
+                  controlas actualmente.
+                </li>
+              </ul>
+            </div>
+            <div class="panel tip">
+              <h3>Reconexión automática</h3>
+              <ul>
+                <li>
+                  Cuando está activada, la aplicación de PC vuelve a conectar sola en cuanto
+                  reaparece tu último dispositivo o cuando solo hay uno listo.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="panel tip" style="margin-top: 18px">
+            <h3 id="device-order">Cambiar el orden y los números de los atajos</h3>
+            <p>
+              Con al menos dos dispositivos LAN en el PC principal, elige
+              <b>Dispositivos → Editar orden</b>. Arrastra el asa o usa ↑/↓; se guarda
+              automáticamente y terminas con <b>Listo</b>. Los números de conexión y ventana remota
+              siguen ese mismo orden.
+            </p>
+            <p>
+              <a href="./help#device-order-faq">¿No aparece Editar orden?</a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- BLUETOOTH -->
+      <section class="section-alt" id="bluetooth">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="ey">Bluetooth</p>
+            <h2 class="sec">También puedes conectar por Bluetooth, sin router.</h2>
+            <p class="sec-lead">
+              Windows↔Android y Windows↔Windows pueden intercambiar entrada, portapapeles y archivos
+              directamente por Bluetooth.
+            </p>
+          </div>
+          <div class="split lead-left">
+            <div>
+              <div class="panel" style="margin-bottom: 14px">
+                <h3>Va genial cuando</h3>
+                <ul>
+                  <li>Estás en una habitación, al aire libre o en un coche sin Wi-Fi compartido</li>
+                  <li>
+                    El Wi-Fi de invitados o un cortafuegos bloquea la detección de dispositivos
+                  </li>
+                  <li>Sobre todo haces tareas ligeras de teclado y portapapeles</li>
+                </ul>
+              </div>
+              <div class="panel tip">
+                <h3>Conviene saber</h3>
+                <ul>
+                  <li>Usa Wi-Fi o LAN para archivos grandes y pantallas remotas móviles.</li>
+                  <li>
+                    Bluetooth en Mac es beta (actívalo en sus ajustes; desactivado por defecto). LAN
+                    es la vía oficial y la única para compartir pantallas o ventanas del Mac.
+                  </li>
+                </ul>
+                <p>
+                  <a class="text-link" href="./help#bluetooth-help"
+                    >Resolver problemas de Bluetooth</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="panel">
+                <h3>Orden de conexión</h3>
+                <div class="timeline" style="margin-top: 8px">
+                  <div class="tstep">
+                    <div class="rail"><span class="num">1</span><span class="line"></span></div>
+                    <div class="body" style="padding-bottom: 14px">
+                      <h4>Activa el modo Bluetooth en la pestaña de ajustes de Android</h4>
+                    </div>
+                  </div>
+                  <div class="tstep">
+                    <div class="rail"><span class="num">2</span><span class="line"></span></div>
+                    <div class="body" style="padding-bottom: 14px">
+                      <h4>Vincula el teléfono una vez en los ajustes de Bluetooth de Windows</h4>
+                    </div>
+                  </div>
+                  <div class="tstep">
+                    <div class="rail"><span class="num">3</span><span class="line"></span></div>
+                    <div class="body" style="padding-bottom: 14px">
+                      <h4>La aplicación de PC se conecta sola → aparece en Dispositivos</h4>
+                    </div>
+                  </div>
+                  <div class="tstep">
+                    <div class="rail"><span class="num">4</span></div>
+                    <div class="body" style="padding-bottom: 0">
+                      <h4>Usa la entrada, el portapapeles y los archivos igual que con Wi-Fi</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <details class="fold">
+                <summary><span>La pantalla de dispositivos de destino por Bluetooth</span></summary>
+                <div class="fold-body">
+                  <a href="../assets/guide_bt_sub_devices.png" target="_blank" rel="noopener"
+                    ><img
+                      src="../assets/guide_bt_sub_devices.png"
+                      alt="La lista de dispositivos de destino por Bluetooth"
+                      loading="lazy"
+                      style="border-radius: 12px"
+                  /></a>
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PC TO PC -->
+      <section id="pcpc">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="ey">Otro PC</p>
+            <h2 class="sec">Conecta otro PC con Windows: dispositivos, conexión y disposición.</h2>
+          </div>
+          <div class="split lead-left">
+            <div>
+              <div class="panel">
+                <h3>Cómo conectar</h3>
+                <ul>
+                  <li>
+                    Ejecuta OneMouse en ambos PC con Windows. Inicia sesión con la misma cuenta de
+                    Google o conecta ambos a la misma red para vincular por LAN.
+                  </li>
+                  <li>
+                    Para LAN, abre <b>Gestión de dispositivos → Otras formas de conectar</b> en el
+                    PC desde el que controlarás, selecciona el otro PC con Windows, introduce su
+                    código de 6 dígitos y pulsa <b>Vincular</b>. El código se muestra en el otro PC,
+                    en
+                    <b
+                      >Gestión de dispositivos → Otras formas de conectar → QR y código de este
+                      PC</b
+                    >. La vinculación LAN no requiere iniciar sesión.
+                  </li>
+                  <li>
+                    Comprueba el estado de conexión del PC registrado y activa <b>Conectar</b> si
+                    hace falta. Colócalo en el editor de disposición donde está situado realmente.
+                  </li>
+                  <li>
+                    Mueve el ratón en esa dirección para controlar el otro PC e intercambia archivos
+                    arrastrándolos a través del límite.
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div>
+              <details class="fold" open>
+                <summary><span>Pantallas de vinculación y disposición</span></summary>
+                <div class="fold-body">
+                  <figure class="feature-figure" style="margin-bottom: 18px">
+                    <a href="../assets/pairing/pc-peer-es.webp" target="_blank" rel="noopener"
+                      ><img
+                        src="../assets/pairing/pc-peer-es.webp"
+                        alt="Pantalla actual de Otras formas de conectar con el código de seis dígitos del otro PC con Windows"
+                        width="2240"
+                        height="1800"
+                        loading="lazy"
+                        style="border-radius: 12px"
+                    /></a>
+                    <figcaption>
+                      1. Introduce el código de seis dígitos del otro PC y pulsa Vincular. El código
+                      y los nombres son ejemplos.
+                    </figcaption>
+                  </figure>
+                  <figure class="feature-figure">
+                    <a
+                      href="../assets/pairing/pc-peer-position-es.webp"
+                      target="_blank"
+                      rel="noopener"
+                      ><img
+                        src="../assets/pairing/pc-peer-position-es.webp"
+                        alt="Pantalla actual de gestión de dispositivos para colocar un PC con Windows conectado"
+                        width="2240"
+                        height="1800"
+                        loading="lazy"
+                        style="border-radius: 12px"
+                    /></a>
+                    <figcaption>
+                      2. Comprueba la conexión y coloca el otro PC según su posición real.
+                    </figcaption>
+                  </figure>
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MAC -->
+      <section class="section-alt" id="mac">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="ey">Mac · Compatibilidad pública</p>
+            <h2 class="sec">
+              Conecta desde Windows un Mac con Apple Silicon y macOS 13 o posterior.
+            </h2>
+            <p class="sec-lead">
+              Instala el DMG público en el Mac y luego inicia y gestiona la conexión LAN desde
+              OneMouse en Windows. Sigue estos cinco pasos.
+            </p>
+          </div>
+          <div class="split lead-left">
+            <div class="timeline">
+              <div class="tstep">
+                <div class="rail"><span class="num">1</span><span class="line"></span></div>
+                <div class="body">
+                  <h4>Pon Windows y Mac en la misma red local</h4>
+                  <p>
+                    Ejecuta OneMouse en Windows 10/11 y en el Mac, con los dos equipos conectados a
+                    la misma red Wi-Fi o LAN. Las conexiones se inician y se gestionan desde
+                    Windows.
+                  </p>
+                </div>
+              </div>
+              <div class="tstep">
+                <div class="rail"><span class="num">2</span><span class="line"></span></div>
+                <div class="body">
+                  <h4>Concede los permisos del Mac</h4>
+                  <p>
+                    Permite <b>Accesibilidad</b> para que el Mac pueda ejecutar la entrada de ratón
+                    y teclado recibida. En macOS 15 o posterior, permite también
+                    <b>Red local</b> para la detección; macOS 13/14 puede no mostrar este elemento.
+                  </p>
+                </div>
+              </div>
+              <div class="tstep">
+                <div class="rail"><span class="num">3</span><span class="line"></span></div>
+                <div class="body">
+                  <h4>Selecciona el Mac en Windows</h4>
+                  <p>
+                    Abre Dispositivos en la aplicación de Windows y selecciona el Mac detectado.
+                  </p>
+                </div>
+              </div>
+              <div class="tstep">
+                <div class="rail"><span class="num">4</span><span class="line"></span></div>
+                <div class="body">
+                  <h4>Introduce el código de 6 dígitos del Mac</h4>
+                  <p>
+                    Introduce en Windows el código de vinculación de 6 dígitos que muestra el Mac y
+                    luego confirma la vinculación.
+                  </p>
+                </div>
+              </div>
+              <div class="tstep">
+                <div class="rail"><span class="num">5</span></div>
+                <div class="body">
+                  <h4>Coloca el Mac y cruza</h4>
+                  <p>
+                    Coloca el Mac junto a la pantalla de Windows en el editor de disposición. Mueve
+                    el cursor a través de ese borde para controlarlo e intercambia archivos y
+                    portapapeles en ambos sentidos.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="panel tip">
+                <h3>Pantalla compartida por LAN (opcional)</h3>
+                <p>
+                  El permiso de grabación de pantalla y audio del sistema solo hace falta cuando
+                  eliges ver o controlar la pantalla del Mac desde Windows. OneMouse no captura el
+                  audio del sistema.
+                </p>
+              </div>
+              <div class="panel" style="margin-top: 14px">
+                <h3>Bluetooth en Mac</h3>
+                <p>
+                  El Bluetooth en Mac está disponible como beta: actívalo en los ajustes de la
+                  aplicación de Mac (desactivado por defecto). La LAN sigue siendo la vía
+                  oficialmente compatible, y compartir la pantalla o una ventana solo funciona por
+                  LAN.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PERMISSIONS (short summary + link) -->
+      <section id="permissions">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">Permisos</p>
+            <h2 class="sec">Cada plataforma pide solo los permisos que necesitan sus funciones.</h2>
+            <p class="sec-lead">
+              La entrada en Android requiere el servicio de accesibilidad; en Mac, Accesibilidad.
+              Ver la pantalla remota de Android o Mac también requiere aprobar la captura o
+              grabación de pantalla.
+            </p>
+          </div>
+          <div style="margin-top: 18px">
+            <a class="btn btn-sec sm" href="./technical#permissions"
+              >Ver en detalle los permisos de cada plataforma</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- SHORTCUTS -->
+      <span id="keyboard-shortcuts" aria-hidden="true"></span>
+      <section id="shortcuts">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <h2 class="sec">Atajos de teclado y cuándo se aplican.</h2>
+            <p class="sec-lead">
+              Estos atajos del PC son los predeterminados. En Ajustes del PC → Atajos puedes cambiar
+              cada combinación, desactivar acciones individuales o desactivar todos los atajos. Si
+              cambiaste una combinación, usa la que guardaste.
+            </p>
+          </div>
+          <h3 id="pc-shortcuts-title">Atajos predeterminados de la app de Windows</h3>
+          <div class="table-wrap">
+            <table class="kt" aria-labelledby="pc-shortcuts-title">
+              <thead>
+                <tr>
+                  <th scope="col">Atajo predeterminado</th>
+                  <th scope="col">Acción y condiciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>1~9</kbd></td>
+                  <td>
+                    PC principal: conecta el control de entrada al dispositivo correspondiente de la
+                    lista. Pulsa el mismo número otra vez para dejar de controlar el dispositivo
+                    actual.
+                  </td>
+                </tr>
+                <tr id="shortcuts-next-release" data-shortcut-action="remote-window">
+                  <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>1~9</kbd></td>
+                  <td>
+                    PC principal: abre la ventana remota correspondiente o trae al frente una
+                    ventana existente. Pulsarlo otra vez no cierra la ventana. Los atajos de
+                    conexión y ventana remota comparten los números de los dispositivos LAN; los
+                    dispositivos Bluetooth quedan fuera de esa numeración.
+                  </td>
+                </tr>
+                <tr>
+                  <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>D</kbd></td>
+                  <td>Muestra / oculta la zona de envío rápido.</td>
+                </tr>
+                <tr>
+                  <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>S</kbd></td>
+                  <td>
+                    Selecciona un área de la pantalla del PC Windows, Mac o Android que controlas y
+                    recíbela en el PC principal. Si no controlas otro dispositivo, captura este PC.
+                    Ambas apps deben admitir la función y el destino necesita permiso de captura.
+                  </td>
+                </tr>
+                <tr>
+                  <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>V</kbd></td>
+                  <td>
+                    PC principal: copia el código de verificación mientras su notificación del
+                    teléfono aparece en el PC. Activa primero el envío de notificaciones del
+                    teléfono.
+                  </td>
+                </tr>
+                <tr>
+                  <td><kbd>Ctrl</kbd>+<kbd>V</kbd></td>
+                  <td>
+                    Recibe y pega archivos compartidos copiados en otro PC. Si no hay archivos
+                    compartidos pendientes, el pegado normal sigue disponible.
+                  </td>
+                </tr>
+                <tr>
+                  <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Backspace</kbd></td>
+                  <td>
+                    PC principal: devuelve inmediatamente el cursor al centro de tu monitor mientras
+                    controlas otro dispositivo.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 id="android-shortcuts-title">Al controlar Android directamente</h3>
+          <p>
+            Estas combinaciones se envían a Android y son distintas de los ajustes de atajos de la
+            app del PC. La edición de texto depende de la app y del campo de texto de destino.
+          </p>
+          <div class="table-wrap">
+            <table class="kt" aria-labelledby="android-shortcuts-title">
+              <thead>
+                <tr>
+                  <th scope="col">Atajo predeterminado</th>
+                  <th scope="col">Acción y condiciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><kbd>PrintScreen</kbd></td>
+                  <td>
+                    Android 11 o posterior: captura la pantalla del teléfono durante el control
+                    directo y envíala al PC. Requiere permiso de Accesibilidad.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>↑</kbd> /
+                    <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>↓</kbd>
+                  </td>
+                  <td>
+                    Sube / baja el brillo de Android. Requiere permiso para modificar los ajustes
+                    del sistema.
+                  </td>
+                </tr>
+                <tr>
+                  <td><kbd>Alt</kbd>+<kbd>↑</kbd> / <kbd>Alt</kbd>+<kbd>↓</kbd></td>
+                  <td>Sube / baja el volumen multimedia de Android.</td>
+                </tr>
+                <tr>
+                  <td>
+                    <kbd>Alt</kbd>+<kbd>Tab</kbd> / <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>Tab</kbd>
+                  </td>
+                  <td>
+                    Cambia entre apps recientes / recorre la lista en sentido inverso. Suelta Alt
+                    para abrir la app seleccionada.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <kbd>Ctrl</kbd>+<kbd>A</kbd> / <kbd>Ctrl</kbd>+<kbd>C</kbd> /
+                    <kbd>Ctrl</kbd>+<kbd>X</kbd> / <kbd>Ctrl</kbd>+<kbd>V</kbd>
+                  </td>
+                  <td>Selecciona todo / copia / corta / pega en un campo de texto compatible.</td>
+                </tr>
+                <tr>
+                  <td>
+                    <kbd>Ctrl</kbd>+<kbd>Insert</kbd> / <kbd>Shift</kbd>+<kbd>Insert</kbd> /
+                    <kbd>Shift</kbd>+<kbd>Delete</kbd>
+                  </td>
+                  <td>Copia / pega / corta en un campo de texto compatible.</td>
+                </tr>
+                <tr>
+                  <td><kbd>Ctrl</kbd>+<kbd>Z</kbd></td>
+                  <td>Deshace una acción en apps y campos de texto compatibles.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="panel">
+            <h3>Al usar un teclado de Windows para controlar un Mac</h3>
+            <p>
+              La asignación predeterminada de atajos de Windows envía Ctrl como Command y Alt como
+              Option. Puedes elegir los modificadores nativos de Mac en los ajustes de teclado de la
+              app de Mac. Esto no significa sustituir Ctrl por Command en los atajos de la app de
+              Windows de arriba.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site">
+      <div class="wrap ft">
+        <span>© 2026 OneMouse</span>
+        <a
+          class="ato-badge"
+          href="https://alternativeto.net/software/onemouse/about/?utm_source=badge&amp;utm_medium=referral"
+          target="_blank"
+          rel="noopener"
+          ><img
+            src="https://alternativeto.net/static/badges/badge-compact-color.svg"
+            alt="OneMouse | AlternativeTo"
+            width="171"
+            height="55"
+            loading="lazy"
+        /></a>
+        <span class="links"
+          ><a href="./compare">Comparativa</a><a href="./technical">Aspectos técnicos y seguridad</a
+          ><a href="./privacy">Política de privacidad</a><a href="./terms">Términos del servicio</a
+          ><a href="./licenses">Licencias de código abierto</a></span
+        >
+      </div>
+    </footer>
+  </body>
+</html>

@@ -56,7 +56,7 @@ class SupportRefreshTest(unittest.TestCase):
     def test_guides_have_notifications_in_the_toc(self):
         for locale in LOCALES:
             with self.subTest(locale=locale or "ko"):
-                guide = Document(ROOT / locale / "guide.html")
+                guide = Document(ROOT / locale / "guide-reference.html")
                 toc, = [node for node in guide.root.walk()
                         if node.tag == "nav" and node.attrs.get("class") == "toc"]
                 self.assertTrue(any(node.attrs.get("href") == "#notifications"
@@ -67,7 +67,7 @@ class SupportRefreshTest(unittest.TestCase):
     def test_notification_guide_keeps_controls_and_links_to_detailed_conditions(self):
         for locale in LOCALES:
             with self.subTest(locale=locale or "ko"):
-                section = Document(ROOT / locale / "guide.html").by_id("notifications")
+                section = Document(ROOT / locale / "guide-reference.html").by_id("notifications")
                 content = section.text().casefold()
                 self.assertIn("ctrl", content)
                 self.assertIn("enter", content)
@@ -79,7 +79,7 @@ class SupportRefreshTest(unittest.TestCase):
     def test_notification_help_retains_delivery_and_history_safeguards(self):
         for locale in LOCALES:
             with self.subTest(locale=locale or "ko"):
-                help_page = Document(ROOT / locale / "help.html")
+                help_page = Document(ROOT / locale / "help-reference.html")
                 content = help_page.by_id("notification-reply-faq").text().casefold()
                 for term in REPLY_TERMS[locale]:
                     self.assertIn(term.casefold(), content)
@@ -90,7 +90,7 @@ class SupportRefreshTest(unittest.TestCase):
     def test_reply_success_labels_are_available_in_collapsed_help(self):
         for locale in LOCALES:
             with self.subTest(locale=locale or "ko"):
-                help_page = Document(ROOT / locale / "help.html").by_id("notification-reply-faq")
+                help_page = Document(ROOT / locale / "help-reference.html").by_id("notification-reply-faq")
                 self.assertIn(ACCEPTED_LABELS[locale], help_page.text())
                 self.assertNotIn("open", help_page.attrs)
 
@@ -98,14 +98,14 @@ class SupportRefreshTest(unittest.TestCase):
         limits = {"notifications": 900, "windows-remote": 600, "device-order": 600,
                   "file-receive-folder": 600}
         for locale in LOCALES:
-            guide = Document(ROOT / locale / "guide.html")
+            guide = Document(ROOT / locale / "guide-reference.html")
             for anchor, limit in limits.items():
                 with self.subTest(locale=locale or "ko", anchor=anchor):
                     self.assertLessEqual(len(self.guide_topic(guide, anchor).text()), limit)
 
     def test_condensed_guide_cards_link_to_their_detailed_faqs(self):
         for locale in LOCALES:
-            guide = Document(ROOT / locale / "guide.html")
+            guide = Document(ROOT / locale / "guide-reference.html")
             for anchor, faq_id in GUIDE_DETAIL_LINKS.items():
                 with self.subTest(locale=locale or "ko", anchor=anchor):
                     topic = self.guide_topic(guide, anchor)
@@ -115,8 +115,8 @@ class SupportRefreshTest(unittest.TestCase):
     def test_gestures_explain_direction_strength_and_not_document_position(self):
         for locale in LOCALES:
             with self.subTest(locale=locale or "ko"):
-                guide = Document(ROOT / locale / "guide.html").by_id("mouse-gestures")
-                help_page = Document(ROOT / locale / "help.html").by_id("mouse-gestures-scroll")
+                guide = Document(ROOT / locale / "guide-reference.html").by_id("mouse-gestures")
+                help_page = Document(ROOT / locale / "help-reference.html").by_id("mouse-gestures-scroll")
                 for term in GAUGE_TERMS[locale][:-1]:
                     self.assertIn(term.casefold(), guide.text().casefold())
                 for term in GAUGE_TERMS[locale]:
@@ -125,7 +125,7 @@ class SupportRefreshTest(unittest.TestCase):
     def test_new_faqs_are_in_main_faq_and_link_to_localized_guide(self):
         for locale in LOCALES:
             with self.subTest(locale=locale or "ko"):
-                help_page = Document(ROOT / locale / "help.html")
+                help_page = Document(ROOT / locale / "help-reference.html")
                 faq = list(help_page.by_id("faq").walk())
                 for item_id, guide_anchor in FAQ_LINKS.items():
                     item = help_page.by_id(item_id)
@@ -140,8 +140,8 @@ class SupportRefreshTest(unittest.TestCase):
     def test_order_instructions_keep_lan_and_bluetooth_scope(self):
         for locale in LOCALES:
             with self.subTest(locale=locale or "ko"):
-                guide = self.guide_topic(Document(ROOT / locale / "guide.html"), "device-order")
-                help_page = Document(ROOT / locale / "help.html").by_id("device-order-faq")
+                guide = self.guide_topic(Document(ROOT / locale / "guide-reference.html"), "device-order")
+                help_page = Document(ROOT / locale / "help-reference.html").by_id("device-order-faq")
                 for node in (guide, help_page):
                     self.assertIn("LAN", node.text())
                 self.assertTrue(any(term in help_page.text() for term in ("Bluetooth", "蓝牙")))

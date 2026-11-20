@@ -26,7 +26,7 @@ class ConnectionWalkthroughTest(unittest.TestCase):
     def test_connection_choices_target_three_named_local_panels(self):
         for locale in LOCALES:
             with self.subTest(locale=locale or "ko"):
-                guide = Document(ROOT / locale / "guide.html")
+                guide = Document(ROOT / locale / "guide-reference.html")
                 picker, = [node for node in guide.by_id("start").walk()
                            if "data-connection-picker" in node.attrs]
                 choices = [node for node in picker.walk() if "data-connection-choice" in node.attrs]
@@ -48,7 +48,7 @@ class ConnectionWalkthroughTest(unittest.TestCase):
     def test_without_javascript_all_connection_instructions_remain_readable(self):
         for locale in LOCALES:
             with self.subTest(locale=locale or "ko"):
-                guide = Document(ROOT / locale / "guide.html")
+                guide = Document(ROOT / locale / "guide-reference.html")
                 for node in guide.by_id("start").walk():
                     if "data-connection-choice" in node.attrs:
                         self.assertTrue(hidden_in_html(node), "Inactive controls should wait for JavaScript.")
@@ -64,8 +64,8 @@ class ConnectionWalkthroughTest(unittest.TestCase):
     def test_symptom_help_links_back_to_existing_same_language_guidance(self):
         for locale in LOCALES:
             with self.subTest(locale=locale or "ko"):
-                help_page = Document(ROOT / locale / "help.html")
-                guide = Document(ROOT / locale / "guide.html")
+                help_page = Document(ROOT / locale / "help-reference.html")
+                guide = Document(ROOT / locale / "guide-reference.html")
                 prefix = f"/{locale}" if locale else ""
                 base = f"https://onemouse.pages.dev{prefix}/help"
                 for topic in HELP_TOPICS:
@@ -86,7 +86,7 @@ class ConnectionWalkthroughTest(unittest.TestCase):
     def test_four_gesture_examples_share_a_named_pause_and_play_control(self):
         for locale in LOCALES:
             with self.subTest(locale=locale or "ko"):
-                section = Document(ROOT / locale / "guide.html").by_id("remote-gesture-examples")
+                section = Document(ROOT / locale / "guide-reference.html").by_id("remote-gesture-examples")
                 demos = [node for node in section.walk() if "data-gesture-demo" in node.attrs]
                 self.assertEqual(GESTURES, {node.attrs["data-gesture-demo"] for node in demos})
                 self.assertEqual(len(GESTURES), len(demos))
@@ -111,7 +111,7 @@ class ConnectionWalkthroughTest(unittest.TestCase):
         for locale in LOCALES:
             for name in ("guide", "help"):
                 with self.subTest(locale=locale or "ko", page=name):
-                    path = ROOT / locale / f"{name}.html"
+                    path = ROOT / locale / f"{name}-reference.html"
                     page = Document(path)
                     scripts = []
                     styles = []

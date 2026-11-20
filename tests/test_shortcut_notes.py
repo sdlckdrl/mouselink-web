@@ -8,7 +8,7 @@ class ShortcutNotesTest(unittest.TestCase):
     def test_usage_notes_are_absent_from_all_localized_guides(self):
         for locale in LOCALES:
             with self.subTest(locale=locale or "ko"):
-                guide = Document(ROOT / locale / "guide.html")
+                guide = Document(ROOT / locale / "guide-reference.html")
                 for node in guide.root.walk():
                     self.assertFalse(any(name.startswith("shortcut-note")
                                          for name in node.attrs.get("class", "").split()))
@@ -18,7 +18,7 @@ class ShortcutNotesTest(unittest.TestCase):
     def test_windows_table_leads_directly_to_android_shortcuts(self):
         for locale in LOCALES:
             with self.subTest(locale=locale or "ko"):
-                guide = Document(ROOT / locale / "guide.html")
+                guide = Document(ROOT / locale / "guide-reference.html")
                 heading = guide.by_id("android-shortcuts-title")
                 siblings = heading.parent.children
                 preceding = siblings[siblings.index(heading) - 1]
@@ -31,7 +31,7 @@ class ShortcutNotesTest(unittest.TestCase):
     def test_capture_help_remains_without_a_link_to_the_removed_block(self):
         for locale in LOCALES:
             with self.subTest(locale=locale or "ko"):
-                help_page = Document(ROOT / locale / "help.html")
+                help_page = Document(ROOT / locale / "help-reference.html")
                 capture = help_page.by_id("screenshot-preview-faq")
                 self.assertEqual("details", capture.tag)
                 self.assertGreater(len(capture.text()), 50)

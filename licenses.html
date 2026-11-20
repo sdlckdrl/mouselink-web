@@ -6,7 +6,40 @@
   <title>OneMouse | 오픈소스 라이선스</title>
   <meta name="description" content="OneMouse PC, Android, macOS 앱에서 사용하는 오픈소스 라이브러리 및 서드파티 SDK 고지입니다." />
   <meta name="robots" content="index,follow,max-image-preview:large" />
-  <link rel="stylesheet" href="./css/onemouse.css" />
+  <link rel="icon" href="/assets/preview/onemouse-android-icon.png" type="image/png" sizes="240x240">
+<link rel="stylesheet" href="/assets/preview/one-preview.css?v=light1">
+<meta name="theme-color" content="#f5f8fa">
+
+<style>
+:root{color-scheme:light}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--preview-bg);color:var(--preview-ink);font:1rem/1.68 system-ui,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;overflow-wrap:anywhere}
+html:lang(ko) body{word-break:keep-all}
+.legal-skip{position:absolute;top:6px;left:8px;z-index:4;transform:translateY(-180%);padding:.55rem .8rem;border-radius:.45rem;color:white;background:var(--preview-accent)}
+.legal-skip:focus{transform:none}
+#legal-content{padding:0 0 3rem}
+#legal-content .wrap{width:min(880px,calc(100% - 36px));margin-inline:auto}
+#legal-content .phero{padding:clamp(32px,6vw,68px) 0 1.45rem}
+#legal-content .ey{color:var(--preview-accent);font-size:.9rem;font-weight:800;letter-spacing:.02em;margin:0 0 .4rem}
+#legal-content h1{font-size:clamp(2rem,5vw,3.55rem);font-weight:800;letter-spacing:-.045em;margin:0;line-height:1.14}
+#legal-content h2{font-size:clamp(1.15rem,3vw,1.55rem);line-height:1.3;letter-spacing:-.025em;margin:0 0 .6rem}
+#legal-content .lead{font-size:1.06rem;margin:.85rem 0 .65rem}
+#legal-content .lead,#legal-content .policy-date{color:var(--preview-muted)}
+#legal-content .policy-date{font-size:.9rem;margin:.55rem 0 0}
+#legal-content .legal{display:grid;gap:12px}
+#legal-content .lcard{background:var(--preview-panel);border:1px solid var(--preview-line);border-radius:14px;padding:clamp(16px,3vw,25px);scroll-margin-top:1rem}
+#legal-content .lcard p,#legal-content .lcard ul,#legal-content .lcard ol{margin:.3rem 0 .65rem}
+#legal-content .lcard li+li{margin-top:.4rem}
+#legal-content .num{display:inline-block;font-size:.84em;color:var(--preview-accent);margin-inline-end:.4em}
+#legal-content a,.legal-languages a{color:var(--preview-accent);text-decoration:underline;text-underline-offset:.2em}
+#legal-content a:focus-visible,.legal-languages a:focus-visible{outline:3px solid var(--preview-accent);outline-offset:3px}
+.legal-languages{width:min(880px,calc(100% - 36px));display:flex;flex-wrap:wrap;gap:.3rem .95rem;margin:.75rem auto 0;color:var(--preview-muted);font-size:.85rem}
+.legal-languages a,.legal-languages span{display:inline-flex;align-items:center;min-height:36px}
+.legal-languages [aria-current]{font-weight:800;color:var(--preview-ink)}
+.preview-footer a[aria-current]{font-weight:800;color:var(--preview-accent)}
+.preview-footer .ato-badge img{display:block;max-width:100%;object-fit:contain}
+</style>
+
   <link rel="canonical" href="https://onemouse.pages.dev/licenses" />
   <link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/licenses" />
   <link rel="alternate" hreflang="en" href="https://onemouse.pages.dev/en/licenses" />
@@ -35,25 +68,17 @@
       }
     }
   </script>
+<link rel="stylesheet" href="/css/official-footer.css?v=1">
 </head>
 <body>
-  <header class="site">
-    <div class="wrap hd">
-      <a class="brand" href="./" aria-label="OneMouse 홈"><span class="om">OM</span>OneMouse</a>
-      <nav class="nav" aria-label="주요 메뉴">
-        <a href="./">소개</a>
-        <a href="./#use">기능</a>
-        <a href="./guide">사용법</a>
-        <a href="./help">도움말</a>
-      </nav>
-      <div class="hd-right">
-        <div class="lang" aria-label="언어"><span class="on">KOR</span><a href="./en/licenses">ENG</a><a href="./ja/licenses">JPN</a><a href="./zh/licenses">CHN</a><a href="./es/licenses">ESP</a></div>
-        <a class="hd-cta" href="./#get">다운로드</a>
-      </div>
-    </div>
-  </header>
+  <a class="legal-skip" href="#legal-content">본문으로 이동</a>
+<header class="preview-header"><div class="preview-frame">
+  <a class="preview-brand" href="/" aria-label="OneMouse 홈"><span class="preview-mark" aria-hidden="true"><img src="/assets/preview/onemouse-android-icon.png" alt="" width="33" height="33"></span>OneMouse</a>
+  <nav class="preview-nav" aria-label="주 메뉴"><a href="/">홈</a><a href="/features">기능 체험</a><a href="/guide">연결 가이드</a><a href="/help">도움말</a><a href="/download">다운로드</a></nav>
+</div></header>
+<nav class="legal-languages" aria-label="언어"><span lang="ko" aria-current="true">한국어</span><a href="/en/licenses" lang="en" hreflang="en">English</a><a href="/ja/licenses" lang="ja" hreflang="ja">日本語</a><a href="/zh/licenses" lang="zh" hreflang="zh">中文</a><a href="/es/licenses" lang="es" hreflang="es">Español</a></nav>
 
-  <main>
+  <main id="legal-content">
     <section class="phero wrap">
       <p class="ey">Open Source</p>
       <h1 class="page">오픈소스 라이선스</h1>
@@ -184,23 +209,9 @@
     </section>
   </main>
 
-  <footer class="site">
-    <div class="wrap ft">
-      <span>© 2026 OneMouse</span>
-      <a
-          class="ato-badge"
-          href="https://alternativeto.net/software/onemouse/about/?utm_source=badge&amp;utm_medium=referral"
-          target="_blank"
-          rel="noopener"
-          ><img
-            src="https://alternativeto.net/static/badges/badge-compact-color.svg"
-            alt="OneMouse | AlternativeTo"
-            width="171"
-            height="55"
-            loading="lazy"
-        /></a>
-      <span class="links"><a href="./compare">프로그램 비교</a><a href="./technical">기술·보안</a><a href="./privacy">개인정보처리방침</a><a href="./terms">이용약관</a><a href="./licenses">오픈소스 라이선스</a></span>
-    </div>
-  </footer>
+  <footer class="preview-footer official-footer"><div class="preview-frame">
+  <div class="official-footer-credit"><span>© 2026 OneMouse</span><a class="ato-badge" href="https://alternativeto.net/software/onemouse/about/?utm_source=badge&amp;utm_medium=referral" target="_blank" rel="noopener"><img src="https://alternativeto.net/static/badges/badge-compact-color.svg" alt="OneMouse | AlternativeTo" width="171" height="55" loading="lazy"></a></div>
+  <nav class="preview-refs" aria-label="참고 링크"><a href="/compare">프로그램 비교</a><a href="/technical">기술·보안</a><a href="/privacy">개인정보처리방침</a><a href="/terms">이용약관</a><a href="/licenses">오픈소스 라이선스</a></nav>
+</div></footer>
 </body>
 </html>

@@ -16,36 +16,54 @@
     <link rel="alternate" hreflang="zh" href="https://onemouse.pages.dev/zh/pricing" />
     <link rel="alternate" hreflang="es" href="https://onemouse.pages.dev/es/pricing" />
     <link rel="alternate" hreflang="x-default" href="https://onemouse.pages.dev/pricing" />
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="container header-inner">
-        <a href="./" class="brand" aria-label="OneMouse home">
-          <span class="brand-mark">OM</span>
-          <span class="brand-copy">
-            <strong>OneMouse</strong>
-            <span>Connect Windows and Android locally</span>
-          </span>
-        </a>
-        <nav class="top-nav" aria-label="Main navigation">
-          <a href="./">Overview</a>
-          <a href="./guide">Guide</a>
-          <a href="./help">Help</a>
-          <a href="./technical">Technical/Security</a>
-          <a href="./pricing" class="is-active">Free / Pro</a>
-          <a href="./#get" class="nav-cta">Download</a>
-        </nav>
-        <div class="lang-switch" aria-label="Language">
-          <a href="../pricing">KOR</a>
-          <span class="is-active">ENG</span>
-          <a href="../ja/pricing">JPN</a>
-          <a href="../zh/pricing">CHN</a>
-          <a href="../es/pricing">ESP</a>
-        </div>
-      </div>
-    </header>
+  <link rel="icon" href="/assets/preview/onemouse-android-icon.png" type="image/png" sizes="240x240">
+<link rel="stylesheet" href="/assets/preview/one-preview.css?v=light1">
+<meta name="theme-color" content="#f5f8fa">
 
-    <main>
+<style>
+:root{color-scheme:light;--paper:var(--preview-bg);--paper2:#eaf3f4;--card:var(--preview-panel);--ink:var(--preview-ink);--muted:var(--preview-muted);--line:var(--preview-line);--line-soft:#eaf1f4;--coral-deep:var(--preview-accent);--coral:#68a892;--blue:#224d96;--shadow-soft:0 9px 20px -18px #152c4055;--shadow:0 16px 32px -25px #152c4070}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--preview-bg);color:var(--preview-ink);font:1rem/1.68 system-ui,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;overflow-wrap:anywhere}
+html:lang(ko) body{word-break:keep-all}
+.legal-skip{position:absolute;top:6px;left:8px;z-index:4;transform:translateY(-180%);padding:.55rem .8rem;border-radius:.45rem;color:white;background:var(--preview-accent)}
+.legal-skip:focus{transform:none}
+#legal-content{padding:0 0 3rem}
+#legal-content .wrap{width:min(880px,calc(100% - 36px));margin-inline:auto}
+#legal-content.main-grid-aligned .wrap:not(.narrow){width:min(1070px,calc(100% - 36px))}
+#legal-content .phero{padding:clamp(32px,6vw,68px) 0 1.45rem}
+#legal-content .ey{padding:0;background:none;color:var(--preview-accent);font-size:.9rem;font-weight:800;letter-spacing:.02em;margin:0 0 .4rem}
+#legal-content h1{font-size:clamp(2rem,5vw,3.55rem);font-weight:800;letter-spacing:-.045em;margin:0;line-height:1.14}
+#legal-content h2{font-size:clamp(1.15rem,3vw,1.55rem);line-height:1.3;letter-spacing:-.025em;margin:0 0 .6rem}
+#legal-content .lead{font-size:1.06rem;margin:.85rem 0 .65rem}
+#legal-content .lead,#legal-content .policy-date{color:var(--preview-muted)}
+#legal-content .policy-date{font-size:.9rem;margin:.55rem 0 0}
+#legal-content .legal{display:grid;grid-template-columns:minmax(0,1fr);gap:12px}
+#legal-content .phero+section{padding-top:0}
+#legal-content .lcard p,#legal-content .lcard ul,#legal-content .lcard ol{font-size:inherit;color:inherit}
+#legal-content .lcard{background:var(--preview-panel);border:1px solid var(--preview-line);border-radius:14px;padding:clamp(16px,3vw,25px);scroll-margin-top:1rem}
+#legal-content .lcard p,#legal-content .lcard ul,#legal-content .lcard ol{margin:.3rem 0 .65rem}
+#legal-content .lcard li+li{margin-top:.4rem}
+#legal-content .num{display:inline-block;font-size:.84em;color:var(--preview-accent);margin-inline-end:.4em}
+#legal-content a,.legal-languages a{color:var(--preview-accent);text-decoration:underline;text-underline-offset:.2em}
+#legal-content a:focus-visible,.legal-languages a:focus-visible{outline:3px solid var(--preview-accent);outline-offset:3px}
+.legal-languages{width:min(880px,calc(100% - 36px));display:flex;flex-wrap:wrap;gap:.3rem .95rem;margin:.75rem auto 0;color:var(--preview-muted);font-size:.85rem}
+.legal-languages a,.legal-languages span{display:inline-flex;align-items:center;min-height:36px}
+.legal-languages [aria-current]{font-weight:800;color:var(--preview-ink)}
+.preview-footer a[aria-current]{font-weight:800;color:var(--preview-accent)}
+.preview-footer .ato-badge img{display:block;max-width:100%;object-fit:contain}
+</style>
+
+<link rel="stylesheet" href="/css/official-footer.css?v=1">
+</head>
+  <body>
+    <a class="legal-skip" href="#legal-content">Skip to content</a>
+<header class="preview-header"><div class="preview-frame">
+  <a class="preview-brand" href="/en/" aria-label="OneMouse home"><span class="preview-mark" aria-hidden="true"><img src="/assets/preview/onemouse-android-icon.png" alt="" width="33" height="33"></span>OneMouse</a>
+  <nav class="preview-nav" aria-label="Main menu"><a href="/en/">Home</a><a href="/en/features">Features</a><a href="/en/guide">Setup guide</a><a href="/en/help">Help</a><a href="/en/download">Download</a></nav>
+</div></header>
+<nav class="legal-languages" aria-label="Language"><a href="/pricing" lang="ko" hreflang="ko">한국어</a><span lang="en" aria-current="true">English</span><a href="/ja/pricing" lang="ja" hreflang="ja">日本語</a><a href="/zh/pricing" lang="zh" hreflang="zh">中文</a><a href="/es/pricing" lang="es" hreflang="es">Español</a></nav>
+
+    <main id="legal-content">
       <section class="page-hero pricing-hero">
         <div class="container narrow">
           <p class="section-kicker">Free / Pro</p>
@@ -178,17 +196,9 @@
       </section>
     </main>
 
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <span>© 2026 OneMouse</span>
-        <span class="footer-links">
-          <a href="./technical">Technical/Security</a>
-          <a href="./pricing">Free / Pro</a>
-          <a href="./privacy">Privacy</a>
-          <a href="./terms">Terms</a>
-          <a href="./licenses">Licenses</a>
-        </span>
-      </div>
-    </footer>
+    <footer class="preview-footer official-footer"><div class="preview-frame">
+  <div class="official-footer-credit"><span>© 2026 OneMouse</span><a class="ato-badge" href="https://alternativeto.net/software/onemouse/about/?utm_source=badge&amp;utm_medium=referral" target="_blank" rel="noopener"><img src="https://alternativeto.net/static/badges/badge-compact-color.svg" alt="OneMouse | AlternativeTo" width="171" height="55" loading="lazy"></a></div>
+  <nav class="preview-refs" aria-label="Resources"><a href="/en/compare">Compare apps</a><a href="/en/technical">Technology and security</a><a href="/en/privacy">Privacy policy</a><a href="/en/terms">Terms of use</a><a href="/en/licenses">Open-source licenses</a></nav>
+</div></footer>
   </body>
 </html>

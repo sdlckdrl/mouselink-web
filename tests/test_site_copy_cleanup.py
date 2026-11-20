@@ -91,7 +91,7 @@ class SiteCopyCleanupTest(unittest.TestCase):
     def test_guide_permissions_link_to_dedicated_technical_detail(self):
         for locale in LOCALES:
             with self.subTest(locale=locale or "ko"):
-                permissions = Document(ROOT / locale / "guide.html").by_id("permissions")
+                permissions = Document(ROOT / locale / "guide-reference.html").by_id("permissions")
                 self.assertLessEqual(len(permissions.text()), 650)
                 self.assertTrue(any(node.attrs.get("href") == "./technical#permissions"
                                     for node in permissions.walk()))
@@ -119,7 +119,7 @@ class SiteCopyCleanupTest(unittest.TestCase):
     def test_history_policy_is_collapsed_but_still_in_notification_help(self):
         for locale in LOCALES:
             with self.subTest(locale=locale or "ko"):
-                help_page = Document(ROOT / locale / "help.html")
+                help_page = Document(ROOT / locale / "help-reference.html")
                 history = help_page.by_id("notification-history")
                 self.assertEqual("details", history.tag)
                 self.assertNotIn("open", history.attrs)

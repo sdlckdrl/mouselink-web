@@ -4,7 +4,7 @@ import unittest
 from test_mouse_gesture_help import Document, ROOT
 
 LOCALES = ("en", "es", "ja", "zh")
-SECTIONS = ("features", "guide-new", "help-new", "compatibility", "download", "remote")
+SECTIONS = ("features", "guide", "help", "compatibility", "download", "remote")
 
 
 class LocalizedRedesignTests(unittest.TestCase):
@@ -13,7 +13,7 @@ class LocalizedRedesignTests(unittest.TestCase):
             with self.subTest(locale=locale):
                 home = Document(ROOT / locale / "index.html")
                 hrefs = {n.attrs.get("href") for n in home.root.walk() if n.tag == "a"}
-                for route in ("features", "guide-new", "help-new", "compatibility"):
+                for route in ("features", "guide", "help", "compatibility"):
                     self.assertIn(f"/{locale}/{route}", hrefs)
                 for route in SECTIONS:
                     page = Document(ROOT / locale / f"{route}.html")
@@ -26,12 +26,12 @@ class LocalizedRedesignTests(unittest.TestCase):
     def test_app_guide_and_preview_keep_legacy_fragments(self):
         for locale in LOCALES:
             with self.subTest(locale=locale):
-                for name in ("guide", "guide-new"):
+                for name in ("guide", "guide-reference"):
                     page = Document(ROOT / locale / f"{name}.html")
                     for section in ("text-to-pc", "shortcuts", "shortcuts-next-release"):
                         self.assertIsNotNone(page.by_id(section))
                 official = Document(ROOT / locale / "help.html")
-                preview = Document(ROOT / locale / "help-new.html")
+                preview = Document(ROOT / locale / "help-reference.html")
                 for section in ("faq", "mac", "bluetooth-help"):
                     self.assertIsNotNone(official.by_id(section))
                     self.assertIsNotNone(preview.by_id(section))

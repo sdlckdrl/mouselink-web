@@ -75,7 +75,7 @@ class MouseGestureHelpTest(unittest.TestCase):
     def test_all_locales_document_exactly_the_seven_real_patterns(self):
         for locale in LOCALES:
             with self.subTest(locale=locale or "ko"):
-                guide = Document(ROOT / locale / "guide.html")
+                guide = Document(ROOT / locale / "guide-reference.html")
                 section = guide.by_id("mouse-gestures")
                 rows = [node for node in section.walk() if "data-gesture-action" in node.attrs]
                 self.assertEqual(list(PATTERNS), [row.attrs["data-gesture-action"] for row in rows])
@@ -94,7 +94,7 @@ class MouseGestureHelpTest(unittest.TestCase):
     def test_table_has_accessible_headers_and_spoken_direction_labels(self):
         for locale in LOCALES:
             with self.subTest(locale=locale or "ko"):
-                guide = Document(ROOT / locale / "guide.html")
+                guide = Document(ROOT / locale / "guide-reference.html")
                 section = guide.by_id("mouse-gestures")
                 table, = [node for node in section.walk() if node.tag == "table"]
                 self.assertEqual("mouse-gestures-title", table.attrs.get("aria-labelledby"))
@@ -109,8 +109,8 @@ class MouseGestureHelpTest(unittest.TestCase):
     def test_each_locale_has_a_toc_entry_and_local_guide_faq_links(self):
         for locale in LOCALES:
             with self.subTest(locale=locale or "ko"):
-                guide = Document(ROOT / locale / "guide.html")
-                help_page = Document(ROOT / locale / "help.html")
+                guide = Document(ROOT / locale / "guide-reference.html")
+                help_page = Document(ROOT / locale / "help-reference.html")
                 toc, = [node for node in guide.root.walk() if node.tag == "nav" and node.attrs.get("class") == "toc"]
                 self.assertTrue(any(node.attrs.get("href") == "#mouse-gestures" for node in toc.walk()))
                 self.assertTrue(any(node.attrs.get("href") == "./help#mouse-gestures-faq" for node in guide.by_id("mouse-gestures").walk()))
@@ -119,7 +119,7 @@ class MouseGestureHelpTest(unittest.TestCase):
     def test_troubleshooting_is_in_the_main_faq_in_every_language(self):
         for locale in LOCALES:
             with self.subTest(locale=locale or "ko"):
-                page = Document(ROOT / locale / "help.html")
+                page = Document(ROOT / locale / "help-reference.html")
                 main_faq = list(page.by_id("faq").walk())
                 for name in ("mouse-gestures-faq", "mouse-gestures-history", "mouse-gestures-minimize", "mouse-gestures-scroll"):
                     item = page.by_id(name)
@@ -134,7 +134,7 @@ class MouseGestureHelpTest(unittest.TestCase):
     def test_guides_include_three_draw_steps_and_four_support_notes(self):
         for locale in LOCALES:
             with self.subTest(locale=locale or "ko"):
-                section = Document(ROOT / locale / "guide.html").by_id("mouse-gestures")
+                section = Document(ROOT / locale / "guide-reference.html").by_id("mouse-gestures")
                 steps, = [node for node in section.walk() if node.attrs.get("class") == "gesture-steps"]
                 self.assertEqual(3, len([node for node in steps.children if node.tag == "li"]))
                 notes, = [node for node in section.walk() if node.attrs.get("class") == "panel gesture-notes"]
@@ -150,8 +150,8 @@ class MouseGestureHelpTest(unittest.TestCase):
         }
         for locale in LOCALES:
             with self.subTest(locale=locale or "ko"):
-                guide = Document(ROOT / locale / "guide.html").by_id("mouse-gestures")
-                help_page = Document(ROOT / locale / "help.html").by_id("mouse-gestures-scroll")
+                guide = Document(ROOT / locale / "guide-reference.html").by_id("mouse-gestures")
+                help_page = Document(ROOT / locale / "help-reference.html").by_id("mouse-gestures-scroll")
                 self.assertIn("8", help_page.text())
                 self.assertIn("10", help_page.text())
                 self.assertTrue(any(node.attrs.get("href") == "./help#mouse-gestures-scroll"
@@ -174,8 +174,8 @@ class MouseGestureHelpTest(unittest.TestCase):
         }
         for locale in LOCALES:
             with self.subTest(locale=locale or "ko"):
-                guide = Document(ROOT / locale / "guide.html").by_id("mouse-gestures")
-                help_page = Document(ROOT / locale / "help.html").by_id("mouse-gestures-scroll")
+                guide = Document(ROOT / locale / "guide-reference.html").by_id("mouse-gestures")
+                help_page = Document(ROOT / locale / "help-reference.html").by_id("mouse-gestures-scroll")
                 self.assertIn(policy_terms[locale][0].lower(), guide.text().lower())
                 for term in policy_terms[locale]:
                     self.assertIn(term.lower(), help_page.text().lower())

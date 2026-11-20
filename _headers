@@ -1,0 +1,31 @@
+# Keep retained long-form reference copies out of search.
+/guide-reference
+  X-Robots-Tag: noindex, follow
+
+/help-reference
+  X-Robots-Tag: noindex, follow
+
+/en/guide-reference
+  X-Robots-Tag: noindex, follow
+
+/en/help-reference
+  X-Robots-Tag: noindex, follow
+
+/es/guide-reference
+  X-Robots-Tag: noindex, follow
+
+/es/help-reference
+  X-Robots-Tag: noindex, follow
+
+/ja/guide-reference
+  X-Robots-Tag: noindex, follow
+
+/ja/help-reference
+  X-Robots-Tag: noindex, follow
+
+/zh/guide-reference
+  X-Robots-Tag: noindex, follow
+
+/zh/help-reference
+  X-Robots-Tag: noindex, follow
+
