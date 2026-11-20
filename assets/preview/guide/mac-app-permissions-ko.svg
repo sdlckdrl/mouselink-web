@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:lang="ko" width="800" height="466" viewBox="0 0 800 466" role="img"><title>Mac OneMouse 설정의 고급 탭에서 확인하는 macOS 권한</title>
+<!-- Recreated from mac/MouseLinkMac SwiftUI views and ko.lproj strings. Not a native capture. -->
+<defs><linearGradient id="nav" x2="0" y2="1" gradientUnits="objectBoundingBox"><stop stop-color="#0f172a"/><stop offset="1" stop-color="#172554"/></linearGradient><linearGradient id="brand" x2="1" y2="1"><stop stop-color="#2563eb"/><stop offset="1" stop-color="#16a34a"/></linearGradient></defs>
+<g font-family="-apple-system,BlinkMacSystemFont,Malgun Gothic,Noto Sans CJK KR,sans-serif">
+<rect x="4" y="4" width="792" height="458" rx="14" fill="#eef4ff" stroke="#b2c1d3" stroke-width="1.4"/>
+<rect x="5" y="5" width="790" height="37" rx="12" fill="#f7f9fc" stroke="none" stroke-width="1"/>
+<rect x="5" y="28" width="790" height="14" rx="0" fill="#f7f9fc" stroke="none" stroke-width="1"/>
+<rect x="5" y="41" width="790" height="1" rx="0" fill="#dbe6f5" stroke="none" stroke-width="1"/>
+<circle cx="24" cy="23" r="5.2" fill="#ff6058"/>
+<circle cx="42" cy="23" r="5.2" fill="#ffbd2f"/>
+<circle cx="60" cy="23" r="5.2" fill="#28c840"/>
+<text x="400" y="28" fill="#39475b" font-size="14" font-weight="640" text-anchor="middle">OneMouse</text>
+<rect x="5" y="42" width="190" height="419" rx="12" fill="url(#nav)" stroke="none" stroke-width="1"/>
+<rect x="5" y="42" width="190" height="404" rx="0" fill="url(#nav)" stroke="none" stroke-width="1"/>
+<rect x="174" y="447" width="21" height="14" rx="0" fill="#172554" stroke="none" stroke-width="1"/>
+<rect x="20" y="59" width="32" height="32" rx="9" fill="url(#brand)" stroke="none" stroke-width="1"/>
+<text x="36" y="80" fill="white" font-size="11" font-weight="850" text-anchor="middle">OM</text>
+<text x="61" y="80" fill="white" font-size="12" font-weight="750" text-anchor="start">원마우스(공유마우스)</text>
+<path transform="translate(28 115)" d="M2 10l8-7 8 7M5 9v8h10V9M9 17v-5h3v5" fill="none" stroke="#34d399" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="56" y="131" fill="#fff" font-size="17" font-weight="680" text-anchor="start">대시보드</text>
+<path transform="translate(28 158)" d="M2 5h16v11H2zm6 0v11m5-11v11" fill="none" stroke="#60a5fa" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="56" y="174" fill="#fff" font-size="17" font-weight="680" text-anchor="start">기기 배치</text>
+<path transform="translate(28 201)" d="M3 6l7-3 7 3v10l-7 3-7-3zm0 0l7 4 7-4m-7 4v9" fill="none" stroke="#d9a363" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="56" y="217" fill="#fff" font-size="17" font-weight="680" text-anchor="start">파일 전송</text>
+<path transform="translate(28 244)" d="M2 4h16v11H2zm5 15h6m-3-4v4" fill="none" stroke="#60a5fa" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="56" y="260" fill="#fff" font-size="17" font-weight="680" text-anchor="start">기기 관리</text>
+<rect x="17" y="279" width="164" height="36" rx="9" fill="#304163" stroke="none" stroke-width="1"/>
+<path transform="translate(28 287)" d="M10 2v3m0 10v3M2 10h3m10 0h3M4 4l2 2m8 8 2 2m0-12-2 2m-8 8-2 2M10 6a4 4 0 1 0 0 8 4 4 0 0 0 0-8" fill="none" stroke="#c4b5fd" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="56" y="303" fill="#fff" font-size="17" font-weight="680" text-anchor="start">설정</text>
+<rect x="17" y="380" width="164" height="66" rx="11" fill="#2b3a66" stroke="#405077" stroke-width="1"/>
+<text x="29" y="403" fill="#dbe4f7" font-size="12" font-weight="600" text-anchor="start">연결 상태</text>
+<circle cx="33" cy="424" r="4" fill="#f59e0b"/>
+<text x="44" y="429" fill="white" font-size="16" font-weight="750" text-anchor="start">연결 필요</text>
+<text x="217" y="83" fill="#0f172a" font-size="25" font-weight="800" text-anchor="start">설정</text>
+<text x="217" y="111" fill="#64748b" font-size="16" font-weight="500" text-anchor="start">입력 공유, 권한과 연결 기능을 설정합니다.</text>
+<text x="243" y="152" fill="#64748b" font-size="17" font-weight="680" text-anchor="middle">일반</text>
+<text x="312" y="152" fill="#64748b" font-size="17" font-weight="680" text-anchor="middle">알림</text>
+<text x="388" y="152" fill="#64748b" font-size="17" font-weight="680" text-anchor="middle">단축키</text>
+<text x="465" y="152" fill="#2563eb" font-size="17" font-weight="680" text-anchor="middle">고급</text>
+<text x="535" y="152" fill="#64748b" font-size="17" font-weight="680" text-anchor="middle">정보</text>
+<rect x="215" y="167" width="559" height="1" rx="0" fill="#dbe6f5" stroke="none" stroke-width="1"/>
+<rect x="431" y="164" width="68" height="3" rx="1" fill="#2563eb" stroke="none" stroke-width="1"/>
+<rect x="216" y="185" width="557" height="253" rx="14" fill="white" stroke="#dbe6f5" stroke-width="1"/>
+<text x="235" y="217" fill="#0f172a" font-size="22" font-weight="750" text-anchor="start">macOS 권한</text>
+<path transform="translate(238 241)" d="M2 10h16M10 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16m0 0c-5 3-5 13 0 16 5-3 5-13 0-16" fill="none" stroke="#2563eb" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="269" y="247" fill="#64748b" font-size="16" font-weight="500" text-anchor="start">로컬 네트워크</text>
+<text x="269" y="267" fill="#0f172a" font-size="16" font-weight="690" text-anchor="start">연결 시 확인</text>
+<rect x="633" y="236" width="111" height="34" rx="9" fill="#f8fbff" stroke="#dbe6f5" stroke-width="1"/>
+<text x="688.5" y="258.0" fill="#1d4ed8" font-size="16" font-weight="690" text-anchor="middle">허용하기</text>
+<path transform="translate(238 290)" d="M6 16l-3-5 2-1 2 2V5q0-2 2-2v6V4q1-2 2 0v5-4q2-2 2 1v4-3q2-1 2 1v6l-2 4H8Z" fill="none" stroke="#2563eb" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="269" y="296" fill="#64748b" font-size="16" font-weight="500" text-anchor="start">손쉬운 사용</text>
+<text x="269" y="316" fill="#0f172a" font-size="16" font-weight="690" text-anchor="start">허용 필요</text>
+<rect x="633" y="285" width="111" height="34" rx="9" fill="#f8fbff" stroke="#dbe6f5" stroke-width="1"/>
+<text x="688.5" y="307.0" fill="#1d4ed8" font-size="16" font-weight="690" text-anchor="middle">설정 열기</text>
+<path transform="translate(238 339)" d="M2 4h16v11H2zm5 15h6m-3-4v4" fill="none" stroke="#2563eb" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="269" y="345" fill="#64748b" font-size="16" font-weight="500" text-anchor="start">입력 모니터링</text>
+<text x="269" y="365" fill="#0f172a" font-size="16" font-weight="690" text-anchor="start">확인 전</text>
+<rect x="633" y="334" width="111" height="34" rx="9" fill="#f8fbff" stroke="#dbe6f5" stroke-width="1"/>
+<text x="688.5" y="356.0" fill="#1d4ed8" font-size="16" font-weight="690" text-anchor="middle">허용하기</text>
+<path transform="translate(238 388)" d="M3 4h14v12H3zm5 4v4l4-2z" fill="none" stroke="#2563eb" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="269" y="394" fill="#64748b" font-size="16" font-weight="500" text-anchor="start">화면 및 시스템 오디오 녹음</text>
+<text x="269" y="414" fill="#0f172a" font-size="16" font-weight="690" text-anchor="start">확인 전</text>
+<rect x="633" y="383" width="111" height="34" rx="9" fill="#f8fbff" stroke="#dbe6f5" stroke-width="1"/>
+<text x="688.5" y="405.0" fill="#1d4ed8" font-size="16" font-weight="690" text-anchor="middle">허용하기</text>
+<rect x="228" y="278" width="532" height="47" rx="9" fill="none" stroke="#fff" stroke-width="6"/>
+<rect x="228" y="278" width="532" height="47" rx="9" fill="none" stroke="#1d4ed8" stroke-width="3"/>
+</g></svg>

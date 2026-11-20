@@ -18,6 +18,9 @@
 .shot img{position:absolute;inset:0;width:100%;height:100%;max-height:none;min-height:0;object-fit:contain}
 .split-shot .shot a{aspect-ratio:8/10}
 .shot--diagram a{background:#edf4f6}
+.shot--example a{background:#eef4ff}
+.shot--access-entry a{aspect-ratio:3/1}
+.shot--example .shot-label{background:#e7efff;color:#244683}
 .shot--detail a{aspect-ratio:3/1;background:#f2f6fa}
 .panel details .shot--detail{max-width:640px}
 .shot-label{display:inline-block;margin-inline-end:.4rem;padding:.02rem .35rem;background:#e4eef3;color:#345264;border-radius:.25rem;font-size:.72rem;font-weight:760}
@@ -52,7 +55,7 @@
       <p>QR 또는 6자리 번호, 둘 중 하나만 쓰면 돼요. PC가 유선이어도 같은 공유기에 연결돼 있으면 됩니다. Google 로그인은 필요 없어요. <a href="#connect-account">Google 계정으로 연결하려면</a></p>
       <ol class="steps">
         <li><h3>양쪽에서 OneMouse 열기</h3><p>Windows와 Android에 <a href="/download-demo">OneMouse를 설치</a>하고, 같은 공유기에 연결해요. Android에서 <span class="path">설정 → 접근성 → 설치된 앱 → OneMouse</span>를 켜세요. 기기에 따라 메뉴 이름이 다를 수 있어요.</p>
-          <figure class="shot shot--diagram"><a href="/assets/preview/guide/android-access.svg" aria-label="Windows에서 앱을 열고 Android 설정에서 OneMouse 접근성을 켜는 순서 크게 보기"><img src="/assets/preview/guide/android-access.svg" width="760" height="450" alt="Windows에서 앱을 열고 Android 설정에서 OneMouse 접근성을 켜는 순서" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">설명 그림</span>같은 공유기에 연결하고 Android 접근성을 켜요.</figcaption></figure></li>
+          <figure class="shot shot--example shot--access-entry"><a href="/assets/preview/guide/android-access-entry-example.svg" aria-label="Android OneMouse 홈의 접근성 권한이 필요합니다 카드 크게 보기"><img src="/assets/preview/guide/android-access-entry-example.svg" width="480" height="161" alt="Android OneMouse 홈의 접근성 권한이 필요합니다 카드" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">앱 화면 재현</span>앱 홈에 이 카드가 뜨면 눌러서 접근성 설정을 여세요.</figcaption></figure></li>
         <li><h3>Windows에서 QR·인증번호 열기</h3><p><span class="path">기기 관리 → 다른 방법으로 연결 → 이 PC의 QR·인증번호</span>를 누르세요.</p>
           <figure class="shot"><a href="/assets/pairing/pc-code-ko.webp" aria-label="Windows의 QR·인증번호 예시 화면 크게 보기"><img src="/assets/pairing/pc-code-ko.webp" width="888" height="744" alt="Windows OneMouse의 QR·6자리 인증번호 창" loading="lazy"></a><figcaption><span class="shot-label">앱 화면 예시</span>화면의 번호 대신 내 PC의 번호를 쓰세요.</figcaption></figure></li>
         <li><h3>Android에서 번호 입력 또는 QR 스캔</h3><p><span class="path">홈 → 다른 방법으로 연결 → QR·인증번호로 PC 추가</span>를 누르세요. <strong>숫자 코드</strong>에서 번호를 입력하거나, <strong>QR 코드 스캔 → 카메라 실행</strong>으로 PC 화면을 스캔하세요. <a href="/assets/preview/guide/android-bluetooth-entry-ko.webp">‘QR·인증번호로 PC 추가’ 버튼 위치</a></p>
@@ -65,8 +68,8 @@
       </ol>
       <div class="tip"><strong>연결됐는데 커서가 안 넘어가나요?</strong> Android 접근성이 켜졌는지, 배치 방향과 진입 통로가 맞는지 확인해요. <a href="/help-demo#cursor">문제 해결 보기</a></div>
       <details id="alternatives"><summary>다른 연결 방법: Bluetooth</summary>
-        <div id="connect-bluetooth"><h3>Bluetooth로 연결</h3><p>두 기기의 Bluetooth를 켜고 Android의 OneMouse 설정에서 Bluetooth 모드를 켜세요. Windows Bluetooth 설정에서 폰을 페어링한 뒤 OneMouse 기기 목록의 연결 상태와 배치를 확인해요. 원격 동영상은 Bluetooth로 전송되지 않아요.</p><p><a href="/compatibility-demo">연결별 사용 범위</a></p>
-          <figure class="shot shot--detail"><a href="/assets/preview/guide/android-bluetooth-entry-ko.webp" aria-label="Android OneMouse의 다른 방법으로 연결에서 Bluetooth 설정을 여는 실제 화면 크게 보기"><img src="/assets/preview/guide/android-bluetooth-entry-ko.webp" width="1048" height="303" alt="Android OneMouse의 다른 방법으로 연결에서 Bluetooth 설정을 여는 실제 화면" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">실제 앱 · 이전 버전</span>홈의 ‘다른 방법으로 연결’을 펼치고 ‘Bluetooth 설정’을 누르세요.</figcaption></figure></div>
+        <div id="connect-bluetooth"><h3>Bluetooth로 연결</h3><p>두 기기의 Bluetooth를 켜세요. Android OneMouse의 <strong>블루투스 모드 시작</strong>과 Windows Bluetooth 설정의 기기 페어링이 필요해요. 연결한 뒤 OneMouse 기기 목록에서 상태와 배치를 확인하세요. 원격 동영상은 Bluetooth로 전송되지 않아요.</p><p><a href="/compatibility-demo">연결별 사용 범위</a></p>
+          <figure class="shot shot--detail"><a href="/assets/preview/guide/android-bluetooth-entry-ko.webp" aria-label="Android OneMouse의 다른 방법으로 연결에서 Bluetooth 설정을 여는 실제 화면 크게 보기"><img src="/assets/preview/guide/android-bluetooth-entry-ko.webp" width="1048" height="303" alt="Android OneMouse의 다른 방법으로 연결에서 Bluetooth 설정을 여는 실제 화면" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">실제 앱 · 이전 버전</span>홈의 ‘다른 방법으로 연결’을 펼치고 ‘Bluetooth 설정’을 누르세요.</figcaption></figure><figure class="shot shot--example"><a href="/assets/preview/guide/android-bt-start-example.svg" aria-label="Android OneMouse의 블루투스 모드 시작 버튼 크게 보기"><img src="/assets/preview/guide/android-bt-start-example.svg" width="480" height="281" alt="Android OneMouse 설정의 연결 영역과 블루투스 모드 시작 버튼" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">앱 화면 재현</span>설정의 ‘블루투스 모드 시작’을 누르세요.</figcaption></figure></div>
       </details>
     </section>
     <section class="panel" id="mac" data-device-panel aria-labelledby="mac-title">
@@ -76,10 +79,10 @@
       <ol class="steps">
         <li><h3>Windows와 Mac에서 앱 열기</h3><p><a href="/download-demo">OneMouse를 설치</a>하고 두 기기에서 실행하세요. 연결은 Windows에서 시작해요.</p>
           <figure class="shot shot--diagram"><a href="/assets/preview/guide/mac-start.svg" aria-label="같은 네트워크의 Windows와 Mac에서 OneMouse를 여는 모습 크게 보기"><img src="/assets/preview/guide/mac-start.svg" width="760" height="450" alt="같은 네트워크의 Windows와 Mac에서 OneMouse를 여는 모습" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">설명 그림</span>연결은 마우스·키보드가 꽂힌 Windows에서 시작해요.</figcaption></figure></li>
-        <li><h3>Mac에서 손쉬운 사용 허용</h3><p>입력을 받으려면 <strong>손쉬운 사용</strong>을 허용하세요. macOS 15 이상에서 기기 검색을 위한 <strong>로컬 네트워크</strong> 항목이 뜨면 함께 허용하세요.</p>
-          <figure class="shot shot--diagram"><a href="/assets/preview/guide/mac-access.svg" aria-label="Mac의 손쉬운 사용과 로컬 네트워크 권한 안내 크게 보기"><img src="/assets/preview/guide/mac-access.svg" width="760" height="450" alt="Mac의 손쉬운 사용과 로컬 네트워크 권한 안내" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">설명 그림</span>Mac 시스템 설정에서 입력 권한을 확인해요.</figcaption></figure></li>
-        <li><h3>Mac을 고르고 6자리 코드 입력</h3><p>Windows OneMouse의 <strong>기기 관리</strong>에서 Mac을 선택하고, Mac 화면에 나온 6자리 코드를 입력하세요.</p>
-          <figure class="shot shot--diagram"><a href="/assets/preview/guide/mac-pair.svg" aria-label="Mac의 페어링 코드를 확인하고 Windows 기기 관리에서 입력하는 순서 크게 보기"><img src="/assets/preview/guide/mac-pair.svg" width="760" height="450" alt="Mac의 페어링 코드를 확인하고 Windows 기기 관리에서 입력하는 순서" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">설명 그림</span>Mac에서 본 코드로 Windows에서 연결해요.</figcaption></figure></li>
+        <li><h3>Mac에서 손쉬운 사용 허용</h3><p>OneMouse의 <span class="path">설정 → 고급 → macOS 권한</span>에서 <strong>손쉬운 사용</strong>을 확인하세요. Mac 시스템 설정이 열리면 OneMouse를 허용하세요. macOS 15 이상에서 <strong>로컬 네트워크</strong>를 요청하면 함께 허용하세요.</p>
+          <figure class="shot shot--example"><a href="/assets/preview/guide/mac-app-permissions-ko.svg" aria-label="Mac OneMouse의 설정, 고급 탭에 있는 macOS 권한 크게 보기"><img src="/assets/preview/guide/mac-app-permissions-ko.svg" width="800" height="466" alt="Mac OneMouse의 설정, 고급 탭에 있는 macOS 권한" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">앱 화면 재현</span>OneMouse에서 ‘손쉬운 사용’ 옆의 버튼을 눌러요.</figcaption></figure></li>
+        <li><h3>Mac을 고르고 6자리 코드 입력</h3><p>Mac OneMouse의 <span class="path">기기 관리 → 다른 방법으로 연결 → 이 Mac의 인증번호 보기</span>에서 번호를 확인하세요. Windows OneMouse의 <strong>기기 관리</strong>에서 해당 Mac을 골라 6자리 번호를 입력하세요.</p>
+          <figure class="shot shot--example"><a href="/assets/preview/guide/mac-app-pairing-ko.svg" aria-label="Mac OneMouse의 이 Mac의 인증번호 창 크게 보기"><img src="/assets/preview/guide/mac-app-pairing-ko.svg" width="800" height="482" alt="Mac OneMouse의 이 Mac의 인증번호 창" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">앱 화면 재현</span>그림 속 숫자가 아니라 내 Mac에 표시된 번호를 입력하세요.</figcaption></figure></li>
         <li><h3>Mac 방향으로 마우스 넘기기</h3><p>Windows의 배치 화면에서 Mac을 실제 놓인 방향에 배치하고, 그쪽 가장자리로 마우스를 밀어 보세요.</p>
           <figure class="shot shot--diagram"><a href="/assets/preview/guide/mac-placement.svg" aria-label="Windows에서 Mac의 배치 방향을 맞추고 가장자리를 넘어가는 예시 크게 보기"><img src="/assets/preview/guide/mac-placement.svg" width="760" height="450" alt="Windows에서 Mac의 배치 방향을 맞추고 가장자리를 넘어가는 예시" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">설명 그림</span>Mac을 놓은 쪽으로 커서를 밀어요.</figcaption></figure></li>
       </ol>
@@ -87,14 +90,14 @@
       <details id="mac-bluetooth">
         <summary>Windows와 Mac을 Bluetooth로 연결하기 (베타)</summary>
         <p>한 대씩 직접 연결하는 방식이에요. 같은 Wi-Fi나 Google 로그인은 필요 없어요. 먼저 두 기기를 운영체제의 Bluetooth 설정에서 페어링하세요.</p>
-        <p>Mac OneMouse의 <strong>설정 → 일반 → 연결</strong>에서 <strong>블루투스 연결</strong>을 켜세요. 기본값은 꺼짐이에요.</p>
+        <p>Mac OneMouse의 <span class="path">기기 관리 → 다른 방법으로 연결</span>을 펼친 뒤 <strong>Bluetooth</strong> 카드에서 <strong>켜기</strong>를 누르세요. 연결 중이면 카드가 ‘기기 관리’에 바로 나타날 수 있어요.</p>
         <ul>
-          <li><strong>Windows에서 Mac 조작:</strong> Mac에서 <strong>입력 받기</strong>를 고르고, Windows <strong>기기 관리</strong>의 Bluetooth 목록에서 Mac 연결을 켜세요.</li>
-          <li><strong>Mac에서 Windows 조작:</strong> Windows의 <strong>기기 관리 → 다른 방법으로 연결 → 블루투스</strong>에서 <strong>마우스·키보드 입력 받기</strong>를 켜세요. Mac에서 <strong>입력 보내기</strong>를 고른 뒤 목록에서 Windows PC를 선택하세요.</li>
+          <li><strong>Windows에서 Mac 조작:</strong> Mac에서 입력 방향을 <strong>마우스·키보드 입력 받기</strong>로 바꾸고, Windows <strong>기기 관리</strong>의 Bluetooth 목록에서 Mac 연결을 켜세요.</li>
+          <li><strong>Mac에서 Windows 조작:</strong> Windows의 <strong>기기 관리 → 다른 방법으로 연결 → 블루투스</strong>에서 <strong>마우스·키보드 입력 받기</strong>를 켜세요. Mac에서 입력 방향을 <strong>마우스·키보드 입력 보내기</strong>로 바꾼 뒤 목록에서 Windows PC를 선택하세요.</li>
         </ul>
         <p>Mac은 입력을 받을 때 <strong>손쉬운 사용</strong> 권한, 보낼 때는 <strong>입력 모니터링</strong> 권한도 필요해요. 마우스·키보드, 텍스트 클립보드, 파일·폴더 전송을 지원해요.</p>
         <p><strong>Mac 화면·창 공유는 Wi-Fi·LAN 전용</strong>이에요. Bluetooth로는 화면·창을 볼 수 없어요.</p>
-        <figure class="shot shot--diagram"><a href="/assets/preview/guide/mac-bt.svg" aria-label="Windows에서 Mac을 조작할 때와 Mac에서 Windows를 조작할 때의 Bluetooth 설정 크게 보기"><img src="/assets/preview/guide/mac-bt.svg" width="760" height="450" alt="Windows에서 Mac을 조작할 때와 Mac에서 Windows를 조작할 때의 Bluetooth 설정" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">설명 그림</span>어느 기기에서 조작하느냐에 따라 입력 방향을 골라요.</figcaption></figure>
+        <figure class="shot shot--example"><a href="/assets/preview/guide/mac-app-bluetooth-ko.svg" aria-label="Mac OneMouse의 기기 관리에서 Bluetooth를 켜는 위치 크게 보기"><img src="/assets/preview/guide/mac-app-bluetooth-ko.svg" width="800" height="520" alt="Mac OneMouse의 기기 관리에서 Bluetooth를 켜는 위치" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">앱 화면 재현</span>Bluetooth 카드에서 ‘켜기’를 누르고 입력 방향을 골라요.</figcaption></figure>
       </details>
       <details><summary>화면 녹화 권한도 켜야 하나요?</summary><p>기본 마우스·키보드 입력에는 필요하지 않아요. Windows에서 Mac 화면이나 창을 볼 때만 허용하세요. <a href="/features-demo#windows-remote">원격 화면 안내</a></p><figure class="shot shot--diagram"><a href="/assets/preview/guide/mac-record.svg" aria-label="Mac의 기본 입력과 원격 화면에 필요한 권한 비교 크게 보기"><img src="/assets/preview/guide/mac-record.svg" width="760" height="450" alt="Mac의 기본 입력과 원격 화면에 필요한 권한 비교" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">설명 그림</span>기본 입력만 쓸 땐 화면 녹화를 켤 필요가 없어요.</figcaption></figure></details>
     </section>
@@ -121,8 +124,8 @@
       <div class="group">
         <article class="card"><h3>Windows ↔ Windows</h3><p>두 PC의 <strong>기기 관리</strong>에서 로그인하세요. 마우스가 연결된 PC에서 상대 PC를 고르고, 필요하면 연결 스위치를 켜세요.</p>
           <figure class="shot shot--detail"><a href="/assets/preview/guide/windows-google-account-entry-ko.webp" aria-label="Windows OneMouse 기기 관리의 Google 계정 카드와 Google로 로그인 버튼 크게 보기"><img src="/assets/preview/guide/windows-google-account-entry-ko.webp" width="2240" height="526" alt="Windows OneMouse 기기 관리의 Google 계정 카드와 Google로 로그인 버튼" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">실제 앱 · 이전 버전</span>기기 관리에서 ‘Google로 로그인’을 누르세요.</figcaption></figure></article>
-        <article class="card"><h3>Windows → Mac</h3><p>Windows의 <strong>기기 관리</strong>와 Mac 앱의 <strong>기기</strong> 화면에서 로그인하세요. Windows 기기 목록에서 Mac을 골라 연결하세요. <a href="/assets/preview/guide/windows-google-account-entry-ko.webp">Windows 로그인 버튼 위치</a> · Mac에서 입력을 받으려면 <strong>손쉬운 사용</strong>을 허용하세요.</p>
-          <figure class="shot shot--diagram"><a href="/assets/preview/guide/account-mac.svg" aria-label="Windows와 Mac에서 같은 Google 계정으로 연결하기 크게 보기"><img src="/assets/preview/guide/account-mac.svg" width="760" height="450" alt="Windows와 Mac에서 같은 Google 계정으로 연결하기" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">설명 그림</span>Windows 기기 목록에서 Mac을 골라요.</figcaption></figure></article>
+        <article class="card"><h3>Windows → Mac</h3><p>Windows의 <strong>기기 관리</strong>와 Mac 앱의 <strong>기기 관리</strong>에서 로그인하세요. Windows 기기 목록에서 Mac을 골라 연결하세요. <a href="/assets/preview/guide/windows-google-account-entry-ko.webp">Windows 로그인 버튼 위치</a> · Mac에서 입력을 받으려면 <strong>손쉬운 사용</strong>을 허용하세요.</p>
+          <figure class="shot shot--example"><a href="/assets/preview/guide/mac-app-account-ko.svg" aria-label="Mac OneMouse 기기 관리의 Google로 로그인 버튼 크게 보기"><img src="/assets/preview/guide/mac-app-account-ko.svg" width="800" height="424" alt="Mac OneMouse 기기 관리의 Google로 로그인 버튼" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">앱 화면 재현</span>Mac에서 ‘Google로 로그인’을 누르세요.</figcaption></figure></article>
         <article class="card"><h3>Windows → Android</h3><p>Windows의 <strong>기기 관리</strong>와 Android의 OneMouse 홈에서 로그인하세요. 폰의 <strong>등록된 PC</strong>에서 내 PC를 선택해 연결하고, Android의 <strong>접근성</strong>을 켜세요.</p>
           <figure class="shot shot--detail"><a href="/assets/preview/guide/android-account-home-ko.webp" aria-label="Android OneMouse 홈의 Google로 로그인 버튼과 등록된 PC 영역 크게 보기"><img src="/assets/preview/guide/android-account-home-ko.webp" width="1048" height="223" alt="Android OneMouse 홈의 Google로 로그인 버튼과 등록된 PC 영역" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">실제 앱 · 이전 버전</span>홈에서 로그인한 뒤 아래 ‘등록된 PC’에서 내 PC를 골라요.</figcaption></figure></article>
       </div>

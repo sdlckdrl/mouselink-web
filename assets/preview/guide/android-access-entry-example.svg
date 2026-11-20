@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="161" viewBox="0 0 480 161" role="img" aria-labelledby="title description" xml:lang="ko">
+  <title id="title">OneMouse Android 앱의 접근성 권한 카드 위치 예시</title>
+  <desc id="description">OneMouse 앱 홈의 접근성 권한 카드를 소스에 맞춰 재현했습니다. 카드를 누르면 Android의 설정으로 이동합니다. 시스템 설정 화면 자체는 아닙니다.</desc>
+  <rect width="480" height="161" rx="18" fill="#eef4ff"/>
+  <g font-family="Noto Sans KR,Noto Sans CJK KR,Malgun Gothic,Apple SD Gothic Neo,sans-serif">
+    <text x="17" y="27" font-size="15" font-weight="700" fill="#475569">홈</text>
+    <rect x="329" y="9" width="134" height="25" rx="12.5" fill="#dbeafe"/>
+    <text x="396" y="26" text-anchor="middle" font-size="12" font-weight="700" fill="#1e3a8a">앱 소스 기반 예시</text>
+    <rect x="17" y="49" width="446" height="95" rx="18" fill="#fff" stroke="#dbe6f5"/>
+    <rect x="32" y="75" width="43" height="43" rx="15" fill="#fef3c7"/>
+    <text x="53.5" y="104" text-anchor="middle" font-size="22" font-weight="700" fill="#b7791f">!</text>
+    <text x="89" y="85" font-size="19" font-weight="700" fill="#0f172a">접근성 권한이 필요합니다</text>
+    <text x="89" y="108" font-size="15" fill="#64748b">마우스·키보드 제어를 시작하려면</text>
+    <text x="89" y="128" font-size="15" fill="#64748b">먼저 켜세요.</text>
+    <text x="424" y="107" font-size="23" font-weight="700" fill="#c2410c">&gt;</text>
+  </g>
+</svg>
