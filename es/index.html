@@ -155,12 +155,16 @@
 </style>
 <style>:lang(ja) body,:lang(zh) body{word-break:normal}</style>
 <link rel="stylesheet" href="/css/official-footer.css?v=1">
+<link rel="stylesheet" href="/css/official-language-picker.css?v=1">
+<script src="/js/official-language-picker.js?v=1" defer></script>
 </head>
 <body>
 <a class="skip btn primary" href="#main">Saltar al contenido</a>
 <header class="preview-header"><div class="preview-frame">
   <a class="preview-brand" href="/es/" aria-label="Inicio de OneMouse"><span class="preview-mark" aria-hidden="true"><img src="/assets/preview/onemouse-android-icon.png" alt="" width="33" height="33"></span>OneMouse</a>
   <nav class="preview-nav" aria-label="Menú principal"><a href="/es/" aria-current="page">Inicio</a><a href="/es/features">Funciones</a><a href="/es/guide">Guía de conexión</a><a href="/es/help">Ayuda</a><a href="#get">Descargar</a></nav>
+
+  <div class="one-language-select"><label class="one-language-label" for="one-language-picker">Idioma</label><select id="one-language-picker" data-language-picker data-current-language="es" hidden><option value="ko" lang="ko" data-language-route="/" data-fragments="android capture-demo cursor-demo cursor-help cursor-mark cursor-scene cursor-status demo-title download faq feature-capture-demo feature-race-demo file-demo get help mac macos main mobile-pc-remote-title more-features playground promo-video-note promo-video-player promo-video-title proof-title screen-tools screen-tools-title screenshot-share-title setup text-demo trust use video windows">한국어</option><option value="en" lang="en" data-language-route="/en/" data-fragments="android capture-demo cursor-demo cursor-help cursor-mark cursor-scene cursor-status demo-title download faq feature-capture-demo feature-race-demo file-demo get help mac macos main mobile-pc-remote-title more-features playground promo-video-note promo-video-player promo-video-title proof-title screen-tools screen-tools-title screenshot-share-title setup text-demo trust use video windows">English</option><option value="ja" lang="ja" data-language-route="/ja/" data-fragments="android capture-demo cursor-demo cursor-help cursor-mark cursor-scene cursor-status demo-title download faq feature-capture-demo feature-race-demo file-demo get help mac macos main mobile-pc-remote-title more-features playground promo-video-note promo-video-player promo-video-title proof-title screen-tools screen-tools-title screenshot-share-title setup text-demo trust use video windows">日本語</option><option value="zh" lang="zh" data-language-route="/zh/" data-fragments="android capture-demo cursor-demo cursor-help cursor-mark cursor-scene cursor-status demo-title download faq feature-capture-demo feature-race-demo file-demo get help mac macos main mobile-pc-remote-title more-features playground promo-video-note promo-video-player promo-video-title proof-title screen-tools screen-tools-title screenshot-share-title setup text-demo trust use video windows">中文</option><option value="es" lang="es" data-language-route="/es/" data-fragments="android capture-demo cursor-demo cursor-help cursor-mark cursor-scene cursor-status demo-title download faq feature-capture-demo feature-race-demo file-demo get help mac macos main mobile-pc-remote-title more-features playground promo-video-note promo-video-player promo-video-title proof-title screen-tools screen-tools-title screenshot-share-title setup text-demo trust use video windows" selected>Español</option></select><noscript><nav class="one-language-fallback" aria-label="Idioma"><a href="/" lang="ko" hreflang="ko">한국어</a><a href="/en/" lang="en" hreflang="en">English</a><a href="/ja/" lang="ja" hreflang="ja">日本語</a><a href="/zh/" lang="zh" hreflang="zh">中文</a><span lang="es" aria-current="true">Español</span></nav></noscript></div>
 </div></header>
 <main id="main">
 <div class="hero wrap">
@@ -169,7 +173,7 @@
 <h1>Un ratón y un teclado.<br> Pasa de un dispositivo a otro.</h1>
 <p class="intro">Lleva el cursor de Windows al borde de la pantalla para seguir trabajando en Android, un Mac u otro PC.</p>
 <div class="actions"><a class="btn primary" href="#get">Descarga la app para tu dispositivo</a><a class="calm-link" href="/es/guide">Ver cómo conectar</a></div>
-<nav class="home-languages" aria-label="Idioma"><a href="/" lang="ko" hreflang="ko">한국어</a><a href="/en/" lang="en" hreflang="en">English</a><a href="/ja/" lang="ja" hreflang="ja">日本語</a><a href="/zh/" lang="zh" hreflang="zh">中文</a><span lang="es" aria-current="true">Español</span></nav>
+
 </div>
 <div class="hero-demo" id="more-features"><div id="playground">
 <section id="cursor-demo" aria-labelledby="demo-title">

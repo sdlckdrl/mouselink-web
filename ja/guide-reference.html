@@ -19,7 +19,9 @@
     <link rel="alternate" hreflang="zh" href="https://onemouse.pages.dev/zh/guide" />
     <link rel="alternate" hreflang="es" href="https://onemouse.pages.dev/es/guide" />
     <link rel="alternate" hreflang="x-default" href="https://onemouse.pages.dev/guide" />
-  </head>
+  <link rel="stylesheet" href="/css/official-language-picker.css?v=1">
+<script src="/js/official-language-picker.js?v=1" defer></script>
+</head>
   <body>
     <header class="site">
       <div class="wrap hd">
@@ -33,11 +35,7 @@
           <a href="./help">ヘルプ</a>
         </nav>
         <div class="hd-right">
-          <div class="lang" aria-label="言語">
-            <a href="../guide">KOR</a><a href="../en/guide">ENG</a><span class="on">JPN</span
-            ><a href="../zh/guide">CHN</a>
-            <a href="../es/guide">ESP</a>
-          </div>
+          <div class="one-language-select"><label class="one-language-label" for="one-language-picker">言語を選択</label><select id="one-language-picker" data-language-picker data-current-language="ja" hidden><option value="ko" lang="ko" data-language-route="/guide-reference" data-fragments="android-shortcuts-title bluetooth connect-account connect-bluetooth connect-wifi device-order file-receive-folder files keyboard-shortcuts mac mobile-pc-remote mouse-gestures mouse-gestures-title notifications pc-shortcuts-title pcpc permissions position quick remote remote-gesture-examples screenshots shortcuts shortcuts-next-release start text-to-pc windows-remote">한국어</option><option value="en" lang="en" data-language-route="/en/guide-reference" data-fragments="android-shortcuts-title bluetooth connect-account connect-bluetooth connect-wifi device-order file-receive-folder files keyboard-shortcuts mac mobile-pc-remote mouse-gestures mouse-gestures-title notifications pc-shortcuts-title pcpc permissions position quick remote remote-gesture-examples screenshots shortcuts shortcuts-next-release start text-to-pc windows-remote">English</option><option value="ja" lang="ja" data-language-route="/ja/guide-reference" data-fragments="android-shortcuts-title bluetooth connect-account connect-bluetooth connect-wifi device-order file-receive-folder files keyboard-shortcuts mac mobile-pc-remote mouse-gestures mouse-gestures-title notifications pc-shortcuts-title pcpc permissions position quick remote remote-gesture-examples screenshots shortcuts shortcuts-next-release start text-to-pc windows-remote" selected>日本語</option><option value="zh" lang="zh" data-language-route="/zh/guide-reference" data-fragments="android-shortcuts-title bluetooth connect-account connect-bluetooth connect-wifi device-order file-receive-folder files keyboard-shortcuts mac mobile-pc-remote mouse-gestures mouse-gestures-title notifications pc-shortcuts-title pcpc permissions position quick remote remote-gesture-examples screenshots shortcuts shortcuts-next-release start text-to-pc windows-remote">中文</option><option value="es" lang="es" data-language-route="/es/guide-reference" data-fragments="android-shortcuts-title bluetooth connect-account connect-bluetooth connect-wifi device-order file-receive-folder files keyboard-shortcuts mac mobile-pc-remote mouse-gestures mouse-gestures-title notifications pc-shortcuts-title pcpc permissions position quick remote remote-gesture-examples screenshots shortcuts shortcuts-next-release start text-to-pc windows-remote">Español</option></select><noscript><nav class="one-language-fallback" aria-label="言語を選択"><a href="/guide-reference" lang="ko" hreflang="ko">한국어</a><a href="/en/guide-reference" lang="en" hreflang="en">English</a><span lang="ja" aria-current="true">日本語</span><a href="/zh/guide-reference" lang="zh" hreflang="zh">中文</a><a href="/es/guide-reference" lang="es" hreflang="es">Español</a></nav></noscript></div>
           <a class="hd-cta" href="./#get">ダウンロード</a>
         </div>
       </div>

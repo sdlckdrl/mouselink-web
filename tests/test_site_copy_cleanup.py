@@ -100,7 +100,16 @@ class SiteCopyCleanupTest(unittest.TestCase):
         for locale in LOCALES:
             with self.subTest(locale=locale or "ko"):
                 home = Document(ROOT / locale / "index.html")
-                nav, = [node for node in home.root.walk() if has_class(node, "home-languages")]
+                picker = home.by_id("one-language-picker")
+                self.assertEqual("select", picker.tag)
+                options = [node for node in picker.walk() if node.tag == "option"]
+                self.assertEqual(["ko", "en", "ja", "zh", "es"],
+                                 [node.attrs.get("value") for node in options])
+                selected, = [node for node in options if "selected" in node.attrs]
+                self.assertEqual(locale or "ko", selected.attrs["value"])
+                headers = [node for node in home.root.walk() if node.tag == "header"]
+                self.assertTrue(any(picker in list(header.walk()) for header in headers))
+                nav, = [node for node in home.root.walk() if has_class(node, "one-language-fallback")]
                 supported = {"", "en", "es", "ja", "zh"}
                 expected = {f"/{lang}/" if lang else "/" for lang in supported - {locale}}
                 self.assertEqual(expected, {

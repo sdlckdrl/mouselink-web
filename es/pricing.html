@@ -54,14 +54,18 @@ html:lang(ko) body{word-break:keep-all}
 </style>
 
 <link rel="stylesheet" href="/css/official-footer.css?v=1">
+<link rel="stylesheet" href="/css/official-language-picker.css?v=1">
+<script src="/js/official-language-picker.js?v=1" defer></script>
 </head>
   <body>
     <a class="legal-skip" href="#legal-content">Saltar al contenido</a>
 <header class="preview-header"><div class="preview-frame">
   <a class="preview-brand" href="/es/" aria-label="Inicio de OneMouse"><span class="preview-mark" aria-hidden="true"><img src="/assets/preview/onemouse-android-icon.png" alt="" width="33" height="33"></span>OneMouse</a>
   <nav class="preview-nav" aria-label="Menú principal"><a href="/es/">Inicio</a><a href="/es/features">Funciones</a><a href="/es/guide">Guía de conexión</a><a href="/es/help">Ayuda</a><a href="/es/download">Descargar</a></nav>
+
+  <div class="one-language-select"><label class="one-language-label" for="one-language-picker">Idioma</label><select id="one-language-picker" data-language-picker data-current-language="es" hidden><option value="ko" lang="ko" data-language-route="/pricing" data-fragments="legal-content">한국어</option><option value="en" lang="en" data-language-route="/en/pricing" data-fragments="legal-content">English</option><option value="ja" lang="ja" data-language-route="/ja/pricing" data-fragments="legal-content">日本語</option><option value="zh" lang="zh" data-language-route="/zh/pricing" data-fragments="legal-content">中文</option><option value="es" lang="es" data-language-route="/es/pricing" data-fragments="legal-content" selected>Español</option></select><noscript><nav class="one-language-fallback" aria-label="Idioma"><a href="/pricing" lang="ko" hreflang="ko">한국어</a><a href="/en/pricing" lang="en" hreflang="en">English</a><a href="/ja/pricing" lang="ja" hreflang="ja">日本語</a><a href="/zh/pricing" lang="zh" hreflang="zh">中文</a><span lang="es" aria-current="true">Español</span></nav></noscript></div>
 </div></header>
-<nav class="legal-languages" aria-label="Idioma"><a href="/pricing" lang="ko" hreflang="ko">한국어</a><a href="/en/pricing" lang="en" hreflang="en">English</a><a href="/ja/pricing" lang="ja" hreflang="ja">日本語</a><a href="/zh/pricing" lang="zh" hreflang="zh">中文</a><span lang="es" aria-current="true">Español</span></nav>
+
 
     <main id="legal-content">
       <section class="page-hero pricing-hero">
