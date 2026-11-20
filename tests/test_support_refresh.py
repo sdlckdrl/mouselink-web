@@ -6,11 +6,11 @@ from test_mouse_gesture_help import Document, LOCALES, ROOT
 
 
 FAQ_LINKS = {
-    "notification-reply-faq": "notifications",
-    "device-order-faq": "device-order",
-    "windows-remote-gestures-faq": "remote",
-    "default-pc-faq": "text-to-pc",
-    "file-receive-folder-faq": "file-receive-folder",
+    "notification-reply-faq": ("features", "notifications"),
+    "device-order-faq": ("guide", "device-order"),
+    "windows-remote-gestures-faq": ("features", "remote"),
+    "default-pc-faq": ("features", "text-to-pc"),
+    "file-receive-folder-faq": ("features", "file-receive-folder"),
 }
 GUIDE_ANCHORS = ("notifications", "device-order", "file-receive-folder")
 GUIDE_DETAIL_LINKS = {
@@ -127,24 +127,61 @@ class SupportRefreshTest(unittest.TestCase):
             with self.subTest(locale=locale or "ko"):
                 help_page = Document(ROOT / locale / "help-reference.html")
                 faq = list(help_page.by_id("faq").walk())
-                for item_id, guide_anchor in FAQ_LINKS.items():
+                for item_id, (page_name, anchor) in FAQ_LINKS.items():
                     item = help_page.by_id(item_id)
                     self.assertEqual("details", item.tag)
                     self.assertNotIn("open", item.attrs)
                     self.assertIn(item, faq)
                     self.assertTrue(any(node.tag == "summary" and node.text()
                                         for node in item.children))
-                    self.assertTrue(any(node.attrs.get("href") == f"./guide#{guide_anchor}"
-                                        for node in item.walk()))
+                    prefix = f"/{locale}" if locale else ""
+                    target = f"{prefix}/{page_name}#{anchor}"
+                    self.assertTrue(any(node.attrs.get("href") == target for node in item.walk()))
+                    Document(ROOT / locale / f"{page_name}.html").by_id(anchor)
 
-    def test_order_instructions_keep_lan_and_bluetooth_scope(self):
+    def test_order_instructions_keep_registered_devices_and_bluetooth_exclusion(self):
+        terms = {
+            "": (("등록",), ("두 대 이상",), ("목록 순서 편집",), ("번호 단축키",)),
+            "en": (("registered",), ("at least two",), ("Edit list order",), ("numbered shortcuts",)),
+            "es": (("registrados",), ("dos o más", "al menos dos"), ("Editar orden de la lista",), ("atajos",)),
+            "ja": (("登録",), ("2台以上", "2 台以上"), ("一覧の順序を編集", "リストの順序を編集"), ("番号付きショートカット", "数字ショートカット")),
+            "zh": (("登记", "注册"), ("两台",), ("编辑列表顺序",), ("数字快捷键", "编号快捷键")),
+        }
         for locale in LOCALES:
             with self.subTest(locale=locale or "ko"):
-                guide = self.guide_topic(Document(ROOT / locale / "guide-reference.html"), "device-order")
-                help_page = Document(ROOT / locale / "help-reference.html").by_id("device-order-faq")
-                for node in (guide, help_page):
-                    self.assertIn("LAN", node.text())
-                self.assertTrue(any(term in help_page.text() for term in ("Bluetooth", "蓝牙")))
+                guide = Document(ROOT / locale / "guide.html").by_id("device-order")
+                faq = Document(ROOT / locale / "help-reference.html").by_id("device-order-faq")
+                for node in (guide, faq):
+                    content = node.text().casefold()
+                    self.assertTrue(any(label.casefold() in content for label in ("Bluetooth", "蓝牙")))
+                    self.assertNotIn("lan", content)
+                    for alternatives in terms[locale]:
+                        self.assertTrue(any(term.casefold() in content for term in alternatives), alternatives)
+
+    def test_faq_index_and_localization_keep_all_new_fragments(self):
+        groups = {"faq-connections", "faq-sharing", "faq-gestures"}
+        new_questions = {"faq-account-devices", "faq-guest-wifi", "faq-android-input",
+                         "faq-mac-input", "faq-mac-screen", "faq-cursor-return"}
+        for locale in LOCALES:
+            with self.subTest(locale=locale or "ko"):
+                index = Document(ROOT / locale / "help.html")
+                reference = Document(ROOT / locale / "help-reference.html")
+                prefix = f"/{locale}" if locale else ""
+                nav_links = {x.attrs.get("href") for x in index.by_id("faq").walk()
+                             if x.tag == "a"}
+                expected = {f"{prefix}/help-reference#{i}" for i in groups}
+                self.assertEqual(expected, nav_links)
+                self.assertEqual(1, sum(x.tag == "a" and x.attrs.get("href") == f"{prefix}/help-reference#faq"
+                                        for x in index.root.walk()))
+                self.assertEqual(20, sum(x.tag == "details" for x in reference.by_id("faq").walk()))
+                self.assertIn(reference.by_id("device-order-faq"), list(reference.by_id("faq-connections").walk()))
+                for ident in new_questions:
+                    self.assertEqual("details", reference.by_id(ident).tag)
+                for document, anchors in ((index, {"faq-title"}),
+                                          (reference, groups | new_questions | {"faq-title"})):
+                    for option in document.by_id("one-language-picker").children:
+                        if option.tag == "option":
+                            self.assertTrue(anchors <= set(option.attrs["data-fragments"].split()))
 
     def test_ids_and_guide_help_anchor_links_are_valid(self):
         for locale in LOCALES:

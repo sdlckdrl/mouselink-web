@@ -14,11 +14,11 @@ PENDING_TERMS = {
     "zh": ("计划", "尚未包含"),
 }
 NUMBERING_TERMS = {
-    "": ("메인 PC", "같은", "LAN", "기기 번호", "Bluetooth", "제외"),
-    "en": ("main PC", "same", "LAN", "device numbers", "Bluetooth", "excluded"),
-    "es": ("PC principal", "comparten", "LAN", "números", "Bluetooth", "fuera"),
-    "ja": ("メインPC", "同じ", "LAN", "番号", "Bluetooth", "除外"),
-    "zh": ("主电脑", "相同", "LAN", "编号", "Bluetooth", "不参与"),
+    "": ("메인 PC", "같은", "기기 번호", "Bluetooth", "제외"),
+    "en": ("main PC", "same", "device numbers", "Bluetooth", "excluded"),
+    "es": ("PC principal", "comparten", "números", "Bluetooth", "fuera"),
+    "ja": ("メインPC", "同じ", "番号", "Bluetooth", "除外"),
+    "zh": ("主电脑", "相同", "编号", "Bluetooth", "不参与"),
 }
 
 
@@ -69,6 +69,7 @@ class ReleaseGuideTest(unittest.TestCase):
                 cells = [node for node in row.children if node.tag == "td"]
                 self.assertEqual(2, len(cells))
                 content = cells[1].text()
+                self.assertNotIn("LAN", content)
                 for term in NUMBERING_TERMS[locale]:
                     self.assertIn(term.casefold(), content.casefold())
 

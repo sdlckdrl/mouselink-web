@@ -114,7 +114,10 @@ class MouseGestureHelpTest(unittest.TestCase):
                 toc, = [node for node in guide.root.walk() if node.tag == "nav" and node.attrs.get("class") == "toc"]
                 self.assertTrue(any(node.attrs.get("href") == "#mouse-gestures" for node in toc.walk()))
                 self.assertTrue(any(node.attrs.get("href") == "./help#mouse-gestures-faq" for node in guide.by_id("mouse-gestures").walk()))
-                self.assertTrue(any(node.attrs.get("href") == "./guide#mouse-gestures" for node in help_page.by_id("mouse-gestures-faq").walk()))
+                feature_route = f"/{locale}/features#mouse-gestures" if locale else "/features#mouse-gestures"
+                self.assertTrue(any(node.attrs.get("href") == feature_route
+                                    for node in help_page.by_id("mouse-gestures-faq").walk()))
+                Document(ROOT / locale / "features.html").by_id("mouse-gestures")
 
     def test_troubleshooting_is_in_the_main_faq_in_every_language(self):
         for locale in LOCALES:
@@ -128,7 +131,7 @@ class MouseGestureHelpTest(unittest.TestCase):
                     self.assertTrue(any(node.tag == "summary" and node.text() for node in item.children))
                     self.assertGreater(len(item.text()), 50)
                 start = page.by_id("mouse-gestures-faq").text()
-                for platform in ("PC", "Android", "Windows", "Mac"):
+                for platform in (("电脑" if locale == "zh" else "PC"), "Android", "Windows", "Mac"):
                     self.assertIn(platform, start)
 
     def test_guides_include_three_draw_steps_and_four_support_notes(self):

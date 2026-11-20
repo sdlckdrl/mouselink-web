@@ -21,6 +21,11 @@
     <link rel="alternate" hreflang="x-default" href="https://onemouse.pages.dev/help" />
   <link rel="stylesheet" href="/css/official-language-picker.css?v=1">
 <script src="/js/official-language-picker.js?v=1" defer></script>
+
+<style>
+.return-keys{display:inline-flex;align-items:center;gap:.18rem;white-space:nowrap;vertical-align:middle}
+.return-keys kbd,kbd.return-key{display:inline-block;white-space:nowrap;background:#174c91;color:#fff;border:1px solid #10376b;border-radius:.32rem;padding:.15rem .36rem;font:750 .79rem/1.35 system-ui,sans-serif;box-shadow:0 1px #10376b}
+</style>
 </head>
   <body>
     <header class="site">
@@ -33,7 +38,7 @@
           <a href="./help" class="on">帮助</a>
         </nav>
         <div class="hd-right">
-          <div class="one-language-select"><label class="one-language-label" for="one-language-picker">选择语言</label><select id="one-language-picker" data-language-picker data-current-language="zh" hidden><option value="ko" lang="ko" data-language-route="/help-reference" data-fragments="account-connect-help android-input-help bluetooth-help connection-drops connection-symptoms cursor-not-crossing default-pc-faq device-order-faq faq file-receive-folder-faq firewall-help mac-input-help mac-screen-help mouse-gestures-faq mouse-gestures-history mouse-gestures-minimize mouse-gestures-scroll notification-history notification-reply-faq order phone-notifications quick-help remote-control-help screen-sleep screenshot-preview-faq windows-remote-gestures-faq">한국어</option><option value="en" lang="en" data-language-route="/en/help-reference" data-fragments="account-connect-help android-input-help bluetooth-help connection-drops connection-symptoms cursor-not-crossing default-pc-faq device-order-faq faq file-receive-folder-faq firewall-help mac mac-input-help mac-screen-help mouse-gestures-faq mouse-gestures-history mouse-gestures-minimize mouse-gestures-scroll notification-history notification-reply-faq order phone-notifications quick-help remote-control-help screen-sleep screenshot-preview-faq windows-remote-gestures-faq">English</option><option value="ja" lang="ja" data-language-route="/ja/help-reference" data-fragments="account-connect-help android-input-help bluetooth-help connection-drops connection-symptoms cursor-not-crossing default-pc-faq device-order-faq faq file-receive-folder-faq firewall-help mac mac-input-help mac-screen-help mouse-gestures-faq mouse-gestures-history mouse-gestures-minimize mouse-gestures-scroll notification-history notification-reply-faq order phone-notifications quick-help remote-control-help screen-sleep screenshot-preview-faq windows-remote-gestures-faq">日本語</option><option value="zh" lang="zh" data-language-route="/zh/help-reference" data-fragments="account-connect-help android-input-help bluetooth-help connection-drops connection-symptoms cursor-not-crossing default-pc-faq device-order-faq faq file-receive-folder-faq firewall-help mac mac-input-help mac-screen-help mouse-gestures-faq mouse-gestures-history mouse-gestures-minimize mouse-gestures-scroll notification-history notification-reply-faq order phone-notifications quick-help remote-control-help screen-sleep screenshot-preview-faq windows-remote-gestures-faq" selected>中文</option><option value="es" lang="es" data-language-route="/es/help-reference" data-fragments="account-connect-help android-input-help bluetooth-help connection-drops connection-symptoms cursor-not-crossing default-pc-faq device-order-faq faq file-receive-folder-faq firewall-help mac mac-input-help mac-screen-help mouse-gestures-faq mouse-gestures-history mouse-gestures-minimize mouse-gestures-scroll notification-history notification-reply-faq order phone-notifications quick-help remote-control-help screen-sleep screenshot-preview-faq windows-remote-gestures-faq">Español</option></select><noscript><nav class="one-language-fallback" aria-label="选择语言"><a href="/help-reference" lang="ko" hreflang="ko">한국어</a><a href="/en/help-reference" lang="en" hreflang="en">English</a><a href="/ja/help-reference" lang="ja" hreflang="ja">日本語</a><span lang="zh" aria-current="true">中文</span><a href="/es/help-reference" lang="es" hreflang="es">Español</a></nav></noscript></div>
+          <div class="one-language-select"><label class="one-language-label" for="one-language-picker">选择语言</label><select id="one-language-picker" data-language-picker data-current-language="zh" hidden><option value="ko" lang="ko" data-language-route="/help-reference" data-fragments="account-connect-help android-input-help bluetooth-help connection-drops connection-symptoms cursor-not-crossing default-pc-faq device-order-faq faq faq-account-devices faq-android-input faq-connections faq-cursor-return faq-gestures faq-guest-wifi faq-mac-input faq-mac-screen faq-sharing faq-title file-receive-folder-faq firewall-help mac-input-help mac-screen-help mouse-gestures-faq mouse-gestures-history mouse-gestures-minimize mouse-gestures-scroll notification-history notification-reply-faq order phone-notifications quick-help remote-control-help screen-sleep screenshot-preview-faq windows-remote-gestures-faq">한국어</option><option value="en" lang="en" data-language-route="/en/help-reference" data-fragments="account-connect-help android-input-help bluetooth-help connection-drops connection-symptoms cursor-not-crossing default-pc-faq device-order-faq faq faq-account-devices faq-android-input faq-connections faq-cursor-return faq-gestures faq-guest-wifi faq-mac-input faq-mac-screen faq-sharing faq-title file-receive-folder-faq firewall-help mac mac-input-help mac-screen-help mouse-gestures-faq mouse-gestures-history mouse-gestures-minimize mouse-gestures-scroll notification-history notification-reply-faq order phone-notifications quick-help remote-control-help screen-sleep screenshot-preview-faq windows-remote-gestures-faq">English</option><option value="ja" lang="ja" data-language-route="/ja/help-reference" data-fragments="account-connect-help android-input-help bluetooth-help connection-drops connection-symptoms cursor-not-crossing default-pc-faq device-order-faq faq faq-account-devices faq-android-input faq-connections faq-cursor-return faq-gestures faq-guest-wifi faq-mac-input faq-mac-screen faq-sharing faq-title file-receive-folder-faq firewall-help mac mac-input-help mac-screen-help mouse-gestures-faq mouse-gestures-history mouse-gestures-minimize mouse-gestures-scroll notification-history notification-reply-faq order phone-notifications quick-help remote-control-help screen-sleep screenshot-preview-faq windows-remote-gestures-faq">日本語</option><option value="zh" lang="zh" data-language-route="/zh/help-reference" data-fragments="account-connect-help android-input-help bluetooth-help connection-drops connection-symptoms cursor-not-crossing default-pc-faq device-order-faq faq faq-account-devices faq-android-input faq-connections faq-cursor-return faq-gestures faq-guest-wifi faq-mac-input faq-mac-screen faq-sharing faq-title file-receive-folder-faq firewall-help mac mac-input-help mac-screen-help mouse-gestures-faq mouse-gestures-history mouse-gestures-minimize mouse-gestures-scroll notification-history notification-reply-faq order phone-notifications quick-help remote-control-help screen-sleep screenshot-preview-faq windows-remote-gestures-faq" selected>中文</option><option value="es" lang="es" data-language-route="/es/help-reference" data-fragments="account-connect-help android-input-help bluetooth-help connection-drops connection-symptoms cursor-not-crossing default-pc-faq device-order-faq faq faq-account-devices faq-android-input faq-connections faq-cursor-return faq-gestures faq-guest-wifi faq-mac-input faq-mac-screen faq-sharing faq-title file-receive-folder-faq firewall-help mac mac-input-help mac-screen-help mouse-gestures-faq mouse-gestures-history mouse-gestures-minimize mouse-gestures-scroll notification-history notification-reply-faq order phone-notifications quick-help remote-control-help screen-sleep screenshot-preview-faq windows-remote-gestures-faq">Español</option></select><noscript><nav class="one-language-fallback" aria-label="选择语言"><a href="/help-reference" lang="ko" hreflang="ko">한국어</a><a href="/en/help-reference" lang="en" hreflang="en">English</a><a href="/ja/help-reference" lang="ja" hreflang="ja">日本語</a><span lang="zh" aria-current="true">中文</span><a href="/es/help-reference" lang="es" hreflang="es">Español</a></nav></noscript></div>
           <a class="hd-cta" href="./#get">下载</a>
         </div>
       </div>
@@ -111,7 +116,7 @@
                 </li>
               </ol>
               <p>
-                找不到光标时，可按默认快捷键 <kbd>Ctrl+Alt+Backspace</kbd> 返回
+                找不到光标时，可按默认快捷键 <kbd class="return-key">Ctrl + Alt + Backspace</kbd> 返回
                 PC。如果改过快捷键，请使用自己设置的组合键。
               </p>
             </details>
@@ -345,188 +350,118 @@
       </section>
 
       <!-- FAQ -->
-      <section id="faq">
+      <section id="faq" aria-labelledby="faq-title">
         <div class="wrap narrow">
           <div class="sec-head">
-            <p class="ey">常见问题</p>
-            <h2 class="sec">大家最常遇到的问题。</h2>
+            <h2 class="sec" id="faq-title">常见问题</h2>
+            <p>选择一个主题，然后打开与您的设备和连接方式相符的问题。</p>
+            <nav aria-label="问题分类"><ul><li><a href="#faq-connections">连接与输入</a></li><li><a href="#faq-sharing">通知、文件与截图</a></li><li><a href="#faq-gestures">鼠标手势与远程窗口</a></li></ul></nav>
           </div>
-          <div class="faq">
-            <details id="notification-reply-faq">
-              <summary>没有回复按钮，或回复无法发送。</summary>
-              <div class="a">
-                <p>
-                  电脑与Android需使用支持回复的版本，手机原始通知需支持自由输入回复。仅主电脑实时通知可用；隐藏/敏感内容、验证码及历史记录除外。
-                </p>
-                <p>
-                  发送出错时检查手机锁定、通知删除/过期及连接。失败或超时不自动重发，请查看手机会话。“已传给手机应用”仅表示调用原应用回复，不是对方接收确认。<a
-                    href="./guide#notifications"
-                    >查看回复方法</a
-                  >
-                </p>
-              </div>
+          <div class="panel" id="faq-connections">
+            <h3>连接与输入</h3>
+            <details class="fold" id="faq-account-devices">
+              <summary><span>设备使用同一个 Google 账号，为什么有一台不显示？</span></summary>
+              <div class="fold-body"><p>在两台设备上打开 OneMouse，确认两台设备均已联网，并登录了同一个 Google 账号，然后刷新设备列表。如果设备已显示，但鼠标指针无法移过去，请分别检查连接状态和设备布局。 <a class="text-link" href="/zh/guide#connect-account">Google 账号连接</a></p></div>
             </details>
-            <details id="device-order-faq">
-              <summary>想更改设备编号，却找不到编辑顺序。</summary>
-              <div class="a">
-                <p>
-                  主电脑设备管理中有两台以上LAN设备时可编辑顺序。自动保存并更新连接/远程窗口编号，屏幕布局与按键组合不变。蓝牙顺序不变，副电脑角色不可编辑。<a
-                    href="./guide#device-order"
-                    >更改设备顺序</a
-                  >
-                </p>
-              </div>
+            <details class="fold" id="connection-drops">
+              <summary><span>为什么连接总是断开？</span></summary>
+              <div class="fold-body"><p>屏幕亮起时，检查两台设备是否仍连接到您要使用的网络，以及问题是否只在使用某台路由器时出现。如果只在熄屏后断开，请检查 Android 的电池设置，不要仅凭多久断开来判断原因。 <a class="text-link" href="/zh/guide#quick">局域网自动重连</a></p></div>
             </details>
-            <details id="windows-remote-gestures-faq">
-              <summary>Windows远程窗口中的浏览器手势不起作用。</summary>
-              <div class="a">
-                <p>
-                  使用Windows版OneMouse
-                  1.5.4以上，并启用目标浏览器的手势扩展或功能。远程窗口转发右键拖动，与手机直接控制用的Android内置手势不同。
-                </p>
-                <p>
-                  可同时打开多台设备的远程窗口；再次输入同一快捷键编号会将对应窗口置前。<a
-                    href="./guide#remote"
-                    >查看远程窗口使用方法</a
-                  >
-                </p>
-              </div>
+            <details class="fold" id="firewall-help">
+              <summary><span>为什么手机能看到电脑，电脑却看不到手机？</span></summary>
+              <div class="fold-body"><p>如果使用局域网发现设备，请确认两台设备都已打开 OneMouse，并连接到同一台路由器。检查 Windows 防火墙是否允许 OneMouse 在这个可信网络上通信。请勿关闭防火墙，也不要把公共网络设为专用网络。</p></div>
             </details>
-            <details id="default-pc-faq">
-              <summary>从手机分享的文件没有发送到电脑。</summary>
-              <div class="a">
-                <p>
-                  Wi-Fi/LAN发送需在手机主页选择主电脑角色的默认电脑，检查配对与连接（副电脑除外）。蓝牙已连接时，无需默认电脑即可发送。<a
-                    href="./guide#text-to-pc"
-                    >从手机发送到电脑</a
-                  >
-                </p>
-              </div>
+            <details class="fold" id="faq-guest-wifi">
+              <summary><span>为什么在家能配对，在办公室或访客 Wi-Fi 上却不行？</span></summary>
+              <div class="fold-body"><p>即使连接到同名 Wi-Fi，某些网络也会阻止设备之间通信。使用同一 Google 账号能看到设备，并不保证该网络支持所有功能。可改用允许设备互通的可信网络，或在设备组合支持时使用蓝牙（测试版）。</p></div>
             </details>
-            <details id="file-receive-folder-faq">
-              <summary>无法更改或打开电脑的接收文件夹。</summary>
-              <div class="a">
-                <p>
-                  主/副电脑均可在设置 → 常规 → 文件传输 →
-                  接收文件保存位置中更改或打开文件夹。出错时检查写入权限、USB/网络连接，或选择其他可访问文件夹。已有文件不移动，截图保存位置独立。<a
-                    href="./guide#file-receive-folder"
-                    >查看接收文件夹设置</a
-                  >
-                </p>
-              </div>
+            <details class="fold" id="faq-android-input">
+              <summary><span>显示已连接，为什么在 Android 上无法使用鼠标和键盘？</span></summary>
+              <div class="fold-body"><p>在 Android 上打开「设置」→「无障碍」→「已安装的应用」，检查 OneMouse。如果已开启但服务仍显示断开，请关闭后重新开启。在电脑的设备布局中，确认鼠标指针经过了标记的进入区域。 <a class="text-link" href="/zh/guide#android">设置 Android 输入</a></p></div>
             </details>
-            <details id="screenshot-preview-faq">
-              <summary>截图后光标没有返回，或预览窗口关闭了。</summary>
-              <div class="a">
-                <p>
-                  两端支持版本会让光标留在受控设备，仅显示独立预览；主窗口保持托盘/最小化状态。复制/保存成功后关闭，取消保存或失败时保留。使用预览前，请自行将光标移回主电脑。
-                </p>
-              </div>
+            <details class="fold" id="faq-mac-input">
+              <summary><span>列表里有 Mac，为什么无法点击或输入？</span></summary>
+              <div class="fold-body"><p>在 Mac 上打开「系统设置」→「隐私与安全性」→「辅助功能」，检查 OneMouse。授予权限后重新打开 OneMouse，再把指针移到 Mac 上，试着在普通文本框里输入。 <a class="text-link" href="/zh/features#permissions">Mac 权限</a></p></div>
             </details>
-            <details id="mouse-gestures-faq">
-              <summary>鼠标手势无法启动。</summary>
-              <div class="a">
-                <p>
-                  使用PC/Android支持版本，在Android设置 → 输入 ·
-                  剪贴板启用鼠标手势并选择当前应用（默认关闭）。光标移入手机，右键拖动后松开执行，不适用于Windows、Mac或镜像窗口。
-                </p>
-                <p>
-                  “所有应用”包含有启动图标的已安装应用及主屏幕。OneMouse、锁屏、权限对话框等系统界面除外，支持动作因应用/界面而异。
-                </p>
-                <p><a href="./guide#mouse-gestures">查看手势使用方法和完整列表</a></p>
-              </div>
+            <details class="fold" id="faq-mac-screen">
+              <summary><span>为什么 Mac 的屏幕或窗口显示为黑色？</span></summary>
+              <div class="fold-body"><p>在 Mac 上检查 OneMouse 的「屏幕录制」权限。某些 macOS 版本称其为「屏幕与系统音频录制」。如果更改了权限，请按 macOS 的提示重新打开应用，然后重新开始共享。 <a class="text-link" href="/zh/features#permissions">Mac 屏幕录制权限</a></p></div>
             </details>
-            <details id="mouse-gestures-history">
-              <summary>前进或刷新不起作用。</summary>
-              <div class="a">
-                前进是返回后恢复历史页面，不是进入下一篇文章。刷新需要可识别的浏览器原生按钮，已选应用的部分界面也可能不支持。
-              </div>
+            <details class="fold" id="faq-cursor-return">
+              <summary><span>怎样让鼠标指针回到电脑？</span></summary>
+              <div class="fold-body"><p>在 Windows 上，默认的紧急返回快捷键是 <kbd class="return-key">Ctrl + Alt + Backspace</kbd>。如果修改过，请使用保存的快捷键。如果禁用了快捷键，请将指针移过用于返回的屏幕边缘。 <a class="text-link" href="/zh/features#shortcut-return">返回快捷键设置</a></p></div>
             </details>
-            <details id="mouse-gestures-minimize">
-              <summary>下 → 右会关闭应用吗？</summary>
-              <div class="a">
-                不会。先向下再向右绘制，是两段顺序动作，不是一条斜线。仅返回主屏幕，不关闭应用、标签页或最近任务卡片。上
-                → 右打开最近应用列表，便于选择其他应用。
-              </div>
+            <details class="fold" id="screen-sleep">
+              <summary><span>为什么只在 Android 熄屏后断开连接？</span></summary>
+              <div class="fold-body"><p>检查 Android 是否限制 OneMouse 在后台使用电池。如果手机提供相关设置，可以试着将 OneMouse 的电池使用设为「不受限制」。具体的选项名称和行为因厂商而异。</p></div>
             </details>
-            <details id="mouse-gestures-scroll">
-              <summary>如何调整和停止上下滚动？</summary>
-              <div class="a">
-                <p>
-                  上下笔画越长滚动越多，越短越少；松开右键后才执行（绘制时不移动）。箭头和竖向进度条表示方向及笔画强度，不是文档位置或准确距离。
-                </p>
-                <ul>
-                  <li>
-                    从页面正文开始。过短、未完成或取消的笔画不执行，不移动的短右击保留原有功能。
-                  </li>
-                  <li>
-                    移动量因应用而异；主屏幕/应用抽屉仅滑动一次。其他长滚动分多次滑动，最多8屏/10秒。
-                  </li>
-                  <li>点击、新手势、切换应用或结束控制会取消剩余滚动。仅移动光标不会停止。</li>
-                </ul>
-              </div>
+            <details class="fold" id="bluetooth-help">
+              <summary><span>使用蓝牙（测试版）时，应该先检查什么？</span></summary>
+              <div class="fold-body"><p>确认蓝牙已开启，且受支持的设备已在 OneMouse 中配对并连接。如需使用远程屏幕，请采用设备组合对应的连接方式。蓝牙能传输基本的鼠标和键盘输入，并不代表它支持屏幕共享。 <a class="text-link" href="/zh/compatibility#support">按设备组合查看支持范围</a></p></div>
             </details>
-            <details id="connection-drops">
-              <summary>每隔 10 秒左右就一直断开。</summary>
-              <div class="a">
-                检查访客/公司 Wi-Fi 的客户端隔离和<a class="text-link" href="#firewall-help"
-                  >Windows 防火墙</a
-                >。 手机待机时断开，请检查<a class="text-link" href="#screen-sleep"
-                  >电池和省电设置</a
-                >。
-              </div>
-            </details>
-            <details id="firewall-help">
-              <summary>手机能看到电脑，但电脑看不到手机。</summary>
-              <div class="a">
-                多半是
-                <b>Windows 防火墙入站</b
-                >的问题。如果当前网络是<b>“公用（Public）”</b>，入站可能被拦截，请改为<b>“专用（Private）”</b>，或在防火墙中允许
-                OneMouse 的入站。
-              </div>
-            </details>
-            <details>
-              <summary>在家能用，但在公司、咖啡馆的 Wi-Fi 用不了。</summary>
-              <div class="a">
-                公用/访客 Wi-Fi
-                为了安全，常会<b>隔离设备之间的通信（客户端隔离）</b>。这种情况下，即使是同一个
-                Wi-Fi 也彼此找不到。请改用 <b>Bluetooth 连接</b>或个人热点。
-              </div>
-            </details>
-            <details>
-              <summary>说是连上了，可鼠标、键盘不起作用。</summary>
-              <div class="a">
-                按<a class="text-link" href="#android-input-help">Android 无障碍检查方法</a>重新开启
-                OneMouse。
-              </div>
-            </details>
-            <details>
-              <summary>光标卡在手机/另一台电脑上回不来。</summary>
-              <div class="a">
-                <a class="text-link" href="#quick-help">检查紧急返回键及其设置</a>。
-              </div>
-            </details>
-            <details id="screen-sleep">
-              <summary>屏幕一息屏，连接就断了。</summary>
-              <div class="a">
-                屏幕息屏时，手机的 Wi-Fi 可能进入省电，或应用因电池优化而休眠。在 Android 中把
-                OneMouse 设为<b>电池优化例外</b>会更稳定。也请查看连接期间的防止息屏选项。
-              </div>
-            </details>
-            <details id="bluetooth-help">
-              <summary>Bluetooth 连接或远程画面不正常。</summary>
-              <div class="a">
-                连接出错时，在两端系统 Bluetooth 设置中删除原有配对，再重新配对。
-                大文件和手机远程画面建议使用 Wi-Fi 或 LAN。Mac 屏幕和窗口共享仅支持 LAN。
-                <a class="text-link" href="./guide#bluetooth">Bluetooth 连接步骤</a>
-              </div>
+            <details class="fold" id="device-order-faq">
+              <summary><span>为什么在 Windows 上无法调整设备顺序？</span></summary>
+              <div class="fold-body"><p>在主电脑的“设备管理”中，若列表中有至少两台可调整顺序的已注册设备，请查找“编辑列表顺序”。支持编号快捷键的设备会按列表顺序排列，屏幕布局不变。蓝牙设备不参与排序。 <a class="text-link" href="/zh/guide#device-order">设备列表排序指南</a></p></div>
             </details>
           </div>
-          <div style="margin-top: 22px">
-            <a class="btn btn-sec sm" href="./guide">返回使用指南</a>
+          <div class="panel" id="faq-sharing">
+            <h3>通知、文件与截图</h3>
+            <details class="fold" id="notification-reply-faq">
+              <summary><span>为什么在电脑上无法回复通知？</span></summary>
+              <div class="fold-body"><p>确认 Android 上的原始通知提供回复框，并且仍然有效。在主电脑上，请从当前显示的通知尝试回复，不要从历史记录回复。被隐藏的通知或敏感通知不支持回复。如果回复超时，请先查看原应用，再重试。 电脑和 Android 两端都需要支持回复的应用版本。“已传给手机应用”只表示回复已交给原始应用，并不代表对方确认接收。 <a class="text-link" href="/zh/features#notifications">通知和回复设置</a></p></div>
+            </details>
+            <details class="fold" id="default-pc-faq">
+              <summary><span>为什么从手机分享的文件没有传到电脑？</span></summary>
+              <div class="fold-body"><p>蓝牙连接已启用时，优先使用当前连接的电脑。否则，请在 Android 版 OneMouse 中确认 Wi-Fi 或局域网的默认电脑已配对、可用且为主电脑。若默认电脑不可用，可在文件分享界面选择其他符合条件的已配对电脑。 <a class="text-link" href="/zh/features#text-to-pc">从手机向电脑发送文件和文本</a></p></div>
+            </details>
+            <details class="fold" id="file-receive-folder-faq">
+              <summary><span>在 Windows 上收到的文件保存在哪里？</span></summary>
+              <div class="fold-body"><p>在 OneMouse 中打开「设置」→「常规」→「文件传输」，查看接收文件夹。如果无法打开该文件夹，请尝试选择已连接驱动器上可写入的文件夹。更改位置不会移动已接收的文件。截图保存在单独的位置。 <a class="text-link" href="/zh/features#file-receive-folder">更改接收文件夹</a></p></div>
+            </details>
+            <details class="fold" id="screenshot-preview-faq">
+              <summary><span>为什么截图预览会关闭，或者鼠标指针没有返回？</span></summary>
+              <div class="fold-body"><p>两台设备均支持时，截图可以让指针留在被控设备上，而不是强制返回。将指针移回来即可操作预览。复制或保存成功后，预览会关闭；取消保存或保存失败时，预览会保留。</p></div>
+            </details>
           </div>
+          <div class="panel" id="faq-gestures">
+            <h3>鼠标手势与远程窗口</h3>
+            <details class="fold" id="windows-remote-gestures-faq">
+              <summary><span>为什么在 Windows 远程窗口里无法使用浏览器手势？</span></summary>
+              <div class="fold-body"><p>在 Windows 远程窗口中按住鼠标右键拖动时，操作会转发到远程设备。如果目标浏览器支持手势，请在该浏览器中启用。这与直接控制 Android 时使用的 OneMouse 手势是两项不同的功能。 <a class="text-link" href="/zh/features#remote">远程窗口指南</a></p></div>
+            </details>
+            <details class="fold" id="mouse-gestures-faq">
+              <summary><span>怎样在 Android 上使用 OneMouse 鼠标手势？</span></summary>
+              <div class="fold-body"><p>在 Android 版 OneMouse 中打开「设置」→「输入与剪贴板」，开启鼠标手势，并允许在目标应用中使用。将电脑的指针移到 Android 上，按住鼠标右键画出手势，然后松开。Android 系统界面和权限设置界面不支持手势。 此 Android 手势不适用于 Windows、Mac 或单独打开的远程窗口。 <a class="text-link" href="/zh/features#mouse-gestures">鼠标手势指南</a></p></div>
+            </details>
+            <details class="fold" id="mouse-gestures-history">
+              <summary><span>为什么部分 Android 应用不支持「前进」或「重新加载」？</span></summary>
+              <div class="fold-body"><p>「前进」会回到执行「后退」前所看的页面，不会跳到信息流中的下一项。「重新加载」依赖兼容的浏览器控件，即使已允许在该应用中使用手势，某些界面也可能不支持。</p></div>
+            </details>
+            <details class="fold" id="mouse-gestures-minimize">
+              <summary><span>先向下、再向右画，会关闭 Android 应用吗？</span></summary>
+              <div class="fold-body"><p>不会。先向下画，再转向右侧，然后松开鼠标右键。这样会返回主屏幕，不会关闭应用或标签页。先向上、再向右会打开最近使用的应用列表。斜着画不等于这个手势。</p></div>
+            </details>
+            <details class="fold" id="mouse-gestures-scroll">
+              <summary><span>怎样控制或停止 Android 上的滚动手势？</span></summary>
+              <div class="fold-body"><p>在正文区域向上或向下绘制，然后松开鼠标右键。绘制时不会滚动。笔画越长滚动越多，越短滚动越少，实际距离因应用而异。箭头和竖向指示条表示方向和笔画强度，并非文档位置。长距离滚动最多 8 屏或 10 秒。点击、开始新手势、切换应用或结束控制可以取消剩余滚动。仅移动光标不会停止。</p></div>
+            </details>
+          </div>
+          <p><a class="text-link" href="/zh/help">返回快速排查</a></p>
         </div>
       </section>
+<script>
+  (() => {
+    const faq = document.getElementById('faq');
+    function openQuestion() {
+      if (!/^#[a-z0-9-]+$/.test(location.hash)) return;
+      const question = document.getElementById(location.hash.slice(1));
+      if (question?.tagName !== 'DETAILS' || !faq.contains(question)) return;
+      question.open = true;
+    }
+    openQuestion();
+    window.addEventListener('hashchange', openQuestion);
+  })();
+</script>
     </main>
 
     <footer class="site">
