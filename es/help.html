@@ -83,6 +83,25 @@
 .return-keys{display:inline-flex;align-items:center;gap:.18rem;white-space:nowrap;vertical-align:middle}
 .return-keys kbd,kbd.return-key{display:inline-block;white-space:nowrap;background:#174c91;color:#fff;border:1px solid #10376b;border-radius:.32rem;padding:.15rem .36rem;font:750 .79rem/1.35 system-ui,sans-serif;box-shadow:0 1px #10376b}
 </style>
+<style>
+.support-faq{margin-top:2rem;scroll-margin-top:1rem}
+.support-faq h2{margin-bottom:.35rem}
+.support-faq nav{display:block;margin:1rem 0 1.25rem}
+.support-faq nav ul{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.65rem;list-style:none;margin:0;padding:0}
+.support-faq nav a{display:flex;align-items:center;justify-content:space-between;gap:.4rem;border:1px solid var(--line);border-radius:10px;background:var(--panel);color:var(--mint);font-weight:720;padding:.65rem .85rem;line-height:1.4;height:100%;min-height:48px}
+.support-faq nav a::after{content:"↓";flex:none}
+.support-faq nav a:hover,.support-faq nav a:focus-visible{text-decoration:underline;border-color:var(--mint)}
+.support-faq .panel{border:1px solid var(--line);background:var(--panel);border-radius:14px;padding:.7rem 1.05rem;margin-bottom:.8rem;scroll-margin-top:1rem}
+.support-faq .panel h3{margin:.35rem 0 .6rem}
+.support-faq details{padding:0;scroll-margin-top:1rem}
+.support-faq details summary{padding:.72rem .15rem;color:var(--text)}
+.support-faq details summary:hover,.support-faq details[open] summary{color:var(--mint)}
+.support-faq .fold-body{padding:.05rem .15rem .7rem}
+.support-faq .fold-body p{color:var(--muted);max-width:75ch}
+.faq-support-links{border-top:1px solid var(--line);margin-top:1.2rem;padding-top:.9rem}
+.faq-support-links h2{font-size:1.05rem;margin-bottom:.2rem}
+@media(max-width:680px){.support-faq nav ul{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
 <a class="skip" href="#main">Saltar al contenido</a>
@@ -90,7 +109,7 @@
   <a class="preview-brand" href="/es/" aria-label="Inicio de OneMouse"><span class="preview-mark" aria-hidden="true"><img src="/assets/preview/onemouse-android-icon.png" alt="" width="33" height="33"></span>OneMouse</a>
   <nav class="preview-nav" aria-label="Navegación de OneMouse"><a href="/es/">Inicio</a><a href="/es/features">Funciones</a><a href="/es/guide">Guía de conexión</a><a href="/es/help" aria-current="page">Ayuda</a><a href="/es/download">Descargas</a></nav>
 
-  <div class="one-language-select"><label class="one-language-label" for="one-language-picker">Idioma</label><select id="one-language-picker" data-language-picker data-current-language="es" hidden><option value="ko" lang="ko" data-language-route="/help" data-fragments="account-connect-help alerts alerts-title android-input-help bluetooth-help connection-drops connection-symptoms cursor cursor-not-crossing cursor-title default-pc-faq device-order-faq discovery discovery-title drops drops-title faq faq-title file-receive-folder-faq firewall-help jump-title mac-help mac-input-help mac-screen-help main more-title mouse-gestures-faq mouse-gestures-history mouse-gestures-minimize mouse-gestures-scroll notification-history notification-reply-faq order phone-notifications quick-help remote remote-control-help remote-title rescue-title screen-sleep screenshot-preview-faq sharing sharing-title windows-remote-gestures-faq">한국어</option><option value="en" lang="en" data-language-route="/en/help" data-fragments="account-connect-help alerts alerts-title android-input-help bluetooth-help connection-drops connection-symptoms cursor cursor-not-crossing cursor-title default-pc-faq device-order-faq discovery discovery-title drops drops-title faq faq-title file-receive-folder-faq firewall-help jump-title mac mac-help mac-input-help mac-screen-help main more-title mouse-gestures-faq mouse-gestures-history mouse-gestures-minimize mouse-gestures-scroll notification-history notification-reply-faq order phone-notifications quick-help remote remote-control-help remote-title rescue-title screen-sleep screenshot-preview-faq sharing sharing-title windows-remote-gestures-faq">English</option><option value="ja" lang="ja" data-language-route="/ja/help" data-fragments="account-connect-help alerts alerts-title android-input-help bluetooth-help connection-drops connection-symptoms cursor cursor-not-crossing cursor-title default-pc-faq device-order-faq discovery discovery-title drops drops-title faq faq-title file-receive-folder-faq firewall-help jump-title mac mac-help mac-input-help mac-screen-help main more-title mouse-gestures-faq mouse-gestures-history mouse-gestures-minimize mouse-gestures-scroll notification-history notification-reply-faq order phone-notifications quick-help remote remote-control-help remote-title rescue-title screen-sleep screenshot-preview-faq sharing sharing-title windows-remote-gestures-faq">日本語</option><option value="zh" lang="zh" data-language-route="/zh/help" data-fragments="account-connect-help alerts alerts-title android-input-help bluetooth-help connection-drops connection-symptoms cursor cursor-not-crossing cursor-title default-pc-faq device-order-faq discovery discovery-title drops drops-title faq faq-title file-receive-folder-faq firewall-help jump-title mac mac-help mac-input-help mac-screen-help main more-title mouse-gestures-faq mouse-gestures-history mouse-gestures-minimize mouse-gestures-scroll notification-history notification-reply-faq order phone-notifications quick-help remote remote-control-help remote-title rescue-title screen-sleep screenshot-preview-faq sharing sharing-title windows-remote-gestures-faq">中文</option><option value="es" lang="es" data-language-route="/es/help" data-fragments="account-connect-help alerts alerts-title android-input-help bluetooth-help connection-drops connection-symptoms cursor cursor-not-crossing cursor-title default-pc-faq device-order-faq discovery discovery-title drops drops-title faq faq-title file-receive-folder-faq firewall-help jump-title mac mac-help mac-input-help mac-screen-help main more-title mouse-gestures-faq mouse-gestures-history mouse-gestures-minimize mouse-gestures-scroll notification-history notification-reply-faq order phone-notifications quick-help remote remote-control-help remote-title rescue-title screen-sleep screenshot-preview-faq sharing sharing-title windows-remote-gestures-faq" selected>Español</option></select><noscript><nav class="one-language-fallback" aria-label="Idioma"><a href="/help" lang="ko" hreflang="ko">한국어</a><a href="/en/help" lang="en" hreflang="en">English</a><a href="/ja/help" lang="ja" hreflang="ja">日本語</a><a href="/zh/help" lang="zh" hreflang="zh">中文</a><span lang="es" aria-current="true">Español</span></nav></noscript></div>
+  <div class="one-language-select"><label class="one-language-label" for="one-language-picker">Idioma</label><select id="one-language-picker" data-language-picker data-current-language="es" hidden><option value="ko" lang="ko" data-language-route="/help" data-fragments="account-connect-help alerts alerts-title android-input-help bluetooth-help connection-drops connection-symptoms cursor cursor-not-crossing cursor-title default-pc-faq device-order-faq discovery discovery-title drops drops-title faq faq-account-devices faq-android-input faq-connections faq-cursor-return faq-gestures faq-guest-wifi faq-mac-input faq-mac-screen faq-sharing faq-title file-receive-folder-faq firewall-help jump-title mac-help mac-input-help mac-screen-help main more-title mouse-gestures-faq mouse-gestures-history mouse-gestures-minimize mouse-gestures-scroll notification-history notification-reply-faq order phone-notifications quick-help remote remote-control-help remote-title rescue-title screen-sleep screenshot-preview-faq sharing sharing-title windows-remote-gestures-faq">한국어</option><option value="en" lang="en" data-language-route="/en/help" data-fragments="account-connect-help alerts alerts-title android-input-help bluetooth-help connection-drops connection-symptoms cursor cursor-not-crossing cursor-title default-pc-faq device-order-faq discovery discovery-title drops drops-title faq faq-account-devices faq-android-input faq-connections faq-cursor-return faq-gestures faq-guest-wifi faq-mac-input faq-mac-screen faq-sharing faq-title file-receive-folder-faq firewall-help jump-title mac mac-help mac-input-help mac-screen-help main more-title mouse-gestures-faq mouse-gestures-history mouse-gestures-minimize mouse-gestures-scroll notification-history notification-reply-faq order phone-notifications quick-help remote remote-control-help remote-title rescue-title screen-sleep screenshot-preview-faq sharing sharing-title windows-remote-gestures-faq">English</option><option value="ja" lang="ja" data-language-route="/ja/help" data-fragments="account-connect-help alerts alerts-title android-input-help bluetooth-help connection-drops connection-symptoms cursor cursor-not-crossing cursor-title default-pc-faq device-order-faq discovery discovery-title drops drops-title faq faq-account-devices faq-android-input faq-connections faq-cursor-return faq-gestures faq-guest-wifi faq-mac-input faq-mac-screen faq-sharing faq-title file-receive-folder-faq firewall-help jump-title mac mac-help mac-input-help mac-screen-help main more-title mouse-gestures-faq mouse-gestures-history mouse-gestures-minimize mouse-gestures-scroll notification-history notification-reply-faq order phone-notifications quick-help remote remote-control-help remote-title rescue-title screen-sleep screenshot-preview-faq sharing sharing-title windows-remote-gestures-faq">日本語</option><option value="zh" lang="zh" data-language-route="/zh/help" data-fragments="account-connect-help alerts alerts-title android-input-help bluetooth-help connection-drops connection-symptoms cursor cursor-not-crossing cursor-title default-pc-faq device-order-faq discovery discovery-title drops drops-title faq faq-account-devices faq-android-input faq-connections faq-cursor-return faq-gestures faq-guest-wifi faq-mac-input faq-mac-screen faq-sharing faq-title file-receive-folder-faq firewall-help jump-title mac mac-help mac-input-help mac-screen-help main more-title mouse-gestures-faq mouse-gestures-history mouse-gestures-minimize mouse-gestures-scroll notification-history notification-reply-faq order phone-notifications quick-help remote remote-control-help remote-title rescue-title screen-sleep screenshot-preview-faq sharing sharing-title windows-remote-gestures-faq">中文</option><option value="es" lang="es" data-language-route="/es/help" data-fragments="account-connect-help alerts alerts-title android-input-help bluetooth-help connection-drops connection-symptoms cursor cursor-not-crossing cursor-title default-pc-faq device-order-faq discovery discovery-title drops drops-title faq faq-account-devices faq-android-input faq-connections faq-cursor-return faq-gestures faq-guest-wifi faq-mac-input faq-mac-screen faq-sharing faq-title file-receive-folder-faq firewall-help jump-title mac mac-help mac-input-help mac-screen-help main more-title mouse-gestures-faq mouse-gestures-history mouse-gestures-minimize mouse-gestures-scroll notification-history notification-reply-faq order phone-notifications quick-help remote remote-control-help remote-title rescue-title screen-sleep screenshot-preview-faq sharing sharing-title windows-remote-gestures-faq" selected>Español</option></select><noscript><nav class="one-language-fallback" aria-label="Idioma"><a href="/help" lang="ko" hreflang="ko">한국어</a><a href="/en/help" lang="en" hreflang="en">English</a><a href="/ja/help" lang="ja" hreflang="ja">日本語</a><a href="/zh/help" lang="zh" hreflang="zh">中文</a><span lang="es" aria-current="true">Español</span></nav></noscript></div>
 </div></header>
 <main class="wrap" id="main">
   <div class="hero">
@@ -117,20 +136,6 @@
     <section id="mac-screen-help" data-legacy-link aria-label="La pantalla del Mac se ve en blanco en la ventana de control remoto de Windows."><h2>La pantalla del Mac se ve en blanco en la ventana de control remoto de Windows.</h2><p>Consulta la ayuda detallada sobre este tema.</p><p><a href="/es/help-reference#mac-screen-help">Abrir la ayuda detallada</a></p></section>
     <section id="phone-notifications" data-legacy-link aria-label="Cuando las notificaciones del teléfono no aparecen en el PC."><h2>Cuando las notificaciones del teléfono no aparecen en el PC.</h2><p>Consulta los pasos rápidos o abre la ayuda detallada sobre este tema.</p><p><a href="#alerts">Ver pasos rápidos</a> · <a href="/es/help-reference#phone-notifications">Abrir la ayuda detallada</a></p></section>
     <section id="notification-history" data-legacy-link aria-label="Historial de notificaciones y borrado"><h2>Historial de notificaciones y borrado</h2><p>Consulta la ayuda detallada sobre este tema.</p><p><a href="/es/help-reference#notification-history">Abrir la ayuda detallada</a></p></section>
-    <section id="notification-reply-faq" data-legacy-link aria-label="No aparece Responder o la respuesta no se envía."><h2>No aparece Responder o la respuesta no se envía.</h2><p>Consulta la ayuda detallada sobre este tema.</p><p><a href="/es/help-reference#notification-reply-faq">Abrir la ayuda detallada</a></p></section>
-    <section id="device-order-faq" data-legacy-link aria-label="¿Cómo cambio los números si no aparece Editar orden?"><h2>¿Cómo cambio los números si no aparece Editar orden?</h2><p>Consulta la ayuda detallada sobre este tema.</p><p><a href="/es/help-reference#device-order-faq">Abrir la ayuda detallada</a></p></section>
-    <section id="windows-remote-gestures-faq" data-legacy-link aria-label="Los gestos del navegador no funcionan en la ventana remota de Windows."><h2>Los gestos del navegador no funcionan en la ventana remota de Windows.</h2><p>Consulta la ayuda detallada sobre este tema.</p><p><a href="/es/help-reference#windows-remote-gestures-faq">Abrir la ayuda detallada</a></p></section>
-    <section id="default-pc-faq" data-legacy-link aria-label="Un archivo compartido desde el teléfono no llega al PC."><h2>Un archivo compartido desde el teléfono no llega al PC.</h2><p>Consulta la ayuda detallada sobre este tema.</p><p><a href="/es/help-reference#default-pc-faq">Abrir la ayuda detallada</a></p></section>
-    <section id="file-receive-folder-faq" data-legacy-link aria-label="No puedo cambiar ni abrir la carpeta de archivos recibidos del PC."><h2>No puedo cambiar ni abrir la carpeta de archivos recibidos del PC.</h2><p>Consulta la ayuda detallada sobre este tema.</p><p><a href="/es/help-reference#file-receive-folder-faq">Abrir la ayuda detallada</a></p></section>
-    <section id="screenshot-preview-faq" data-legacy-link aria-label="El cursor no vuelve tras capturar o la vista previa se cierra."><h2>El cursor no vuelve tras capturar o la vista previa se cierra.</h2><p>Consulta la ayuda detallada sobre este tema.</p><p><a href="/es/help-reference#screenshot-preview-faq">Abrir la ayuda detallada</a></p></section>
-    <section id="mouse-gestures-faq" data-legacy-link aria-label="Los gestos del ratón no se inician."><h2>Los gestos del ratón no se inician.</h2><p>Consulta la ayuda detallada sobre este tema.</p><p><a href="/es/help-reference#mouse-gestures-faq">Abrir la ayuda detallada</a></p></section>
-    <section id="mouse-gestures-history" data-legacy-link aria-label="Adelante o Recargar no funciona."><h2>Adelante o Recargar no funciona.</h2><p>Consulta la ayuda detallada sobre este tema.</p><p><a href="/es/help-reference#mouse-gestures-history">Abrir la ayuda detallada</a></p></section>
-    <section id="mouse-gestures-minimize" data-legacy-link aria-label="¿Abajo → derecha cierra la app?"><h2>¿Abajo → derecha cierra la app?</h2><p>Consulta la ayuda detallada sobre este tema.</p><p><a href="/es/help-reference#mouse-gestures-minimize">Abrir la ayuda detallada</a></p></section>
-    <section id="mouse-gestures-scroll" data-legacy-link aria-label="¿Cómo ajusto y detengo el desplazamiento arriba y abajo?"><h2>¿Cómo ajusto y detengo el desplazamiento arriba y abajo?</h2><p>Consulta la ayuda detallada sobre este tema.</p><p><a href="/es/help-reference#mouse-gestures-scroll">Abrir la ayuda detallada</a></p></section>
-    <section id="connection-drops" data-legacy-link aria-label="Se desconecta cada 10 segundos aproximadamente."><h2>Se desconecta cada 10 segundos aproximadamente.</h2><p>Consulta la ayuda detallada sobre este tema.</p><p><a href="/es/help-reference#connection-drops">Abrir la ayuda detallada</a></p></section>
-    <section id="firewall-help" data-legacy-link aria-label="El teléfono ve el PC, pero el PC no ve el teléfono."><h2>El teléfono ve el PC, pero el PC no ve el teléfono.</h2><p>Consulta la ayuda detallada sobre este tema.</p><p><a href="/es/help-reference#firewall-help">Abrir la ayuda detallada</a></p></section>
-    <section id="screen-sleep" data-legacy-link aria-label="La conexión se corta cuando se apaga la pantalla."><h2>La conexión se corta cuando se apaga la pantalla.</h2><p>Consulta la ayuda detallada sobre este tema.</p><p><a href="/es/help-reference#screen-sleep">Abrir la ayuda detallada</a></p></section>
-    <section id="bluetooth-help" data-legacy-link aria-label="La conexión Bluetooth o la pantalla remota no funcionan bien."><h2>La conexión Bluetooth o la pantalla remota no funcionan bien.</h2><p>Consulta la ayuda detallada sobre este tema.</p><p><a href="/es/help-reference#bluetooth-help">Abrir la ayuda detallada</a></p></section>
   <section aria-labelledby="jump-title">
     <h2 id="jump-title">Buscar por síntoma</h2>
     <nav class="jump" aria-label="Buscar por síntoma">
@@ -213,20 +218,123 @@
       </details>
     </section>
   </div>
-  <section class="more" aria-labelledby="more-title">
-    <h2 id="more-title">¿Sigues teniendo problemas?</h2>
-    <p class="muted">Consulta la guía de conexión para revisar la configuración o la ayuda detallada para resolver otros síntomas.</p>
-    <div class="links"><a href="/es/guide">Guía de conexión</a><a href="/es/help-reference#faq">Todas las preguntas frecuentes</a><a href="/es/features#permissions">Permisos por dispositivo</a></div>
-  </section>
-  <section class="more" id="faq" aria-labelledby="faq-title">
-    <h2 id="faq-title">Preguntas frecuentes</h2>
-    <p class="muted">Elige un tema y abre la pregunta que corresponda a tu dispositivo y método de conexión.</p>
-    <nav aria-label="Temas de preguntas frecuentes"><ul><li><a href="/es/help-reference#faq-connections">Conexiones y controles</a></li><li><a href="/es/help-reference#faq-sharing">Notificaciones, archivos y capturas</a></li><li><a href="/es/help-reference#faq-gestures">Gestos del mouse y ventanas remotas</a></li></ul></nav>
+      <section class="support-faq" id="faq" aria-labelledby="faq-title">
+          <div class="sec-head">
+            <h2 class="sec" id="faq-title">Preguntas frecuentes</h2>
+            <p class="muted">Elige un tema para encontrar una solución.</p>
+            <nav aria-label="Temas de preguntas frecuentes"><ul><li><a href="#faq-connections">Conexiones y controles</a></li><li><a href="#faq-sharing">Notificaciones, archivos y capturas</a></li><li><a href="#faq-gestures">Gestos del mouse y ventanas remotas</a></li></ul></nav>
+          </div>
+          <div class="panel" id="faq-connections">
+            <h3>Conexiones y controles</h3>
+            <details class="fold" id="faq-account-devices">
+              <summary><span>Mis dispositivos usan la misma cuenta de Google. ¿Por qué no aparece uno?</span></summary>
+              <div class="fold-body"><p>Abre OneMouse en ambos dispositivos. Comprueba que estén en línea y que hayas iniciado sesión con la misma cuenta de Google. Luego actualiza la lista. Si el dispositivo aparece pero el cursor no pasa, revisa por separado la conexión y la disposición de las pantallas. <a class="text-link" href="/es/guide#connect-account">Conectar con una cuenta de Google</a></p></div>
+            </details>
+            <details class="fold" id="connection-drops">
+              <summary><span>¿Por qué se corta tanto la conexión?</span></summary>
+              <div class="fold-body"><p>Con la pantalla encendida, comprueba que ambos dispositivos estén en la red que quieres usar y fíjate si el fallo ocurre solo con un router. Si solo se corta al apagarse la pantalla, revisa los ajustes de ahorro de energía de Android. El intervalo no basta para determinar la causa. <a class="text-link" href="/es/guide#quick">Reconexión automática por LAN</a></p></div>
+            </details>
+            <details class="fold" id="firewall-help">
+              <summary><span>¿Por qué mi teléfono detecta la PC, pero la PC no detecta el teléfono?</span></summary>
+              <div class="fold-body"><p>Para la detección por LAN, abre OneMouse en ambos dispositivos y conéctalos al mismo router. Revisa si el Firewall de Windows permite OneMouse en esa red de confianza. No desactives el firewall ni marques una red pública como privada.</p></div>
+            </details>
+            <details class="fold" id="faq-guest-wifi">
+              <summary><span>¿Por qué funciona en casa, pero no en la red Wi-Fi de la oficina o de invitados?</span></summary>
+              <div class="fold-body"><p>Algunas redes bloquean el tráfico entre dispositivos aunque usen el mismo Wi-Fi. Que un dispositivo aparezca con la misma cuenta de Google no garantiza que todas las funciones estén disponibles. Cambia a una red de confianza que permita el tráfico entre dispositivos o usa Bluetooth (beta) si ambos son compatibles.</p></div>
+            </details>
+            <details class="fold" id="faq-android-input">
+              <summary><span>Android aparece conectado. ¿Por qué no funcionan el mouse y el teclado?</span></summary>
+              <div class="fold-body"><p>En Android, ve a Configuración → Accesibilidad → Apps instaladas y revisa OneMouse. Si está activado pero el servicio figura como desconectado, desactívalo y actívalo de nuevo. En la disposición de pantallas de la PC, comprueba que el cursor pase por la zona de entrada marcada. <a class="text-link" href="/es/guide#android">Preparar el control de Android</a></p></div>
+            </details>
+            <details class="fold" id="faq-mac-input">
+              <summary><span>Mi Mac aparece en la lista. ¿Por qué no puedo hacer clic ni escribir?</span></summary>
+              <div class="fold-body"><p>En el Mac, abre Configuración del Sistema → Privacidad y seguridad → Accesibilidad y comprueba que OneMouse tenga permiso. Después de concederlo, vuelve a abrir OneMouse, mueve el cursor al Mac y prueba en un campo de texto simple. <a class="text-link" href="/es/features#permissions">Permisos de Mac</a></p></div>
+            </details>
+            <details class="fold" id="faq-mac-screen">
+              <summary><span>¿Por qué la pantalla o ventana de mi Mac se ve negra?</span></summary>
+              <div class="fold-body"><p>Revisa el permiso de Grabación de pantalla de OneMouse en el Mac. En algunas versiones de macOS se llama Grabación de pantalla y audio del sistema. Si cambiaste el permiso, vuelve a abrir la app si macOS te lo pide. Después, vuelve a compartir la pantalla. <a class="text-link" href="/es/features#permissions">Permiso de grabación de pantalla en Mac</a></p></div>
+            </details>
+            <details class="fold" id="faq-cursor-return">
+              <summary><span>¿Cómo hago para que el cursor vuelva a la PC?</span></summary>
+              <div class="fold-body"><p>En Windows, el atajo de emergencia predeterminado es <kbd style="white-space:nowrap">Ctrl + Alt + Retroceso</kbd>. Si lo cambiaste, usa el atajo guardado. Si está desactivado, vuelve a la pantalla de la PC por el borde de retorno. <a class="text-link" href="/es/features#shortcut-return">Configuración del atajo de retorno</a></p></div>
+            </details>
+            <details class="fold" id="screen-sleep">
+              <summary><span>¿Por qué se corta la conexión solo cuando se apaga la pantalla de Android?</span></summary>
+              <div class="fold-body"><p>Revisa si Android limita a OneMouse el uso de batería en segundo plano. Si tu teléfono ofrece esa opción, prueba a permitir que OneMouse use la batería sin restricciones. Los nombres y el comportamiento varían según el fabricante.</p></div>
+            </details>
+            <details class="fold" id="bluetooth-help">
+              <summary><span>¿Qué debo comprobar primero para usar Bluetooth (beta)?</span></summary>
+              <div class="fold-body"><p>Comprueba que Bluetooth esté activado y que los dispositivos compatibles estén vinculados y conectados en OneMouse. Para ver pantallas remotas, usa el método indicado para ese par de dispositivos. Que el mouse funcione por Bluetooth no significa que también se pueda compartir la pantalla. <a class="text-link" href="/es/compatibility#support">Compatibilidad por par de dispositivos</a></p></div>
+            </details>
+            <details class="fold" id="device-order-faq">
+              <summary><span>¿Por qué no puedo cambiar el orden de los dispositivos en Windows?</span></summary>
+              <div class="fold-body"><p>En la PC principal, abre Administración de dispositivos y busca Editar orden de la lista cuando haya al menos dos dispositivos registrados compatibles con el reordenamiento. Los atajos numerados compatibles siguen ese orden. La disposición de pantallas no cambia y los dispositivos Bluetooth quedan fuera. <a class="text-link" href="/es/guide#device-order">Guía para ordenar dispositivos</a></p></div>
+            </details>
+          </div>
+          <div class="panel" id="faq-sharing">
+            <h3>Notificaciones, archivos y capturas</h3>
+            <details class="fold" id="notification-reply-faq">
+              <summary><span>¿Por qué no puedo responder a una notificación desde mi PC?</span></summary>
+              <div class="fold-body"><p>Comprueba que la notificación original de Android tenga un campo de respuesta y siga activa. En la PC principal, usa la notificación activa y no el historial. No puedes responder a notificaciones ocultas o sensibles. Si se agota el tiempo de espera, revisa la app original antes de volver a intentarlo. Tanto la PC como Android deben tener una versión compatible con respuestas. «Pasado a la aplicación del teléfono» significa que la respuesta llegó a la app original; no confirma que la haya recibido el destinatario. <a class="text-link" href="/es/features#notifications">Configurar notificaciones y respuestas</a></p></div>
+            </details>
+            <details class="fold" id="default-pc-faq">
+              <summary><span>¿Por qué no llega a la PC un archivo que compartí desde mi teléfono?</span></summary>
+              <div class="fold-body"><p>Si Bluetooth está activo, la PC conectada tiene prioridad. De lo contrario, revisa que la PC predeterminada para Wi-Fi o LAN en OneMouse para Android esté vinculada, disponible y configurada como PC principal. Si no está disponible, selecciona otra PC vinculada compatible en la pantalla de envío de archivos. <a class="text-link" href="/es/features#text-to-pc">Enviar archivos y texto desde el teléfono</a></p></div>
+            </details>
+            <details class="fold" id="file-receive-folder-faq">
+              <summary><span>¿Dónde se guardan los archivos recibidos en Windows?</span></summary>
+              <div class="fold-body"><p>En OneMouse, abre Configuración → General → Transferencia de archivos y revisa la carpeta de recepción. Si no se abre, elige una carpeta en la que puedas escribir, en una unidad conectada. Cambiarla no mueve los archivos recibidos. Las capturas se guardan en otra ubicación. <a class="text-link" href="/es/features#file-receive-folder">Cambiar la carpeta de recepción</a></p></div>
+            </details>
+            <details class="fold" id="screenshot-preview-faq">
+              <summary><span>¿Por qué se cierra la vista previa de la captura o no vuelve el cursor?</span></summary>
+              <div class="fold-body"><p>Si ambos equipos admiten esta función, el cursor puede quedarse en el dispositivo que controlas. Muévelo de vuelta para usar la vista previa. Si copias o guardas la captura correctamente, se cierra. Si cancelas o hay un error al guardar, permanece abierta.</p></div>
+            </details>
+          </div>
+          <div class="panel" id="faq-gestures">
+            <h3>Gestos del mouse y ventanas remotas</h3>
+            <details class="fold" id="windows-remote-gestures-faq">
+              <summary><span>¿Por qué no funcionan los gestos del navegador en una ventana remota de Windows?</span></summary>
+              <div class="fold-body"><p>Al arrastrar con el botón derecho en una ventana remota de Windows, la entrada se envía al dispositivo remoto. Activa los gestos del navegador remoto si los admite. Es distinto de los gestos de OneMouse al controlar Android directamente. <a class="text-link" href="/es/features#remote">Guía de ventanas remotas</a></p></div>
+            </details>
+            <details class="fold" id="mouse-gestures-faq">
+              <summary><span>¿Cómo hago un gesto con el mouse de OneMouse en Android?</span></summary>
+              <div class="fold-body"><p>En OneMouse para Android, abre Configuración → Entrada y portapapeles, activa Gestos del mouse y habilítalos en la app. Mueve el cursor de la PC a Android, mantén presionado el botón derecho, dibuja el gesto y suelta. No se aplica a pantallas del sistema ni de permisos. Estos gestos de Android no se aplican a pantallas de Windows o Mac ni a ventanas remotas separadas. <a class="text-link" href="/es/features#mouse-gestures">Guía de gestos del mouse</a></p></div>
+            </details>
+            <details class="fold" id="mouse-gestures-history">
+              <summary><span>¿Por qué Avanzar y Recargar no funcionan en algunas apps de Android?</span></summary>
+              <div class="fold-body"><p>Avanzar vuelve a la página que estabas viendo antes de usar Atrás. No pasa a la siguiente publicación de un feed. Recargar requiere un control compatible del navegador y puede no estar disponible en algunas pantallas, aunque hayas habilitado los gestos.</p></div>
+            </details>
+            <details class="fold" id="mouse-gestures-minimize">
+              <summary><span>¿Dibujar hacia abajo y luego a la derecha cierra mi app de Android?</span></summary>
+              <div class="fold-body"><p>No. Dibuja hacia abajo, gira a la derecha y suelta. El gesto abre Inicio sin cerrar la app ni la pestaña. Hacia arriba y luego a la derecha abre las apps recientes. Un trazo diagonal no equivale a ese gesto.</p></div>
+            </details>
+            <details class="fold" id="mouse-gestures-scroll">
+              <summary><span>¿Cómo controlo o detengo un gesto de desplazamiento en Android?</span></summary>
+              <div class="fold-body"><p>Dibuja sobre el contenido hacia arriba o abajo y suelta el botón derecho. No se desplaza mientras dibujas. Un trazo largo desplaza más que uno corto; la distancia varía por app. La flecha y el indicador vertical muestran la dirección y la intensidad del trazo, no la posición en el documento. El desplazamiento largo dura hasta 8 pantallas o 10 segundos. Clic, otro gesto, cambio de app o fin del control cancelan lo que queda. Mover solo el cursor no lo detiene.</p></div>
+            </details>
+          </div>
+      </section>
+  <section class="faq-support-links" aria-labelledby="more-title">
+    <h2 id="more-title">Guías de configuración</h2>
+    <div class="links"><a href="/es/guide">Guía de conexión</a><a href="/es/features#permissions">Permisos por dispositivo</a></div>
   </section>
 </main>
 <footer class="preview-footer official-footer"><div class="preview-frame">
   <div class="official-footer-credit"><span>© 2026 OneMouse</span><a class="ato-badge" href="https://alternativeto.net/software/onemouse/about/?utm_source=badge&amp;utm_medium=referral" target="_blank" rel="noopener"><img src="https://alternativeto.net/static/badges/badge-compact-color.svg" alt="OneMouse | AlternativeTo" width="171" height="55" loading="lazy"></a></div>
   <nav class="preview-refs" aria-label="Recursos"><a href="/es/compare">Comparar aplicaciones</a><a href="/es/technical">Tecnología y seguridad</a><a href="/es/privacy">Política de privacidad</a><a href="/es/terms">Términos de uso</a><a href="/es/licenses">Licencias de código abierto</a></nav>
 </div></footer>
+<script>
+(() => {
+  const faq = document.getElementById('faq');
+  function revealFAQ() {
+    if (!/^#[a-z0-9-]+$/.test(location.hash)) return;
+    const question = document.getElementById(location.hash.slice(1));
+    if (question?.tagName !== 'DETAILS' || !faq.contains(question)) return;
+    question.open = true;
+  }
+  revealFAQ();
+  window.addEventListener('hashchange', revealFAQ);
+})();
+</script>
 </body>
 </html>

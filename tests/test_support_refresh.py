@@ -166,18 +166,19 @@ class SupportRefreshTest(unittest.TestCase):
             with self.subTest(locale=locale or "ko"):
                 index = Document(ROOT / locale / "help.html")
                 reference = Document(ROOT / locale / "help-reference.html")
-                prefix = f"/{locale}" if locale else ""
-                nav_links = {x.attrs.get("href") for x in index.by_id("faq").walk()
-                             if x.tag == "a"}
-                expected = {f"{prefix}/help-reference#{i}" for i in groups}
-                self.assertEqual(expected, nav_links)
-                self.assertEqual(1, sum(x.tag == "a" and x.attrs.get("href") == f"{prefix}/help-reference#faq"
-                                        for x in index.root.walk()))
-                self.assertEqual(20, sum(x.tag == "details" for x in reference.by_id("faq").walk()))
-                self.assertIn(reference.by_id("device-order-faq"), list(reference.by_id("faq-connections").walk()))
-                for ident in new_questions:
-                    self.assertEqual("details", reference.by_id(ident).tag)
-                for document, anchors in ((index, {"faq-title"}),
+                faq = index.by_id("faq")
+                nav, = [node for node in faq.walk() if node.tag == "nav"]
+                nav_links = {x.attrs.get("href") for x in nav.walk() if x.tag == "a"}
+                self.assertEqual({"#" + ident for ident in groups}, nav_links)
+                self.assertFalse(any("/help-reference#faq" in x.attrs.get("href", "")
+                                     for x in index.root.walk()))
+                for document in (index, reference):
+                    self.assertEqual(20, sum(x.tag == "details" for x in document.by_id("faq").walk()))
+                    self.assertIn(document.by_id("device-order-faq"),
+                                  list(document.by_id("faq-connections").walk()))
+                    for ident in new_questions:
+                        self.assertEqual("details", document.by_id(ident).tag)
+                for document, anchors in ((index, groups | new_questions | {"faq-title"}),
                                           (reference, groups | new_questions | {"faq-title"})):
                     for option in document.by_id("one-language-picker").children:
                         if option.tag == "option":

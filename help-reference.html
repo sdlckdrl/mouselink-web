@@ -26,6 +26,17 @@
 .return-keys{display:inline-flex;align-items:center;gap:.18rem;white-space:nowrap;vertical-align:middle}
 .return-keys kbd,kbd.return-key{display:inline-block;white-space:nowrap;background:#174c91;color:#fff;border:1px solid #10376b;border-radius:.32rem;padding:.15rem .36rem;font:750 .79rem/1.35 system-ui,sans-serif;box-shadow:0 1px #10376b}
 </style>
+<script>
+(() => {
+  const faqIds = new Set(['faq', 'faq-title', 'faq-connections', 'faq-account-devices', 'connection-drops', 'firewall-help', 'faq-guest-wifi', 'faq-android-input', 'faq-mac-input', 'faq-mac-screen', 'faq-cursor-return', 'screen-sleep', 'bluetooth-help', 'device-order-faq', 'faq-sharing', 'notification-reply-faq', 'default-pc-faq', 'file-receive-folder-faq', 'screenshot-preview-faq', 'faq-gestures', 'windows-remote-gestures-faq', 'mouse-gestures-faq', 'mouse-gestures-history', 'mouse-gestures-minimize', 'mouse-gestures-scroll']);
+  function forwardFAQ() {
+    if (!faqIds.has(location.hash.slice(1))) return;
+    location.replace('/help' + location.search + location.hash);
+  }
+  forwardFAQ();
+  window.addEventListener('hashchange', forwardFAQ);
+})();
+</script>
 </head>
   <body>
     <header class="site">
