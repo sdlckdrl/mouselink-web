@@ -136,7 +136,10 @@
     const selection = el('div', 'selection');
     selection.hidden = true;
     selection.setAttribute('aria-hidden', 'true');
-    source.append(desktop, selection);
+    const cursor = el('div','virtual-cursor');
+    cursor.hidden = true;
+    cursor.setAttribute('aria-hidden','true');
+    source.append(desktop, selection, cursor);
 
     const monitorLayer = el('div', 'monitor-layer');
     const monitor = el('div', 'monitor');
@@ -167,7 +170,7 @@
     phoneView.append(phoneHint);
     phone.append(phoneView);
     stage.append(backdrop, monitorLayer, phone, popupPlane);
-    const caption = el('figcaption', 'caption', '바탕화면을 드래그하거나 한 번 눌러 캡처하세요. AI 배경의 예시 화면입니다.');
+    const caption = el('figcaption', 'caption', '바탕화면을 마우스나 손가락으로 드래그해 캡처하세요. AI 배경의 예시 화면입니다.');
     figure.append(stage, caption);
     const status = el('p', 'status');
     status.setAttribute('role', 'status');
@@ -176,7 +179,7 @@
     panel.append(root);
 
     let active = null, captured = null, photoFail = false, monitorMap = null;
-    let pendingPng = null, png = null, passiveTouch = null;
+    let pendingPng = null, png = null;
 
     function alignDevices() {
       if (photoFail) return;
@@ -184,6 +187,7 @@
       if (!width || !height) return;
       monitorMap = projection(MONITOR_QUAD, width, height, W, H);
       monitor.style.transform = popupPlane.style.transform = monitorMap.css;
+      source.style.setProperty('--oc-cursor-size',Math.max(34,Math.min(104,Math.round(30000/width)))+'px');
       popupPlane.style.setProperty('--oc-projected-hit', Math.max(45, Math.ceil(44*PHOTO_WIDTH*H/(width*603*.91))) + 'px');
       phone.style.transform = projection(PHONE_QUAD, width, height, PHONE_W, PHONE_H).css;
       stage.classList.add('om-capture-mapped');
@@ -207,7 +211,10 @@
 
     function point(event) {
       const r = (monitorMap ? stage : source).getBoundingClientRect();
-      const x = event.clientX-r.left, y=event.clientY-r.top;
+      // The touch cursor sits above the fingertip; this same coordinate is used
+      // for both the cursor tip and the selection to avoid a hidden crop offset.
+      const offset = event.pointerType === 'touch' ? 24 : 0;
+      const x = event.clientX-r.left, y=event.clientY-r.top-offset;
       const local = monitorMap ? monitorMap.inverse(x,y) : {x:x/(r.width||1)*W,y:y/(r.height||1)*H};
       const clamp = (n, max) => Math.min(max, Math.max(0, Math.round(n)));
       return {x:clamp(local.x,W),y:clamp(local.y,H)};
@@ -223,7 +230,13 @@
       selection.style.width = `${box.w/W*100}%`;
       selection.style.height = `${box.h/H*100}%`;
     }
+    function showCursor(point) {
+      cursor.hidden = false;
+      cursor.style.left = `${point.x/W*100}%`;
+      cursor.style.top = `${point.y/H*100}%`;
+    }
     function dropActive() {
+      cursor.hidden = true;
       if (!active) return;
       const id = active.id;
       active = null;
@@ -265,7 +278,6 @@
       status.textContent = note;
     }
     function reset() {
-      passiveTouch = null;
       dropActive();
       closeCapture();
       clearReceiver();
@@ -308,38 +320,29 @@
     }
     source.addEventListener('pointerdown', event => {
       if (active || event.button !== 0 || event.isPrimary === false) return;
-      // A single touch tap captures immediately, but a swipe stays native.
-      if (event.pointerType !== 'mouse') {
-        passiveTouch = { id:event.pointerId, x:event.clientX, y:event.clientY, moved:false };
-        return;
-      }
       event.preventDefault();
       closeCapture();
-      active = { id: event.pointerId, start: point(event), x: event.clientX, y: event.clientY };
+      const start = point(event);
+      active = { id:event.pointerId,start,x:event.clientX,y:event.clientY,touch:event.pointerType==='touch' };
+      if(active.touch)showCursor(start);
       source.setPointerCapture?.(event.pointerId);
       drawSelection(null);
     });
     source.addEventListener('pointermove', event => {
-      if (passiveTouch?.id === event.pointerId && (Math.abs(event.clientX-passiveTouch.x)>=7 || Math.abs(event.clientY-passiveTouch.y)>=7)) passiveTouch.moved = true;
       if (!active || event.pointerId !== active.id) return;
-      drawSelection(bounds(active.start, point(event)));
+      const current = point(event);
+      if(active.touch)showCursor(current);
+      drawSelection(bounds(active.start,current));
     });
     source.addEventListener('pointerup', event => {
-      if (passiveTouch?.id === event.pointerId) {
-        const touch = passiveTouch;
-        passiveTouch = null;
-        if (!touch.moved && Math.abs(event.clientX-touch.x)<7 && Math.abs(event.clientY-touch.y)<7) tapCapture(event);
-        return;
-      }
       if (!active || event.pointerId !== active.id) return;
       const end = point(event), box = bounds(active.start, end);
-      if (Math.abs(event.clientX-active.x)<7 || Math.abs(event.clientY-active.y)<7) {
+      if (box.w < 1 || box.h < 1 || Math.abs(event.clientX-active.x)<7 || Math.abs(event.clientY-active.y)<7) {
         // Tap / very short movement: take a visible sample centred near the tap.
         tapCapture(event);
       } else commit(box, '선택한 영역을 캡처했어요.');
     });
     function interrupted(event) {
-      if (passiveTouch?.id === event.pointerId) passiveTouch = null;
       if (!active || active.id !== event.pointerId) return;
       dropActive();
       drawSelection(null);

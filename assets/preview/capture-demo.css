@@ -18,13 +18,24 @@
 }
 .om-capture-source {
   position:absolute; inset:0; display:block; overflow:hidden; pointer-events:auto;
-  touch-action:pan-y; user-select:none; -webkit-user-select:none;
+  touch-action:none; user-select:none; -webkit-user-select:none;
 }
 .om-capture-desktop-art { position:absolute; inset:0; pointer-events:none; }
 .om-capture-desktop-art > svg,.om-capture-monitor-preview > svg,.om-capture-phone-view > svg { display:block; width:100%; height:100%; pointer-events:none; }
 .om-capture-selection {
   position:absolute; border:2px solid #fff; background:#5ce6bd39;
   box-shadow:0 0 0 1px #09384a,0 0 0 999px #06253b55; pointer-events:none;
+}
+.om-capture-virtual-cursor {
+  position:absolute; z-index:2; width:var(--oc-cursor-size,52px); aspect-ratio:5/6;
+  pointer-events:none; filter:drop-shadow(0 1px 3px #0b2035aa);
+}
+.om-capture-virtual-cursor::before,.om-capture-virtual-cursor::after { content:""; position:absolute; display:block; }
+.om-capture-virtual-cursor::before {
+  inset:0; background:#112b42; clip-path:polygon(0 0,90% 69%,54% 70%,73% 90%,55% 100%,35% 76%,7% 96%);
+}
+.om-capture-virtual-cursor::after {
+  inset:3% 4%; background:#fff; clip-path:polygon(1% 0,85% 67%,49% 68%,67% 89%,54% 96%,34% 72%,8% 90%);
 }
 .om-capture-popup-plane {
   position:absolute; top:0; left:0; width:640px; height:400px; transform-origin:0 0; pointer-events:none;

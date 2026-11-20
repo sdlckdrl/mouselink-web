@@ -50,7 +50,9 @@
     mac.append(drop,receivedLayer);
     const selection=node('div','marquee');selection.hidden=true;selection.setAttribute('aria-hidden','true');
     const ghost=node('div','ghost');ghost.hidden=true;ghost.setAttribute('aria-hidden','true');
-    stage.append(backdrop, windows, mac, selection, ghost);
+    const cursor=node('span','cursor');cursor.hidden=true;cursor.setAttribute('aria-hidden','true');
+    cursor.innerHTML='<svg viewBox="0 0 25 29" aria-hidden="true"><path d="M1 1 2 23l6-6 5 10 4-2-5-10h8z" fill="#fff" stroke="#102638" stroke-width="2" stroke-linejoin="round"/></svg>';
+    stage.append(backdrop, windows, mac, selection, ghost, cursor);
     backdrop.addEventListener('error',()=>stage.classList.add('om-file-photo-missing'));
     if (backdrop.complete&&!backdrop.naturalWidth)stage.classList.add('om-file-photo-missing');
 
@@ -61,7 +63,7 @@
     const mobileSend=button('mobile-send','Mac으로 보내기');
     mobile.append(mobileGroup,mobileSend);
 
-    const hint=node('p','hint','왼쪽 폴더에서 파일을 골라 오른쪽 Mac으로 끌어 놓으세요. 클릭이나 탭으로 골라 보낼 수도 있어요.');
+    const hint=node('p','hint','왼쪽 폴더의 파일을 오른쪽 Mac으로 끌어 보세요. 빈 곳부터 끌면 여러 파일을 고를 수 있어요.');
     const foot=node('div','foot');
     const status=node('p','status');
     status.setAttribute('role','status');status.setAttribute('aria-atomic','true');
@@ -74,7 +76,7 @@
     const placed=new Map();
     const items=new Map();
     const mobileItems=new Map();
-    let gesture=null, suppressClickUntil=0;
+    let gesture=null, suppressClickUntil=0, cursorTimer;
 
     files.forEach(file=>{
       const item=button('source');
@@ -142,6 +144,29 @@
       selected.clear();update();
       status.textContent=additions.length ? `${additions.join(', ')} · Mac에 도착했어요.` : '선택한 파일은 이미 Mac에 있어요.';
     }
+    function showCursor(point) {
+      clearTimeout(cursorTimer);
+      const scene=stage.getBoundingClientRect();
+      cursor.hidden=!inside(scene,point);
+      if(cursor.hidden)return;
+      cursor.style.left=`${point.x-scene.left}px`;
+      cursor.style.top=`${point.y-scene.top}px`;
+    }
+    function restCursor() {
+      clearTimeout(cursorTimer);
+      cursorTimer=setTimeout(()=>{cursor.hidden=true;},850);
+    }
+    function interruptGesture() {
+      if(!gesture)return;
+      suppressClickUntil=Date.now()+450;
+      if(gesture.active){
+        selected.clear();
+        gesture.before.forEach(id=>selected.add(id));
+        update();
+      }
+      hideGesture();
+      clearTimeout(cursorTimer);cursor.hidden=true;
+    }
     function hideGesture() {
       const old=gesture;gesture=null;
       selection.hidden=ghost.hidden=true;
@@ -149,7 +174,7 @@
       if(old&&stage.hasPointerCapture?.(old.id))stage.releasePointerCapture(old.id);
     }
     function reset() {
-      hideGesture();selected.clear();placed.clear();receivedLayer.replaceChildren();status.textContent='';update();
+      hideGesture();clearTimeout(cursorTimer);cursor.hidden=true;selected.clear();placed.clear();receivedLayer.replaceChildren();status.textContent='';update();
     }
     function markGhost(point) {
       const scene=stage.getBoundingClientRect();
@@ -178,16 +203,20 @@
     mobileSend.addEventListener('click',()=>send());
     resetButton.addEventListener('click',()=>{reset();items.get(files[0].id).focus({preventScroll:true});});
     stage.addEventListener('pointerdown',()=>{if(!gesture)suppressClickUntil=0;},{capture:true});
-    stage.addEventListener('lostpointercapture',event=>{if(gesture?.id===event.pointerId)hideGesture();});
-    window.addEventListener('blur',()=>{if(gesture)hideGesture();});
+    stage.addEventListener('lostpointercapture',event=>{if(gesture?.id===event.pointerId&&event.target===stage)interruptGesture();});
+    window.addEventListener('blur',interruptGesture);
     grid.addEventListener('pointerdown',event=>{
-      if(gesture||event.pointerType!=='mouse'||event.button!==0||event.isPrimary===false)return;
+      if(gesture||!['mouse','touch','pen'].includes(event.pointerType)||event.button!==0||event.isPrimary===false)return;
       const file=event.target.closest('[data-om-file]');
-      gesture={id:event.pointerId,start:relativePoint(event),file:file?.dataset.omFile,active:false,additive:event.ctrlKey||event.metaKey||event.shiftKey,before:new Set(selected)};
+      const touch=event.pointerType!=='mouse';
+      const start=relativePoint(event);
+      gesture={id:event.pointerId,start,touch,file:file?.dataset.omFile,active:false,additive:event.ctrlKey||event.metaKey||event.shiftKey,before:new Set(selected)};
+      if(touch){event.preventDefault();showCursor(start);}
     });
     window.addEventListener('pointermove',event=>{
       if(!gesture||gesture.id!==event.pointerId)return;
       const point=relativePoint(event);
+      if(gesture.touch)showCursor(point);
       if(!gesture.active){
         if(Math.hypot(point.x-gesture.start.x,point.y-gesture.start.y)<6)return;
         gesture.active=true;
@@ -203,17 +232,22 @@
       if(!gesture||gesture.id!==event.pointerId)return;
       const current=gesture;const point=relativePoint(event);
       hideGesture();
+      if(current.touch){
+        showCursor(point);restCursor();
+        suppressClickUntil=Date.now()+450;
+        if(!current.active&&current.file&&inside(items.get(current.file).getBoundingClientRect(),point))flip(current.file);
+      }
       if(!current.active)return;
-      suppressClickUntil=Date.now()+300;
+      suppressClickUntil=Date.now()+450;
       if(current.file){
         if(inside(mac.getBoundingClientRect(),point))send(point);
         else status.textContent='Mac 화면 안에 놓으면 파일이 옮겨져요.';
       }else status.textContent=selected.size?`${selected.size}개 선택했어요. 선택한 파일 하나를 끌면 함께 옮겨져요.`:'선택된 파일이 없어요.';
     });
-    window.addEventListener('pointercancel',event=>{if(gesture?.id===event.pointerId)hideGesture();});
+    window.addEventListener('pointercancel',event=>{if(gesture?.id===event.pointerId)interruptGesture();});
     root.addEventListener('keydown',event=>{
       if(event.key==='Escape'){
-        if(gesture)hideGesture();
+        if(gesture)interruptGesture();
         else {selected.clear();update();status.textContent='';}
       }
     });

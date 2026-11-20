@@ -30,10 +30,13 @@
 .capture-card-interactive:empty{aspect-ratio:3/2}
 @media(min-width:650px){.example-grid>.example,.screen-stories .story{align-self:start}.screen-stories .story>figure{aspect-ratio:3/2}}
 .race-card-interactive{padding:.65rem .6rem .45rem;min-width:0;background:#f3f7fa;border-bottom:1px solid var(--preview-line)}.race-card-interactive:empty{aspect-ratio:1199/675}.race-card-interactive noscript img{display:block;width:100%;height:auto}
+.touch-guide-cursor{display:none;position:absolute;pointer-events:none;width:20px;height:23px;z-index:9;filter:drop-shadow(0 1px 3px #000)}
+.stage[data-touch-cursor] .touch-guide-cursor{display:block}
+.stage[data-touch-cursor] .pointer{visibility:hidden}
 </style>
 <link rel="icon" href="/assets/preview/onemouse-android-icon.png" type="image/png" sizes="240x240">
 <link rel="stylesheet" href="/assets/preview/one-preview.css?v=light1">
-<link rel="stylesheet" href="/assets/preview/capture-demo.css?v=simple1">
+<link rel="stylesheet" href="/assets/preview/capture-demo.css?v=touch1">
 <link rel="stylesheet" href="/assets/preview/race-card.css?v=simple1">
 </head>
 <body>
@@ -154,6 +157,7 @@
 <path d="M414 183h16m-6-4 6 4-6 4M537 209h15m-6-4 6 4-6 4M715 190h14m-6-4 6 4-6 4" fill="none" stroke="#6bf5c6" stroke-width="2" opacity=".7"/>
 </svg>
 <svg aria-hidden="true" class="pointer" viewBox="0 0 22 25"><path d="M2 2v19l5-5 4 7 4-2-4-7h8z" fill="#f6fffb" stroke="#0b1020" stroke-width="1.6" stroke-linejoin="round"/></svg>
+<svg aria-hidden="true" class="touch-guide-cursor" id="touch-guide-cursor" viewBox="0 0 22 25"><path d="M2 2v19l5-5 4 7 4-2-4-7h8z" fill="#f6fffb" stroke="#0b1020" stroke-width="1.6" stroke-linejoin="round"/></svg>
 <div class="stage-overlay">
   <button id="sample-file" class="sample-icon" type="button" aria-label="예시 파일 사진.jpg 선택" hidden>사진.jpg</button>
   <div class="windows-text" id="windows-text" tabindex="0" aria-label="Windows 예시 메모. 문자 선택 후 Ctrl+C. 전체 선택은 아래 버튼으로 할 수 있습니다." hidden>
@@ -515,16 +519,27 @@ function hoverMove(e) {
   const d=planeAt(p);
   if(mode==='cursor'||mode==='file'||(mode==='text'&&copied&&!finished)) setActive(d,p);
 }
+function showTouchGuide(e) {
+  if(e.pointerType!=='touch')return;
+  const p=pos(e); if(!p)return;
+  const guide=get('touch-guide-cursor');
+  guide.style.left=clamp(p.x,0,W)/W*100+'%';
+  guide.style.top=clamp(p.y,0,H)/H*100+'%';
+  stage.dataset.touchCursor='';
+}
+function hideTouchGuide(e) { if(!e||e.pointerType==='touch')delete stage.dataset.touchCursor; }
 function pickFile() {filePicked=true;tell('받을 기기를 선택한 뒤 보내세요.');syncPanels();}
 sample.addEventListener('pointerdown',e=>{
   e.stopPropagation();
   if(mode!=='file'||finished||!e.isPrimary||e.button!==0)return;
   fileDrag={id:e.pointerId,x:e.clientX,y:e.clientY,moved:false};
+  showTouchGuide(e);
   sample.setPointerCapture(e.pointerId);
 });
 sample.addEventListener('click',e=>{if(mode==='file'&&!finished&&e.detail===0)pickFile();});
 stage.addEventListener('pointermove',e=>{
   if(fileDrag?.id===e.pointerId) {
+    showTouchGuide(e);
     const p=pos(e); if(!p)return;
     if(!fileDrag.moved && Math.hypot(e.clientX-fileDrag.x,e.clientY-fileDrag.y)<4)return;
     fileDrag.moved=true;
@@ -543,7 +558,7 @@ stage.addEventListener('pointerdown',e=>{
 stage.addEventListener('pointerup',e=>{
   if(fileDrag?.id===e.pointerId){
     const p=pos(e), moved=fileDrag.moved;
-    stopFileDrag();
+    stopFileDrag(); hideTouchGuide(e);
     if(moved){
       const target=p&&planes.find(d=>d!==from&&inside(p,d.rect));
       if(target){setReceiver(target);deliver({kind:'file',title:'사진.jpg'},'받은 파일');}
@@ -556,7 +571,7 @@ stage.addEventListener('pointerup',e=>{
     pointerTouch=null;
   }
 });
-stage.addEventListener('pointercancel',()=>{pointerTouch=null;stopFileDrag();});
+stage.addEventListener('pointercancel',()=>{pointerTouch=null;stopFileDrag();hideTouchGuide();});
 function cropRect(e) {
   const p=pos(e); if(!p||!cropDrag)return null;
   const [sx,sy,sw,sh]=from.rect, x=clamp(p.x,sx,sx+sw),y=clamp(p.y,sy,sy+sh);
@@ -579,18 +594,19 @@ cropSurface.addEventListener('pointerdown',e=>{
   const [x,y,w,h]=from.rect;
   cropDrag={id:e.pointerId,x:clamp(p.x,x,x+w),y:clamp(p.y,y,y+h)};
   cropSurface.setPointerCapture(e.pointerId);
+  showTouchGuide(e);
 });
 cropSurface.addEventListener('pointermove',e=>{
   e.stopPropagation();
-  if(cropDrag?.id===e.pointerId){ const r=cropRect(e); if(r){selection.hidden=false;place(selection,r);} }
+  if(cropDrag?.id===e.pointerId){ showTouchGuide(e); const r=cropRect(e); if(r){selection.hidden=false;place(selection,r);} }
 });
 cropSurface.addEventListener('pointerup',e=>{
   e.stopPropagation();
   if(cropDrag?.id!==e.pointerId)return;
-  const r=cropRect(e); cropDrag=null;
+  const r=cropRect(e); cropDrag=null; hideTouchGuide(e);
   if(r&&r[2]>=6&&r[3]>=6)capture(r); else drawSelection();
 });
-cropSurface.addEventListener('pointercancel',()=>{cropDrag=null;drawSelection();});
+cropSurface.addEventListener('pointercancel',()=>{cropDrag=null;drawSelection();hideTouchGuide();});
 function chooseReceiver() { if(!to){tell('받을 기기 메뉴에서 다른 기기를 고르세요.');receiver.focus({preventScroll:true});return false;} return true; }
 function copySelected() {
   if(mode!=='text'||finished||document.activeElement===memo)return false;
@@ -681,7 +697,7 @@ openDemoRoute();
 window.addEventListener('hashchange',openDemoRoute);
 </script>
 <script src="/js/promo-video.js" defer></script>
-<script src="/js/preview-capture-demo.js?v=simple1" defer></script>
+<script src="/js/preview-capture-demo.js?v=touch1" defer></script>
 <script src="/js/preview-race-card.js?v=simple1" defer></script>
 <script src="/js/preview-feature-demos.js?v=simple1" defer></script>
 </body>
