@@ -106,7 +106,8 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
 /* Keep each physical key chord intact, even when listed alongside alternatives. */
 #shortcuts .kt th:first-child,#shortcuts .kt td:first-child{width:27%;min-width:14.6rem}
 #shortcuts .key-chord{display:inline-flex;align-items:center;gap:.14rem;white-space:nowrap;overflow-wrap:normal;word-break:normal;vertical-align:middle}
-#shortcuts .key-chord kbd{white-space:nowrap}
+#shortcuts .key-chord kbd{display:inline-block;white-space:nowrap;padding:.15rem .36rem;border:1px solid #7ba8de;border-radius:.32rem;background:#e6f1ff;color:#123f77;font:750 .79rem/1.35 system-ui,sans-serif;box-shadow:0 1px #7ba8de}
+#shortcuts .key-chord--priority kbd{background:#174c91;color:#fff;border-color:#10376b;box-shadow:0 1px #10376b}
 @media(max-width:600px){
   #shortcuts .table-wrap{overflow:visible}
   #shortcuts .kt{display:block;min-width:0}
@@ -150,8 +151,6 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
     <section id="files" data-legacy-link aria-label="Archivos y portapapeles"><h2>Archivos y portapapeles</h2><p>Consulta el paso a paso en la guía detallada.</p><p><a href="/es/guide-reference#files">Ver la guía detallada</a></p></section>
     <section id="screenshots" data-legacy-link aria-label="Capturar y enviar capturas de pantalla"><h2>Capturar y enviar capturas de pantalla</h2><p>Consulta el paso a paso en la guía detallada.</p><p><a href="/es/guide-reference#screenshots">Ver la guía detallada</a></p></section>
     <section id="notifications" data-legacy-link aria-label="Notificaciones y respuestas del teléfono"><h2>Notificaciones y respuestas del teléfono</h2><p>Consulta el paso a paso en la guía detallada.</p><p><a href="/es/guide-reference#notifications">Ver la guía detallada</a></p></section>
-    <section id="quick" data-legacy-link aria-label="Orden de dispositivos y conexión rápida"><h2>Orden de dispositivos y conexión rápida</h2><p>Consulta el paso a paso en la guía detallada.</p><p><a href="/es/guide-reference#quick">Ver la guía detallada</a></p></section>
-    <section id="device-order" data-legacy-link aria-label="Orden de dispositivos y números de acceso directo"><h2>Orden de dispositivos y números de acceso directo</h2><p>Consulta el paso a paso en la guía detallada.</p><p><a href="/es/guide-reference#device-order">Ver la guía detallada</a></p></section>
     <section id="bluetooth" data-legacy-link aria-label="Conexión por Bluetooth"><h2>Conexión por Bluetooth</h2><p>Consulta la guía detallada para saber más sobre este tema.</p><p><a href="#connect-bluetooth">Android</a> · <a href="#windows-bluetooth">Windows PC</a> · <a href="#mac-bluetooth">Mac</a> · <a href="/es/guide-reference#bluetooth">Ver la guía detallada</a></p></section>
     <section id="permissions" data-legacy-link aria-label="Permisos por dispositivo"><h2>Permisos por dispositivo</h2><p>Consulta el paso a paso en la guía detallada.</p><p><a href="/es/guide-reference#permissions">Ver la guía detallada</a></p></section>
     <section class="panel" id="android" data-device-panel aria-labelledby="android-title">
@@ -249,6 +248,10 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
       </ol>
       <p><a href="/es/help#cursor-not-crossing">Solucionar problemas del cursor</a></p>
     </section>
+    <section class="panel" id="quick" aria-labelledby="lan-reconnect-title">
+      <h2 id="lan-reconnect-title">Conexión LAN · Reconexión automática</h2>
+      <p>Si activas la reconexión automática, la app del PC se conecta cuando vuelve a aparecer el último dispositivo conectado o cuando solo hay un dispositivo disponible.</p>
+    </section>
     <section class="panel" id="connect-account" aria-labelledby="account-title">
       <p class="pill">Opcional · En lugar del QR o del código</p>
       <h2 id="account-title">encontrar tus dispositivos con tu cuenta de Google</h2>
@@ -334,6 +337,7 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
             </p>
           </div>
           <h3 id="pc-shortcuts-title">Atajos predeterminados de la app de Windows</h3>
+          <p id="device-order"><strong>Orden de los dispositivos y atajos numéricos:</strong> Si tienes dos o más dispositivos LAN en el PC principal, abre <strong>Gestión de dispositivos → Editar orden</strong> para cambiar el orden. Los atajos numéricos para conectar y abrir ventanas remotas cambian según ese orden.</p>
           <div class="table-wrap">
             <table role="table" class="kt" aria-labelledby="pc-shortcuts-title">
               <thead role="rowgroup">
@@ -388,7 +392,7 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
                   </td>
                 </tr>
                 <tr role="row">
-                  <td role="cell"><span class="key-chord"><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Backspace</kbd></span></td>
+                  <td role="cell"><span class="key-chord key-chord--priority"><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Backspace</kbd></span></td>
                   <td role="cell">
                     PC principal: devuelve inmediatamente el cursor al centro de tu monitor mientras
                     controlas otro dispositivo.

@@ -57,7 +57,10 @@ h1,h2,h3{line-height:1.25;letter-spacing:-.04em}h1{font-size:clamp(2rem,4.8vw,3.
 .key-list{margin:0;gap:0}
 .key-list div{display:grid;grid-template-columns:minmax(0,1fr);gap:.28rem;padding:.54rem .07rem;align-items:baseline;border-bottom:1px solid var(--preview-line)}
 .key-list dt{color:var(--preview-ink);font-weight:700}.key-list dd{font-size:.79rem;color:var(--preview-muted);line-height:1.9}
-.key-list kbd{display:inline-block;white-space:nowrap;font:700 .76rem/1.35 system-ui,sans-serif;padding:.14rem .33rem;border-radius:.3rem;background:#edf3f8;color:#233c52;border:1px solid #a7bbc9;box-shadow:0 1px #a7bbc9}
+.key-chord{display:inline-flex;align-items:center;gap:.18rem;white-space:nowrap;overflow-wrap:normal;word-break:normal;vertical-align:middle}
+.key-list .key-chord kbd{display:inline-block;white-space:nowrap;padding:.15rem .36rem;border:1px solid #7ba8de;border-radius:.32rem;background:#e6f1ff;color:#123f77;font:750 .79rem/1.35 system-ui,sans-serif;box-shadow:0 1px #7ba8de}
+.key-list .key-chord--priority kbd{background:#174c91;color:#fff;border-color:#10376b;box-shadow:0 1px #10376b}
+.moved-quick-note:not(:target){display:none}
 @media(min-width:580px){.key-list div{grid-template-columns:minmax(0,1fr) auto;gap:1rem}}
 @media(max-width:579px){.feature>summary{padding-inline-start:.85rem}.feature>.panel{padding-inline:.85rem}}
 
@@ -157,7 +160,7 @@ h1,h2,h3{line-height:1.25;letter-spacing:-.04em}h1{font-size:clamp(2rem,4.8vw,3.
 </section>
 <div class="layout kvm-more">
   <p><strong>처음엔 이렇게:</strong> 앱에서 기기를 연결하고 책상에 놓인 방향대로 배치하세요. 앱에 표시된 화면 가장자리가 커서를 넘기는 통로예요. <a href="/help#cursor">커서가 안 넘어갈 때</a></p>
-  <details class="subfeature" id="quick"><summary>기기 순서와 빠른 연결</summary><p>메인 PC의 기기 관리에서 LAN 기기 순서를 바꾸면 연결·원격창 단축키 번호도 바뀌어요. 자동 재연결을 켜면 준비된 기기로 다시 연결할 수 있어요.</p></details>
+  <p id="quick" class="moved-quick-note">기기 순서와 자동 재연결은 연결 가이드에서 확인하세요. <a href="/guide#quick">연결 가이드 보기</a></p>
 </div>
 <section class="layout examples demo-showcase" aria-labelledby="examples-title">
   <h2 id="examples-title">화면에서 직접 써 보기</h2>
@@ -289,16 +292,16 @@ h1,h2,h3{line-height:1.25;letter-spacing:-.04em}h1{font-size:clamp(2rem,4.8vw,3.
         <div class="key-groups">
           <section class="key-group" aria-labelledby="shortcuts-quick"><h3 id="shortcuts-quick">바로 쓰는 단축키</h3>
             <dl class="key-list">
-              <div id="shortcut-return"><dt>커서를 내 PC로 가져오기</dt><dd><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Backspace</kbd></dd></div>
-              <div><dt>캡처 도구 열기</dt><dd><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>S</kbd></dd></div>
-              <div><dt>빠른 파일 드롭존 열기·닫기</dt><dd><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>D</kbd></dd></div>
-              <div><dt>폰 알림의 인증번호 복사</dt><dd><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>V</kbd></dd></div>
+              <div id="shortcut-return"><dt>커서를 내 PC로 가져오기</dt><dd><span class="key-chord key-chord--priority"><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Backspace</kbd></span></dd></div>
+              <div><dt>캡처 도구 열기</dt><dd><span class="key-chord"><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>S</kbd></span></dd></div>
+              <div><dt>빠른 파일 드롭존 열기·닫기</dt><dd><span class="key-chord"><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>D</kbd></span></dd></div>
+              <div><dt>폰 알림의 인증번호 복사</dt><dd><span class="key-chord"><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>V</kbd></span></dd></div>
             </dl>
           </section>
           <section class="key-group" aria-labelledby="shortcuts-lan"><h3 id="shortcuts-lan">번호가 지정된 LAN 기기</h3>
             <dl class="key-list">
-              <div><dt>입력 연결·해제</dt><dd><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>1–9</kbd></dd></div>
-              <div><dt>원격창 열기·앞으로 가져오기</dt><dd><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>1–9</kbd></dd></div>
+              <div><dt>입력 연결·해제</dt><dd><span class="key-chord"><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>1–9</kbd></span></dd></div>
+              <div><dt>원격창 열기·앞으로 가져오기</dt><dd><span class="key-chord"><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>1–9</kbd></span></dd></div>
             </dl>
           </section>
         </div>

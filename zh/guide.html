@@ -107,7 +107,8 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
 /* Keep each physical key chord intact, even when listed alongside alternatives. */
 #shortcuts .kt th:first-child,#shortcuts .kt td:first-child{width:27%;min-width:14.6rem}
 #shortcuts .key-chord{display:inline-flex;align-items:center;gap:.14rem;white-space:nowrap;overflow-wrap:normal;word-break:normal;vertical-align:middle}
-#shortcuts .key-chord kbd{white-space:nowrap}
+#shortcuts .key-chord kbd{display:inline-block;white-space:nowrap;padding:.15rem .36rem;border:1px solid #7ba8de;border-radius:.32rem;background:#e6f1ff;color:#123f77;font:750 .79rem/1.35 system-ui,sans-serif;box-shadow:0 1px #7ba8de}
+#shortcuts .key-chord--priority kbd{background:#174c91;color:#fff;border-color:#10376b;box-shadow:0 1px #10376b}
 @media(max-width:600px){
   #shortcuts .table-wrap{overflow:visible}
   #shortcuts .kt{display:block;min-width:0}
@@ -151,8 +152,6 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
     <section id="files" data-legacy-link aria-label="文件与剪贴板"><h2>文件与剪贴板</h2><p>查看详细指南了解具体步骤。</p><p><a href="/zh/guide-reference#files">查看详细指南</a></p></section>
     <section id="screenshots" data-legacy-link aria-label="截取与发送截图"><h2>截取与发送截图</h2><p>查看详细指南了解具体步骤。</p><p><a href="/zh/guide-reference#screenshots">查看详细指南</a></p></section>
     <section id="notifications" data-legacy-link aria-label="手机通知与回复"><h2>手机通知与回复</h2><p>查看详细指南了解具体步骤。</p><p><a href="/zh/guide-reference#notifications">查看详细指南</a></p></section>
-    <section id="quick" data-legacy-link aria-label="设备排序与快速连接"><h2>设备排序与快速连接</h2><p>查看详细指南了解具体步骤。</p><p><a href="/zh/guide-reference#quick">查看详细指南</a></p></section>
-    <section id="device-order" data-legacy-link aria-label="设备排序与数字快捷键"><h2>设备排序与数字快捷键</h2><p>查看详细指南了解具体步骤。</p><p><a href="/zh/guide-reference#device-order">查看详细指南</a></p></section>
     <section id="bluetooth" data-legacy-link aria-label="通过蓝牙连接"><h2>通过蓝牙连接</h2><p>有关此主题的详细说明，请查看现有页面。</p><p><a href="#connect-bluetooth">Android</a> · <a href="#windows-bluetooth">Windows PC</a> · <a href="#mac-bluetooth">Mac</a> · <a href="/zh/guide-reference#bluetooth">查看详细指南</a></p></section>
     <section id="permissions" data-legacy-link aria-label="各设备所需权限"><h2>各设备所需权限</h2><p>查看详细指南了解具体步骤。</p><p><a href="/zh/guide-reference#permissions">查看详细指南</a></p></section>
     <section class="panel" id="android" data-device-panel aria-labelledby="android-title">
@@ -250,6 +249,10 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
       </ol>
       <p><a href="/zh/help#cursor-not-crossing">查看光标问题的排查步骤</a></p>
     </section>
+    <section class="panel" id="quick" aria-labelledby="lan-reconnect-title">
+      <h2 id="lan-reconnect-title">LAN 连接 · 自动重连</h2>
+      <p>启用自动重连后，如果上次连接的设备重新出现，或只有一台设备可连接，电脑端应用会自动连接。</p>
+    </section>
     <section class="panel" id="connect-account" aria-labelledby="account-title">
       <p class="pill">可选 · 无需二维码或验证码</p>
       <h2 id="account-title">如何通过 Google 账号找到自己的设备</h2>
@@ -321,6 +324,7 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
             </p>
           </div>
           <h3 id="pc-shortcuts-title">Windows 应用默认快捷键</h3>
+          <p id="device-order"><strong>设备顺序与数字快捷键:</strong> 当主电脑有两台或更多 LAN 设备时，可在<strong>设备管理 → 编辑顺序</strong>中调整顺序。连接设备和打开远程窗口的数字快捷键也会按此顺序更新。</p>
           <div class="table-wrap">
             <table role="table" class="kt" aria-labelledby="pc-shortcuts-title">
               <thead role="rowgroup">
@@ -368,7 +372,7 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
                   </td>
                 </tr>
                 <tr role="row">
-                  <td role="cell"><span class="key-chord"><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Backspace</kbd></span></td>
+                  <td role="cell"><span class="key-chord key-chord--priority"><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Backspace</kbd></span></td>
                   <td role="cell">主电脑：控制其他设备时，立即将光标返回本机显示器中央。</td>
                 </tr>
               </tbody>

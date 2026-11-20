@@ -106,7 +106,8 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
 /* Keep each physical key chord intact, even when listed alongside alternatives. */
 #shortcuts .kt th:first-child,#shortcuts .kt td:first-child{width:27%;min-width:14.6rem}
 #shortcuts .key-chord{display:inline-flex;align-items:center;gap:.14rem;white-space:nowrap;overflow-wrap:normal;word-break:normal;vertical-align:middle}
-#shortcuts .key-chord kbd{white-space:nowrap}
+#shortcuts .key-chord kbd{display:inline-block;white-space:nowrap;padding:.15rem .36rem;border:1px solid #7ba8de;border-radius:.32rem;background:#e6f1ff;color:#123f77;font:750 .79rem/1.35 system-ui,sans-serif;box-shadow:0 1px #7ba8de}
+#shortcuts .key-chord--priority kbd{background:#174c91;color:#fff;border-color:#10376b;box-shadow:0 1px #10376b}
 @media(max-width:600px){
   #shortcuts .table-wrap{overflow:visible}
   #shortcuts .kt{display:block;min-width:0}
@@ -150,8 +151,6 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
     <section id="files" data-legacy-link aria-label="Files and clipboard"><h2>Files and clipboard</h2><p>See the detailed steps in the current guide.</p><p><a href="/en/guide-reference#files">Read the full guide</a></p></section>
     <section id="screenshots" data-legacy-link aria-label="Capture and send screenshots"><h2>Capture and send screenshots</h2><p>See the detailed steps in the current guide.</p><p><a href="/en/guide-reference#screenshots">Read the full guide</a></p></section>
     <section id="notifications" data-legacy-link aria-label="Phone notifications and replies"><h2>Phone notifications and replies</h2><p>See the detailed steps in the current guide.</p><p><a href="/en/guide-reference#notifications">Read the full guide</a></p></section>
-    <section id="quick" data-legacy-link aria-label="Device order and quick connections"><h2>Device order and quick connections</h2><p>See the detailed steps in the current guide.</p><p><a href="/en/guide-reference#quick">Read the full guide</a></p></section>
-    <section id="device-order" data-legacy-link aria-label="Device order and shortcut numbers"><h2>Device order and shortcut numbers</h2><p>See the detailed steps in the current guide.</p><p><a href="/en/guide-reference#device-order">Read the full guide</a></p></section>
     <section id="bluetooth" data-legacy-link aria-label="Connect via Bluetooth"><h2>Connect via Bluetooth</h2><p>See the current guide for details on this topic.</p><p><a href="#connect-bluetooth">Android</a> · <a href="#windows-bluetooth">Windows PC</a> · <a href="#mac-bluetooth">Mac</a> · <a href="/en/guide-reference#bluetooth">Read the full guide</a></p></section>
     <section id="permissions" data-legacy-link aria-label="Permissions by device"><h2>Permissions by device</h2><p>See the detailed steps in the current guide.</p><p><a href="/en/guide-reference#permissions">Read the full guide</a></p></section>
     <section class="panel" id="android" data-device-panel aria-labelledby="android-title">
@@ -249,6 +248,10 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
       </ol>
       <p><a href="/en/help#cursor-not-crossing">Troubleshoot the cursor</a></p>
     </section>
+    <section class="panel" id="quick" aria-labelledby="lan-reconnect-title">
+      <h2 id="lan-reconnect-title">LAN connection · Auto-reconnect</h2>
+      <p>When Auto-reconnect is on, the PC app connects when the last connected device reappears or when only one device is ready to connect.</p>
+    </section>
     <section class="panel" id="connect-account" aria-labelledby="account-title">
       <p class="pill">Optional · instead of a QR or pairing code</p>
       <h2 id="account-title">Find your devices with a Google account</h2>
@@ -331,6 +334,7 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
             </p>
           </div>
           <h3 id="pc-shortcuts-title">Windows app defaults</h3>
+          <p id="device-order"><strong>Device order and shortcut numbers:</strong> If your main PC has at least two LAN devices, open <strong>Device management → Edit order</strong> to reorder them. The numbered shortcuts for connecting and opening remote windows follow that order.</p>
           <div class="table-wrap">
             <table role="table" class="kt" aria-labelledby="pc-shortcuts-title">
               <thead role="rowgroup">
@@ -382,7 +386,7 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
                   </td>
                 </tr>
                 <tr role="row">
-                  <td role="cell"><span class="key-chord"><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Backspace</kbd></span></td>
+                  <td role="cell"><span class="key-chord key-chord--priority"><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Backspace</kbd></span></td>
                   <td role="cell">
                     Main PC: immediately return the cursor to the center of your own monitor while
                     controlling another device.

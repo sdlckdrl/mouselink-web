@@ -107,7 +107,8 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
 /* Keep each physical key chord intact, even when listed alongside alternatives. */
 #shortcuts .kt th:first-child,#shortcuts .kt td:first-child{width:27%;min-width:14.6rem}
 #shortcuts .key-chord{display:inline-flex;align-items:center;gap:.14rem;white-space:nowrap;overflow-wrap:normal;word-break:normal;vertical-align:middle}
-#shortcuts .key-chord kbd{white-space:nowrap}
+#shortcuts .key-chord kbd{display:inline-block;white-space:nowrap;padding:.15rem .36rem;border:1px solid #7ba8de;border-radius:.32rem;background:#e6f1ff;color:#123f77;font:750 .79rem/1.35 system-ui,sans-serif;box-shadow:0 1px #7ba8de}
+#shortcuts .key-chord--priority kbd{background:#174c91;color:#fff;border-color:#10376b;box-shadow:0 1px #10376b}
 @media(max-width:600px){
   #shortcuts .table-wrap{overflow:visible}
   #shortcuts .kt{display:block;min-width:0}
@@ -151,8 +152,6 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
     <section id="files" data-legacy-link aria-label="ファイルとクリップボード"><h2>ファイルとクリップボード</h2><p>詳しくは既存のガイドをご覧ください。</p><p><a href="/ja/guide-reference#files">既存の詳しいガイドを見る</a></p></section>
     <section id="screenshots" data-legacy-link aria-label="スクリーンショットの撮影・送信"><h2>スクリーンショットの撮影・送信</h2><p>詳しくは既存のガイドをご覧ください。</p><p><a href="/ja/guide-reference#screenshots">既存の詳しいガイドを見る</a></p></section>
     <section id="notifications" data-legacy-link aria-label="スマートフォンの通知と返信"><h2>スマートフォンの通知と返信</h2><p>詳しくは既存のガイドをご覧ください。</p><p><a href="/ja/guide-reference#notifications">既存の詳しいガイドを見る</a></p></section>
-    <section id="quick" data-legacy-link aria-label="端末の並び順とクイック接続"><h2>端末の並び順とクイック接続</h2><p>詳しくは既存のガイドをご覧ください。</p><p><a href="/ja/guide-reference#quick">既存の詳しいガイドを見る</a></p></section>
-    <section id="device-order" data-legacy-link aria-label="端末の並び順とショートカットの番号"><h2>端末の並び順とショートカットの番号</h2><p>詳しくは既存のガイドをご覧ください。</p><p><a href="/ja/guide-reference#device-order">既存の詳しいガイドを見る</a></p></section>
     <section id="bluetooth" data-legacy-link aria-label="Bluetooth で接続"><h2>Bluetooth で接続</h2><p>詳しくは既存のページをご覧ください。</p><p><a href="#connect-bluetooth">Android</a> · <a href="#windows-bluetooth">Windows PC</a> · <a href="#mac-bluetooth">Mac</a> · <a href="/ja/guide-reference#bluetooth">既存の詳しいガイドを見る</a></p></section>
     <section id="permissions" data-legacy-link aria-label="端末ごとに必要な権限"><h2>端末ごとに必要な権限</h2><p>詳しくは既存のガイドをご覧ください。</p><p><a href="/ja/guide-reference#permissions">既存の詳しいガイドを見る</a></p></section>
     <section class="panel" id="android" data-device-panel aria-labelledby="android-title">
@@ -250,6 +249,10 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
       </ol>
       <p><a href="/ja/help#cursor-not-crossing">カーソルのトラブルシューティング</a></p>
     </section>
+    <section class="panel" id="quick" aria-labelledby="lan-reconnect-title">
+      <h2 id="lan-reconnect-title">LAN接続・自動再接続</h2>
+      <p>自動再接続を有効にすると、最後に接続した端末が再び見つかったとき、または接続できる端末が1台だけのときに、PCアプリが自動で接続します。</p>
+    </section>
     <section class="panel" id="connect-account" aria-labelledby="account-title">
       <p class="pill">オプション · QR コードや数字コードを使わずに接続</p>
       <h2 id="account-title">Google アカウントで自分の端末を探す方法</h2>
@@ -326,6 +329,7 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
             </p>
           </div>
           <h3 id="pc-shortcuts-title">Windowsアプリの既定ショートカット</h3>
+          <p id="device-order"><strong>端末の並び順とショートカット番号:</strong> メインPCにLAN端末が2台以上ある場合は、<strong>端末管理 → 並び順を編集</strong>で順番を変えられます。接続やリモートウィンドウを開く数字ショートカットもその順番に合わせて変わります。</p>
           <div class="table-wrap">
             <table role="table" class="kt" aria-labelledby="pc-shortcuts-title">
               <thead role="rowgroup">
@@ -371,7 +375,7 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
                   </td>
                 </tr>
                 <tr role="row">
-                  <td role="cell"><span class="key-chord"><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Backspace</kbd></span></td>
+                  <td role="cell"><span class="key-chord key-chord--priority"><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Backspace</kbd></span></td>
                   <td role="cell">
                     メインPC：他の機器の操作中に、カーソルを自分のモニター中央へすぐに戻します。
                   </td>

@@ -105,7 +105,8 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
 /* Keep each physical key chord intact, even when listed alongside alternatives. */
 #shortcuts .kt th:first-child,#shortcuts .kt td:first-child{width:27%;min-width:14.6rem}
 #shortcuts .key-chord{display:inline-flex;align-items:center;gap:.14rem;white-space:nowrap;overflow-wrap:normal;word-break:normal;vertical-align:middle}
-#shortcuts .key-chord kbd{white-space:nowrap}
+#shortcuts .key-chord kbd{display:inline-block;white-space:nowrap;padding:.15rem .36rem;border:1px solid #7ba8de;border-radius:.32rem;background:#e6f1ff;color:#123f77;font:750 .79rem/1.35 system-ui,sans-serif;box-shadow:0 1px #7ba8de}
+#shortcuts .key-chord--priority kbd{background:#174c91;color:#fff;border-color:#10376b;box-shadow:0 1px #10376b}
 @media(max-width:600px){
   #shortcuts .table-wrap{overflow:visible}
   #shortcuts .kt{display:block;min-width:0}
@@ -148,8 +149,6 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
     <section id="files" data-legacy-link aria-label="파일·클립보드"><h2>파일·클립보드</h2><p>요약과 상세 가이드에서 이어서 확인하세요.</p><p><a href="/features#files">기능 안내 보기</a> · <a href="/guide-reference#files">상세 가이드 보기</a></p></section>
     <section id="screenshots" data-legacy-link aria-label="스크린샷 캡처·전송"><h2>스크린샷 캡처·전송</h2><p>요약과 상세 가이드에서 이어서 확인하세요.</p><p><a href="/features#screenshots">기능 안내 보기</a> · <a href="/guide-reference#screenshots">상세 가이드 보기</a></p></section>
     <section id="notifications" data-legacy-link aria-label="폰 알림·답장"><h2>폰 알림·답장</h2><p>요약과 상세 가이드에서 이어서 확인하세요.</p><p><a href="/features#notifications">기능 안내 보기</a> · <a href="/guide-reference#notifications">상세 가이드 보기</a></p></section>
-    <section id="quick" data-legacy-link aria-label="기기 순서와 빠른 연결"><h2>기기 순서와 빠른 연결</h2><p>요약과 상세 가이드에서 이어서 확인하세요.</p><p><a href="/features#quick">기능 안내 보기</a> · <a href="/guide-reference#quick">상세 가이드 보기</a></p></section>
-    <section id="device-order" data-legacy-link aria-label="기기 순서와 단축키 번호"><h2>기기 순서와 단축키 번호</h2><p>요약과 상세 가이드에서 이어서 확인하세요.</p><p><a href="/features#quick">기능 안내 보기</a> · <a href="/guide-reference#device-order">상세 가이드 보기</a></p></section>
     <section id="bluetooth" data-legacy-link aria-label="Bluetooth로 연결"><h2>Bluetooth로 연결</h2><p>이 주제의 자세한 설명은 기존 페이지에서 볼 수 있어요.</p><p><a href="#connect-bluetooth">Android</a> · <a href="#windows-bluetooth">Windows PC</a> · <a href="#mac-bluetooth">Mac</a> · <a href="/guide-reference#bluetooth">상세 가이드 보기</a></p></section>
     <section id="permissions" data-legacy-link aria-label="기기별 권한"><h2>기기별 권한</h2><p>요약과 상세 가이드에서 이어서 확인하세요.</p><p><a href="/features#permissions">기능 안내 보기</a> · <a href="/guide-reference#permissions">상세 가이드 보기</a></p></section>
     <section class="panel" id="android" data-device-panel aria-labelledby="android-title">
@@ -247,6 +246,10 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
       </ol>
       <p><a href="/help#cursor">커서 문제 해결 보기</a></p>
     </section>
+    <section class="panel" id="quick" aria-labelledby="lan-reconnect-title">
+      <h2 id="lan-reconnect-title">LAN 연결 · 자동 재연결</h2>
+      <p>자동 재연결을 켜면 마지막으로 연결한 기기가 다시 나타나거나 연결 가능한 기기가 하나일 때, PC 앱이 자동으로 연결해요.</p>
+    </section>
     <section class="panel" id="connect-account" aria-labelledby="account-title">
       <p class="pill">선택 · QR·번호 대신</p>
       <h2 id="account-title">Google 계정으로 내 기기 찾기</h2>
@@ -320,6 +323,7 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
             </p>
           </div>
           <h3 id="pc-shortcuts-title">Windows 앱의 기본 단축키</h3>
+          <p id="device-order"><strong>기기 순서와 단축키 번호:</strong> 메인 PC에서 LAN 기기가 두 대 이상이면 <strong>기기 관리 → 순서 편집</strong>으로 순서를 바꿀 수 있어요. 연결과 원격창을 여는 숫자 단축키도 이 순서에 맞춰 바뀌어요.</p>
           <div class="table-wrap">
             <table role="table" class="kt" aria-labelledby="pc-shortcuts-title">
               <thead role="rowgroup">
@@ -371,7 +375,7 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
                   </td>
                 </tr>
                 <tr role="row">
-                  <td role="cell"><span class="key-chord"><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Backspace</kbd></span></td>
+                  <td role="cell"><span class="key-chord key-chord--priority"><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Backspace</kbd></span></td>
                   <td role="cell">
                     메인 PC: 다른 기기 제어 중 커서를 내 PC의 모니터 중앙으로 즉시 되돌립니다.
                   </td>

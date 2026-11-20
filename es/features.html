@@ -57,7 +57,10 @@ h1,h2,h3{line-height:1.25;letter-spacing:-.04em}h1{font-size:clamp(2rem,4.8vw,3.
 .key-list{margin:0;gap:0}
 .key-list div{display:grid;grid-template-columns:minmax(0,1fr);gap:.28rem;padding:.54rem .07rem;align-items:baseline;border-bottom:1px solid var(--preview-line)}
 .key-list dt{color:var(--preview-ink);font-weight:700}.key-list dd{font-size:.79rem;color:var(--preview-muted);line-height:1.9}
-.key-list kbd{display:inline-block;white-space:nowrap;font:700 .76rem/1.35 system-ui,sans-serif;padding:.14rem .33rem;border-radius:.3rem;background:#edf3f8;color:#233c52;border:1px solid #a7bbc9;box-shadow:0 1px #a7bbc9}
+.key-chord{display:inline-flex;align-items:center;gap:.18rem;white-space:nowrap;overflow-wrap:normal;word-break:normal;vertical-align:middle}
+.key-list .key-chord kbd{display:inline-block;white-space:nowrap;padding:.15rem .36rem;border:1px solid #7ba8de;border-radius:.32rem;background:#e6f1ff;color:#123f77;font:750 .79rem/1.35 system-ui,sans-serif;box-shadow:0 1px #7ba8de}
+.key-list .key-chord--priority kbd{background:#174c91;color:#fff;border-color:#10376b;box-shadow:0 1px #10376b}
+.moved-quick-note:not(:target){display:none}
 @media(min-width:580px){.key-list div{grid-template-columns:minmax(0,1fr) auto;gap:1rem}}
 @media(max-width:579px){.feature>summary{padding-inline-start:.85rem}.feature>.panel{padding-inline:.85rem}}
 
@@ -157,7 +160,7 @@ h1,h2,h3{line-height:1.25;letter-spacing:-.04em}h1{font-size:clamp(2rem,4.8vw,3.
 </section>
 <div class="layout kvm-more">
   <p><strong>Para empezar:</strong> Conecta los dispositivos en la app y colócalos como están en el escritorio. Pasa el puntero por el borde indicado. <a href="/es/help#cursor">Si el puntero no pasa</a></p>
-  <details class="subfeature" id="quick"><summary>Orden y conexión rápida</summary><p>Si cambias el orden de los dispositivos LAN en el PC principal, también cambian sus atajos de conexión y ventana remota. La reconexión automática vuelve a conectar cuando el dispositivo esté listo.</p></details>
+  <p id="quick" class="moved-quick-note">Consulta la guía de conexión para ver el orden de los dispositivos y la reconexión automática. <a href="/es/guide#quick">Abrir la guía de conexión</a></p>
 </div>
 <section class="layout examples demo-showcase" aria-labelledby="examples-title">
   <h2 id="examples-title">Pruébalo en pantalla</h2>
@@ -289,16 +292,16 @@ h1,h2,h3{line-height:1.25;letter-spacing:-.04em}h1{font-size:clamp(2rem,4.8vw,3.
         <div class="key-groups">
           <section class="key-group" aria-labelledby="shortcuts-quick"><h3 id="shortcuts-quick">Atajos rápidos</h3>
             <dl class="key-list">
-              <div id="shortcut-return"><dt>Traer el cursor a mi PC</dt><dd><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Backspace</kbd></dd></div>
-              <div><dt>Abrir la herramienta de capturas</dt><dd><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>S</kbd></dd></div>
-              <div><dt>Abrir o cerrar Envío rápido</dt><dd><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>D</kbd></dd></div>
-              <div><dt>Copiar un código de la notificación del teléfono</dt><dd><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>V</kbd></dd></div>
+              <div id="shortcut-return"><dt>Traer el cursor a mi PC</dt><dd><span class="key-chord key-chord--priority"><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Backspace</kbd></span></dd></div>
+              <div><dt>Abrir la herramienta de capturas</dt><dd><span class="key-chord"><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>S</kbd></span></dd></div>
+              <div><dt>Abrir o cerrar Envío rápido</dt><dd><span class="key-chord"><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>D</kbd></span></dd></div>
+              <div><dt>Copiar un código de la notificación del teléfono</dt><dd><span class="key-chord"><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>V</kbd></span></dd></div>
             </dl>
           </section>
           <section class="key-group" aria-labelledby="shortcuts-lan"><h3 id="shortcuts-lan">Dispositivos LAN numerados</h3>
             <dl class="key-list">
-              <div><dt>Conectar o desconectar la entrada</dt><dd><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>1–9</kbd></dd></div>
-              <div><dt>Abrir o traer al frente la ventana remota</dt><dd><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>1–9</kbd></dd></div>
+              <div><dt>Conectar o desconectar la entrada</dt><dd><span class="key-chord"><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>1–9</kbd></span></dd></div>
+              <div><dt>Abrir o traer al frente la ventana remota</dt><dd><span class="key-chord"><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>1–9</kbd></span></dd></div>
             </dl>
           </section>
         </div>
