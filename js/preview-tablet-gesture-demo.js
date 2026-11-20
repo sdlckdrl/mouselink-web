@@ -2,6 +2,13 @@
   'use strict';
   const instances=new WeakMap();
   const quad=[[910,372],[1480,370],[1435,789],[854,739]],W=640,H=440;
+  const pcQuad=[[138,146],[849,100],[841,595],[136,565]];
+  function inside(x,y,vertices){
+    return vertices.every(([ax,ay],i)=>{
+      const [bx,by]=vertices[(i+1)%vertices.length];
+      return (bx-ax)*(y-ay)-(by-ay)*(x-ax)>=0;
+    });
+  }
   const art='/assets/preview/android-tablet-gesture-desk.webp';
   function projection(width,height){
     const [p0,p1,p2,p3]=quad.map(([x,y])=>[x*width/1536,y*height/1024]);
@@ -48,12 +55,18 @@
             <svg class="tg-path" viewBox="0 0 640 440" aria-hidden="true"><polyline data-path points="" fill="none" stroke="#00c3a0" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><circle data-origin cx="0" cy="0" r="7" fill="#00605b" stroke="#dbfff5" stroke-width="2" visibility="hidden"/></svg>
           </div>
         </div>
+        <span class="tg-cursor" data-cursor data-device="pc" aria-hidden="true" hidden>
+          <svg viewBox="0 0 24 30" width="24" height="30" focusable="false">
+            <path class="tg-cursor-arrow" d="M1 1L22 19 13 18.4 17 26 13.6 28 9.3 20.3 3 27Z" fill="#fff" stroke="#142a43" stroke-width="2" stroke-linejoin="round"/>
+            <circle class="tg-cursor-dot" cx="12" cy="15" r="7.5" fill="#fff" fill-opacity=".82" stroke="#142a43" stroke-width="2"/>
+          </svg>
+        </span>
         <button type="button" class="tg-right-button" data-right-button aria-pressed="false" aria-label="우클릭" hidden>
           <svg viewBox="0 0 40 56" aria-hidden="true"><rect x="3" y="2" width="34" height="51" rx="16" fill="#fff" stroke="#214257" stroke-width="3"/><path class="tg-right-fill" d="M20 3v22h16V17C35 9 29 4 20 3Z"/><path d="M20 3v22m-16 0h32" stroke="#214257" stroke-width="2"/><path d="M20 9v7" stroke="#214257" stroke-width="3" stroke-linecap="round"/></svg>
           <span>우클릭</span>
         </button>
       </div>
-      <p class="tg-note">오른쪽 아래 우클릭 버튼을 누른 뒤 화면을 그으세요. PC에선 우클릭한 채 바로 그을 수 있어요.</p>
+      <p class="tg-note">커서를 PC와 태블릿 사이로 옮겨 보세요. 제스처는 우클릭한 채 그리거나 화면 속 우클릭 버튼을 써 보세요.</p>
       <div class="tg-controls" role="group" aria-label="제스처 도움 조작">
         <button type="button" data-action="back">← 뒤로</button>
         <button type="button" data-action="up">↑ 위로</button>
@@ -64,7 +77,7 @@
       <p class="tg-status" data-status role="status" aria-atomic="true"></p>`;
     host.append(root);
     const $=name=>root.querySelector('[data-'+name+']');
-    const scene=$('scene'),photo=$('photo'),tablet=$('tablet'),surface=$('surface'),scroll=$('scroll'),page=$('page'),browser=$('browser'),home=$('home'),internet=$('internet'),reopenButton=$('reopen'),rightButton=$('right-button'),path=$('path'),origin=$('origin'),status=$('status');
+    const scene=$('scene'),photo=$('photo'),tablet=$('tablet'),surface=$('surface'),scroll=$('scroll'),page=$('page'),browser=$('browser'),home=$('home'),internet=$('internet'),reopenButton=$('reopen'),rightButton=$('right-button'),path=$('path'),origin=$('origin'),status=$('status'),cursor=$('cursor');
     const actions=[...root.querySelectorAll('[data-action]')];
     const articles=[
       {where:'여행 기록',tag:'01 / 바다',title:'파도가 잔잔한 해변',text:'바람이 잦아들고 물결이 모래 위로 느리게 밀려왔어요.'},
@@ -110,11 +123,34 @@
       if(fallback)return;
       const r=scene.getBoundingClientRect();if(!r.width||!r.height)return;
       map=projection(r.width,r.height);tablet.style.transform=map.css;
-      scene.dataset.mapped='true';
+      if(!scene.dataset.mapped){cursor.hidden=false;scene.dataset.mapped='true';}
     }
     function fail(){
-      fallback=true;map=null;scene.classList.add('tg-no-photo');tablet.style.transform='';
+      fallback=true;map=null;scene.classList.add('tg-no-photo');tablet.style.transform='';hideCursor();
     }
+    function hideCursor(){
+      cursor.hidden=true;
+      delete scene.dataset.cursorActive;
+    }
+    function moveCursor(e){
+      if(e.isPrimary===false)return;
+      const r=scene.getBoundingClientRect();
+      if(!r.width||!r.height)return;
+      const x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;
+      const within=x>=0&&x<=1&&y>=0&&y<=1;
+      const target=e.target.closest('[data-right-button]');
+      const device=!within||target?'':(fallback||inside(x*1536,y*1024,quad))?'tablet':inside(x*1536,y*1024,pcQuad)?'pc':'';
+      if(!device){hideCursor();return;}
+      cursor.dataset.device=device;
+      cursor.style.left=(100*x)+'%';
+      cursor.style.top=(100*y)+'%';
+      cursor.hidden=false;
+      scene.dataset.cursorActive='true';
+    }
+    for(const type of ['pointerenter','pointerdown','pointermove'])scene.addEventListener(type,moveCursor);
+    for(const type of ['pointerleave','pointercancel'])scene.addEventListener(type,hideCursor);
+    scene.addEventListener('pointerup',e=>{if(e.pointerType!=='mouse')hideCursor();});
+    window.addEventListener('blur',hideCursor);
     function point(e){
       const r=(map?scene:surface).getBoundingClientRect();
       const x=e.clientX-r.left,y=e.clientY-r.top;
