@@ -94,8 +94,10 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
       <ol class="steps">
         <li><h3>Windows와 Mac에서 앱 열기</h3><p><a href="/download-demo">OneMouse를 설치</a>하고 두 기기에서 실행하세요. 연결은 Windows에서 시작해요.</p>
           <figure class="shot shot--diagram"><a href="/assets/preview/guide/mac-start.svg" aria-label="같은 네트워크의 Windows와 Mac에서 OneMouse를 여는 모습 크게 보기"><img src="/assets/preview/guide/mac-start.svg" width="760" height="450" alt="같은 네트워크의 Windows와 Mac에서 OneMouse를 여는 모습" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">설명 그림</span>연결은 마우스·키보드가 꽂힌 Windows에서 시작해요.</figcaption></figure></li>
-        <li><h3>Mac에서 손쉬운 사용 허용</h3><p>OneMouse의 <span class="path">설정 → 고급 → macOS 권한</span>에서 <strong>손쉬운 사용</strong>을 확인하세요. Mac 시스템 설정이 열리면 OneMouse를 허용하세요. macOS 15 이상에서 <strong>로컬 네트워크</strong>를 요청하면 함께 허용하세요.</p>
-          <figure class="shot shot--example"><a href="/assets/preview/guide/mac-app-permissions-ko.svg" aria-label="Mac OneMouse의 설정, 고급 탭에 있는 macOS 권한 크게 보기"><img src="/assets/preview/guide/mac-app-permissions-ko.svg" width="800" height="466" alt="Mac OneMouse의 설정, 고급 탭에 있는 macOS 권한" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">앱 화면 재현</span>OneMouse에서 ‘손쉬운 사용’ 옆의 버튼을 눌러요.</figcaption></figure></li>
+        <li id="mac-access"><h3>Mac에서 손쉬운 사용 허용</h3><p>Windows의 마우스·키보드를 받으려면 Mac에서 <strong>손쉬운 사용</strong>을 허용하세요. macOS 버전에 따라 화면 배치가 다를 수 있어요.</p>
+          <figure class="shot shot--example"><a href="/assets/preview/guide/mac-app-permissions-ko.svg" aria-label="Mac OneMouse의 설정, 고급 탭에 있는 macOS 권한 크게 보기"><img src="/assets/preview/guide/mac-app-permissions-ko.svg" width="800" height="466" alt="Mac OneMouse의 설정, 고급 탭에 있는 macOS 권한" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">앱 화면 재현</span>① OneMouse의 ‘설정 → 고급 → macOS 권한’에서 ‘손쉬운 사용’ 옆 버튼을 눌러요.</figcaption></figure>
+          <div class="access-flow"><figure class="shot shot--example"><a href="/assets/preview/guide/macos-privacy-accessibility-example.svg" aria-label="Mac 시스템 설정의 개인정보 보호 및 보안에서 손쉬운 사용을 고르는 화면 크게 보기"><img src="/assets/preview/guide/macos-privacy-accessibility-example.svg" width="480" height="224" alt="Mac 시스템 설정의 개인정보 보호 및 보안에서 손쉬운 사용을 고르는 화면" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">macOS 화면 예시</span>② ‘개인정보 보호 및 보안’에서 ‘손쉬운 사용’을 열어요.</figcaption></figure><figure class="shot shot--example"><a href="/assets/preview/guide/macos-accessibility-onemouse-switch-example.svg" aria-label="Mac 시스템 설정의 손쉬운 사용에서 OneMouse 스위치를 켠 화면 크게 보기"><img src="/assets/preview/guide/macos-accessibility-onemouse-switch-example.svg" width="480" height="224" alt="Mac 시스템 설정의 손쉬운 사용에서 OneMouse 스위치를 켠 화면" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">macOS 화면 예시</span>③ 목록에서 OneMouse를 켜세요.</figcaption></figure></div>
+          <p>목록에 OneMouse가 없다면 <strong>+</strong>를 눌러 설치한 OneMouse를 추가하세요. macOS 15 이상에서 <strong>로컬 네트워크</strong> 접근을 요청하면 함께 허용하세요.</p></li>
         <li><h3>Mac을 고르고 6자리 코드 입력</h3><p>Mac OneMouse의 <span class="path">기기 관리 → 다른 방법으로 연결 → 이 Mac의 인증번호 보기</span>에서 번호를 확인하세요. Windows OneMouse의 <strong>기기 관리</strong>에서 해당 Mac을 골라 6자리 번호를 입력하세요.</p>
           <figure class="shot shot--example"><a href="/assets/preview/guide/mac-app-pairing-ko.svg" aria-label="Mac OneMouse의 이 Mac의 인증번호 창 크게 보기"><img src="/assets/preview/guide/mac-app-pairing-ko.svg" width="800" height="482" alt="Mac OneMouse의 이 Mac의 인증번호 창" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">앱 화면 재현</span>그림 속 숫자가 아니라 내 Mac에 표시된 번호를 입력하세요.</figcaption></figure></li>
         <li><h3>Mac 방향으로 마우스 넘기기</h3><p>Windows의 배치 화면에서 Mac을 실제 놓인 방향에 배치하고, 그쪽 가장자리로 마우스를 밀어 보세요.</p>
@@ -191,6 +193,11 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
       return true;
     }
     if (id === 'android-access') return showDevice('android');
+    if (id === 'mac-access') {
+      showDevice('mac');
+      document.getElementById(id).scrollIntoView({block:'start'});
+      return true;
+    }
     if (id === 'mac-bluetooth') {
       showDevice('mac');
       const disclosure = document.getElementById(id);

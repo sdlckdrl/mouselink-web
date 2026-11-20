@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="224" viewBox="0 0 480 224" role="img" aria-labelledby="title desc" xml:lang="ko">
+  <title id="title">macOS 손쉬운 사용에서 OneMouse 허용 켜기</title>
+  <desc id="desc">실제 캡처가 아닌 macOS 화면 예시입니다. 개인정보 보호 및 보안의 손쉬운 사용 목록에서 OneMouse 권한을 켭니다.</desc>
+  <rect width="480" height="224" rx="20" fill="#edf1f6"/>
+  <rect x="16" y="14" width="448" height="180" rx="16" fill="#fff" stroke="#cfd8e5"/>
+  <path d="M32 15h416a15 15 0 0 1 15 15v21H17V30a15 15 0 0 1 15-15z" fill="#f6f8fc"/>
+  <path d="M17 51h446" stroke="#e0e5ee"/>
+  <circle cx="33" cy="33" r="5.5" fill="#fd655c"/>
+  <circle cx="49" cy="33" r="5.5" fill="#ffbd45"/>
+  <circle cx="65" cy="33" r="5.5" fill="#35c85b"/>
+  <rect x="321" y="20" width="131" height="26" rx="13" fill="#e3edfd"/>
+  <g font-family="Noto Sans KR,Noto Sans CJK KR,Malgun Gothic,Apple SD Gothic Neo,sans-serif">
+    <text x="86" y="39" font-size="15" font-weight="700" fill="#4b5563">시스템 설정</text>
+    <text x="386.5" y="38" text-anchor="middle" font-size="13" font-weight="700" fill="#23497e">macOS 화면 예시</text>
+    <text x="32" y="92" font-size="25" font-weight="700" fill="#172033">손쉬운 사용</text>
+    <rect x="32" y="114" width="416" height="58" rx="12" fill="#f3f7ff" stroke="#326bd2" stroke-width="2"/>
+    <text x="54" y="151" font-size="21" font-weight="700" fill="#172033">OneMouse</text>
+    <rect x="365" y="130" width="63" height="26" rx="13" fill="#2765ca"/>
+    <circle cx="415" cy="143" r="10" fill="#fff"/>
+    <text x="18" y="213" font-size="13" fill="#536279">macOS 버전에 따라 세부 화면이 다를 수 있어요.</text>
+  </g>
+</svg>
