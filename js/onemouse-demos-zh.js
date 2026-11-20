@@ -313,7 +313,12 @@
     const cursor = el('div','virtual-cursor');
     cursor.hidden = true;
     cursor.setAttribute('aria-hidden','true');
-    source.append(desktop, selection, cursor);
+    const savedFile = el('div', 'saved-file');
+    savedFile.hidden = true;
+    savedFile.setAttribute('aria-hidden', 'true');
+    savedFile.append(el('span', 'saved-icon', '✓'), el('strong', 'saved-name', 'onemouse-demo-capture.png'),
+      el('span', 'saved-label', "已保存到演示电脑"));
+    source.append(desktop, selection, cursor, savedFile);
 
     const monitorLayer = el('div', 'monitor-layer');
     const monitor = el('div', 'monitor');
@@ -428,14 +433,12 @@
       monitorPreview.replaceChildren(picture(box));
       dialog.hidden = false;
       png = null;
-      inside.save.disabled = true;
       const current = pendingPng = pngBlob(box);
       current.then(blob => {
         if (pendingPng !== current) return;
         png = blob;
-        inside.save.disabled = false;
       }, () => {
-        if (pendingPng === current) status.textContent = '此浏览器无法生成 PNG，但仍可发送到示例手机。';
+        if (pendingPng === current) status.textContent = "此浏览器无法生成 PNG，但仍可在演示电脑上显示已保存文件，或将截图发送到示例手机。";
       });
       status.textContent = note;
       if (focusActions) inside.copy.focus({preventScroll:true});
@@ -455,6 +458,7 @@
       dropActive();
       closeCapture();
       clearReceiver();
+      savedFile.hidden = true;
       status.textContent = '';
     }
     async function copyCapture() {
@@ -465,20 +469,13 @@
         await navigator.clipboard.write([new ClipboardItem({'image/png': png || selected})]);
         if (selected === pendingPng) conclude('已复制到剪贴板。你可以回到桌面继续截图。');
       } catch {
-        if (selected === pendingPng) status.textContent = '此浏览器不支持复制图片，请试试保存。';
+        if (selected === pendingPng) status.textContent = "此浏览器不支持复制图片，但仍可将截图发送到示例手机。";
       }
     }
     function saveCapture() {
-      if (!captured || !png) return;
-      const url = URL.createObjectURL(png);
-      const download = el('a');
-      download.href = url;
-      download.download = 'onemouse-demo-capture.png';
-      root.append(download);
-      download.click();
-      download.remove();
-      setTimeout(() => URL.revokeObjectURL(url), 30000);
-      conclude('已开始下载示例截图 PNG。');
+      if (!captured) return;
+      savedFile.hidden = false;
+      conclude("演示电脑的桌面上已显示保存的文件，没有下载实际文件。");
     }
     function sendCapture() {
       if (!captured) return;

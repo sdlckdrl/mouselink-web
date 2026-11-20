@@ -313,7 +313,12 @@
     const cursor = el('div','virtual-cursor');
     cursor.hidden = true;
     cursor.setAttribute('aria-hidden','true');
-    source.append(desktop, selection, cursor);
+    const savedFile = el('div', 'saved-file');
+    savedFile.hidden = true;
+    savedFile.setAttribute('aria-hidden', 'true');
+    savedFile.append(el('span', 'saved-icon', '✓'), el('strong', 'saved-name', 'onemouse-demo-capture.png'),
+      el('span', 'saved-label', "Guardado en la PC de demostración"));
+    source.append(desktop, selection, cursor, savedFile);
 
     const monitorLayer = el('div', 'monitor-layer');
     const monitor = el('div', 'monitor');
@@ -428,14 +433,12 @@
       monitorPreview.replaceChildren(picture(box));
       dialog.hidden = false;
       png = null;
-      inside.save.disabled = true;
       const current = pendingPng = pngBlob(box);
       current.then(blob => {
         if (pendingPng !== current) return;
         png = blob;
-        inside.save.disabled = false;
       }, () => {
-        if (pendingPng === current) status.textContent = 'Este navegador no pudo crear el PNG. Aún puedes enviar la captura al teléfono de ejemplo.';
+        if (pendingPng === current) status.textContent = "Este navegador no pudo crear el PNG. Aún puedes mostrarlo como guardado en la PC de demostración o enviarlo al teléfono de ejemplo.";
       });
       status.textContent = note;
       if (focusActions) inside.copy.focus({preventScroll:true});
@@ -455,6 +458,7 @@
       dropActive();
       closeCapture();
       clearReceiver();
+      savedFile.hidden = true;
       status.textContent = '';
     }
     async function copyCapture() {
@@ -465,20 +469,13 @@
         await navigator.clipboard.write([new ClipboardItem({'image/png': png || selected})]);
         if (selected === pendingPng) conclude('Captura copiada al portapapeles. Puedes volver a capturar el escritorio.');
       } catch {
-        if (selected === pendingPng) status.textContent = 'Este navegador no permite copiar la imagen. Prueba a guardarla.';
+        if (selected === pendingPng) status.textContent = "Este navegador no permite copiar la imagen. Aún puedes enviarla al teléfono de ejemplo.";
       }
     }
     function saveCapture() {
-      if (!captured || !png) return;
-      const url = URL.createObjectURL(png);
-      const download = el('a');
-      download.href = url;
-      download.download = 'onemouse-demo-capture.png';
-      root.append(download);
-      download.click();
-      download.remove();
-      setTimeout(() => URL.revokeObjectURL(url), 30000);
-      conclude('Se ha iniciado la descarga del PNG de ejemplo.');
+      if (!captured) return;
+      savedFile.hidden = false;
+      conclude("El archivo aparece guardado en el escritorio de la PC de demostración. No se descargó ningún archivo.");
     }
     function sendCapture() {
       if (!captured) return;

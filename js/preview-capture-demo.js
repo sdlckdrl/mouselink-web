@@ -139,7 +139,12 @@
     const cursor = el('div','virtual-cursor');
     cursor.hidden = true;
     cursor.setAttribute('aria-hidden','true');
-    source.append(desktop, selection, cursor);
+    const savedFile = el('div', 'saved-file');
+    savedFile.hidden = true;
+    savedFile.setAttribute('aria-hidden', 'true');
+    savedFile.append(el('span', 'saved-icon', '✓'), el('strong', 'saved-name', 'onemouse-demo-capture.png'),
+      el('span', 'saved-label', "예시 PC에 저장됨"));
+    source.append(desktop, selection, cursor, savedFile);
 
     const monitorLayer = el('div', 'monitor-layer');
     const monitor = el('div', 'monitor');
@@ -254,14 +259,12 @@
       monitorPreview.replaceChildren(picture(box));
       dialog.hidden = false;
       png = null;
-      inside.save.disabled = true;
       const current = pendingPng = pngBlob(box);
       current.then(blob => {
         if (pendingPng !== current) return;
         png = blob;
-        inside.save.disabled = false;
       }, () => {
-        if (pendingPng === current) status.textContent = '이 브라우저에서 PNG를 만들지 못했어요. 예시 폰으로 보내기는 이용할 수 있어요.';
+        if (pendingPng === current) status.textContent = "이 브라우저에서 PNG를 만들지 못했어요. 예시 PC에 저장을 표시하거나 예시 폰으로 보내기는 이용할 수 있어요.";
       });
       status.textContent = note;
       if (focusActions) inside.copy.focus({preventScroll:true});
@@ -281,6 +284,7 @@
       dropActive();
       closeCapture();
       clearReceiver();
+      savedFile.hidden = true;
       status.textContent = '';
     }
     async function copyCapture() {
@@ -291,20 +295,13 @@
         await navigator.clipboard.write([new ClipboardItem({'image/png': png || selected})]);
         if (selected === pendingPng) conclude('클립보드에 복사했어요. 바탕화면에서 다시 캡처할 수 있어요.');
       } catch {
-        if (selected === pendingPng) status.textContent = '이 브라우저에서 이미지 복사를 할 수 없어요. 저장을 이용해 보세요.';
+        if (selected === pendingPng) status.textContent = "이 브라우저에서 이미지 복사를 할 수 없어요. 예시 폰으로 보내기는 이용할 수 있어요.";
       }
     }
     function saveCapture() {
-      if (!captured || !png) return;
-      const url = URL.createObjectURL(png);
-      const download = el('a');
-      download.href = url;
-      download.download = 'onemouse-demo-capture.png';
-      root.append(download);
-      download.click();
-      download.remove();
-      setTimeout(() => URL.revokeObjectURL(url), 30000);
-      conclude('예시 캡처 PNG 다운로드를 시작했어요.');
+      if (!captured) return;
+      savedFile.hidden = false;
+      conclude("예시 PC 바탕화면에 저장 표시를 추가했어요. 실제 파일은 내려받지 않아요.");
     }
     function sendCapture() {
       if (!captured) return;

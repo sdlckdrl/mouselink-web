@@ -313,7 +313,12 @@
     const cursor = el('div','virtual-cursor');
     cursor.hidden = true;
     cursor.setAttribute('aria-hidden','true');
-    source.append(desktop, selection, cursor);
+    const savedFile = el('div', 'saved-file');
+    savedFile.hidden = true;
+    savedFile.setAttribute('aria-hidden', 'true');
+    savedFile.append(el('span', 'saved-icon', '✓'), el('strong', 'saved-name', 'onemouse-demo-capture.png'),
+      el('span', 'saved-label', "Saved on the demo PC"));
+    source.append(desktop, selection, cursor, savedFile);
 
     const monitorLayer = el('div', 'monitor-layer');
     const monitor = el('div', 'monitor');
@@ -428,14 +433,12 @@
       monitorPreview.replaceChildren(picture(box));
       dialog.hidden = false;
       png = null;
-      inside.save.disabled = true;
       const current = pendingPng = pngBlob(box);
       current.then(blob => {
         if (pendingPng !== current) return;
         png = blob;
-        inside.save.disabled = false;
       }, () => {
-        if (pendingPng === current) status.textContent = 'This browser could not create a PNG. You can still send the screenshot to the simulated phone.';
+        if (pendingPng === current) status.textContent = "This browser could not create a PNG. You can still show it saved on the demo PC or send the screenshot to the simulated phone.";
       });
       status.textContent = note;
       if (focusActions) inside.copy.focus({preventScroll:true});
@@ -455,6 +458,7 @@
       dropActive();
       closeCapture();
       clearReceiver();
+      savedFile.hidden = true;
       status.textContent = '';
     }
     async function copyCapture() {
@@ -465,20 +469,13 @@
         await navigator.clipboard.write([new ClipboardItem({'image/png': png || selected})]);
         if (selected === pendingPng) conclude('Copied to the clipboard. You can capture the desktop again.');
       } catch {
-        if (selected === pendingPng) status.textContent = 'Image copying is unavailable in this browser. Try Save.';
+        if (selected === pendingPng) status.textContent = "Image copying is unavailable in this browser. You can still send the screenshot to the simulated phone.";
       }
     }
     function saveCapture() {
-      if (!captured || !png) return;
-      const url = URL.createObjectURL(png);
-      const download = el('a');
-      download.href = url;
-      download.download = 'onemouse-demo-capture.png';
-      root.append(download);
-      download.click();
-      download.remove();
-      setTimeout(() => URL.revokeObjectURL(url), 30000);
-      conclude('Downloading the sample screenshot as a PNG.');
+      if (!captured) return;
+      savedFile.hidden = false;
+      conclude("A saved file is shown on the demo PC desktop. No file was downloaded.");
     }
     function sendCapture() {
       if (!captured) return;
