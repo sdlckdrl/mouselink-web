@@ -39,7 +39,7 @@
       <div class="tg-scene" data-scene>
         <img class="tg-backdrop" src="${art}" width="1536" height="1024" alt="" decoding="async" data-photo>
         <div class="tg-tablet" data-tablet>
-          <div class="tg-surface" data-surface tabindex="0" role="group" aria-label="Android 태블릿 제스처: 왼쪽은 뒤로, 위아래는 스크롤, 아래로 그은 다음 오른쪽은 앱 최소화">
+          <div class="tg-surface" data-surface data-mode="browser" tabindex="0" role="group" aria-label="Android 태블릿 제스처: 왼쪽은 뒤로, 위아래는 스크롤, 아래로 그은 다음 오른쪽은 앱 최소화">
             <div class="tg-browser" data-browser aria-hidden="true">
               <div class="tg-toolbar"><b>‹　›</b><span data-address>인터넷 · 여행 기록</span><b>⋮</b></div>
               <div class="tg-page-wrap" data-scroll><div class="tg-page" data-page></div></div>
@@ -54,24 +54,23 @@
         </div>
       </div>
       <div class="tg-controls" role="group" aria-label="제스처 도움 조작">
-        <button type="button" data-arm aria-pressed="false">터치로 그리기</button>
         <button type="button" data-action="back">← 뒤로</button>
         <button type="button" data-action="up">↑ 위로</button>
         <button type="button" data-action="down">↓ 아래로</button>
         <button type="button" data-action="home">↓→ 앱 최소화</button>
         <button type="button" data-reopen hidden>인터넷 열기</button>
       </div>
-      <p class="tg-note">태블릿 화면에서 마우스 오른쪽 버튼을 누른 채 그리세요. 예시 화면은 실제 기기에 연결되지 않아요.</p>
+      <p class="tg-note">아래로 긋고 떼면 페이지가 아래로 스크롤돼요. 실제 기기에 연결하지 않는 체험 화면이에요.</p>
       <p class="tg-status" data-status role="status" aria-atomic="true"></p>`;
     host.append(root);
     const $=name=>root.querySelector('[data-'+name+']');
-    const scene=$('scene'),photo=$('photo'),tablet=$('tablet'),surface=$('surface'),scroll=$('scroll'),page=$('page'),browser=$('browser'),home=$('home'),internet=$('internet'),reopenButton=$('reopen'),arm=$('arm'),cue=$('cue'),path=$('path'),origin=$('origin'),status=$('status');
+    const scene=$('scene'),photo=$('photo'),tablet=$('tablet'),surface=$('surface'),scroll=$('scroll'),page=$('page'),browser=$('browser'),home=$('home'),internet=$('internet'),reopenButton=$('reopen'),cue=$('cue'),path=$('path'),origin=$('origin'),status=$('status');
     const actions=[...root.querySelectorAll('[data-action]')];
     const articles=[
       {where:'여행 기록',tag:'01 / 바다',title:'파도가 잔잔한 해변',text:'바람이 잦아들고 물결이 모래 위로 느리게 밀려왔어요.'},
       {where:'여행 기록',tag:'02 / 산책',title:'아침의 산책길',text:'나무 사이에 햇빛이 번지고 길 끝에 잠깐 쉬어 갈 벤치가 보여요.'}
     ];
-    let map=null,fallback=false,index=1,saved=[0,0],onHome=false,armed=false,drag=null;
+    let map=null,fallback=false,index=1,saved=[0,0],onHome=false,drag=null;
     function tell(text){status.textContent=text;}
     function renderPage(){
       const a=articles[index];
@@ -81,7 +80,7 @@
     }
     function renderMode(){
       browser.hidden=onHome;home.hidden=!onHome;reopenButton.hidden=!onHome;
-      arm.hidden=onHome;actions.forEach(button=>button.hidden=onHome);
+      surface.dataset.mode=onHome?'home':'browser';actions.forEach(button=>button.hidden=onHome);
       if(!onHome)scroll.scrollTop=saved[index];
       else cue.hidden=true;
     }
@@ -102,7 +101,7 @@
         saved[index]=scroll.scrollTop;
         tell(before===scroll.scrollTop?(action==='up'?'페이지 맨 위예요.':'페이지 맨 아래예요.'):(action==='up'?'위로 스크롤했어요.':'아래로 스크롤했어요.'));
       }else if(action==='home'){
-        saved[index]=scroll.scrollTop;onHome=true;setArmed(false);renderMode();
+        saved[index]=scroll.scrollTop;onHome=true;renderMode();
         tell('앱을 최소화했어요. 태블릿의 인터넷을 누르면 다시 열려요.');
         if(focus)internet.focus({preventScroll:true});
       }
@@ -127,14 +126,9 @@
       origin.setAttribute('visibility',points.length?'visible':'hidden');
       if(points.length){origin.setAttribute('cx',points[0].x);origin.setAttribute('cy',points[0].y);}
     }
-    function setArmed(on){
-      armed=on;surface.classList.toggle('tg-armed',on);
-      arm.setAttribute('aria-pressed',String(on));
-      arm.textContent=on?'터치 그리기 취소':'터치로 그리기';
-    }
     function cancel(){
       if(!drag)return;
-      const id=drag.id;drag=null;paint([]);surface.classList.remove('tg-drawing');
+      const id=drag.id;drag=null;paint([]);surface.classList.remove('tg-drawing');surface.classList.remove('tg-drawing-touch');
       if(surface.hasPointerCapture?.(id))surface.releasePointerCapture(id);
     }
     surface.addEventListener('pointerenter',e=>{if(e.pointerType==='mouse'&&!onHome)cue.hidden=false;});
@@ -143,10 +137,12 @@
     surface.addEventListener('pointerdown',e=>{
       if(onHome||drag||e.isPrimary===false)return;
       const mouse=e.pointerType==='mouse';
-      if(mouse?e.button!==2:!armed||e.button!==0)return;
+      const touch=e.pointerType==='touch'||e.pointerType==='pen';
+      if(mouse?e.button!==2:!touch||e.button!==0)return;
       e.preventDefault();cue.hidden=true;
-      drag={id:e.pointerId,mouse,points:[point(e)]};paint(drag.points);
+      drag={id:e.pointerId,points:[point(e)]};paint(drag.points);
       surface.classList.add('tg-drawing');
+      surface.classList.toggle('tg-drawing-touch',touch);
       surface.setPointerCapture?.(e.pointerId);
     });
     surface.addEventListener('pointermove',e=>{
@@ -159,21 +155,19 @@
     });
     surface.addEventListener('pointerup',e=>{
       if(drag?.id!==e.pointerId)return;
-      const a=recognize([...drag.points,point(e)]),mouse=drag.mouse;
+      const a=recognize([...drag.points,point(e)]);
       cancel();
-      if(!mouse)setArmed(false);
       if(a)act(a);
       else tell('←, ↑, ↓ 또는 아래로 그은 뒤 오른쪽으로 그려 보세요.');
     });
     for(const event of ['pointercancel','lostpointercapture'])surface.addEventListener(event,e=>{if(drag?.id===e.pointerId)cancel();});
     surface.addEventListener('keydown',e=>{
-      if(e.key==='Escape'){cancel();setArmed(false);return;}
+      if(e.key==='Escape'){cancel();return;}
       if(e.target!==surface||e.altKey||e.ctrlKey||e.metaKey)return;
       const a={ArrowLeft:'back',ArrowUp:'up',ArrowDown:'down',Home:'home'}[e.key];
       if(!onHome&&a){e.preventDefault();act(a,true);}
     });
     actions.forEach(b=>b.addEventListener('click',()=>act(b.dataset.action,true)));
-    arm.addEventListener('click',()=>{cancel();setArmed(!armed);tell(armed?'태블릿 화면에서 손가락으로 방향을 그리세요.':'터치 그리기를 취소했어요.');});
     internet.addEventListener('click',()=>reopen(true));
     reopenButton.addEventListener('click',()=>reopen(true));
     photo.addEventListener('error',fail);
