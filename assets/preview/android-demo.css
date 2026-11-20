@@ -45,8 +45,8 @@
 }
 .om-android-phone-note,.om-android-pc-note { position:absolute; display:grid; gap:.38em; }
 .om-android-phone-note { top:27%; left:5%; width:90%; font-size:14px; pointer-events:auto; }
-.om-android-pc-note { top:22%; left:19%; width:54%; font-size:21px; pointer-events:auto; }
-.om-android-pc-note .om-android-note-field { min-height:6.15em; }
+.om-android-pc-note { top:14%; left:10%; width:66%; font-size:23px; pointer-events:auto; }
+.om-android-pc-note .om-android-note-field { min-height:6.65em; }
 .om-android-note-title { font-weight:820; }
 .om-android-note-field {
   display:block; width:100%; min-width:0; padding:.45em; margin:0; resize:none;
