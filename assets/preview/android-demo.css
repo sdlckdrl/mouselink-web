@@ -2,8 +2,7 @@
 .om-android-demo { container:om-android / inline-size; color:#17374a; }
 .om-android-demo [hidden] { display:none!important; }
 .om-android-demo :focus-visible { outline:3px solid #007661; outline-offset:2px; }
-.om-android-alert-controls { display:flex; flex-wrap:wrap; gap:.35rem; }
-.om-android-control,.om-android-note-action {
+.om-android-note-action {
   min-height:44px; border:1px solid #7e9aaa; border-radius:.52rem; color:#16384b; background:#fff;
   font:750 .9rem/1.15 system-ui,sans-serif; cursor:pointer; padding:.4rem .78rem;
   touch-action:manipulation;
@@ -58,7 +57,6 @@
 .om-android-stage .om-android-note-action { min-height:2.45em; font-size:inherit; padding:.24em .36em; }
 .om-android-stage .om-android-note-field { min-height:2.8em; }
 .om-android-compact-alerts,.om-android-compact-clipboard { display:none; }
-.om-android-alert-controls { margin-top:.46rem; }
 @container om-android (max-width:650px) {
   .om-android-compact-alerts,.om-android-compact-clipboard { display:grid; gap:.35rem; margin-top:.5rem; }
   .om-android-compact-alerts { grid-template-columns:repeat(2,minmax(0,1fr)); min-height:4.3rem; }

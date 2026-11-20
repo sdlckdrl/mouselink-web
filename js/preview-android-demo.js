@@ -84,18 +84,13 @@
     const compactClipboard=el('div','compact-clipboard');
     compactClipboard.append(compactSource.box,compactDest.box);
 
-    const controls=el('div','alert-controls');
-    const pause=button('control','일시정지'), replay=button('control','알림 다시 보기');
-    controls.append(pause,replay);
     const hint=el('p','hint','예시 알림은 자동으로 전달돼요. 폰 메모를 복사해 PC 메모장에 붙여넣어 보세요.');
     const status=el('p','status');
     status.setAttribute('role','status');status.setAttribute('aria-atomic','true');
-    root.append(hint,stage,compactNotifications,compactClipboard,controls,status);
+    root.append(hint,stage,compactNotifications,compactClipboard,status);
     panel.append(root);
 
     let copied=null, pasted='', visible=false, mailIndex=0;
-    const motion=window.matchMedia?.('(prefers-reduced-motion: reduce)');
-    let paused=Boolean(motion?.matches);
     let timers=[];
     const schedule=(fn,delay)=>{const id=window.setTimeout(fn,delay);timers.push(id);};
     const clearTimers=()=>{timers.forEach(id=>window.clearTimeout(id));timers=[];};
@@ -120,21 +115,19 @@
     else window.addEventListener('resize',updateControlSize,{passive:true});
     updateControlSize();
     function present(card,mail){card.sender.textContent=mail[0];card.content.textContent=mail[1];card.shell.hidden=false;}
-    function fire(manual=false){
+    function fire(){
       clearTimers();hideAlerts();
-      if(!allowed()){if(manual)status.textContent='사진이 보이는 곳에서 예시 알림을 다시 볼 수 있어요.';return;}
+      if(!allowed())return;
       const mail=MAILS[mailIndex++%MAILS.length];
       for(const card of [android,smallPhone])present(card,mail);
       schedule(()=>{if(allowed())for(const card of [windows,smallPC])present(card,mail);},450);
       schedule(()=>{for(const card of [android,smallPhone])card.shell.hidden=true;},3950);
       schedule(()=>{for(const card of [windows,smallPC])card.shell.hidden=true;},4700);
-      if(!paused)schedule(()=>{if(allowed()&&!paused)fire();},10000);
-      if(manual)status.textContent=`예시 알림: ${mail[1]} Android에서 Windows로 이어집니다.`;
+      schedule(fire,10000);
     }
     function syncAlerts(delay=550){
-      stopTimers();pause.textContent=paused?'자동 재생':'일시정지';
-      pause.disabled=replay.disabled=!allowed();
-      if(allowed()&&!paused)schedule(()=>fire(),delay);
+      stopTimers();
+      if(allowed())schedule(fire,delay);
     }
     function updateClip(){
       for(const d of [dest,compactDest]){d.field.value=pasted;d.action.disabled=!copied;}
@@ -159,10 +152,7 @@
       d.field.addEventListener('paste',event=>{event.preventDefault();paste();});
       d.field.addEventListener('copy',event=>event.preventDefault());
     }
-    pause.addEventListener('click',()=>{paused=!paused;status.textContent='';syncAlerts(paused?550:120);});
-    replay.addEventListener('click',()=>fire(true));
     document.addEventListener('visibilitychange',()=>syncAlerts());
-    motion?.addEventListener?.('change',event=>{if(event.matches){paused=true;syncAlerts();}});
     if(typeof IntersectionObserver==='function'){
       const watch=new IntersectionObserver(entries=>{
         const active=entries.some(entry=>entry.target===stage&&entry.isIntersecting&&entry.intersectionRatio>=.1);
@@ -170,12 +160,14 @@
       },{threshold:[0,.1]});
       watch.observe(stage);
     }
-    // With no observer, keep autoplay off; the replay button can opt in while visible.
+    // Older browsers can derive the visible area without an observer.
     else {
-      paused=true;
       const inspect=()=>{
         const r=stage.getBoundingClientRect();
-        const active=r.bottom>0&&r.right>0&&r.top<window.innerHeight&&r.left<window.innerWidth;
+        const width=Math.max(0,Math.min(r.right,window.innerWidth)-Math.max(0,r.left));
+        const height=Math.max(0,Math.min(r.bottom,window.innerHeight)-Math.max(0,r.top));
+        const area=(r.right-r.left)*(r.bottom-r.top);
+        const active=area>0&&width*height>=area*.1;
         if(visible!==active){visible=active;syncAlerts();}
       };
       window.addEventListener('scroll',inspect,{passive:true});
@@ -183,7 +175,7 @@
       inspect();
     }
     updateClip();syncAlerts();
-    const instance={reset(){paused=Boolean(motion?.matches);mailIndex=0;copied=null;pasted='';status.textContent='';updateClip();syncAlerts();}};
+    const instance={reset(){mailIndex=0;copied=null;pasted='';status.textContent='';updateClip();syncAlerts();}};
     instances.set(panel,instance);
     return instance;
   }
