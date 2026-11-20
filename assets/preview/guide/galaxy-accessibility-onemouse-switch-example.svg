@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="224" viewBox="0 0 480 224" role="img" aria-labelledby="title desc" xml:lang="ko">
+  <title id="title">Galaxy 설정에서 One Mouse 접근성 스위치 켜기</title>
+  <desc id="desc">실제 캡처가 아닌 Galaxy 설정 예시입니다. One Mouse를 선택한 뒤 접근성 서비스 스위치를 켭니다. 세부 화면과 버튼 이름은 기기 버전에 따라 다를 수 있습니다.</desc>
+  <rect width="480" height="224" rx="20" fill="#f2f2f7"/>
+  <g font-family="Noto Sans KR,Noto Sans CJK KR,Malgun Gothic,Apple SD Gothic Neo,sans-serif">
+    <rect x="333" y="15" width="128" height="26" rx="13" fill="#e1e8fb"/>
+    <text x="397" y="33" text-anchor="middle" font-size="13" font-weight="700" fill="#25427e">Galaxy 화면 예시</text>
+    <path d="m31 51-7 7 7 7" fill="none" stroke="#211f26" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="42" y="63" font-size="17" fill="#54515b">설치된 앱</text>
+    <text x="22" y="106" font-size="30" font-weight="700" fill="#211f26">One Mouse</text>
+    <rect x="20" y="125" width="440" height="68" rx="19" fill="#fff" stroke="#3565d7" stroke-width="2"/>
+    <text x="41" y="166" font-size="20" font-weight="700" fill="#211f26">사용 중</text>
+    <rect x="374" y="143" width="62" height="32" rx="16" fill="#3565d7"/>
+    <circle cx="420" cy="159" r="12" fill="#fff"/>
+    <text x="22" y="211" font-size="13" fill="#595565">기기·One UI 버전에 따라 표시가 다를 수 있어요.</text>
+  </g>
+</svg>

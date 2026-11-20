@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="224" viewBox="0 0 480 224" role="img" aria-labelledby="title desc" xml:lang="ko">
+  <title id="title">Galaxy 접근성 설정에서 One Mouse 찾기</title>
+  <desc id="desc">실제 캡처가 아닌 Galaxy 설정 예시입니다. 설정, 접근성, 설치된 앱으로 들어가 One Mouse를 선택합니다. 기기 버전에 따라 표시가 다를 수 있습니다.</desc>
+  <rect width="480" height="224" rx="20" fill="#f2f2f7"/>
+  <g font-family="Noto Sans KR,Noto Sans CJK KR,Malgun Gothic,Apple SD Gothic Neo,sans-serif">
+    <rect x="333" y="15" width="128" height="26" rx="13" fill="#e1e8fb"/>
+    <text x="397" y="33" text-anchor="middle" font-size="13" font-weight="700" fill="#25427e">Galaxy 화면 예시</text>
+    <path d="m31 51-7 7 7 7" fill="none" stroke="#211f26" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="42" y="63" font-size="17" fill="#54515b">설정 › 접근성</text>
+    <text x="22" y="106" font-size="30" font-weight="700" fill="#211f26">설치된 앱</text>
+    <rect x="20" y="125" width="440" height="68" rx="19" fill="#fff" stroke="#3565d7" stroke-width="2"/>
+    <text x="41" y="153" font-size="21" font-weight="700" fill="#211f26">One Mouse</text>
+    <text x="41" y="176" font-size="16" fill="#5d5966">사용 안 함</text>
+    <path d="m424 151 8 8-8 8" fill="none" stroke="#3565d7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="22" y="211" font-size="13" fill="#595565">기기·One UI 버전에 따라 표시가 다를 수 있어요.</text>
+  </g>
+</svg>
