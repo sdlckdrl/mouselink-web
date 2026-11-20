@@ -2,13 +2,13 @@
 .om-android-demo { container:om-android / inline-size; color:#17374a; }
 .om-android-demo [hidden] { display:none!important; }
 .om-android-demo :focus-visible { outline:3px solid #007661; outline-offset:2px; }
-.om-android-modes,.om-android-alert-controls { display:flex; flex-wrap:wrap; gap:.35rem; }
-.om-android-mode,.om-android-control,.om-android-note-action {
+.om-android-alert-controls { display:flex; flex-wrap:wrap; gap:.35rem; }
+.om-android-control,.om-android-note-action {
   min-height:44px; border:1px solid #7e9aaa; border-radius:.52rem; color:#16384b; background:#fff;
   font:750 .9rem/1.15 system-ui,sans-serif; cursor:pointer; padding:.4rem .78rem;
   touch-action:manipulation;
 }
-.om-android-mode[aria-pressed="true"],.om-android-note-action:not(:disabled) { background:#006653; color:#fff; border-color:#006653; }
+.om-android-note-action:not(:disabled) { background:#006653; color:#fff; border-color:#006653; }
 .om-android-note-action:disabled { color:#526d7e; background:#edf4f8; border-color:#b9ccd7; cursor:default; }
 .om-android-hint,.om-android-status { font-size:.88rem; color:#3c586d; margin:.4rem 0; }
 .om-android-status:empty { margin:0; }
@@ -22,9 +22,20 @@
   background:#f4fbff; color:#18374b; border:1px solid #7ca7ba; border-radius:.55em; padding:.55em .62em;
   box-shadow:0 .22em .7em #09274857; overflow:hidden; 
 }
-.om-android-phone-alert,.om-android-pc-alert { position:absolute; font-size:clamp(4px,1.25cqw,15px); }
-.om-android-phone-alert { left:80.95%; top:43%; width:12.45%; transform:rotate(.75deg) skewX(-6deg); transform-origin:top center; }
-.om-android-pc-alert { left:52%; top:54.5%; width:17.8%; transform:rotate(2.8deg); }
+.om-android-screen-phone,.om-android-screen-pc {
+  position:absolute; inset:0 auto auto 0; overflow:hidden; transform-origin:0 0; pointer-events:none;
+}
+.om-android-screen-phone { width:210px; height:480px; border-radius:18px; }
+.om-android-screen-pc { width:960px; height:580px; }
+.om-android-stage:not(.om-android-mapped) :is(.om-android-screen-phone,.om-android-screen-pc) { visibility:hidden; }
+.om-android-phone-alert,.om-android-pc-alert { position:absolute; }
+.om-android-phone-alert {
+  left:5%; right:5%; top:6.4%; font-size:13px; display:flex; align-items:center; gap:5px; white-space:nowrap;
+}
+.om-android-phone-alert .om-android-alert-header { flex:none; margin:0; }
+.om-android-phone-alert :is(.om-android-device-label,.om-android-mail-sender) { display:none; }
+.om-android-phone-alert .om-android-mail-content { min-width:0; flex:1; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.om-android-pc-alert { right:3.5%; bottom:4%; width:34%; font-size:17px; }
 .om-android-alert-header { display:flex; align-items:center; gap:.38em; margin-bottom:.2em; color:#34596b; font-weight:730; font-size:.88em; }
 .om-android-mail-icon { color:#fff; background:#167ca6; line-height:1; border-radius:.33em; padding:.2em; }
 .om-android-mail-sender { display:block; font-weight:850; }
@@ -34,11 +45,8 @@
   padding:.5em; box-shadow:0 .25em .7em #1122365e;
 }
 .om-android-phone-note,.om-android-pc-note { position:absolute; display:grid; gap:.38em; }
-.om-android-phone-note {
-  top:47%; left:79.5%; width:13.4%; transform:skewX(-6deg); transform-origin:top center;
-  font-size:clamp(4px,1.3cqw,15px);
-}
-.om-android-pc-note { top:25%; left:22%; width:44%; font-size:clamp(6px,1.7cqw,16px); }
+.om-android-phone-note { top:27%; left:5%; width:90%; font-size:14px; pointer-events:auto; }
+.om-android-pc-note { top:22%; left:19%; width:54%; font-size:21px; pointer-events:auto; }
 .om-android-pc-note .om-android-note-field { min-height:6.15em; }
 .om-android-note-title { font-weight:820; }
 .om-android-note-field {
@@ -56,6 +64,7 @@
   .om-android-compact-alerts { grid-template-columns:repeat(2,minmax(0,1fr)); min-height:4.3rem; }
   .om-android-compact-alert:nth-child(2) { grid-column:2; }
   .om-android-compact-alert { font-size:.82rem; }
+  .om-android-compact-alert:first-child .om-android-mail-content { white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
   .om-android-compact-note { box-shadow:none; font-size:.88rem; display:grid; gap:.32rem; }
   .om-android-phone-note,.om-android-pc-note { pointer-events:none; }
   .om-android-stage .om-android-note-action { display:none; }
