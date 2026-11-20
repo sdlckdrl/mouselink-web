@@ -63,14 +63,14 @@
     const mobileSend=button('mobile-send','Mac으로 보내기');
     mobile.append(mobileGroup,mobileSend);
 
-    const hint=node('p','hint','왼쪽 폴더의 파일을 오른쪽 Mac으로 끌어 보세요. 빈 곳부터 끌면 여러 파일을 고를 수 있어요.');
+    const hint=node('p','hint','파일을 Mac으로 끌어 보세요. 폴더 빈 곳에서 끌면 여러 개를 고를 수 있어요.');
     const foot=node('div','foot');
     const status=node('p','status');
     status.setAttribute('role','status');status.setAttribute('aria-atomic','true');
     const resetButton=button('reset','초기화');
     resetButton.hidden=true;
     foot.append(status,resetButton);
-    root.append(stage,mobile,hint,foot);
+    root.append(stage,hint,mobile,foot);
     panel.append(root);
     const selected=new Set();
     const placed=new Map();

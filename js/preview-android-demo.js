@@ -84,10 +84,10 @@
     const compactClipboard=el('div','compact-clipboard');
     compactClipboard.append(compactSource.box,compactDest.box);
 
-    const hint=el('p','hint','예시 알림은 자동으로 전달돼요. 폰 메모를 복사해 PC 메모장에 붙여넣어 보세요.');
+    const hint=el('p','hint','알림은 자동으로 뜹니다. 폰에서 복사하고 PC 메모장에 붙여넣어 보세요.');
     const status=el('p','status');
     status.setAttribute('role','status');status.setAttribute('aria-atomic','true');
-    root.append(hint,stage,compactNotifications,compactClipboard,status);
+    root.append(stage,hint,compactNotifications,compactClipboard,status);
     panel.append(root);
 
     let copied=null, pasted='', visible=false, mailIndex=0;

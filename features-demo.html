@@ -30,7 +30,7 @@ h1,h2,h3{line-height:1.25;letter-spacing:-.04em}h1{font-size:clamp(2rem,4.8vw,3.
 .example>figure{margin:0}.example>figure>img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;display:block;background:#e5eff1}
 .example>figure>figcaption{font-size:.8rem;color:var(--preview-muted);padding:.45rem .9rem 0}
 .example-copy{padding:.1rem .9rem 1rem}.example-copy h3{margin:.35rem 0}.example-copy p{margin:0 0 .5rem;color:var(--preview-muted)}
-@media(min-width:650px){.example-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(min-width:920px){.example-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .overview{padding-block:1.55rem 3.5rem}.overview>p{margin:0 0 1.15rem;color:var(--preview-muted)}
 .feature-list{border-top:1px solid var(--preview-line)}
 .feature{border-bottom:1px solid var(--preview-line)}
@@ -71,6 +71,22 @@ h1,h2,h3{line-height:1.25;letter-spacing:-.04em}h1{font-size:clamp(2rem,4.8vw,3.
 .file-demo-shell{min-width:0}.file-demo-shell:empty{aspect-ratio:3/2}.file-demo-shell noscript img{width:100%;height:auto;display:block;border-radius:.8rem}.file-demo-link{margin:.6rem 0 0}
 .android-desk-shell{min-width:0}.android-desk-shell:empty{aspect-ratio:3/2}.android-desk-shell noscript img{display:block;width:100%;height:auto;border-radius:.8rem}.android-desk-links{margin:.6rem 0 0}
 .tablet-gesture-shell{min-width:0}.tablet-gesture-shell:empty{aspect-ratio:3/2}.tablet-gesture-shell noscript img{display:block;width:100%;height:auto;border-radius:.8rem}.tablet-gesture-link{margin:.6rem 0 0}
+/* Two columns only where each interactive desktop remains usable. */
+.demo-showcase .example-grid{align-items:start}
+.demo-showcase .demo-visual{padding:.6rem;background:#f1f6f8;min-width:0;border-bottom:1px solid var(--preview-line)}
+.demo-showcase :is(.capture-card-interactive,.race-card-interactive){padding:0;border:0;background:none}
+.demo-showcase .race-scene{border-radius:.65rem}
+.demo-showcase .example-copy{padding:.85rem .95rem 1rem}
+.demo-showcase .example-copy .demo-app-tag{margin:0 0 .25rem;color:#345669;font-size:.79rem;font-weight:770;letter-spacing:.01em}
+.demo-showcase .example-copy h3{margin:0 0 .35rem;font-size:1.12rem}
+.demo-showcase .example-actions{padding-top:.15rem;font-size:.88rem}
+.demo-showcase :is(.demo-how,.om-capture-caption,.om-file-hint,.om-android-hint,.tg-note){
+  margin:.4rem .1rem 0;color:#36596b;font-size:.82rem;line-height:1.45
+}
+@container om-android (min-width:380px) and (max-width:650px){
+  .demo-showcase .om-android-compact-clipboard{grid-template-columns:repeat(2,minmax(0,1fr));align-items:start}
+}
+.demo-examples-note{color:#36596b;font-size:.82rem;margin:-.34rem 0 .9rem}
 </style>
 <link rel="stylesheet" href="/assets/preview/capture-demo.css?v=touch1">
 <link rel="stylesheet" href="/assets/preview/race-card.css?v=simple1">
@@ -103,44 +119,77 @@ h1,h2,h3{line-height:1.25;letter-spacing:-.04em}h1{font-size:clamp(2rem,4.8vw,3.
   <p><strong>처음엔 이렇게:</strong> 앱에서 기기를 연결하고 책상에 놓인 방향대로 배치하세요. 앱에 표시된 화면 가장자리가 커서를 넘기는 통로예요. <a href="/help-demo#cursor">커서가 안 넘어갈 때</a></p>
   <details class="subfeature" id="quick"><summary>기기 순서와 빠른 연결</summary><p>메인 PC의 기기 관리에서 LAN 기기 순서를 바꾸면 연결·원격창 단축키 번호도 바뀌어요. 자동 재연결을 켜면 준비된 기기로 다시 연결할 수 있어요.</p></details>
 </div>
-<section class="layout examples" aria-labelledby="examples-title">
-  <h2 id="examples-title">화면을 보내고, 다른 화면을 열고.</h2>
+<section class="layout examples demo-showcase" aria-labelledby="examples-title">
+  <h2 id="examples-title">화면에서 직접 써 보기</h2>
+<p class="demo-examples-note">사진은 AI로 만든 체험 예시예요.</p>
   <div class="example-grid">
-    <article class="example">
-      <div class="capture-card-interactive" id="feature-capture-demo" data-capture-inline aria-label="사진 속 모니터에서 직접 캡처하기">
-<noscript><p>사진 속 화면을 직접 캡처하려면 JavaScript를 켜세요.</p></noscript>
-</div>
-      <div class="example-copy"><h3>필요한 부분만 찍어 보내기</h3><p>PC에서 필요한 영역만 캡처해서 지원되는 Wi-Fi·LAN 연결로 옆 기기에 보내세요.</p><div class="example-actions"><a href="#screenshots">캡처하고 보내는 방법</a></div></div>
+    <article class="example" aria-labelledby="capture-example-title">
+      <div class="demo-visual">
+        <div class="capture-card-interactive" id="feature-capture-demo" data-capture-inline aria-label="사진 속 모니터에서 직접 캡처하기">
+          <noscript><p>사진 속 화면을 직접 캡처하려면 JavaScript를 켜세요.</p></noscript>
+        </div>
+      </div>
+      <div class="example-copy">
+        <p class="demo-app-tag">실제 앱 · Wi-Fi·LAN</p>
+        <h3 id="capture-example-title">필요한 부분만 찍어 보내기</h3>
+        <p>PC에서 캡처한 영역을 복사하거나 연결된 기기로 보낼 수 있어요.</p>
+        <div class="example-actions"><a href="#screenshots">캡처하고 보내는 방법</a></div>
+      </div>
     </article>
-    <article class="example">
-      <div class="race-card-interactive" id="feature-race-demo" data-race-inline aria-label="사진 속 레이싱 게임">
-<noscript><img src="/assets/preview/remote-racing-example.webp" width="1199" height="675" loading="lazy" decoding="async" alt="Windows 화면의 레이싱 게임을 같은 화면이 보이는 Android 폰에서 조작하는 사용 예시"></noscript>
-</div>
-      <div class="example-copy"><h3>폰에서 Windows PC 조작하기</h3><p>Android에서 연결된 PC 화면을 열고, 필요할 때 화면 속 게임패드로 조작해요.</p><div class="example-actions"><a href="#mobile-pc-remote">폰에서 PC를 여는 방법</a></div></div>
+    <article class="example" aria-labelledby="race-example-title">
+      <div class="demo-visual">
+        <div class="race-card-interactive" id="feature-race-demo" data-race-inline aria-label="사진 속 레이싱 게임">
+          <noscript><img src="/assets/preview/remote-racing-example.webp" width="1199" height="675" loading="lazy" decoding="async" alt="Windows 화면의 레이싱 게임을 같은 화면이 보이는 Android 폰에서 조작하는 사용 예시"></noscript>
+        </div>
+        <p class="demo-how">게임을 시작하고 좌우 버튼이나 방향키로 차를 피하세요.</p>
+      </div>
+      <div class="example-copy">
+        <p class="demo-app-tag">실제 앱 · Android → Windows</p>
+        <h3 id="race-example-title">폰에서 Windows PC 조작하기</h3>
+        <p>폰에서 연결된 PC 화면을 열고 터치나 게임패드로 조작할 수 있어요.</p>
+        <div class="example-actions"><a href="#mobile-pc-remote">폰에서 PC를 여는 방법</a></div>
+      </div>
+    </article>
+    <article class="example file-demo-story" id="file-transfer-demo" aria-labelledby="file-transfer-title">
+      <div class="demo-visual">
+        <div class="file-demo-shell" data-file-inline aria-label="Windows에서 Mac으로 파일을 보내는 체험">
+          <noscript><img src="/assets/preview/file-transfer-desk.webp" width="1536" height="1024" alt="밝은 책상 위의 Windows 모니터와 Mac"><p>파일을 끌어 놓으려면 JavaScript를 켜세요.</p></noscript>
+        </div>
+      </div>
+      <div class="example-copy">
+        <p class="demo-app-tag">실제 앱 · Windows → Mac</p>
+        <h3 id="file-transfer-title">파일을 옆 화면으로 끌어 놓기</h3>
+        <p>지원되는 연결에서는 파일을 화면 경계 너머로 끌어 다른 기기에 보낼 수 있어요.</p>
+        <div class="example-actions"><a href="#files">파일 보내는 방법</a></div>
+      </div>
+    </article>
+    <article class="example" id="android-desk-demo" aria-labelledby="android-desk-demo-title">
+      <div class="demo-visual">
+        <div class="android-desk-shell" data-android-demo aria-label="Windows와 Android 알림·클립보드 체험">
+          <noscript><img src="/assets/preview/android-notification-desk.webp" width="1536" height="1024" alt="사선으로 본 Windows 모니터와 Android 폰"><p>체험하려면 JavaScript를 켜세요.</p></noscript>
+        </div>
+      </div>
+      <div class="example-copy">
+        <p class="demo-app-tag">실제 앱 · Android ↔ Windows</p>
+        <h3 id="android-desk-demo-title">폰 알림과 복사한 글을 PC에서</h3>
+        <p>폰 알림을 PC에서 확인하고, 지원되는 연결에서 복사한 글을 다른 기기에 붙여넣으세요.</p>
+        <div class="example-actions"><a href="#notifications">폰 알림 설정</a><a href="#text-to-pc">복사·붙여넣기 방법</a></div>
+      </div>
+    </article>
+    <article class="example" id="tablet-gesture-demo" aria-labelledby="tablet-gesture-demo-title">
+      <div class="demo-visual">
+        <div class="tablet-gesture-shell" data-tablet-gesture-demo aria-label="우클릭 버튼 또는 마우스로 Android 태블릿 제스처 체험">
+          <noscript><img src="/assets/preview/android-tablet-gesture-desk.webp" width="1536" height="1024" alt="나무 책상 위 Windows 화면과 가로로 놓인 Android 태블릿"><p>제스처 체험을 하려면 JavaScript를 켜세요.</p></noscript>
+        </div>
+      </div>
+      <div class="example-copy">
+        <p class="demo-app-tag">실제 앱 · Android 마우스 제스처</p>
+        <h3 id="tablet-gesture-demo-title">태블릿 브라우저에서 제스처 그리기</h3>
+        <p>커서를 Android로 넘긴 뒤 마우스로 뒤로 가기와 스크롤을 할 수 있어요.</p>
+        <div class="example-actions"><a href="#mouse-gestures">제스처 사용법</a></div>
+      </div>
     </article>
   </div>
-    </section>
-<section class="layout examples file-demo-story" id="file-transfer-demo" aria-labelledby="file-transfer-title">
-  <h2 id="file-transfer-title">파일을 옆 화면으로 끌어 놓기</h2>
-  <div class="file-demo-shell" data-file-inline aria-label="Windows에서 Mac으로 파일을 보내는 체험">
-    <noscript><img src="/assets/preview/file-transfer-desk.webp" width="1536" height="1024" alt="밝은 책상 위의 Windows 모니터와 Mac"><p>파일을 끌어 놓으려면 JavaScript를 켜세요.</p></noscript>
-  </div>
-  <p class="file-demo-link"><a href="#files">실제 파일 보내는 방법 →</a></p>
-</section>
-<section class="layout examples" id="android-desk-demo" aria-labelledby="android-desk-demo-title">
-  <h2 id="android-desk-demo-title">폰 알림과 복사한 글을 PC에서</h2>
-  <div class="android-desk-shell" data-android-demo aria-label="Windows와 Android 알림·클립보드 체험">
-    <noscript><img src="/assets/preview/android-notification-desk.webp" width="1536" height="1024" alt="사선으로 본 Windows 모니터와 Android 폰"><p>체험하려면 JavaScript를 켜세요.</p></noscript>
-  </div>
-  <p class="android-desk-links"><a href="#notifications">실제 폰 알림 설정</a> · <a href="#text-to-pc">실제 복사·붙여넣기 방법</a></p>
-</section>
-<section class="layout examples" id="tablet-gesture-demo" aria-labelledby="tablet-gesture-demo-title">
-  <h2 id="tablet-gesture-demo-title">태블릿 브라우저에서 제스처 그리기</h2>
-  <p>오른쪽 아래 우클릭 버튼을 누른 뒤 태블릿 화면을 그어 보세요.</p>
-  <div class="tablet-gesture-shell" data-tablet-gesture-demo aria-label="우클릭 버튼 또는 마우스로 Android 태블릿 제스처 체험">
-    <noscript><img src="/assets/preview/android-tablet-gesture-desk.webp" width="1536" height="1024" alt="나무 책상 위 Windows 화면과 가로로 놓인 Android 태블릿"><p>제스처 체험을 하려면 JavaScript를 켜세요.</p></noscript>
-  </div>
-  <p class="tablet-gesture-link"><a href="#mouse-gestures">실제 제스처 사용법 →</a></p>
 </section>
 <section class="layout overview" aria-labelledby="feature-jump">
   <h2 id="feature-jump">기능별 사용법</h2>
@@ -250,11 +299,11 @@ h1,h2,h3{line-height:1.25;letter-spacing:-.04em}h1{font-size:clamp(2rem,4.8vw,3.
 <script src="/js/preview-capture-demo.js?v=touch1" defer></script>
 <script src="/js/preview-race-card.js?v=simple1" defer></script>
 <script src="/js/preview-feature-demos.js?v=simple1" defer></script>
-<script src="/js/preview-file-demo.js?v=2" defer></script>
+<script src="/js/preview-file-demo.js?v=cards1" defer></script>
 <script defer src="/js/preview-file-mount.js?v=1"></script>
-<script src="/js/preview-android-demo.js?v=3" defer></script>
+<script src="/js/preview-android-demo.js?v=cards1" defer></script>
 <script src="/js/preview-android-mount.js?v=1" defer></script>
-<script src="/js/preview-tablet-gesture-demo.js?v=3" defer></script>
+<script src="/js/preview-tablet-gesture-demo.js?v=cards1" defer></script>
 <script src="/js/preview-tablet-gesture-mount.js?v=1" defer></script>
 </body>
 </html>

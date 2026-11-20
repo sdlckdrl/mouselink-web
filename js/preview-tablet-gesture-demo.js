@@ -53,6 +53,7 @@
           <span>우클릭</span>
         </button>
       </div>
+      <p class="tg-note">오른쪽 아래 우클릭 버튼을 누른 뒤 화면을 그으세요. PC에선 우클릭한 채 바로 그을 수 있어요.</p>
       <div class="tg-controls" role="group" aria-label="제스처 도움 조작">
         <button type="button" data-action="back">← 뒤로</button>
         <button type="button" data-action="up">↑ 위로</button>
@@ -60,7 +61,6 @@
         <button type="button" data-action="home">↓→ 앱 최소화</button>
         <button type="button" data-reopen hidden>인터넷 열기</button>
       </div>
-      <p class="tg-note">손가락이나 마우스 왼쪽 버튼으로 아래로 긋고 떼면 아래로 스크롤돼요. 마우스 오른쪽 버튼을 누른 채 곧바로 그려도 돼요.</p>
       <p class="tg-status" data-status role="status" aria-atomic="true"></p>`;
     host.append(root);
     const $=name=>root.querySelector('[data-'+name+']');
