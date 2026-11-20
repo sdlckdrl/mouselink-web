@@ -1,0 +1,16 @@
+/* The substitute cursor exists only on mounted, clipped preview surfaces. */
+[data-om-trackpad] { touch-action: none !important; }
+@media (any-hover: hover) {
+  [data-om-cursor]:hover, [data-om-cursor]:hover * { cursor: none !important; }
+}
+[data-om-cursor] :is(.om-capture-virtual-cursor,.om-file-cursor) { display: none !important; }
+.om-demo-pointer {
+  position: absolute; z-index: 100; display: block;
+  width: clamp(17px, 4%, 25px); aspect-ratio: 24 / 30;
+  pointer-events: none; filter: drop-shadow(0 1px 2px #0a1a30aa);
+}
+.om-demo-pointer svg { display: block; width: 100%; height: 100%; }
+.om-demo-pointer circle, .om-demo-pointer[data-shape="dot"] path { display: none; }
+.om-demo-pointer[data-shape="dot"] { transform: translate(-50%, -50%); }
+.om-demo-pointer[data-shape="dot"] circle { display: inline; }
+.om-cursor-help { margin: .45rem 0; color: var(--preview-muted); font-size: .84rem; }

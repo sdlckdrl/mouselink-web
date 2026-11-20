@@ -499,7 +499,7 @@
       const start = point(event);
       active = { id:event.pointerId,start,x:event.clientX,y:event.clientY,touch:event.pointerType==='touch' };
       if(active.touch)showCursor(start);
-      source.setPointerCapture?.(event.pointerId);
+      if (event.isTrusted) source.setPointerCapture?.(event.pointerId);
       drawSelection(null);
     });
     source.addEventListener('pointermove', event => {
@@ -756,7 +756,7 @@
       if(!gesture.active){
         if(Math.hypot(point.x-gesture.start.x,point.y-gesture.start.y)<6)return;
         gesture.active=true;
-        stage.setPointerCapture?.(event.pointerId);
+        if (event.isTrusted) stage.setPointerCapture?.(event.pointerId);
         if(gesture.file){
           if(!selected.has(gesture.file)){selected.clear();selected.add(gesture.file);update();}
           ghost.replaceChildren(fileIcon(files.find(f=>f.id===gesture.file)),node('span','ghost-label',`${selected.size} 个文件`));
@@ -1006,9 +1006,9 @@
         start: [event.clientX, event.clientY],
         offset: drag ? [position[0] - positions[id][0], position[1] - positions[id][1]] : [0, 0],
       };
-      if (drag) showCursor(positions[id], id);
+      if (drag) showCursor(point(event, bounds), id);
       else track(point(event, bounds), bounds);
-      board.setPointerCapture(event.pointerId);
+      if (event.isTrusted) board.setPointerCapture(event.pointerId);
     });
 
     function move(event) {
@@ -1160,7 +1160,7 @@
             <svg class="tg-path" viewBox="0 0 640 440" aria-hidden="true"><polyline data-path points="" fill="none" stroke="#00c3a0" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><circle data-origin cx="0" cy="0" r="7" fill="#00605b" stroke="#dbfff5" stroke-width="2" visibility="hidden"/></svg>
           </div>
         </div>
-        <span class="tg-cursor" data-cursor data-device="pc" aria-hidden="true" hidden>
+        <span class="tg-cursor" data-cursor data-device="tablet" aria-hidden="true" hidden>
           <svg viewBox="0 0 24 30" width="24" height="30" focusable="false">
             <path class="tg-cursor-arrow" d="M1 1L22 19 13 18.4 17 26 13.6 28 9.3 20.3 3 27Z" fill="#fff" stroke="#142a43" stroke-width="2" stroke-linejoin="round"/>
             <circle class="tg-cursor-dot" cx="12" cy="15" r="7.5" fill="#fff" fill-opacity=".82" stroke="#142a43" stroke-width="2"/>
@@ -1234,7 +1234,7 @@
       fallback=true;map=null;scene.classList.add('tg-no-photo');tablet.style.transform='';hideCursor();
     }
     function hideCursor(){
-      cursor.hidden=true;
+      cursor.hidden=false;
       delete scene.dataset.cursorActive;
     }
     function moveCursor(e){
@@ -1252,7 +1252,7 @@
       cursor.hidden=false;
       scene.dataset.cursorActive='true';
     }
-    for(const type of ['pointerenter','pointerdown','pointermove'])scene.addEventListener(type,moveCursor);
+    for(const type of ['pointermove'])scene.addEventListener(type,moveCursor);
     for(const type of ['pointerleave','pointercancel'])scene.addEventListener(type,hideCursor);
     scene.addEventListener('pointerup',e=>{if(e.pointerType!=='mouse')hideCursor();});
     window.addEventListener('blur',hideCursor);
@@ -1292,7 +1292,7 @@
       drag={id:e.pointerId,points:[point(e)]};paint(drag.points);
       surface.classList.add('tg-drawing');
       surface.classList.toggle('tg-drawing-touch',simulated);
-      surface.setPointerCapture?.(e.pointerId);
+      if (e.isTrusted) surface.setPointerCapture?.(e.pointerId);
     });
     surface.addEventListener('pointermove',e=>{
       if(drag?.id!==e.pointerId)return;

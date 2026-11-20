@@ -200,7 +200,7 @@
       if(!gesture.active){
         if(Math.hypot(point.x-gesture.start.x,point.y-gesture.start.y)<6)return;
         gesture.active=true;
-        stage.setPointerCapture?.(event.pointerId);
+        if (event.isTrusted) stage.setPointerCapture?.(event.pointerId);
         if(gesture.file){
           if(!selected.has(gesture.file)){selected.clear();selected.add(gesture.file);update();}
           ghost.replaceChildren(fileIcon(files.find(f=>f.id===gesture.file)),node('span','ghost-label',`${selected.size}개`));

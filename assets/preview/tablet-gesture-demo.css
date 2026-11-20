@@ -4,7 +4,7 @@
 .om-tablet-gesture .tg-scene{width:100%;aspect-ratio:3/2;position:relative;overflow:hidden;border-radius:.7rem;background:#dfeee9;user-select:none}
 .om-tablet-gesture .tg-backdrop{position:absolute;inset:0;width:100%;height:100%;object-fit:fill;pointer-events:none}
 .om-tablet-gesture .tg-cursor{
-  position:absolute;z-index:2;left:30%;top:35%;width:clamp(16px,4.3%,24px);
+  position:absolute;z-index:2;left:75%;top:56%;width:clamp(16px,4.3%,24px);
   aspect-ratio:24/30;pointer-events:none;filter:drop-shadow(0 1px 2px #0a1a30aa)
 }
 .om-tablet-gesture .tg-cursor svg{display:block;width:100%;height:100%}

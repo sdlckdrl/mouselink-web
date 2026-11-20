@@ -325,7 +325,7 @@
       const start = point(event);
       active = { id:event.pointerId,start,x:event.clientX,y:event.clientY,touch:event.pointerType==='touch' };
       if(active.touch)showCursor(start);
-      source.setPointerCapture?.(event.pointerId);
+      if (event.isTrusted) source.setPointerCapture?.(event.pointerId);
       drawSelection(null);
     });
     source.addEventListener('pointermove', event => {

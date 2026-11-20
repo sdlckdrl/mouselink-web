@@ -211,9 +211,9 @@
         start: [event.clientX, event.clientY],
         offset: drag ? [position[0] - positions[id][0], position[1] - positions[id][1]] : [0, 0],
       };
-      if (drag) showCursor(positions[id], id);
+      if (drag) showCursor(point(event, bounds), id);
       else track(point(event, bounds), bounds);
-      board.setPointerCapture(event.pointerId);
+      if (event.isTrusted) board.setPointerCapture(event.pointerId);
     });
 
     function move(event) {
