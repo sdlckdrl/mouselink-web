@@ -177,6 +177,9 @@
     drop.addEventListener('click',event=>{if(Date.now()>=suppressClickUntil||event.detail===0)send();});
     mobileSend.addEventListener('click',()=>send());
     resetButton.addEventListener('click',()=>{reset();items.get(files[0].id).focus({preventScroll:true});});
+    stage.addEventListener('pointerdown',()=>{if(!gesture)suppressClickUntil=0;},{capture:true});
+    stage.addEventListener('lostpointercapture',event=>{if(gesture?.id===event.pointerId)hideGesture();});
+    window.addEventListener('blur',()=>{if(gesture)hideGesture();});
     grid.addEventListener('pointerdown',event=>{
       if(gesture||event.pointerType!=='mouse'||event.button!==0||event.isPrimary===false)return;
       const file=event.target.closest('[data-om-file]');
