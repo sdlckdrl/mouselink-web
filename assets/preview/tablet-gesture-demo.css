@@ -1,0 +1,40 @@
+.om-tablet-gesture,.om-tablet-gesture *{box-sizing:border-box}
+.om-tablet-gesture [hidden]{display:none!important}
+.om-tablet-gesture{color:#173643;isolation:isolate}
+.om-tablet-gesture .tg-scene{width:100%;aspect-ratio:3/2;position:relative;overflow:hidden;border-radius:.7rem;background:#dfeee9;touch-action:pan-y;user-select:none}
+.om-tablet-gesture .tg-backdrop{position:absolute;inset:0;width:100%;height:100%;object-fit:fill;pointer-events:none}
+.om-tablet-gesture .tg-tablet{position:absolute;left:0;top:0;width:640px;height:440px;transform-origin:0 0;visibility:hidden}
+.om-tablet-gesture .tg-scene[data-mapped] .tg-tablet,.om-tablet-gesture .tg-no-photo .tg-tablet{visibility:visible}
+.om-tablet-gesture .tg-surface{width:100%;height:100%;position:relative;overflow:hidden;border-radius:12px;background:linear-gradient(120deg,#57cdc5,#075484);touch-action:pan-y}
+.om-tablet-gesture .tg-surface.tg-armed{touch-action:none}
+.om-tablet-gesture .tg-surface.tg-drawing{cursor:crosshair}
+.om-tablet-gesture .tg-browser{width:100%;height:100%;display:flex;flex-direction:column;overflow:hidden;background:#f5faf6}
+.om-tablet-gesture .tg-toolbar{display:flex;align-items:center;gap:18px;padding:12px 21px;background:#e9f6fb;border-bottom:1px solid #b5d2df;color:#183b58;font:750 19px/1.3 system-ui,sans-serif}
+.om-tablet-gesture .tg-toolbar span{flex:1;min-width:0;padding:5px 17px;background:#fff;border-radius:14px;font-size:15px}
+.om-tablet-gesture .tg-page-wrap{flex:1;min-height:0;overflow:hidden;pointer-events:none}
+.om-tablet-gesture .tg-page{min-height:800px;padding:28px 38px;background:#fcfdf8;color:#183a43}
+.om-tablet-gesture .tg-page h3{font:850 43px/1.2 system-ui,sans-serif;margin:8px 0 14px}
+.om-tablet-gesture .tg-page h4{margin:.55em 0 0;font:800 28px/1.3 system-ui,sans-serif}
+.om-tablet-gesture .tg-page p{font:500 22px/1.55 system-ui,sans-serif;margin:10px 0}
+.om-tablet-gesture .tg-page .tg-tag{font:800 20px/1.3 system-ui,sans-serif;color:#007363}
+.om-tablet-gesture .tg-landscape{height:160px;border-radius:10px;background:radial-gradient(circle at 73% 34%,#f9dc9a 0 9%,transparent 10%),linear-gradient(156deg,transparent 48%,#97c4a6 49% 65%,transparent 66%),linear-gradient(18deg,#2f9a88 31%,#9ddfc0 32% 44%,#ccebf1 45%)}
+.om-tablet-gesture .tg-landscape--lower{height:130px;background:linear-gradient(148deg,transparent 45%,#508f7d 46% 62%,transparent 63%),linear-gradient(15deg,#287c85 32%,#7dc4a7 33% 50%,#d1ecf7 51%)}
+.om-tablet-gesture .tg-home{background:linear-gradient(122deg,#49c0be,#0b537c);height:100%;padding:33px 35px}
+.om-tablet-gesture .tg-internet{display:grid;place-items:center;gap:3px;min-width:125px;min-height:116px;padding:5px;color:#fff;background:transparent;border:0;cursor:pointer;font:800 23px/1.3 system-ui,sans-serif}
+.om-tablet-gesture .tg-globe{display:grid;place-items:center;width:74px;height:74px;border-radius:17px;background:#fff;color:#16769f;font-size:57px;line-height:1}
+.om-tablet-gesture .tg-path{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;filter:drop-shadow(0 1px 3px #15344088)}
+.om-tablet-gesture .tg-cue{position:absolute;bottom:16px;right:16px;display:flex;align-items:center;gap:6px;padding:4px 9px;background:#153440ed;border-radius:9px;color:#fff;pointer-events:none;font:750 19px/1.25 system-ui,sans-serif}
+.om-tablet-gesture .tg-cue svg{width:26px;height:37px}
+.om-tablet-gesture .tg-controls{display:flex;flex-wrap:wrap;gap:.35rem;margin:.45rem 0 0}
+.om-tablet-gesture .tg-controls button{min-height:44px;padding:.3rem .57rem;border:1px solid #6e9eac;border-radius:.4rem;background:#f6fbfc;color:#194050;font:750 .83rem/1.25 system-ui,sans-serif;cursor:pointer;touch-action:manipulation}
+.om-tablet-gesture .tg-controls button[aria-pressed="true"]{background:#006855;color:#fff}
+.om-tablet-gesture :focus-visible{outline:3px solid #006d72;outline-offset:-3px}
+.om-tablet-gesture .tg-note,.om-tablet-gesture .tg-status{margin:.45rem 0 0;color:#39586c;font-size:.84rem}
+.om-tablet-gesture .tg-status:empty{display:none}
+.om-tablet-gesture .tg-no-photo .tg-backdrop{display:none}
+.om-tablet-gesture .tg-no-photo .tg-tablet{width:100%;height:100%}
+.om-tablet-gesture .tg-no-photo .tg-toolbar{padding:5px 8px;font-size:.9rem}
+.om-tablet-gesture .tg-no-photo .tg-toolbar span,.om-tablet-gesture .tg-no-photo .tg-page p{font-size:.85rem}
+.om-tablet-gesture .tg-no-photo .tg-page{min-height:550px;padding:12px 15px}
+.om-tablet-gesture .tg-no-photo .tg-page h3{font-size:1.1rem}
+.om-tablet-gesture .tg-no-photo .tg-page h4{font-size:1rem}
