@@ -9,8 +9,11 @@
 }
 .om-android-note-action:not(:disabled) { background:#006653; color:#fff; border-color:#006653; }
 .om-android-note-action:disabled { color:#526d7e; background:#edf4f8; border-color:#b9ccd7; cursor:default; }
-.om-android-hint,.om-android-status { font-size:.88rem; color:#3c586d; margin:.4rem 0; }
-.om-android-status:empty { margin:0; }
+.om-android-hint { font-size:.88rem; color:#3c586d; margin:.4rem 0; }
+.om-android-status {
+  position:absolute; width:1px; height:1px; margin:-1px; padding:0; border:0;
+  overflow:hidden; clip-path:inset(50%); white-space:nowrap;
+}
 .om-android-stage {
   position:relative; aspect-ratio:3/2; isolation:isolate; overflow:hidden; border-radius:.8rem; background:#e7ebee;
 }
@@ -39,7 +42,7 @@
 .om-android-mail-icon { color:#fff; background:#167ca6; line-height:1; border-radius:.33em; padding:.2em; }
 .om-android-mail-sender { display:block; font-weight:850; }
 .om-android-mail-content { line-height:1.3; overflow-wrap:anywhere; }
-.om-android-phone-note,.om-android-pc-note,.om-android-compact-note {
+.om-android-phone-note,.om-android-pc-note {
   color:#0e3045; background:#f8fcff; border:1px solid #7798ab; border-radius:.65em;
   padding:.5em; box-shadow:0 .25em .7em #1122365e;
 }
@@ -56,12 +59,23 @@
 .om-android-note-field::selection { background:#b5def8; color:#162c3d; }
 .om-android-stage .om-android-note-action { min-height:2.45em; font-size:inherit; padding:.24em .36em; }
 .om-android-stage .om-android-note-field { min-height:2.8em; }
-.om-android-compact-clipboard { display:none; }
+.om-android-note-pasted .om-android-note-field { background:#dff7ec; border-color:#08775f; }
+.om-android-compact-controls { display:none; }
 @container om-android (max-width:650px) {
-  .om-android-compact-clipboard { display:grid; gap:.35rem; margin-top:.5rem; }
-  .om-android-compact-note { box-shadow:none; font-size:.88rem; display:grid; gap:.32rem; }
-  .om-android-phone-note,.om-android-pc-note { pointer-events:none; }
   .om-android-stage .om-android-note-action { display:none; }
+  .om-android-compact-controls { display:flex; gap:.35rem; flex-wrap:wrap; margin:.05rem .1rem 0; }
+  .om-android-compact-action {
+    display:inline-grid; place-items:center; position:relative; min-height:44px;
+    padding:0 .65rem; border:0; border-radius:.4rem; background:transparent; color:#145045;
+    font:700 .78rem/1.25 system-ui,sans-serif; cursor:pointer; touch-action:manipulation;
+    isolation:isolate;
+  }
+  .om-android-compact-action::before {
+    content:''; position:absolute; z-index:-1; inset:7px 0;
+    border:1px solid #9cb9b3; border-radius:.4rem; background:#f8fcff;
+  }
+  .om-android-compact-action:disabled { color:#617581; cursor:default; }
+  .om-android-compact-action:disabled::before { border-color:#c4d1d6; background:transparent; }
 }
 @media (prefers-reduced-motion: no-preference) {
   .om-android-phone-alert:not([hidden]),.om-android-pc-alert:not([hidden]) {

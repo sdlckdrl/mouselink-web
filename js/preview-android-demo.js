@@ -75,15 +75,15 @@
     pcScreen.append(dest.box,windows.shell);
     stage.append(img,pcScreen,phoneScreen);
 
-    const compactSource=clipBox('compact-note','Android · 예시 메모',true);
-    const compactDest=clipBox('compact-note','Windows · 메모장',false);
-    const compactClipboard=el('div','compact-clipboard');
-    compactClipboard.append(compactSource.box,compactDest.box);
+    const compactCopy=button('compact-action','폰에서 복사');
+    const compactPaste=button('compact-action','PC에 붙여넣기');
+    const compactControls=el('div','compact-controls');
+    compactControls.append(compactCopy,compactPaste);
 
     const hint=el('p','hint','알림은 자동으로 뜹니다. 폰에서 복사하고 PC 메모장에 붙여넣어 보세요.');
     const status=el('p','status');
     status.setAttribute('role','status');status.setAttribute('aria-atomic','true');
-    root.append(stage,hint,compactClipboard,status);
+    root.append(stage,hint,compactControls,status);
     panel.append(root);
 
     let copied=null, pasted='', visible=false, mailIndex=0;
@@ -100,11 +100,6 @@
         phoneScreen.style.transform=screenProjection(PHONE,width,height);
         pcScreen.style.transform=screenProjection(PC,width,height);
         stage.classList.add('om-android-mapped');
-      }
-      const narrow=root.getBoundingClientRect().width<=650;
-      for(const box of [source,dest]){
-        box.field.tabIndex=box.action.tabIndex=narrow?-1:0;
-        box.box.setAttribute('aria-hidden',String(narrow));
       }
     }
     if(typeof ResizeObserver==='function')new ResizeObserver(updateControlSize).observe(root);
@@ -126,7 +121,9 @@
       if(allowed())schedule(fire,delay);
     }
     function updateClip(){
-      for(const d of [dest,compactDest]){d.field.value=pasted;d.action.disabled=!copied;}
+      dest.field.value=pasted;
+      dest.box.classList.toggle('om-android-note-pasted',Boolean(pasted));
+      dest.action.disabled=compactPaste.disabled=!copied;
     }
     function copy(){
       copied=NOTE;updateClip();
@@ -137,17 +134,13 @@
       pasted=copied;updateClip();
       status.textContent='같은 글이 PC 메모장에 붙여넣어졌어요.';
     }
-    for(const s of [source,compactSource]){
-      s.action.addEventListener('click',copy);
-      s.field.addEventListener('keydown',event=>{if(shortcut(event,'c')){event.preventDefault();copy();}});
-      s.field.addEventListener('copy',event=>{event.preventDefault();copy();});
-    }
-    for(const d of [dest,compactDest]){
-      d.action.addEventListener('click',paste);
-      d.field.addEventListener('keydown',event=>{if(shortcut(event,'v')){event.preventDefault();paste();}});
-      d.field.addEventListener('paste',event=>{event.preventDefault();paste();});
-      d.field.addEventListener('copy',event=>event.preventDefault());
-    }
+    for(const action of [source.action,compactCopy])action.addEventListener('click',copy);
+    for(const action of [dest.action,compactPaste])action.addEventListener('click',paste);
+    source.field.addEventListener('keydown',event=>{if(shortcut(event,'c')){event.preventDefault();copy();}});
+    source.field.addEventListener('copy',event=>{event.preventDefault();copy();});
+    dest.field.addEventListener('keydown',event=>{if(shortcut(event,'v')){event.preventDefault();paste();}});
+    dest.field.addEventListener('paste',event=>{event.preventDefault();paste();});
+    dest.field.addEventListener('copy',event=>event.preventDefault());
     document.addEventListener('visibilitychange',()=>syncAlerts());
     if(typeof IntersectionObserver==='function'){
       const watch=new IntersectionObserver(entries=>{
