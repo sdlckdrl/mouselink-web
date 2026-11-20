@@ -69,10 +69,12 @@ h1,h2,h3{line-height:1.25;letter-spacing:-.04em}h1{font-size:clamp(2rem,4.8vw,3.
 @media(min-width:650px){.example-grid>.example,.screen-stories .story{align-self:start}.screen-stories .story figure{aspect-ratio:3/2}}
 .race-card-interactive{padding:.65rem .6rem .45rem;min-width:0;background:#f3f7fa;border-bottom:1px solid var(--preview-line)}.race-card-interactive:empty{aspect-ratio:1199/675}.race-card-interactive noscript img{display:block;width:100%;height:auto}
 .file-demo-shell{min-width:0}.file-demo-shell:empty{aspect-ratio:3/2}.file-demo-shell noscript img{width:100%;height:auto;display:block;border-radius:.8rem}.file-demo-link{margin:.6rem 0 0}
+.android-desk-shell{min-width:0}.android-desk-shell:empty{aspect-ratio:3/2}.android-desk-shell noscript img{display:block;width:100%;height:auto;border-radius:.8rem}.android-desk-links{margin:.6rem 0 0}
 </style>
 <link rel="stylesheet" href="/assets/preview/capture-demo.css?v=simple1">
 <link rel="stylesheet" href="/assets/preview/race-card.css?v=simple1">
 <link rel="stylesheet" href="/assets/preview/file-demo.css?v=1">
+<link rel="stylesheet" href="/assets/preview/android-demo.css?v=1">
 </head>
 <body>
 <a class="skip" href="#main">본문으로 이동</a>
@@ -122,6 +124,13 @@ h1,h2,h3{line-height:1.25;letter-spacing:-.04em}h1{font-size:clamp(2rem,4.8vw,3.
     <noscript><img src="/assets/preview/file-transfer-desk.webp" width="1536" height="1024" alt="밝은 책상 위의 Windows 모니터와 Mac"><p>파일을 끌어 놓으려면 JavaScript를 켜세요.</p></noscript>
   </div>
   <p class="file-demo-link"><a href="#files">실제 파일 보내는 방법 →</a></p>
+</section>
+<section class="layout examples" id="android-desk-demo" aria-labelledby="android-desk-demo-title">
+  <h2 id="android-desk-demo-title">폰 알림과 복사한 글을 PC에서</h2>
+  <div class="android-desk-shell" data-android-demo aria-label="Windows와 Android 알림·클립보드 체험">
+    <noscript><img src="/assets/preview/android-notification-desk.webp" width="1536" height="1024" alt="사선으로 본 Windows 모니터와 Android 폰"><p>체험하려면 JavaScript를 켜세요.</p></noscript>
+  </div>
+  <p class="android-desk-links"><a href="#notifications">실제 폰 알림 설정</a> · <a href="#text-to-pc">실제 복사·붙여넣기 방법</a></p>
 </section>
 <section class="layout overview" aria-labelledby="feature-jump">
   <h2 id="feature-jump">기능별 사용법</h2>
@@ -233,5 +242,7 @@ h1,h2,h3{line-height:1.25;letter-spacing:-.04em}h1{font-size:clamp(2rem,4.8vw,3.
 <script src="/js/preview-feature-demos.js?v=simple1" defer></script>
 <script src="/js/preview-file-demo.js?v=1" defer></script>
 <script defer src="/js/preview-file-mount.js?v=1"></script>
+<script src="/js/preview-android-demo.js?v=1" defer></script>
+<script src="/js/preview-android-mount.js?v=1" defer></script>
 </body>
 </html>
