@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:lang="ko" width="800" height="482" viewBox="0 0 800 482" role="img" aria-labelledby="title description">
+<title id="title">Windows OneMouse에 Mac의 6자리 페어링 코드 입력</title>
+<desc id="description">앱 소스 기반 화면 예시입니다. Windows 기기 관리에서 다른 방법으로 연결을 펼친 뒤, 같은 Wi-Fi의 Mac 기기 행에 Mac이 표시한 6자리 코드를 입력하고 페어링을 누릅니다. 123456은 예시 번호입니다.</desc>
+<defs>
+  <linearGradient id="nav" x2="0" y2="1"><stop stop-color="#0f172a"/><stop offset="1" stop-color="#172554"/></linearGradient>
+  <linearGradient id="brand" x2="1" y2="1"><stop stop-color="#2563eb"/><stop offset="1" stop-color="#16a34a"/></linearGradient>
+  <clipPath id="frame"><rect x="4" y="4" width="792" height="474" rx="14"/></clipPath>
+</defs>
+<g clip-path="url(#frame)" font-family="Malgun Gothic,Noto Sans CJK KR,Arial,sans-serif">
+  <path d="M4 4h792v474H4z" fill="#f5f8fc"/>
+  <path d="M4 41h176v437H4z" fill="url(#nav)"/>
+  <path d="M4 4h792v37H4z" fill="#f9fbff"/>
+  <path d="M4 41h792" stroke="#d6e1f0"/>
+  <text x="20" y="28" fill="#43536b" font-weight="650" font-size="14">OneMouse</text>
+  <path d="M681 24h12m27-6h10v10h-10zM764 18l10 10m0-10-10 10" fill="none" stroke="#516178" stroke-width="1.5"/>
+  <rect x="20" y="61" width="33" height="33" rx="9" fill="url(#brand)"/>
+  <text x="36.5" y="82.5" fill="white" font-size="11" text-anchor="middle" font-weight="850">OM</text>
+  <text x="62" y="81" fill="white" font-size="11" font-weight="750">원마우스(공유마우스)</text>
+  <rect x="16" y="236" width="148" height="40" rx="9" fill="#303b57"/>
+  <g fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path transform="translate(25 115)" d="M2 10l8-7 8 7M5 9v8h10V9M9 17v-5h3v5" stroke="#69dbc5"/>
+    <path transform="translate(25 158)" d="M3 5h14v11H3zm6 0v11m4-11v11" stroke="#77abfd"/>
+    <path transform="translate(25 201)" d="M3 6l7-3 7 3v10l-7 3-7-3zm0 0l7 4 7-4m-7 4v9" stroke="#e5ad74"/>
+    <path transform="translate(25 246)" d="M5 2h10v16H5zm4 13h2" stroke="#89b7ff"/>
+    <path transform="translate(25 291)" d="M10 2v3m0 10v3M2 10h3m10 0h3M4 4l2 2m8 8 2 2m0-12-2 2m-8 8-2 2M10 6a4 4 0 1 0 0 8 4 4 0 0 0 0-8" stroke="#c3b2fb"/>
+  </g>
+  <g fill="white" font-size="16" font-weight="690">
+    <text x="54" y="131">대시보드</text><text x="54" y="174">기기 배치</text><text x="54" y="217">파일 전송</text>
+    <text x="54" y="263">기기 관리</text><text x="54" y="307">설정</text>
+  </g>
+  <text x="203" y="86" fill="#0f172a" font-size="27" font-weight="800">기기 관리</text>
+  <rect x="602" y="59" width="170" height="31" rx="15.5" fill="#e7efff"/>
+  <text x="687" y="80" fill="#1c427b" font-size="14" font-weight="750" text-anchor="middle">앱 소스 기반 화면 예시</text>
+  <rect x="202" y="111" width="570" height="307" rx="15" fill="white" stroke="#d5e1f0"/>
+  <rect x="218" y="128" width="538" height="44" rx="10" fill="#f4f7fb" stroke="#e0e9f4"/>
+  <text x="234" y="156" fill="#23374e" font-size="16" font-weight="750">Google 계정</text>
+  <rect x="624" y="136" width="117" height="28" rx="14" fill="#e8efff"/>
+  <text x="682.5" y="155" fill="#1d4ed8" font-size="13" font-weight="730" text-anchor="middle">Google로 로그인</text>
+  <rect x="218" y="181" width="538" height="43" rx="10" fill="#e3f8ec" stroke="#ccebdc"/>
+  <text x="234" y="209" fill="#12382a" font-size="16" font-weight="750">연결 기기</text>
+  <path d="M230 254l5-5 5 5" fill="none" stroke="#556987" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="251" y="258" fill="#475c7a" font-size="17" font-weight="730">다른 방법으로 연결</text>
+  <path d="M218 273h538" stroke="#dde7f2"/>
+  <text x="232" y="305" fill="#475c7a" font-size="16" font-weight="720">같은 Wi-Fi · 페어링</text>
+  <rect x="590" y="283" width="153" height="31" rx="14" fill="#eaf1ff"/>
+  <text x="666.5" y="304" fill="#345385" font-size="13" font-weight="720" text-anchor="middle">이 PC의 QR·인증번호</text>
+  <rect x="218" y="323" width="538" height="75" rx="11" fill="#f1f6ff" stroke="#376bc7" stroke-width="2"/>
+  <rect x="233" y="346" width="46" height="28" rx="14" fill="#dcf0ff"/>
+  <text x="256" y="365" text-anchor="middle" fill="#07568e" font-size="15" font-weight="800">Mac</text>
+  <text x="290" y="366" fill="#18273d" font-size="18" font-weight="750">예시 Mac</text>
+  <rect x="484" y="340" width="161" height="41" rx="9" fill="white" stroke="#1d4ed8" stroke-width="2.4"/>
+  <text x="500" y="368" fill="#10213b" font-size="23" font-weight="800" letter-spacing="2">123456</text>
+  <rect x="654" y="340" width="89" height="41" rx="10" fill="#2659dc"/>
+  <text x="698.5" y="366.5" fill="white" text-anchor="middle" font-size="17" font-weight="750">페어링</text>
+  <text x="219" y="448" fill="#475c7a" font-size="15"><tspan font-weight="750">6자리 페어링 코드</tspan><tspan>&#160;입력칸에 Mac에 표시된 실제 번호를 넣으세요.</tspan></text>
+</g>
+<rect x="4" y="4" width="792" height="474" rx="14" fill="none" stroke="#b2c1d3" stroke-width="1.4"/>
+</svg>
