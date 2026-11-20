@@ -61,3 +61,32 @@
 .om-race-card .arcade-action:hover{background:#d6fff2}
 .om-race-card .arcade-slide{position:absolute;z-index:1;left:50%;top:52%;width:26%;height:26%;touch-action:none;cursor:ew-resize}
 .om-race-card .photo-missing .arcade-slide{left:57%;width:39%;top:43%;height:35%}
+
+/* Virtual gamepad: left analog stick, centered system controls, and A/B on the right. */
+.om-race-card .race-controls{align-items:flex-end;gap:.18rem;padding:.32rem .45rem .33rem}
+.om-race-card .race-joystick{
+  --stick-size:clamp(62px,17cqw,81px);
+  position:relative;display:grid;place-items:center;pointer-events:auto;flex:none;
+  width:var(--stick-size);height:var(--stick-size);border:1px solid #8194b2;border-radius:50%;
+  background:radial-gradient(circle at 50% 41%,#303a50 0 33%,#151e2d 65%,#263c58 86%);
+  color:#c4d1e9;box-shadow:inset 0 0 0 4px #101a29a3,0 2px 8px #07132088;
+  touch-action:none;user-select:none;cursor:grab
+}
+.om-race-card .race-joystick:active{cursor:grabbing}
+.om-race-card .race-stick-guides{position:absolute;inset:0;display:flex;align-items:center;justify-content:space-between;padding:0 .3rem;font:bold 1.1rem/1 system-ui,sans-serif;pointer-events:none}
+.om-race-card .race-stick-thumb{position:absolute;width:49%;aspect-ratio:1;border:1px solid #859ab6;border-radius:50%;background:radial-gradient(circle at 37% 27%,#5b708d,#243a53 68%);box-shadow:0 2px 5px #080f1dcc,inset 0 0 0 3px #aacbfa12;pointer-events:none}
+.om-race-card .race-system,.om-race-card .race-ab{display:flex;gap:.19rem;align-items:flex-end}
+.om-race-card .race-system{justify-content:center;flex:1}
+.om-race-card .race-system button{min-width:44px;min-height:44px;padding:0 .35rem;font-size:.73rem}
+.om-race-card .race-ab .race-pedal{display:grid;align-content:center;min-width:44px;width:clamp(44px,12cqw,53px);height:clamp(44px,12cqw,53px);border-radius:50%;padding:0;touch-action:none;user-select:none}
+.om-race-card .race-pedal b{font-size:1.06rem;line-height:1.02}
+.om-race-card .race-pedal small{font-size:.6rem;font-weight:770}
+.om-race-card .race-pedal-a{background:#144957;border-color:#86ddd2}
+.om-race-card .race-pedal-b{background:#593445;border-color:#ef97a3;transform:translateY(-7px)}
+.om-race-card .race-pedal-a.is-held{background:#74e8cc;color:#0d352e;text-shadow:none}
+.om-race-card .race-pedal-b.is-held{background:#f1a4ab;color:#49242d;text-shadow:none}
+.om-race-card .race-joystick[aria-disabled="true"]{opacity:.55;cursor:default}
+.om-race-card .race-joystick:focus-visible{outline:3px solid #80f5cb;outline-offset:2px}
+.om-race-card[data-phase="idle"] :is(.race-joystick,.race-ab){display:none}
+.om-race-card .race-scene{container-type:inline-size}
+@container(max-width:300px){.om-race-card .race-system .race-reset{display:none}}

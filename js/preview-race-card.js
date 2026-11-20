@@ -20,7 +20,7 @@
       </g>
     </svg>
     <span class="game-title">LANE RUSH</span>
-    <span class="game-score" data-score>통과 0 / 8</span>
+    <span class="game-score" data-score>점수 0</span>
     <div class="game-overlay" data-game-overlay><span data-game-title>미니 레이싱</span><small data-game-subtitle>Android 게임패드로 시작</small></div>
   </div>`;
   const picks=[
@@ -44,13 +44,16 @@
         <img class="race-backdrop" data-backdrop src="/assets/preview/remote-racing-example.webp" width="1199" height="675" alt="" decoding="async">
         <div class="race-projection race-projection--monitor"><div class="race-display" data-monitor></div></div>
         <div class="race-projection race-projection--phone" aria-hidden="true"><div class="race-display" data-phone><div data-phone-screen></div></div></div>
-        <div class="race-controls" data-controls tabindex="0" role="group" aria-label="게임 조작. 시작한 뒤 방향 버튼이나 키보드 방향키로 차선을 바꿔요.">
-          <span class="race-steering" aria-label="차선 이동" role="group">
-            <button type="button" data-direction="left" aria-label="왼쪽 차선으로 이동">←</button>
-            <button type="button" data-direction="right" aria-label="오른쪽 차선으로 이동">→</button>
-          </span>
-          <button class="race-toggle" type="button" data-toggle>게임 시작</button>
-          <button class="race-reset" type="button" data-reset aria-label="레이싱 초기화" title="레이싱 초기화">↻</button>
+        <div class="race-controls" data-controls tabindex="0" role="group" aria-label="레이싱 조작. 조이스틱 또는 방향키로 이동하고 A로 가속, B로 감속하세요.">
+          <div class="race-joystick" data-steer tabindex="0" role="group" aria-label="조이스틱. 좌우 방향키로도 움직일 수 있어요."><span aria-hidden="true" class="race-stick-guides">‹ <i></i> ›</span><span class="race-stick-thumb" data-thumb aria-hidden="true"></span></div>
+          <div class="race-system">
+            <button class="race-toggle" type="button" data-toggle>게임 시작</button>
+            <button class="race-reset" type="button" data-reset aria-label="레이싱 초기화" title="레이싱 초기화">↻</button>
+          </div>
+          <div class="race-ab">
+            <button class="race-pedal race-pedal-a" type="button" data-pedal="accelerate" aria-label="A 가속" title="A 가속 (X 키)"><b>A</b><small>가속</small></button>
+            <button class="race-pedal race-pedal-b" type="button" data-pedal="brake" aria-label="B 감속" title="B 감속 (Z 키)"><b>B</b><small>감속</small></button>
+          </div>
         </div>
         <div class="arcade-slide" data-slide hidden aria-hidden="true"></div>
         <button class="arcade-list" type="button" data-list hidden>게임 목록</button>
@@ -71,7 +74,8 @@
     const live=$('status'),gameControls=$('controls'),toggle=$('toggle'),gameReset=$('reset');
     const list=$('list'),slide=$('slide'),arcadeControls=$('arcade-controls'),primary=$('action'),arcadePause=$('arcade-pause'),arcadeReset=$('arcade-reset');
     const pad=arcadeControls.querySelector('.arcade-steering');
-    const dirs=[...desk.querySelectorAll('[data-direction]')];
+    const stick=$('steer'),thumb=$('thumb');
+    const pedals=[...desk.querySelectorAll('[data-pedal]')];
   // Corners are measured in the published 1199×675 photo (top-left clockwise).
   const screenQuads = [
     [mirror, [[143,15],[714,77],[714,332],[149,372]]],
@@ -101,22 +105,33 @@
   }
   backdrop.addEventListener('error',missingPhoto);
   const stage = [mirror, control], ns='http://www.w3.org/2000/svg';
-  const goal=8, trafficLanes=[0,2,1,2,0,1,0,2], speed=.075;
+  const trafficLanes=[0,2,1,2,0,1,0,2];
   const directions={left:-1,right:1};
-  let timer, frame=0, lane=1, traffic=[], passed=0, spawnCount=0;
-  function stop(){if(timer!==undefined){clearInterval(timer);timer=undefined;}}
-  function drive(){stop();timer=setInterval(step,145);}
+  const held=new Map();
+  let timer, road=0, lane=1, traffic=[], passed=0, spawnCount=0, nextCar=0;
+  let stickId=null, steerDir='', steerAt=0;
+  function refreshPedals(){
+    for(const b of pedals)b.classList.toggle('is-held',[...held.values()].includes(b.dataset.pedal));
+    desk.dataset.pace=[...held.values()].includes('brake')?'brake':[...held.values()].includes('accelerate')?'accelerate':'normal';
+  }
+  function resetStick(){
+    stickId=null;steerDir='';thumb.style.transform='';
+  }
+  function clearInput(){held.clear();refreshPedals();resetStick();}
+  function stop(){if(timer!==undefined){clearInterval(timer);timer=undefined;}clearInput();}
+  function drive(){stop();timer=setInterval(step,110);}
   function step(){
     if(mode!=='race'||phase!=='playing')return;
-    frame++;
-    if(frame===1||frame%6===0){traffic.push({lane:trafficLanes[spawnCount%trafficLanes.length],at:0});spawnCount++;}
+    const speed={normal:.066,accelerate:.104,brake:.042}[desk.dataset.pace];
+    road+=speed; nextCar-=speed;
+    if(nextCar<=0){traffic.push({lane:trafficLanes[spawnCount%trafficLanes.length],at:0});spawnCount++;nextCar+=.45;}
     traffic.forEach(car=>{car.at+=speed;});
+    if(steerDir && performance.now()>=steerAt){steerAt=performance.now()+210;move(steerDir,false);}
     if(traffic.some(car=>car.at>=.86&&car.at<=1.07&&car.lane===lane)){phase='lose';stop();}
     else {
       const before=traffic.length;
       traffic=traffic.filter(car=>car.at<1.13);
       passed+=before-traffic.length;
-      if(passed>=goal){phase='complete';stop();}
     }
     renderGame();
     if(phase!=='playing' && desk.contains(document.activeElement))toggle.focus({preventScroll:true});
@@ -124,19 +139,19 @@
   let mode='library', engine=null, arcadeViews=[], animation=0, lastTick=0, paused=false, result='';
   let game;
   let phase, lastScore;
-  function setGame(next) { stop(); frame=passed=spawnCount=0; lane=1; traffic=[]; phase=next; lastScore=0; renderGame(); if(next==='playing')drive(); }
+  function setGame(next) { stop(); road=passed=spawnCount=nextCar=0; lane=1; traffic=[]; phase=next; lastScore=0; renderGame(); if(next==='playing')drive(); }
   function cloneInto() {
     stage.forEach(screen=>screen.innerHTML=GAME_ART);
   }
   function announce(t) {live.textContent=t;}
   const roadPoint=(column,f)=>({x:200+(column-1)*(23+75*f),y:104+104*f});
   function renderGame(){
-    scene.classList.toggle('is-live',phase!=='idle');
-    const car=roadPoint(lane,1), score=Math.min(goal,passed);
+    scene.classList.add('is-live');
+    const car=roadPoint(lane,1), score=passed;
     game.forEach(nodes=>{
       nodes.player.setAttribute('transform',`translate(${car.x},${car.y})`);
       nodes.road.replaceChildren(...[.28,.56,.84].flatMap(base=>{
-        const f=(base+frame*.043)%1;
+        const f=(base+road*.63)%1;
         return [-.5,.5].map(offset=>{
           const a=roadPoint(1+offset,f),b=roadPoint(1+offset,Math.min(1,f+.07));
           const line=document.createElementNS(ns,'path');
@@ -153,21 +168,21 @@
         back.setAttribute('stroke','#7f2f46');back.setAttribute('stroke-width','2');
         group.append(rectangle,back);return group;
       }));
-      nodes.score.textContent='통과 '+score+' / '+goal;
+      nodes.score.textContent='점수 '+score;
       nodes.overlay.hidden=phase==='playing';
       if(phase!=='playing'){
-        nodes.title.textContent={idle:'미니 레이싱',paused:'잠시 쉬는 중',complete:'완주했어요!',lose:'차에 닿았어요'}[phase];
-        nodes.subtitle.textContent={idle:'Android 게임패드로 시작',paused:'계속하려면 재개',complete:'8대를 모두 피했어요.',lose:'다시 도전해 보세요.'}[phase];
+        nodes.title.textContent={idle:'미니 레이싱',paused:'잠시 쉬는 중',lose:'차에 닿았어요'}[phase];
+        nodes.subtitle.textContent={idle:'Android 게임패드로 시작',paused:'계속하려면 재개',lose:'다시 도전해 보세요.'}[phase];
       }
     });
     desk.dataset.phase=phase;
-    dirs.forEach(button=>{button.disabled=phase!=='playing';});
-    toggle.textContent={idle:'게임 시작',playing:'일시정지',paused:'계속하기',complete:'한 번 더',lose:'다시 도전'}[phase];
+    pedals.forEach(button=>{button.disabled=phase!=='playing';});
+    stick.setAttribute('aria-disabled',String(phase!=='playing'));
+    toggle.textContent={idle:'게임 시작',playing:'일시정지',paused:'계속하기',lose:'다시 도전'}[phase];
     gameReset.disabled=phase==='idle';
-    if(phase==='complete') announce('차 8대를 다 피했어요. 완주!');
-    else if(phase==='lose')announce('앞차에 닿아서 게임을 마쳤어요.');
+    if(phase==='lose')announce('충돌했어요. 최종 점수 '+score+'점.');
     else if(phase==='paused')announce('게임을 일시정지했어요.');
-    else if(phase==='idle')announce('게임을 시작하고 방향 버튼이나 키보드 방향키로 앞차 8대를 피하세요.');
+    else if(phase==='idle')announce('조이스틱이나 방향키로 차량을 피하세요. A는 가속, B는 감속이에요.');
     else if(score!==lastScore)announce('차 '+score+'대를 피했어요.');
     lastScore=score;
   }
@@ -179,25 +194,60 @@
     ));
     setGame('idle');
   }
-  function move(direction) {
+  function move(direction,refresh=true) {
     if(phase!=='playing'||!directions[direction])return;
     lane=Math.max(0,Math.min(2,lane+directions[direction]));
+    if(!refresh)return;
     if(traffic.some(car=>car.lane===lane&&car.at>=.86&&car.at<=1.07)){phase='lose';stop();}
     renderGame();
     if(phase==='lose' && desk.contains(document.activeElement))toggle.focus({preventScroll:true});
   }
-  dirs.forEach(btn=>btn.addEventListener('click',()=>move(btn.dataset.direction)));
+  function pointStick(event){
+    const r=stick.getBoundingClientRect();
+    const limit=r.width*.29;
+    if(!limit)return;
+    let x=event.clientX-r.left-r.width/2, y=event.clientY-r.top-r.height/2;
+    const ratio=Math.min(1,limit/(Math.hypot(x,y)||1));x*=ratio;y*=ratio;
+    thumb.style.transform='translate('+x+'px,'+y+'px)';
+    const direction=x>limit*.43?'right':x<-limit*.43?'left':'';
+    if(direction!==steerDir){
+      steerDir=direction;
+      if(direction){steerAt=performance.now()+235;move(direction);}
+    }
+  }
+  stick.addEventListener('pointerdown',event=>{
+    if(mode!=='race'||phase!=='playing'||event.button!==0||stickId!==null)return;
+    event.preventDefault();stickId=event.pointerId;stick.setPointerCapture(stickId);pointStick(event);
+  });
+  stick.addEventListener('pointermove',event=>{if(event.pointerId===stickId)pointStick(event);});
+  for(const event of ['pointerup','pointercancel','lostpointercapture']){
+    stick.addEventListener(event,e=>{if(e.pointerId===stickId)resetStick();});
+  }
+  for(const b of pedals){
+    b.addEventListener('pointerdown',e=>{
+      if(mode!=='race'||phase!=='playing'||e.button!==0)return;
+      e.preventDefault();b.setPointerCapture(e.pointerId);
+      held.set('p'+e.pointerId,b.dataset.pedal);refreshPedals();
+    });
+    for(const name of ['pointerup','pointercancel','lostpointercapture']){
+      b.addEventListener(name,e=>{if(held.delete('p'+e.pointerId))refreshPedals();});
+    }
+  }
+  const pedalKeys={x:'accelerate',z:'brake',X:'accelerate',Z:'brake'};
   desk.addEventListener('keydown',e=>{
     if(mode!=='race'||phase!=='playing'||e.altKey||e.ctrlKey||e.metaKey)return;
     const aliases={ArrowLeft:'left',ArrowRight:'right'};
-    if(!aliases[e.key])return;
-    e.preventDefault(); move(aliases[e.key]);
+    if(aliases[e.key]){e.preventDefault();move(aliases[e.key]);return;}
+    const pedal=pedalKeys[e.key] || ([' ','Enter'].includes(e.key)?e.target.dataset.pedal:null);
+    if(pedal){e.preventDefault();held.set('k'+e.code,pedal);refreshPedals();}
   });
+  window.addEventListener('keyup',e=>{if(held.delete('k'+e.code))refreshPedals();});
+  window.addEventListener('blur',clearInput);
   function start() {
     if(phase==='playing')return;
     if(phase==='paused'){phase='playing';drive();renderGame();}
     else setGame('playing');
-    announce('레이싱을 시작했어요. 좌우로 차선을 바꿔 보세요.');
+    announce('레이싱을 시작했어요. 조이스틱으로 차선을 바꾸고 A로 가속, B로 감속하세요.');
     gameControls.focus({preventScroll:true});
   }
   function pause(){

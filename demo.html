@@ -34,6 +34,14 @@
 .legacy-fallback:not(:target){display:none}
 #cursor-demo{scroll-margin-top:1rem}
 @media(min-width:850px){.hero{grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:35px;padding-block:56px 63px}}
+/* Keep the same responsive frame when the poster becomes a YouTube iframe. */
+.promo-video{width:min(100%,760px);margin:1rem 0 0}
+.promo-video-player{position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;border-radius:.8rem;background:#102437}
+.promo-video-player :is(.promo-video-play,iframe){position:absolute;inset:0;display:block;width:100%;height:100%;border:0}
+.promo-video-play img{display:block;width:100%;height:100%;object-fit:cover}
+.promo-video-play .btn{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);white-space:nowrap;box-shadow:0 2px 16px #10243788}
+.promo-video-play:focus-visible{outline:3px solid #8af3d7;outline-offset:-4px}
+.promo-video-links{margin:.45rem 0 0;color:var(--muted);font-size:.84rem}
 </style>
 <link rel="icon" href="/assets/preview/onemouse-android-icon.png" type="image/png" sizes="240x240">
 <link rel="stylesheet" href="/assets/preview/one-preview.css?v=light1">

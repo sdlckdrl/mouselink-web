@@ -2,6 +2,9 @@
   'use strict';
 
   const initial = { pc: [50, 47], mac: [18, 43], phone: [48, 83], tablet: [83, 47] };
+  const defaultSides = { mac: 'left', phone: 'bottom', tablet: 'right' };
+  const edges = { left: [0, -1], right: [0, 1], top: [1, -1], bottom: [1, 1] };
+  const edgeKeys = Object.keys(edges);
   const names = { pc: 'Windows PC', mac: 'Mac', phone: 'Android 폰', tablet: 'Android 태블릿' };
   const arrows = { ArrowLeft: [-1, 0], ArrowRight: [1, 0], ArrowUp: [0, -1], ArrowDown: [0, 1] };
   const clamp = (n, min, max) => Math.min(Math.max(n, min), max);
@@ -22,7 +25,8 @@
       svg.append(line);
       return [id, line];
     }));
-    let positions;
+    let positions = { pc: initial.pc };
+    let docks, lastSize;
     let current = 'pc';
     let gesture = null;
 
@@ -78,46 +82,121 @@
       showCursor(position, id);
     }
 
-    function moveDevice(id, target, { width, height, halves }) {
+    function nearestDock(id, target, bounds, occupied, sides = edgeKeys) {
+      const { width, height, halves } = bounds;
+      const dims = [width, height];
+      const gap = dims.map(size => 100 / size); // one actual CSS pixel
+      const margin = gap.map(n => n * 3);
+      const own = halves[id], pc = halves.pc;
+      const candidates = [];
+      for (const side of sides) {
+        const [normal, sign] = edges[side];
+        const tangent = 1 - normal;
+        const fixed = initial.pc[normal] + sign * (pc[normal] + own[normal] + gap[normal]);
+        if (fixed < own[normal] + margin[normal] || fixed > 100 - own[normal] - margin[normal]) continue;
+        const pcAlong = initial.pc[tangent];
+        // Keep a visible length of edge contact, not merely corner-to-corner.
+        const reach = pc[tangent] + own[tangent] - Math.min(gap[tangent] * 6, own[tangent], pc[tangent]);
+        const low = Math.max(own[tangent] + margin[tangent], pcAlong - reach);
+        const high = Math.min(100 - own[tangent] - margin[tangent], pcAlong + reach);
+        if (low > high) continue;
+        let intervals = [[low, high]];
+        for (const [other, center] of Object.entries(occupied)) {
+          if (other === id || other === 'pc') continue;
+          const size = halves[other];
+          if (Math.abs(fixed - center[normal]) >= own[normal] + size[normal] + gap[normal] - 1e-7) continue;
+          const radius = own[tangent] + size[tangent] + gap[tangent];
+          const left = center[tangent] - radius, right = center[tangent] + radius;
+          intervals = intervals.flatMap(([a, b]) => {
+            const next = [];
+            if (a <= Math.min(b, left)) next.push([a, Math.min(b, left)]);
+            if (Math.max(a, right) <= b) next.push([Math.max(a, right), b]);
+            return next;
+          });
+        }
+        for (const [a, b] of intervals) {
+          const pos = [];
+          pos[normal] = fixed;
+          pos[tangent] = clamp(target[tangent], a, b);
+          candidates.push({ side, pos, cost: distance(pos, target, width, height) });
+        }
+      }
+      return candidates.sort((a, b) => a.cost - b.cost)[0];
+    }
+
+    function dragDevice(id, target, { width, height, halves }) {
       const [ox, oy] = positions[id];
       const [rx, ry] = halves[id];
-      const gapX = 4 / width * 100;
-      const gapY = 4 / height * 100;
-      const x = clamp(target[0], Math.min(50, rx + gapX), Math.max(50, 100 - rx - gapX));
-      const y = clamp(target[1], Math.min(50, ry + gapY), Math.max(50, 100 - ry - gapY));
-      const overlap = ([cx, cy]) => keys.reduce((sum, key) => {
-        if (key === id) return sum;
+      const gx = 3 / width * 100, gy = 3 / height * 100;
+      const x = clamp(target[0], rx + gx, 100 - rx - gx);
+      const y = clamp(target[1], ry + gy, 100 - ry - gy);
+      const fitting = ([cx, cy]) => keys.every(key => {
+        if (key === id) return true;
         const [px, py] = positions[key];
-        const [hx, hy] = halves[key];
-        const across = Math.max(0, Math.min(rx * 2, hx * 2, rx + hx + gapX - Math.abs(cx - px)));
-        const down = Math.max(0, Math.min(ry * 2, hy * 2, ry + hy + gapY - Math.abs(cy - py)));
-        return sum + across * down;
-      }, 0);
-      const prior = overlap([ox, oy]);
-      const choices = [[x, y], [x, oy], [ox, y]];
-      const legal = choices.filter(candidate => {
-        if (candidate[0] === ox && candidate[1] === oy) return false;
-        const coverage = overlap(candidate);
-        // If very narrow initial CSS creates overlap, only permit moves that improve it.
-        return coverage === 0 || coverage < prior;
+        return Math.abs(cx - px) + 1e-7 >= rx + halves[key][0] || Math.abs(cy - py) + 1e-7 >= ry + halves[key][1];
       });
-      if (!legal.length) return false;
-      legal.sort((a, b) => distance(a, target, width, height) - distance(b, target, width, height));
-      positions[id] = legal[0];
+      const best = [[x, y], [x, oy], [ox, y]].filter(fitting)
+        .sort((a, b) => distance(a, target, width, height) - distance(b, target, width, height))[0];
+      if (best) positions[id] = best;
       draw();
       showCursor(positions[id], id);
+    }
+
+    function applyDock(id, dock) {
+      if (!dock) return false;
+      docks[id] = dock;
+      positions[id] = dock.pos;
+      draw();
+      showCursor(dock.pos, id);
       return true;
+    }
+
+    function reflow(bounds) {
+      // Try every ordering: preserving all current sides takes priority over
+      // sliding a neighbor by as little as possible.
+      let best;
+      for (const first of movable) {
+        for (const second of movable.filter(id => id !== first)) {
+          const third = movable.find(id => id !== first && id !== second);
+          const occupied = { pc: initial.pc };
+          let noFit = false, switched = 0, cost = 0;
+          const fitted = {};
+          for (const id of [first, second, third]) {
+            const previous = docks[id];
+            const choices = [previous.side, ...edgeKeys.filter(side => side !== previous.side)];
+            const dock = nearestDock(id, previous.pos, bounds, occupied, choices.slice(0, 1))
+              || nearestDock(id, previous.pos, bounds, occupied, choices.slice(1));
+            if (!dock) { noFit = true; break; }
+            switched += Number(dock.side !== previous.side);
+            cost += dock.cost;
+            fitted[id] = dock;
+            occupied[id] = dock.pos;
+          }
+          if (!noFit && (!best || switched < best.switched || (switched === best.switched && cost < best.cost))) {
+            best = { occupied, fitted, switched, cost };
+          }
+        }
+      }
+      if (!best) return;
+      positions = best.occupied;
+      docks = best.fitted;
+      draw();
+      showCursor(positions[current], current);
     }
 
     function distance(a, b, width, height) {
       return Math.hypot((a[0] - b[0]) * width, (a[1] - b[1]) * height);
     }
 
-    function end(event) {
+    function end(event, drop = false) {
       if (!gesture || gesture.pointer !== event.pointerId) return;
+      const { drag, moved, target } = gesture;
       gesture = null;
       delete board.dataset.layoutDragging;
       if (board.hasPointerCapture(event.pointerId)) board.releasePointerCapture(event.pointerId);
+      if (!drag || !moved) return;
+      const bounds = drop && measure();
+      applyDock(drag, (bounds && nearestDock(drag, target, bounds, positions)) || docks[drag]);
     }
 
     board.addEventListener('pointerdown', event => {
@@ -150,17 +229,18 @@
       gesture.moved = true;
       board.dataset.layoutDragging = gesture.drag;
       const [x, y] = point(event, bounds, false);
-      moveDevice(gesture.drag, [x - gesture.offset[0], y - gesture.offset[1]], bounds);
+      gesture.target = [x - gesture.offset[0], y - gesture.offset[1]];
+      dragDevice(gesture.drag, gesture.target, bounds);
     }
 
     board.addEventListener('pointermove', move);
     board.addEventListener('pointerup', event => {
       if (!gesture || gesture.pointer !== event.pointerId) return;
       move(event);
-      end(event);
+      end(event, true);
     });
-    board.addEventListener('pointercancel', end);
-    board.addEventListener('lostpointercapture', end);
+    board.addEventListener('pointercancel', event => end(event));
+    board.addEventListener('lostpointercapture', event => end(event));
 
     board.addEventListener('keydown', event => {
       const direction = arrows[event.key];
@@ -173,7 +253,17 @@
         event.preventDefault();
         const [x, y] = positions[id];
         const step = event.shiftKey ? 20 : 8;
-        if (moveDevice(id, [x + dx * step / bounds.width * 100, y + dy * step / bounds.height * 100], bounds)) {
+        const prev = docks[id];
+        const requested = { ArrowLeft: 'left', ArrowRight: 'right', ArrowUp: 'top', ArrowDown: 'bottom' }[event.key];
+        const tangent = edges[prev.side][0] === 0 ? dy : dx;
+        const target = [x + dx * step / bounds.width * 100, y + dy * step / bounds.height * 100];
+        // Slide along the current edge; if stopped at its limit, move around
+        // the corner. An arrow towards the opposite edge docks there directly.
+        let dock = tangent ? nearestDock(id, target, bounds, positions, [prev.side]) : null;
+        if (!dock || distance(dock.pos, prev.pos, bounds.width, bounds.height) < .01) {
+          if (prev.side !== requested) dock = nearestDock(id, target, bounds, positions, [requested]);
+        }
+        if (dock && distance(dock.pos, prev.pos, bounds.width, bounds.height) >= .01 && applyDock(id, dock)) {
           status.textContent = `${names[id]} 위치를 옮겼어요.`;
         }
         return;
@@ -194,15 +284,26 @@
       if (next) showCursor(positions[next.key], next.key);
     });
 
+    function resized(force = false) {
+      const bounds = measure();
+      if (!bounds) return;
+      const size = JSON.stringify([bounds.width, bounds.height, bounds.halves]);
+      if (!force && lastSize === size) return;
+      lastSize = size;
+      if (gesture) end({ pointerId: gesture.pointer });
+      reflow(bounds);
+    }
     function restore() {
       if (gesture) end({ pointerId: gesture.pointer });
-      positions = Object.fromEntries(keys.map(id => [id, [...initial[id]]]));
-      draw();
+      docks = Object.fromEntries(movable.map(id => [id, { side: defaultSides[id], pos: initial[id] }]));
       delete cursor.dataset.device;
-      showCursor(positions.pc, 'pc');
+      current = 'pc';
+      resized(true);
     }
     reset.addEventListener('click', restore);
     root.setAttribute('data-ready', '');
     restore();
+    if (typeof ResizeObserver === 'function') new ResizeObserver(() => resized()).observe(board);
+    else window.addEventListener('resize', () => resized());
   }
 })();
