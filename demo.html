@@ -25,7 +25,8 @@
 .cursor-scene[data-ready]{touch-action:none}
 .cursor-scene:focus-visible{outline:3px solid var(--preview-accent)}
 .cursor-scene img{position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:contain;pointer-events:none}
-.cursor-scene .cursor-mark{position:absolute;top:37%;left:51%;width:clamp(15px,4.2%,24px);height:auto;pointer-events:none;filter:drop-shadow(0 1px 2px #0a1a30aa)}
+.cursor-scene .cursor-mark{position:absolute;z-index:2;display:block;top:37%;left:51%;width:clamp(17px,4.4%,26px);aspect-ratio:24/30;pointer-events:none;filter:drop-shadow(0 1px 2px #0a1a30aa)}
+.cursor-mark svg{display:block;width:100%;height:100%}
 .cursor-scene [hidden]{display:none!important}
 @media (any-pointer:fine){.cursor-scene[data-pointer]{cursor:none}}
 .cursor-help{margin:.48rem 0 0;color:var(--preview-muted);font-size:.84rem}
@@ -60,7 +61,7 @@
 <h2 id="demo-title">커서를 화면 너머로 넘겨 보세요</h2>
 <div class="cursor-scene" id="cursor-scene" aria-label="Windows, Mac, Android 폰·태블릿 커서 넘기기" aria-describedby="cursor-help">
 <img src="/assets/preview/home-cursor-desk.webp" width="1536" height="1024" fetchpriority="high" decoding="async" alt="Windows 모니터 가운데, Mac 왼쪽, Android 폰 아래, Android 태블릿 오른쪽이 놓인 책상">
-<svg class="cursor-mark" id="cursor-mark" viewBox="0 0 24 30" aria-hidden="true" hidden><path d="M1 1L22 19 13 18.4 17 26 13.6 28 9.3 20.3 3 27Z" fill="#fff" stroke="#142a43" stroke-width="1.7" stroke-linejoin="round"/></svg>
+<span class="cursor-mark" id="cursor-mark" aria-hidden="true" hidden><svg viewBox="0 0 24 30" width="24" height="30" focusable="false"><path d="M1 1L22 19 13 18.4 17 26 13.6 28 9.3 20.3 3 27Z" fill="#fff" stroke="#142a43" stroke-width="2" stroke-linejoin="round"/></svg></span>
 </div>
 <figcaption class="cursor-help" id="cursor-help">마우스나 손가락으로 다른 화면으로 넘겨 보세요. 키보드는 방향키로 옮길 수 있어요.</figcaption>
 </figure>
@@ -156,6 +157,7 @@
   }
   let current='pc',touch=null,hasPosition=false;
   function place(id,p,input){
+    // Toggle visibility on the HTML wrapper; SVGElement does not reflect .hidden.
     mark.hidden=false;hasPosition=true;
     scene.dataset.pointer=input;
     mark.style.left=`${100*p[0]/W}%`;mark.style.top=`${100*p[1]/H}%`;
