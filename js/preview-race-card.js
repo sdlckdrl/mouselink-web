@@ -57,14 +57,13 @@
         </div>
         <div class="arcade-slide" data-slide hidden aria-hidden="true"></div>
         <button class="arcade-list" type="button" data-list hidden>게임 목록</button>
-        <div class="arcade-controls" data-arcade-controls tabindex="0" role="group" aria-label="미니게임 조작" hidden>
-          <span class="arcade-steering" role="group" aria-label="패들 이동">
-            <button type="button" data-arcade-left aria-label="패들 왼쪽">←</button>
-            <button type="button" data-arcade-right aria-label="패들 오른쪽">→</button>
-          </span>
-          <button class="arcade-action" type="button" data-action>점프</button>
-          <button type="button" data-arcade-pause>일시정지</button>
-          <button type="button" data-arcade-reset aria-label="게임 다시 시작">↻</button>
+        <div class="arcade-controls race-controls" data-arcade-controls tabindex="0" role="group" aria-label="미니게임 게임패드" hidden>
+          <div class="race-joystick" data-arcade-stick tabindex="0" role="group" aria-label="조이스틱"><span aria-hidden="true" class="race-stick-guides" data-arcade-guide>‹ <i></i> ›</span><span class="race-stick-thumb" data-arcade-thumb aria-hidden="true"></span></div>
+          <div class="race-system"><button type="button" class="race-reset" data-arcade-reset aria-label="게임 초기화" title="게임 초기화">↻</button></div>
+          <div class="race-ab">
+            <button class="race-pedal race-pedal-a" type="button" data-action aria-label="A 점프"><b>A</b><small data-arcade-a-label>점프</small></button>
+            <button class="race-pedal race-pedal-b" type="button" data-arcade-pause aria-label="B 일시정지"><b>B</b><small data-arcade-b-label>정지</small></button>
+          </div>
         </div>
         <span data-status class="race-sr" role="status"></span>
       </div>`;
@@ -73,7 +72,7 @@
     const scene=$('scene'),backdrop=$('backdrop'),phoneDisplay=$('phone'),mirror=$('monitor'),control=$('phone-screen');
     const live=$('status'),gameControls=$('controls'),toggle=$('toggle'),gameReset=$('reset');
     const list=$('list'),slide=$('slide'),arcadeControls=$('arcade-controls'),primary=$('action'),arcadePause=$('arcade-pause'),arcadeReset=$('arcade-reset');
-    const pad=arcadeControls.querySelector('.arcade-steering');
+    const arcadeStick=$('arcade-stick'),arcadeThumb=$('arcade-thumb'),arcadeGuide=$('arcade-guide'),aLabel=$('arcade-a-label'),bLabel=$('arcade-b-label');
     const stick=$('steer'),thumb=$('thumb');
     const pedals=[...desk.querySelectorAll('[data-pedal]')];
   // Corners are measured in the published 1199×675 photo (top-left clockwise).
@@ -137,6 +136,7 @@
     if(phase!=='playing' && desk.contains(document.activeElement))toggle.focus({preventScroll:true});
   }
   let mode='library', engine=null, arcadeViews=[], animation=0, lastTick=0, paused=false, result='';
+  let arcadeStickId=null, arcadeDirection=0, arcadeRepeat=0, arcadeUp=false;
   let game;
   let phase, lastScore;
   function setGame(next) { stop(); road=passed=spawnCount=nextCar=0; lane=1; traffic=[]; phase=next; lastScore=0; renderGame(); if(next==='playing')drive(); }
@@ -264,7 +264,7 @@
   });
   function stopArcade(){
     if(animation)cancelAnimationFrame(animation);
-    animation=0;lastTick=0;
+    animation=0;lastTick=0;resetArcadeStick();
   }
   function activate(next){
     mode=next;desk.dataset.game=mode;
@@ -293,18 +293,23 @@
   }
   function updateArcadeControls(){
     const locked=paused||Boolean(result);
-    primary.textContent=result?'다시 도전':mode==='breakout'?'공 발사':'점프';
+    aLabel.textContent=result?'다시':mode==='breakout'?'발사':'점프';
+    primary.setAttribute('aria-label',result?'A 다시 도전':mode==='breakout'?'A 공 발사':'A 점프');
     primary.disabled=paused;
-    arcadePause.textContent=paused?'계속하기':'일시정지';
+    bLabel.textContent=paused?'계속':'정지';
+    arcadePause.setAttribute('aria-label',paused?'B 계속하기':'B 일시정지');
     arcadePause.disabled=Boolean(result);
     slide.hidden=mode!=='breakout'||locked;
-    for(const b of pad.querySelectorAll('button'))b.disabled=locked;
+    arcadeStick.setAttribute('aria-disabled',String(locked));
+    if(locked)resetArcadeStick();
   }
   function frameArcade(now){
     animation=0;
     if(!engine||paused||result||document.hidden)return;
     const dt=lastTick?Math.min(.032,(now-lastTick)/1000):0;
-    lastTick=now;engine.step(dt);
+    lastTick=now;
+    if(arcadeDirection&&now>=arcadeRepeat){engine.nudge(arcadeDirection);arcadeRepeat=now+92;}
+    engine.step(dt);
     result=engine.state().result;paintArcade();
     if(result){
       updateArcadeControls();announce(result==='won'?'성공했어요.':'게임이 끝났어요. 다시 도전할 수 있어요.');
@@ -320,7 +325,9 @@
     engine=window.OneMouseArcadeGames?.create(id);
     if(!engine){announce('게임을 불러오지 못했어요. 새로고침해 주세요.');return false;}
     activate(id);scene.classList.add('is-live');paused=false;result='';
-    pad.hidden=id!=='breakout';
+    arcadeControls.dataset.arcade=id;
+    arcadeStick.setAttribute('aria-label',id==='breakout'?'조이스틱. 좌우로 패들 이동':'조이스틱. 위로 밀어 점프');
+    arcadeGuide.textContent=id==='breakout'?'‹　›':'⌃';
     arcadeViews=stage.map(screen=>{
       screen.innerHTML='<div class="game-frame"><canvas width="640" height="360"></canvas><span class="game-title" data-arcade-title></span><span class="game-score" data-points></span><div class="game-overlay" data-arcade-overlay hidden></div></div>';
       const canvas=screen.querySelector('canvas');
@@ -335,7 +342,7 @@
     }else if(id==='breakout'||id==='rabbit'){
       if(!prepareArcade(id))return;
       arcadeControls.focus({preventScroll:true});
-      announce(id==='breakout'?'패들을 끌거나 좌우 방향키로 옮기고 공을 발사하세요.':'점프 버튼이나 스페이스 키로 장애물을 넘으세요.');
+      announce(id==='breakout'?'조이스틱으로 패들을 옮기고 A로 공을 발사하세요. 화면을 끌거나 방향키로도 이동할 수 있어요.':'A를 누르거나 조이스틱을 위로 밀어서 점프하세요.');
     }
   }
   mirror.addEventListener('click',event=>{
@@ -353,13 +360,42 @@
     engine.nudge(direction);paintArcade();
   }
   primary.addEventListener('click',action);
-  $('arcade-left').addEventListener('click',()=>nudge(-1));
-  $('arcade-right').addEventListener('click',()=>nudge(1));
-  arcadePause.addEventListener('click',()=>{
+  function resetArcadeStick(){
+    arcadeStickId=null;arcadeDirection=0;arcadeRepeat=0;arcadeUp=false;arcadeThumb.style.transform='';
+  }
+  function pointArcadeStick(event){
+    const r=arcadeStick.getBoundingClientRect(), limit=r.width*.29;
+    if(!limit)return;
+    let x=event.clientX-r.left-r.width/2, y=event.clientY-r.top-r.height/2;
+    const ratio=Math.min(1,limit/(Math.hypot(x,y)||1));x*=ratio;y*=ratio;
+    arcadeThumb.style.transform='translate('+x+'px,'+y+'px)';
+    if(mode==='breakout'){
+      const direction=x>limit*.43?1:x<-limit*.43?-1:0;
+      if(direction!==arcadeDirection){
+        arcadeDirection=direction;
+        if(direction){nudge(direction);arcadeRepeat=performance.now()+150;}
+      }
+    }else if(mode==='rabbit'){
+      const up=y<-limit*.43;
+      if(up&&!arcadeUp)action();
+      arcadeUp=up;
+    }
+  }
+  arcadeStick.addEventListener('pointerdown',event=>{
+    if(!engine||paused||result||event.button!==0||arcadeStickId!==null)return;
+    event.preventDefault();arcadeStickId=event.pointerId;arcadeStick.setPointerCapture(arcadeStickId);pointArcadeStick(event);
+  });
+  arcadeStick.addEventListener('pointermove',event=>{if(event.pointerId===arcadeStickId)pointArcadeStick(event);});
+  for(const type of ['pointerup','pointercancel','lostpointercapture']){
+    arcadeStick.addEventListener(type,event=>{if(event.pointerId===arcadeStickId)resetArcadeStick();});
+  }
+  function toggleArcadePause(){
     if(!engine||result)return;
     if(!paused){pauseArcade();return;}
     paused=false;updateArcadeControls();paintArcade();queueArcade();announce('게임을 재개했어요.');
-  });
+  }
+  arcadePause.addEventListener('click',toggleArcadePause);
+  window.addEventListener('blur',resetArcadeStick);
   arcadeReset.addEventListener('click',()=>{if(engine){prepareArcade(mode);announce('게임을 초기화했어요.');}});
   let tracking=null;
   function slideTo(event){
@@ -379,8 +415,10 @@
   desk.addEventListener('keydown',event=>{
     if(event.altKey||event.ctrlKey||event.metaKey)return;
     if(event.key==='Escape'&&mode!=='library'){event.preventDefault();openLibrary(mode);return;}
-    if(!engine||paused||event.target.closest('button'))return;
-    if((event.key===' '||(mode==='rabbit'&&event.key==='ArrowUp'))&&!event.repeat){event.preventDefault();action();}
+    if(!engine)return;
+    if(event.key.toLowerCase()==='z'&&!event.repeat){event.preventDefault();toggleArcadePause();return;}
+    if(paused||event.target.closest('button'))return;
+    if((event.key===' '||event.key.toLowerCase()==='x'||(mode==='rabbit'&&event.key==='ArrowUp'))&&!event.repeat){event.preventDefault();action();}
     if(mode==='breakout'&&(event.key==='ArrowLeft'||event.key==='ArrowRight')){
       event.preventDefault();nudge(event.key==='ArrowLeft'?-1:1);
     }

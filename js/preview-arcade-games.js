@@ -37,10 +37,20 @@
 
   function breakout() {
     const wall = 16, padY = 313, padW = 132, padH = 14, r = 8;
-    const bricks = Array.from({length: 21}, (_, i) => ({
-      x: 28 + i % 7 * 84, y: 48 + Math.floor(i / 7) * 27,
-      w: 78, h: 21, color: ['#ff8da3', '#ffc888', '#8de8d3'][Math.floor(i / 7)], alive: true,
-    }));
+    const rowColors = ['#ff8da3', '#ffc888', '#8de8d3'];
+    let round = 0, remaining = 0, bricks;
+    function nextField() {
+      bricks = Array.from({length: 21}, (_, i) => {
+        const row = Math.floor(i / 7);
+        return {
+          x: 28 + i % 7 * 84, y: 48 + row * 27,
+          w: 78, h: 21, color: rowColors[(row + round) % rowColors.length], alive: true,
+        };
+      });
+      remaining = bricks.length;
+      round = (round + 1) % rowColors.length;
+    }
+    nextField();
     let score = 0, lives = 3, result = '', paddle = W / 2;
     let x = paddle, y = padY - r - 2, vx = 0, vy = 0, flying = false;
     const move = value => {
@@ -60,6 +70,8 @@
     }
     function tick(dt) {
       if (!flying || result) return;
+      // Wait until the ball is below the last row before rebuilding the field.
+      if (!remaining && y > 48 + 2 * 27 + 21 + r + 1) nextField();
       const oldX = x, oldY = y;
       x += vx * dt;
       y += vy * dt;
@@ -94,7 +106,7 @@
           y = vy < 0 ? brick.y + brick.h + r : brick.y - r;
           vy = -vy;
         }
-        if (score === bricks.length) result = 'won';
+        remaining -= 1;
         break;
       }
       if (y - r > H && !result) {
@@ -133,12 +145,23 @@
 
   function rabbit() {
     const ground = 277, runner = 124, jump = 515, gravity = 1380;
-    const goal = 9, spacing = [0, 420, 825, 1300, 1765, 2215, 2705, 3160, 3650];
-    const hurdles = spacing.map((offset, index) => ({
-      at: 515 + offset, w: [35, 40, 32][index % 3], h: [32, 39, 35, 45][index % 4], passed: false,
-    }));
-    let score = 0, result = '', running = false, travelled = 0, raise = 0, speedY = 0;
-    let queued = 0;
+    const spacing = [420, 405, 475, 465, 450, 490, 455, 490];
+    const widths = [35, 40, 32], heights = [32, 39, 35, 45];
+    let score = 0, result = '', running = false, raise = 0, speedY = 0;
+    let groundScroll = 0, hillScroll = 0, legPhase = 0, queued = 0;
+    let pattern = 0;
+    const hurdles = [];
+    function nextHurdle() {
+      const prior = hurdles[hurdles.length - 1];
+      hurdles.push({x: prior ? prior.x + spacing[(pattern + 23) % spacing.length] : 515,
+        w: widths[pattern % widths.length], h: heights[pattern % heights.length]});
+      pattern = (pattern + 1) % 24;
+    }
+    function fillAhead() {
+      // Keep only onscreen obstacles and the next one beyond the edge.
+      while (!hurdles.length || hurdles[hurdles.length - 1].x < W + 70) nextHurdle();
+    }
+    fillAhead();
     function action() {
       if (result) return;
       if (!running) running = true;
@@ -147,7 +170,11 @@
     }
     function tick(dt) {
       if (!running || result) return;
-      travelled += (190 + score * 3) * dt;
+      const distance = Math.min(248, 190 + score * 3) * dt;
+      groundScroll = (groundScroll + distance) % 90;
+      hillScroll = (hillScroll + distance * .12) % 173;
+      legPhase = (legPhase + distance * .12) % (Math.PI * 2);
+      for (const hurdle of hurdles) hurdle.x -= distance;
       if (raise > 0 || speedY > 0) {
         speedY -= gravity * dt;
         raise += speedY * dt;
@@ -158,19 +185,16 @@
         }
       }
       queued = Math.max(0, queued - dt);
-      for (const hurdle of hurdles) {
-        if (hurdle.passed) continue;
-        const x = hurdle.at - travelled;
-        if (runner + 17 > x + 2 && runner - 13 < x + hurdle.w - 2 && raise + 4 < hurdle.h) {
-          result = 'lost';
-          return;
-        }
-        if (x + hurdle.w <= runner - 13) {
-          hurdle.passed = true;
-          score += 1;
-          if (score === goal) result = 'won';
-        }
+      const first = hurdles[0];
+      if (runner + 17 > first.x + 2 && runner - 13 < first.x + first.w - 2 && raise + 4 < first.h) {
+        result = 'lost';
+        return;
       }
+      if (first.x + first.w <= runner - 13) {
+        hurdles.shift();
+        score += 1;
+      }
+      fillAhead();
     }
     function draw(ctx) {
       sky(ctx, '#282855', '#7e6995');
@@ -179,18 +203,18 @@
       for (const [x, y, radius] of [[30, 68, 3], [78, 39, 3], [163, 89, 2], [254, 48, 4], [336, 110, 2], [418, 30, 3], [580, 53, 3], [610, 119, 4]]) {
         oval(ctx, x, y, radius, radius, '#f9e6a2');
       }
-      for (let x = -180 - travelled * .12 % 173; x < W + 80; x += 173) {
+      for (let x = -180 - hillScroll; x < W + 80; x += 173) {
         oval(ctx, x, ground + 21, 112, 102, '#393658');
         oval(ctx, x + 83, ground + 26, 116, 62, '#484461');
       }
       rect(ctx, 0, ground, W, H - ground, '#233e4e');
       rect(ctx, 0, ground, W, 5, '#8ee4bd');
-      for (let x = -travelled % 90; x < W; x += 90) {
+      for (let x = -groundScroll; x < W; x += 90) {
         rect(ctx, x, ground + 29, 45, 3, '#548686');
         rect(ctx, x + 19, ground + 54, 32, 3, '#548686');
       }
       for (const hurdle of hurdles) {
-        const x = hurdle.at - travelled;
+        const {x} = hurdle;
         if (x >= W || x + hurdle.w <= 0) continue;
         const top = ground - hurdle.h;
         polygon(ctx, [[x,ground],[x + 6,top + 7],[x + 18,top],[x + hurdle.w - 5,top + 9],[x + hurdle.w,ground]], '#6dc8a2');
@@ -198,7 +222,7 @@
       }
       oval(ctx, runner, ground + 3, 30 - raise * .10, 5, '#142732');
       const feet = ground - raise - 3;
-      const stride = running && !raise && !result ? Math.sin(travelled * .12) * 5 : 0;
+      const stride = running && !raise && !result ? Math.sin(legPhase) * 5 : 0;
       oval(ctx, runner - 25, feet - 17, 9, 9, '#f8f3df');
       oval(ctx, runner - 6, feet - 17, 23, 16, '#f8f3df');
       oval(ctx, runner + 14, feet - 26, 17, 17, '#fff9e8');
