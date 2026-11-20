@@ -22,7 +22,6 @@ main [id]{scroll-margin-top:1rem}
 h1,h2,h3{line-height:1.25;letter-spacing:-.04em}h1{font-size:clamp(2rem,4.8vw,3.35rem);margin:0;line-height:1.14}h2{font-size:clamp(1.55rem,3vw,2.15rem);margin:0 0 .45rem}h3{font-size:1.08rem;margin:1rem 0 .25rem}
 .lede{max-width:38ch;font-size:clamp(1.05rem,1.8vw,1.2rem);color:var(--preview-muted);margin:1rem 0 1.15rem}
 .primary{display:inline-flex;min-height:44px;align-items:center;padding:.55rem .85rem;border-radius:.55rem;background:var(--preview-accent);color:#fff;font-weight:750;text-decoration:none}.primary:hover{background:var(--preview-accent-hover)}
-.real-shot{margin:0;min-width:0}.real-shot img{aspect-ratio:2240/1800;display:block;width:100%;height:auto;max-height:350px;object-fit:contain;border:1px solid var(--preview-line);border-radius:.75rem;background:#e5eff1}.real-shot figcaption{margin:.45rem 0 0;color:var(--preview-muted);font-size:.83rem}
 .kvm-more{padding-block:.5rem 1.5rem}.kvm-more p,.panel p,.panel dd{margin:.35rem 0 .7rem;color:var(--preview-muted)}
 .examples{padding-block:1.25rem 1.8rem}.examples h2{margin-bottom:.9rem}
 .example-grid{display:grid;gap:1.2rem}
@@ -90,6 +89,7 @@ h1,h2,h3{line-height:1.25;letter-spacing:-.04em}h1{font-size:clamp(2rem,4.8vw,3.
 <link rel="stylesheet" href="/assets/preview/file-demo.css?v=3">
 <link rel="stylesheet" href="/assets/preview/android-demo.css?v=compact2">
 <link rel="stylesheet" href="/assets/preview/tablet-gesture-demo.css?v=cursor2">
+<link rel="stylesheet" href="/assets/preview/layout-demo.css?v=1">
 </head>
 <body>
 <a class="skip" href="#main">본문으로 이동</a>
@@ -106,10 +106,24 @@ h1,h2,h3{line-height:1.25;letter-spacing:-.04em}h1{font-size:clamp(2rem,4.8vw,3.
       <p class="lede">Windows PC 화면 끝으로 마우스를 밀면 옆의 Android, Mac 또는 다른 Windows PC에서 바로 클릭하고 입력할 수 있어요. 각 기기는 자기 화면을 그대로 써요.</p>
       <a class="primary" href="/guide-demo">내 기기 연결하기</a>
     </div>
-    <figure class="real-shot">
-      <a href="/assets/pairing/pc-position-ko.webp" aria-label="실제 OneMouse Windows 기기 배치 화면 크게 보기"><img src="/assets/pairing/pc-position-ko.webp" width="2240" height="1800" decoding="async" alt="Windows 앱에서 Android를 오른쪽에 놓은 기기 배치 화면"></a>
-      <figcaption>실제 Windows 앱의 기기 배치 화면 · 이전 버전</figcaption>
-    </figure>
+    <div class="layout-demo" id="layout-demo" data-layout-demo>
+      <div class="layout-demo-top">
+        <h2 id="layout-demo-title">내 책상처럼 기기 놓기</h2>
+        <button type="button" class="layout-demo-reset" data-layout-reset>원래 배치</button>
+      </div>
+      <div class="layout-board" data-layout-board tabindex="0" role="group" aria-labelledby="layout-demo-title" aria-describedby="layout-demo-help">
+        <svg class="layout-lines" data-layout-lines viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"></svg>
+        <div class="layout-device" data-layout-device="pc"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M12 17v4M8 21h8"/></svg>Windows</div>
+        <button type="button" class="layout-device" data-layout-device="mac"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 17V6a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v11M3 17h18l-1 3H4z"/></svg>Mac</button>
+        <button type="button" class="layout-device" data-layout-device="phone"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2"/><path d="M11 18.5h2"/></svg>폰</button>
+        <button type="button" class="layout-device" data-layout-device="tablet"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="M18.5 11v2"/></svg>태블릿</button>
+        <span class="layout-cursor" data-layout-cursor data-device="pc" aria-hidden="true" hidden><svg viewBox="0 0 24 30" width="24" height="30" aria-hidden="true" focusable="false"><path class="layout-cursor-arrow" d="M1 1L22 19 13 18.4 17 26 13.6 28 9.3 20.3 3 27Z" fill="#fff" stroke="#142a43" stroke-width="2" stroke-linejoin="round"/><circle class="layout-cursor-dot" cx="12" cy="15" r="7.5" fill="#fff" stroke="#142a43" stroke-width="2"/></svg></span>
+      </div>
+      <p class="layout-demo-help" id="layout-demo-help">기기를 끌어 옮긴 뒤, Windows에서 그 기기 쪽으로 커서를 움직여 보세요.</p>
+      <p class="layout-demo-sr" role="status" aria-atomic="true" data-layout-status></p>
+      <noscript><p class="layout-demo-help">배치 체험을 하려면 JavaScript를 켜세요.</p></noscript>
+      <a class="layout-demo-shot" href="/assets/pairing/pc-position-ko.webp">실제 앱 화면 보기</a>
+    </div>
   </div>
 </section>
 <div class="layout kvm-more">
@@ -302,5 +316,6 @@ h1,h2,h3{line-height:1.25;letter-spacing:-.04em}h1{font-size:clamp(2rem,4.8vw,3.
 <script src="/js/preview-android-mount.js?v=1" defer></script>
 <script src="/js/preview-tablet-gesture-demo.js?v=cursor1" defer></script>
 <script src="/js/preview-tablet-gesture-mount.js?v=1" defer></script>
+<script src="/js/preview-layout-demo.js?v=1" defer></script>
 </body>
 </html>
