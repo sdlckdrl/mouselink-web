@@ -20,6 +20,7 @@
 .shot--diagram a{background:#edf4f6}
 .shot--example a{background:#eef4ff}
 .shot--access-entry a{aspect-ratio:3/1}
+.shot--screen-recording a{aspect-ratio:15/7}
 .access-flow{display:grid;gap:8px;margin-top:4px}
 .access-flow .shot{margin:0}
 .access-flow .shot a{aspect-ratio:15/7;background:#eff3fa}
@@ -116,15 +117,19 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
         <p><strong>Mac 화면·창 공유는 Wi-Fi·LAN 전용</strong>이에요. Bluetooth로는 화면·창을 볼 수 없어요.</p>
         <figure class="shot shot--example"><a href="/assets/preview/guide/mac-app-bluetooth-ko.svg" aria-label="Mac OneMouse의 기기 관리에서 Bluetooth를 켜는 위치 크게 보기"><img src="/assets/preview/guide/mac-app-bluetooth-ko.svg" width="800" height="520" alt="Mac OneMouse의 기기 관리에서 Bluetooth를 켜는 위치" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">앱 화면 재현</span>Bluetooth 카드에서 ‘켜기’를 누르고 입력 방향을 골라요.</figcaption></figure>
       </details>
-      <details><summary>화면 녹화 권한도 켜야 하나요?</summary><p>기본 마우스·키보드 입력에는 필요하지 않아요. Windows에서 Mac 화면이나 창을 볼 때만 허용하세요. <a href="/features-demo#windows-remote">원격 화면 안내</a></p><figure class="shot shot--diagram"><a href="/assets/preview/guide/mac-record.svg" aria-label="Mac의 기본 입력과 원격 화면에 필요한 권한 비교 크게 보기"><img src="/assets/preview/guide/mac-record.svg" width="760" height="450" alt="Mac의 기본 입력과 원격 화면에 필요한 권한 비교" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">설명 그림</span>기본 입력만 쓸 땐 화면 녹화를 켤 필요가 없어요.</figcaption></figure></details>
+      <details id="mac-screen-recording"><summary>화면 녹화 권한도 켜야 하나요?</summary>
+        <p><strong>마우스·키보드만 쓸 때는 필요 없어요.</strong> Windows에서 Mac 화면·창을 보거나, Mac에서 OneMouse로 스크린샷을 찍을 때 <strong>해당 Mac</strong>에서 허용하세요.</p>
+        <p>Mac의 <span class="path">시스템 설정 → 개인정보 보호 및 보안 → 화면 및 시스템 오디오 녹음</span>에서 OneMouse를 켜세요. macOS 버전에 따라 항목 이름이 다를 수 있어요. <a href="/features-demo#windows-remote">원격 화면 안내</a></p>
+        <figure class="shot shot--example shot--screen-recording"><a href="/assets/preview/guide/macos-screen-recording-onemouse-switch-example.svg" aria-label="Mac 시스템 설정의 화면 녹화 권한에서 OneMouse를 켜는 화면 크게 보기"><img src="/assets/preview/guide/macos-screen-recording-onemouse-switch-example.svg" width="480" height="224" alt="Mac 화면 및 시스템 오디오 녹음 설정에서 OneMouse 스위치가 켜져 있는 예시" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">macOS 화면 예시</span>화면을 캡처할 Mac에서 OneMouse를 켜세요.</figcaption></figure>
+      </details>
     </section>
     <section class="panel" id="windows" data-device-panel aria-labelledby="windows-title">
       <p class="pill">추천 · 같은 네트워크에서 6자리 번호로 연결</p>
       <h2 id="windows-title" tabindex="-1">다른 Windows PC 연결하기</h2>
       <p>마우스·키보드가 꽂힌 PC에서 시작해요. 같은 공유기에 연결하면 로그인 없이 번호로 연결할 수 있어요. <a href="#connect-account">Google 계정으로 다른 PC 연결하기</a></p>
       <ol class="steps">
-        <li><h3>두 PC에서 앱 열기</h3><p>양쪽 Windows에 <a href="/download-demo">OneMouse를 설치</a>하고 실행해요. 두 PC가 같은 공유기의 Wi-Fi 또는 LAN을 쓰는지 확인하세요.</p>
-          <figure class="shot shot--diagram"><a href="/assets/preview/guide/windows-start.svg" aria-label="연결하는 Windows PC와 제어할 Windows PC가 같은 공유기를 쓰는 모습 크게 보기"><img src="/assets/preview/guide/windows-start.svg" width="760" height="450" alt="연결하는 Windows PC와 제어할 Windows PC가 같은 공유기를 쓰는 모습" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">설명 그림</span>두 Windows PC에서 각각 OneMouse를 실행해요.</figcaption></figure></li>
+        <li><h3>두 PC에서 기기 관리 열기</h3><p>같은 공유기에 연결한 두 Windows PC에서 <a href="/download-demo">OneMouse를 설치</a>·실행하고, 왼쪽 메뉴에서 <strong>기기 관리</strong>를 여세요.</p>
+          <figure class="shot shot--example"><a href="/assets/preview/guide/windows-device-management-entry-ko.webp" aria-label="Windows OneMouse 왼쪽 기기 관리 메뉴의 실제 앱 화면 크게 보기"><img src="/assets/preview/guide/windows-device-management-entry-ko.webp" width="960" height="630" alt="Windows OneMouse 앱 왼쪽에서 기기 관리가 선택된 실제 화면" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">실제 앱 · 이전 버전</span>왼쪽 메뉴에서 ‘기기 관리’를 열어요.</figcaption></figure></li>
         <li><h3>상대 PC에서 번호 확인</h3><p>제어할 PC에서 <span class="path">기기 관리 → 다른 방법으로 연결 → 이 PC의 QR·인증번호</span>로 가서 6자리 번호를 확인하세요.</p>
           <figure class="shot"><a href="/assets/pairing/pc-code-ko.webp" aria-label="상대 Windows PC에서 QR·6자리 인증번호를 확인하는 앱 화면 크게 보기"><img src="/assets/pairing/pc-code-ko.webp" width="888" height="744" alt="상대 Windows PC에서 QR·6자리 인증번호를 확인하는 앱 화면" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">앱 화면 예시</span>이 창은 제어할 상대 PC에서 열어요. 그림 속 번호는 예시예요.</figcaption></figure></li>
         <li><h3>내 PC에서 상대 PC 선택·연결</h3><p>내 PC의 <span class="path">기기 관리 → 다른 방법으로 연결</span>에서 상대 PC를 선택하고 코드를 넣으세요. 연결 상태를 확인하고 필요하면 연결 스위치를 켜세요.</p>
@@ -198,7 +203,7 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
       document.getElementById(id).scrollIntoView({block:'start'});
       return true;
     }
-    if (id === 'mac-bluetooth') {
+    if (['mac-bluetooth','mac-screen-recording'].includes(id)) {
       showDevice('mac');
       const disclosure = document.getElementById(id);
       disclosure.open = true;
