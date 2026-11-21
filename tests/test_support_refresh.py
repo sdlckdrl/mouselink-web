@@ -173,16 +173,31 @@ class SupportRefreshTest(unittest.TestCase):
                 self.assertFalse(any("/help-reference#faq" in x.attrs.get("href", "")
                                      for x in index.root.walk()))
                 for document in (index, reference):
-                    self.assertEqual(20, sum(x.tag == "details" for x in document.by_id("faq").walk()))
+                    expected_count = 21 if document is index else 20
+                    self.assertEqual(expected_count, sum(x.tag == "details" for x in document.by_id("faq").walk()))
                     self.assertIn(document.by_id("device-order-faq"),
                                   list(document.by_id("faq-connections").walk()))
                     for ident in new_questions:
                         self.assertEqual("details", document.by_id(ident).tag)
-                for document, anchors in ((index, groups | new_questions | {"faq-title"}),
+                for document, anchors in ((index, groups | new_questions | {"faq-title", "faq-device-reset"}),
                                           (reference, groups | new_questions | {"faq-title"})):
                     for option in document.by_id("one-language-picker").children:
                         if option.tag == "option":
                             self.assertTrue(anchors <= set(option.attrs["data-fragments"].split()))
+
+    def test_device_reset_faq_links_to_localized_reconnection_steps(self):
+        for locale in LOCALES:
+            with self.subTest(locale=locale or "ko"):
+                page = Document(ROOT / locale / "help.html")
+                reset = page.by_id("faq-device-reset")
+                self.assertEqual("details", reset.tag)
+                self.assertNotIn("open", reset.attrs)
+                self.assertEqual(2, sum(node.tag == "li" for node in reset.walk()))
+                prefix = f"/{locale}" if locale else ""
+                links = {node.attrs.get("href") for node in reset.walk() if node.tag == "a"}
+                self.assertEqual({f"{prefix}/guide#android", f"{prefix}/guide#connect-account"}, links)
+                self.assertTrue(any(node.attrs.get("href") == "#faq-device-reset"
+                                    for node in page.by_id("faq-android-input").walk()))
 
     def test_ids_and_guide_help_anchor_links_are_valid(self):
         for locale in LOCALES:
