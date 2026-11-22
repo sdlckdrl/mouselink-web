@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:lang="es" width="540" height="214" viewBox="0 0 540 214" role="img" aria-labelledby="title desc">
+<!-- Recreation of the tab strip and reset card from MouseLink pc/electron/renderer/index.html, settings.css, ui-settings-tabs.js and i18n-messages.js. Other Advanced cards omitted. Not a native screenshot. -->
+<title id="title">Windows: restablecer todos los dispositivos</title><desc id="desc">Pestaña Avanzado con el botón Restablecer dispositivos a la derecha de la tarjeta</desc>
+<g font-family="Arial,Arial,sans-serif">
+<rect x="0" y="0" width="540" height="214" rx="0" fill="#f7f8fa" stroke="none"/>
+<rect x="0" y="47" width="540" height="1" rx="0" fill="#e1e5eb" stroke="none"/>
+<text x="46.5" y="29" text-anchor="middle" font-size="13" font-weight="600" fill="#626e7c">General</text>
+<text x="147.0" y="29" text-anchor="middle" font-size="13" font-weight="600" fill="#626e7c">Notificaciones</text>
+<text x="242.5" y="29" text-anchor="middle" font-size="13" font-weight="600" fill="#626e7c">Atajos</text>
+<text x="324.5" y="29" text-anchor="middle" font-size="13" font-weight="600" fill="#1d4ed8">Avanzado</text>
+<rect x="284" y="46" width="81" height="2" rx="0" fill="#2563eb" stroke="none"/>
+<text x="425.0" y="29" text-anchor="middle" font-size="13" font-weight="600" fill="#626e7c">Información</text>
+<rect x="9" y="65" width="522" height="137" rx="8" fill="#fff" stroke="#e1e5eb"/>
+<text x="30" y="96" text-anchor="start" font-size="14" font-weight="600" fill="#354052">Restablecer dispositivos</text>
+<rect x="30" y="115" width="480" height="1" rx="0" fill="#e1e5eb" stroke="none"/>
+<text x="30" y="131" text-anchor="start" font-size="13" font-weight="400" fill="#626e7c">Elimina las vinculaciones guardadas, la lista de</text>
+<text x="30" y="151" text-anchor="start" font-size="13" font-weight="400" fill="#626e7c">dispositivos, las posiciones y los alias. Se</text>
+<text x="30" y="171" text-anchor="start" font-size="13" font-weight="400" fill="#626e7c">conservan los ajustes generales y los archivos</text>
+<text x="30" y="191" text-anchor="start" font-size="13" font-weight="400" fill="#626e7c">recibidos.</text>
+<rect x="338" y="141" width="172" height="36" rx="6" fill="#fff" stroke="#e6c5c5"/>
+<text x="424.0" y="163" text-anchor="middle" font-size="13" font-weight="400" fill="#a13b3b">Restablecer dispositivos</text></g>
+</svg>

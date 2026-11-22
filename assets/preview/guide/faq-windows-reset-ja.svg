@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:lang="ja" width="540" height="214" viewBox="0 0 540 214" role="img" aria-labelledby="title desc">
+<!-- Recreation of the tab strip and reset card from MouseLink pc/electron/renderer/index.html, settings.css, ui-settings-tabs.js and i18n-messages.js. Other Advanced cards omitted. Not a native screenshot. -->
+<title id="title">Windows：保存した全デバイスをリセット</title><desc id="desc">「詳細設定」タブのリセット項目。右端に「デバイスをリセット」ボタンがあります。</desc>
+<g font-family="Noto Sans CJK JP,Arial,sans-serif">
+<rect x="0" y="0" width="540" height="214" rx="0" fill="#f7f8fa" stroke="none"/>
+<rect x="0" y="47" width="540" height="1" rx="0" fill="#e1e5eb" stroke="none"/>
+<text x="36.0" y="29" text-anchor="middle" font-size="13" font-weight="600" fill="#626e7c">一般</text>
+<text x="96.0" y="29" text-anchor="middle" font-size="13" font-weight="600" fill="#626e7c">通知</text>
+<text x="188.5" y="29" text-anchor="middle" font-size="13" font-weight="600" fill="#626e7c">ショートカット</text>
+<text x="294.0" y="29" text-anchor="middle" font-size="13" font-weight="600" fill="#1d4ed8">詳細設定</text>
+<rect x="257" y="46" width="74" height="2" rx="0" fill="#2563eb" stroke="none"/>
+<text x="367.0" y="29" text-anchor="middle" font-size="13" font-weight="600" fill="#626e7c">情報</text>
+<rect x="9" y="65" width="522" height="137" rx="8" fill="#fff" stroke="#e1e5eb"/>
+<text x="30" y="96" text-anchor="start" font-size="14" font-weight="600" fill="#354052">デバイスをリセット</text>
+<rect x="30" y="115" width="480" height="1" rx="0" fill="#e1e5eb" stroke="none"/>
+<text x="30" y="141" text-anchor="start" font-size="13" font-weight="400" fill="#626e7c">保存されたペアリング、デバイス一覧、位置、別名を</text>
+<text x="30" y="161" text-anchor="start" font-size="13" font-weight="400" fill="#626e7c">削除します。一般設定と受信ファイルは保持されます</text>
+<text x="30" y="181" text-anchor="start" font-size="13" font-weight="400" fill="#626e7c">。</text>
+<rect x="367" y="141" width="143" height="36" rx="6" fill="#fff" stroke="#e6c5c5"/>
+<text x="438.5" y="163" text-anchor="middle" font-size="13" font-weight="400" fill="#a13b3b">デバイスをリセット</text></g>
+</svg>

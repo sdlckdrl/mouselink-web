@@ -102,6 +102,8 @@
 .faq-support-links h2{font-size:1.05rem;margin-bottom:.2rem}
 @media(max-width:680px){.support-faq nav ul{grid-template-columns:1fr}}
 </style>
+<link rel="stylesheet" href="/css/faq-images.css">
+<script src="/js/faq-image-viewer.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">본문으로 이동</a>
@@ -253,6 +255,20 @@
                   <li><strong>Windows OneMouse:</strong> 설정 → 고급 → 기기 초기화. 이 PC에 저장된 모든 기기의 페어링, 목록, 배치, 별명이 지워져요. 일반 설정과 받은 파일은 남습니다.</li>
                   <li><strong>Android:</strong> 휴대폰 설정 → 앱 → OneMouse → 저장공간 → 데이터 삭제. OneMouse의 로컬 설정과 페어링이 지워져요. 메뉴 이름은 기기마다 다를 수 있어요. 앱을 다시 열고 OneMouse 접근성 서비스를 켜세요.</li>
                 </ol>
+                <div class="faq-shots">
+                  <figure class="faq-shot">
+                    <button type="button" data-faq-shot disabled aria-haspopup="dialog" aria-label="이미지 확대: 기기 한 대만 연결이 안 될 때"><img loading="lazy" decoding="async" src="/assets/preview/guide/windows-device-management-entry-ko.webp" width="960" height="630" alt="한국어 Windows 앱에서 왼쪽의 기기 관리 메뉴가 선택된 화면"></button>
+                    <figcaption><span class="shot-label">실제 앱 · 이전 버전</span><strong>기기 한 대만 연결이 안 될 때</strong>Windows 왼쪽 메뉴에서 ‘기기 관리’를 열어 해당 기기만 다시 연결하세요.</figcaption>
+                  </figure>
+                  <figure class="faq-shot">
+                    <button type="button" data-faq-shot disabled aria-haspopup="dialog" aria-label="이미지 확대: Windows: 저장된 기기 전체 초기화"><img loading="lazy" decoding="async" src="/assets/preview/guide/faq-windows-reset-ko.svg" width="540" height="214" alt="고급 탭의 기기 초기화 카드. 오른쪽에 기기 초기화 버튼이 있습니다."></button>
+                    <figcaption><span class="shot-label">앱 소스 기반 예시</span><strong>Windows: 저장된 기기 전체 초기화</strong>설정 → 고급 탭 아래쪽에 ‘기기 초기화’가 있어요.</figcaption>
+                  </figure>
+                  <figure class="faq-shot">
+                    <button type="button" data-faq-shot disabled aria-haspopup="dialog" aria-label="이미지 확대: Android: OneMouse 앱 데이터 삭제"><img loading="lazy" decoding="async" src="/assets/preview/guide/faq-android-storage-ko.svg" width="540" height="214" alt="OneMouse의 저장용량 및 캐시 화면 예시. 저장용량 비우기와 캐시 지우기가 나란히 있습니다."></button>
+                    <figcaption><span class="shot-label">Android 설정 예시</span><strong>Android: OneMouse 앱 데이터 삭제</strong>‘캐시 지우기’가 아니라 ‘데이터 삭제’ 또는 ‘저장용량 비우기’를 선택하세요.</figcaption>
+                  </figure>
+                </div>
                 <p>다시 연결: <a class="text-link" href="/guide#android">같은 공유기에서 QR·인증번호로 연결</a> · <a class="text-link" href="/guide#connect-account">같은 Google 계정으로 연결</a></p>
                 <p>커서는 넘어가는데 클릭이나 타이핑이 계속 안 되면, Windows와 Android에 설치된 OneMouse 버전 번호를 각각 확인해 주세요.</p>
               </div>
@@ -334,6 +350,11 @@
   <div class="official-footer-credit"><span>© 2026 OneMouse</span><a class="ato-badge" href="https://alternativeto.net/software/onemouse/about/?utm_source=badge&amp;utm_medium=referral" target="_blank" rel="noopener"><img src="https://alternativeto.net/static/badges/badge-compact-color.svg" alt="OneMouse | AlternativeTo" width="171" height="55" loading="lazy"></a></div>
   <nav class="preview-refs" aria-label="참고 링크"><a href="/compare">프로그램 비교</a><a href="/technical">기술·보안</a><a href="/privacy">개인정보처리방침</a><a href="/terms">이용약관</a><a href="/licenses">오픈소스 라이선스</a></nav>
 </div></footer>
+<dialog id="faq-image-viewer" class="shot-dialog" aria-label="이미지 확대">
+  <button type="button" aria-label="이미지 닫기" autofocus>×</button>
+  <img alt="" hidden>
+  <p role="status" hidden>이미지를 불러오지 못했어요.</p>
+</dialog>
 <script>
 (() => {
   const faq = document.getElementById('faq');

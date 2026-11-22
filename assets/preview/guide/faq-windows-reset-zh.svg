@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:lang="zh" width="540" height="214" viewBox="0 0 540 214" role="img" aria-labelledby="title desc">
+<!-- Recreation of the tab strip and reset card from MouseLink pc/electron/renderer/index.html, settings.css, ui-settings-tabs.js and i18n-messages.js. Other Advanced cards omitted. Not a native screenshot. -->
+<title id="title">Windows：重置所有已保存的设备</title><desc id="desc">“高级”选项卡中的重置设备卡片，右侧是“重置设备”按钮</desc>
+<g font-family="Noto Sans CJK SC,Arial,sans-serif">
+<rect x="0" y="0" width="540" height="214" rx="0" fill="#f7f8fa" stroke="none"/>
+<rect x="0" y="47" width="540" height="1" rx="0" fill="#e1e5eb" stroke="none"/>
+<text x="36.0" y="29" text-anchor="middle" font-size="13" font-weight="600" fill="#626e7c">常规</text>
+<text x="96.0" y="29" text-anchor="middle" font-size="13" font-weight="600" fill="#626e7c">通知</text>
+<text x="162.5" y="29" text-anchor="middle" font-size="13" font-weight="600" fill="#626e7c">快捷键</text>
+<text x="229.0" y="29" text-anchor="middle" font-size="13" font-weight="600" fill="#1d4ed8">高级</text>
+<rect x="205" y="46" width="48" height="2" rx="0" fill="#2563eb" stroke="none"/>
+<text x="289.0" y="29" text-anchor="middle" font-size="13" font-weight="600" fill="#626e7c">关于</text>
+<rect x="9" y="65" width="522" height="137" rx="8" fill="#fff" stroke="#e1e5eb"/>
+<text x="30" y="96" text-anchor="start" font-size="14" font-weight="600" fill="#354052">重置设备</text>
+<rect x="30" y="115" width="480" height="1" rx="0" fill="#e1e5eb" stroke="none"/>
+<text x="30" y="151" text-anchor="start" font-size="13" font-weight="400" fill="#626e7c">删除已保存的配对、设备列表、位置和别名。常规设置和已接收文</text>
+<text x="30" y="171" text-anchor="start" font-size="13" font-weight="400" fill="#626e7c">件会保留。</text>
+<rect x="432" y="141" width="78" height="36" rx="6" fill="#fff" stroke="#e6c5c5"/>
+<text x="471.0" y="163" text-anchor="middle" font-size="13" font-weight="400" fill="#a13b3b">重置设备</text></g>
+</svg>

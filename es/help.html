@@ -102,6 +102,8 @@
 .faq-support-links h2{font-size:1.05rem;margin-bottom:.2rem}
 @media(max-width:680px){.support-faq nav ul{grid-template-columns:1fr}}
 </style>
+<link rel="stylesheet" href="/css/faq-images.css">
+<script src="/js/faq-image-viewer.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">Saltar al contenido</a>
@@ -254,6 +256,20 @@
                   <li><strong>OneMouse para Windows:</strong> Ajustes → Avanzado → Restablecer dispositivos. Se eliminan todas las vinculaciones, los dispositivos guardados, sus posiciones y sus alias en este PC. Se conservan los ajustes generales y los archivos recibidos.</li>
                   <li><strong>Android:</strong> Ajustes del teléfono → Aplicaciones → OneMouse → Almacenamiento → Borrar datos. Se borran los ajustes locales y las vinculaciones de OneMouse. Los nombres de los menús pueden variar. Vuelve a abrir la aplicación y activa el servicio de Accesibilidad de OneMouse.</li>
                 </ol>
+                <div class="faq-shots">
+                  <figure class="faq-shot">
+                    <button type="button" data-faq-shot disabled aria-haspopup="dialog" aria-label="Ampliar imagen: Si solo falla un dispositivo"><img loading="lazy" decoding="async" src="/assets/preview/guide/windows-device-management-entry-ko.webp" width="960" height="630" alt="Versión anterior de la aplicación de Windows en coreano, con la gestión de dispositivos seleccionada en la barra lateral"></button>
+                    <figcaption><span class="shot-label">Captura real · versión anterior</span><strong>Si solo falla un dispositivo</strong>Abre la gestión de dispositivos en el menú lateral de Windows y vuelve a vincular solo ese dispositivo. La captura muestra la interfaz en coreano.</figcaption>
+                  </figure>
+                  <figure class="faq-shot">
+                    <button type="button" data-faq-shot disabled aria-haspopup="dialog" aria-label="Ampliar imagen: Windows: restablecer todos los dispositivos"><img loading="lazy" decoding="async" src="/assets/preview/guide/faq-windows-reset-es.svg" width="540" height="214" alt="Pestaña Avanzado con el botón Restablecer dispositivos a la derecha de la tarjeta"></button>
+                    <figcaption><span class="shot-label">Interfaz recreada a partir del código</span><strong>Windows: restablecer todos los dispositivos</strong>Abre Ajustes → Avanzado y busca Restablecer dispositivos al final de la pestaña.</figcaption>
+                  </figure>
+                  <figure class="faq-shot">
+                    <button type="button" data-faq-shot disabled aria-haspopup="dialog" aria-label="Ampliar imagen: Android: borrar los datos de OneMouse"><img loading="lazy" decoding="async" src="/assets/preview/guide/faq-android-storage-es.svg" width="540" height="214" alt="Ejemplo de Almacenamiento y caché de OneMouse, con las opciones Borrar almacenamiento y Borrar caché"></button>
+                    <figcaption><span class="shot-label">Ejemplo de ajustes de Android</span><strong>Android: borrar los datos de OneMouse</strong>Elige Borrar almacenamiento o Borrar datos, no Borrar caché.</figcaption>
+                  </figure>
+                </div>
                 <p>Volver a conectar: <a class="text-link" href="/es/guide#android">Vincular por QR o código con el mismo router</a> · <a class="text-link" href="/es/guide#connect-account">Conectar con la misma cuenta de Google</a></p>
                 <p>Si el puntero pasa al teléfono pero sigues sin poder hacer clic ni escribir, comprueba la versión exacta de OneMouse instalada tanto en Windows como en Android.</p>
               </div>
@@ -335,6 +351,11 @@
   <div class="official-footer-credit"><span>© 2026 OneMouse</span><a class="ato-badge" href="https://alternativeto.net/software/onemouse/about/?utm_source=badge&amp;utm_medium=referral" target="_blank" rel="noopener"><img src="https://alternativeto.net/static/badges/badge-compact-color.svg" alt="OneMouse | AlternativeTo" width="171" height="55" loading="lazy"></a></div>
   <nav class="preview-refs" aria-label="Recursos"><a href="/es/compare">Comparar aplicaciones</a><a href="/es/technical">Tecnología y seguridad</a><a href="/es/privacy">Política de privacidad</a><a href="/es/terms">Términos de uso</a><a href="/es/licenses">Licencias de código abierto</a></nav>
 </div></footer>
+<dialog id="faq-image-viewer" class="shot-dialog" aria-label="Ampliar imagen">
+  <button type="button" aria-label="Cerrar imagen" autofocus>×</button>
+  <img alt="" hidden>
+  <p role="status" hidden>No se pudo cargar la imagen.</p>
+</dialog>
 <script>
 (() => {
   const faq = document.getElementById('faq');

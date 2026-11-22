@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:lang="ko" width="540" height="214" viewBox="0 0 540 214" role="img" aria-labelledby="title desc">
+<!-- Recreation of the tab strip and reset card from MouseLink pc/electron/renderer/index.html, settings.css, ui-settings-tabs.js and i18n-messages.js. Other Advanced cards omitted. Not a native screenshot. -->
+<title id="title">Windows: 저장된 기기 전체 초기화</title><desc id="desc">고급 탭의 기기 초기화 카드. 오른쪽에 기기 초기화 버튼이 있습니다.</desc>
+<g font-family="Noto Sans CJK KR,Arial,sans-serif">
+<rect x="0" y="0" width="540" height="214" rx="0" fill="#f7f8fa" stroke="none"/>
+<rect x="0" y="47" width="540" height="1" rx="0" fill="#e1e5eb" stroke="none"/>
+<text x="35.0" y="29" text-anchor="middle" font-size="13" font-weight="600" fill="#626e7c">일반</text>
+<text x="93.0" y="29" text-anchor="middle" font-size="13" font-weight="600" fill="#626e7c">알림</text>
+<text x="157.0" y="29" text-anchor="middle" font-size="13" font-weight="600" fill="#626e7c">단축키</text>
+<text x="221.0" y="29" text-anchor="middle" font-size="13" font-weight="600" fill="#1d4ed8">고급</text>
+<rect x="198" y="46" width="46" height="2" rx="0" fill="#2563eb" stroke="none"/>
+<text x="279.0" y="29" text-anchor="middle" font-size="13" font-weight="600" fill="#626e7c">정보</text>
+<rect x="9" y="65" width="522" height="137" rx="8" fill="#fff" stroke="#e1e5eb"/>
+<text x="30" y="96" text-anchor="start" font-size="14" font-weight="600" fill="#354052">기기 초기화</text>
+<rect x="30" y="115" width="480" height="1" rx="0" fill="#e1e5eb" stroke="none"/>
+<text x="30" y="151" text-anchor="start" font-size="13" font-weight="400" fill="#626e7c">저장된 페어링, 기기 목록, 위치와 별명을 삭제합니다. 일반 설정과</text>
+<text x="30" y="171" text-anchor="start" font-size="13" font-weight="400" fill="#626e7c">받은 파일은 유지됩니다.</text>
+<rect x="421" y="141" width="89" height="36" rx="6" fill="#fff" stroke="#e6c5c5"/>
+<text x="465.5" y="163" text-anchor="middle" font-size="13" font-weight="400" fill="#a13b3b">기기 초기화</text></g>
+</svg>

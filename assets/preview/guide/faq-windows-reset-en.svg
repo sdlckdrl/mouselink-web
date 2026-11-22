@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:lang="en" width="540" height="214" viewBox="0 0 540 214" role="img" aria-labelledby="title desc">
+<!-- Recreation of the tab strip and reset card from MouseLink pc/electron/renderer/index.html, settings.css, ui-settings-tabs.js and i18n-messages.js. Other Advanced cards omitted. Not a native screenshot. -->
+<title id="title">Windows: reset all saved devices</title><desc id="desc">Advanced tab with the Reset devices card and its button on the right</desc>
+<g font-family="Arial,Arial,sans-serif">
+<rect x="0" y="0" width="540" height="214" rx="0" fill="#f7f8fa" stroke="none"/>
+<rect x="0" y="47" width="540" height="1" rx="0" fill="#e1e5eb" stroke="none"/>
+<text x="46.5" y="29" text-anchor="middle" font-size="13" font-weight="600" fill="#626e7c">General</text>
+<text x="142.5" y="29" text-anchor="middle" font-size="13" font-weight="600" fill="#626e7c">Notifications</text>
+<text x="244.5" y="29" text-anchor="middle" font-size="13" font-weight="600" fill="#626e7c">Shortcuts</text>
+<text x="337.5" y="29" text-anchor="middle" font-size="13" font-weight="600" fill="#1d4ed8">Advanced</text>
+<rect x="297" y="46" width="81" height="2" rx="0" fill="#2563eb" stroke="none"/>
+<text x="419.5" y="29" text-anchor="middle" font-size="13" font-weight="600" fill="#626e7c">About</text>
+<rect x="9" y="65" width="522" height="137" rx="8" fill="#fff" stroke="#e1e5eb"/>
+<text x="30" y="96" text-anchor="start" font-size="14" font-weight="600" fill="#354052">Reset devices</text>
+<rect x="30" y="115" width="480" height="1" rx="0" fill="#e1e5eb" stroke="none"/>
+<text x="30" y="151" text-anchor="start" font-size="13" font-weight="400" fill="#626e7c">Remove saved pairings, device list entries, positions, and</text>
+<text x="30" y="171" text-anchor="start" font-size="13" font-weight="400" fill="#626e7c">aliases. General settings and received files are kept.</text>
+<rect x="402" y="141" width="108" height="36" rx="6" fill="#fff" stroke="#e6c5c5"/>
+<text x="456.0" y="163" text-anchor="middle" font-size="13" font-weight="400" fill="#a13b3b">Reset devices</text></g>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:lang="zh" width="540" height="214" viewBox="0 0 540 214" role="img" aria-labelledby="title desc">
+<!-- Illustration, not a device screenshot. Button order and labels are based on AOSP Android 15 AppStorageSettings.java and Settings resource strings. Actual manufacturer UI varies. -->
+<title id="title">Android：清除 OneMouse 应用数据</title><desc id="desc">OneMouse 的“存储空间和缓存”示意图，“清空存储空间”和“清除缓存”并排显示</desc>
+<g font-family="Noto Sans CJK SC,Arial,sans-serif">
+<rect x="0" y="0" width="540" height="214" rx="0" fill="#f5f5fa" stroke="none"/>
+<text x="24" y="34" text-anchor="start" font-size="16" font-weight="600" fill="#595e69">OneMouse</text>
+<text x="516" y="32" text-anchor="end" font-size="13" font-weight="400" fill="#555e70">设置示意图</text>
+<text x="24" y="80" text-anchor="start" font-size="27" font-weight="600" fill="#20252e">存储空间和缓存</text>
+<rect x="24" y="100" width="240" height="92" rx="16" fill="#e7eefb" stroke="#4a69a6"/>
+<g transform="translate(133 116)" fill="none" stroke="#3c526f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5h14M7 5V3h6v2M5 5l1 13h8l1-13M8.5 8v7M11.5 8v7"/></g>
+<text x="143" y="167" text-anchor="middle" font-size="17" font-weight="600" fill="#27477b">清空存储空间</text>
+<rect x="276" y="100" width="240" height="92" rx="16" fill="#fff" stroke="#d9dee6"/>
+<g transform="translate(385 116)" fill="none" stroke="#3c526f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5h14M7 5V3h6v2M5 5l1 13h8l1-13M8.5 8v7M11.5 8v7"/></g>
+<text x="395" y="167" text-anchor="middle" font-size="17" font-weight="600" fill="#394557">清除缓存</text></g>
+</svg>

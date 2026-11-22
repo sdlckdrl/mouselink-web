@@ -1,0 +1,19 @@
+.faq-shots {display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:1rem;margin:1.25rem 0}
+.faq-shot {min-width:0;margin:0;display:flex;flex-direction:column;gap:.5rem}
+.faq-shot button {position:relative;display:grid;place-items:center;width:100%;aspect-ratio:2.1;padding:0;overflow:hidden;border:1px solid var(--line,#c8d4de);border-radius:10px;background:#f4f6fa;color:#fff}
+.faq-shot button:not(:disabled) {cursor:zoom-in}
+.faq-shot button:disabled {opacity:1}
+.faq-shot button:not(:disabled)::after {content:"";position:absolute;right:6px;bottom:6px;width:24px;height:24px;border-radius:50%;background:#234657 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='10' cy='10' r='6'/%3E%3Cpath d='m15 15 5 5M7 10h6m-3-3v6'/%3E%3C/svg%3E") center/15px no-repeat}
+.faq-shot button:focus-visible,.shot-dialog button:focus-visible {outline:3px solid #3271c5;outline-offset:3px}
+.faq-shot img {display:block;width:100%;height:100%;min-height:0;object-fit:contain}
+.faq-shot figcaption {line-height:1.55;font-size:.9rem}
+.faq-shot figcaption strong {display:block;margin:.25rem 0 .15rem}
+.faq-shot .shot-label {display:inline-block;padding:.06rem .42rem;border-radius:.3rem;background:#e7efff;color:#244683;font-size:.76rem;font-weight:700}
+.shot-dialog {padding:0;border:0;background:transparent;color:#fff;max-width:calc(100vw - 24px);max-height:calc(100dvh - 72px);overflow:visible}
+.shot-dialog::backdrop {background:rgba(9,18,33,.91)}
+.shot-dialog img {display:block;width:auto;height:auto;max-width:min(1100px,calc(100vw - 24px));max-height:calc(100dvh - 84px);object-fit:contain;border-radius:8px;background:#f1f5f9}
+.shot-dialog img[src$=".svg"] {width:min(850px,calc(100vw - 24px))}
+.shot-dialog p {margin:0;padding:14px;text-align:center;background:#17243b;border-radius:8px}
+.shot-dialog button {position:fixed;z-index:1;top:max(8px,env(safe-area-inset-top));right:max(12px,env(safe-area-inset-right));width:44px;height:44px;display:grid;place-items:center;padding:0;border:1px solid #8091a8;border-radius:50%;background:#17243b;color:#fff;font:400 27px/1 system-ui;cursor:pointer}
+.shot-dialog:not([open]),.shot-dialog [hidden] {display:none}
+html:has(.shot-dialog[open]) {overflow:hidden;overscroll-behavior:none}

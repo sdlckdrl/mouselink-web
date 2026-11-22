@@ -102,6 +102,8 @@
 .faq-support-links h2{font-size:1.05rem;margin-bottom:.2rem}
 @media(max-width:680px){.support-faq nav ul{grid-template-columns:1fr}}
 </style>
+<link rel="stylesheet" href="/css/faq-images.css">
+<script src="/js/faq-image-viewer.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">本文へ移動</a>
@@ -254,6 +256,20 @@
                   <li><strong>Windows 版 OneMouse:</strong> 設定 → 詳細設定 → デバイスをリセット. この PC に保存されたすべてのペアリング、デバイス一覧、配置、別名が消去されます。一般設定と受信ファイルは保持されます。</li>
                   <li><strong>Android:</strong> 端末の設定 → アプリ → OneMouse → ストレージ → データを消去. OneMouse の端末内の設定とペアリング情報が消去されます。項目名は機種によって異なります。アプリを開き直し、OneMouse のユーザー補助サービスを有効にしてください。</li>
                 </ol>
+                <div class="faq-shots">
+                  <figure class="faq-shot">
+                    <button type="button" data-faq-shot disabled aria-haspopup="dialog" aria-label="画像を拡大: 1 台だけ接続できないとき"><img loading="lazy" decoding="async" src="/assets/preview/guide/windows-device-management-entry-ko.webp" width="960" height="630" alt="旧版の Windows アプリ（韓国語）で左側のデバイス管理が選択された画面"></button>
+                    <figcaption><span class="shot-label">実際の画面・旧版</span><strong>1 台だけ接続できないとき</strong>Windows の左メニューで「デバイス管理」を開き、その端末だけ再ペアリングします。画像は韓国語版です。</figcaption>
+                  </figure>
+                  <figure class="faq-shot">
+                    <button type="button" data-faq-shot disabled aria-haspopup="dialog" aria-label="画像を拡大: Windows：保存した全デバイスをリセット"><img loading="lazy" decoding="async" src="/assets/preview/guide/faq-windows-reset-ja.svg" width="540" height="214" alt="「詳細設定」タブのリセット項目。右端に「デバイスをリセット」ボタンがあります。"></button>
+                    <figcaption><span class="shot-label">アプリ画面の再現</span><strong>Windows：保存した全デバイスをリセット</strong>「設定」→「詳細設定」の下部に「デバイスをリセット」があります。</figcaption>
+                  </figure>
+                  <figure class="faq-shot">
+                    <button type="button" data-faq-shot disabled aria-haspopup="dialog" aria-label="画像を拡大: Android：OneMouse のアプリデータを消去"><img loading="lazy" decoding="async" src="/assets/preview/guide/faq-android-storage-ja.svg" width="540" height="214" alt="OneMouse の「ストレージとキャッシュ」の例。「ストレージを消去」と「キャッシュを削除」が並んでいます。"></button>
+                    <figcaption><span class="shot-label">Android 設定の例</span><strong>Android：OneMouse のアプリデータを消去</strong>「キャッシュを削除」ではなく、「ストレージを消去」または「データを消去」を選びます。</figcaption>
+                  </figure>
+                </div>
                 <p>再接続する： <a class="text-link" href="/ja/guide#android">同じルーターで QR コードまたは認証コードを使う</a> · <a class="text-link" href="/ja/guide#connect-account">同じ Google アカウントで接続する</a></p>
                 <p>カーソルは移動してもクリックや文字入力ができない場合は、Windows と Android の OneMouse のバージョンをそれぞれ確認してください。</p>
               </div>
@@ -335,6 +351,11 @@
   <div class="official-footer-credit"><span>© 2026 OneMouse</span><a class="ato-badge" href="https://alternativeto.net/software/onemouse/about/?utm_source=badge&amp;utm_medium=referral" target="_blank" rel="noopener"><img src="https://alternativeto.net/static/badges/badge-compact-color.svg" alt="OneMouse | AlternativeTo" width="171" height="55" loading="lazy"></a></div>
   <nav class="preview-refs" aria-label="関連リンク"><a href="/ja/compare">アプリを比較</a><a href="/ja/technical">技術とセキュリティ</a><a href="/ja/privacy">プライバシーポリシー</a><a href="/ja/terms">利用規約</a><a href="/ja/licenses">オープンソースライセンス</a></nav>
 </div></footer>
+<dialog id="faq-image-viewer" class="shot-dialog" aria-label="画像を拡大">
+  <button type="button" aria-label="画像を閉じる" autofocus>×</button>
+  <img alt="" hidden>
+  <p role="status" hidden>画像を読み込めませんでした。</p>
+</dialog>
 <script>
 (() => {
   const faq = document.getElementById('faq');

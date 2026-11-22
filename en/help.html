@@ -102,6 +102,8 @@
 .faq-support-links h2{font-size:1.05rem;margin-bottom:.2rem}
 @media(max-width:680px){.support-faq nav ul{grid-template-columns:1fr}}
 </style>
+<link rel="stylesheet" href="/css/faq-images.css">
+<script src="/js/faq-image-viewer.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -254,6 +256,20 @@
                   <li><strong>OneMouse for Windows:</strong> Settings → Advanced → Reset devices. This removes all pairings, device list entries, positions, and nicknames saved on this PC. Your general settings and received files are kept.</li>
                   <li><strong>Android:</strong> Phone Settings → Apps → OneMouse → Storage → Clear data (or Clear storage). This clears OneMouse’s local settings and pairings. Menu names vary by device. Reopen the app and enable the OneMouse Accessibility service again.</li>
                 </ol>
+                <div class="faq-shots">
+                  <figure class="faq-shot">
+                    <button type="button" data-faq-shot disabled aria-haspopup="dialog" aria-label="Enlarge image: If only one device is affected"><img loading="lazy" decoding="async" src="/assets/preview/guide/windows-device-management-entry-ko.webp" width="960" height="630" alt="An earlier Windows app in Korean with Device Management selected in the left sidebar"></button>
+                    <figcaption><span class="shot-label">App capture · earlier version</span><strong>If only one device is affected</strong>Open Device Management in the left sidebar and pair just that device again. The capture shows the Korean interface.</figcaption>
+                  </figure>
+                  <figure class="faq-shot">
+                    <button type="button" data-faq-shot disabled aria-haspopup="dialog" aria-label="Enlarge image: Windows: reset all saved devices"><img loading="lazy" decoding="async" src="/assets/preview/guide/faq-windows-reset-en.svg" width="540" height="214" alt="Advanced tab with the Reset devices card and its button on the right"></button>
+                    <figcaption><span class="shot-label">App UI recreation</span><strong>Windows: reset all saved devices</strong>Open Settings → Advanced and scroll down to Reset devices.</figcaption>
+                  </figure>
+                  <figure class="faq-shot">
+                    <button type="button" data-faq-shot disabled aria-haspopup="dialog" aria-label="Enlarge image: Android: clear OneMouse app data"><img loading="lazy" decoding="async" src="/assets/preview/guide/faq-android-storage-en.svg" width="540" height="214" alt="Illustration of Storage &amp; cache for OneMouse, with Clear storage next to Clear cache"></button>
+                    <figcaption><span class="shot-label">Android settings example</span><strong>Android: clear OneMouse app data</strong>Choose Clear storage or Clear data, not Clear cache.</figcaption>
+                  </figure>
+                </div>
                 <p>Reconnect: <a class="text-link" href="/en/guide#android">Pair by QR or code on the same router</a> · <a class="text-link" href="/en/guide#connect-account">Connect with the same Google account</a></p>
                 <p>If the cursor crosses but you still can’t click or type, check the exact OneMouse version installed on Windows and on Android.</p>
               </div>
@@ -335,6 +351,11 @@
   <div class="official-footer-credit"><span>© 2026 OneMouse</span><a class="ato-badge" href="https://alternativeto.net/software/onemouse/about/?utm_source=badge&amp;utm_medium=referral" target="_blank" rel="noopener"><img src="https://alternativeto.net/static/badges/badge-compact-color.svg" alt="OneMouse | AlternativeTo" width="171" height="55" loading="lazy"></a></div>
   <nav class="preview-refs" aria-label="Resources"><a href="/en/compare">Compare apps</a><a href="/en/technical">Technology and security</a><a href="/en/privacy">Privacy policy</a><a href="/en/terms">Terms of use</a><a href="/en/licenses">Open-source licenses</a></nav>
 </div></footer>
+<dialog id="faq-image-viewer" class="shot-dialog" aria-label="Enlarge image">
+  <button type="button" aria-label="Close image" autofocus>×</button>
+  <img alt="" hidden>
+  <p role="status" hidden>This image could not be loaded.</p>
+</dialog>
 <script>
 (() => {
   const faq = document.getElementById('faq');
