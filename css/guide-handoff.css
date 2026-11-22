@@ -70,7 +70,7 @@
   font: 650 clamp(.48rem,8cqw,.7rem)/1.15 system-ui,sans-serif;
   text-align: center; white-space: nowrap; cursor: pointer;
 }
-.handoff-file { touch-action: none; cursor: grab; }
+.handoff-file { touch-action: none; -webkit-touch-callout: none; cursor: grab; }
 .handoff-file:active { cursor: grabbing; }
 .handoff-file svg, .handoff-desktop [data-note-launch] svg {
   display: block; width: clamp(10px,14cqw,21px); height: clamp(10px,14cqw,21px);
@@ -212,7 +212,6 @@
   .handoff-desktop .handoff-editor button svg { max-width: 100%; }
 }
 
-.handoff-scene[data-marquee] { touch-action: none; cursor: crosshair; }
 .handoff-selection[data-mode="files"] {
   border: 1px solid #bde5ff; background: #58b8ff42;
   box-shadow: 0 0 0 1px #236eab;

@@ -81,8 +81,8 @@ function harness(lang = 'en') {
   const desks = scene.querySelectorAll('.handoff-desktop');
   const notes = () => desks.map(x => x.firstChild || x.children[0]).map(x => x.children[0]);
   const file = (side,id) => desks[side].querySelectorAll('[data-file]').find(f => f.dataset.file===id);
-  const point = (event,x,y,target = scene,pointerType = 'touch') => scene.emit(event,
-    {clientX:x,clientY:y,target,pointerId:2,isPrimary:true,button:0,pointerType});
+  const point = (event,x,y,target = scene,pointerType = 'touch',timeStamp = 0) => scene.emit(event,
+    {clientX:x,clientY:y,target,pointerId:2,isPrimary:true,button:0,pointerType,timeStamp});
   const editors = desks.map(d => d.querySelector('.handoff-editor'));
   const fields = editors.map(e => e.querySelector('textarea'));
   const commands = i => editors[i].querySelector('.handoff-editor-tools').children;
@@ -205,10 +205,6 @@ function groupTest(pointerType) {
   h.file(0,'photo').getBoundingClientRect=()=>bounds(48);
   h.file(0,'document').getBoundingClientRect=()=>bounds(84);
   h.file(0,'archive').getBoundingClientRect=()=>bounds(138);
-  if (pointerType === 'touch') {
-    h.tools[3].emit('click');
-    assert.ok('marquee' in h.scene.dataset);
-  }
   h.point('pointerdown',115,92,h.scene,pointerType);
   h.point('pointermove',41,45,h.scene,pointerType);
   assert.equal(h.scene.querySelector('.handoff-selection').dataset.mode,'files');
@@ -229,7 +225,27 @@ function groupTest(pointerType) {
   assert.equal(h.scene.querySelectorAll('[data-file]').length,3);
 }
 test('blank mouse marquee and group drag round trip, without triggering capture',()=>groupTest('mouse'));
-test('touch area control and group drag round trip, without triggering capture',()=>groupTest('touch'));
+test('the toolbar has no area-selection control and touch still supports group transfer', () => {
+  const h = harness();
+  assert.equal(h.tools.length,3);
+  const photo = h.file(0,'photo'), plan = h.file(0,'document');
+  h.point('pointerdown',55,60,photo,'touch',100);
+  h.point('pointerup',55,60,photo,'touch',600);
+  photo.emit('click',{detail:1});
+  assert.equal(photo.getAttribute('aria-pressed'),'true');
+  h.point('pointerdown',85,60,plan,'touch',650);
+  h.point('pointerup',85,60,plan,'touch',700);
+  plan.emit('click',{detail:1});
+  assert.equal(photo.getAttribute('aria-pressed'),'true');
+  assert.equal(plan.getAttribute('aria-pressed'),'true');
+  h.point('pointerdown',85,60,plan,'touch',770);
+  h.point('pointermove',250,105,h.scene,'touch',850);
+  h.point('pointerup',250,105,h.scene,'touch',910);
+  assert.ok(h.file(1,'photo') && h.file(1,'document') && h.file(0,'archive'));
+  assert.ok(!h.file(0,'photo') && !h.file(0,'document'));
+  assert.equal(h.captures.length,0);
+  assert.equal(h.scene.querySelectorAll('[data-file]').length,3);
+});
 
 test('Ctrl+Alt+S is focus scoped and a canceled draft creates no file', () => {
   const h=harness(), shortcut={target:h.scene,code:'KeyS',key:'s',ctrlKey:true,altKey:true};

@@ -8,11 +8,11 @@
     zh: ['记事本','截图','移动文件','复制','粘贴','关闭','写一条笔记…','把文件拖到另一块屏幕。','在屏幕上拖动选区。按 Enter 截取整屏。','虚拟屏幕截图','已复制。','已粘贴。','请选择要复制的文字。','请先从记事本复制文字。','请重新选择截图区域。','已移动到：'],
   };
   const transfer = {
-    ko: ['파일 영역 선택','보내기','취소','선택한 파일','받은 화면: ','빈 곳에서 파일 영역을 드래그하세요.','빈 곳에서 여러 파일을 선택한 뒤 옆 화면으로 끌어요.'],
-    en: ['Select files by area','Send','Cancel','Files selected','Received on: ','Drag from a blank area to select files.','Drag from a blank area to select files, then drag them to the other screen.'],
-    es: ['Seleccionar archivos por zona','Enviar','Cancelar','Archivos seleccionados','Recibido en: ','Arrastra desde una zona vacía para seleccionar archivos.','Selecciona archivos desde una zona vacía y arrástralos a la otra pantalla.'],
-    ja: ['範囲でファイルを選択','送信','キャンセル','選択したファイル','受信先：','空いている所からドラッグして選択します。','空いている所からファイルを囲み、別の画面へドラッグします。'],
-    zh: ['框选文件','发送','取消','已选文件','接收设备：','从空白处拖动以框选文件。','从空白处框选文件，然后拖到另一块屏幕。'],
+    ko: ['보내기','취소','선택한 파일','받은 화면: ','파일을 길게 누른 뒤 다른 파일을 탭하면 함께 선택돼요.','빈 곳에서 여러 파일을 선택한 뒤 옆 화면으로 끌어요.'],
+    en: ['Send','Cancel','Files selected','Received on: ','Hold a file, then tap more files to select them together.','Drag from a blank area to select files, then drag them to the other screen.'],
+    es: ['Enviar','Cancelar','Archivos seleccionados','Recibido en: ','Mantén pulsado un archivo y luego toca otros para seleccionarlos.','Selecciona archivos desde una zona vacía y arrástralos a la otra pantalla.'],
+    ja: ['送信','キャンセル','選択したファイル','受信先：','ファイルを長押しし、ほかのファイルをタップしてまとめて選択できます。','空いている所からファイルを囲み、別の画面へドラッグします。'],
+    zh: ['发送','取消','已选文件','接收设备：','长按一个文件，再点按其他文件即可多选。','从空白处框选文件，然后拖到另一块屏幕。'],
   };
   const iconPaths = {
     document: '<path d="M6 3h8l4 4v14H6zM10 12h4m-4 4h4"/>',
@@ -22,7 +22,6 @@
     screenshot: '<path d="M4 10V5h5m6 0h5v5m0 4v5h-5m-6 0H4v-5M8 12h8m-4-4v8"/>',
     move: '<path d="M4 8h15l-3-3m4 11H5l3 3"/>',
     copy: '<rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 5V4H4v12h1"/>',
-    marquee: '<path stroke-dasharray="2 2" d="M4 4h16v16H4z"/>',
     paste: '<path d="M8 5H5v15h14V5h-3M9 12h6m-6 4h4"/><rect x="8" y="3" width="8" height="5" rx="1"/>',
   };
   const icon = (name) => '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round">' + iconPaths[name] + '</svg>';
@@ -62,7 +61,7 @@
       notepad, capture, move, copyText, pasteText, closeText, placeholder, _dragHint, captureHint,
       captured, copied, pasted, chooseText, noClipboard, chooseRegion, moved,
     ] = copy[lang.split('-')[0]] || copy.en;
-    const [area, send, cancel, filesSelected, received, areaHint, groupHint] =
+    const [send, cancel, filesSelected, received, touchHint, groupHint] =
       transfer[lang.split('-')[0]] || transfer.en;
     const captureApi = window.OneMouseGuideCapture;
     const desktops = [0,1].map((side) => {
@@ -80,16 +79,13 @@
     });
     const tools = create('div','handoff-tools');
     const noteButton = button(notepad,'note'), shotButton = button(capture,'screenshot'), moveButton = button(move,'move');
-    const selectButton = button(area,'marquee');
-    selectButton.dataset.selectArea = '';
-    selectButton.setAttribute('aria-pressed','false');
     shotButton.setAttribute('aria-keyshortcuts','Control+Alt+S');
     const chord = create('kbd','handoff-chord');
     chord.textContent = 'Ctrl+Alt+S'; chord.setAttribute('aria-hidden','true');
     shotButton.append(chord);
     shotButton.setAttribute('aria-pressed','false');
     shotButton.hidden = !captureApi;
-    tools.append(noteButton, shotButton, moveButton, selectButton);
+    tools.append(noteButton, shotButton, moveButton);
     const feedback = create('p','handoff-feedback');
     feedback.setAttribute('role','status');
     const result = create('section','handoff-capture-result');
@@ -120,7 +116,7 @@
     ];
     let clip = '', resultOpener = null;
     let selected = new Set(), sceneGesture = null, captureSide = null, captureId = 0;
-    let marquee = false, draft = null;
+    let touchGroupSide = null, draft = null;
     let shown = null, suppressTrigger = null;
     const announce = (s) => { feedback.textContent = s; };
     const local = (e) => {
@@ -162,11 +158,10 @@
           el.setAttribute('aria-pressed',String(selected.has(f)));
           el.addEventListener('click', (e) => {
             if (suppressTrigger === el && e.detail !== 0) { suppressTrigger = null; return; }
+            touchGroupSide = null;
             select(f.side);
-            if (e.shiftKey && [...selected].every(item => item.side === f.side)) {
-              const next = new Set(selected);
-              if (next.has(f)) next.delete(f); else next.add(f);
-              setSelection(next);
+            if (e.shiftKey) {
+              toggleFile(f);
               return;
             }
             setSelection([f]);
@@ -183,8 +178,15 @@
         el.setAttribute('aria-pressed',String([...selected].some(f => f.id === el.dataset.file)));
       }
     }
+    function toggleFile(f) {
+      const next = new Set([...selected].filter(item => item.side === f.side));
+      if (next.has(f)) next.delete(f); else next.add(f);
+      setSelection(next);
+      announce(selected.size ? formatGroup([...selected]) : '');
+    }
     function moveFiles(items, i, focus = false) {
       if (!items.length || items[0].side === i) return;
+      touchGroupSide = null;
       for (const f of items) f.side = i;
       selected = new Set(items); select(i); renderFiles();
       if (focus) moveButton.focus({preventScroll:true});
@@ -328,22 +330,9 @@
       tile?.focus({preventScroll:true});
       announce(f.name + ' · ' + received + device(f.side));
     });
-    function setMarquee(on) {
-      marquee = on;
-      selectButton.setAttribute('aria-pressed', String(on));
-      if (on) scene.dataset.marquee = '';
-      else delete scene.dataset.marquee;
-    }
-    selectButton.addEventListener('click', () => {
-      end(null,true);
-      disarm();
-      setMarquee(!marquee);
-      if (marquee) scene.focus({preventScroll:true});
-      announce(marquee ? areaHint : '');
-    });
     function arm(i) {
       end(null,true);
-      setMarquee(false);
+      touchGroupSide = null;
       hideCapture();
       captureSide = i; select(i);
       scene.dataset.capturing = '';
@@ -410,14 +399,25 @@
         else if (!g.dragged) setSelection([]);
         if (selected.size) announce(formatGroup([...selected]));
         else announce('');
-        setMarquee(false);
+        touchGroupSide = null;
       } else if (g.dragged) {
         suppressTrigger = g.el;
         const target = 1-g.side;
         if (inside(p, percent(extent(glass()[target]),bounds()))) moveFiles(g.items,target);
         else select(g.side);
+      } else if (g.touch && (touchGroupSide === g.side || e.timeStamp - g.started >= 450)) {
+        // A file hold starts multi-selection without turning a page scroll or a
+        // blank-screen trackpad gesture into a marquee. A quick tap adds/removes.
+        if (touchGroupSide !== g.side) setSelection([]);
+        touchGroupSide = g.side;
+        suppressTrigger = g.el;
+        select(g.side); toggleFile(g.file);
+        if (!selected.size) touchGroupSide = null;
       }
     }
+    scene.addEventListener('contextmenu', (e) => {
+      if (e.target.closest('[data-file]')) e.preventDefault();
+    });
     scene.addEventListener('pointerdown', (e) => {
       if (e.button !== 0 || e.isPrimary === false || sceneGesture) return;
       const el = e.target.closest('[data-file]');
@@ -432,9 +432,9 @@
         const f = files.find(f => f.id === el.dataset.file);
         if (!f) return;
         const items = selected.has(f) ? [...selected] : [f];
-        sceneGesture = {kind:'drag', id, side:f.side, items, el, point:p, dragged:false};
-      } else if (captureApi && e.target === scene && startSide !== undefined &&
-          (e.pointerType === 'mouse' || marquee)) {
+        sceneGesture = {kind:'drag', id, side:f.side, file:f, items, el, point:p, dragged:false,
+          touch:e.pointerType === 'touch', started:e.timeStamp};
+      } else if (captureApi && e.target === scene && startSide !== undefined && e.pointerType === 'mouse') {
         sceneGesture = {kind:'files', id, side:startSide, point:p, previous:[...selected], dragged:false};
         select(startSide);
         scene.focus({preventScroll:true});
@@ -475,9 +475,11 @@
           (e.code === 'KeyS' || e.key?.toLowerCase() === 's') && demo.contains(document.activeElement)) {
         e.preventDefault(); arm(active()); return;
       }
-      if (e.key === 'Escape' && (captureSide !== null || sceneGesture || marquee || !result.hidden)) {
-        const opener = sceneGesture?.el || (marquee ? selectButton : shotButton);
-        end(null,true); disarm(); setMarquee(false);
+      if (e.key === 'Escape' && (captureSide !== null || sceneGesture || touchGroupSide !== null || !result.hidden)) {
+        const opener = sceneGesture?.el || shotButton;
+        end(null,true); disarm();
+        if (touchGroupSide !== null) setSelection([]);
+        touchGroupSide = null;
         if (!result.hidden) hideCapture(true);
         else opener.focus({preventScroll:true});
         announce(''); e.preventDefault(); return;
@@ -490,10 +492,11 @@
     renderFiles();
     return {
       selectDevice(i) {
+        touchGroupSide = null;
         if (captureSide !== null) { end(null, true); arm(i); }
       },
       setDesk(mode) {
-        end(null, true); disarm(); setMarquee(false);
+        end(null, true); disarm(); touchGroupSide = null;
         if (!result.hidden) hideCapture();
         const boxes = glass();
         desktops.forEach(({desktop,note,app}, i) => {
