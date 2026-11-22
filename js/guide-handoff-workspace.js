@@ -48,6 +48,10 @@
     const x = low(ax, dx), y = low(ay, by);
     return {x, y, width:high(bx, cx)-x, height:high(cy, dy)-y};
   };
+  const focusNoteFor = (e) => {
+    if (e.pointerType === 'touch' || e.sourceCapabilities?.firesTouchEvents) return false;
+    return e.detail === 0 || e.pointerType === 'mouse' || !window.matchMedia?.('(pointer: coarse)').matches;
+  };
   const inside = ({x,y}, r) => x >= r.x && x <= r.x+r.width && y >= r.y && y <= r.y+r.height;
   const overlap = (a, b) => a && b && a.width > 0 && a.height > 0 &&
     a.x < b.x+b.width && a.x+a.width > b.x && a.y < b.y+b.height && a.y+a.height > b.y;
@@ -72,7 +76,7 @@
       note.dataset.noteLaunch = '';
       note.dataset.kind = 'note';
       const app = makeEditor(side, note);
-      note.addEventListener('click', () => app.open(note));
+      note.addEventListener('click', (e) => app.open(note,focusNoteFor(e)));
       desktop.append(icons, app.editor);
       scene.append(desktop);
       return {desktop, icons, note, app};
@@ -235,11 +239,14 @@
         editor.setAttribute('aria-label',name);
         field.setAttribute('aria-label',name);
       }
-      function open(by) {
-        opener = by; select(i); label();
+      function open(by, focus = true) {
+        opener = by;
+        if (active() !== i) select(i);
+        label();
         editor.hidden = false;
         launcher.setAttribute('aria-expanded','true');
-        field.focus({preventScroll:true});
+        // Touch opens the panel first; tapping the field is what starts typing.
+        if (focus) field.focus({preventScroll:true});
       }
       close.addEventListener('click', () => {
         dismiss();
@@ -283,7 +290,17 @@
       }
       return {editor, field, open, label, dismiss};
     }
-    noteButton.addEventListener('click', () => desktops[active()].app.open(noteButton));
+    noteButton.addEventListener('click', (e) => desktops[active()].app.open(noteButton,focusNoteFor(e)));
+
+    function openNoteAtCursor(side, point) {
+      if (sceneGesture || relativeGesture || captureSide !== null ||
+          ![0,1].includes(side) || !inside(point,glassBounds(side))) return false;
+      const r = bounds(), box = desktops[side];
+      const target = document.elementFromPoint?.(r.left + point.x,r.top + point.y);
+      if (target?.closest('[data-note-launch]') !== box.note || box.icons.inert) return false;
+      box.app.open(box.note,false);
+      return true;
+    }
 
     function showCapture(f, opener, preview = false) {
       if (shown?.parentNode === result) shown.remove();
@@ -547,7 +564,7 @@
 
     renderFiles();
     return {
-      beginRelativeTouch, moveRelativeTouch, endRelativeTouch,
+      beginRelativeTouch, moveRelativeTouch, endRelativeTouch, openNoteAtCursor,
       selectDevice(i) {
         cancelRelativeTouch();
         touchGroupSide = null;

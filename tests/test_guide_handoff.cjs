@@ -172,3 +172,29 @@ test('held touch begins at the unchanged virtual point; quick swipes glide and h
   finger(scene,'pointerup',45,46,3,1420);
   assert.deepEqual(interactions.at(-1),['end',3,1,false]);
 });
+
+test('a short stage tap uses the stationary virtual hotspot once, not the finger', () => {
+  const hits = [];
+  const {step,pending} = create('ko','mac',{
+    openNoteAtCursor(side,p) { hits.push({side,...p}); },
+    setDesk() {},
+  });
+  pending[0].onload();
+  const [d] = step.detail.sibs;
+  const scene = d.scene;
+  const x = parseFloat(d.marker.style.left), y = parseFloat(d.marker.style.top);
+  finger(scene,'pointerdown',10,86,7,100);
+  finger(scene,'pointerup',11,87,7,160);
+  finger(scene,'lostpointercapture',11,87,7,160);
+  assert.equal(hits.length,1);
+  assert.equal(hits[0].side,0);
+  assert.ok(Math.abs(hits[0].x-x)<0.0001 && Math.abs(hits[0].y-y)<0.0001);
+  finger(scene,'pointerdown',10,86,8,300);
+  finger(scene,'pointermove',30,86,8,330);
+  finger(scene,'pointerup',30,86,8,350);
+  finger(scene,'pointerdown',10,86,9,500);
+  finger(scene,'pointerup',10,86,9,850);
+  finger(scene,'pointerdown',10,86,10,900);
+  finger(scene,'pointercancel',10,86,10,925);
+  assert.equal(hits.length,1,'Swipe, hold alone and cancellation must not open a note.');
+});

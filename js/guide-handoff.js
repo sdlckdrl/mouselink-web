@@ -221,7 +221,13 @@
       if (b >= -.16 && b <= 1.16) draw(side, a, b);
     });
     const release = (e) => {
-      if (contact?.id === e.pointerId) finishContact(e.type !== 'pointerup');
+      if (contact?.id !== e.pointerId) return;
+      const canceled = e.type !== 'pointerup';
+      const tap = !canceled && !contact.moving &&
+        e.timeStamp - contact.started < touchDragDelay &&
+        Math.hypot(e.clientX - contact.x,e.clientY - contact.y) < touchSlop;
+      finishContact(canceled);
+      if (tap) workspace?.openNoteAtCursor?.(side,virtualPoint());
     };
     for (const event of ['pointerup','pointercancel','lostpointercapture']) scene.addEventListener(event, release);
     window.addEventListener('blur', () => finishContact(true));

@@ -335,3 +335,26 @@ test('relative touch marquee is bounded, restores canceled selection, and group 
   assert.equal(w.beginRelativeTouch(11,0,{x:40,y:60}),null,'Never turn a notepad launcher into a drag start.');
   assert.equal(h.captures.length,0);
 });
+
+test('virtual or direct touch opens the correct inline note without focusing the editor', () => {
+  const h = harness(), w = h.workspace;
+  const left = h.notes()[0], right = h.notes()[1];
+  h.hit(right);
+  assert.equal(w.openNoteAtCursor(0,{x:48,y:60}),false,'Do not activate a launcher from a different display.');
+  assert.ok(h.editors.every(e => e.hidden));
+  h.hit(left);
+  assert.equal(w.openNoteAtCursor(0,{x:48,y:60}),true);
+  assert.equal(h.editors[0].hidden,false);
+  assert.equal(h.editors[1].hidden,true);
+  assert.notEqual(h.document.activeElement,h.fields[0],'A virtual tap must not start typing.');
+  h.fields[0].focus();
+  h.fields[0].value='Written after a separate edit';
+  h.commands(0)[2].emit('click');
+  assert.equal(h.document.activeElement,left);
+  right.emit('click',{detail:1,pointerType:'touch'});
+  assert.equal(h.editors[1].hidden,false);
+  assert.notEqual(h.document.activeElement,h.fields[1]);
+  left.emit('click',{detail:1,pointerType:'mouse'});
+  assert.equal(h.document.activeElement,h.fields[0],'Desktop open keeps the original edit focus.');
+  assert.equal(h.fields[0].value,'Written after a separate edit');
+});
