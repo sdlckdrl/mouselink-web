@@ -26,31 +26,31 @@
   };
   const languages = {
     ko: {
-      title:'커서 넘기기 체험', diagram:'배치 그림 보기', choice:'Android 기기 선택',
+      title:'커서 넘기기 체험', choice:'Android 기기 선택',
       source:'내 Windows PC', mac:'Mac', windows:'다른 Windows PC', phone:'Android 폰', tablet:'Android 태블릿',
       hint:'마우스나 손가락을 오른쪽으로 밀어 보세요. 돌아올 땐 왼쪽으로 밀어요. 키보드는 ← → 키를 쓰세요.',
       position:'커서 위치: ',
     },
     en: {
-      title:'Try moving the cursor', diagram:'View the layout example', choice:'Choose an Android device',
+      title:'Try moving the cursor', choice:'Choose an Android device',
       source:'My Windows PC', mac:'Mac', windows:'Other Windows PC', phone:'Android phone', tablet:'Android tablet',
       hint:'Move your mouse or slide a finger to the right. Move left to come back. On a keyboard, use ← and →.',
       position:'Cursor on: ',
     },
     es: {
-      title:'Prueba a mover el cursor', diagram:'Ver el ejemplo de disposición', choice:'Elige un dispositivo Android',
+      title:'Prueba a mover el cursor', choice:'Elige un dispositivo Android',
       source:'Mi PC Windows', mac:'Mac', windows:'Otro PC Windows', phone:'Teléfono Android', tablet:'Tableta Android',
       hint:'Mueve el ratón o desliza un dedo a la derecha. Vuelve por la izquierda. Con el teclado, usa ← y →.',
       position:'Cursor en: ',
     },
     ja: {
-      title:'カーソル移動を体験', diagram:'配置の例を見る', choice:'Android 端末を選択',
+      title:'カーソル移動を体験', choice:'Android 端末を選択',
       source:'自分の Windows PC', mac:'Mac', windows:'別の Windows PC', phone:'Android スマートフォン', tablet:'Android タブレット',
       hint:'マウスか指を右に動かしてみましょう。左に動かすと戻れます。キーボードでは ← → キーを使います。',
       position:'カーソルの位置：',
     },
     zh: {
-      title:'试试跨屏移动光标', diagram:'查看布局示例', choice:'选择 Android 设备',
+      title:'试试跨屏移动光标', choice:'选择 Android 设备',
       source:'我的 Windows 电脑', mac:'Mac', windows:'另一台 Windows 电脑', phone:'Android 手机', tablet:'Android 平板',
       hint:'向右移动鼠标或滑动手指，向左移动即可返回。使用键盘时，按 ← 或 → 键。',
       position:'光标位置：',
@@ -77,8 +77,8 @@
   const pointer = '<svg viewBox="0 0 24 30" focusable="false" aria-hidden="true"><path d="M1 1L22 19 13 18.4 17 26 13.6 28 9.3 20.3 3 27Z" fill="#fff" stroke="#142a43" stroke-width="2" stroke-linejoin="round"/><circle cx="12" cy="15" r="7.5" fill="#fff" stroke="#142a43" stroke-width="2"/></svg>';
 
   function mount(step) {
-    const shot = step.querySelector(':scope > figure.shot');
-    if (!shot) return;
+    const detail = step.querySelector(':scope > details.handoff-original');
+    if (!detail) return;
     const mobile = step.dataset.handoff === 'android';
     let mode = mobile ? 'phone' : step.dataset.handoff;
     let desk = desks[mode], side = 0, u = .72, v = .62, contact = null;
@@ -145,9 +145,7 @@
         workspace?.setDesk(name);
         if (mounted) return;
         mounted = true;
-        const detail = document.createElement('details'), summary = document.createElement('summary');
-        detail.className = 'handoff-original'; summary.textContent = t.diagram;
-        shot.before(demo, detail); detail.append(summary, shot);
+        detail.after(demo);
         step.classList.add('handoff-ready');
       };
       // If a secondary image fails, keep the currently working desk and its geometry.

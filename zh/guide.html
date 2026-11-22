@@ -65,11 +65,7 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
 @media(min-width:560px){.pairing-flow{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(min-width:680px){
   .guide-checks{grid-template-columns:repeat(3,minmax(0,1fr))}
-  #mac-pairing,#mac-handoff{grid-column:1/-1}
-  #mac-handoff{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.08fr);grid-template-rows:auto 1fr;column-gap:16px}
-  #mac-handoff>.shot{grid-column:2;grid-row:1/3;margin:0;padding:0}
 }
-#mac-pairing>.pairing-flow+p{margin:7px 0 0}
     [data-legacy-link]{display:none}
     [data-legacy-link]:target{display:block;margin:1rem 0 1.75rem;padding:1rem 1.15rem;border:1px solid var(--preview-line);border-left:4px solid var(--preview-accent);border-radius:12px;background:var(--preview-panel);scroll-margin-top:1.5rem}
     [data-legacy-link] h2{font-size:1.2rem;margin:0 0 .45rem}
@@ -119,10 +115,10 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
   #shortcuts .kt tbody td:first-child{min-width:0;width:auto}
 }
 </style>
-<link rel="stylesheet" href="/css/guide-handoff.css">
+<link rel="stylesheet" href="/css/guide-handoff.css?v=static-layout">
 <script defer src="/js/guide-handoff-capture.js"></script>
 <script defer src="/js/guide-handoff-workspace.js"></script>
-<script defer src="/js/guide-handoff.js"></script>
+<script defer src="/js/guide-handoff.js?v=static-layout"></script>
 </head>
 <body>
 <a class="skip" href="#main">跳到正文</a>
@@ -168,15 +164,15 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
         <li id="android-access"><h3>打开应用并开启 Android 无障碍服务</h3><p>在 Windows 和 Android 上 <a href="/zh/#get">安装 OneMouse</a>，并连接到同一个路由器。接着在手机上按以下步骤开启 OneMouse 的 <strong>无障碍服务</strong>。以下以三星 Galaxy 为例，菜单名称可能因设备和 Android 版本而异。</p>
           <figure class="shot shot--example shot--access-entry"><a href="/assets/preview/guide/android-access-entry-example.svg" aria-label="放大 Android OneMouse 首页的“需要无障碍权限”卡片"><img src="/assets/preview/guide/android-access-entry-example.svg" width="480" height="161" alt="Android OneMouse 首页的“需要无障碍权限”卡片" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">应用界面示意（韩语）</span>① 应用出现这张卡片时，点击打开。如果没有，请在手机设置中打开“无障碍”。</figcaption></figure>
           <div class="access-flow"><figure class="shot shot--example"><a href="/assets/preview/guide/galaxy-accessibility-installed-apps-example.svg" aria-label="放大三星 Galaxy 无障碍设置中从已安装应用列表选择 One Mouse 的界面"><img src="/assets/preview/guide/galaxy-accessibility-installed-apps-example.svg" width="480" height="224" alt="三星 Galaxy 无障碍设置中从已安装应用列表选择 One Mouse 的界面" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">Galaxy 界面示例（韩语）</span>② 在“已安装的应用”中选择 One Mouse。</figcaption></figure><figure class="shot shot--example"><a href="/assets/preview/guide/galaxy-accessibility-onemouse-switch-example.svg" aria-label="放大三星 Galaxy 中开启 One Mouse 无障碍开关的界面"><img src="/assets/preview/guide/galaxy-accessibility-onemouse-switch-example.svg" width="480" height="224" alt="三星 Galaxy 中开启 One Mouse 无障碍开关的界面" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">Galaxy 界面示例（韩语）</span>③ 打开顶部开关，弹出确认提示时点击“允许”。</figcaption></figure></div></li>
-        <li><h3>在 Windows 上打开二维码和验证码</h3><p><span class="path">设备管理 → 通过其他方式连接 → 本机二维码和验证码</span>。</p>
+        <li><h3>在 Windows 上查看二维码或 6 位数验证码</h3><p><span class="path">设备管理 → 通过其他方式连接 → 本机二维码和验证码</span>。</p>
           <figure class="shot"><a href="/assets/pairing/pc-code-zh.webp" aria-label="放大 Windows 二维码和验证码示例"><img src="/assets/pairing/pc-code-zh.webp" width="888" height="742" alt="Windows OneMouse 的二维码和 6 位数验证码窗口" loading="lazy"></a><figcaption><span class="shot-label">应用界面示例（韩语）</span>请使用自己电脑上的验证码，不要使用示例中的号码。</figcaption></figure></li>
-        <li><h3>在 Android 上输入验证码或扫描二维码</h3><p><span class="path">首页 → 通过其他方式连接 → 用二维码或验证码添加电脑</span>。 <strong>数字验证码</strong>中输入验证码，或选择 <strong>扫描二维码 → 打开相机</strong>并扫描电脑屏幕。 <a href="/assets/preview/guide/android-bluetooth-entry-ko.webp">“用二维码或验证码添加电脑”按钮的位置（韩语界面）</a></p>
+        <li class="guide-connect-step"><h3>在 Android 上输入验证码或扫描二维码</h3><p><span class="path">首页 → 通过其他方式连接 → 用二维码或验证码添加电脑</span>。 <strong>数字验证码</strong>中输入验证码，或选择 <strong>扫描二维码 → 打开相机</strong>并扫描电脑屏幕。 <a href="/assets/preview/guide/android-bluetooth-entry-ko.webp">“用二维码或验证码添加电脑”按钮的位置（韩语界面）</a></p>
           <div class="split-shot">
             <figure class="shot"><a href="/assets/pairing/android-code-zh.webp" aria-label="放大 Android 数字验证码输入示例"><img src="/assets/pairing/android-code-zh.webp" width="1080" height="2400" alt="Android OneMouse 的数字验证码标签页" loading="lazy"></a><figcaption><span class="shot-label">应用界面示例（韩语）</span>6 位数验证码</figcaption></figure>
             <figure class="shot"><a href="/assets/pairing/android-qr-zh.webp" aria-label="放大 Android 二维码扫描示例"><img src="/assets/pairing/android-qr-zh.webp" width="1080" height="2400" alt="Android OneMouse 的二维码扫描标签页" loading="lazy"></a><figcaption><span class="shot-label">应用界面示例（韩语）</span>二维码</figcaption></figure>
           </div></li>
-        <li id="android-handoff" data-handoff="android"><h3>按设备的实际位置摆放布局并移过去</h3><p>在 Android 首页的 <strong>已注册的电脑</strong>中确认连接。在 Windows 中按手机或平板的实际摆放方向调整布局，然后把光标移向那一侧屏幕边缘的切换区域。</p>
-          <figure class="shot"><a href="/assets/pairing/pc-position-zh.webp" aria-label="放大 Android 设备布局示例"><img src="/assets/pairing/pc-position-zh.webp" width="2240" height="1800" alt="Windows OneMouse 中将 Android 设备放在电脑右侧的界面" loading="lazy"></a><figcaption><span class="shot-label">应用界面示例（韩语）</span>把光标移向设备所在的方向。</figcaption></figure></li>
+        <li id="android-handoff" data-handoff="android"><h3>调整设备布局并跨屏移动光标</h3><p>在 Android 首页的 <strong>已注册的电脑</strong>中确认连接。在 Windows 中按手机或平板的实际摆放方向调整布局，然后把光标移向那一侧屏幕边缘的切换区域。</p>
+          <details class="handoff-original"><summary>查看布局示例</summary><figure class="shot"><a href="/assets/pairing/pc-position-zh.webp" aria-label="放大 Android 设备布局示例"><img src="/assets/pairing/pc-position-zh.webp" width="2240" height="1800" alt="Windows OneMouse 中将 Android 设备放在电脑右侧的界面" loading="lazy"></a><figcaption><span class="shot-label">应用界面示例（韩语）</span>把光标移向设备所在的方向。</figcaption></figure></details></li>
       </ol>
       <details id="alternatives"><summary>其他连接方式：蓝牙（测试版）</summary>
         <div id="connect-bluetooth"><h3>通过蓝牙连接（测试版）</h3><p>打开两台设备的蓝牙。在 Android OneMouse 中选择 <strong>启动蓝牙模式</strong>，然后在 Windows 的蓝牙设置中配对设备。连接后，在 OneMouse 的设备列表中确认状态与布局。蓝牙不能传输远程视频。</p><p><a href="/zh/technical">各连接方式的功能范围</a></p>
@@ -188,16 +184,16 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
       <h2 id="mac-title" tabindex="-1">从 Windows 连接 Mac</h2>
       <p>需要搭载 Apple 芯片且运行 macOS 13 或更高版本的 Mac。将两台设备连到同一个路由器的 Wi-Fi 或有线网络，即可免登录使用。 <a href="#connect-account">使用 Google 账号连接 Mac</a> · <a href="#mac-bluetooth">通过蓝牙连接（测试版）</a></p>
       <ol class="steps">
-        <li><h3>在 Windows 和 Mac 上打开应用</h3><p><a href="/zh/#get">安装 OneMouse</a>，并在两台设备上打开。请在 Windows 上发起连接。</p>
-          <figure class="shot shot--diagram"><a href="/assets/preview/guide/mac-start.svg" aria-label="放大在同一网络的 Windows 和 Mac 上打开 OneMouse 的示意图"><img src="/assets/preview/guide/mac-start.svg" width="760" height="450" alt="在同一网络的 Windows 和 Mac 上打开 OneMouse 的示意图" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">操作示意图</span>在接有鼠标和键盘的 Windows 电脑上发起连接。</figcaption></figure></li>
-        <li id="mac-access"><h3>在 Mac 上授予辅助功能权限</h3><p>要让 Mac 接收 Windows 的鼠标和键盘输入，请在 Mac 上授予 <strong>辅助功能</strong>权限。界面布局可能因 macOS 版本而异。</p>
+        <li id="mac-access"><h3>打开 OneMouse 并授予 Mac 辅助功能权限</h3><p>在 Windows 和 Mac 上<a href="/zh/#get">安装 OneMouse</a>，然后在两台设备上打开。 要让 Mac 接收 Windows 的鼠标和键盘输入，请在 Mac 上授予 <strong>辅助功能</strong>权限。界面布局可能因 macOS 版本而异。</p>
           <figure class="shot shot--example"><a href="/assets/preview/guide/mac-app-permissions-ko.svg" aria-label="放大 Mac OneMouse 高级设置中的 macOS 权限"><img src="/assets/preview/guide/mac-app-permissions-ko.svg" width="800" height="466" alt="Mac OneMouse 高级设置中的 macOS 权限" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">应用界面示意（韩语）</span>① 在 OneMouse 中打开“设置 → 高级 → macOS 权限”，点击“辅助功能”旁边的按钮。</figcaption></figure>
           <div class="access-flow"><figure class="shot shot--example"><a href="/assets/preview/guide/macos-privacy-accessibility-example.svg" aria-label="放大 Mac 系统设置中“隐私与安全性 → 辅助功能”的界面"><img src="/assets/preview/guide/macos-privacy-accessibility-example.svg" width="480" height="224" alt="Mac 系统设置中“隐私与安全性 → 辅助功能”的界面" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">macOS 界面示例（韩语）</span>② 在“隐私与安全性”中打开“辅助功能”。</figcaption></figure><figure class="shot shot--example"><a href="/assets/preview/guide/macos-accessibility-onemouse-switch-example.svg" aria-label="放大 Mac 系统设置中开启 OneMouse 辅助功能开关的界面"><img src="/assets/preview/guide/macos-accessibility-onemouse-switch-example.svg" width="480" height="224" alt="Mac 系统设置中开启 OneMouse 辅助功能开关的界面" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">macOS 界面示例（韩语）</span>③ 在列表中开启 OneMouse。</figcaption></figure></div>
           <p>如果列表中没有 OneMouse，请点击 <strong>+</strong>并添加已安装的 OneMouse。在 macOS 15 或更高版本中，如果系统请求访问 <strong>本地网络</strong> ，也请允许。</p></li>
-        <li id="mac-pairing"><h3>在 Mac 上查看验证码，在 Windows 上输入</h3><p>在 Mac OneMouse 的 <span class="path">设备管理 → 通过其他方式连接 → 查看这台 Mac 的验证码</span>中查看验证码。再打开 Windows OneMouse 的 <span class="path">设备管理 → 通过其他方式连接</span>，在“同一 Wi-Fi · 配对”部分找到 Mac，输入 6 位数验证码，然后点击 <strong>配对</strong>。</p>
-          <div class="pairing-flow"><figure class="shot shot--example"><a href="/assets/preview/guide/mac-app-pairing-ko.svg" aria-label="放大 Mac OneMouse 的本机验证码窗口"><img src="/assets/preview/guide/mac-app-pairing-ko.svg" width="800" height="482" alt="Mac OneMouse 的本机验证码窗口" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">应用界面示意（韩语）</span>① 在 Mac 上查看自己的 6 位数验证码。</figcaption></figure><figure class="shot shot--example"><a href="/assets/preview/guide/windows-mac-pairing-entry-example-ko.svg" aria-label="放大在 Windows OneMouse 中输入 Mac 验证码的示例"><img src="/assets/preview/guide/windows-mac-pairing-entry-example-ko.svg" width="800" height="482" alt="在 Windows OneMouse 的设备管理中选择 Mac 并输入 6 位数验证码的示例" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">应用界面示意（韩语）</span>② 在 Windows 上输入该验证码。</figcaption></figure></div><p>使用你自己的 Mac 上显示的验证码，不要使用示例中的数字。</p></li>
-        <li id="mac-handoff" data-handoff="mac"><h3>将光标移向 Mac 所在的一侧</h3><p>在 Windows 的布局界面中按 Mac 的实际摆放方向设置位置，再把光标移向该侧的屏幕边缘。</p>
-          <figure class="shot shot--diagram"><a href="/assets/preview/guide/mac-placement.svg" aria-label="放大在 Windows 上调整 Mac 位置并把光标移过屏幕边缘的示意图"><img src="/assets/preview/guide/mac-placement.svg" width="760" height="450" alt="在 Windows 上调整 Mac 位置并把光标移过屏幕边缘的示意图" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">操作示意图</span>将光标移向 Mac 所在的一侧。</figcaption></figure></li>
+        <li id="mac-pairing"><h3>在 Mac 上查看 6 位数验证码</h3><p>在 Mac OneMouse 的 <span class="path">设备管理 → 通过其他方式连接 → 查看这台 Mac 的验证码</span>中查看验证码。</p>
+          <figure class="shot shot--example"><a href="/assets/preview/guide/mac-app-pairing-ko.svg" aria-label="放大 Mac OneMouse 的本机验证码窗口"><img src="/assets/preview/guide/mac-app-pairing-ko.svg" width="800" height="482" alt="Mac OneMouse 的本机验证码窗口" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">应用界面示意（韩语）</span>在 Mac 上查看自己的 6 位数验证码。</figcaption></figure></li>
+        <li class="guide-connect-step"><h3>在 Windows 上选择 Mac 并连接</h3><p>打开 Windows OneMouse 的 <span class="path">设备管理 → 通过其他方式连接</span>，在“同一 Wi-Fi · 配对”部分找到 Mac，输入 6 位数验证码，然后点击 <strong>配对</strong>。 使用你自己的 Mac 上显示的验证码，不要使用示例中的数字。</p>
+          <figure class="shot shot--example"><a href="/assets/preview/guide/windows-mac-pairing-entry-example-ko.svg" aria-label="放大在 Windows OneMouse 中输入 Mac 验证码的示例"><img src="/assets/preview/guide/windows-mac-pairing-entry-example-ko.svg" width="800" height="482" alt="在 Windows OneMouse 的设备管理中选择 Mac 并输入 6 位数验证码的示例" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">应用界面示意（韩语）</span>在 Windows 上输入该验证码。</figcaption></figure></li>
+        <li id="mac-handoff" data-handoff="mac"><h3>调整设备布局并跨屏移动光标</h3><p>在 Windows 的布局界面中按 Mac 的实际摆放方向设置位置，再把光标移向该侧的屏幕边缘。</p>
+          <details class="handoff-original"><summary>查看布局示例</summary><figure class="shot shot--example"><a href="/assets/preview/guide/windows-mac-layout-zh.svg"><img src="/assets/preview/guide/windows-mac-layout-zh.svg" width="800" height="460" alt="Windows 布局编辑器中将 Mac 放在右侧的示例" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">应用界面复现</span>Windows 布局编辑器中将 Mac 放在右侧的示例</figcaption></figure></details></li>
       </ol>
       <div class="tip"><strong>列表中找不到 Mac？</strong> 确认两台设备连接到同一个网络，并检查 macOS 请求的本地网络权限。 <a href="/zh/help#connection-symptoms">排查 Mac 连接问题</a></div>
       <details id="mac-bluetooth">
@@ -224,14 +220,14 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
       <h2 id="windows-title" tabindex="-1">连接另一台 Windows 电脑</h2>
       <p>从接有鼠标和键盘的电脑开始。两台电脑接入同一个路由器，即可免登录使用验证码连接。 <a href="#connect-account">使用 Google 账号连接另一台电脑</a> · <a href="#windows-bluetooth">通过蓝牙连接（测试版）</a></p>
       <ol class="steps">
-        <li><h3>在两台电脑上打开设备管理</h3><p>在接入同一个路由器的两台 Windows 电脑上 <a href="/zh/#get">安装 OneMouse</a>并打开应用，然后在左侧菜单中选择 <strong>设备管理</strong>。</p>
+        <li><h3>在两台电脑上打开 OneMouse 和设备管理</h3><p>在接入同一个路由器的两台 Windows 电脑上 <a href="/zh/#get">安装 OneMouse</a>并打开应用，然后在左侧菜单中选择 <strong>设备管理</strong>。</p>
           <figure class="shot shot--example"><a href="/assets/preview/guide/windows-device-management-entry-ko.webp" aria-label="放大 Windows OneMouse 左侧的设备管理菜单实际界面"><img src="/assets/preview/guide/windows-device-management-entry-ko.webp" width="960" height="630" alt="Windows OneMouse 左侧选中设备管理时的实际界面" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">应用实拍 · 旧版本（韩语）</span>在左侧菜单中打开“设备管理”。</figcaption></figure></li>
-        <li><h3>在另一台电脑上查看验证码</h3><p>在要控制的电脑上，打开 <span class="path">设备管理 → 通过其他方式连接 → 本机二维码和验证码</span>并查看 6 位数验证码。</p>
+        <li><h3>在另一台 Windows 电脑上查看 6 位数验证码</h3><p>在要控制的电脑上，打开 <span class="path">设备管理 → 通过其他方式连接 → 本机二维码和验证码</span>并查看 6 位数验证码。</p>
           <figure class="shot"><a href="/assets/pairing/pc-code-zh.webp" aria-label="放大另一台 Windows 电脑上显示二维码和 6 位数验证码的应用界面"><img src="/assets/pairing/pc-code-zh.webp" width="888" height="742" alt="在另一台 Windows 电脑上查看二维码和 6 位数验证码的应用界面" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">应用界面示例（韩语）</span>请在要控制的电脑上打开此窗口。图中的号码仅供示例。</figcaption></figure></li>
-        <li><h3>在自己的电脑上选择并连接另一台电脑</h3><p>在自己的电脑上打开 <span class="path">设备管理 → 通过其他方式连接</span>，选择另一台电脑并输入验证码。确认连接状态，必要时打开连接开关。</p>
+        <li class="guide-connect-step"><h3>在自己的电脑上选择并连接另一台电脑</h3><p>在自己的电脑上打开 <span class="path">设备管理 → 通过其他方式连接</span>，选择另一台电脑并输入验证码。确认连接状态，必要时打开连接开关。</p>
           <figure class="shot"><a href="/assets/pairing/pc-peer-zh.webp" aria-label="放大输入另一台电脑验证码的示例"><img src="/assets/pairing/pc-peer-zh.webp" width="2240" height="1800" alt="在 Windows 上输入另一台电脑的 6 位数验证码" loading="lazy"></a><figcaption><span class="shot-label">应用界面示例（韩语）</span>图中的设备名称与验证码仅供示例。</figcaption></figure></li>
-        <li id="windows-handoff" data-handoff="windows"><h3>将光标移向另一台电脑</h3><p>在布局编辑器中按另一台电脑的实际摆放方向设置位置，再把光标移向对应的屏幕边缘。</p>
-          <figure class="shot"><a href="/assets/pairing/pc-peer-position-zh.webp" aria-label="放大另一台 Windows 电脑的布局示例"><img src="/assets/pairing/pc-peer-position-zh.webp" width="2240" height="1800" alt="在 Windows 设备管理中设置另一台电脑位置的界面" loading="lazy"></a><figcaption><span class="shot-label">应用界面示例（韩语）</span>布局应与设备实际摆放方向一致。</figcaption></figure></li>
+        <li id="windows-handoff" data-handoff="windows"><h3>调整设备布局并跨屏移动光标</h3><p>在布局编辑器中按另一台电脑的实际摆放方向设置位置，再把光标移向对应的屏幕边缘。</p>
+          <details class="handoff-original"><summary>查看布局示例</summary><figure class="shot"><a href="/assets/pairing/pc-peer-position-zh.webp" aria-label="放大另一台 Windows 电脑的布局示例"><img src="/assets/pairing/pc-peer-position-zh.webp" width="2240" height="1800" alt="在 Windows 设备管理中设置另一台电脑位置的界面" loading="lazy"></a><figcaption><span class="shot-label">应用界面示例（韩语）</span>布局应与设备实际摆放方向一致。</figcaption></figure></details></li>
       </ol>
       <details id="windows-bluetooth">
         <summary>通过蓝牙连接两台 Windows 电脑（测试版）</summary>
@@ -241,6 +237,7 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
           <li>在发送方电脑的同一菜单中，按需切换为 <strong>发送鼠标和键盘输入</strong>，再在列表中打开接收方电脑的连接开关，并调整设备布局。</li>
         </ol>
         <p>无需登录 Google，也不需要路由器。要查看远程画面，请使用同一个网络。</p>
+        <figure class="shot shot--example"><a href="/assets/preview/guide/windows-bluetooth-setup-zh.svg"><img src="/assets/preview/guide/windows-bluetooth-setup-zh.svg" width="800" height="460" alt="Windows 版 OneMouse 中开启蓝牙并切换为接收鼠标和键盘输入的位置" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">应用界面复现</span>Windows 版 OneMouse 中开启蓝牙并切换为接收鼠标和键盘输入的位置</figcaption></figure>
       </details>
       <div class="tip"><strong>找不到另一台电脑？</strong> 先确认两台电脑上的应用都在运行，而且都连到了同一个网络。 <a href="/zh/help#connection-symptoms">查看连接排查步骤</a></div>
     </section>

@@ -41,13 +41,20 @@
 .handoff-scene:focus-visible { outline-color: #fff; box-shadow: inset 0 0 0 5px #006450; }
 .handoff-sr { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0;
   border: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
-.steps > li > details.handoff-original { margin: 0; padding: 0; border-top: 0; }
-.steps > li > details.handoff-original summary { color: #315949; font-size: .84rem; }
-.handoff-original .shot { margin-top: 0; }
+.steps > li > details.handoff-original {
+  margin: 0 0 6px; padding: 0; border-top: 0;
+}
+.steps > li > details.handoff-original summary { color: #315949; font-size: .86rem; }
+.handoff-original > .shot { margin: 0; }
 @media (min-width: 680px) {
-  #mac-handoff.handoff-ready { grid-template-rows: auto auto 1fr; align-items: start; }
-  #mac-handoff.handoff-ready > .handoff-demo { grid-column: 2; grid-row: 1/4; margin: 0; }
-  #mac-handoff.handoff-ready > details { grid-column: 1; grid-row: 3; }
+  .steps > li:is(.guide-connect-step,[data-handoff]) { grid-column: 1/-1; }
+  .steps > li:is(.guide-connect-step,.handoff-ready) {
+    display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1.08fr);
+    grid-template-rows: auto auto 1fr; column-gap: 16px; align-items: start;
+  }
+  .steps > li.guide-connect-step > :is(.shot,.split-shot),
+  .steps > li.handoff-ready > .handoff-demo { grid-column: 2; grid-row: 1/4; margin: 0; padding: 0; }
+  .steps > li.handoff-ready > details { grid-column: 1; grid-row: 3; }
 }
 
 /* Simulated controls sit on the display glass, not over the desk. */

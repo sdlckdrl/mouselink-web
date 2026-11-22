@@ -24,7 +24,7 @@ class E {
   }
   append(...args){ this.children.push(...args); }
   remove(){ this.removed=true; }
-  before(...sibs){ this.sibs=sibs; }
+  after(...sibs){ this.sibs=sibs; }
   add(option){ this.append(option); if (!this.value) this.value=option.value; }
   setAttribute(k,v){ this.attrs[k]=v; }
   addEventListener(k, fn) { (this.events[k]??=[]).push(fn); }
@@ -34,13 +34,15 @@ class E {
   focus(){ this.focused=true; }
   querySelector(s) {
     return ({'figcaption':this.heading,'.handoff-scene':this.scene,svg:this.children[1],img:this.children[0],
-      '.handoff-hint':this.hint,'[role="status"]':this.status,circle:this.circle,':scope > figure.shot':this.shot})[s];
+      '.handoff-hint':this.hint,'[role="status"]':this.status,circle:this.circle,':scope > details.handoff-original':this.detail})[s];
   }
   querySelectorAll(s) { if (s==='[data-side]') return this.buttons; throw Error(s); }
 }
 function create(locale, device){
   let observer;
-  const step = new E('step'); step.id = device+'-handoff'; step.dataset.handoff=device; step.shot=new E('shot');
+  const step = new E('step'); step.id = device+'-handoff'; step.dataset.handoff=device;
+  step.detail = new E('details'); step.detail.open = true;
+  step.detail.append(new E('summary'), new E('shot'));
   const pending=[];
   class Image {set src(s){this.path=s; pending.push(this)} get src(){return this.path}}
   class Option {constructor(text,value){this.text=text;this.value=value}}
@@ -64,9 +66,10 @@ for(const locale of ['ko','en','es','ja','zh']) for(const device of Object.keys(
   assert.ok(pending[0].src.endsWith(bases[device]));
   assert.ok(fs.existsSync(path.join(root,pending[0].src)));
   pending[0].onload();
-  const [d,detail]=step.shot.sibs;
-  assert.equal(detail.children[1],step.shot);
-  assert.ok(detail.children[0].textContent);
+  const [d]=step.detail.sibs;
+  assert.equal(step.detail.children[0].type,'summary');
+  assert.equal(step.detail.children[1].type,'shot');
+  assert.equal(step.detail.open,true,'Loading the demo must not close the already opened layout figure.');
   assert.equal(d.dataset.active,'source');
   assert.equal(d.dataset.shape,'arrow');
   assert.ok(d.scene.attrs['aria-label'].includes('Windows'));
