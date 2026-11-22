@@ -36,7 +36,9 @@ class Node {
       ? this.className === selector.slice(1)
       : selector === '[data-file]' ? 'file' in this.dataset
       : selector === '[data-note-launch]' ? 'noteLaunch' in this.dataset
-      : false;
+      : selector === '[hidden]' ? !!this.hidden
+      : selector === '[inert]' ? !!this.inert
+      : selector === this.tag;
     return s.split(',').some(one) ? this : this.parentNode?.closest(s);
   }
   querySelectorAll(s) {
@@ -340,10 +342,10 @@ test('virtual or direct touch opens the correct inline note without focusing the
   const h = harness(), w = h.workspace;
   const left = h.notes()[0], right = h.notes()[1];
   h.hit(right);
-  assert.equal(w.openNoteAtCursor(0,{x:48,y:60}),false,'Do not activate a launcher from a different display.');
+  assert.equal(w.activateAtCursor(0,{x:48,y:60}),false,'Do not activate a launcher from a different display.');
   assert.ok(h.editors.every(e => e.hidden));
   h.hit(left);
-  assert.equal(w.openNoteAtCursor(0,{x:48,y:60}),true);
+  assert.equal(w.activateAtCursor(0,{x:48,y:60}),true);
   assert.equal(h.editors[0].hidden,false);
   assert.equal(h.editors[1].hidden,true);
   assert.notEqual(h.document.activeElement,h.fields[0],'A virtual tap must not start typing.');
@@ -357,4 +359,59 @@ test('virtual or direct touch opens the correct inline note without focusing the
   left.emit('click',{detail:1,pointerType:'mouse'});
   assert.equal(h.document.activeElement,h.fields[0],'Desktop open keeps the original edit focus.');
   assert.equal(h.fields[0].value,'Written after a separate edit');
+});
+
+
+test('the virtual cursor invokes only visible, owned window actions without typing focus', () => {
+  const h = harness(), w = h.workspace;
+  const aim = (node,side=0) => {
+    h.hit(node);
+    return w.activateAtCursor(side,side ? {x:260,y:70} : {x:55,y:65});
+  };
+  assert.equal(aim(h.tools[0]),false,'Do not route clicks to toolbar/page controls.');
+  assert.equal(aim(h.file(0,'photo')),false,'Do not route arbitrary clickable elements.');
+  assert.equal(aim(h.notes()[0]),true);
+  h.fields[0].value='Selected note';
+  h.fields[0].selectionStart=0; h.fields[0].selectionEnd=8;
+  assert.equal(aim(h.commands(0)[0]),true);
+  assert.equal(aim(h.notes()[1],1),true);
+  assert.equal(aim(h.commands(1)[1],1),true);
+  assert.equal(h.fields[1].value,'Selected');
+  assert.notEqual(h.document.activeElement,h.fields[1]);
+  h.hit(h.commands(1)[2]);
+  assert.equal(w.beginRelativeTouch(8,1,{x:260,y:70}),null,'Window actions cannot start a marquee.');
+  assert.equal(aim(h.commands(1)[2],1),true);
+  assert.equal(h.editors[1].hidden,true);
+  assert.equal(aim(h.commands(1)[2],1),false,'A hidden close button must not be invoked.');
+  assert.equal(aim(h.notes()[1],1),true);
+  assert.equal(h.fields[1].value,'Selected');
+  h.commands(1)[0].disabled=true;
+  assert.equal(aim(h.commands(1)[0],1),false);
+});
+
+test('capture preview close, cancel, and send use the same scoped virtual activation', () => {
+  const h = harness(), w = h.workspace;
+  const aim = node => { h.hit(node); return w.activateAtCursor(0,{x:55,y:65}); };
+  const take = () => {
+    h.choose(0); h.tools[1].emit('click');
+    h.point('pointerdown',55,70); h.point('pointermove',115,130); h.point('pointerup',115,130);
+    assert.equal(h.draft().dataset.stage,'draft');
+  };
+  const close = h.draft().querySelector('.handoff-result-head').children[1];
+  take();
+  assert.equal(aim(close),true);
+  assert.equal(h.draft().hidden,true);
+  assert.equal(h.scene.querySelectorAll('[data-file]').length,3);
+  take();
+  assert.equal(aim(h.cancel()),true);
+  assert.equal(h.draft().hidden,true);
+  assert.equal(h.scene.querySelectorAll('[data-file]').length,3);
+  take();
+  assert.equal(aim(h.send()),true);
+  assert.ok(h.file(1,'capture-3'));
+  assert.equal(aim(h.send()),false,'Send is no longer a visible draft action.');
+  assert.equal(h.scene.querySelectorAll('[data-file]').length,4);
+  assert.equal(aim(close),true);
+  assert.equal(h.draft().hidden,true);
+  assert.ok(h.file(1,'capture-3'));
 });

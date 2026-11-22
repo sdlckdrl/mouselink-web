@@ -176,7 +176,7 @@ test('held touch begins at the unchanged virtual point; quick swipes glide and h
 test('a short stage tap uses the stationary virtual hotspot once, not the finger', () => {
   const hits = [];
   const {step,pending} = create('ko','mac',{
-    openNoteAtCursor(side,p) { hits.push({side,...p}); },
+    activateAtCursor(side,p) { hits.push({side,...p}); },
     setDesk() {},
   });
   pending[0].onload();

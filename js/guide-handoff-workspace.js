@@ -48,7 +48,7 @@
     const x = low(ax, dx), y = low(ay, by);
     return {x, y, width:high(bx, cx)-x, height:high(cy, dy)-y};
   };
-  const focusNoteFor = (e) => {
+  const focusEditorFor = (e) => {
     if (e.pointerType === 'touch' || e.sourceCapabilities?.firesTouchEvents) return false;
     return e.detail === 0 || e.pointerType === 'mouse' || !window.matchMedia?.('(pointer: coarse)').matches;
   };
@@ -68,6 +68,13 @@
     const [send, cancel, filesSelected, received, touchHint, groupHint] =
       transfer[lang.split('-')[0]] || transfer.en;
     const captureApi = window.OneMouseGuideCapture;
+    const screenActions = new WeakMap();
+    // Register only our in-screen buttons. Direct and virtual input share one
+    // action without inventing a DOM click or touching anything outside the demo.
+    function onScreenAction(control, side, run) {
+      screenActions.set(control,{side,run});
+      control.addEventListener('click', (e) => run(focusEditorFor(e)));
+    }
     const desktops = [0,1].map((side) => {
       const desktop = create('div','handoff-desktop');
       const icons = create('div','handoff-icons');
@@ -76,7 +83,7 @@
       note.dataset.noteLaunch = '';
       note.dataset.kind = 'note';
       const app = makeEditor(side, note);
-      note.addEventListener('click', (e) => app.open(note,focusNoteFor(e)));
+      onScreenAction(note,side, (focus) => app.open(note,focus));
       desktop.append(icons, app.editor);
       scene.append(desktop);
       return {desktop, icons, note, app};
@@ -248,7 +255,7 @@
         // Touch opens the panel first; tapping the field is what starts typing.
         if (focus) field.focus({preventScroll:true});
       }
-      close.addEventListener('click', () => {
+      onScreenAction(close,i, () => {
         dismiss();
         opener?.focus({preventScroll:true});
       });
@@ -260,14 +267,15 @@
         if (!text) { announce(chooseText); return; }
         clip = text; announce(copied);
       }
-      function pasteSelection() {
+      function pasteSelection(focus = true) {
         if (!clip) { announce(noClipboard); return; }
         const available = field.maxLength - (field.value.length - (field.selectionEnd-field.selectionStart));
         field.setRangeText(clip.slice(0, Math.max(0, available)), field.selectionStart, field.selectionEnd, 'end');
-        field.focus({preventScroll:true}); announce(pasted);
+        if (focus) field.focus({preventScroll:true});
+        announce(pasted);
       }
-      copyButton.addEventListener('click', () => copySelection(true));
-      pasteButton.addEventListener('click', pasteSelection);
+      onScreenAction(copyButton,i, () => copySelection(true));
+      onScreenAction(pasteButton,i,pasteSelection);
       field.addEventListener('keydown', (e) => {
         if (e.isComposing || e.altKey || !(e.ctrlKey || e.metaKey)) return;
         const k = (e.key || '').toLowerCase();
@@ -290,15 +298,18 @@
       }
       return {editor, field, open, label, dismiss};
     }
-    noteButton.addEventListener('click', (e) => desktops[active()].app.open(noteButton,focusNoteFor(e)));
+    noteButton.addEventListener('click', (e) => desktops[active()].app.open(noteButton,focusEditorFor(e)));
 
-    function openNoteAtCursor(side, point) {
+    function activateAtCursor(side, point) {
       if (sceneGesture || relativeGesture || captureSide !== null ||
           ![0,1].includes(side) || !inside(point,glassBounds(side))) return false;
-      const r = bounds(), box = desktops[side];
+      const r = bounds();
       const target = document.elementFromPoint?.(r.left + point.x,r.top + point.y);
-      if (target?.closest('[data-note-launch]') !== box.note || box.icons.inert) return false;
-      box.app.open(box.note,false);
+      const control = target?.closest('button');
+      const action = control && screenActions.get(control);
+      if (!action || action.side !== side || !scene.contains(control) ||
+          control.disabled || control.closest('[hidden],[inert]')) return false;
+      action.run(false);
       return true;
     }
 
@@ -325,9 +336,9 @@
       shown = null; delete result.dataset.stage;
       if (restore) (resultOpener?.isConnected ? resultOpener : shotButton).focus({preventScroll:true});
     }
-    closeResult.addEventListener('click', () => hideCapture(true));
-    cancelButton.addEventListener('click', () => { hideCapture(true); announce(''); });
-    sendButton.addEventListener('click', () => {
+    onScreenAction(closeResult,0, () => hideCapture(true));
+    onScreenAction(cancelButton,0, () => { hideCapture(true); announce(''); });
+    onScreenAction(sendButton,0, () => {
       if (!draft) return;
       const f = draft;
       draft = null; f.side = 1-f.side;
@@ -564,7 +575,7 @@
 
     renderFiles();
     return {
-      beginRelativeTouch, moveRelativeTouch, endRelativeTouch, openNoteAtCursor,
+      beginRelativeTouch, moveRelativeTouch, endRelativeTouch, activateAtCursor,
       selectDevice(i) {
         cancelRelativeTouch();
         touchGroupSide = null;

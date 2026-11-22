@@ -210,7 +210,6 @@
 }
 .handoff-scene[data-capturing] .handoff-desktop .handoff-editor,
 .handoff-scene[data-capturing] .handoff-desktop .handoff-editor * { pointer-events: none; }
-.handoff-scene:has(.handoff-editor:hover) > .handoff-cursor { visibility: hidden; }
 @container (max-width: 45px) {
   .handoff-desktop .handoff-editor-tools {
     display: grid; grid-template-columns: repeat(3,minmax(0,1fr));
@@ -268,4 +267,8 @@
 @container (max-width: 115px) {
   .handoff-desktop .handoff-result-actions button svg { display: none; }
 }
-.handoff-scene:has(.handoff-capture-result:hover) > .handoff-cursor { visibility: hidden; }
+@media (hover: hover) {
+  .handoff-scene:has(:is(.handoff-editor,.handoff-capture-result):hover) > .handoff-cursor {
+    visibility: hidden;
+  }
+}

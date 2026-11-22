@@ -227,7 +227,7 @@
         e.timeStamp - contact.started < touchDragDelay &&
         Math.hypot(e.clientX - contact.x,e.clientY - contact.y) < touchSlop;
       finishContact(canceled);
-      if (tap) workspace?.openNoteAtCursor?.(side,virtualPoint());
+      if (tap) workspace?.activateAtCursor?.(side,virtualPoint());
     };
     for (const event of ['pointerup','pointercancel','lostpointercapture']) scene.addEventListener(event, release);
     window.addEventListener('blur', () => finishContact(true));
