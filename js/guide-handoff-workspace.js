@@ -8,11 +8,11 @@
     zh: ['记事本','截图','移动文件','复制','粘贴','关闭','写一条笔记…','把文件拖到另一块屏幕。','在屏幕上拖动选区。按 Enter 截取整屏。','虚拟屏幕截图','已复制。','已粘贴。','请选择要复制的文字。','请先从记事本复制文字。','请重新选择截图区域。','已移动到：'],
   };
   const transfer = {
-    ko: ['보내기','취소','선택한 파일','받은 화면: ','쓸어서 커서를 움직여요. 잠깐 누른 뒤 밀면 선택하거나 끌 수 있어요.','빈 곳에서 여러 파일을 선택한 뒤 옆 화면으로 끌어요.'],
-    en: ['Send','Cancel','Files selected','Received on: ','Swipe to move the cursor. Hold briefly, then slide to select or drag.','Drag from a blank area to select files, then drag them to the other screen.'],
-    es: ['Enviar','Cancelar','Archivos seleccionados','Recibido en: ','Desliza para mover el cursor. Mantén pulsado un instante y luego desliza para seleccionar o arrastrar.','Selecciona archivos desde una zona vacía y arrástralos a la otra pantalla.'],
-    ja: ['送信','キャンセル','選択したファイル','受信先：','指を滑らせてカーソルを動かします。少し押してから滑らせると選択やドラッグができます。','空いている所からファイルを囲み、別の画面へドラッグします。'],
-    zh: ['发送','取消','已选文件','接收设备：','滑动手指移动光标。按住片刻再滑动，即可框选或拖动。','从空白处框选文件，然后拖到另一块屏幕。'],
+    ko: ['보내기','취소','선택한 파일','받은 화면: ','카드의 빈 곳을 밀어 커서를 움직여요. 잠깐 누른 뒤 밀면 선택하거나 끌 수 있어요.','빈 곳에서 여러 파일을 선택한 뒤 옆 화면으로 끌어요.'],
+    en: ['Send','Cancel','Files selected','Received on: ','Swipe on any blank part of the card to move the cursor. Hold, then slide to select or drag.','Drag from a blank area to select files, then drag them to the other screen.'],
+    es: ['Enviar','Cancelar','Archivos seleccionados','Recibido en: ','Desliza en una zona libre de la tarjeta para mover el cursor. Mantén pulsado y desliza para seleccionar o arrastrar.','Selecciona archivos desde una zona vacía y arrástralos a la otra pantalla.'],
+    ja: ['送信','キャンセル','選択したファイル','受信先：','カードの空いている所で指を滑らせるとカーソルが動きます。少し押してから滑らせると選択やドラッグができます。','空いている所からファイルを囲み、別の画面へドラッグします。'],
+    zh: ['发送','取消','已选文件','接收设备：','在卡片空白处滑动即可移动光标。按住片刻再滑动，即可框选或拖动。','从空白处框选文件，然后拖到另一块屏幕。'],
   };
   const iconPaths = {
     document: '<path d="M6 3h8l4 4v14H6zM10 12h4m-4 4h4"/>',

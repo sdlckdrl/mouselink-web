@@ -175,43 +175,49 @@
       draw(i, .5, .5);
       if (buttons.includes(e.target)) buttons[i].focus({preventScroll:true});
     });
-    scene.addEventListener('pointerdown', (e) => {
-      if (e.target !== scene || e.pointerType === 'mouse' || e.isPrimary === false || contact || e.button !== 0) return;
+    // Only blank parts of this card are a trackpad. Buttons, the device picker,
+    // notepad editing, and directly selected screenshot regions stay native.
+    const directTouch = 'button,a,input,textarea,select,option,label,summary,[contenteditable],.handoff-desktop';
+    demo.addEventListener('pointerdown', (e) => {
+      if (!['touch','pen'].includes(e.pointerType) || e.isPrimary === false || contact || e.button !== 0 ||
+          scene.dataset.capturing !== undefined || e.target.closest?.(directTouch)) return;
       contact = {id:e.pointerId, x:e.clientX, y:e.clientY, started:e.timeStamp,
         moving:false, action:null, origin:side};
-      scene.setPointerCapture?.(e.pointerId);
+      (e.target === scene ? scene : demo).setPointerCapture?.(e.pointerId);
+      e.preventDefault();
       // Like a trackpad: a new contact never moves the cursor to the finger.
     });
-    scene.addEventListener('pointermove', (e) => {
+    demo.addEventListener('pointermove', (e) => {
+      if (e.pointerType === 'mouse' || contact?.id !== e.pointerId) return;
       const r = scene.getBoundingClientRect();
       if (!r.width || !r.height) return;
-      if (e.pointerType !== 'mouse') {
-        if (contact?.id !== e.pointerId) return;
-        const dx = e.clientX - contact.x, dy = e.clientY - contact.y;
-        // Like Features, the first deliberate movement distinguishes a quick
-        // cursor swipe from a held drag. Both use the prior virtual position.
-        if (!contact.moving) {
-          if (Math.hypot(dx,dy) < touchSlop) return;
-          contact.moving = true;
-          if (e.timeStamp - contact.started >= touchDragDelay) {
-            contact.action = workspace?.beginRelativeTouch?.(e.pointerId, side, virtualPoint(r));
-          }
+      const dx = e.clientX - contact.x, dy = e.clientY - contact.y;
+      // Like Features, the first deliberate movement distinguishes a quick
+      // cursor swipe from a held drag. Both use the prior virtual position.
+      if (!contact.moving) {
+        if (Math.hypot(dx,dy) < touchSlop) return;
+        contact.moving = true;
+        if (e.timeStamp - contact.started >= touchDragDelay) {
+          contact.action = workspace?.beginRelativeTouch?.(e.pointerId, side, virtualPoint(r));
         }
-        const stepX = dx * 2.3 / r.width, nextY = v + dy * 1.9 / r.height;
-        if (contact.action === 'files') {
-          // A marquee is clipped to the display where it was started.
-          draw(contact.origin, u + stepX, nextY);
-        } else {
-          // Relative motion and file drags can cross between the two screens.
-          const next = clamp(side + u + stepX, 0, 2);
-          const i = Number(next >= 1);
-          draw(i, next - i, nextY);
-        }
-        if (contact.action) workspace?.moveRelativeTouch?.(e.pointerId, side, virtualPoint(r));
-        contact.x = e.clientX; contact.y = e.clientY;
-        return;
       }
-      if (contact) return;
+      const stepX = dx * 2.3 / r.width, nextY = v + dy * 1.9 / r.height;
+      if (contact.action === 'files') {
+        // A marquee is clipped to the display where it was started.
+        draw(contact.origin, u + stepX, nextY);
+      } else {
+        // Relative motion and file drags can cross between the two screens.
+        const next = clamp(side + u + stepX, 0, 2);
+        const i = Number(next >= 1);
+        draw(i, next - i, nextY);
+      }
+      if (contact.action) workspace?.moveRelativeTouch?.(e.pointerId, side, virtualPoint(r));
+      contact.x = e.clientX; contact.y = e.clientY;
+    });
+    scene.addEventListener('pointermove', (e) => {
+      if (e.pointerType !== 'mouse' || contact) return;
+      const r = scene.getBoundingClientRect();
+      if (!r.width || !r.height) return;
       const x = 100 * (e.clientX - r.left) / r.width, y = 100 * (e.clientY - r.top) / r.height;
       const local = desk.glass.map(q => screenCoordinates(q, x, y));
       const hit = local.findIndex(([a,b]) => a >= 0 && a <= 1 && b >= 0 && b <= 1);
@@ -229,7 +235,7 @@
       finishContact(canceled);
       if (tap) workspace?.activateAtCursor?.(side,virtualPoint());
     };
-    for (const event of ['pointerup','pointercancel','lostpointercapture']) scene.addEventListener(event, release);
+    for (const event of ['pointerup','pointercancel','lostpointercapture']) demo.addEventListener(event, release);
     window.addEventListener('blur', () => finishContact(true));
     load(mode);
   }

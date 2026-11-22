@@ -17,18 +17,27 @@ class E {
     if (this.type==='figure') {
       this.heading = new E('figcaption'); this.heading.append(new E('heading-span'));
       this.scene = new E('scene'); this.marker = new E('svg'); this.photo = new E('img');
+      this.scene.parentNode = this;
       this.scene.append(this.photo,this.marker);
       this.buttons = [new E('button'),new E('button')];
       this.hint = new E('hint'); this.status = new E('status');
     } else if (this.type==='heading-span') this.circle=new E('circle');
   }
-  append(...args){ this.children.push(...args); }
+  append(...args){ for (const e of args) if (typeof e === 'object') e.parentNode=this; this.children.push(...args); }
   remove(){ this.removed=true; }
   after(...sibs){ this.sibs=sibs; }
   add(option){ this.append(option); if (!this.value) this.value=option.value; }
   setAttribute(k,v){ this.attrs[k]=v; }
   addEventListener(k, fn) { (this.events[k]??=[]).push(fn); }
-  trigger(k,p={}) { for(const fn of this.events[k]||[]) fn({type:k,target:this,preventDefault(){},...p}); }
+  closest(s) {
+    if (s.split(',').includes(this.type)) return this;
+    return this.parentNode?.closest(s);
+  }
+  bubble(e) {
+    for (const fn of this.events[e.type] || []) fn(e);
+    if (e.type.startsWith('pointer') || e.type === 'lostpointercapture') this.parentNode?.bubble(e);
+  }
+  trigger(k,p={}) { this.bubble({type:k,target:this,preventDefault(){},...p}); }
   setPointerCapture(id){ this.pointerCapture=id; }
   getBoundingClientRect(){ return {left:0,top:0,width:100,height:100}; }
   focus(){ this.focused=true; }
@@ -197,4 +206,60 @@ test('a short stage tap uses the stationary virtual hotspot once, not the finger
   finger(scene,'pointerdown',10,86,10,900);
   finger(scene,'pointercancel',10,86,10,925);
   assert.equal(hits.length,1,'Swipe, hold alone and cancellation must not open a note.');
+});
+
+
+test('touch from card padding uses scene scale, does not catch controls or an armed crop', () => {
+  const calls=[];
+  const {step,pending} = create('ko','mac',{
+    activateAtCursor(side,p) { calls.push(['tap',side,p]); },
+    beginRelativeTouch(id,side,p) { calls.push(['start',id,side,p]); return 'files'; },
+    moveRelativeTouch(id,side,p) { calls.push(['move',id,side,p]); },
+    endRelativeTouch(id,side,p,canceled) { calls.push(['end',id,side,canceled]); },
+    setDesk() {},
+  });
+  pending[0].onload();
+  const [d]=step.detail.sibs;
+  const pad=new E('p'), nativeBtn=new E('button');
+  d.append(pad,nativeBtn);
+  const original=JSON.stringify(d.marker.style);
+  finger(pad,'pointerdown',39,130,11,100);
+  assert.equal(d.pointerCapture,11);
+  assert.equal(JSON.stringify(d.marker.style),original);
+  finger(d,'pointermove',22,122,11,130);
+  finger(d,'pointerup',22,122,11,150);
+  assert.notEqual(JSON.stringify(d.marker.style),original);
+  assert.equal(calls.length,0);
+
+  const baseline=create('ko','mac');
+  baseline.pending[0].onload();
+  const [other]=baseline.step.detail.sibs;
+  finger(other.scene,'pointerdown',39,64,23,100);
+  finger(other.scene,'pointermove',22,56,23,130);
+  finger(other.scene,'pointerup',22,56,23,150);
+  assert.equal(JSON.stringify(d.marker.style),JSON.stringify(other.marker.style),
+    'Origin above or below the photo must use the same relative gain.');
+
+  finger(pad,'pointerdown',40,130,12,200);
+  finger(d,'pointerup',40,130,12,240);
+  assert.equal(calls[0][0],'tap');
+  const x=parseFloat(d.marker.style.left), y=parseFloat(d.marker.style.top);
+  assert.ok(Math.abs(calls[0][2].x-x)<.0001 && Math.abs(calls[0][2].y-y)<.0001);
+
+  finger(pad,'pointerdown',45,135,13,400);
+  finger(d,'pointermove',20,127,13,720);
+  finger(d,'pointerup',20,127,13,750);
+  assert.deepEqual(calls.map(c=>c[0]),['tap','start','move','end']);
+
+  const before=JSON.stringify(d.marker.style);
+  const checkNoAction = (from,id) => {
+    finger(from,'pointerdown',45,130,id,800);
+    finger(d,'pointermove',21,119,id,840);
+    finger(d,'pointerup',21,119,id,860);
+    assert.equal(JSON.stringify(d.marker.style),before);
+    assert.equal(calls.length,4);
+  };
+  checkNoAction(nativeBtn,14);
+  d.scene.dataset.capturing='';
+  checkNoAction(pad,15);
 });
