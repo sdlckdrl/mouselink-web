@@ -8,11 +8,11 @@
     zh: ['记事本','截图','移动文件','复制','粘贴','关闭','写一条笔记…','把文件拖到另一块屏幕。','在屏幕上拖动选区。按 Enter 截取整屏。','虚拟屏幕截图','已复制。','已粘贴。','请选择要复制的文字。','请先从记事本复制文字。','请重新选择截图区域。','已移动到：'],
   };
   const transfer = {
-    ko: ['보내기','취소','선택한 파일','받은 화면: ','파일을 길게 누른 뒤 다른 파일을 탭하면 함께 선택돼요.','빈 곳에서 여러 파일을 선택한 뒤 옆 화면으로 끌어요.'],
-    en: ['Send','Cancel','Files selected','Received on: ','Hold a file, then tap more files to select them together.','Drag from a blank area to select files, then drag them to the other screen.'],
-    es: ['Enviar','Cancelar','Archivos seleccionados','Recibido en: ','Mantén pulsado un archivo y luego toca otros para seleccionarlos.','Selecciona archivos desde una zona vacía y arrástralos a la otra pantalla.'],
-    ja: ['送信','キャンセル','選択したファイル','受信先：','ファイルを長押しし、ほかのファイルをタップしてまとめて選択できます。','空いている所からファイルを囲み、別の画面へドラッグします。'],
-    zh: ['发送','取消','已选文件','接收设备：','长按一个文件，再点按其他文件即可多选。','从空白处框选文件，然后拖到另一块屏幕。'],
+    ko: ['보내기','취소','선택한 파일','받은 화면: ','쓸어서 커서를 움직여요. 잠깐 누른 뒤 밀면 선택하거나 끌 수 있어요.','빈 곳에서 여러 파일을 선택한 뒤 옆 화면으로 끌어요.'],
+    en: ['Send','Cancel','Files selected','Received on: ','Swipe to move the cursor. Hold briefly, then slide to select or drag.','Drag from a blank area to select files, then drag them to the other screen.'],
+    es: ['Enviar','Cancelar','Archivos seleccionados','Recibido en: ','Desliza para mover el cursor. Mantén pulsado un instante y luego desliza para seleccionar o arrastrar.','Selecciona archivos desde una zona vacía y arrástralos a la otra pantalla.'],
+    ja: ['送信','キャンセル','選択したファイル','受信先：','指を滑らせてカーソルを動かします。少し押してから滑らせると選択やドラッグができます。','空いている所からファイルを囲み、別の画面へドラッグします。'],
+    zh: ['发送','取消','已选文件','接收设备：','滑动手指移动光标。按住片刻再滑动，即可框选或拖动。','从空白处框选文件，然后拖到另一块屏幕。'],
   };
   const iconPaths = {
     document: '<path d="M6 3h8l4 4v14H6zM10 12h4m-4 4h4"/>',
@@ -116,7 +116,7 @@
     ];
     let clip = '', resultOpener = null;
     let selected = new Set(), sceneGesture = null, captureSide = null, captureId = 0;
-    let touchGroupSide = null, draft = null;
+    let touchGroupSide = null, draft = null, relativeGesture = null;
     let shown = null, suppressTrigger = null;
     const announce = (s) => { feedback.textContent = s; };
     const local = (e) => {
@@ -331,6 +331,7 @@
       announce(f.name + ' · ' + received + device(f.side));
     });
     function arm(i) {
+      cancelRelativeTouch();
       end(null,true);
       touchGroupSide = null;
       hideCapture();
@@ -380,6 +381,61 @@
       announce(f.name + ' · ' + captured);
     }
 
+    // The scene owns virtual cursor motion. Only resolve its starting hotspot
+    // here, never the physical finger position, and keep native gestures separate.
+    function beginRelativeTouch(id, side, point) {
+      if (relativeGesture || sceneGesture || captureSide !== null ||
+          ![0,1].includes(side) || !inside(point,glassBounds(side))) return null;
+      const r = bounds();
+      const el = document.elementFromPoint?.(r.left + point.x,r.top + point.y);
+      if (!el || !scene.contains(el) || el.closest('[data-note-launch],.handoff-editor,.handoff-capture-result')) return null;
+      const tile = el.closest('[data-file]');
+      const previous = [...selected];
+      if (tile && desktops[side].icons.contains(tile)) {
+        const f = files.find(f => f.id === tile.dataset.file && f.side === side);
+        if (!f) return null;
+        const items = selected.has(f) ? previous : [f];
+        relativeGesture = {kind:'drag',id,side,point,items,previous};
+        setSelection(items);
+        return 'drag';
+      }
+      if (tile || !captureApi || (el !== scene && !desktops[side].icons.contains(el))) return null;
+      relativeGesture = {kind:'files',id,side,point,previous};
+      return 'files';
+    }
+    function moveRelativeTouch(id, side, point) {
+      const g = relativeGesture;
+      if (!g || g.id !== id) return;
+      if (g.kind === 'files') {
+        const r = captureApi.crop(g.point,point,glassBounds(g.side));
+        if (!r) return;
+        rect.dataset.mode = 'files';
+        place(rect,r); rect.hidden = false;
+        areaSelection(g.side,r);
+      } else {
+        ghost.hidden = false; ghost.textContent = formatGroup(g.items);
+        place(ghost,point);
+      }
+    }
+    function endRelativeTouch(id, side, point, canceled = false) {
+      const g = relativeGesture;
+      if (!g || g.id !== id) return;
+      if (!canceled && g.kind === 'files') moveRelativeTouch(id,side,point);
+      relativeGesture = null;
+      ghost.hidden = rect.hidden = true;
+      if (canceled) { setSelection(g.previous); return; }
+      touchGroupSide = null;
+      if (g.kind === 'files') announce(selected.size ? formatGroup([...selected]) : '');
+      else {
+        const target = 1-g.side;
+        if (side === target && inside(point,percent(extent(glass()[target]),bounds()))) moveFiles(g.items,target);
+        else select(g.side);
+      }
+    }
+    function cancelRelativeTouch() {
+      if (relativeGesture) endRelativeTouch(relativeGesture.id,0,null,true);
+    }
+
     function capturePointer(node, id) { node.setPointerCapture?.(id); }
     function end(e, canceled = false) {
       const g = sceneGesture;
@@ -419,7 +475,7 @@
       if (e.target.closest('[data-file]')) e.preventDefault();
     });
     scene.addEventListener('pointerdown', (e) => {
-      if (e.button !== 0 || e.isPrimary === false || sceneGesture) return;
+      if (e.button !== 0 || e.isPrimary === false || sceneGesture || relativeGesture) return;
       const el = e.target.closest('[data-file]');
       const p = local(e), id = e.pointerId;
       const startSide = [0,1].find(i => inside(p,glassBounds(i)));
@@ -467,7 +523,7 @@
     },true);
     scene.addEventListener('pointerup', (e) => end(e), true);
     for (const name of ['pointercancel','lostpointercapture']) scene.addEventListener(name,e => end(e,true),true);
-    window.addEventListener('blur', () => end(null,true));
+    window.addEventListener('blur', () => { cancelRelativeTouch(); end(null,true); });
     demo.addEventListener('keydown', (e) => {
       // The listener never runs for browser/page shortcuts outside this demo.
       if (captureApi && !e.repeat && !e.isComposing && !e.getModifierState?.('AltGraph') &&
@@ -475,9 +531,9 @@
           (e.code === 'KeyS' || e.key?.toLowerCase() === 's') && demo.contains(document.activeElement)) {
         e.preventDefault(); arm(active()); return;
       }
-      if (e.key === 'Escape' && (captureSide !== null || sceneGesture || touchGroupSide !== null || !result.hidden)) {
+      if (e.key === 'Escape' && (captureSide !== null || sceneGesture || relativeGesture || touchGroupSide !== null || !result.hidden)) {
         const opener = sceneGesture?.el || shotButton;
-        end(null,true); disarm();
+        cancelRelativeTouch(); end(null,true); disarm();
         if (touchGroupSide !== null) setSelection([]);
         touchGroupSide = null;
         if (!result.hidden) hideCapture(true);
@@ -491,11 +547,14 @@
 
     renderFiles();
     return {
+      beginRelativeTouch, moveRelativeTouch, endRelativeTouch,
       selectDevice(i) {
+        cancelRelativeTouch();
         touchGroupSide = null;
         if (captureSide !== null) { end(null, true); arm(i); }
       },
       setDesk(mode) {
+        cancelRelativeTouch();
         end(null, true); disarm(); touchGroupSide = null;
         if (!result.hidden) hideCapture();
         const boxes = glass();

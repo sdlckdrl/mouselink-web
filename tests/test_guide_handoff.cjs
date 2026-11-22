@@ -28,7 +28,7 @@ class E {
   add(option){ this.append(option); if (!this.value) this.value=option.value; }
   setAttribute(k,v){ this.attrs[k]=v; }
   addEventListener(k, fn) { (this.events[k]??=[]).push(fn); }
-  trigger(k,p={}) { for(const fn of this.events[k]||[]) fn({target:this,preventDefault(){},...p}); }
+  trigger(k,p={}) { for(const fn of this.events[k]||[]) fn({type:k,target:this,preventDefault(){},...p}); }
   setPointerCapture(id){ this.pointerCapture=id; }
   getBoundingClientRect(){ return {left:0,top:0,width:100,height:100}; }
   focus(){ this.focused=true; }
@@ -38,7 +38,7 @@ class E {
   }
   querySelectorAll(s) { if (s==='[data-side]') return this.buttons; throw Error(s); }
 }
-function create(locale, device){
+function create(locale, device, workspace){
   let observer;
   const step = new E('step'); step.id = device+'-handoff'; step.dataset.handoff=device;
   step.detail = new E('details'); step.detail.open = true;
@@ -53,13 +53,14 @@ function create(locale, device){
     reach(){this.cb([{target:this.target,isIntersecting:true}]);}
   }
   const window = new E('window'); window.IntersectionObserver=IntersectionObserver;
+  if (workspace) window.OneMouseGuideWorkspace = {mount: () => workspace};
   vm.runInNewContext(script,{window,Image,Option,IntersectionObserver,
     document:{documentElement:{lang:locale},querySelectorAll:()=>[step],createElement:(tag)=>new E(tag)}});
   assert.equal(pending.length,0); observer.reach(); assert.equal(pending.length,1);
   return {step,pending,window};
 }
 function mouse(scene,x,y){scene.trigger('pointermove',{pointerType:'mouse',clientX:x,clientY:y});}
-function finger(scene,k,x,y,id=1){scene.trigger(k,{pointerType:'touch',clientX:x,clientY:y,button:0,pointerId:id});}
+function finger(scene,k,x,y,id=1,timeStamp=0){scene.trigger(k,{pointerType:'touch',clientX:x,clientY:y,button:0,pointerId:id,timeStamp});}
 const bases={android:'android-notification-desk.webp',mac:'file-transfer-desk.webp',windows:'windows-handoff-desk.webp'};
 for(const locale of ['ko','en','es','ja','zh']) for(const device of Object.keys(bases)) test(locale + ': ' + device + ' guide handoff', () => {
   const {step,pending,window} = create(locale,device);
@@ -129,4 +130,45 @@ for(const locale of ['ko','en','es','ja','zh']) for(const device of Object.keys(
     assert.equal(d.dataset.shape,'dot');
     assert.equal(d.dataset.active,'target');
   }
+});
+
+
+test('held touch begins at the unchanged virtual point; quick swipes glide and held drags cross', () => {
+  const interactions = [];
+  let kind = 'files';
+  const {step,pending} = create('ko','mac',{
+    beginRelativeTouch(id,side,point) { interactions.push(['begin',id,side,point]); return kind; },
+    moveRelativeTouch(id,side,point) { interactions.push(['move',id,side,point]); },
+    endRelativeTouch(id,side,point,canceled) { interactions.push(['end',id,side,canceled]); },
+    setDesk() {},
+    selectDevice() {},
+  });
+  pending[0].onload();
+  const [d]=step.detail.sibs;
+  const scene=d.scene;
+  const original=JSON.stringify(d.marker.style);
+  finger(scene,'pointerdown',85,85,1,100);
+  assert.equal(JSON.stringify(d.marker.style),original);
+  finger(scene,'pointermove',75,75,1,200);
+  assert.notEqual(JSON.stringify(d.marker.style),original);
+  finger(scene,'pointermove',65,70,1,500);
+  assert.equal(interactions.length,0,'A swipe that already began quickly must not turn into a drag.');
+  finger(scene,'pointerup',65,70,1,510);
+  const originX=parseFloat(d.marker.style.left), originY=parseFloat(d.marker.style.top);
+  finger(scene,'pointerdown',10,60,2,600);
+  assert.equal(parseFloat(d.marker.style.left),originX);
+  finger(scene,'pointermove',13,61,2,710);
+  assert.equal(interactions.length,0,'Small jitter should not begin the action or move the cursor.');
+  finger(scene,'pointermove',95,41,2,900);
+  assert.deepEqual(interactions[0].slice(0,3),['begin',2,0]);
+  assert.ok(Math.abs(interactions[0][3].x-originX)<0.0001 && Math.abs(interactions[0][3].y-originY)<0.0001);
+  assert.equal(d.dataset.active,'source','Marquee stays on the originating device.');
+  finger(scene,'pointercancel',95,41,2,910);
+  assert.deepEqual(interactions.at(-1),['end',2,0,true]);
+  kind='drag';
+  finger(scene,'pointerdown',15,45,3,1050);
+  finger(scene,'pointermove',45,46,3,1400);
+  assert.equal(d.dataset.active,'target');
+  finger(scene,'pointerup',45,46,3,1420);
+  assert.deepEqual(interactions.at(-1),['end',3,1,false]);
 });

@@ -57,6 +57,8 @@
     },
   };
   const t = languages[document.documentElement.lang.split('-')[0]] || languages.en;
+  const touchDragDelay = 250;
+  const touchSlop = 5;
   const clamp = (v, min = 0, max = 1) => Math.max(min, Math.min(max, v));
   const mix = (a, b, f) => a + (b - a) * f;
   const point = ([a,b,c,d], u, v) => [
@@ -132,12 +134,21 @@
       acquire: (index, x, y) => draw(index, x, y),
       select: (index) => draw(index, .5, .5),
     });
+    function virtualPoint(r = scene.getBoundingClientRect()) {
+      const p = point(desk.glass[side], clamp(u,.015,.985), clamp(v,.015,.98));
+      return {x:p[0] * r.width/100, y:p[1] * r.height/100};
+    }
+    function finishContact(canceled) {
+      if (!contact) return;
+      if (contact.action) workspace?.endRelativeTouch?.(contact.id, side, virtualPoint(), canceled);
+      contact = null;
+    }
     function load(name) {
       const version = ++request, next = new Image();
       next.decoding = 'async';
       next.onload = () => {
         if (version !== request) return;
-        contact = null; mode = name; desk = desks[name];
+        finishContact(true); mode = name; desk = desks[name];
         photo.src = next.src;
         buttons[1].textContent = t[name];
         scene.setAttribute('aria-label', t.title + ': ' + t.source + ' → ' + t[name]);
@@ -166,7 +177,8 @@
     });
     scene.addEventListener('pointerdown', (e) => {
       if (e.target !== scene || e.pointerType === 'mouse' || e.isPrimary === false || contact || e.button !== 0) return;
-      contact = {id:e.pointerId, x:e.clientX, y:e.clientY};
+      contact = {id:e.pointerId, x:e.clientX, y:e.clientY, started:e.timeStamp,
+        moving:false, action:null, origin:side};
       scene.setPointerCapture?.(e.pointerId);
       // Like a trackpad: a new contact never moves the cursor to the finger.
     });
@@ -175,11 +187,27 @@
       if (!r.width || !r.height) return;
       if (e.pointerType !== 'mouse') {
         if (contact?.id !== e.pointerId) return;
-        // Two logical screen widths share this continuous trackpad, independent of
-        // the physical gap and the very different phone / monitor dimensions.
-        const next = clamp(side + u + (e.clientX - contact.x) * 2.3 / r.width, 0, 2);
-        const i = Number(next >= 1);
-        draw(i, next - i, v + (e.clientY - contact.y) * 1.9 / r.height);
+        const dx = e.clientX - contact.x, dy = e.clientY - contact.y;
+        // Like Features, the first deliberate movement distinguishes a quick
+        // cursor swipe from a held drag. Both use the prior virtual position.
+        if (!contact.moving) {
+          if (Math.hypot(dx,dy) < touchSlop) return;
+          contact.moving = true;
+          if (e.timeStamp - contact.started >= touchDragDelay) {
+            contact.action = workspace?.beginRelativeTouch?.(e.pointerId, side, virtualPoint(r));
+          }
+        }
+        const stepX = dx * 2.3 / r.width, nextY = v + dy * 1.9 / r.height;
+        if (contact.action === 'files') {
+          // A marquee is clipped to the display where it was started.
+          draw(contact.origin, u + stepX, nextY);
+        } else {
+          // Relative motion and file drags can cross between the two screens.
+          const next = clamp(side + u + stepX, 0, 2);
+          const i = Number(next >= 1);
+          draw(i, next - i, nextY);
+        }
+        if (contact.action) workspace?.moveRelativeTouch?.(e.pointerId, side, virtualPoint(r));
         contact.x = e.clientX; contact.y = e.clientY;
         return;
       }
@@ -192,9 +220,11 @@
       const [a,b] = local[side];
       if (b >= -.16 && b <= 1.16) draw(side, a, b);
     });
-    const release = (e) => { if (contact?.id === e.pointerId) contact = null; };
+    const release = (e) => {
+      if (contact?.id === e.pointerId) finishContact(e.type !== 'pointerup');
+    };
     for (const event of ['pointerup','pointercancel','lostpointercapture']) scene.addEventListener(event, release);
-    window.addEventListener('blur', () => { contact = null; });
+    window.addEventListener('blur', () => finishContact(true));
     load(mode);
   }
   const steps = document.querySelectorAll('[data-handoff]');

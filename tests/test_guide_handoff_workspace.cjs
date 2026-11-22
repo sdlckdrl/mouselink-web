@@ -31,7 +31,14 @@ class Node {
   setAttribute(k,v) { this.attrs[k] = v; }
   getAttribute(k) { return this.attrs[k]; }
   addEventListener(k,f) { (this.events[k] ||= []).push(f); }
-  closest(s) { return s === '[data-file]' && 'file' in this.dataset ? this : this.parentNode?.closest(s); }
+  closest(s) {
+    const one = selector => selector[0] === '.'
+      ? this.className === selector.slice(1)
+      : selector === '[data-file]' ? 'file' in this.dataset
+      : selector === '[data-note-launch]' ? 'noteLaunch' in this.dataset
+      : false;
+    return s.split(',').some(one) ? this : this.parentNode?.closest(s);
+  }
   querySelectorAll(s) {
     return this.children.flatMap(n => [
       ...(s === '[data-file]' && 'file' in n.dataset ||
@@ -58,7 +65,8 @@ class Node {
 const source = (file) => fs.readFileSync(path.join(__dirname,'..','js',file),'utf8');
 function harness(lang = 'en') {
   const window = new Node('window');
-  const document = {activeElement:null, createElement(tag) {
+  let hitNode = null;
+  const document = {activeElement:null, elementFromPoint: () => hitNode, createElement(tag) {
     const node = new Node(tag);
     node.focus = () => { document.activeElement = node; };
     return node;
@@ -87,7 +95,8 @@ function harness(lang = 'en') {
   const fields = editors.map(e => e.querySelector('textarea'));
   const commands = i => editors[i].querySelector('.handoff-editor-tools').children;
   return {demo,scene,photo,captures,file,notes,point,fields,editors,commands,
-    tools:demo.querySelector('.handoff-tools').children, desks, document, choose: (i) => { side=i; },
+    tools:demo.querySelector('.handoff-tools').children, desks, document, workspace,
+    hit: (node) => { hitNode=node; }, choose: (i) => { side=i; },
     draft:()=>demo.querySelector('.handoff-capture-result'),
     send:()=>demo.querySelector('.handoff-result-actions').children[0],
     cancel:()=>demo.querySelector('.handoff-result-actions').children[1]};
@@ -288,4 +297,41 @@ test('capture preview and its controls open only on main glass, regardless of ca
   h.demo.emit('keydown',{key:'Escape',target:h.draft()});
   assert.equal(h.draft().hidden,true);
   assert.equal(h.desks[0].querySelector('.handoff-icons').inert,false);
+});
+
+
+test('relative touch marquee is bounded, restores canceled selection, and group transfer round-trips', () => {
+  const h = harness(), w = h.workspace;
+  const bounds = left => () => ({left,top:50,width:20,height:20});
+  h.file(0,'photo').getBoundingClientRect = bounds(48);
+  h.file(0,'document').getBoundingClientRect = bounds(84);
+  h.file(0,'archive').getBoundingClientRect = bounds(138);
+  h.file(0,'archive').emit('click',{detail:1});
+  h.hit(h.scene);
+  const a={x:115,y:92}, b={x:41,y:45};
+  assert.equal(w.beginRelativeTouch(7,0,a),'files');
+  w.moveRelativeTouch(7,0,b);
+  assert.equal(h.scene.querySelector('.handoff-selection').hidden,false);
+  assert.equal(h.file(0,'photo').getAttribute('aria-pressed'),'true');
+  w.endRelativeTouch(7,0,b,true);
+  assert.equal(h.file(0,'photo').getAttribute('aria-pressed'),'false');
+  assert.equal(h.file(0,'archive').getAttribute('aria-pressed'),'true');
+  assert.equal(h.scene.querySelector('.handoff-selection').hidden,true);
+  assert.equal(w.beginRelativeTouch(8,0,a),'files');
+  w.endRelativeTouch(8,0,b);
+  h.hit(h.file(0,'photo'));
+  assert.equal(w.beginRelativeTouch(9,0,{x:54,y:56}),'drag');
+  w.moveRelativeTouch(9,1,{x:260,y:95});
+  assert.equal(h.scene.querySelector('.handoff-drag').hidden,false);
+  w.endRelativeTouch(9,1,{x:260,y:95});
+  assert.ok(h.file(1,'photo') && h.file(1,'document') && h.file(0,'archive'));
+  assert.ok(!h.file(0,'photo') && !h.file(0,'document'));
+  h.hit(h.file(1,'document'));
+  assert.equal(w.beginRelativeTouch(10,1,{x:255,y:95}),'drag');
+  w.endRelativeTouch(10,0,{x:75,y:90});
+  assert.ok(h.file(0,'photo') && h.file(0,'document'));
+  assert.equal(h.scene.querySelectorAll('[data-file]').length,3);
+  h.hit(h.notes()[0]);
+  assert.equal(w.beginRelativeTouch(11,0,{x:40,y:60}),null,'Never turn a notepad launcher into a drag start.');
+  assert.equal(h.captures.length,0);
 });
