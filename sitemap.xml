@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://onemouse.pages.dev/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -50,7 +50,7 @@
   </url>
   <url>
     <loc>https://onemouse.pages.dev/en/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -98,7 +98,7 @@
   </url>
   <url>
     <loc>https://onemouse.pages.dev/es/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -146,7 +146,7 @@
   </url>
   <url>
     <loc>https://onemouse.pages.dev/ja/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -194,7 +194,7 @@
   </url>
   <url>
     <loc>https://onemouse.pages.dev/zh/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -276,7 +276,7 @@
   </url>
   <url>
     <loc>https://onemouse.pages.dev/en/download</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
   </url>
   <url>
     <loc>https://onemouse.pages.dev/es/compatibility</loc>
@@ -284,7 +284,7 @@
   </url>
   <url>
     <loc>https://onemouse.pages.dev/es/download</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
   </url>
   <url>
     <loc>https://onemouse.pages.dev/ja/compatibility</loc>
@@ -292,7 +292,7 @@
   </url>
   <url>
     <loc>https://onemouse.pages.dev/ja/download</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
   </url>
   <url>
     <loc>https://onemouse.pages.dev/zh/compatibility</loc>
@@ -300,7 +300,7 @@
   </url>
   <url>
     <loc>https://onemouse.pages.dev/zh/download</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
   </url>
   <url>
     <loc>https://onemouse.pages.dev/features</loc>
@@ -312,7 +312,7 @@
   </url>
   <url>
     <loc>https://onemouse.pages.dev/download</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
   </url>
   <url>
     <loc>https://onemouse.pages.dev/en/features</loc>
