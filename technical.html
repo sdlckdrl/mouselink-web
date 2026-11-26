@@ -91,13 +91,9 @@ html:lang(ko) body{word-break:keep-all}
         <div class="wrap narrow">
           <div class="sec-head">
             <p class="ey">Local First</p>
-            <h2 class="sec">페어링한 내 기기 사이에서만 동작합니다.</h2>
+            <h2 class="sec">연결된 기기끼리 데이터를 직접 주고받습니다.</h2>
           </div>
-          <p class="sec-lead" style="max-width: 64ch">
-            입력·파일·클립보드는 <b>Windows PC와 Android, 다른 Windows PC 또는 Mac</b> 사이에서 직접
-            오갑니다. 외부 서버를 거쳐 계정에 올리는 구조가 아니며, LAN에서는 두 기기가
-            <b>같은 Wi-Fi(같은 공유기)</b>에 있어야 합니다.
-          </p>
+          <p class="sec-lead" style="max-width: 64ch">마우스·키보드 입력, 파일, 클립보드는 연결된 기기 사이에서 직접 오갑니다. LAN 연결은 같은 로컬 네트워크(유선 또는 Wi-Fi)를 사용합니다. Google 계정 연결은 기기 목록과 연결 신호에 계정 서버를 사용하지만, 입력이나 파일을 서버에 올리는 방식은 아닙니다.</p>
         </div>
       </section>
 
@@ -107,9 +103,7 @@ html:lang(ko) body{word-break:keep-all}
           <div class="sec-head">
             <p class="ey">Permissions</p>
             <h2 class="sec">권한은 기능 제공에 필요한 범위로만.</h2>
-            <p class="sec-lead">
-              한꺼번에 요구하지 않고, Android와 Mac에서 해당 기능을 시작할 때 사용자가 직접 켭니다.
-            </p>
+            <p class="sec-lead">Android는 버전에 따라 앱을 열 때 일부 권한을 요청합니다. 접근성과 화면 캡처 등은 아래에서 기능별로 확인할 수 있습니다.</p>
           </div>
           <div class="cards">
             <article class="card accent">
@@ -129,12 +123,9 @@ html:lang(ko) body{word-break:keep-all}
               </p>
             </article>
             <article class="card">
-              <p class="card-lbl">연결 시</p>
+              <p class="card-lbl">권한을 요청하는 시점</p>
               <h3>주변 Wi-Fi 기기</h3>
-              <p>
-                Android 13 이상에서 PC를 찾을 때 요청될 수 있습니다. 앱 실행 시가 아니라 검색하는
-                순간에만 물어봅니다.
-              </p>
+              <p>Android 13 이상에서 권한이 꺼져 있으면 앱을 처음 열 때 ‘주변 Wi-Fi 기기’와 알림 권한을 요청할 수 있습니다. Bluetooth를 켤 때 Android 12 이상에서 묻는 ‘주변 기기’ 권한은 별도입니다.</p>
             </article>
             <article class="card">
               <p class="card-lbl">서비스 시작 시</p>
@@ -168,14 +159,6 @@ html:lang(ko) body{word-break:keep-all}
               </p>
             </article>
             <article class="card">
-              <p class="card-lbl">Mac 공개 연결</p>
-              <h3>로컬 네트워크(LAN)</h3>
-              <p>
-                공식 지원 범위는 Windows와 같은 로컬 네트워크입니다. Mac Bluetooth는 베타로
-                제공되며(Mac 앱 설정에서 켜기), 화면·창 공유는 LAN 전용입니다.
-              </p>
-            </article>
-            <article class="card">
               <p class="card-lbl">Mac 페어링 정보</p>
               <h3>Keychain</h3>
               <p>
@@ -202,7 +185,7 @@ html:lang(ko) body{word-break:keep-all}
                 <b>접근성 데이터를 광고나 화면 수집 용도로 사용하지 않습니다.</b> 입력 전달·원격
                 제어 등 명시된 기능에만 씁니다.
               </li>
-              <li>클립보드·파일 전송은 사용자가 대상을 선택하고 실행할 때만 일어납니다.</li>
+              <li>파일은 보낼 기기를 선택하거나 드래그로 전송합니다. 클립보드 공유가 활성화된 연결에서는 텍스트를 복사할 때마다 전송 대상을 다시 선택할 필요가 없습니다.</li>
               <li>
                 Mac 화면·창 공유 데이터는 사용자가 시작한 로컬 세션에서 Windows로 직접 전송되며 운영
                 서버에 저장하지 않습니다.
@@ -248,50 +231,15 @@ html:lang(ko) body{word-break:keep-all}
             <p class="ey">Support Scope</p>
             <h2 class="sec">지원 플랫폼과 연결 방식</h2>
           </div>
-          <div class="table-wrap">
-            <table class="kt">
-              <thead>
-                <tr>
-                  <th>플랫폼</th>
-                  <th>역할</th>
-                  <th>기본 권한</th>
-                  <th>연결</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Windows 10/11</td>
-                  <td>연결 시작 또는 대상</td>
-                  <td>방화벽 허용</td>
-                  <td>LAN / Bluetooth</td>
-                </tr>
-                <tr>
-                  <td>Android</td>
-                  <td>Windows에서 연결</td>
-                  <td>접근성</td>
-                  <td>LAN / Bluetooth</td>
-                </tr>
-                <tr>
-                  <td>macOS 13+</td>
-                  <td><b>Windows에서 연결</b></td>
-                  <td>손쉬운 사용 · 로컬 네트워크(15+)</td>
-                  <td>LAN</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="panel" style="margin-top: 16px">
+          <div class="panel">
             <ul>
-              <li>
-                Mac 화면·창을 Windows에서 볼 때만 화면 녹화 권한이 추가로 필요하며, 이 기능은 LAN
-                전용입니다.
-              </li>
-              <li>
-                공개 Mac 앱은 Apple Silicon과 macOS 13+를 지원하며 Developer ID로 서명·공증해
-                배포합니다. Mac Bluetooth는 베타로 제공되며 공식 지원 범위는 LAN입니다.
-              </li>
-              <li>USB/ADB를 통한 연결은 공식 지원 범위가 아닙니다.</li>
+              <li>Windows 10·11 (x64): 다른 Windows PC, Android, Mac과 연결할 수 있습니다.</li>
+              <li>Android 8.0 이상: 폰·태블릿에서 Windows의 마우스·키보드 입력을 받을 수 있습니다. Android에서 Windows 원격 화면을 여는 기능은 별도입니다.</li>
+              <li>Apple Silicon Mac · macOS 13 이상: Windows와 LAN 또는 Google 계정으로 연결하거나 Bluetooth(베타)를 사용할 수 있습니다. Mac에서 Windows로 마우스·키보드를 보내는 Bluetooth 설정도 지원합니다.</li>
+              <li>Bluetooth는 지원 조합에서 Wi-Fi나 Google 로그인 없이 쓸 수 있는 베타입니다. 원격 화면 영상은 Bluetooth로 전송하지 않습니다. Windows에서 Mac 화면·창을 보려면 같은 로컬 네트워크와 Mac의 화면 녹화 권한이 필요합니다.</li>
+              <li>USB/ADB 연결은 공식 지원 범위가 아닙니다.</li>
             </ul>
+            <p><a class="text-link" href="/guide">기기별 연결 가이드</a></p>
           </div>
         </div>
       </section>
@@ -306,6 +254,13 @@ html:lang(ko) body{word-break:keep-all}
           </div>
           <h3>앱 업데이트</h3>
           <div class="log">
+            <div class="log-item">
+              <time datetime="2026-11-24">2026.11.24</time>
+              <div>
+                <p><b><a href="https://github.com/sdlckdrl/mouselink-web/releases/tag/v1.7.1">Windows 1.7.1</a></b></p>
+                <p>Windows 10·11 x64용 일반 설치 파일(EXE)을 공개했습니다.</p>
+              </div>
+            </div>
             <div class="log-item">
               <time datetime="2026-11-19">2026.11.19</time>
               <div>

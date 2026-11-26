@@ -91,13 +91,9 @@ html:lang(ko) body{word-break:keep-all}
         <div class="wrap narrow">
           <div class="sec-head">
             <p class="ey">Local First</p>
-            <h2 class="sec">It works only between your own paired devices.</h2>
+            <h2 class="sec">Data travels directly between connected devices.</h2>
           </div>
-          <p class="sec-lead" style="max-width: 64ch">
-            Input, files, and clipboard travel directly between
-            <b>your Windows PC and a paired Android device, Windows PC, or Mac</b>. Nothing is
-            uploaded to an account through an outside server.
-          </p>
+          <p class="sec-lead" style="max-width: 64ch">Mouse and keyboard input, files, and clipboard data travel directly between connected devices. A LAN connection uses the same local network (wired or Wi-Fi). Google account linking uses an account service for device lists and connection signals, not for uploading input or files.</p>
         </div>
       </section>
 
@@ -107,10 +103,7 @@ html:lang(ko) body{word-break:keep-all}
           <div class="sec-head">
             <p class="ey">Permissions</p>
             <h2 class="sec">Only what a feature actually needs.</h2>
-            <p class="sec-lead">
-              Nothing is requested all at once. Android and Mac ask for each permission when the
-              related feature starts.
-            </p>
+            <p class="sec-lead">Android may ask for some permissions when the app opens. See below for feature-specific requirements, such as accessibility and screen capture.</p>
           </div>
           <div class="cards">
             <article class="card accent">
@@ -131,12 +124,9 @@ html:lang(ko) body{word-break:keep-all}
               </p>
             </article>
             <article class="card">
-              <p class="card-lbl">When connecting</p>
+              <p class="card-lbl">When the app asks</p>
               <h3>Nearby Wi-Fi devices</h3>
-              <p>
-                May be requested on Android 13 and later when finding your PC. It's asked the moment
-                you search, not when the app launches.
-              </p>
+              <p>On Android 13 and later, the app can ask for Nearby Wi-Fi devices and notification permissions when you first open it. On Android 12 and later, Bluetooth mode can ask for the separate Nearby devices permission.</p>
             </article>
             <article class="card">
               <p class="card-lbl">When the service starts</p>
@@ -183,14 +173,6 @@ html:lang(ko) body{word-break:keep-all}
                 system audio.
               </p>
             </article>
-            <article class="card">
-              <p class="card-lbl">Mac Bluetooth · beta</p>
-              <h3>Bluetooth</h3>
-              <p>
-                Mac Bluetooth is available as a beta (enable it in the Mac app settings). LAN is
-                the officially supported way to connect a Mac and share its screen or windows.
-              </p>
-            </article>
           </div>
         </div>
       </section>
@@ -212,10 +194,7 @@ html:lang(ko) body{word-break:keep-all}
                 <b>Accessibility data is never used for advertising or screen collection.</b> It's
                 used only for the stated features, such as passing input and remote control.
               </li>
-              <li>
-                Clipboard and file transfers happen only when you choose a target and start them
-                yourself.
-              </li>
+              <li>Send files by choosing a device or dragging them to it. With clipboard sharing active, you do not have to pick a destination each time you copy text.</li>
               <li>
                 The Mac app stores its paired session key in the macOS Keychain. Clearing pairing
                 removes the trusted connection.
@@ -264,26 +243,13 @@ html:lang(ko) body{word-break:keep-all}
           </div>
           <div class="panel">
             <ul>
-              <li>
-                <b>Windows 10/11:</b> connections are started and managed here; another Windows PC
-                can also be a connection target.
-              </li>
-              <li>
-                <b>Android:</b> connects as a target over same-network <b>Wi-Fi/LAN</b> or direct
-                <b>Bluetooth</b>.
-              </li>
-              <li>
-                <b>macOS 13 or later:</b> the public Apple Silicon build accepts LAN connections
-                initiated and managed from Windows. Input, file and clipboard transfer, edge drag,
-                and screen sharing are supported over LAN. Mac Bluetooth is available as a beta;
-                LAN remains the officially supported path.
-              </li>
-              <li>Not included: connecting over USB/ADB is outside the official support scope.</li>
-              <li>
-                Windows-to-Windows supports two-way file, folder, and clipboard transfer.
-                Windows-to-Mac file and clipboard flows are available over LAN.
-              </li>
+              <li>Windows 10 or 11 (x64): connects with another Windows PC, Android, or Mac.</li>
+              <li>Android 8.0 or later: phones and tablets can receive Windows mouse and keyboard input. Opening a Windows remote screen from Android is a separate feature.</li>
+              <li>Apple Silicon Mac with macOS 13 or later: connect to Windows over LAN, with a Google account, or over Bluetooth (beta). Mac-to-Windows mouse and keyboard input can also be set up over Bluetooth.</li>
+              <li>Bluetooth is a beta option for supported pairs and needs neither Wi-Fi nor Google sign-in. It does not carry remote video. To view a Mac screen or window from Windows, use the same local network and grant Screen Recording permission on the Mac.</li>
+              <li>USB/ADB connections are not officially supported.</li>
             </ul>
+            <p><a class="text-link" href="/en/guide">Connection guides by device</a></p>
           </div>
         </div>
       </section>
@@ -298,6 +264,13 @@ html:lang(ko) body{word-break:keep-all}
           </div>
           <h3>App updates</h3>
           <div class="log">
+            <div class="log-item">
+              <time datetime="2026-11-24">2026.11.24</time>
+              <div>
+                <p><b><a href="https://github.com/sdlckdrl/mouselink-web/releases/tag/v1.7.1">Windows 1.7.1</a></b></p>
+                <p>Released the standard Windows 10/11 x64 installer (EXE).</p>
+              </div>
+            </div>
             <div class="log-item">
               <time datetime="2026-11-19">2026.11.19</time>
               <div>

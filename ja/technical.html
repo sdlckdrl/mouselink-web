@@ -92,13 +92,9 @@ html:lang(ko) body{word-break:keep-all}
         <div class="wrap narrow">
           <div class="sec-head">
             <p class="ey">Local First</p>
-            <h2 class="sec">ペアリングした自分のデバイス同士でだけ動作します。</h2>
+            <h2 class="sec">データは接続したデバイス間で直接やり取りします。</h2>
           </div>
-          <p class="sec-lead" style="max-width: 64ch">
-            入力・ファイル・クリップボードは、<b
-              >Windowsと、ペアリングしたAndroid・Windows PC・Mac</b
-            >の間で直接やり取りされます。MacはLANで接続します。外部サーバーを経由してアカウントにアップロードする仕組みではありません。
-          </p>
+          <p class="sec-lead" style="max-width: 64ch">マウス・キーボード入力、ファイル、クリップボードは接続したデバイス間で直接やり取りします。LAN接続では同じローカルネットワーク（有線またはWi-Fi）を使います。Googleアカウント連携では機器一覧と接続シグナルにアカウントサービスを使いますが、入力やファイルはアップロードしません。</p>
         </div>
       </section>
 
@@ -107,12 +103,9 @@ html:lang(ko) body{word-break:keep-all}
         <div class="wrap narrow">
           <div class="sec-head">
             <p class="ey">接続の方向</p>
-            <h2 class="sec">接続はWindowsから開始・管理します。</h2>
+            <h2 class="sec">デバイス別の接続ガイド</h2>
           </div>
-          <p class="sec-lead">
-            Windows 10/11がAndroid・別のWindows PC・macOS 13以降のApple Silicon Macへ入力を送ります。
-            Macの公開サポートはLAN接続です。
-          </p>
+          <p class="sec-lead">Windows 10・11（x64）：別のWindows PC、Android、Macに接続できます。 Apple Silicon搭載Mac・macOS 13以降：LAN、Googleアカウント、またはBluetooth（ベータ）でWindowsに接続できます。BluetoothでMacからWindowsへマウス・キーボード入力を送る設定もできます。</p>
         </div>
       </section>
 
@@ -122,9 +115,7 @@ html:lang(ko) body{word-break:keep-all}
           <div class="sec-head">
             <p class="ey">Permissions</p>
             <h2 class="sec">権限は機能の提供に必要な範囲だけに。</h2>
-            <p class="sec-lead">
-              一度にまとめて求めるのではなく、その機能を始めるときにAndroidまたはMac上でユーザー自身が許可します。
-            </p>
+            <p class="sec-lead">Androidのバージョンによっては、アプリを開くと一部の権限を求められます。アクセシビリティや画面キャプチャなど、機能ごとの条件は以下を確認してください。</p>
           </div>
           <div class="cards">
             <article class="card accent">
@@ -142,12 +133,9 @@ html:lang(ko) body{word-break:keep-all}
               </p>
             </article>
             <article class="card">
-              <p class="card-lbl">接続時</p>
+              <p class="card-lbl">権限を求められたとき</p>
               <h3>付近のWi-Fiデバイス</h3>
-              <p>
-                Android
-                13以降でPCを探すときに求められることがあります。アプリ起動時ではなく、検索するその瞬間にだけ確認します。
-              </p>
+              <p>Android 13以降では、アプリの初回起動時に付近のWi-Fiデバイスと通知の権限を求めることがあります。Android 12以降でBluetoothを有効にするときの「付近のデバイス」は別の権限です。</p>
             </article>
             <article class="card">
               <p class="card-lbl">サービス開始時</p>
@@ -188,13 +176,6 @@ html:lang(ko) body{word-break:keep-all}
                 LANでMacの画面やウィンドウをWindowsに表示するときだけ必要です。Bluetoothでは画面共有を提供しません。
               </p>
             </article>
-            <article class="card">
-              <p class="card-lbl">Mac Bluetooth・ベータ</p>
-              <h3>Bluetooth</h3>
-              <p>
-                MacのBluetooth接続はベータ版として提供されます（Macアプリの設定でオン、既定はオフ）。公式サポートのMac接続はLANです。
-              </p>
-            </article>
           </div>
         </div>
       </section>
@@ -216,9 +197,7 @@ html:lang(ko) body{word-break:keep-all}
                 <b>アクセシビリティのデータを広告や画面収集の目的で使いません。</b
                 >入力の伝達やリモート操作など、明示された機能にだけ使います。
               </li>
-              <li>
-                クリップボード・ファイルの送信は、ユーザーが相手を選んで実行するときにだけ行われます。
-              </li>
+              <li>ファイルは相手を選ぶか、相手の画面にドラッグして送信します。クリップボード共有が有効な接続では、テキストをコピーするたびに送信先を選ぶ必要はありません。</li>
               <li>
                 Macのアクセシビリティ、画面収録と、macOS
                 15以降のローカルネットワーク許可状態は、接続準備と機能の利用可否を表示するためにMac上で確認します。
@@ -266,15 +245,13 @@ html:lang(ko) body{word-break:keep-all}
           </div>
           <div class="panel">
             <ul>
-              <li>
-                Macの入力・ファイル・境界ドラッグ・画面共有はLANで利用できます。MacのBluetooth接続はベータ版です（公式サポートはLAN）。Mac画面・ウィンドウ共有はLAN専用です。
-              </li>
-              <li>対象外：USB/ADBを介した接続は公式のサポート範囲ではありません。</li>
-              <li>
-                Windows PC同士ではメイン /
-                サブの役割を設定し、ファイルとクリップボードを直接やり取りします。
-              </li>
+              <li>Windows 10・11（x64）：別のWindows PC、Android、Macに接続できます。</li>
+              <li>Android 8.0以降：スマートフォン・タブレットでWindowsのマウス・キーボード入力を受け取れます。AndroidからWindowsのリモート画面を開く機能は別です。</li>
+              <li>Apple Silicon搭載Mac・macOS 13以降：LAN、Googleアカウント、またはBluetooth（ベータ）でWindowsに接続できます。BluetoothでMacからWindowsへマウス・キーボード入力を送る設定もできます。</li>
+              <li>Bluetoothは対応する組み合わせで使えるベータ版です。Wi-FiやGoogleログインは不要ですが、リモート映像は送信できません。WindowsからMacの画面・ウインドウを見る場合は、同じローカルネットワークとMacの画面収録権限が必要です。</li>
+              <li>USB/ADBでの接続は公式サポートの対象外です。</li>
             </ul>
+            <p><a class="text-link" href="/ja/guide">デバイス別の接続ガイド</a></p>
           </div>
         </div>
       </section>
@@ -289,6 +266,13 @@ html:lang(ko) body{word-break:keep-all}
           </div>
           <h3>アプリの更新</h3>
           <div class="log">
+            <div class="log-item">
+              <time datetime="2026-11-24">2026.11.24</time>
+              <div>
+                <p><b><a href="https://github.com/sdlckdrl/mouselink-web/releases/tag/v1.7.1">Windows 1.7.1</a></b></p>
+                <p>Windows 10・11 x64向けの通常インストーラー（EXE）を公開しました。</p>
+              </div>
+            </div>
             <div class="log-item">
               <time datetime="2026-11-19">2026.11.19</time>
               <div>

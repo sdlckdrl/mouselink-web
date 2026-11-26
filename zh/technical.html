@@ -92,12 +92,9 @@ html:lang(ko) body{word-break:keep-all}
         <div class="wrap narrow">
           <div class="sec-head">
             <p class="ey">Local First</p>
-            <h2 class="sec">只在你配对过的设备之间运行。</h2>
+            <h2 class="sec">数据在已连接的设备之间直接传输。</h2>
           </div>
-          <p class="sec-lead" style="max-width: 64ch">
-            输入、文件和剪贴板，只在<b>你自己的 Windows 端与已配对的连接目标</b
-            >之间往来，不会经过外部服务器上传到某个账号。Mac 的公开支持使用本地 LAN 连接。
-          </p>
+          <p class="sec-lead" style="max-width: 64ch">鼠标和键盘输入、文件及剪贴板数据在已连接设备之间直接传输。LAN 连接使用同一个本地网络（有线或 Wi-Fi）。Google 账号连接通过账号服务处理设备列表和连接信令，不会将输入或文件上传到服务器。</p>
         </div>
       </section>
 
@@ -106,12 +103,9 @@ html:lang(ko) body{word-break:keep-all}
         <div class="wrap narrow">
           <div class="sec-head">
             <p class="ey">Connection Direction</p>
-            <h2 class="sec">由 Windows 发起并管理连接。</h2>
+            <h2 class="sec">按设备查看连接指南</h2>
           </div>
-          <p class="sec-lead">
-            Windows 10/11 向 Android、另一台 Windows PC 和 macOS 13+ Apple 芯片 Mac 发送输入。
-            Mac 的官方支持范围为 LAN 连接。
-          </p>
+          <p class="sec-lead">Windows 10 或 11（x64）：可连接另一台 Windows 电脑、Android 设备或 Mac。 搭载 Apple 芯片且运行 macOS 13 及以上的 Mac：可通过 LAN、Google 账号或蓝牙（测试版）连接 Windows。也可以设置通过蓝牙将 Mac 的鼠标和键盘输入发送给 Windows。</p>
         </div>
       </section>
 
@@ -121,7 +115,7 @@ html:lang(ko) body{word-break:keep-all}
           <div class="sec-head">
             <p class="ey">Permissions</p>
             <h2 class="sec">权限只用于提供功能所需的范围。</h2>
-            <p class="sec-lead">Android 与 Mac 权限都在使用相应功能时请求，不会一次性全部申请。</p>
+            <p class="sec-lead">视 Android 版本而定，应用可能在打开时请求部分权限。无障碍功能、屏幕捕获等功能所需的权限请参见下文。</p>
           </div>
           <div class="cards">
             <article class="card accent">
@@ -141,12 +135,9 @@ html:lang(ko) body{word-break:keep-all}
               </p>
             </article>
             <article class="card">
-              <p class="card-lbl">Android · 连接时</p>
+              <p class="card-lbl">应用请求权限时</p>
               <h3>附近的 Wi-Fi 设备</h3>
-              <p>
-                在 Android 13 及以上查找 Windows
-                时可能会请求。不是在启动应用时，而只在搜索的那一刻才询问。
-              </p>
+              <p>Android 13 及以上版本可能在首次打开应用时请求附近的 Wi-Fi 设备权限和通知权限。Android 12 及以上版本启用蓝牙时请求的“附近的设备”是另一项权限。</p>
             </article>
             <article class="card">
               <p class="card-lbl">启动服务时</p>
@@ -186,11 +177,6 @@ html:lang(ko) body{word-break:keep-all}
                 屏幕或窗口时才需要。一般输入、文件和剪贴板功能不需要该权限。画面共享仅支持 LAN。
               </p>
             </article>
-            <article class="card">
-              <p class="card-lbl">Mac Bluetooth · 测试版</p>
-              <h3>Bluetooth</h3>
-              <p>Mac 蓝牙作为测试版提供（在 Mac 应用设置中开启）。官方支持的 Mac 连接与画面共享方式为 LAN。</p>
-            </article>
           </div>
         </div>
       </section>
@@ -210,7 +196,7 @@ html:lang(ko) body{word-break:keep-all}
                 <b>不会把无障碍数据用于广告或屏幕采集用途。</b
                 >只用于输入传递、远程控制等明示的功能。
               </li>
-              <li>剪贴板和文件传输，只在你选定对象并执行时才会发生。</li>
+              <li>可以选择目标设备发送文件，也可以直接拖过去。启用剪贴板共享后，每次复制文字都不必重新选择目标。</li>
             </ul>
           </div>
         </div>
@@ -230,7 +216,7 @@ html:lang(ko) body{word-break:keep-all}
                 <li>Windows 端与连接目标位于个人路由器下的同一 Wi-Fi（2.4/5GHz 均可）</li>
                 <li>允许设备间通信的网络</li>
                 <li>在 Windows 防火墙中允许 OneMouse 的入站连接</li>
-                <li>连接 Mac，以及查看 Mac 屏幕或窗口时使用 LAN</li>
+                <li>从 Windows 查看 Mac 屏幕或窗口时使用 LAN</li>
               </ul>
             </div>
             <div class="panel">
@@ -255,24 +241,13 @@ html:lang(ko) body{word-break:keep-all}
           </div>
           <div class="panel">
             <ul>
-              <li>
-                <b>Mac：</b>支持 macOS 13+ Apple 芯片机型，连接由 Windows
-                端发起并管理，当前公开支持使用 LAN。
-              </li>
-              <li>
-                <b>Mac 权限：</b>“辅助功能”是接收输入所必需的；macOS 15+ 使用 LAN
-                发现时需允许“本地网络”，macOS 13/14 可能不会显示该项目。
-              </li>
-              <li>
-                <b>连接：</b>当前公开功能支持同一网络下的 Wi-Fi/LAN，以及 Android、Windows PC
-                等受支持设备间的 Bluetooth。Mac 蓝牙作为测试版提供；官方支持范围为 LAN，Mac 画面共享仅支持 LAN。
-              </li>
-              <li>不含：通过 USB/ADB 的连接不在官方支持范围内。</li>
-              <li>
-                Windows↔Windows 可在两台电脑之间直接交换输入与数据。Windows↔Mac 可通过 LAN
-                交换输入、文件和剪贴板。
-              </li>
+              <li>Windows 10 或 11（x64）：可连接另一台 Windows 电脑、Android 设备或 Mac。</li>
+              <li>Android 8.0 及以上：手机和平板可以接收 Windows 的鼠标和键盘输入。从 Android 打开 Windows 远程画面是另一项功能。</li>
+              <li>搭载 Apple 芯片且运行 macOS 13 及以上的 Mac：可通过 LAN、Google 账号或蓝牙（测试版）连接 Windows。也可以设置通过蓝牙将 Mac 的鼠标和键盘输入发送给 Windows。</li>
+              <li>蓝牙是受支持设备之间的测试版连接方式，无需 Wi-Fi 或 Google 登录，但不传输远程视频。要在 Windows 上查看 Mac 屏幕或窗口，两台设备须在同一本地网络，且 Mac 须授予屏幕录制权限。</li>
+              <li>USB/ADB 连接不在官方支持范围内。</li>
             </ul>
+            <p><a class="text-link" href="/zh/guide">按设备查看连接指南</a></p>
           </div>
         </div>
       </section>
@@ -287,6 +262,13 @@ html:lang(ko) body{word-break:keep-all}
           </div>
           <h3>应用更新</h3>
           <div class="log">
+            <div class="log-item">
+              <time datetime="2026-11-24">2026.11.24</time>
+              <div>
+                <p><b><a href="https://github.com/sdlckdrl/mouselink-web/releases/tag/v1.7.1">Windows 1.7.1</a></b></p>
+                <p>已发布适用于 Windows 10/11 x64 的常规安装程序（EXE）。</p>
+              </div>
+            </div>
             <div class="log-item">
               <time datetime="2026-11-19">2026.11.19</time>
               <div>

@@ -15,6 +15,8 @@ REPLY_TERMS = {
 
 
 RELEASES = (
+    ("2026-11-24", "Windows 1.7.1",
+     "https://github.com/sdlckdrl/mouselink-web/releases/tag/v1.7.1"),
     ("2026-11-19", "Windows 1.7.0",
      "https://github.com/sdlckdrl/mouselink-web/releases/tag/v1.7.0"),
     ("2026-11-18", "Android · Google Play",
@@ -94,7 +96,7 @@ class UpdateLogTest(unittest.TestCase):
         for locale in LOCALES:
             with self.subTest(locale=locale or "ko"):
                 prefix = f"/{locale}" if locale else ""
-                self.assertEqual("2026-11-20", dates[
+                self.assertEqual("2026-11-26", dates[
                     f"https://onemouse.pages.dev{prefix}/technical"])
 
 

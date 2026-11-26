@@ -91,13 +91,9 @@ html:lang(ko) body{word-break:keep-all}
         <div class="wrap narrow">
           <div class="sec-head">
             <p class="ey">Primero local</p>
-            <h2 class="sec">Funciona solo entre tus propios dispositivos vinculados.</h2>
+            <h2 class="sec">Los datos van directamente entre los dispositivos conectados.</h2>
           </div>
-          <p class="sec-lead" style="max-width: 64ch">
-            La entrada, los archivos y el portapapeles viajan directamente entre <b>tu PC con
-            Windows y el dispositivo vinculado, ya sea Android, otro PC con Windows o un Mac</b>. No
-            se sube nada a ninguna cuenta a través de un servidor externo.
-          </p>
+          <p class="sec-lead" style="max-width: 64ch">El ratón, el teclado, los archivos y el portapapeles se comunican directamente entre los dispositivos conectados. Para la conexión LAN se usa la misma red local, por cable o Wi-Fi. La cuenta de Google usa un servicio para la lista de dispositivos y las señales de conexión, no para subir las pulsaciones ni los archivos.</p>
         </div>
       </section>
 
@@ -107,10 +103,7 @@ html:lang(ko) body{word-break:keep-all}
           <div class="sec-head">
             <p class="ey">Permisos</p>
             <h2 class="sec">Solo lo que cada función necesita de verdad.</h2>
-            <p class="sec-lead">
-              No se piden todos de golpe. Android y Mac solicitan cada permiso cuando arranca la
-              función correspondiente.
-            </p>
+            <p class="sec-lead">Según la versión de Android, algunos permisos se solicitan al abrir la app. Abajo se indican los requisitos de cada función, como accesibilidad o captura de pantalla.</p>
           </div>
           <div class="cards">
             <article class="card accent">
@@ -132,12 +125,9 @@ html:lang(ko) body{word-break:keep-all}
               </p>
             </article>
             <article class="card">
-              <p class="card-lbl">Al conectar</p>
+              <p class="card-lbl">Cuando la app los solicita</p>
               <h3>Dispositivos Wi-Fi cercanos</h3>
-              <p>
-                Puede solicitarse en Android 13 o posterior al buscar tu PC. Se pide justo en el
-                momento de la búsqueda, no al abrir la app.
-              </p>
+              <p>En Android 13 o posterior, la app puede pedir permisos para dispositivos Wi-Fi cercanos y notificaciones al abrirla por primera vez. Al activar Bluetooth en Android 12 o posterior, puede pedir el permiso independiente de dispositivos cercanos.</p>
             </article>
             <article class="card">
               <p class="card-lbl">Al iniciarse el servicio</p>
@@ -187,15 +177,6 @@ html:lang(ko) body{word-break:keep-all}
                 audio del sistema.
               </p>
             </article>
-            <article class="card">
-              <p class="card-lbl">Bluetooth en Mac · beta</p>
-              <h3>Bluetooth</h3>
-              <p>
-                El Bluetooth en Mac está disponible como beta (actívalo en los ajustes de la app de
-                Mac). La LAN es la vía con soporte oficial para conectar un Mac y compartir su
-                pantalla o sus ventanas.
-              </p>
-            </article>
           </div>
         </div>
       </section>
@@ -221,10 +202,7 @@ html:lang(ko) body{word-break:keep-all}
                 pantallas.</b> Solo se usan para las funciones indicadas, como transmitir la entrada
                 y el control remoto.
               </li>
-              <li>
-                Las transferencias de portapapeles y de archivos solo se producen cuando eliges un
-                destino y las inicias tú.
-              </li>
+              <li>Para enviar archivos, elige un dispositivo o arrástralos hasta él. Con el portapapeles compartido activo, no tienes que escoger el destino cada vez que copias texto.</li>
               <li>
                 La app de Mac guarda la clave de sesión vinculada en el Llavero de macOS. Al borrar
                 la vinculación se elimina la conexión de confianza.
@@ -277,30 +255,13 @@ html:lang(ko) body{word-break:keep-all}
           </div>
           <div class="panel">
             <ul>
-              <li>
-                <b>Windows 10/11:</b> desde aquí se inician y se gestionan las conexiones; otro PC
-                con Windows también puede ser un destino de conexión.
-              </li>
-              <li>
-                <b>Android:</b> se conecta como destino por <b>Wi-Fi/LAN</b> en la misma red o por
-                <b>Bluetooth</b> directo.
-              </li>
-              <li>
-                <b>macOS 13 o posterior:</b> la versión pública para Apple Silicon acepta conexiones
-                LAN iniciadas y gestionadas desde Windows. Por LAN se admiten la entrada, la
-                transferencia de archivos y de portapapeles, el arrastre por los bordes y la
-                pantalla compartida. El Bluetooth en Mac está en beta; la LAN sigue siendo la vía
-                con soporte oficial.
-              </li>
-              <li>
-                No incluido: la conexión por USB/ADB queda fuera del alcance del soporte oficial.
-              </li>
-              <li>
-                Entre Windows y Windows se admite la transferencia bidireccional de archivos,
-                carpetas y portapapeles. Entre Windows y Mac, los archivos y el portapapeles van por
-                LAN.
-              </li>
+              <li>Windows 10 u 11 (x64): se conecta con otro PC Windows, Android o Mac.</li>
+              <li>Android 8.0 o posterior: un teléfono o una tableta puede recibir el ratón y el teclado de Windows. Ver la pantalla remota de Windows desde Android es una función aparte.</li>
+              <li>Mac con chip Apple y macOS 13 o posterior: se conecta con Windows por LAN, con una cuenta de Google o por Bluetooth (beta). También se puede configurar el envío de ratón y teclado de Mac a Windows por Bluetooth.</li>
+              <li>Bluetooth es una opción beta para los dispositivos compatibles y no requiere Wi-Fi ni iniciar sesión en Google. No transmite vídeo remoto. Para ver una pantalla o ventana del Mac en Windows, usa la misma red local y concede al Mac permiso de grabación de pantalla.</li>
+              <li>La conexión por USB/ADB no tiene soporte oficial.</li>
             </ul>
+            <p><a class="text-link" href="/es/guide">Guías de conexión por dispositivo</a></p>
           </div>
         </div>
       </section>
@@ -315,6 +276,13 @@ html:lang(ko) body{word-break:keep-all}
           </div>
           <h3>Actualizaciones de la aplicación</h3>
           <div class="log">
+            <div class="log-item">
+              <time datetime="2026-11-24">2026.11.24</time>
+              <div>
+                <p><b><a href="https://github.com/sdlckdrl/mouselink-web/releases/tag/v1.7.1">Windows 1.7.1</a></b></p>
+                <p>Se publicó el instalador estándar (EXE) para Windows 10/11 x64.</p>
+              </div>
+            </div>
             <div class="log-item">
               <time datetime="2026-11-19">2026.11.19</time>
               <div>
