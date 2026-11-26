@@ -130,7 +130,7 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
   <div class="hero"><div class="wrap">
     <p class="tag">OneMouse 연결 가이드</p>
     <h1>어떤 기기를 연결할까요?</h1>
-    <p>마우스와 키보드가 연결된 Windows PC에서 시작해요. 제어할 기기를 골라 같은 공유기에서 연결하거나, <a href="#connect-account">Google 계정으로 내 기기 찾기</a>를 확인하세요.</p>
+    <p>마우스와 키보드가 연결된 Windows PC에서 시작해요. 같은 네트워크로 연결할 기기를 아래에서 고르거나, <a href="#connect-account">Google 계정</a> 또는 <a href="#bluetooth">Wi‑Fi 없이 Bluetooth(베타)</a>를 선택하세요.</p>
     <nav class="device-nav" aria-label="연결할 기기 유형">
       <a href="#android" data-device="android"><span class="number" aria-hidden="true">01</span>Android 폰·태블릿</a>
       <a href="#mac" data-device="mac"><span class="number" aria-hidden="true">02</span>Mac</a>
@@ -149,7 +149,7 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
     <section id="files" data-legacy-link aria-label="파일·클립보드"><h2>파일·클립보드</h2><p>요약과 상세 가이드에서 이어서 확인하세요.</p><p><a href="/features#files">기능 안내 보기</a> · <a href="/guide-reference#files">상세 가이드 보기</a></p></section>
     <section id="screenshots" data-legacy-link aria-label="스크린샷 캡처·전송"><h2>스크린샷 캡처·전송</h2><p>요약과 상세 가이드에서 이어서 확인하세요.</p><p><a href="/features#screenshots">기능 안내 보기</a> · <a href="/guide-reference#screenshots">상세 가이드 보기</a></p></section>
     <section id="notifications" data-legacy-link aria-label="폰 알림·답장"><h2>폰 알림·답장</h2><p>요약과 상세 가이드에서 이어서 확인하세요.</p><p><a href="/features#notifications">기능 안내 보기</a> · <a href="/guide-reference#notifications">상세 가이드 보기</a></p></section>
-    <section id="bluetooth" data-legacy-link aria-label="Bluetooth로 연결"><h2>Bluetooth로 연결</h2><p>이 주제의 자세한 설명은 기존 페이지에서 볼 수 있어요.</p><p><a href="#connect-bluetooth">Android</a> · <a href="#windows-bluetooth">Windows PC</a> · <a href="#mac-bluetooth">Mac</a> · <a href="/guide-reference#bluetooth">상세 가이드 보기</a></p></section>
+    <section id="bluetooth" data-legacy-link aria-label="Bluetooth로 연결"><h2>Bluetooth로 연결</h2><p>Bluetooth는 베타예요. Wi‑Fi, Google 로그인, QR·인증번호 등록 없이 연결할 수 있어요.</p><p><a href="#connect-bluetooth">Android</a> · <a href="#windows-bluetooth">Windows PC</a> · <a href="#mac-bluetooth">Mac</a> · <a href="/guide-reference#bluetooth">상세 가이드 보기</a></p></section>
     <section id="permissions" data-legacy-link aria-label="기기별 권한"><h2>기기별 권한</h2><p>요약과 상세 가이드에서 이어서 확인하세요.</p><p><a href="/features#permissions">기능 안내 보기</a> · <a href="/guide-reference#permissions">상세 가이드 보기</a></p></section>
     <section class="panel" id="android" data-device-panel aria-labelledby="android-title">
       <p class="pill">추천 · 같은 공유기에서 연결</p>
@@ -172,7 +172,7 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
           <details class="handoff-original"><summary>배치 그림 보기</summary><figure class="shot"><a href="/assets/pairing/pc-position-ko.webp" aria-label="Android 기기 배치 예시 화면 크게 보기"><img src="/assets/pairing/pc-position-ko.webp" width="2240" height="1800" alt="Windows OneMouse에서 Android를 PC 오른쪽에 배치한 화면" loading="lazy"></a><figcaption><span class="shot-label">앱 화면 예시</span>같은 방향으로 마우스를 넘겨요.</figcaption></figure></details></li>
       </ol>
       <details id="alternatives"><summary>다른 연결 방법: Bluetooth (베타)</summary>
-        <div id="connect-bluetooth"><h3>Bluetooth로 연결 (베타)</h3><p>두 기기의 Bluetooth를 켜세요. Android OneMouse의 <strong>블루투스 모드 시작</strong>과 Windows Bluetooth 설정의 기기 페어링이 필요해요. 연결한 뒤 OneMouse 기기 목록에서 상태와 배치를 확인하세요. 원격 동영상은 Bluetooth로 전송되지 않아요.</p><p><a href="/compatibility">연결별 사용 범위</a></p>
+        <div id="connect-bluetooth"><h3>Bluetooth로 연결 (베타)</h3><p>Bluetooth는 베타예요. Wi‑Fi, Google 로그인, QR·인증번호 등록 없이 연결할 수 있어요.</p><ol><li>두 기기의 Bluetooth를 켜고, Android OneMouse 설정에서 <strong>블루투스 모드 시작</strong>을 누르세요. Android 12 이상에서 ‘주변 기기’ 권한을 요청하면 허용하세요. 클릭과 타이핑을 하려면 OneMouse 접근성도 켜야 해요.</li><li>Windows의 Bluetooth 설정에서 폰을 한 번 페어링하세요.</li><li>Windows OneMouse에서 <strong>기기 관리 → 다른 방법으로 연결 → 블루투스</strong>를 열고 폰의 연결 스위치를 켜세요. 연결되면 기기 배치를 맞추고 커서를 넘겨 보세요.</li></ol><p>Bluetooth로는 원격 화면 영상을 볼 수 없어요.</p><p><a href="/compatibility">연결별 사용 범위</a></p>
           <figure class="shot shot--detail"><a href="/assets/preview/guide/android-bluetooth-entry-ko.webp" aria-label="Android OneMouse의 다른 방법으로 연결에서 Bluetooth 설정을 여는 실제 화면 크게 보기"><img src="/assets/preview/guide/android-bluetooth-entry-ko.webp" width="1048" height="303" alt="Android OneMouse의 다른 방법으로 연결에서 Bluetooth 설정을 여는 실제 화면" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">실제 앱 · 이전 버전</span>홈의 ‘다른 방법으로 연결’을 펼치고 ‘Bluetooth 설정’을 누르세요.</figcaption></figure><figure class="shot shot--example"><a href="/assets/preview/guide/android-bt-start-example.svg" aria-label="Android OneMouse의 블루투스 모드 시작 버튼 크게 보기"><img src="/assets/preview/guide/android-bt-start-example.svg" width="480" height="281" alt="Android OneMouse 설정의 연결 영역과 블루투스 모드 시작 버튼" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">앱 화면 재현</span>설정의 ‘블루투스 모드 시작’을 누르세요.</figcaption></figure></div>
       </details>
     </section>
@@ -236,7 +236,7 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
         <p>Google 로그인이나 공유기는 필요 없어요. 원격 화면을 보려면 같은 네트워크를 사용하세요.</p>
         <figure class="shot shot--example"><a href="/assets/preview/guide/windows-bluetooth-setup-ko.svg"><img src="/assets/preview/guide/windows-bluetooth-setup-ko.svg" width="800" height="460" alt="Windows OneMouse에서 Bluetooth를 켜고 입력을 받는 쪽으로 바꾸는 카드" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">앱 화면 재현</span>Windows OneMouse에서 Bluetooth를 켜고 입력을 받는 쪽으로 바꾸는 카드</figcaption></figure>
       </details>
-      <div class="tip"><strong>상대 PC가 보이지 않나요?</strong> 두 앱이 켜져 있고 같은 네트워크인지 먼저 확인하세요. <a href="/help#discovery">연결 문제 해결 보기</a></div>
+      <div class="tip"><strong>상대 PC가 보이지 않나요?</strong> LAN 연결에서만 두 PC가 같은 네트워크인지 확인하세요. Bluetooth라면 같은 네트워크 대신 시스템 페어링, 받는 PC의 입력 받기, 보내는 PC의 연결 스위치를 확인하세요. <a href="/help#discovery">연결 문제 해결 보기</a></div>
     </section>
     <section class="panel" id="cursor-check" aria-labelledby="cursor-check-title">
       <h2 id="cursor-check-title">연결됐는데 커서가 안 넘어가나요?</h2>

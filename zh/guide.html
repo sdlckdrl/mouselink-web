@@ -132,7 +132,7 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
   <div class="hero"><div class="wrap">
     <p class="tag">OneMouse 连接指南</p>
     <h1>你要连接哪台设备？</h1>
-    <p>请从接有鼠标和键盘的 Windows 电脑开始。选择要控制的设备，连接到同一个路由器，或者查看 <a href="#connect-account">如何通过 Google 账号找到自己的设备</a>。</p>
+    <p>请从接有鼠标和键盘的 Windows 电脑开始。在下方选择要通过本地网络连接的设备，也可以使用 <a href="#connect-account">Google 账号</a>或<a href="#bluetooth">无需 Wi-Fi 的蓝牙（测试版）</a>。</p>
     <nav class="device-nav" aria-label="要连接的设备类型">
       <a href="#android" data-device="android"><span class="number" aria-hidden="true">01</span>Android 手机或平板</a>
       <a href="#mac" data-device="mac"><span class="number" aria-hidden="true">02</span>Mac</a>
@@ -152,7 +152,7 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
     <section id="files" data-legacy-link aria-label="文件与剪贴板"><h2>文件与剪贴板</h2><p>查看详细指南了解具体步骤。</p><p><a href="/zh/guide-reference#files">查看详细指南</a></p></section>
     <section id="screenshots" data-legacy-link aria-label="截取与发送截图"><h2>截取与发送截图</h2><p>查看详细指南了解具体步骤。</p><p><a href="/zh/guide-reference#screenshots">查看详细指南</a></p></section>
     <section id="notifications" data-legacy-link aria-label="手机通知与回复"><h2>手机通知与回复</h2><p>查看详细指南了解具体步骤。</p><p><a href="/zh/guide-reference#notifications">查看详细指南</a></p></section>
-    <section id="bluetooth" data-legacy-link aria-label="通过蓝牙连接"><h2>通过蓝牙连接</h2><p>有关此主题的详细说明，请查看现有页面。</p><p><a href="#connect-bluetooth">Android</a> · <a href="#windows-bluetooth">Windows PC</a> · <a href="#mac-bluetooth">Mac</a> · <a href="/zh/guide-reference#bluetooth">查看详细指南</a></p></section>
+    <section id="bluetooth" data-legacy-link aria-label="通过蓝牙连接"><h2>通过蓝牙连接</h2><p>蓝牙为测试版，无需 Wi-Fi、Google 登录、二维码或配对码注册。</p><p><a href="#connect-bluetooth">Android</a> · <a href="#windows-bluetooth">Windows PC</a> · <a href="#mac-bluetooth">Mac</a> · <a href="/zh/guide-reference#bluetooth">查看详细指南</a></p></section>
     <section id="permissions" data-legacy-link aria-label="各设备所需权限"><h2>各设备所需权限</h2><p>查看详细指南了解具体步骤。</p><p><a href="/zh/guide-reference#permissions">查看详细指南</a></p></section>
     <section class="panel" id="android" data-device-panel aria-labelledby="android-title">
       <p class="pill">推荐 · 连接到同一个路由器</p>
@@ -175,7 +175,7 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
           <details class="handoff-original"><summary>查看布局示例</summary><figure class="shot"><a href="/assets/pairing/pc-position-zh.webp" aria-label="放大 Android 设备布局示例"><img src="/assets/pairing/pc-position-zh.webp" width="2240" height="1800" alt="Windows OneMouse 中将 Android 设备放在电脑右侧的界面" loading="lazy"></a><figcaption><span class="shot-label">应用界面示例（韩语）</span>把光标移向设备所在的方向。</figcaption></figure></details></li>
       </ol>
       <details id="alternatives"><summary>其他连接方式：蓝牙（测试版）</summary>
-        <div id="connect-bluetooth"><h3>通过蓝牙连接（测试版）</h3><p>打开两台设备的蓝牙。在 Android OneMouse 中选择 <strong>启动蓝牙模式</strong>，然后在 Windows 的蓝牙设置中配对设备。连接后，在 OneMouse 的设备列表中确认状态与布局。蓝牙不能传输远程视频。</p><p><a href="/zh/technical">各连接方式的功能范围</a></p>
+        <div id="connect-bluetooth"><h3>通过蓝牙连接（测试版）</h3><p>蓝牙为测试版，无需 Wi-Fi、Google 登录、二维码或配对码注册。</p><ol><li>开启两台设备的蓝牙。在 Android 版 OneMouse 设置中点击<strong>启动蓝牙模式</strong>。Android 12 或更高版本如提示访问“附近的设备”，请允许。要点击和输入，也需开启 OneMouse 的无障碍服务。</li><li>在 Windows 的蓝牙设置中将手机配对一次。</li><li>在 Windows 版 OneMouse 中打开<strong>设备管理 → 其他连接方式 → 蓝牙</strong>，开启手机的连接开关。连接后调整设备布局，再将光标移到手机。</li></ol><p>蓝牙不传输远程屏幕画面。</p><p><a href="/zh/technical">各连接方式的功能范围</a></p>
           <figure class="shot shot--detail"><a href="/assets/preview/guide/android-bluetooth-entry-ko.webp" aria-label="放大 Android OneMouse 中从“通过其他方式连接”打开蓝牙设置的实际界面"><img src="/assets/preview/guide/android-bluetooth-entry-ko.webp" width="1048" height="303" alt="Android OneMouse 中从“通过其他方式连接”打开蓝牙设置的实际界面" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">应用实拍 · 旧版本（韩语）</span>在首页展开“通过其他方式连接”，然后点击“蓝牙设置”。</figcaption></figure><figure class="shot shot--example"><a href="/assets/preview/guide/android-bt-start-example.svg" aria-label="放大 Android OneMouse 中的“启动蓝牙模式”按钮"><img src="/assets/preview/guide/android-bt-start-example.svg" width="480" height="281" alt="Android OneMouse 设置中的连接区域和“启动蓝牙模式”按钮" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">应用界面示意（韩语）</span>点击设置中的“启动蓝牙模式”。</figcaption></figure></div>
       </details>
     </section>
@@ -239,7 +239,7 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
         <p>无需登录 Google，也不需要路由器。要查看远程画面，请使用同一个网络。</p>
         <figure class="shot shot--example"><a href="/assets/preview/guide/windows-bluetooth-setup-zh.svg"><img src="/assets/preview/guide/windows-bluetooth-setup-zh.svg" width="800" height="460" alt="Windows 版 OneMouse 中开启蓝牙并切换为接收鼠标和键盘输入的位置" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">应用界面复现</span>Windows 版 OneMouse 中开启蓝牙并切换为接收鼠标和键盘输入的位置</figcaption></figure>
       </details>
-      <div class="tip"><strong>找不到另一台电脑？</strong> 先确认两台电脑上的应用都在运行，而且都连到了同一个网络。 <a href="/zh/help#connection-symptoms">查看连接排查步骤</a></div>
+      <div class="tip"><strong>找不到另一台电脑？</strong> 只有使用 LAN 时才需确认两台电脑在同一网络。使用蓝牙时，检查系统配对、接收端的输入接收模式，以及发送端的连接开关。 <a href="/zh/help#connection-symptoms">查看连接排查步骤</a></div>
     </section>
     <section class="panel" id="cursor-check" aria-labelledby="cursor-check-title">
       <h2 id="cursor-check-title">已经连接，但光标移不到另一块屏幕？</h2>

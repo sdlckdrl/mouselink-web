@@ -132,7 +132,7 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
   <div class="hero"><div class="wrap">
     <p class="tag">OneMouse 接続ガイド</p>
     <h1>どの端末を接続しますか？</h1>
-    <p>マウスとキーボードをつないだ Windows PC から始めます。操作したい端末を選び、同じルーターで接続するか、 <a href="#connect-account">Google アカウントで自分の端末を探す方法</a>をご確認ください。</p>
+    <p>マウスとキーボードをつないだ Windows PC から始めます。ローカルネットワークで接続する端末を下から選ぶか、<a href="#connect-account">Google アカウント</a>、または <a href="#bluetooth">Wi-Fi 不要の Bluetooth（ベータ版）</a>を使います。</p>
     <nav class="device-nav" aria-label="接続する端末の種類">
       <a href="#android" data-device="android"><span class="number" aria-hidden="true">01</span>Android スマートフォン・タブレット</a>
       <a href="#mac" data-device="mac"><span class="number" aria-hidden="true">02</span>Mac</a>
@@ -152,7 +152,7 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
     <section id="files" data-legacy-link aria-label="ファイルとクリップボード"><h2>ファイルとクリップボード</h2><p>詳しくは既存のガイドをご覧ください。</p><p><a href="/ja/guide-reference#files">既存の詳しいガイドを見る</a></p></section>
     <section id="screenshots" data-legacy-link aria-label="スクリーンショットの撮影・送信"><h2>スクリーンショットの撮影・送信</h2><p>詳しくは既存のガイドをご覧ください。</p><p><a href="/ja/guide-reference#screenshots">既存の詳しいガイドを見る</a></p></section>
     <section id="notifications" data-legacy-link aria-label="スマートフォンの通知と返信"><h2>スマートフォンの通知と返信</h2><p>詳しくは既存のガイドをご覧ください。</p><p><a href="/ja/guide-reference#notifications">既存の詳しいガイドを見る</a></p></section>
-    <section id="bluetooth" data-legacy-link aria-label="Bluetooth で接続"><h2>Bluetooth で接続</h2><p>詳しくは既存のページをご覧ください。</p><p><a href="#connect-bluetooth">Android</a> · <a href="#windows-bluetooth">Windows PC</a> · <a href="#mac-bluetooth">Mac</a> · <a href="/ja/guide-reference#bluetooth">既存の詳しいガイドを見る</a></p></section>
+    <section id="bluetooth" data-legacy-link aria-label="Bluetooth で接続"><h2>Bluetooth で接続</h2><p>Bluetooth はベータ版です。Wi-Fi、Google ログイン、QR コードや認証番号での登録は不要です。</p><p><a href="#connect-bluetooth">Android</a> · <a href="#windows-bluetooth">Windows PC</a> · <a href="#mac-bluetooth">Mac</a> · <a href="/ja/guide-reference#bluetooth">既存の詳しいガイドを見る</a></p></section>
     <section id="permissions" data-legacy-link aria-label="端末ごとに必要な権限"><h2>端末ごとに必要な権限</h2><p>詳しくは既存のガイドをご覧ください。</p><p><a href="/ja/guide-reference#permissions">既存の詳しいガイドを見る</a></p></section>
     <section class="panel" id="android" data-device-panel aria-labelledby="android-title">
       <p class="pill">おすすめ · 同じルーターで接続</p>
@@ -175,7 +175,7 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
           <details class="handoff-original"><summary>配置の例を見る</summary><figure class="shot"><a href="/assets/pairing/pc-position-ja.webp" aria-label="Android 端末の配置例を拡大"><img src="/assets/pairing/pc-position-ja.webp" width="2240" height="1800" alt="Windows 版 OneMouse で Android を PC の右に配置した画面" loading="lazy"></a><figcaption><span class="shot-label">アプリの画面例（韓国語）</span>実際に端末を置いた方向へカーソルを移動します。</figcaption></figure></details></li>
       </ol>
       <details id="alternatives"><summary>別の接続方法：Bluetooth（ベータ版）</summary>
-        <div id="connect-bluetooth"><h3>Bluetooth で接続（ベータ版）</h3><p>両方の端末で Bluetooth をオンにします。Android 版 OneMouse の <strong>Bluetooth モードを開始</strong>と、Windows の Bluetooth 設定でのペアリングが必要です。接続後は OneMouse の端末一覧で接続状態と配置を確認します。リモート画面の映像は Bluetooth では送信できません。</p><p><a href="/ja/technical">接続方法ごとに使える機能</a></p>
+        <div id="connect-bluetooth"><h3>Bluetooth で接続（ベータ版）</h3><p>Bluetooth はベータ版です。Wi-Fi、Google ログイン、QR コードや認証番号での登録は不要です。</p><ol><li>両方の端末で Bluetooth をオンにし、Android 版 OneMouse の設定で <strong>Bluetooth モードを開始</strong>します。Android 12 以降で「付近のデバイス」の権限を求められたら許可してください。クリックや文字入力には OneMouse のユーザー補助もオンにします。</li><li>Windows の Bluetooth 設定でスマートフォンを一度ペアリングします。</li><li>Windows 版 OneMouse の <strong>デバイス管理 → その他の接続方法 → Bluetooth</strong> を開き、スマートフォンの接続スイッチをオンにします。接続後、端末の配置を合わせてカーソルを移動します。</li></ol><p>Bluetooth ではリモート画面の映像を転送できません。</p><p><a href="/ja/technical">接続方法ごとに使える機能</a></p>
           <figure class="shot shot--detail"><a href="/assets/preview/guide/android-bluetooth-entry-ko.webp" aria-label="Android 版 OneMouse の「別の方法で接続」から Bluetooth 設定を開く実際の画面を拡大"><img src="/assets/preview/guide/android-bluetooth-entry-ko.webp" width="1048" height="303" alt="Android 版 OneMouse の「別の方法で接続」から Bluetooth 設定を開く実際の画面" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">旧バージョンの実際の画面（韓国語）</span>ホームで「別の方法で接続」を開き、「Bluetooth 設定」をタップします。</figcaption></figure><figure class="shot shot--example"><a href="/assets/preview/guide/android-bt-start-example.svg" aria-label="Android 版 OneMouse の Bluetooth モード開始ボタンを拡大"><img src="/assets/preview/guide/android-bt-start-example.svg" width="480" height="281" alt="Android 版 OneMouse の接続設定と Bluetooth モード開始ボタン" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">アプリ画面の再現（韓国語）</span>設定で「Bluetooth モードを開始」をタップします。</figcaption></figure></div>
       </details>
     </section>
@@ -239,7 +239,7 @@ a[aria-haspopup="dialog"]:has(img){cursor:zoom-in}
         <p>Google ログインやルーターは不要です。リモート画面には同じネットワークを使います。</p>
         <figure class="shot shot--example"><a href="/assets/preview/guide/windows-bluetooth-setup-ja.svg"><img src="/assets/preview/guide/windows-bluetooth-setup-ja.svg" width="800" height="460" alt="Windows 版 OneMouse で Bluetooth をオンにし、入力の受信に切り替える場所" loading="lazy" decoding="async"></a><figcaption><span class="shot-label">アプリ画面の再現</span>Windows 版 OneMouse で Bluetooth をオンにし、入力の受信に切り替える場所</figcaption></figure>
       </details>
-      <div class="tip"><strong>相手の PC が表示されませんか？</strong> まず両方のアプリが開いていて、同じネットワークに接続されていることを確認します。 <a href="/ja/help#connection-symptoms">接続のトラブルシューティング</a></div>
+      <div class="tip"><strong>相手の PC が表示されませんか？</strong> 同じネットワークかどうかを確認するのは LAN 接続の場合だけです。Bluetooth では、OS でのペアリング、受信側 PC の入力受信モード、送信側 PC の接続スイッチを確認してください。 <a href="/ja/help#connection-symptoms">接続のトラブルシューティング</a></div>
     </section>
     <section class="panel" id="cursor-check" aria-labelledby="cursor-check-title">
       <h2 id="cursor-check-title">接続できたのにカーソルが移動しませんか？</h2>
