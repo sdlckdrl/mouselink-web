@@ -33,7 +33,7 @@ class KoreanHomeCutoverTest(unittest.TestCase):
         robots = [n.attrs.get("content") for n in nodes if n.attrs.get("name") == "robots"]
         self.assertEqual(["index,follow,max-image-preview:large"], robots)
         alternate = {n.attrs.get("hreflang") for n in nodes if n.attrs.get("rel") == "alternate"}
-        self.assertEqual({"ko", "en", "ja", "es", "zh", "x-default"}, alternate)
+        self.assertEqual({"ko", "en", "ja", "es", "zh", "pt-BR", "de", "zh-TW", "fr", "id", "x-default"}, alternate)
         self.assertTrue(any(n.attrs.get("name") == "naver-site-verification" for n in nodes))
         self.assertTrue(any(d.get("@type") == "SoftwareApplication" for d in structured_data(home)))
         for file in ("guide.html", "guide-demo.html"):

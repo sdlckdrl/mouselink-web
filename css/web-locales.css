@@ -1,0 +1,12 @@
+body{margin:0;color:var(--preview-ink);background:var(--preview-bg);color-scheme:light;font:1rem/1.65 system-ui,sans-serif}
+.locale-main{width:min(1040px,calc(100% - 36px));margin:auto;overflow-wrap:anywhere}
+.locale-skip{position:absolute;top:-200px;left:12px;padding:8px;background:#fff;z-index:30}.locale-skip:focus{top:8px}
+.locale-hero{padding:clamp(28px,6vw,64px) 0 24px;display:grid;gap:20px;align-items:center}
+.locale-hero h1{font-size:clamp(2rem,5.6vw,3.55rem);line-height:1.14;margin:0;letter-spacing:-.04em}
+.locale-hero p{color:var(--preview-muted);max-width:59ch}
+.locale-hero .locale-tag{color:var(--preview-accent);font-size:.86rem;font-weight:780;letter-spacing:.04em}
+.locale-hero img{width:100%;height:auto;display:block;border-radius:16px;border:1px solid var(--preview-line)}
+.locale-content{display:grid;gap:12px;align-items:start}.locale-card{padding:16px;border:1px solid var(--preview-line);border-radius:14px;background:var(--preview-panel);min-width:0}.locale-card h2{margin:0;font-size:1.25rem;line-height:1.3}.locale-card p{margin:.5rem 0 0;color:var(--preview-muted)}.locale-card summary{cursor:pointer;font-weight:740;min-height:44px;padding:8px 0}.locale-note{margin:25px 0 36px;color:var(--preview-muted);font-size:.93rem}
+.locale-btn{display:inline-flex;align-items:center;min-height:44px;max-width:100%;margin:5px 6px 0 0;padding:6px 12px;border:1px solid #758a98;border-radius:9px;background:#fff;color:var(--preview-ink);font-size:.92rem;font-weight:750;text-decoration:none;line-height:1.35;justify-self:start}.locale-btn.primary{background:var(--preview-accent);border-color:var(--preview-accent);color:#fff}.locale-btn:hover{box-shadow:0 0 0 2px var(--preview-line)}.locale-btn:focus-visible,.locale-card summary:focus-visible{outline:3px solid var(--preview-accent);outline-offset:3px}
+.preview-header .preview-nav{min-width:0;flex-wrap:wrap}.preview-header .one-language-select select{max-width:min(48vw,190px)}
+@media(min-width:760px){.locale-hero.with-image{grid-template-columns:1.1fr 1fr}.locale-content{grid-template-columns:repeat(2,minmax(0,1fr))}}

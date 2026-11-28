@@ -330,4 +330,36 @@
     <loc>https://onemouse.pages.dev/zh/features</loc>
     <lastmod>2026-11-20</lastmod>
   </url>
+  <!-- additional-locales:start -->
+  <url><loc>https://onemouse.pages.dev/pt-br/</loc></url>
+  <url><loc>https://onemouse.pages.dev/pt-br/features</loc></url>
+  <url><loc>https://onemouse.pages.dev/pt-br/guide</loc></url>
+  <url><loc>https://onemouse.pages.dev/pt-br/help</loc></url>
+  <url><loc>https://onemouse.pages.dev/pt-br/download</loc></url>
+  <url><loc>https://onemouse.pages.dev/pt-br/compatibility</loc></url>
+  <url><loc>https://onemouse.pages.dev/de/</loc></url>
+  <url><loc>https://onemouse.pages.dev/de/features</loc></url>
+  <url><loc>https://onemouse.pages.dev/de/guide</loc></url>
+  <url><loc>https://onemouse.pages.dev/de/help</loc></url>
+  <url><loc>https://onemouse.pages.dev/de/download</loc></url>
+  <url><loc>https://onemouse.pages.dev/de/compatibility</loc></url>
+  <url><loc>https://onemouse.pages.dev/zh-tw/</loc></url>
+  <url><loc>https://onemouse.pages.dev/zh-tw/features</loc></url>
+  <url><loc>https://onemouse.pages.dev/zh-tw/guide</loc></url>
+  <url><loc>https://onemouse.pages.dev/zh-tw/help</loc></url>
+  <url><loc>https://onemouse.pages.dev/zh-tw/download</loc></url>
+  <url><loc>https://onemouse.pages.dev/zh-tw/compatibility</loc></url>
+  <url><loc>https://onemouse.pages.dev/fr/</loc></url>
+  <url><loc>https://onemouse.pages.dev/fr/features</loc></url>
+  <url><loc>https://onemouse.pages.dev/fr/guide</loc></url>
+  <url><loc>https://onemouse.pages.dev/fr/help</loc></url>
+  <url><loc>https://onemouse.pages.dev/fr/download</loc></url>
+  <url><loc>https://onemouse.pages.dev/fr/compatibility</loc></url>
+  <url><loc>https://onemouse.pages.dev/id/</loc></url>
+  <url><loc>https://onemouse.pages.dev/id/features</loc></url>
+  <url><loc>https://onemouse.pages.dev/id/guide</loc></url>
+  <url><loc>https://onemouse.pages.dev/id/help</loc></url>
+  <url><loc>https://onemouse.pages.dev/id/download</loc></url>
+  <url><loc>https://onemouse.pages.dev/id/compatibility</loc></url>
+  <!-- additional-locales:end -->
 </urlset>

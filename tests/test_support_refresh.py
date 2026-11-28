@@ -183,7 +183,16 @@ class SupportRefreshTest(unittest.TestCase):
                                           (reference, groups | new_questions | {"faq-title"})):
                     for option in document.by_id("one-language-picker").children:
                         if option.tag == "option":
-                            self.assertTrue(anchors <= set(option.attrs["data-fragments"].split()))
+                            fragments = set(option.attrs["data-fragments"].split())
+                            if option.attrs["value"] in {"pt-BR", "de", "zh-TW", "fr", "id"}:
+                                # The added concise FAQ only preserves anchors it actually renders.
+                                route = option.attrs["data-language-route"].lstrip("/")
+                                target = Document(ROOT / (route + ".html"))
+                                self.assertIn("faq-device-reset", fragments)
+                                for ident in fragments:
+                                    self.assertIsNotNone(target.by_id(ident))
+                            else:
+                                self.assertTrue(anchors <= fragments)
 
     def test_device_reset_faq_links_to_localized_reconnection_steps(self):
         for locale in LOCALES:
