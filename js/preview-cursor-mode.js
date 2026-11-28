@@ -10,15 +10,21 @@
   const surfaceByPointer = new Map();
   let lastTouchClick = null;
 
-  const labels = {
+  const labels = {/* web-demo-locales */
+    "pt-br":["Deslize o dedo para mover o cursor. Toque para clicar no ponto indicado.","Para arrastar, toque e segure um instante antes de deslizar.","Com o botão direito ativado, deslize o dedo para desenhar um gesto."],
+    "de":["Streiche mit einem Finger, um den Mauszeiger zu bewegen. Tippe, um an seiner Position zu klicken.","Halte zum Ziehen kurz gedrückt, bevor du streichst.","Streiche bei aktiviertem Rechtsklick mit dem Finger, um eine Geste zu zeichnen."],
+    "zh-tw":["滑動手指來移動游標，輕點即可在游標所指處按一下。","若要拖曳，先按住片刻再滑動。","啟用右鍵模式後，滑動手指畫出手勢。"],
+    "fr":["Glissez un doigt pour déplacer le pointeur. Touchez pour cliquer à l’endroit pointé.","Pour faire glisser un élément, maintenez brièvement le doigt appuyé avant de le déplacer.","Lorsque le clic droit est activé, glissez le doigt pour dessiner un geste."],
+    "id":["Geser satu jari untuk menggerakkan kursor. Ketuk untuk mengeklik titik yang ditunjuk.","Untuk menyeret, tahan sebentar sebelum menggeser.","Saat klik kanan aktif, geser jari untuk menggambar gestur."],
+  /* end-web-demo-locales */
     ko: ['손가락을 밀면 커서가 움직여요. 짧게 탭하면 커서 위치를 클릭해요.', '드래그하려면 잠깐 누른 뒤 미세요.', '우클릭 모드에서는 손가락을 밀어 방향을 그리세요.'],
     en: ['Slide a finger to move the cursor. Tap to click where it is pointing.', 'To drag, hold briefly before sliding.', 'With right-click armed, slide your finger to draw a gesture.'],
     ja: ['指を滑らせるとカーソルが動き、タップするとカーソル位置をクリックします。', 'ドラッグするには少し押さえてから指を滑らせます。', '右クリックを有効にしたら、指を滑らせてジェスチャーを描きます。'],
     zh: ['滑动手指移动光标，轻点即可在光标位置点击。', '如需拖动，请先按住片刻，再滑动。', '开启右键模式后，滑动手指绘制手势。'],
     es: ['Desliza un dedo para mover el cursor. Toca para hacer clic donde apunta.', 'Para arrastrar, mantén el dedo un momento antes de deslizarlo.', 'Con el clic derecho activado, desliza el dedo para dibujar el gesto.'],
   };
-  const language = document.documentElement.lang.toLowerCase().split('-')[0];
-  const copy = labels[language] || labels.en;
+  const language = document.documentElement.lang.toLowerCase();
+  const copy = labels[language] || labels[language.split('-')[0]] || labels.en;
   const inside = (rect, x, y) => rect.width > 0 && rect.height > 0
     && x >= rect.left && x < rect.right && y >= rect.top && y < rect.bottom;
 

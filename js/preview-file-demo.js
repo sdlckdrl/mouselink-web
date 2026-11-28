@@ -1,6 +1,12 @@
 (() => {
   'use strict';
-  const messages = {
+  const messages = {/* web-demo-locales */
+    "pt-br":{"names":["Foto da viagem.jpg","Documento de trabalho.pdf","Nota.txt"],"folder":"Explorador de Arquivos · Pasta compartilhada","windows":"Arquivos de exemplo do Windows","mac":"Mesa do Mac","hint":"Nesta demonstração, os arquivos são movidos, não copiados. Comece a arrastar em uma área vazia de qualquer uma das telas para selecionar vários arquivos. Depois, arraste um deles para a outra tela para mover o grupo.","move":"Mover arquivos selecionados","toMac":"Mover para o Mac","toWindows":"Mover para o Windows","reset":"Reiniciar demonstração","resetStatus":"Todos os arquivos estão de volta no Windows.","selected":"Selecionados: {n}.","marquee":"Selecionados: {n}. Arraste um dos arquivos selecionados para movê-los juntos.","none":"Nenhum arquivo selecionado.","moved":"{files} · Movido para {side}.","invalid":"Solte os arquivos dentro da outra tela para movê-los."},
+    "de":{"names":["Reisefoto.jpg","Arbeitsdokument.pdf","Notiz.txt"],"folder":"Explorer · Freigegebener Ordner","windows":"Windows-Beispieldateien","mac":"Mac-Schreibtisch","hint":"In dieser Demo werden Dateien verschoben, nicht kopiert. Ziehe von einer freien Stelle auf einem der Bildschirme aus, um mehrere Dateien auszuwählen. Ziehe dann eine der ausgewählten Dateien auf den anderen Bildschirm.","move":"Ausgewählte Dateien verschieben","toMac":"Auf den Mac verschieben","toWindows":"Auf den Windows-PC verschieben","reset":"Demo zurücksetzen","resetStatus":"Alle Dateien sind wieder auf dem Windows-PC.","selected":"Ausgewählt: {n}.","marquee":"Ausgewählt: {n}. Ziehe eine der ausgewählten Dateien, um alle zusammen zu verschieben.","none":"Keine Dateien ausgewählt.","moved":"{files} · Verschoben nach {side}.","invalid":"Lasse die Dateien auf dem anderen Bildschirm los, um sie zu verschieben."},
+    "zh-tw":{"names":["旅遊照片.jpg","工作文件.pdf","筆記.txt"],"folder":"檔案總管 · 共用資料夾","windows":"Windows 範例檔案","mac":"Mac 桌面","hint":"此示範會移動而不是複製檔案。從任一螢幕的空白處拖曳可框選多個檔案，再將其中一個拖到另一個螢幕，就能一起移動。","move":"移動選取的檔案","toMac":"移到 Mac","toWindows":"移到 Windows","reset":"重設示範","resetStatus":"所有檔案都回到 Windows 了。","selected":"已選取 {n} 個。","marquee":"已選取 {n} 個。拖曳其中一個檔案即可一起移動。","none":"未選取檔案。","moved":"{files} · 已移至 {side}。","invalid":"把檔案放在另一個螢幕內即可移動。"},
+    "fr":{"names":["Photo de voyage.jpg","Document de travail.pdf","Note.txt"],"folder":"Explorateur de fichiers · Dossier partagé","windows":"Fichiers Windows de démonstration","mac":"Bureau du Mac","hint":"Dans cette démo, les fichiers sont déplacés et non copiés. Sur l’un ou l’autre écran, faites glisser depuis une zone vide pour sélectionner plusieurs fichiers, puis déplacez-en un sur l’autre écran pour déplacer tout le groupe.","move":"Déplacer les fichiers sélectionnés","toMac":"Déplacer vers le Mac","toWindows":"Déplacer vers Windows","reset":"Réinitialiser la démo","resetStatus":"Tous les fichiers sont de retour sur Windows.","selected":"Sélection : {n}.","marquee":"Sélection : {n}. Faites glisser l’un des fichiers sélectionnés pour les déplacer ensemble.","none":"Aucun fichier sélectionné.","moved":"{files} · Déplacement vers {side}.","invalid":"Déposez les fichiers sur l’autre écran pour les déplacer."},
+    "id":{"names":["Foto perjalanan.jpg","Dokumen kerja.pdf","Catatan.txt"],"folder":"File Explorer · Folder bersama","windows":"Contoh file Windows","mac":"Desktop Mac","hint":"Dalam demo ini, file dipindahkan, bukan disalin. Seret dari bagian kosong di salah satu layar untuk memilih beberapa file. Kemudian seret salah satu file terpilih ke layar lainnya untuk memindahkan semuanya.","move":"Pindahkan file terpilih","toMac":"Pindah ke Mac","toWindows":"Pindah ke Windows","reset":"Reset demo","resetStatus":"Semua file kembali ke Windows.","selected":"Dipilih: {n}.","marquee":"Dipilih: {n}. Seret salah satu file terpilih untuk memindahkan semuanya.","none":"Tidak ada file yang dipilih.","moved":"{files} · Dipindahkan ke {side}.","invalid":"Lepaskan file di dalam layar lainnya untuk memindahkannya."},
+  /* end-web-demo-locales */
     "ko": {
       "names": [
         "여행 사진.jpg",
@@ -107,8 +113,8 @@
       "invalid": "请在另一块屏幕内松开以移动文件。"
     }
   };
-  const language = document.documentElement.lang.toLowerCase().split('-')[0];
-  const copy = messages[language] || messages.en;
+  const language = document.documentElement.lang.toLowerCase();
+  const copy = messages[language] || messages[language.split('-')[0]] || messages.en;
   const files = [
     {id: 'photo', name: copy.names[0], type: 'photo', mark: 'JPG'},
     {id: 'work', name: copy.names[1], type: 'pdf', mark: 'PDF'},

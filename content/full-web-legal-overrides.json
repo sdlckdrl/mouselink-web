@@ -1,0 +1,975 @@
+{
+  "Terms": {
+    "pt-BR": "Termos",
+    "de": "Bedingungen",
+    "zh-TW": "條款",
+    "fr": "Conditions",
+    "id": "Ketentuan"
+  },
+  "Terms of Use": {
+    "pt-BR": "Termos de uso",
+    "de": "Nutzungsbedingungen",
+    "zh-TW": "使用條款",
+    "fr": "Conditions d’utilisation",
+    "id": "Ketentuan penggunaan"
+  },
+  "These terms describe the basic conditions for using the OneMouse app and website across a Windows PC, Android, another Windows PC, and an Apple Silicon Mac running macOS 13+.": {
+    "pt-BR": "Estes termos descrevem as condições básicas de uso do aplicativo e do site OneMouse com um PC Windows, um dispositivo Android, outro PC Windows e um Mac com Apple Silicon e macOS 13 ou posterior.",
+    "de": "Diese Bedingungen beschreiben die grundlegenden Voraussetzungen für die Nutzung der OneMouse-App und -Website mit einem Windows-PC, einem Android-Gerät, einem weiteren Windows-PC und einem Mac mit Apple Silicon ab macOS 13.",
+    "zh-TW": "本條款說明在 Windows 電腦、Android 裝置、另一部 Windows 電腦，以及搭載 Apple Silicon 且執行 macOS 13 以上版本的 Mac 上使用 OneMouse 應用程式與網站的基本條件。",
+    "fr": "Ces conditions décrivent les règles de base d’utilisation de l’application et du site OneMouse avec un PC Windows, un appareil Android, un autre PC Windows et un Mac avec puce Apple sous macOS 13 ou version ultérieure.",
+    "id": "Ketentuan ini menjelaskan syarat dasar penggunaan aplikasi dan situs web OneMouse dengan PC Windows, perangkat Android, PC Windows lain, serta Mac dengan Apple Silicon yang menjalankan macOS 13 atau lebih baru."
+  },
+  "Effective date: August 5, 2026": {
+    "pt-BR": "Vigência: 5 de agosto de 2026",
+    "de": "Gültig ab: 5. August 2026",
+    "zh-TW": "生效日期：2026 年 8 月 5 日",
+    "fr": "Date d’entrée en vigueur : 5 août 2026",
+    "id": "Tanggal berlaku: 5 Agustus 2026"
+  },
+  "Service summary and connections": {
+    "pt-BR": "Resumo do serviço e conexões",
+    "de": "Dienst und Verbindungen im Überblick",
+    "zh-TW": "服務與連線概述",
+    "fr": "Présentation du service et des connexions",
+    "id": "Ringkasan layanan dan koneksi"
+  },
+  "OneMouse starts and manages connections from Windows 10/11 to Android, another Windows PC, or an Apple Silicon Mac running macOS 13+ for input control, file and folder transfer, clipboard features, and supported remote screen features. Current public Mac connections use LAN.": {
+    "pt-BR": "O OneMouse inicia e gerencia conexões do Windows 10/11 com dispositivos Android, outros PCs Windows ou Macs com Apple Silicon e macOS 13 ou posterior. Essas conexões permitem controlar a entrada, transferir arquivos e pastas, usar a área de transferência e acessar os recursos de tela remota compatíveis. As conexões para Mac disponíveis ao público atualmente usam a LAN.",
+    "de": "OneMouse stellt von Windows 10/11 aus Verbindungen zu Android-Geräten, weiteren Windows-PCs oder Macs mit Apple Silicon ab macOS 13 her und verwaltet sie. Sie dienen der Eingabesteuerung, der Übertragung von Dateien und Ordnern, der Nutzung der Zwischenablage sowie unterstützten Fernbildschirmfunktionen. In der derzeit öffentlich verfügbaren Version erfolgen Mac-Verbindungen über das LAN.",
+    "zh-TW": "OneMouse 可從 Windows 10/11 發起並管理與 Android、其他 Windows 電腦，或搭載 Apple Silicon 且執行 macOS 13 以上版本的 Mac 之間的連線，以控制輸入、傳送檔案與資料夾、使用剪貼簿及支援的遠端畫面功能。目前公開提供的 Mac 連線使用區域網路（LAN）。",
+    "fr": "OneMouse établit et gère, depuis Windows 10/11, des connexions vers Android, un autre PC Windows ou un Mac avec puce Apple sous macOS 13 ou version ultérieure. Ces connexions permettent de contrôler la saisie, de transférer des fichiers et des dossiers et d’utiliser le presse-papiers et les fonctions d’écran distant prises en charge. Les connexions Mac actuellement proposées au public utilisent le réseau local (LAN).",
+    "id": "OneMouse memulai dan mengelola koneksi dari Windows 10/11 ke perangkat Android, PC Windows lain, atau Mac dengan Apple Silicon yang menjalankan macOS 13 atau lebih baru. Koneksi ini mendukung kendali input, transfer file dan folder, fitur papan klip, serta fitur layar jarak jauh yang kompatibel. Koneksi Mac yang saat ini tersedia untuk umum menggunakan LAN."
+  },
+  "Connection requirements": {
+    "pt-BR": "Requisitos de conexão",
+    "de": "Verbindungsvoraussetzungen",
+    "zh-TW": "連線需求",
+    "fr": "Conditions de connexion",
+    "id": "Persyaratan koneksi"
+  },
+  "The devices generally need to be on the same Wi-Fi or LAN and able to communicate directly. They may alternatively connect over Bluetooth after system pairing. Guest Wi-Fi, AP isolation, company security policy, firewalls, antivirus software, or denied Local Network permission on macOS 15+ may prevent connection.": {
+    "pt-BR": "Em geral, os dispositivos precisam estar na mesma rede Wi-Fi ou LAN e conseguir se comunicar diretamente. Também podem se conectar por Bluetooth após o pareamento no sistema. Redes Wi-Fi de convidados, isolamento de pontos de acesso, políticas de segurança da empresa, firewalls, antivírus ou a recusa da permissão de rede local no macOS 15 ou posterior podem impedir a conexão.",
+    "de": "Die Geräte müssen in der Regel mit demselben WLAN oder LAN verbunden sein und direkt miteinander kommunizieren können. Alternativ ist nach der Kopplung in den Systemeinstellungen eine Bluetooth-Verbindung möglich. Gast-WLAN, die Isolation von WLAN-Clients am Zugangspunkt, betriebliche Sicherheitsrichtlinien, Firewalls, Antivirensoftware oder eine verweigerte Berechtigung für das lokale Netzwerk ab macOS 15 können die Verbindung verhindern.",
+    "zh-TW": "裝置通常必須連到同一個 Wi-Fi 或區域網路，且可彼此直接通訊。也可以先在系統中配對，再透過藍牙連線。訪客 Wi-Fi、基地台隔離、公司安全性政策、防火牆、防毒軟體，或在 macOS 15 以上版本拒絕授予「區域網路」權限，都可能導致無法連線。",
+    "fr": "Les appareils doivent généralement être connectés au même réseau Wi-Fi ou local et pouvoir communiquer directement. Ils peuvent aussi se connecter par Bluetooth après un jumelage dans le système. Un réseau Wi-Fi invité, l’isolation des clients du point d’accès, la politique de sécurité de l’entreprise, un pare-feu, un antivirus ou le refus de l’autorisation de réseau local sous macOS 15 ou version ultérieure peuvent empêcher la connexion.",
+    "id": "Perangkat umumnya harus terhubung ke Wi-Fi atau LAN yang sama dan dapat berkomunikasi secara langsung. Sebagai alternatif, perangkat dapat terhubung melalui Bluetooth setelah dipasangkan di pengaturan sistem. Wi-Fi tamu, isolasi titik akses, kebijakan keamanan perusahaan, firewall, antivirus, atau penolakan izin Jaringan Lokal pada macOS 15 atau lebih baru dapat menghalangi koneksi."
+  },
+  "User permissions and responsibility": {
+    "pt-BR": "Permissões e responsabilidade do usuário",
+    "de": "Berechtigungen und Verantwortung der Nutzer",
+    "zh-TW": "使用者權限與責任",
+    "fr": "Autorisations et responsabilité de l’utilisateur",
+    "id": "Izin dan tanggung jawab pengguna"
+  },
+  "Users are responsible for allowing the operating-system permissions needed for the features they choose. Android input requires Accessibility. The Mac app requires Accessibility for input, and Local Network is requested on macOS 15+. Mac Bluetooth is outside the current public support scope. Screen & System Audio Recording is optional and used only for LAN-based Mac display sharing.": {
+    "pt-BR": "Cabe aos usuários conceder as permissões do sistema operacional exigidas pelos recursos que escolherem. No Android, a entrada requer Acessibilidade. No Mac, a entrada também requer Acessibilidade; no macOS 15 ou posterior, o app solicita acesso à Rede Local. O Bluetooth no Mac não faz parte do suporte público atual. A Gravação de Tela e Áudio do Sistema é opcional e usada apenas para compartilhar a tela do Mac por LAN.",
+    "de": "Nutzer sind dafür verantwortlich, die für die gewählten Funktionen erforderlichen Betriebssystemberechtigungen zu erteilen. Die Eingabe auf Android erfordert die Bedienungshilfe. Auf dem Mac wird für Eingaben die Berechtigung für Bedienungshilfen benötigt; ab macOS 15 wird außerdem der Zugriff auf das lokale Netzwerk angefragt. Mac-Bluetooth gehört derzeit nicht zum öffentlich unterstützten Funktionsumfang. Die Berechtigung zur Bildschirm- und Systemaudioaufnahme ist optional und dient ausschließlich der Freigabe des Mac-Bildschirms über LAN.",
+    "zh-TW": "使用者須自行授予所選功能所需的作業系統權限。Android 輸入需要無障礙服務權限。Mac 輸入需要輔助使用權限；在 macOS 15 以上版本，應用程式會要求區域網路權限。Mac 藍牙不在目前公開支援範圍內。「螢幕與系統音訊錄製」權限為選用，僅用於透過區域網路分享 Mac 畫面。",
+    "fr": "Il incombe aux utilisateurs d’accorder les autorisations du système d’exploitation nécessaires aux fonctionnalités choisies. Sur Android, la saisie requiert l’accessibilité. Sur Mac, l’application requiert l’accessibilité pour la saisie et demande l’accès au réseau local à partir de macOS 15. Le Bluetooth sur Mac ne fait actuellement pas partie du périmètre de prise en charge publique. L’autorisation d’enregistrement de l’écran et de l’audio du système est facultative et ne sert qu’au partage de l’écran du Mac sur le réseau local.",
+    "id": "Pengguna bertanggung jawab untuk memberikan izin sistem operasi yang diperlukan oleh fitur pilihan mereka. Input di Android memerlukan Aksesibilitas. Aplikasi Mac memerlukan Aksesibilitas untuk input dan meminta izin Jaringan Lokal pada macOS 15 atau lebih baru. Bluetooth pada Mac saat ini tidak termasuk dalam cakupan dukungan publik. Izin Perekaman Layar dan Audio Sistem bersifat opsional dan hanya digunakan untuk berbagi tampilan Mac melalui LAN."
+  },
+  "Free / Pro and platform scope": {
+    "pt-BR": "Free/Pro e escopo por plataforma",
+    "de": "Free/Pro und Geltungsbereich je Plattform",
+    "zh-TW": "免費版／Pro 版與平台範圍",
+    "fr": "Versions gratuite et Pro et périmètre par plateforme",
+    "id": "Versi Gratis/Pro dan cakupan platform"
+  },
+  "Android purchase or trial policies are handled inside the Android distribution. The Windows app does not process purchases, validate Android Pro status, or transfer Android entitlement between platforms. The macOS app requires neither a login nor a separate paywall.": {
+    "pt-BR": "As políticas de compra e de avaliação do Android são tratadas na própria distribuição Android. O app Windows não processa compras, não valida o status Pro do Android nem transfere direitos de uso do Android entre plataformas. O app macOS não exige login nem pagamento separado para acessar seus recursos.",
+    "de": "Für Käufe und Testzeiträume unter Android gelten die Regelungen der jeweiligen Android-Ausgabe. Die Windows-App verarbeitet keine Käufe, prüft keinen Android-Pro-Status und überträgt keine Android-Nutzungsrechte zwischen Plattformen. Die macOS-App erfordert weder eine Anmeldung noch eine gesonderte Freischaltung gegen Entgelt.",
+    "zh-TW": "Android 的購買或試用政策由 Android 發行版本自行處理。Windows 應用程式不處理購買、不驗證 Android Pro 狀態，也不跨平台移轉 Android 使用權。macOS 應用程式不需登入，也沒有獨立的付費限制。",
+    "fr": "Les règles d’achat ou d’essai sur Android sont gérées au sein de la distribution Android. L’application Windows ne traite pas les achats, ne vérifie pas le statut Pro sur Android et ne transfère pas les droits Android d’une plateforme à l’autre. L’application macOS ne nécessite ni connexion à un compte ni paiement distinct pour accéder à ses fonctionnalités.",
+    "id": "Kebijakan pembelian atau uji coba di Android ditangani dalam distribusi Android. Aplikasi Windows tidak memproses pembelian, memvalidasi status Pro Android, ataupun mengalihkan hak akses Android antarplatform. Aplikasi macOS tidak memerlukan login dan tidak memiliki batas akses berbayar tersendiri."
+  },
+  "Android store billing": {
+    "pt-BR": "Cobrança nas lojas Android",
+    "de": "Abrechnung in Android-Stores",
+    "zh-TW": "Android 商店付款",
+    "fr": "Facturation dans les boutiques Android",
+    "id": "Penagihan toko Android"
+  },
+  "Google Play Billing is used for applicable Pro purchases and restoration in the Google Play Android app. The Galaxy Store build may be distributed as a paid app. The relevant store's terms and policies apply to those transactions.": {
+    "pt-BR": "O app Android do Google Play utiliza o faturamento do Google Play para as compras Pro aplicáveis e sua restauração. A versão da Galaxy Store pode ser distribuída como app pago. A essas transações se aplicam os termos e as políticas da respectiva loja.",
+    "de": "Für entsprechende Pro-Käufe und deren Wiederherstellung in der Android-App aus Google Play wird Google Play Billing verwendet. Die Galaxy-Store-Version kann als kostenpflichtige App angeboten werden. Für diese Transaktionen gelten die Bedingungen und Richtlinien des jeweiligen Stores.",
+    "zh-TW": "Google Play 版 Android 應用程式使用 Google Play 帳單服務處理適用的 Pro 購買及購買復原。Galaxy Store 版可能以付費應用程式形式發行。相關交易適用各商店的條款與政策。",
+    "fr": "Dans l’application Android distribuée sur Google Play, le système de facturation Google Play sert aux achats Pro concernés et à leur restauration. La version Galaxy Store peut être distribuée sous forme d’application payante. Les conditions et politiques de la boutique correspondante s’appliquent à ces transactions.",
+    "id": "Aplikasi Android dari Google Play menggunakan sistem penagihan Google Play untuk pembelian Pro yang berlaku dan pemulihannya. Versi Galaxy Store dapat didistribusikan sebagai aplikasi berbayar. Ketentuan dan kebijakan toko terkait berlaku untuk transaksi tersebut."
+  },
+  "Support scope": {
+    "pt-BR": "Escopo do suporte",
+    "de": "Unterstützte Verbindungen",
+    "zh-TW": "支援範圍",
+    "fr": "Périmètre de prise en charge",
+    "id": "Cakupan dukungan"
+  },
+  "Current official support covers connections started from Windows 10/11 to Android and another Windows PC over Wi-Fi/LAN or Bluetooth, and to Apple Silicon Macs running macOS 13+ over LAN. Mac Bluetooth is outside the current public support scope. Mac screen and window sharing is LAN-only. USB/ADB connection is not included in the user-facing support scope.": {
+    "pt-BR": "O suporte oficial atual cobre conexões iniciadas no Windows 10/11 com dispositivos Android e outros PCs Windows por Wi-Fi/LAN ou Bluetooth, e com Macs com Apple Silicon e macOS 13 ou posterior por LAN. O Bluetooth no Mac está fora do suporte público atual. O compartilhamento da tela e de janelas do Mac está disponível apenas por LAN. Conexões USB/ADB não fazem parte do suporte oferecido aos usuários.",
+    "de": "Offiziell unterstützt werden derzeit Verbindungen von Windows 10/11 zu Android und einem weiteren Windows-PC über WLAN/LAN oder Bluetooth sowie zu Macs mit Apple Silicon ab macOS 13 über LAN. Mac-Bluetooth gehört derzeit nicht zum öffentlich unterstützten Funktionsumfang. Die Freigabe von Mac-Bildschirmen und -Fenstern ist nur über LAN möglich. USB-/ADB-Verbindungen werden für Endnutzer nicht unterstützt.",
+    "zh-TW": "目前正式支援從 Windows 10/11 經由 Wi-Fi／區域網路或藍牙連接 Android 或另一部 Windows 電腦，以及經由區域網路連接搭載 Apple Silicon 且執行 macOS 13 以上版本的 Mac。Mac 藍牙不在目前公開支援範圍內。Mac 螢幕與視窗分享僅限區域網路。USB／ADB 連線不在使用者支援範圍內。",
+    "fr": "Les connexions actuellement prises en charge officiellement sont celles initiées depuis Windows 10/11 vers Android ou un autre PC Windows par Wi-Fi/réseau local ou Bluetooth, et vers un Mac avec puce Apple sous macOS 13 ou version ultérieure par réseau local. Le Bluetooth sur Mac ne fait actuellement pas partie du périmètre de prise en charge publique. Le partage d’écran et de fenêtres du Mac est limité au réseau local. Les connexions USB/ADB ne sont pas prises en charge pour les utilisateurs finaux.",
+    "id": "Dukungan resmi saat ini mencakup koneksi yang dimulai dari Windows 10/11 ke Android atau PC Windows lain melalui Wi-Fi/LAN atau Bluetooth, serta ke Mac dengan Apple Silicon yang menjalankan macOS 13 atau lebih baru melalui LAN. Bluetooth pada Mac saat ini tidak termasuk dalam cakupan dukungan publik. Berbagi layar dan jendela Mac hanya tersedia melalui LAN. Koneksi USB/ADB tidak termasuk dalam cakupan dukungan bagi pengguna."
+  },
+  "Limitations": {
+    "pt-BR": "Limitações",
+    "de": "Einschränkungen",
+    "zh-TW": "限制",
+    "fr": "Limites",
+    "id": "Keterbatasan"
+  },
+  "OneMouse depends on network state, operating-system permissions, security software, hardware, and device manufacturer behavior. Continuous connection, input, screen sharing, or transfer cannot be guaranteed in every environment.": {
+    "pt-BR": "O OneMouse depende das condições da rede, das permissões do sistema operacional, dos programas de segurança, do hardware e do comportamento específico dos dispositivos de cada fabricante. Não é possível garantir conexão, entrada, compartilhamento de tela ou transferências contínuas em todos os ambientes.",
+    "de": "OneMouse ist vom Netzwerkzustand, den Betriebssystemberechtigungen, der Sicherheitssoftware, der Hardware und dem herstellerspezifischen Geräteverhalten abhängig. Eine unterbrechungsfreie Verbindung, Eingabe, Bildschirmfreigabe oder Übertragung kann nicht in jeder Umgebung gewährleistet werden.",
+    "zh-TW": "OneMouse 的運作受網路狀況、作業系統權限、安全軟體、硬體及各裝置製造商的實作方式影響。無法保證所有環境中的連線、輸入、螢幕分享或傳輸都不中斷。",
+    "fr": "Le fonctionnement de OneMouse dépend de l’état du réseau, des autorisations du système, des logiciels de sécurité, du matériel et du comportement des appareils selon leur fabricant. La continuité de la connexion, de la saisie, du partage d’écran ou des transferts ne peut être garantie dans tous les environnements.",
+    "id": "OneMouse bergantung pada kondisi jaringan, izin sistem operasi, perangkat lunak keamanan, perangkat keras, serta perilaku perangkat dari masing-masing produsen. Koneksi, input, berbagi layar, atau transfer tanpa terputus tidak dapat dijamin di semua lingkungan."
+  },
+  "Privacy Policy": {
+    "pt-BR": "Política de privacidade",
+    "de": "Datenschutzerklärung",
+    "zh-TW": "隱私權政策",
+    "fr": "Politique de confidentialité",
+    "id": "Kebijakan privasi"
+  },
+  "Effective date: September 1, 2026 · Last updated: November 10, 2026": {
+    "pt-BR": "Vigência: 1º de setembro de 2026 · Última atualização: 10 de novembro de 2026",
+    "de": "Gültig ab: 1. September 2026 · Zuletzt aktualisiert: 10. November 2026",
+    "zh-TW": "生效日期：2026 年 9 月 1 日 · 最近更新：2026 年 11 月 10 日",
+    "fr": "Date d’entrée en vigueur : 1er septembre 2026 · Dernière mise à jour : 10 novembre 2026",
+    "id": "Tanggal berlaku: 1 September 2026 · Terakhir diperbarui: 10 November 2026"
+  },
+  "Existing LAN/Bluetooth pairing works without sign-in. In supported app versions, optional Google account linking finds your own account devices and attempts direct connections across networks. The OneMouse account server processes connection metadata and signals; it does not store or relay files, clipboard content, input, or video.": {
+    "pt-BR": "O pareamento por LAN/Bluetooth funciona sem login. Nas versões compatíveis do app, a vinculação opcional de uma conta do Google encontra os dispositivos da sua própria conta e tenta estabelecer conexões diretas entre redes. O servidor de contas do OneMouse processa metadados e sinais de conexão; não armazena nem retransmite arquivos, conteúdo da área de transferência, entradas ou vídeo.",
+    "de": "Die bestehende LAN-/Bluetooth-Kopplung funktioniert ohne Anmeldung. In unterstützten App-Versionen sucht die optionale Verknüpfung eines Google-Kontos nach Geräten des eigenen Kontos und versucht, über Netzwerkgrenzen hinweg direkte Verbindungen herzustellen. Der OneMouse-Kontoserver verarbeitet Verbindungsmetadaten und -signale; er speichert oder übermittelt weder Dateien noch Zwischenablageinhalte, Eingaben oder Videos.",
+    "zh-TW": "現有的區域網路／藍牙配對不需登入。在支援的版本中，您可選擇連結 Google 帳戶，尋找同一帳戶的裝置並嘗試跨網路直接連線。OneMouse 帳戶伺服器會處理連線中繼資料與訊號，但不會儲存或轉送檔案、剪貼簿內容、輸入資料或影片。",
+    "fr": "Le jumelage existant par réseau local ou Bluetooth fonctionne sans connexion à un compte. Dans les versions compatibles, l’association facultative d’un compte Google permet de trouver les appareils de votre propre compte et de tenter des connexions directes entre réseaux. Le serveur de comptes OneMouse traite les métadonnées et signaux de connexion ; il ne stocke ni ne relaie les fichiers, le contenu du presse-papiers, les saisies ou les vidéos.",
+    "id": "Pemasangan melalui LAN/Bluetooth yang sudah ada berfungsi tanpa login. Pada versi aplikasi yang mendukungnya, penautan akun Google bersifat opsional dan digunakan untuk menemukan perangkat dalam akun Anda sendiri serta mencoba koneksi langsung lintas jaringan. Server akun OneMouse memproses metadata dan sinyal koneksi; server tidak menyimpan atau meneruskan file, isi papan klip, input, atau video."
+  },
+  "LAN discovery advertises connection metadata such as device IDs, device names, and public key fingerprints without encryption. Other devices on the same local network can see this discovery information.": {
+    "pt-BR": "A descoberta na LAN anuncia sem criptografia metadados de conexão, como IDs e nomes de dispositivos e impressões digitais de chaves públicas. Outros dispositivos na mesma rede local podem ver essas informações.",
+    "de": "Bei der LAN-Erkennung werden Verbindungsmetadaten wie Geräte-IDs, Gerätenamen und Fingerabdrücke öffentlicher Schlüssel unverschlüsselt bekanntgegeben. Andere Geräte im selben lokalen Netzwerk können diese Angaben sehen.",
+    "zh-TW": "區域網路探索會以未加密的方式廣播連線中繼資料，例如裝置識別碼、裝置名稱和公開金鑰指紋。同一區域網路中的其他裝置可以看到這些探索資訊。",
+    "fr": "Lors de la découverte sur le réseau local, des métadonnées de connexion, telles que les identifiants et noms des appareils et les empreintes des clés publiques, sont diffusées sans chiffrement. Les autres appareils du même réseau local peuvent voir ces informations.",
+    "id": "Penemuan perangkat di LAN menyiarkan metadata koneksi seperti ID perangkat, nama perangkat, dan sidik jari kunci publik tanpa enkripsi. Perangkat lain di jaringan lokal yang sama dapat melihat informasi ini."
+  },
+  "Notification information (optional): if you turn on \"Send notifications to PC\" in the Android app and allow notification access, the title and text of notifications from the apps you select are sent to your paired PC and shown briefly. The Windows PC can keep an encrypted local history of notification titles and text, app and device details, receipt times, and whether an image was present. This history is not uploaded to a server.": {
+    "pt-BR": "Informações de notificações (opcional): se você ativar “Enviar notificações para o PC” no app Android e permitir o acesso às notificações, o título e o texto das notificações dos apps que selecionar serão enviados ao PC pareado e exibidos brevemente. O PC Windows pode manter um histórico local criptografado contendo título e texto das notificações, dados do app e do dispositivo, horários de recebimento e indicação da presença de uma imagem. Esse histórico não é enviado a um servidor.",
+    "de": "Benachrichtigungsinformationen (optional): Wenn Sie in der Android-App „Benachrichtigungen an den PC senden“ aktivieren und den Benachrichtigungszugriff erlauben, werden Titel und Text der Benachrichtigungen ausgewählter Apps an den gekoppelten PC gesendet und kurz angezeigt. Der Windows-PC kann lokal einen verschlüsselten Verlauf mit Titel und Text, Angaben zu App und Gerät, Empfangszeit und der Information speichern, ob ein Bild vorhanden war. Dieser Verlauf wird nicht auf einen Server hochgeladen.",
+    "zh-TW": "通知資訊（選用）：若您在 Android 應用程式啟用「傳送通知到電腦」並授予通知存取權，所選應用程式的通知標題與文字會傳送到已配對的電腦並短暫顯示。Windows 電腦可在本機保留加密的歷程記錄，包括通知標題與文字、應用程式與裝置資訊、接收時間，以及通知是否含有圖片。此歷程記錄不會上傳至伺服器。",
+    "fr": "Informations sur les notifications (facultatif) : si vous activez « Envoyer les notifications au PC » dans l’application Android et autorisez l’accès aux notifications, le titre et le texte des notifications des applications sélectionnées sont envoyés au PC jumelé et y sont brièvement affichés. Le PC Windows peut conserver un historique local chiffré comprenant ces titres et textes, des renseignements sur l’application et l’appareil, les heures de réception et une indication de la présence d’une image. Cet historique n’est pas transmis à un serveur.",
+    "id": "Informasi notifikasi (opsional): jika Anda mengaktifkan “Kirim notifikasi ke PC” di aplikasi Android dan mengizinkan akses notifikasi, judul dan teks notifikasi aplikasi yang Anda pilih akan dikirim ke PC yang dipasangkan dan ditampilkan sebentar. PC Windows dapat menyimpan riwayat lokal terenkripsi berupa judul dan teks notifikasi, detail aplikasi dan perangkat, waktu penerimaan, serta keterangan apakah ada gambar. Riwayat ini tidak diunggah ke server."
+  },
+  "Android Accessibility applies mouse and keyboard input sent from the PC to Android. On Mac, Accessibility allows the Mac to perform input received from Windows. Local Network is used for discovery on macOS 15+ and may not appear on macOS 13/14. Mac Bluetooth is outside the current public support scope. Screen & System Audio Recording is optional and used only for LAN-based Mac display sharing; OneMouse does not capture system audio. These permissions are not used for ad tracking, password collection, or remote server transmission.": {
+    "pt-BR": "A Acessibilidade no Android aplica ao dispositivo os comandos de mouse e teclado enviados pelo PC. No Mac, a Acessibilidade permite executar os comandos recebidos do Windows. A Rede Local é usada para descoberta no macOS 15 ou posterior e pode não aparecer no macOS 13/14. O Bluetooth no Mac não está incluído no suporte público atual. A Gravação de Tela e Áudio do Sistema é opcional e usada apenas para compartilhar a tela do Mac pela LAN; o OneMouse não captura o áudio do sistema. Essas permissões não são usadas para rastreamento publicitário, coleta de senhas ou transmissão a servidores remotos.",
+    "de": "Die Android-Bedienungshilfe setzt die vom PC gesendeten Maus- und Tastatureingaben auf Android um. Auf dem Mac ermöglichen die Bedienungshilfen die Ausführung der von Windows empfangenen Eingaben. Der Zugriff auf das lokale Netzwerk dient ab macOS 15 der Geräteerkennung und wird unter macOS 13/14 möglicherweise nicht angezeigt. Mac-Bluetooth gehört derzeit nicht zum öffentlich unterstützten Funktionsumfang. Die Berechtigung zur Bildschirm- und Systemaudioaufnahme ist optional und dient nur der Mac-Bildschirmfreigabe über LAN; OneMouse zeichnet kein Systemaudio auf. Diese Berechtigungen dienen nicht dem Werbetracking, der Erfassung von Passwörtern oder der Übermittlung an entfernte Server.",
+    "zh-TW": "Android 的無障礙服務會在裝置上執行來自電腦的滑鼠與鍵盤輸入。在 Mac 上，輔助使用權限讓 Mac 執行 Windows 傳來的輸入。macOS 15 以上使用區域網路權限探索裝置，macOS 13/14 可能不會顯示此權限。Mac 藍牙不在目前公開支援範圍內。「螢幕與系統音訊錄製」為選用權限，僅用於透過區域網路分享 Mac 畫面；OneMouse 不會擷取系統音訊。這些權限不會用於廣告追蹤、收集密碼或向遠端伺服器傳輸資料。",
+    "fr": "Sur Android, le service d’accessibilité exécute les commandes de la souris et du clavier envoyées par le PC. Sur Mac, l’accessibilité permet d’exécuter les commandes reçues de Windows. L’accès au réseau local sert à la découverte sous macOS 15 ou version ultérieure et peut ne pas apparaître sous macOS 13/14. Le Bluetooth sur Mac ne fait actuellement pas partie du périmètre de prise en charge publique. L’autorisation facultative d’enregistrement de l’écran et de l’audio du système sert uniquement au partage de l’écran du Mac sur le réseau local ; OneMouse ne capture pas l’audio du système. Ces autorisations ne servent ni au suivi publicitaire, ni à la collecte de mots de passe, ni à la transmission à des serveurs distants.",
+    "id": "Aksesibilitas Android menjalankan input mouse dan keyboard yang dikirim dari PC ke Android. Di Mac, Aksesibilitas memungkinkan Mac menjalankan input yang diterima dari Windows. Jaringan Lokal digunakan untuk penemuan perangkat pada macOS 15 atau lebih baru dan mungkin tidak muncul pada macOS 13/14. Bluetooth pada Mac saat ini berada di luar cakupan dukungan publik. Izin Perekaman Layar dan Audio Sistem bersifat opsional dan hanya digunakan untuk berbagi tampilan Mac melalui LAN; OneMouse tidak merekam audio sistem. Izin ini tidak digunakan untuk pelacakan iklan, pengumpulan kata sandi, atau pengiriman ke server jarak jauh."
+  },
+  "Notification history is enabled by default and keeps only newly received notifications on the PC for 7 days, up to 200 entries. It does not import older notifications from your phone. In the PC's Notifications tab, you can choose 1, 7, or 30 days, stop saving new entries, or clear all history.": {
+    "pt-BR": "O histórico de notificações vem ativado e mantém no PC apenas as notificações recém-recebidas por 7 dias, até 200 registros. Ele não importa notificações anteriores do telefone. Na aba Notificações do PC, você pode escolher 1, 7 ou 30 dias, parar de salvar novos registros ou limpar todo o histórico.",
+    "de": "Der Benachrichtigungsverlauf ist standardmäßig aktiviert. Er speichert auf dem PC nur neu empfangene Benachrichtigungen für 7 Tage, höchstens 200 Einträge. Ältere Benachrichtigungen werden nicht vom Smartphone importiert. Im Reiter „Benachrichtigungen“ auf dem PC können Sie 1, 7 oder 30 Tage wählen, das Speichern neuer Einträge beenden oder den gesamten Verlauf löschen.",
+    "zh-TW": "通知歷程記錄預設為啟用，只會在電腦上保留新收到的通知 7 天，最多 200 筆，不會匯入手機上的舊通知。在電腦的「通知」分頁可選擇保留 1、7 或 30 天、停止儲存新項目，或清除所有歷程記錄。",
+    "fr": "L’historique des notifications est activé par défaut. Il ne conserve sur le PC que les nouvelles notifications reçues pendant 7 jours, dans la limite de 200 entrées. Il n’importe pas les anciennes notifications du téléphone. Dans l’onglet Notifications du PC, vous pouvez choisir 1, 7 ou 30 jours, arrêter l’enregistrement des nouvelles entrées ou effacer tout l’historique.",
+    "id": "Riwayat notifikasi aktif secara default dan hanya menyimpan notifikasi yang baru diterima di PC selama 7 hari, hingga 200 entri. Notifikasi lama dari ponsel tidak diimpor. Di tab Notifikasi pada PC, Anda dapat memilih 1, 7, atau 30 hari, berhenti menyimpan entri baru, atau menghapus seluruh riwayat."
+  },
+  "Notifications detected as containing verification codes and notifications with hidden or redacted content are excluded. Clipboard content, photos, and avatar images are not saved in history. Not all sensitive content can be detected automatically. History is not saved if secure operating-system encryption is unavailable.": {
+    "pt-BR": "Notificações em que são detectados códigos de verificação e notificações com conteúdo oculto ou suprimido são excluídas do histórico. Conteúdo da área de transferência, fotos e avatares não são salvos no histórico. Nem todo conteúdo sensível pode ser detectado automaticamente. Se a criptografia segura do sistema operacional não estiver disponível, o histórico não será salvo.",
+    "de": "Benachrichtigungen, in denen Bestätigungscodes erkannt werden, sowie solche mit ausgeblendetem oder geschwärztem Inhalt werden ausgeschlossen. Zwischenablageinhalte, Fotos und Avatarbilder werden nicht im Verlauf gespeichert. Nicht alle sensiblen Inhalte lassen sich automatisch erkennen. Steht keine sichere Verschlüsselung durch das Betriebssystem zur Verfügung, wird kein Verlauf gespeichert.",
+    "zh-TW": "偵測到驗證碼的通知，以及內容已隱藏或遮蔽的通知，均不列入歷程記錄。剪貼簿內容、相片和虛擬頭像不會存入歷程記錄。自動偵測無法辨識所有敏感內容。若作業系統無法提供安全加密，則不會儲存歷程記錄。",
+    "fr": "Les notifications dans lesquelles un code de vérification est détecté et celles au contenu masqué ou occulté sont exclues. Le contenu du presse-papiers, les photos et les avatars ne sont pas enregistrés dans l’historique. La détection automatique ne permet pas d’identifier tous les contenus sensibles. L’historique n’est pas enregistré si le chiffrement sécurisé du système d’exploitation est indisponible.",
+    "id": "Notifikasi yang terdeteksi mengandung kode verifikasi dan notifikasi dengan isi tersembunyi atau disamarkan tidak disertakan. Isi papan klip, foto, dan gambar avatar tidak disimpan dalam riwayat. Tidak semua konten sensitif dapat terdeteksi secara otomatis. Riwayat tidak disimpan jika enkripsi aman dari sistem operasi tidak tersedia."
+  },
+  "Turning off history does not delete existing entries; they remain until they expire or you delete them. Entries that expire while the app is closed are cleaned up at the next launch. Clearing PC history does not delete notifications on your phone.": {
+    "pt-BR": "Desativar o histórico não exclui os registros existentes. Eles permanecem até expirarem ou até você excluí-los. Registros que expiram enquanto o app está fechado são removidos na próxima inicialização. Limpar o histórico do PC não exclui notificações do telefone.",
+    "de": "Das Deaktivieren des Verlaufs löscht keine vorhandenen Einträge. Sie bleiben erhalten, bis sie ablaufen oder von Ihnen gelöscht werden. Bei geschlossener App abgelaufene Einträge werden beim nächsten Start entfernt. Das Löschen des PC-Verlaufs löscht keine Benachrichtigungen auf Ihrem Smartphone.",
+    "zh-TW": "關閉歷程記錄不會刪除現有項目；項目會保留至到期或手動刪除。在應用程式關閉期間到期的項目會在下次啟動時清除。清除電腦的歷程記錄不會刪除手機上的通知。",
+    "fr": "Désactiver l’historique n’efface pas les entrées existantes ; elles restent disponibles jusqu’à leur expiration ou leur suppression. Les entrées qui expirent lorsque l’application est fermée sont supprimées au prochain lancement. Effacer l’historique du PC ne supprime pas les notifications du téléphone.",
+    "id": "Menonaktifkan riwayat tidak menghapus entri yang sudah ada; entri tersebut tetap tersimpan hingga kedaluwarsa atau Anda hapus. Entri yang kedaluwarsa saat aplikasi ditutup dibersihkan ketika aplikasi dibuka kembali. Menghapus riwayat PC tidak menghapus notifikasi di ponsel."
+  },
+  "We use the Google-verified account identifier (sub) and verified email address, when provided, to identify and display your account. We do not receive your Google password or access your contacts, email messages, or Google Drive files.": {
+    "pt-BR": "Usamos o identificador da conta verificado pelo Google (sub) e o endereço de e-mail verificado, quando fornecido, para identificar e exibir sua conta. Não recebemos sua senha do Google nem acessamos seus contatos, mensagens de e-mail ou arquivos do Google Drive.",
+    "de": "Zur Identifizierung und Anzeige Ihres Kontos verwenden wir die von Google bestätigte Kontokennung (sub) und, sofern bereitgestellt, die bestätigte E-Mail-Adresse. Wir erhalten weder Ihr Google-Passwort noch Zugriff auf Ihre Kontakte, E-Mails oder Google-Drive-Dateien.",
+    "zh-TW": "我們使用通過 Google 驗證的帳戶識別碼（sub），以及在提供時使用已驗證的電子郵件地址，以識別並顯示您的帳戶。我們不會取得您的 Google 密碼，也不會存取聯絡人、電子郵件或 Google 雲端硬碟檔案。",
+    "fr": "Nous utilisons l’identifiant de compte vérifié par Google (sub) et l’adresse e-mail vérifiée, lorsqu’elle est fournie, pour identifier et afficher votre compte. Nous ne recevons pas votre mot de passe Google et n’accédons ni à vos contacts, ni à vos e-mails, ni à vos fichiers Google Drive.",
+    "id": "Kami menggunakan pengenal akun yang diverifikasi Google (sub) dan alamat email terverifikasi, jika diberikan, untuk mengidentifikasi dan menampilkan akun Anda. Kami tidak menerima kata sandi Google Anda maupun mengakses kontak, pesan email, atau file Google Drive Anda."
+  },
+  "The account service stores registered devices' public keys, public-key-based IDs, names and types, optional LAN device IDs, PC roles (main/sub), registration and last-seen times, session expiry, and connection state. These support same-account device discovery, connection validation, and security. Device private keys and Google access/ID tokens are not stored on the server; app session tokens are stored there as hashes.": {
+    "pt-BR": "O serviço de contas armazena as chaves públicas, os IDs baseados nessas chaves, os nomes e os tipos dos dispositivos registrados, IDs opcionais de dispositivos na LAN, funções dos PCs (principal/secundário), horários de registro e de última atividade, vencimento da sessão e estado da conexão. Esses dados servem para descobrir dispositivos da mesma conta, validar conexões e garantir a segurança. As chaves privadas dos dispositivos e os tokens de acesso e de ID do Google não são armazenados no servidor. Os tokens de sessão do app são armazenados nele como hashes.",
+    "de": "Der Kontodienst speichert für registrierte Geräte öffentliche Schlüssel, daraus abgeleitete IDs, Namen und Typen, optionale LAN-Geräte-IDs, PC-Rollen (Haupt-/Neben-PC), Registrierungszeit und Zeitpunkt der letzten Aktivität, Sitzungsablauf und Verbindungsstatus. Diese Angaben dienen der Geräteerkennung innerhalb desselben Kontos, der Verbindungsprüfung und der Sicherheit. Private Geräteschlüssel sowie Zugriffs- und ID-Tokens von Google werden nicht auf dem Server gespeichert. Sitzungstokens der App werden dort als Hashwerte gespeichert.",
+    "zh-TW": "帳戶服務會儲存已註冊裝置的公開金鑰、以公開金鑰產生的識別碼、名稱和類型、選用的區域網路裝置識別碼、電腦角色（主要／次要）、註冊與最近出現時間、工作階段到期時間及連線狀態。這些資料用於探索同一帳戶的裝置、驗證連線並維護安全。伺服器不會儲存裝置私密金鑰或 Google 存取權杖／ID 權杖；應用程式的工作階段權杖在伺服器上以雜湊值形式儲存。",
+    "fr": "Le service de comptes conserve les clés publiques des appareils enregistrés, les identifiants dérivés de ces clés, leurs noms et types, les identifiants LAN facultatifs, les rôles des PC (principal/secondaire), les dates d’enregistrement et de dernière activité, l’expiration de session et l’état de la connexion. Ces données servent à découvrir les appareils d’un même compte, à valider les connexions et à assurer la sécurité. Les clés privées des appareils et les jetons d’accès ou d’identification Google ne sont pas stockés sur le serveur ; les jetons de session de l’application y sont conservés sous forme de valeurs de hachage.",
+    "id": "Layanan akun menyimpan kunci publik perangkat terdaftar, ID yang berasal dari kunci tersebut, nama dan jenis perangkat, ID perangkat LAN opsional, peran PC (utama/sekunder), waktu pendaftaran dan terakhir terlihat, waktu kedaluwarsa sesi, serta status koneksi. Data ini digunakan untuk menemukan perangkat dalam akun yang sama, memvalidasi koneksi, dan menjaga keamanan. Kunci privat perangkat dan token akses atau token ID Google tidak disimpan di server. Token sesi aplikasi disimpan di server dalam bentuk nilai hash."
+  },
+  "Google verifies sign-in identity. Cloudflare Workers and SQLite Durable Objects store account/device metadata and forward connection signals. SDP/ICE signals may include IP addresses and other network information; they are forwarded to the other device but not stored in the OneMouse account database. Providers such as Google and Cloudflare may process IP addresses and other network metadata when serving requests.": {
+    "pt-BR": "O Google verifica a identidade no login. O Cloudflare Workers e o SQLite Durable Objects armazenam metadados da conta e do dispositivo e encaminham sinais de conexão. Os sinais SDP/ICE podem conter endereços IP e outras informações de rede; são encaminhados ao outro dispositivo, mas não são armazenados no banco de dados de contas do OneMouse. Provedores como Google e Cloudflare podem processar endereços IP e outros metadados de rede ao atender às solicitações.",
+    "de": "Google prüft die Identität bei der Anmeldung. Cloudflare Workers und SQLite Durable Objects speichern Konto- und Gerätemetadaten und leiten Verbindungssignale weiter. SDP-/ICE-Signale können IP-Adressen und andere Netzwerkinformationen enthalten. Sie werden an das andere Gerät weitergeleitet, aber nicht in der OneMouse-Kontodatenbank gespeichert. Anbieter wie Google und Cloudflare können bei der Bearbeitung von Anfragen IP-Adressen und andere Netzwerkmetadaten verarbeiten.",
+    "zh-TW": "Google 會驗證登入身分。Cloudflare Workers 與 SQLite Durable Objects 會儲存帳戶／裝置中繼資料並轉送連線訊號。SDP／ICE 訊號可能包含 IP 位址及其他網路資訊；系統會將其轉送至另一部裝置，但不會儲存在 OneMouse 帳戶資料庫。Google 與 Cloudflare 等服務提供者在處理要求時可能會處理 IP 位址和其他網路中繼資料。",
+    "fr": "Google vérifie l’identité lors de la connexion. Cloudflare Workers et SQLite Durable Objects stockent les métadonnées des comptes et des appareils et transmettent les signaux de connexion. Les signaux SDP/ICE peuvent contenir des adresses IP et d’autres informations réseau ; ils sont transmis à l’autre appareil, mais ne sont pas stockés dans la base de données des comptes OneMouse. Des prestataires tels que Google et Cloudflare peuvent traiter les adresses IP et d’autres métadonnées réseau pour répondre aux requêtes.",
+    "id": "Google memverifikasi identitas saat login. Cloudflare Workers dan SQLite Durable Objects menyimpan metadata akun dan perangkat serta meneruskan sinyal koneksi. Sinyal SDP/ICE dapat berisi alamat IP dan informasi jaringan lainnya; sinyal diteruskan ke perangkat lain tetapi tidak disimpan dalam basis data akun OneMouse. Penyedia seperti Google dan Cloudflare dapat memproses alamat IP dan metadata jaringan lainnya saat melayani permintaan."
+  },
+  "Account and device registration records may remain until the device is unregistered or the OneMouse account is deleted. App sessions last up to 7 days, temporary sign-in flows up to 10 minutes, and one-use connection tickets 30 seconds. Expired temporary records are eligible for periodic server cleanup; replay-prevention and rate-limit records also expire. Closing, disconnecting, or uninstalling the app does not itself delete server registrations.": {
+    "pt-BR": "Os registros de conta e de dispositivos podem permanecer até que o dispositivo seja removido do cadastro ou a conta OneMouse seja excluída. As sessões do app duram até 7 dias; os fluxos temporários de login, até 10 minutos; e os tíquetes de conexão de uso único, 30 segundos. Registros temporários vencidos podem ser removidos na limpeza periódica do servidor; os registros de prevenção de repetição e de limitação de taxa também expiram. Fechar, desconectar ou desinstalar o app não exclui, por si só, os registros no servidor.",
+    "de": "Konto- und Geräteregistrierungen können erhalten bleiben, bis das Gerät abgemeldet oder das OneMouse-Konto gelöscht wird. App-Sitzungen dauern bis zu 7 Tage, vorübergehende Anmeldevorgänge bis zu 10 Minuten und einmal verwendbare Verbindungstickets 30 Sekunden. Abgelaufene temporäre Einträge können bei der regelmäßigen Serverbereinigung entfernt werden; auch Datensätze zum Schutz vor wiederholter Verwendung und zur Anfragenbegrenzung laufen ab. Das Schließen der App, das Trennen der Verbindung oder die Deinstallation löscht die Registrierungen auf dem Server nicht automatisch.",
+    "zh-TW": "帳戶與裝置註冊資料可能保留至裝置取消註冊或 OneMouse 帳戶刪除為止。應用程式工作階段最長 7 天、暫時登入流程最長 10 分鐘，單次連線票證有效期限為 30 秒。過期的暫存記錄可在伺服器定期清理時移除；用於防止重放及限制請求頻率的記錄也會到期。關閉應用程式、中斷連線或解除安裝本身並不會刪除伺服器上的註冊資料。",
+    "fr": "Les enregistrements des comptes et des appareils peuvent être conservés jusqu’à la désinscription de l’appareil ou à la suppression du compte OneMouse. Les sessions de l’application durent jusqu’à 7 jours, les procédures de connexion temporaires jusqu’à 10 minutes, et les tickets de connexion à usage unique 30 secondes. Les entrées temporaires expirées peuvent être supprimées lors d’un nettoyage périodique du serveur ; les enregistrements de prévention du rejeu et de limitation du débit expirent également. Fermer, déconnecter ou désinstaller l’application ne supprime pas en soi les enregistrements sur le serveur.",
+    "id": "Catatan pendaftaran akun dan perangkat dapat tetap tersimpan sampai perangkat dibatalkan pendaftarannya atau akun OneMouse dihapus. Sesi aplikasi berlaku hingga 7 hari, alur login sementara hingga 10 menit, dan tiket koneksi sekali pakai selama 30 detik. Catatan sementara yang kedaluwarsa dapat dibersihkan secara berkala di server; catatan pencegahan penggunaan ulang dan pembatasan laju permintaan juga kedaluwarsa. Menutup aplikasi, memutus koneksi, atau menghapus instalasinya tidak dengan sendirinya menghapus pendaftaran di server."
+  },
+  "Signing in alone does not start screen sharing. Apps validate the current device, session, and signature for same-account connection requests. Direct connections can fail on some networks.": {
+    "pt-BR": "O login por si só não inicia o compartilhamento de tela. Os apps validam o dispositivo atual, a sessão e a assinatura para solicitações de conexão da mesma conta. Conexões diretas podem falhar em algumas redes.",
+    "de": "Die Anmeldung allein startet keine Bildschirmfreigabe. Bei Verbindungsanfragen innerhalb desselben Kontos prüfen die Apps das aktuelle Gerät, die Sitzung und die Signatur. Direkte Verbindungen können in manchen Netzwerken fehlschlagen.",
+    "zh-TW": "單純登入不會啟動螢幕分享。對於來自同一帳戶的連線要求，應用程式會驗證目前裝置、工作階段與簽章。在某些網路中，直接連線可能失敗。",
+    "fr": "La connexion au compte ne lance pas à elle seule le partage d’écran. Les applications valident l’appareil actuel, la session et la signature pour les demandes de connexion entre appareils d’un même compte. Les connexions directes peuvent échouer sur certains réseaux.",
+    "id": "Login saja tidak memulai berbagi layar. Aplikasi memvalidasi perangkat saat ini, sesi, dan tanda tangan untuk permintaan koneksi dari akun yang sama. Koneksi langsung dapat gagal di jaringan tertentu."
+  },
+  "Request OneMouse account and data deletion": {
+    "pt-BR": "Solicitar a exclusão da conta OneMouse e dos dados",
+    "de": "Löschung des OneMouse-Kontos und der Daten beantragen",
+    "zh-TW": "要求刪除 OneMouse 帳戶及資料",
+    "fr": "Demander la suppression du compte OneMouse et des données",
+    "id": "Meminta penghapusan akun dan data OneMouse"
+  },
+  "In the Android app, use": {
+    "pt-BR": "No app Android, acesse",
+    "de": "Verwenden Sie in der Android-App",
+    "zh-TW": "在 Android 應用程式中，請前往",
+    "fr": "Dans l’application Android, utilisez",
+    "id": "Di aplikasi Android, pilih"
+  },
+  "Google account → Account management → Delete account link": {
+    "pt-BR": "Conta do Google → Gerenciamento da conta → Excluir vínculo da conta",
+    "de": "Google-Konto → Kontoverwaltung → Kontoverknüpfung löschen",
+    "zh-TW": "Google 帳戶 → 帳戶管理 → 刪除帳戶連結",
+    "fr": "Compte Google → Gestion du compte → Supprimer l’association du compte",
+    "id": "Akun Google → Pengelolaan akun → Hapus tautan akun"
+  },
+  "to delete your server-side OneMouse account, registered devices, and sessions. If reauthentication is required, sign out, sign in again, and retry within five minutes. This does not delete your Google account or existing LAN/Bluetooth pairings.": {
+    "pt-BR": "para excluir do servidor a conta OneMouse, os dispositivos registrados e as sessões. Se for necessário autenticar-se novamente, saia da conta, faça login de novo e tente outra vez em até cinco minutos. Isso não exclui a conta do Google nem os pareamentos LAN/Bluetooth existentes.",
+    "de": "um Ihr OneMouse-Konto, die registrierten Geräte und Sitzungen auf dem Server zu löschen. Ist eine erneute Authentifizierung erforderlich, melden Sie sich ab und wieder an und versuchen Sie es innerhalb von fünf Minuten erneut. Dadurch werden weder Ihr Google-Konto noch bestehende LAN-/Bluetooth-Kopplungen gelöscht.",
+    "zh-TW": "，以刪除伺服器上的 OneMouse 帳戶、已註冊裝置及工作階段。如需重新驗證身分，請登出後再次登入，並在五分鐘內重試。此操作不會刪除您的 Google 帳戶或既有的區域網路／藍牙配對。",
+    "fr": "pour supprimer du serveur votre compte OneMouse, vos appareils enregistrés et vos sessions. Si une nouvelle authentification est requise, déconnectez-vous, reconnectez-vous et réessayez dans les cinq minutes. Cela ne supprime ni votre compte Google ni vos jumelages existants par réseau local ou Bluetooth.",
+    "id": "untuk menghapus akun OneMouse, perangkat terdaftar, dan sesi Anda di server. Jika autentikasi ulang diperlukan, logout, login kembali, lalu coba lagi dalam lima menit. Tindakan ini tidak menghapus akun Google ataupun pemasangan LAN/Bluetooth yang sudah ada."
+  },
+  "If you cannot access the app or have uninstalled it,": {
+    "pt-BR": "Se você não conseguir acessar o app ou já o tiver desinstalado,",
+    "de": "Falls Sie keinen Zugriff auf die App haben oder sie deinstalliert haben,",
+    "zh-TW": "如果無法使用應用程式或已將它解除安裝，",
+    "fr": "Si vous ne pouvez pas accéder à l’application ou l’avez désinstallée,",
+    "id": "Jika Anda tidak dapat mengakses aplikasi atau sudah menghapus instalasinya,"
+  },
+  "email sdlckdrl@gmail.com to request account deletion": {
+    "pt-BR": "envie um e-mail para sdlckdrl@gmail.com para solicitar a exclusão da conta",
+    "de": "beantragen Sie die Kontolöschung per E-Mail an sdlckdrl@gmail.com",
+    "zh-TW": "請寄電子郵件至 sdlckdrl@gmail.com 要求刪除帳戶",
+    "fr": "écrivez à sdlckdrl@gmail.com pour demander la suppression du compte",
+    "id": "kirim email ke sdlckdrl@gmail.com untuk meminta penghapusan akun"
+  },
+  ". Identify the Google email address used with OneMouse and state that you request account deletion. Account ownership verification may be needed. Do not send your Google password or sign-in tokens.": {
+    "pt-BR": ". Informe o endereço de e-mail do Google usado com o OneMouse e declare que deseja excluir a conta. Pode ser necessário comprovar a titularidade. Não envie sua senha do Google nem tokens de login.",
+    "de": ". Geben Sie die mit OneMouse verwendete Google-E-Mail-Adresse an und erklären Sie, dass Sie die Kontolöschung beantragen. Möglicherweise muss die Kontoinhaberschaft geprüft werden. Senden Sie weder Ihr Google-Passwort noch Anmeldetokens.",
+    "zh-TW": "。請提供與 OneMouse 搭配使用的 Google 電子郵件地址，並表明您要求刪除帳戶。我們可能需要驗證帳戶所有權。請勿傳送您的 Google 密碼或登入權杖。",
+    "fr": ". Indiquez l’adresse e-mail Google utilisée avec OneMouse et précisez que vous demandez la suppression du compte. Une vérification de la propriété du compte peut être nécessaire. N’envoyez ni votre mot de passe Google ni vos jetons de connexion.",
+    "id": ". Sebutkan alamat email Google yang digunakan dengan OneMouse dan nyatakan bahwa Anda meminta penghapusan akun. Kepemilikan akun mungkin perlu diverifikasi. Jangan kirim kata sandi Google atau token login."
+  },
+  "Signing out unregisters the current device and its account sessions; it is different from deleting the entire OneMouse account. If the server cannot be reached, only local sign-out may complete and the server registration can remain. Delete transferred files and local notification history separately on each device.": {
+    "pt-BR": "Sair da conta remove o registro do dispositivo atual e suas sessões da conta; não é o mesmo que excluir toda a conta OneMouse. Se o servidor estiver inacessível, apenas a saída local poderá ser concluída e o registro no servidor poderá permanecer. Exclua separadamente, em cada dispositivo, os arquivos transferidos e o histórico local de notificações.",
+    "de": "Beim Abmelden werden die Registrierung des aktuellen Geräts und dessen Kontositzungen aufgehoben; das ist nicht gleichbedeutend mit dem Löschen des gesamten OneMouse-Kontos. Ist der Server nicht erreichbar, kann möglicherweise nur die lokale Abmeldung abgeschlossen werden und die Serverregistrierung bestehen bleiben. Übertragene Dateien und den lokalen Benachrichtigungsverlauf müssen Sie auf jedem Gerät separat löschen.",
+    "zh-TW": "登出會取消目前裝置的註冊及該裝置的帳戶工作階段，並不等於刪除整個 OneMouse 帳戶。如果連不到伺服器，可能只會完成本機登出，伺服器上的註冊資料仍會保留。已傳送的檔案及本機通知歷程記錄須在各裝置上分別刪除。",
+    "fr": "Se déconnecter désinscrit l’appareil actuel et ses sessions de compte ; cela ne supprime pas l’ensemble du compte OneMouse. Si le serveur est inaccessible, seule la déconnexion locale peut aboutir et l’enregistrement sur le serveur peut subsister. Supprimez séparément les fichiers transférés et l’historique local des notifications sur chaque appareil.",
+    "id": "Logout membatalkan pendaftaran perangkat saat ini dan sesi akunnya; ini berbeda dengan menghapus seluruh akun OneMouse. Jika server tidak dapat dijangkau, mungkin hanya logout lokal yang berhasil dan pendaftaran di server tetap ada. Hapus file yang ditransfer serta riwayat notifikasi lokal secara terpisah di setiap perangkat."
+  },
+  "Open Source": {
+    "pt-BR": "Código aberto",
+    "de": "Open Source",
+    "zh-TW": "開放原始碼",
+    "fr": "Open source",
+    "id": "Sumber terbuka"
+  },
+  "Open Source Licenses": {
+    "pt-BR": "Licenças de código aberto",
+    "de": "Open-Source-Lizenzen",
+    "zh-TW": "開放原始碼授權",
+    "fr": "Licences open source",
+    "id": "Lisensi sumber terbuka"
+  },
+  "Licenses and copyright notices for open source components included in OneMouse. Original license texts, NOTICE files, and corresponding source are available below.": {
+    "pt-BR": "Licenças e avisos de direitos autorais dos componentes de código aberto incluídos no OneMouse. Os textos originais das licenças, os arquivos NOTICE e o código-fonte correspondente estão disponíveis abaixo.",
+    "de": "Lizenzen und Urheberrechtshinweise zu den in OneMouse enthaltenen Open-Source-Komponenten. Die ursprünglichen Lizenztexte, NOTICE-Dateien und der zugehörige Quellcode sind unten verfügbar.",
+    "zh-TW": "以下是 OneMouse 內含開放原始碼元件的授權與著作權聲明，以及授權原文、NOTICE 檔案和對應原始碼。",
+    "fr": "Licences et avis de droits d’auteur des composants open source inclus dans OneMouse. Les textes originaux des licences, les fichiers NOTICE et le code source correspondant sont disponibles ci-dessous.",
+    "id": "Lisensi dan pemberitahuan hak cipta untuk komponen sumber terbuka yang disertakan dalam OneMouse. Teks lisensi asli, file NOTICE, dan kode sumber terkait tersedia di bawah."
+  },
+  "Last updated: November 5, 2026": {
+    "pt-BR": "Última atualização: 5 de novembro de 2026",
+    "de": "Zuletzt aktualisiert: 5. November 2026",
+    "zh-TW": "最近更新：2026 年 11 月 5 日",
+    "fr": "Dernière mise à jour : 5 novembre 2026",
+    "id": "Terakhir diperbarui: 5 November 2026"
+  },
+  "Detailed component inventory": {
+    "pt-BR": "Inventário detalhado dos componentes",
+    "de": "Detailliertes Komponentenverzeichnis",
+    "zh-TW": "元件詳細清單",
+    "fr": "Inventaire détaillé des composants",
+    "id": "Daftar komponen terperinci"
+  },
+  "This inventory covers verified components in Windows MSIX 1.6.2.0, Android 1.2.43 (79) Play and Galaxy builds, and macOS 1.6.0. Store update availability depends on each store’s review and publication status. Earlier app versions may contain different components.": {
+    "pt-BR": "Este inventário abrange os componentes verificados no Windows MSIX 1.6.2.0, nas versões Play e Galaxy do Android 1.2.43 (79) e no macOS 1.6.0. A disponibilidade das atualizações depende da análise e publicação de cada loja. Versões anteriores do app podem conter componentes diferentes.",
+    "de": "Dieses Verzeichnis umfasst die überprüften Komponenten von Windows MSIX 1.6.2.0, der Android-Version 1.2.43 (79) für Play und Galaxy sowie der macOS-Version 1.6.0. Wann Updates in den Stores verfügbar sind, hängt von der Prüfung und Veröffentlichung im jeweiligen Store ab. Frühere App-Versionen können andere Komponenten enthalten.",
+    "zh-TW": "本清單列出已驗證的 Windows MSIX 1.6.2.0、Android 1.2.43（79）Play 與 Galaxy 發行版本，以及 macOS 1.6.0 所含元件。商店更新是否可用取決於各商店的審查與發布狀態。舊版應用程式可能包含不同元件。",
+    "fr": "Cet inventaire recense les composants vérifiés dans la version Windows MSIX 1.6.2.0, les éditions Play et Galaxy d’Android 1.2.43 (79) et la version macOS 1.6.0. La disponibilité des mises à jour dépend de leur examen et de leur publication par chaque boutique. Les versions antérieures de l’application peuvent contenir d’autres composants.",
+    "id": "Daftar ini mencakup komponen yang telah diverifikasi dalam Windows MSIX 1.6.2.0, Android 1.2.43 (79) edisi Play dan Galaxy, serta macOS 1.6.0. Ketersediaan pembaruan bergantung pada peninjauan dan publikasi oleh masing-masing toko. Versi aplikasi sebelumnya mungkin memiliki komponen yang berbeda."
+  },
+  "Google Play SDKs and Firebase encoders are included only in the Play build, not the Galaxy build.": {
+    "pt-BR": "Os SDKs do Google Play e os codificadores Firebase estão incluídos apenas na versão Play, não na versão Galaxy.",
+    "de": "Die Google-Play-SDKs und Firebase-Encoder sind nur in der Play-Version enthalten, nicht in der Galaxy-Version.",
+    "zh-TW": "只有 Play 版本包含 Google Play SDK 和 Firebase 編碼器，Galaxy 版本不包含這些元件。",
+    "fr": "Les SDK Google Play et les encodeurs Firebase ne sont inclus que dans la version Play, et non dans la version Galaxy.",
+    "id": "SDK Google Play dan enkoder Firebase hanya disertakan dalam edisi Play, bukan edisi Galaxy."
+  },
+  "Original licenses and copyright notices": {
+    "pt-BR": "Licenças e avisos de direitos autorais originais",
+    "de": "Originale Lizenzen und Urheberrechtshinweise",
+    "zh-TW": "授權原文與著作權聲明",
+    "fr": "Licences et avis de droits d’auteur originaux",
+    "id": "Lisensi dan pemberitahuan hak cipta asli"
+  },
+  "These copies preserve the components’ actual license texts, copyright notices, and NOTICE files. A common license name does not replace component-specific notices. Original legal texts are provided in their original language.": {
+    "pt-BR": "Estas cópias preservam os textos efetivos das licenças, os avisos de direitos autorais e os arquivos NOTICE dos componentes. O nome genérico de uma licença não substitui os avisos específicos de cada componente. Os textos jurídicos originais são fornecidos em seu idioma original.",
+    "de": "Diese Kopien bewahren die tatsächlichen Lizenztexte, Urheberrechtshinweise und NOTICE-Dateien der Komponenten. Eine allgemeine Lizenzbezeichnung ersetzt nicht die komponentenspezifischen Hinweise. Die rechtlichen Originaltexte werden in ihrer jeweiligen Originalsprache bereitgestellt.",
+    "zh-TW": "這些副本保留各元件實際適用的授權條文、著作權聲明和 NOTICE 檔案。通用授權名稱不能取代各元件專屬的聲明。法律文件原文以其原始語言提供。",
+    "fr": "Ces copies préservent les textes de licence, les avis de droits d’auteur et les fichiers NOTICE propres aux composants. Une désignation générique de licence ne remplace pas les avis spécifiques à chaque composant. Les textes juridiques originaux sont fournis dans leur langue d’origine.",
+    "id": "Salinan ini mempertahankan teks lisensi, pemberitahuan hak cipta, dan file NOTICE yang berlaku bagi masing-masing komponen. Nama lisensi yang umum tidak menggantikan pemberitahuan khusus komponen. Teks hukum asli disediakan dalam bahasa aslinya."
+  },
+  "Sources, versions, and SHA-256 inventory": {
+    "pt-BR": "Inventário de fontes, versões e hashes SHA-256",
+    "de": "Verzeichnis der Quellen, Versionen und SHA-256-Prüfsummen",
+    "zh-TW": "來源、版本與 SHA-256 清單",
+    "fr": "Inventaire des sources, versions et empreintes SHA-256",
+    "id": "Daftar sumber, versi, dan nilai SHA-256"
+  },
+  "Download licenses and notices": {
+    "pt-BR": "Baixar licenças e avisos",
+    "de": "Lizenzen und Hinweise herunterladen",
+    "zh-TW": "下載授權與聲明",
+    "fr": "Télécharger les licences et avis",
+    "id": "Unduh lisensi dan pemberitahuan"
+  },
+  "Source availability and library recombination": {
+    "pt-BR": "Disponibilidade do código-fonte e recombinação de bibliotecas",
+    "de": "Verfügbarkeit des Quellcodes und Neukombination von Bibliotheken",
+    "zh-TW": "原始碼取得方式與函式庫重組",
+    "fr": "Disponibilité du code source et recombinaison des bibliothèques",
+    "id": "Ketersediaan kode sumber dan penggabungan ulang pustaka"
+  },
+  "Corresponding source for LazySodium Android 5.2.0 is provided below, including its original source and license. OneMouse has not modified this library’s source.": {
+    "pt-BR": "O código-fonte correspondente ao LazySodium Android 5.2.0 é disponibilizado abaixo, incluindo o código original e a licença. O OneMouse não modificou o código-fonte dessa biblioteca.",
+    "de": "Der zugehörige Quellcode für LazySodium Android 5.2.0 einschließlich Originalquellcode und Lizenz wird unten bereitgestellt. OneMouse hat den Quellcode dieser Bibliothek nicht verändert.",
+    "zh-TW": "下方提供 LazySodium Android 5.2.0 的對應原始碼，包括原始程式碼及其授權。OneMouse 未修改此函式庫的原始碼。",
+    "fr": "Le code source correspondant à LazySodium Android 5.2.0 est fourni ci-dessous, y compris le code source original et la licence. OneMouse n’a pas modifié le code source de cette bibliothèque.",
+    "id": "Kode sumber terkait untuk LazySodium Android 5.2.0 disediakan di bawah ini, termasuk kode asli dan lisensinya. OneMouse tidak memodifikasi kode sumber pustaka ini."
+  },
+  "Corresponding source and recombination materials for zeroconf 0.151.3 are available for the Windows releases listed below. The tool retains the distributed application object code and builds a separate executable using modified zeroconf source. It does not overwrite the original app or assume that modules inside the bundled executable can be replaced automatically.": {
+    "pt-BR": "O código-fonte correspondente e os materiais de recombinação do zeroconf 0.151.3 estão disponíveis para as versões do Windows listadas abaixo. A ferramenta mantém o código-objeto distribuído do aplicativo e gera um executável separado com o código-fonte modificado do zeroconf. Ela não sobrescreve o app original nem pressupõe que os módulos dentro do executável empacotado possam ser substituídos automaticamente.",
+    "de": "Der zugehörige Quellcode und die Materialien zur Neukombination von zeroconf 0.151.3 stehen für die unten aufgeführten Windows-Versionen bereit. Das Werkzeug behält den ausgelieferten Objektcode der Anwendung bei und erstellt unter Verwendung des geänderten zeroconf-Quellcodes eine separate ausführbare Datei. Es überschreibt die ursprüngliche App nicht und setzt nicht voraus, dass sich Module in der gebündelten ausführbaren Datei automatisch ersetzen lassen.",
+    "zh-TW": "下方列出的 Windows 版本提供 zeroconf 0.151.3 的對應原始碼與重組材料。此工具保留發行時的應用程式目的碼，並使用修改後的 zeroconf 原始碼建立獨立的執行檔，不會覆寫原始應用程式，也不假設封裝在執行檔中的模組可以自動替換。",
+    "fr": "Le code source correspondant et les éléments de recombinaison de zeroconf 0.151.3 sont disponibles pour les versions Windows ci-dessous. L’outil conserve le code objet de l’application distribuée et construit un exécutable distinct à partir de la source modifiée de zeroconf. Il n’écrase pas l’application d’origine et ne suppose pas que les modules de l’exécutable empaqueté puissent être remplacés automatiquement.",
+    "id": "Kode sumber terkait dan materi penggabungan ulang untuk zeroconf 0.151.3 tersedia bagi rilis Windows yang tercantum di bawah ini. Alat ini mempertahankan kode objek aplikasi yang didistribusikan dan membuat berkas eksekusi terpisah menggunakan kode sumber zeroconf yang telah dimodifikasi. Alat ini tidak menimpa aplikasi asli atau mengasumsikan bahwa modul dalam berkas eksekusi yang dibundel dapat diganti secara otomatis."
+  },
+  "We do not restrict library modification, recombination, or reverse engineering for debugging those modifications where permitted by the relevant open source license. Recombined executables are separate files without a Microsoft Store signature. See the instructions for the procedure and validation scope.": {
+    "pt-BR": "Não restringimos a modificação ou recombinação da biblioteca, nem a engenharia reversa para depurar essas modificações, quando permitidas pela licença de código aberto pertinente. Os executáveis recombinados são arquivos separados, sem assinatura da Microsoft Store. Consulte as instruções para conhecer o procedimento e o escopo da validação.",
+    "de": "Wir beschränken weder Änderungen an der Bibliothek noch ihre Neukombination oder das Reverse Engineering zur Fehlerbehebung bei solchen Änderungen, soweit die jeweilige Open-Source-Lizenz dies gestattet. Die neu kombinierten ausführbaren Dateien sind separate Dateien ohne Microsoft-Store-Signatur. Verfahren und Umfang der Überprüfung sind in den Anweisungen beschrieben.",
+    "zh-TW": "在相關開放原始碼授權允許的範圍內，我們不會限制修改、重組函式庫，也不會限制為偵錯這些修改而進行的逆向工程。重組的執行檔為獨立檔案，不含 Microsoft Store 簽章。程序與驗證範圍請見說明。",
+    "fr": "Nous ne limitons pas la modification ni la recombinaison des bibliothèques, ni la rétro-ingénierie destinée à déboguer ces modifications, lorsque la licence open source applicable les autorise. Les exécutables recombinés sont des fichiers distincts dépourvus de signature Microsoft Store. Consultez les instructions pour connaître la procédure et le périmètre de validation.",
+    "id": "Kami tidak membatasi modifikasi pustaka, penggabungan ulang, atau rekayasa balik untuk men-debug modifikasi tersebut sejauh diizinkan oleh lisensi sumber terbuka yang berlaku. Berkas eksekusi hasil penggabungan ulang berupa berkas terpisah tanpa tanda tangan Microsoft Store. Lihat petunjuk untuk prosedur dan cakupan validasi."
+  },
+  "For corresponding source or materials for another release, or if a download is unavailable, contact us with your app version.": {
+    "pt-BR": "Para obter o código-fonte correspondente ou os materiais de outra versão, ou se algum download estiver indisponível, entre em contato informando a versão do seu app.",
+    "de": "Wenn Sie Quellcode oder Materialien für eine andere Version benötigen oder ein Download nicht verfügbar ist, kontaktieren Sie uns bitte unter Angabe Ihrer App-Version.",
+    "zh-TW": "如需其他版本的對應原始碼或材料，或遇到無法下載的情況，請聯絡我們並提供應用程式版本。",
+    "fr": "Pour obtenir le code source correspondant ou les éléments d’une autre version, ou si un téléchargement est indisponible, contactez-nous en précisant la version de votre application.",
+    "id": "Untuk mendapatkan kode sumber terkait atau materi rilis lain, atau jika unduhan tidak tersedia, hubungi kami dan sertakan versi aplikasi Anda."
+  },
+  "PyInstaller 6.22.2 (GPLv2-or-later with bootloader exception), Electron Builder 26.18.1 (MIT), Android Gradle Plugin, Gradle, Kotlin Gradle Plugin, and test tools are distinguished from app runtime components. The actual PyInstaller bootloader exception is provided.": {
+    "pt-BR": "O PyInstaller 6.22.2 (GPLv2-ou-posterior com exceção para o bootloader), o Electron Builder 26.18.1 (MIT), o Android Gradle Plugin, o Gradle, o Kotlin Gradle Plugin e as ferramentas de teste são distintos dos componentes usados na execução do app. O texto efetivo da exceção do bootloader do PyInstaller é fornecido.",
+    "de": "PyInstaller 6.22.2 (GPLv2 oder später mit Bootloader-Ausnahme), Electron Builder 26.18.1 (MIT), das Android Gradle Plugin, Gradle, das Kotlin Gradle Plugin und Testwerkzeuge werden von den zur Laufzeit verwendeten App-Komponenten unterschieden. Der Wortlaut der PyInstaller-Bootloader-Ausnahme wird bereitgestellt.",
+    "zh-TW": "PyInstaller 6.22.2（GPLv2 或更新版本，附開機載入程式例外條款）、Electron Builder 26.18.1（MIT）、Android Gradle Plugin、Gradle、Kotlin Gradle Plugin 與測試工具均與應用程式執行時元件分開列示，並提供 PyInstaller 開機載入程式例外條款原文。",
+    "fr": "PyInstaller 6.22.2 (GPLv2 ou ultérieure avec exception pour le chargeur d’amorçage), Electron Builder 26.18.1 (MIT), Android Gradle Plugin, Gradle, Kotlin Gradle Plugin et les outils de test sont distingués des composants utilisés à l’exécution de l’application. Le texte de l’exception applicable au chargeur d’amorçage PyInstaller est fourni.",
+    "id": "PyInstaller 6.22.2 (GPLv2 atau lebih baru dengan pengecualian untuk bootloader), Electron Builder 26.18.1 (MIT), Android Gradle Plugin, Gradle, Kotlin Gradle Plugin, dan alat pengujian dibedakan dari komponen runtime aplikasi. Teks pengecualian untuk bootloader PyInstaller disediakan."
+  },
+  "OneMouse connects Windows with Android, other Windows PCs, and Macs. This policy covers existing LAN/Bluetooth pairing and optional Google account linking, including data handling and permissions.": {
+    "pt-BR": "O OneMouse conecta o Windows ao Android, a outros PCs Windows e a Macs. Esta política trata do pareamento existente por LAN/Bluetooth e da vinculação opcional de uma conta do Google, incluindo o tratamento de dados e as permissões.",
+    "de": "OneMouse verbindet Windows mit Android, weiteren Windows-PCs und Macs. Diese Erklärung umfasst die bestehende LAN-/Bluetooth-Kopplung und die optionale Verknüpfung eines Google-Kontos einschließlich Datenverarbeitung und Berechtigungen.",
+    "zh-TW": "OneMouse 可將 Windows 連接到 Android、其他 Windows 電腦和 Mac。本政策涵蓋現有的區域網路／藍牙配對以及選用的 Google 帳戶連結，包括資料處理與權限。",
+    "fr": "OneMouse relie Windows à Android, à d’autres PC Windows et à des Mac. Cette politique couvre le jumelage existant par réseau local ou Bluetooth et l’association facultative d’un compte Google, ainsi que le traitement des données et les autorisations correspondantes.",
+    "id": "OneMouse menghubungkan Windows dengan Android, PC Windows lain, dan Mac. Kebijakan ini mencakup pemasangan melalui LAN/Bluetooth dan penautan akun Google secara opsional, termasuk penanganan data dan izin."
+  },
+  "Google account data": {
+    "pt-BR": "Dados da conta do Google",
+    "de": "Google-Kontodaten",
+    "zh-TW": "Google 帳戶資料",
+    "fr": "Données du compte Google",
+    "id": "Data akun Google"
+  },
+  "Request account and data deletion": {
+    "pt-BR": "Solicitar a exclusão da conta e dos dados",
+    "de": "Konto- und Datenlöschung beantragen",
+    "zh-TW": "要求刪除帳戶及資料",
+    "fr": "Demander la suppression du compte et des données",
+    "id": "Meminta penghapusan akun dan data"
+  },
+  "Standby clock weather": {
+    "pt-BR": "Previsão do tempo no relógio em espera",
+    "de": "Wetteranzeige der Standby-Uhr",
+    "zh-TW": "待機時鐘的天氣資訊",
+    "fr": "Météo de l’horloge de veille",
+    "id": "Cuaca pada jam siaga"
+  },
+  "Core principle": {
+    "pt-BR": "Princípio básico",
+    "de": "Grundprinzip",
+    "zh-TW": "基本原則",
+    "fr": "Principe de base",
+    "id": "Prinsip dasar"
+  },
+  "Information processed": {
+    "pt-BR": "Informações tratadas",
+    "de": "Verarbeitete Informationen",
+    "zh-TW": "處理的資訊",
+    "fr": "Informations traitées",
+    "id": "Informasi yang diproses"
+  },
+  "Device information: Android device ID, device name, Windows or Mac computer name, device ID, platform, display information, or local network address": {
+    "pt-BR": "Informações do dispositivo: ID do dispositivo Android, nome do dispositivo, nome do computador Windows ou Mac, ID do dispositivo, plataforma, informações da tela ou endereço de rede local",
+    "de": "Geräteinformationen: Android-Geräte-ID, Gerätename, Computername unter Windows oder macOS, Geräte-ID, Plattform, Bildschirminformationen oder lokale Netzwerkadresse",
+    "zh-TW": "裝置資訊：Android 裝置識別碼、裝置名稱、Windows 或 Mac 電腦名稱、裝置識別碼、平台、顯示資訊或區域網路位址",
+    "fr": "Informations sur l’appareil : identifiant de l’appareil Android, nom de l’appareil, nom de l’ordinateur Windows ou Mac, identifiant de l’appareil, plateforme, informations d’affichage ou adresse sur le réseau local",
+    "id": "Informasi perangkat: ID perangkat Android, nama perangkat, nama komputer Windows atau Mac, ID perangkat, platform, informasi layar, atau alamat jaringan lokal"
+  },
+  "Connection information: pairing state, session key, selected device, transport, and last connection time": {
+    "pt-BR": "Informações de conexão: estado de pareamento, chave de sessão, dispositivo selecionado, meio de transporte e horário da última conexão",
+    "de": "Verbindungsinformationen: Kopplungsstatus, Sitzungsschlüssel, ausgewähltes Gerät, Übertragungsweg und Zeitpunkt der letzten Verbindung",
+    "zh-TW": "連線資訊：配對狀態、工作階段金鑰、所選裝置、傳輸方式與上次連線時間",
+    "fr": "Informations de connexion : état du jumelage, clé de session, appareil sélectionné, mode de transport et heure de la dernière connexion",
+    "id": "Informasi koneksi: status pemasangan, kunci sesi, perangkat yang dipilih, jenis transportasi data, dan waktu koneksi terakhir"
+  },
+  "Placement information: screen size, orientation, display topology, and device position around the Windows PC": {
+    "pt-BR": "Informações de posicionamento: tamanho e orientação da tela, organização dos monitores e posição do dispositivo em relação ao PC Windows",
+    "de": "Anordnungsinformationen: Bildschirmgröße, Ausrichtung, Bildschirmtopologie und Position des Geräts relativ zum Windows-PC",
+    "zh-TW": "配置資訊：螢幕尺寸、方向、顯示器配置，以及裝置相對於 Windows 電腦的位置",
+    "fr": "Informations de disposition : taille et orientation de l’écran, organisation des affichages et position de l’appareil par rapport au PC Windows",
+    "id": "Informasi tata letak: ukuran layar, orientasi, susunan layar, dan posisi perangkat di sekitar PC Windows"
+  },
+  "Transfer information: files, folders, text, and clipboard content explicitly sent by the user": {
+    "pt-BR": "Informações de transferência: arquivos, pastas, textos e conteúdos da área de transferência enviados expressamente pelo usuário",
+    "de": "Übertragungsinformationen: Dateien, Ordner, Text und Zwischenablageinhalte, die der Nutzer ausdrücklich sendet",
+    "zh-TW": "傳輸資訊：使用者明確選擇傳送的檔案、資料夾、文字和剪貼簿內容",
+    "fr": "Informations de transfert : fichiers, dossiers, textes et contenus du presse-papiers envoyés explicitement par l’utilisateur",
+    "id": "Informasi transfer: file, folder, teks, dan isi papan klip yang secara jelas dikirim oleh pengguna"
+  },
+  "Billing information: whether Android Pro was purchased or restored. Google Play handles payment processing.": {
+    "pt-BR": "Informações de cobrança: se o Android Pro foi comprado ou restaurado. O Google Play processa o pagamento.",
+    "de": "Abrechnungsinformationen: ob Android Pro gekauft oder wiederhergestellt wurde. Die Zahlungsabwicklung übernimmt Google Play.",
+    "zh-TW": "帳務資訊：是否已購買或復原 Android Pro。付款處理由 Google Play 負責。",
+    "fr": "Informations de facturation : achat ou restauration d’Android Pro. Le traitement des paiements est assuré par Google Play.",
+    "id": "Informasi penagihan: apakah Android Pro telah dibeli atau dipulihkan. Pembayaran diproses oleh Google Play."
+  },
+  "Accessibility and screen permissions": {
+    "pt-BR": "Acessibilidade e permissões de tela",
+    "de": "Bedienungshilfen und Bildschirmberechtigungen",
+    "zh-TW": "輔助使用與螢幕權限",
+    "fr": "Accessibilité et autorisations relatives à l’écran",
+    "id": "Aksesibilitas dan izin layar"
+  },
+  "Files and clipboard": {
+    "pt-BR": "Arquivos e área de transferência",
+    "de": "Dateien und Zwischenablage",
+    "zh-TW": "檔案與剪貼簿",
+    "fr": "Fichiers et presse-papiers",
+    "id": "File dan papan klip"
+  },
+  "Files, folders, and clipboard content move only when the user sends them or enables the relevant sync feature. Transfers are direct among supported devices, including Mac over LAN. Content is not uploaded to OneMouse servers.": {
+    "pt-BR": "Os arquivos, as pastas e o conteúdo da área de transferência só são transferidos quando o usuário os envia ou ativa o recurso de sincronização correspondente. As transferências ocorrem diretamente entre os dispositivos compatíveis, inclusive com o Mac por LAN. O conteúdo não é enviado aos servidores do OneMouse.",
+    "de": "Dateien, Ordner und Zwischenablageinhalte werden nur übertragen, wenn der Nutzer sie sendet oder die entsprechende Synchronisierung aktiviert. Übertragungen erfolgen direkt zwischen unterstützten Geräten, auch zum Mac über LAN. Die Inhalte werden nicht auf OneMouse-Server hochgeladen.",
+    "zh-TW": "只有在使用者傳送或啟用對應同步功能時，才會傳輸檔案、資料夾或剪貼簿內容。內容在支援的裝置間直接傳輸，也包含透過區域網路連接的 Mac，不會上傳至 OneMouse 伺服器。",
+    "fr": "Les fichiers, dossiers et contenus du presse-papiers ne sont transférés que si l’utilisateur les envoie ou active la synchronisation correspondante. Les transferts s’effectuent directement entre les appareils pris en charge, y compris avec un Mac sur le réseau local. Le contenu n’est pas transféré vers les serveurs OneMouse.",
+    "id": "File, folder, dan isi papan klip hanya ditransfer saat pengguna mengirimnya atau mengaktifkan fitur sinkronisasi terkait. Transfer berlangsung langsung antara perangkat yang didukung, termasuk Mac melalui LAN. Konten tidak diunggah ke server OneMouse."
+  },
+  "Local storage and deletion": {
+    "pt-BR": "Armazenamento local e exclusão",
+    "de": "Lokale Speicherung und Löschung",
+    "zh-TW": "本機儲存與刪除",
+    "fr": "Stockage local et suppression",
+    "id": "Penyimpanan lokal dan penghapusan"
+  },
+  "Pairing records, session keys, device lists, and placement settings may be stored in each app's local storage. The Mac app stores its paired session key in the macOS Keychain. Clearing pairing removes the trusted session record; users can separately remove app data and settings from their devices.": {
+    "pt-BR": "Os registros de pareamento, as chaves de sessão, as listas de dispositivos e as configurações de posicionamento podem ser mantidos no armazenamento local de cada app. O app Mac armazena a chave de sessão do pareamento no Chaves do macOS. Limpar o pareamento remove o registro da sessão confiável. Os usuários podem remover separadamente dados e configurações dos apps em seus dispositivos.",
+    "de": "Kopplungsdaten, Sitzungsschlüssel, Gerätelisten und Anordnungseinstellungen können im lokalen Speicher der jeweiligen App abgelegt werden. Die Mac-App speichert den Sitzungsschlüssel der Kopplung im macOS-Schlüsselbund. Das Aufheben der Kopplung entfernt den Eintrag für die vertrauenswürdige Sitzung. App-Daten und Einstellungen können Nutzer separat von ihren Geräten entfernen.",
+    "zh-TW": "配對記錄、工作階段金鑰、裝置清單和配置設定可能儲存在各應用程式的本機儲存空間。Mac 應用程式將已配對的工作階段金鑰存放於 macOS 鑰匙圈。清除配對會移除受信任的工作階段記錄；使用者也可在各裝置上分別移除應用程式資料與設定。",
+    "fr": "Les enregistrements de jumelage, clés de session, listes d’appareils et réglages de disposition peuvent être conservés dans le stockage local de chaque application. L’application Mac conserve la clé de session du jumelage dans le trousseau macOS. Effacer le jumelage supprime l’enregistrement de session de confiance ; les utilisateurs peuvent supprimer séparément les données et les réglages des applications sur leurs appareils.",
+    "id": "Catatan pemasangan, kunci sesi, daftar perangkat, dan pengaturan tata letak dapat disimpan di penyimpanan lokal masing-masing aplikasi. Aplikasi Mac menyimpan kunci sesi pemasangan di Rantai Kunci macOS. Menghapus pemasangan akan menghapus catatan sesi tepercaya. Pengguna dapat menghapus data dan pengaturan aplikasi secara terpisah dari perangkat masing-masing."
+  },
+  "Ads and billing": {
+    "pt-BR": "Anúncios e cobrança",
+    "de": "Werbung und Abrechnung",
+    "zh-TW": "廣告與計費",
+    "fr": "Publicité et facturation",
+    "id": "Iklan dan penagihan"
+  },
+  "Google Play Billing, when applicable, is limited to the Android distribution, and no ads SDK is included in any app. The Windows and macOS apps do not process purchases or transfer Android Pro entitlement between platforms. Google's own terms and privacy policies may apply to Android billing services.": {
+    "pt-BR": "O faturamento do Google Play, quando aplicável, limita-se à distribuição Android. Nenhum dos apps inclui SDK de anúncios. Os apps Windows e macOS não processam compras nem transferem os direitos Pro do Android entre plataformas. Os termos e políticas de privacidade do Google podem se aplicar aos serviços de faturamento do Android.",
+    "de": "Google Play Billing ist, soweit anwendbar, auf die Android-Ausgabe beschränkt. Keine der Apps enthält ein Werbe-SDK. Die Windows- und macOS-Apps verarbeiten keine Käufe und übertragen keine Android-Pro-Nutzungsrechte zwischen Plattformen. Für Android-Abrechnungsdienste können die Bedingungen und Datenschutzrichtlinien von Google gelten.",
+    "zh-TW": "Google Play 帳單服務僅適用於相關 Android 發行版本；所有應用程式均不含廣告 SDK。Windows 與 macOS 應用程式不處理購買，也不會跨平台移轉 Android Pro 使用權。Android 帳單服務可能適用 Google 自身的條款及隱私權政策。",
+    "fr": "La facturation Google Play, lorsqu’elle s’applique, se limite à la distribution Android. Aucune application n’intègre de SDK publicitaire. Les applications Windows et macOS ne traitent pas les achats et ne transfèrent pas les droits Android Pro d’une plateforme à l’autre. Les conditions et politiques de confidentialité de Google peuvent s’appliquer aux services de facturation sur Android.",
+    "id": "Penagihan Google Play, jika berlaku, terbatas pada distribusi Android. Tidak ada SDK iklan dalam aplikasi mana pun. Aplikasi Windows dan macOS tidak memproses pembelian atau mengalihkan hak akses Android Pro antarplatform. Ketentuan dan kebijakan privasi Google dapat berlaku untuk layanan penagihan Android."
+  },
+  "The Google Play edition checks and restores Pro purchase status. The billing library can send diagnostic events and device, app, and network metadata to Google Play to monitor billing operation. OneMouse does not receive payment details such as card numbers.": {
+    "pt-BR": "A edição Google Play verifica e restaura o status da compra Pro. A biblioteca de faturamento pode enviar eventos de diagnóstico e metadados de dispositivo, app e rede ao Google Play para monitorar o funcionamento do faturamento. O OneMouse não recebe dados de pagamento, como números de cartão.",
+    "de": "Die Google-Play-Ausgabe prüft den Pro-Kaufstatus und stellt ihn wieder her. Die Abrechnungsbibliothek kann Diagnoseereignisse sowie Geräte-, App- und Netzwerkmetadaten an Google Play senden, um den Abrechnungsbetrieb zu überwachen. OneMouse erhält keine Zahlungsdaten wie Kartennummern.",
+    "zh-TW": "Google Play 版會檢查並復原 Pro 購買狀態。帳單程式庫可能向 Google Play 傳送診斷事件以及裝置、應用程式和網路中繼資料，用以監控帳單服務運作。OneMouse 不會收到卡號等付款資料。",
+    "fr": "L’édition Google Play vérifie et restaure le statut d’achat Pro. La bibliothèque de facturation peut envoyer à Google Play des événements de diagnostic et des métadonnées sur l’appareil, l’application et le réseau afin de surveiller le fonctionnement de la facturation. OneMouse ne reçoit pas de données de paiement telles que les numéros de carte.",
+    "id": "Edisi Google Play memeriksa dan memulihkan status pembelian Pro. Pustaka penagihan dapat mengirim peristiwa diagnostik serta metadata perangkat, aplikasi, dan jaringan ke Google Play untuk memantau pengoperasian penagihan. OneMouse tidak menerima detail pembayaran seperti nomor kartu."
+  },
+  "Play in-app updates use device metadata, app version, and installed module data to check for updates. Ratings and text entered in the in-app review are sent to Google Play when you submit them. You can delete the review in Google Play. For how Google retains and deletes this data, see the": {
+    "pt-BR": "As atualizações no app pelo Google Play usam metadados do dispositivo, a versão do app e informações dos módulos instalados para verificar se há atualizações. Ao enviar uma avaliação no app, a nota e o texto que você inseriu são enviados ao Google Play. É possível excluir a avaliação no Google Play. Para saber como o Google retém e exclui esses dados, consulte a",
+    "de": "Für die Prüfung auf In-App-Updates verwendet Google Play Gerätemetadaten, die App-Version und Angaben zu installierten Modulen. Wenn Sie eine In-App-Rezension absenden, werden Bewertung und Text an Google Play gesendet. Sie können die Rezension in Google Play löschen. Informationen zur Aufbewahrung und Löschung dieser Daten durch Google finden Sie hier:",
+    "zh-TW": "Play 應用程式內更新會透過裝置中繼資料、應用程式版本和已安裝模組的資料檢查更新。您提交應用程式內評論時，輸入的評分與文字會傳至 Google Play。您可在 Google Play 刪除該評論。如要瞭解 Google 如何保留與刪除這些資料，請參閱",
+    "fr": "Les mises à jour intégrées via Google Play utilisent des métadonnées de l’appareil, la version de l’application et les données des modules installés pour rechercher des mises à jour. Lorsque vous envoyez un avis depuis l’application, la note et le texte saisis sont transmis à Google Play. Vous pouvez y supprimer l’avis. Pour savoir comment Google conserve et supprime ces données, consultez les",
+    "id": "Pembaruan dalam aplikasi melalui Play menggunakan metadata perangkat, versi aplikasi, dan data modul terpasang untuk memeriksa pembaruan. Nilai dan teks ulasan dalam aplikasi dikirim ke Google Play saat Anda mengirimkannya. Anda dapat menghapus ulasan tersebut di Google Play. Untuk mengetahui cara Google menyimpan dan menghapus data ini, lihat"
+  },
+  "Google Privacy Policy": {
+    "pt-BR": "Política de Privacidade do Google",
+    "de": "Datenschutzerklärung von Google",
+    "zh-TW": "Google 隱私權政策",
+    "fr": "Règles de confidentialité de Google",
+    "id": "Kebijakan Privasi Google"
+  },
+  "Website analytics": {
+    "pt-BR": "Análise de visitas ao site",
+    "de": "Website-Statistik",
+    "zh-TW": "網站造訪分析",
+    "fr": "Mesure d’audience du site",
+    "id": "Analitik situs web"
+  },
+  "This website uses Cloudflare Web Analytics to understand visit statistics. It sets no cookies or browser storage and creates no identifier for individual visitors; it processes only aggregate statistics such as the pages viewed, the referrer, the country, and the browser and device type. It does not collect directly identifying information such as your name or contact details.": {
+    "pt-BR": "Este site usa o Cloudflare Web Analytics para entender as estatísticas de visitas. Ele não define cookies, não usa o armazenamento do navegador nem cria identificadores individuais de visitantes. Trata apenas estatísticas agregadas, como páginas visualizadas, site de referência, país e tipos de navegador e dispositivo. Não coleta informações diretamente identificáveis, como nome ou dados de contato.",
+    "de": "Diese Website nutzt Cloudflare Web Analytics zur Auswertung von Besuchsstatistiken. Dabei werden weder Cookies gesetzt noch Daten im Browserspeicher abgelegt oder Kennungen für einzelne Besucher erstellt. Verarbeitet werden nur aggregierte Statistiken wie aufgerufene Seiten, Verweisquelle, Land sowie Browser- und Gerätetyp. Direkt identifizierende Informationen wie Name oder Kontaktdaten werden nicht erhoben.",
+    "zh-TW": "本網站使用 Cloudflare Web Analytics 瞭解造訪統計，不設定 Cookie、不使用瀏覽器儲存空間，也不為個別訪客建立識別碼。僅處理彙總統計，如瀏覽頁面、來源網站、國家／地區，以及瀏覽器和裝置類型；不會收集姓名、聯絡資料等可直接識別身分的資訊。",
+    "fr": "Ce site utilise Cloudflare Web Analytics pour comprendre les statistiques de fréquentation. Cet outil ne dépose ni cookies ni données dans le stockage du navigateur et ne crée pas d’identifiant individuel pour les visiteurs. Il traite uniquement des statistiques agrégées, comme les pages consultées, le site référent, le pays et les types de navigateur et d’appareil. Il ne collecte pas de données directement identifiantes telles que le nom ou les coordonnées.",
+    "id": "Situs ini menggunakan Cloudflare Web Analytics untuk memahami statistik kunjungan. Layanan ini tidak memasang cookie, menggunakan penyimpanan peramban, ataupun membuat pengenal bagi pengunjung individual; layanan hanya memproses statistik agregat seperti halaman yang dilihat, perujuk, negara, serta jenis peramban dan perangkat. Informasi yang dapat langsung mengidentifikasi Anda, seperti nama atau detail kontak, tidak dikumpulkan."
+  },
+  "The download button on the home page queries the GitHub releases list so it can point to the latest version. Your IP address and browser information are sent to GitHub as part of that request.": {
+    "pt-BR": "O botão de download da página inicial consulta a lista de versões no GitHub para apontar para a versão mais recente. Seu endereço IP e informações do navegador são enviados ao GitHub nessa solicitação.",
+    "de": "Die Download-Schaltfläche auf der Startseite fragt die Liste der GitHub-Veröffentlichungen ab, um auf die neueste Version zu verweisen. Bei dieser Anfrage werden Ihre IP-Adresse und Browserinformationen an GitHub gesendet.",
+    "zh-TW": "首頁的下載按鈕會查詢 GitHub 發行版本清單，以連結到最新版本。該要求會將您的 IP 位址和瀏覽器資訊傳送至 GitHub。",
+    "fr": "Le bouton de téléchargement de la page d’accueil interroge la liste des versions sur GitHub pour pointer vers la dernière version. Votre adresse IP et des informations sur votre navigateur sont envoyées à GitHub dans le cadre de cette requête.",
+    "id": "Tombol unduh di halaman utama meminta daftar rilis GitHub agar mengarah ke versi terbaru. Alamat IP dan informasi peramban Anda dikirim ke GitHub sebagai bagian dari permintaan ini."
+  },
+  "The demo loads a YouTube player only when you press play. Until then, the page shows a locally hosted preview image. When you play the video, Google's": {
+    "pt-BR": "A demonstração só carrega o player do YouTube quando você pressiona reproduzir. Até então, a página mostra uma imagem de prévia hospedada localmente. Ao reproduzir o vídeo, aplica-se a",
+    "de": "Der YouTube-Player wird erst geladen, wenn Sie die Wiedergabe starten. Davor zeigt die Seite ein lokal bereitgestelltes Vorschaubild. Bei der Wiedergabe des Videos gilt die",
+    "zh-TW": "只有在您按下播放時，示範才會載入 YouTube 播放器。在此之前，頁面僅顯示存放於本站的預覽圖片。播放影片時適用 Google 的",
+    "fr": "La démonstration ne charge le lecteur YouTube que lorsque vous lancez la lecture. Avant cela, la page affiche une image d’aperçu hébergée localement. Lors de la lecture de la vidéo, la",
+    "id": "Demo hanya memuat pemutar YouTube saat Anda menekan putar. Sebelumnya, halaman menampilkan gambar pratinjau yang dihosting secara lokal. Saat video diputar,"
+  },
+  "applies.": {
+    "pt-BR": "do Google.",
+    "de": "von Google.",
+    "zh-TW": "。",
+    "fr": "de Google s’applique.",
+    "id": "Google berlaku."
+  },
+  "This visitor analytics applies to the website only. The Ads and billing section above describes diagnostic data handled by Google Play services on Android.": {
+    "pt-BR": "Essa análise de visitantes aplica-se apenas ao site. A seção Anúncios e cobrança acima descreve os dados de diagnóstico tratados pelos serviços do Google Play no Android.",
+    "de": "Diese Besuchsstatistik betrifft nur die Website. Der Abschnitt „Werbung und Abrechnung“ oben beschreibt die Diagnosedaten, die Google-Play-Dienste auf Android verarbeiten.",
+    "zh-TW": "這項訪客分析僅適用於網站。上方「廣告與計費」一節說明 Android 上 Google Play 服務處理的診斷資料。",
+    "fr": "Cette mesure d’audience concerne uniquement le site. La section Publicité et facturation ci-dessus décrit les données de diagnostic traitées par les services Google Play sous Android.",
+    "id": "Analitik pengunjung ini hanya berlaku untuk situs web. Bagian Iklan dan penagihan di atas menjelaskan data diagnostik yang ditangani layanan Google Play di Android."
+  },
+  "App update checks": {
+    "pt-BR": "Verificações de atualização dos aplicativos",
+    "de": "Prüfung auf App-Updates",
+    "zh-TW": "應用程式更新檢查",
+    "fr": "Vérification des mises à jour des applications",
+    "id": "Pemeriksaan pembaruan aplikasi"
+  },
+  "Each app periodically downloads a version information file so it can tell you about new versions and about compatibility between your devices. The Android app checks version information on onemouse.pages.dev; the Windows and macOS apps check GitHub release information.": {
+    "pt-BR": "Cada aplicativo baixa periodicamente um arquivo com informações de versão para avisar sobre novas versões e sobre a compatibilidade entre seus dispositivos. O aplicativo Android consulta as informações de versão em onemouse.pages.dev; os aplicativos Windows e macOS consultam as informações de lançamento no GitHub.",
+    "de": "Jede App lädt regelmäßig eine Datei mit Versionsinformationen herunter, um Sie über neue Versionen und die Kompatibilität zwischen Ihren Geräten zu informieren. Die Android-App ruft Versionsinformationen von onemouse.pages.dev ab, die Windows- und macOS-Apps rufen Informationen zu Veröffentlichungen von GitHub ab.",
+    "zh-TW": "各應用程式會定期下載版本資訊檔案，以告知您是否有新版本，以及裝置之間是否相容。Android 版會向 onemouse.pages.dev 查詢版本資訊；Windows 和 macOS 版則會查詢 GitHub 的版本發佈資訊。",
+    "fr": "Chaque application télécharge régulièrement un fichier d’informations de version pour vous informer des nouvelles versions et de la compatibilité entre vos appareils. L’application Android consulte les informations sur onemouse.pages.dev ; les applications Windows et macOS consultent les informations de publication sur GitHub.",
+    "id": "Setiap aplikasi secara berkala mengunduh berkas informasi versi untuk memberi tahu Anda tentang versi baru dan kompatibilitas antarperangkat Anda. Aplikasi Android memeriksa informasi versi di onemouse.pages.dev; aplikasi Windows dan macOS memeriksa informasi rilis di GitHub."
+  },
+  "These requests contain no device identifiers, pairing information, account information, or usage statistics — the apps only download the file. As with any internet request, your IP address and the time of the request may appear in server logs. Installer downloads happen only when you explicitly choose to download.": {
+    "pt-BR": "Essas solicitações não contêm identificadores de dispositivo, informações de pareamento ou de conta nem estatísticas de uso. Os aplicativos apenas baixam o arquivo. Como em qualquer solicitação pela internet, seu endereço IP e o horário da solicitação podem aparecer nos registros do servidor. Os instaladores só são baixados quando você escolhe expressamente fazer o download.",
+    "de": "Diese Anfragen enthalten weder Gerätekennungen noch Kopplungs- oder Kontoinformationen oder Nutzungsstatistiken. Die Apps laden lediglich die Datei herunter. Wie bei jeder Internetanfrage können Ihre IP-Adresse und der Zeitpunkt der Anfrage in den Serverprotokollen erscheinen. Installationsdateien werden nur heruntergeladen, wenn Sie den Download ausdrücklich auswählen.",
+    "zh-TW": "這些請求不含裝置識別碼、配對資訊、帳戶資訊或使用統計資料，應用程式只會下載該檔案。和其他網際網路請求一樣，伺服器記錄中可能會出現您的 IP 位址和請求時間。只有在您明確選擇下載時，才會下載安裝程式。",
+    "fr": "Ces requêtes ne contiennent ni identifiants d’appareil, ni informations d’association ou de compte, ni statistiques d’utilisation. Les applications se contentent de télécharger le fichier. Comme pour toute requête sur Internet, votre adresse IP et l’heure de la requête peuvent figurer dans les journaux du serveur. Les programmes d’installation ne sont téléchargés que si vous choisissez expressément de les télécharger.",
+    "id": "Permintaan ini tidak berisi pengenal perangkat, informasi penyandingan, informasi akun, atau statistik penggunaan. Aplikasi hanya mengunduh berkas tersebut. Seperti pada permintaan internet lainnya, alamat IP Anda dan waktu permintaan dapat tercatat dalam log server. Penginstal hanya diunduh jika Anda secara tegas memilih untuk mengunduhnya."
+  },
+  "Optional Google account linking": {
+    "pt-BR": "Vinculação opcional de uma Conta do Google",
+    "de": "Optionale Verknüpfung mit einem Google-Konto",
+    "zh-TW": "選用的 Google 帳戶連結功能",
+    "fr": "Association facultative d’un compte Google",
+    "id": "Penautan Akun Google secara opsional"
+  },
+  "Optional Android standby clock weather": {
+    "pt-BR": "Previsão do tempo opcional no relógio de espera do Android",
+    "de": "Optionale Wetteranzeige in der Android-Standby-Uhr",
+    "zh-TW": "Android 待機時鐘的選用天氣功能",
+    "fr": "Météo facultative de l’horloge de veille Android",
+    "id": "Cuaca opsional pada jam siaga Android"
+  },
+  "Weather is off by default. If you agree to the weather disclosure and grant approximate location permission, the app reads the last approximate location saved on your device within the past 24 hours. The Android geocoding provider may receive those approximate coordinates to find the region name.": {
+    "pt-BR": "A previsão do tempo vem desativada. Se você aceitar o aviso sobre o uso da localização para a previsão do tempo e conceder a permissão de localização aproximada, o aplicativo lerá a última localização aproximada salva no seu dispositivo nas últimas 24 horas. O provedor de geocodificação do Android poderá receber essas coordenadas aproximadas para determinar o nome da região.",
+    "de": "Die Wetteranzeige ist standardmäßig ausgeschaltet. Wenn Sie den Hinweisen zur Wetterfunktion zustimmen und die Berechtigung für den ungefähren Standort erteilen, liest die App den letzten innerhalb der vergangenen 24 Stunden auf Ihrem Gerät gespeicherten ungefähren Standort. Der Android-Geokodierungsdienst kann diese ungefähren Koordinaten erhalten, um den Namen der Region zu ermitteln.",
+    "zh-TW": "天氣功能預設關閉。若您同意天氣功能的說明並授權存取概略位置，應用程式會讀取裝置在過去 24 小時內儲存的最後一筆概略位置。Android 的地理編碼服務供應商可能會收到這些概略座標，以查詢地區名稱。",
+    "fr": "La météo est désactivée par défaut. Si vous acceptez l’avis relatif à la météo et autorisez l’accès à votre position approximative, l’application lit la dernière position approximative enregistrée sur votre appareil au cours des 24 dernières heures. Le service de géocodage d’Android peut recevoir ces coordonnées approximatives pour déterminer le nom de la région.",
+    "id": "Fitur cuaca dinonaktifkan secara bawaan. Jika Anda menyetujui pemberitahuan tentang fitur cuaca dan memberikan izin lokasi perkiraan, aplikasi membaca lokasi perkiraan terakhir yang disimpan di perangkat Anda dalam 24 jam terakhir. Penyedia geocoding Android dapat menerima perkiraan koordinat tersebut untuk menentukan nama wilayah."
+  },
+  "To obtain a forecast, the app sends coordinates rounded to 0.1 degrees to the Norwegian Meteorological Institute (MET Norway) over HTTPS. MET Norway receives the connection IP address and a User-Agent with the OneMouse app name, version, and website. It records the requested coordinates and IP address in access logs in Oslo, Norway. Weather requests do not pass through the OneMouse account server. For log retention and privacy requests, see": {
+    "pt-BR": "Para obter a previsão, o aplicativo envia, por HTTPS, coordenadas arredondadas para 0,1 grau ao Instituto Meteorológico da Noruega (MET Norway). O MET Norway recebe o endereço IP da conexão e um cabeçalho User-Agent com o nome, a versão e o site do OneMouse. Ele registra as coordenadas solicitadas e o endereço IP em logs de acesso em Oslo, na Noruega. As solicitações de previsão do tempo não passam pelo servidor de contas do OneMouse. Para informações sobre a retenção dos registros e as solicitações de privacidade, consulte",
+    "de": "Für die Vorhersage sendet die App auf 0,1 Grad gerundete Koordinaten über HTTPS an das Norwegische Meteorologische Institut (MET Norway). MET Norway erhält die IP-Adresse der Verbindung und einen User-Agent mit dem Namen, der Version und der Website der OneMouse-App. Die angefragten Koordinaten und die IP-Adresse werden in Zugriffsprotokollen in Oslo, Norwegen, aufgezeichnet. Wetteranfragen laufen nicht über den OneMouse-Kontoserver. Informationen zur Aufbewahrung der Protokolle und zu Datenschutzanfragen finden Sie hier:",
+    "zh-TW": "為取得天氣預報，應用程式會透過 HTTPS，將四捨五入至 0.1 度的座標傳送給挪威氣象研究所（MET Norway）。MET Norway 會收到該連線的 IP 位址，以及包含 OneMouse 應用程式名稱、版本和網站的 User-Agent。它會在挪威奧斯陸的存取記錄中記下查詢的座標與 IP 位址。天氣請求不會經過 OneMouse 帳戶伺服器。如需瞭解記錄保存及隱私權請求，請參閱",
+    "fr": "Pour obtenir une prévision, l’application envoie à l’Institut météorologique norvégien (MET Norway), via HTTPS, des coordonnées arrondies à 0,1 degré. MET Norway reçoit l’adresse IP de la connexion et un en-tête User-Agent indiquant le nom, la version et le site web de l’application OneMouse. Il consigne les coordonnées demandées et l’adresse IP dans des journaux d’accès à Oslo, en Norvège. Les requêtes météo ne transitent pas par le serveur de comptes OneMouse. Pour connaître les règles de conservation des journaux et les modalités des demandes relatives à la vie privée, consultez",
+    "id": "Untuk memperoleh prakiraan cuaca, aplikasi mengirim koordinat yang dibulatkan hingga 0,1 derajat melalui HTTPS ke Institut Meteorologi Norwegia (MET Norway). MET Norway menerima alamat IP koneksi serta User-Agent yang memuat nama aplikasi OneMouse, versi, dan situs webnya. Koordinat yang diminta dan alamat IP dicatat dalam log akses di Oslo, Norwegia. Permintaan cuaca tidak melewati server akun OneMouse. Untuk retensi log dan permintaan terkait privasi, lihat"
+  },
+  "MET Norway's Privacy Policy": {
+    "pt-BR": "a Política de Privacidade do MET Norway",
+    "de": "Datenschutzerklärung von MET Norway",
+    "zh-TW": "MET Norway 的隱私權政策",
+    "fr": "la politique de confidentialité de MET Norway",
+    "id": "Kebijakan Privasi MET Norway"
+  },
+  "API privacy information": {
+    "pt-BR": "as informações de privacidade da API",
+    "de": "Datenschutzinformationen zur API",
+    "zh-TW": "API 隱私權資訊",
+    "fr": "les informations de l’API relatives à la vie privée",
+    "id": "informasi privasi API"
+  },
+  "The rounded location, region name, and forecast are cached on your device. Turning off standby weather or revoking Android location permission stops new forecast requests. You can remove the local cache by clearing the app's data in Android settings or uninstalling the app.": {
+    "pt-BR": "A localização arredondada, o nome da região e a previsão são armazenados em cache no seu dispositivo. Desativar a previsão do tempo no modo de espera ou revogar a permissão de localização do Android interrompe as novas solicitações de previsão. Para remover o cache local, limpe os dados do aplicativo nas configurações do Android ou desinstale o aplicativo.",
+    "de": "Der gerundete Standort, der Name der Region und die Vorhersage werden auf Ihrem Gerät zwischengespeichert. Wenn Sie die Wetteranzeige der Standby-Uhr ausschalten oder die Android-Standortberechtigung entziehen, werden keine neuen Vorhersagen mehr angefordert. Sie können den lokalen Cache entfernen, indem Sie die App-Daten in den Android-Einstellungen löschen oder die App deinstallieren.",
+    "zh-TW": "經四捨五入的位置、地區名稱和天氣預報會快取在您的裝置上。關閉待機天氣或撤銷 Android 定位權限後，應用程式就不會再傳送新的預報請求。您可以在 Android 設定中清除應用程式資料，或解除安裝應用程式，以移除本機快取。",
+    "fr": "La position arrondie, le nom de la région et la prévision sont mis en cache sur votre appareil. Si vous désactivez la météo de l’horloge de veille ou révoquez l’autorisation de localisation Android, les nouvelles requêtes de prévision cessent. Pour supprimer le cache local, effacez les données de l’application dans les paramètres Android ou désinstallez l’application.",
+    "id": "Lokasi yang telah dibulatkan, nama wilayah, dan prakiraan cuaca disimpan dalam cache perangkat Anda. Menonaktifkan cuaca pada jam siaga atau mencabut izin lokasi Android akan menghentikan permintaan prakiraan baru. Anda dapat menghapus cache lokal dengan menghapus data aplikasi di setelan Android atau mencopot pemasangan aplikasi."
+  },
+  "This revision adds information about standby clock weather and Google Play services.": {
+    "pt-BR": "Esta revisão acrescenta informações sobre a previsão do tempo no relógio de espera e o Google Play Services.",
+    "de": "Diese Überarbeitung ergänzt Informationen zur Wetteranzeige der Standby-Uhr und zu den Google Play-Diensten.",
+    "zh-TW": "本次修訂新增有關待機時鐘天氣功能與 Google Play 服務的資訊。",
+    "fr": "Cette révision ajoute des informations sur la météo de l’horloge de veille et les services Google Play.",
+    "id": "Revisi ini menambahkan informasi tentang cuaca pada jam siaga dan layanan Google Play."
+  },
+  "Android app": {
+    "pt-BR": "Aplicativo Android",
+    "de": "Android-App",
+    "zh-TW": "Android 應用程式",
+    "fr": "Application Android",
+    "id": "Aplikasi Android"
+  },
+  "Android compatibility, UI, browser, and device connection support": {
+    "pt-BR": "Compatibilidade com Android, interface, navegador e conexão de dispositivos",
+    "de": "Android-Kompatibilität, Benutzeroberfläche, Browser und Geräteverbindungen",
+    "zh-TW": "Android 相容性、使用者介面、瀏覽器與裝置連線支援",
+    "fr": "Prise en charge de la compatibilité Android, de l’interface, du navigateur et de la connexion des appareils",
+    "id": "Dukungan kompatibilitas Android, antarmuka, peramban, dan koneksi perangkat"
+  },
+  "Kotlin runtime and asynchronous processing": {
+    "pt-BR": "Ambiente de execução Kotlin e processamento assíncrono",
+    "de": "Kotlin-Laufzeit und asynchrone Verarbeitung",
+    "zh-TW": "Kotlin 執行環境與非同步處理",
+    "fr": "Environnement d’exécution Kotlin et traitement asynchrone",
+    "id": "Runtime Kotlin dan pemrosesan asinkron"
+  },
+  "Account HTTPS and WebSocket connections and I/O": {
+    "pt-BR": "Conexões HTTPS e WebSocket da conta e operações de E/S",
+    "de": "HTTPS- und WebSocket-Verbindungen für Konten sowie Ein-/Ausgabe",
+    "zh-TW": "帳戶的 HTTPS 和 WebSocket 連線及輸入輸出",
+    "fr": "Connexions HTTPS et WebSocket du compte et entrées-sorties",
+    "id": "Koneksi HTTPS dan WebSocket untuk akun serta operasi I/O"
+  },
+  "QR code scanning": {
+    "pt-BR": "Leitura de códigos QR",
+    "de": "Scannen von QR-Codes",
+    "zh-TW": "QR 碼掃描",
+    "fr": "Lecture de codes QR",
+    "id": "Pemindaian kode QR"
+  },
+  "Remote screen video transport": {
+    "pt-BR": "Transmissão de vídeo da tela remota",
+    "de": "Videoübertragung des entfernten Bildschirms",
+    "zh-TW": "遠端螢幕影像傳輸",
+    "fr": "Transmission vidéo de l’écran distant",
+    "id": "Transmisi video layar jarak jauh"
+  },
+  "Third-party notices": {
+    "pt-BR": "Avisos de terceiros",
+    "de": "Hinweise von Drittanbietern",
+    "zh-TW": "第三方聲明",
+    "fr": "Mentions de tiers",
+    "id": "Pemberitahuan pihak ketiga"
+  },
+  "Pairing and encryption": {
+    "pt-BR": "Pareamento e criptografia",
+    "de": "Kopplung und Verschlüsselung",
+    "zh-TW": "配對與加密",
+    "fr": "Association et chiffrement",
+    "id": "Penyandingan dan enkripsi"
+  },
+  "Access to bundled native libraries": {
+    "pt-BR": "Acesso às bibliotecas nativas incluídas",
+    "de": "Zugriff auf mitgelieferte native Bibliotheken",
+    "zh-TW": "存取隨附的原生程式庫",
+    "fr": "Accès aux bibliothèques natives fournies",
+    "id": "Akses ke pustaka native yang disertakan"
+  },
+  "Chinese Pinyin and Japanese input": {
+    "pt-BR": "Entrada em pinyin chinês e em japonês",
+    "de": "Chinesische Pinyin-Eingabe und japanische Texteingabe",
+    "zh-TW": "中文拼音及日文輸入",
+    "fr": "Saisie du chinois en pinyin et saisie du japonais",
+    "id": "Masukan Pinyin bahasa Tionghoa dan masukan bahasa Jepang"
+  },
+  "Google Play only: billing, updates, and reviews": {
+    "pt-BR": "Somente no Google Play: faturamento, atualizações e avaliações",
+    "de": "Nur bei Google Play: Abrechnung, Updates und Rezensionen",
+    "zh-TW": "僅限 Google Play：計費、更新與評論",
+    "fr": "Google Play uniquement : facturation, mises à jour et avis",
+    "id": "Khusus Google Play: penagihan, pembaruan, dan ulasan"
+  },
+  "Google SDK terms": {
+    "pt-BR": "Termos do SDK do Google",
+    "de": "Bedingungen des Google SDK",
+    "zh-TW": "Google SDK 條款",
+    "fr": "Conditions du SDK Google",
+    "id": "Ketentuan SDK Google"
+  },
+  "Transitive dependencies of Play-only SDKs": {
+    "pt-BR": "Dependências transitivas dos SDKs exclusivos do Google Play",
+    "de": "Transitive Abhängigkeiten der nur bei Google Play verwendeten SDKs",
+    "zh-TW": "Google Play 專用 SDK 的間接相依項目",
+    "fr": "Dépendances transitives des SDK propres à Google Play",
+    "id": "Dependensi transitif SDK khusus Google Play"
+  },
+  "Windows PC app": {
+    "pt-BR": "Aplicativo para PC Windows",
+    "de": "Windows-PC-App",
+    "zh-TW": "Windows 電腦版應用程式",
+    "fr": "Application pour PC Windows",
+    "id": "Aplikasi PC Windows"
+  },
+  "Desktop UI and Chromium / Node.js runtime": {
+    "pt-BR": "Interface de desktop e ambiente de execução Chromium / Node.js",
+    "de": "Desktop-Oberfläche und Chromium-/Node.js-Laufzeit",
+    "zh-TW": "桌面使用者介面與 Chromium／Node.js 執行環境",
+    "fr": "Interface de bureau et environnement d’exécution Chromium / Node.js",
+    "id": "Antarmuka desktop dan runtime Chromium / Node.js"
+  },
+  "PC backend runtime": {
+    "pt-BR": "Ambiente de execução do backend para PC",
+    "de": "Laufzeit für das PC-Backend",
+    "zh-TW": "電腦版後端執行環境",
+    "fr": "Environnement d’exécution du backend pour PC",
+    "id": "Runtime backend PC"
+  },
+  "Local network discovery and interface address lookup": {
+    "pt-BR": "Descoberta na rede local e consulta de endereços de interface",
+    "de": "Geräteerkennung im lokalen Netzwerk und Abfrage von Schnittstellenadressen",
+    "zh-TW": "探索區域網路裝置及查詢網路介面位址",
+    "fr": "Découverte sur le réseau local et recherche des adresses d’interface",
+    "id": "Penemuan perangkat di jaringan lokal dan pencarian alamat antarmuka"
+  },
+  "Corresponding source": {
+    "pt-BR": "Código-fonte correspondente",
+    "de": "Zugehöriger Quellcode",
+    "zh-TW": "對應原始碼",
+    "fr": "Code source correspondant",
+    "id": "Kode sumber yang sesuai"
+  },
+  "Windows Bluetooth and serial communication": {
+    "pt-BR": "Bluetooth e comunicação serial no Windows",
+    "de": "Bluetooth und serielle Kommunikation unter Windows",
+    "zh-TW": "Windows 藍牙與序列通訊",
+    "fr": "Bluetooth et communications série sous Windows",
+    "id": "Bluetooth dan komunikasi serial di Windows"
+  },
+  "Python native library interfaces": {
+    "pt-BR": "Interfaces com bibliotecas nativas em Python",
+    "de": "Python-Schnittstellen für native Bibliotheken",
+    "zh-TW": "Python 原生程式庫介面",
+    "fr": "Interfaces Python pour les bibliothèques natives",
+    "id": "Antarmuka Python untuk pustaka native"
+  },
+  "macOS app": {
+    "pt-BR": "Aplicativo macOS",
+    "de": "macOS-App",
+    "zh-TW": "macOS 應用程式",
+    "fr": "Application macOS",
+    "id": "Aplikasi macOS"
+  },
+  "Android — Third-party notices": {
+    "pt-BR": "Android: avisos de terceiros",
+    "de": "Android: Hinweise von Drittanbietern",
+    "zh-TW": "Android：第三方聲明",
+    "fr": "Android : mentions de tiers",
+    "id": "Android: pemberitahuan pihak ketiga"
+  },
+  "Chromium / Node.js / FFmpeg — Third-party notices": {
+    "pt-BR": "Chromium / Node.js / FFmpeg: avisos de terceiros",
+    "de": "Chromium / Node.js / FFmpeg: Hinweise von Drittanbietern",
+    "zh-TW": "Chromium／Node.js／FFmpeg：第三方聲明",
+    "fr": "Chromium / Node.js / FFmpeg : mentions de tiers",
+    "id": "Chromium / Node.js / FFmpeg: pemberitahuan pihak ketiga"
+  },
+  "WebRTC Android — Third-party notices": {
+    "pt-BR": "WebRTC Android: avisos de terceiros",
+    "de": "WebRTC Android: Hinweise von Drittanbietern",
+    "zh-TW": "WebRTC Android：第三方聲明",
+    "fr": "WebRTC Android : mentions de tiers",
+    "id": "WebRTC Android: pemberitahuan pihak ketiga"
+  },
+  "WebRTC Android SDK distributor — MIT": {
+    "pt-BR": "Distribuidor do WebRTC Android SDK: MIT",
+    "de": "Anbieter des WebRTC Android SDK: MIT",
+    "zh-TW": "WebRTC Android SDK 發行方：MIT",
+    "fr": "Distributeur du SDK WebRTC Android : MIT",
+    "id": "Distributor WebRTC Android SDK: MIT"
+  },
+  "WebRTC macOS distributor — BSD 3-Clause": {
+    "pt-BR": "Distribuidor do WebRTC para macOS: BSD 3-Clause",
+    "de": "Anbieter von WebRTC für macOS: BSD 3-Clause",
+    "zh-TW": "WebRTC macOS 發行方：BSD 3-Clause",
+    "fr": "Distributeur de WebRTC pour macOS : BSD 3-Clause",
+    "id": "Distributor WebRTC macOS: BSD 3-Clause"
+  },
+  "PyNaCl bundled libsodium — ISC": {
+    "pt-BR": "libsodium incluída no PyNaCl: ISC",
+    "de": "Mit PyNaCl ausgeliefertes libsodium: ISC",
+    "zh-TW": "PyNaCl 隨附的 libsodium：ISC",
+    "fr": "libsodium fournie avec PyNaCl : ISC",
+    "id": "libsodium yang disertakan dengan PyNaCl: ISC"
+  },
+  "cffi bundled libffi — MIT notices": {
+    "pt-BR": "libffi incluída no cffi: avisos MIT",
+    "de": "Mit cffi ausgeliefertes libffi: MIT-Hinweise",
+    "zh-TW": "cffi 隨附的 libffi：MIT 聲明",
+    "fr": "libffi fournie avec cffi : mentions MIT",
+    "id": "libffi yang disertakan dengan cffi: pemberitahuan MIT"
+  },
+  "AOSP Pinyin — source / changes": {
+    "pt-BR": "AOSP Pinyin: código-fonte e alterações",
+    "de": "AOSP Pinyin: Quellcode und Änderungen",
+    "zh-TW": "AOSP Pinyin：原始碼及變更",
+    "fr": "AOSP Pinyin : code source et modifications",
+    "id": "AOSP Pinyin: kode sumber dan perubahan"
+  },
+  "AOSP OpenWnn — attribution / changes": {
+    "pt-BR": "AOSP OpenWnn: atribuição e alterações",
+    "de": "AOSP OpenWnn: Urhebervermerke und Änderungen",
+    "zh-TW": "AOSP OpenWnn：著作權歸屬及變更",
+    "fr": "AOSP OpenWnn : attribution et modifications",
+    "id": "AOSP OpenWnn: atribusi dan perubahan"
+  },
+  "AOSP OpenWnn — source / changes": {
+    "pt-BR": "AOSP OpenWnn: código-fonte e alterações",
+    "de": "AOSP OpenWnn: Quellcode und Änderungen",
+    "zh-TW": "AOSP OpenWnn：原始碼及變更",
+    "fr": "AOSP OpenWnn : code source et modifications",
+    "id": "AOSP OpenWnn: kode sumber dan perubahan"
+  },
+  "Android NDK libc++ / LLVM runtime — Apache 2.0 with LLVM exception": {
+    "pt-BR": "Runtime Android NDK libc++ / LLVM: Apache 2.0 com a exceção LLVM",
+    "de": "Android-NDK-Laufzeit libc++ / LLVM: Apache 2.0 mit LLVM-Ausnahme",
+    "zh-TW": "Android NDK libc++／LLVM 執行環境：Apache 2.0（附 LLVM 例外條款）",
+    "fr": "Environnement d’exécution Android NDK libc++ / LLVM : Apache 2.0 avec exception LLVM",
+    "id": "Runtime Android NDK libc++ / LLVM: Apache 2.0 dengan pengecualian LLVM"
+  },
+  "PyInstaller — GPL with bootloader exception": {
+    "pt-BR": "PyInstaller: GPL com exceção para o carregador de inicialização",
+    "de": "PyInstaller: GPL mit Bootloader-Ausnahme",
+    "zh-TW": "PyInstaller：GPL（附開機載入程式例外條款）",
+    "fr": "PyInstaller : GPL avec exception pour le chargeur d’amorçage",
+    "id": "PyInstaller: GPL dengan pengecualian bootloader"
+  },
+  "Corresponding source — LazySodium Android 5.2.0": {
+    "pt-BR": "Código-fonte correspondente: LazySodium Android 5.2.0",
+    "de": "Zugehöriger Quellcode: LazySodium Android 5.2.0",
+    "zh-TW": "對應原始碼：LazySodium Android 5.2.0",
+    "fr": "Code source correspondant : LazySodium Android 5.2.0",
+    "id": "Kode sumber yang sesuai: LazySodium Android 5.2.0"
+  },
+  "LazySodium Android 5.2.0 — published sources JAR": {
+    "pt-BR": "LazySodium Android 5.2.0: arquivo JAR publicado com o código-fonte",
+    "de": "LazySodium Android 5.2.0: veröffentlichtes Quellcode-JAR",
+    "zh-TW": "LazySodium Android 5.2.0：已發佈的原始碼 JAR",
+    "fr": "LazySodium Android 5.2.0 : archive JAR de sources publiée",
+    "id": "LazySodium Android 5.2.0: JAR kode sumber yang diterbitkan"
+  },
+  "Build and test tools": {
+    "pt-BR": "Ferramentas de compilação e teste",
+    "de": "Build- und Testwerkzeuge",
+    "zh-TW": "建置與測試工具",
+    "fr": "Outils de compilation et de test",
+    "id": "Alat build dan pengujian"
+  },
+  "Windows 1.6.9 recombination instructions and files": {
+    "pt-BR": "Windows 1.6.9: instruções e arquivos para recombinação",
+    "de": "Windows 1.6.9: Anleitung und Dateien zur Neukombination",
+    "zh-TW": "Windows 1.6.9：重新組合說明及檔案",
+    "fr": "Windows 1.6.9 : instructions et fichiers de recombinaison",
+    "id": "Windows 1.6.9: petunjuk dan berkas untuk penggabungan ulang"
+  },
+  "Windows 1.7.0 recombination instructions and files": {
+    "pt-BR": "Windows 1.7.0: instruções e arquivos para recombinação",
+    "de": "Windows 1.7.0: Anleitung und Dateien zur Neukombination",
+    "zh-TW": "Windows 1.7.0：重新組合說明及檔案",
+    "fr": "Windows 1.7.0 : instructions et fichiers de recombinaison",
+    "id": "Windows 1.7.0: petunjuk dan berkas untuk penggabungan ulang"
+  },
+  "Windows 1.7.2 recombination instructions and files": {
+    "pt-BR": "Windows 1.7.2: instruções e arquivos para recombinação",
+    "de": "Windows 1.7.2: Anleitung und Dateien zur Neukombination",
+    "zh-TW": "Windows 1.7.2：重新組合說明及檔案",
+    "fr": "Windows 1.7.2 : instructions et fichiers de recombinaison",
+    "id": "Windows 1.7.2: petunjuk dan berkas untuk penggabungan ulang"
+  },
+  "Windows 1.6.8 recombination instructions and files": {
+    "pt-BR": "Windows 1.6.8: instruções e arquivos para recombinação",
+    "de": "Windows 1.6.8: Anleitung und Dateien zur Neukombination",
+    "zh-TW": "Windows 1.6.8：重新組合說明及檔案",
+    "fr": "Windows 1.6.8 : instructions et fichiers de recombinaison",
+    "id": "Windows 1.6.8: petunjuk dan berkas untuk penggabungan ulang"
+  },
+  "Windows 1.6.5 recombination instructions and files": {
+    "pt-BR": "Windows 1.6.5: instruções e arquivos para recombinação",
+    "de": "Windows 1.6.5: Anleitung und Dateien zur Neukombination",
+    "zh-TW": "Windows 1.6.5：重新組合說明及檔案",
+    "fr": "Windows 1.6.5 : instructions et fichiers de recombinaison",
+    "id": "Windows 1.6.5: petunjuk dan berkas untuk penggabungan ulang"
+  },
+  "Windows 1.6.4 recombination instructions and files": {
+    "pt-BR": "Windows 1.6.4: instruções e arquivos para recombinação",
+    "de": "Windows 1.6.4: Anleitung und Dateien zur Neukombination",
+    "zh-TW": "Windows 1.6.4：重新組合說明及檔案",
+    "fr": "Windows 1.6.4 : instructions et fichiers de recombinaison",
+    "id": "Windows 1.6.4: petunjuk dan berkas untuk penggabungan ulang"
+  },
+  "Windows 1.6.2.0 recombination instructions and files": {
+    "pt-BR": "Windows 1.6.2.0: instruções e arquivos para recombinação",
+    "de": "Windows 1.6.2.0: Anleitung und Dateien zur Neukombination",
+    "zh-TW": "Windows 1.6.2.0：重新組合說明及檔案",
+    "fr": "Windows 1.6.2.0 : instructions et fichiers de recombinaison",
+    "id": "Windows 1.6.2.0: petunjuk dan berkas untuk penggabungan ulang"
+  },
+  "and": {
+    "pt-BR": "e",
+    "de": "und",
+    "zh-TW": "和",
+    "fr": "et",
+    "id": "dan"
+  }
+}

@@ -24,7 +24,13 @@
               fromPhoto([[910,372],[1480,370],[1435,789],[854,739]])],
     },
   };
-  const languages = {
+  const languages = {/* web-demo-locales */
+    "pt-br":{"title":"Experimente mover o cursor","choice":"Escolha um dispositivo Android","source":"Meu PC Windows","mac":"Mac","windows":"Outro PC Windows","phone":"Celular Android","tablet":"Tablet Android","hint":"Mova o mouse ou deslize o dedo para a direita. Para voltar, vá para a esquerda. No teclado, use ← e →.","position":"Cursor em: "},
+    "de":{"title":"Probiere aus, den Mauszeiger zu bewegen","choice":"Android-Gerät auswählen","source":"Mein Windows-PC","mac":"Mac","windows":"Anderer Windows-PC","phone":"Android-Smartphone","tablet":"Android-Tablet","hint":"Bewege die Maus oder streiche mit dem Finger nach rechts. Nach links geht es zurück. Mit der Tastatur verwendest du ← und →.","position":"Mauszeiger auf: "},
+    "zh-tw":{"title":"試著移動游標","choice":"選擇 Android 裝置","source":"我的 Windows 電腦","mac":"Mac","windows":"另一台 Windows 電腦","phone":"Android 手機","tablet":"Android 平板","hint":"把滑鼠或手指往右移，往左移即可返回。使用鍵盤時，請按 ← 或 →。","position":"游標位置： "},
+    "fr":{"title":"Essayez de déplacer le pointeur","choice":"Choisir un appareil Android","source":"Mon PC Windows","mac":"Mac","windows":"Autre PC Windows","phone":"Téléphone Android","tablet":"Tablette Android","hint":"Déplacez la souris ou faites glisser un doigt vers la droite. Revenez vers la gauche pour retourner au point de départ. Au clavier, utilisez ← et →.","position":"Pointeur sur : "},
+    "id":{"title":"Coba gerakkan kursor","choice":"Pilih perangkat Android","source":"PC Windows saya","mac":"Mac","windows":"PC Windows lain","phone":"Ponsel Android","tablet":"Tablet Android","hint":"Gerakkan mouse atau geser satu jari ke kanan. Geser ke kiri untuk kembali. Di keyboard, gunakan ← dan →.","position":"Kursor di: "},
+  /* end-web-demo-locales */
     ko: {
       title:'커서 넘기기 체험', choice:'Android 기기 선택',
       source:'내 Windows PC', mac:'Mac', windows:'다른 Windows PC', phone:'Android 폰', tablet:'Android 태블릿',
@@ -56,7 +62,7 @@
       position:'光标位置：',
     },
   };
-  const t = languages[document.documentElement.lang.split('-')[0]] || languages.en;
+  const t = languages[document.documentElement.lang.toLowerCase()] || languages[document.documentElement.lang.toLowerCase().split('-')[0]] || languages.en;
   const touchDragDelay = 250;
   const touchSlop = 5;
   const clamp = (v, min = 0, max = 1) => Math.max(min, Math.min(max, v));

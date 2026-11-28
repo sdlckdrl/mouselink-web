@@ -1,0 +1,1332 @@
+{
+ "The meeting is at 3 p.m. in the second-floor conference room.": [
+  "A reunião será às 15h na sala de reuniões do segundo andar.",
+  "Die Besprechung findet um 15 Uhr im Besprechungsraum im zweiten Stock statt.",
+  "會議下午 3 點在二樓會議室舉行。",
+  "La réunion aura lieu à 15 h dans la salle de réunion du deuxième étage.",
+  "Rapat dimulai pukul 15.00 di ruang rapat lantai dua."
+ ],
+ "Team email": [
+  "E-mail da equipe",
+  "Team-E-Mail",
+  "團隊郵件",
+  "Message de l’équipe",
+  "Email tim"
+ ],
+ "I sent the material for this afternoon’s meeting. Please read the last page before we meet.": [
+  "Enviei o material da reunião desta tarde. Leia a última página antes de nos reunirmos.",
+  "Ich habe die Unterlagen für die Besprechung heute Nachmittag verschickt. Bitte lesen Sie vorher die letzte Seite.",
+  "今天下午的會議資料已寄出，開會前請先看最後一頁。",
+  "J’ai envoyé les documents pour la réunion de cet après-midi. Merci de lire la dernière page avant la réunion.",
+  "Saya sudah mengirim materi rapat sore ini. Harap baca halaman terakhir sebelum rapat."
+ ],
+ "Next week’s schedule changed. Please check the new location and time.": [
+  "A agenda da próxima semana mudou. Confira o novo local e horário.",
+  "Der Termin nächste Woche hat sich geändert. Bitte prüfen Sie den neuen Ort und die neue Uhrzeit.",
+  "下週的行程有變，請查看新的地點和時間。",
+  "Le planning de la semaine prochaine a changé. Vérifiez le nouveau lieu et le nouvel horaire.",
+  "Jadwal minggu depan berubah. Periksa lokasi dan waktu yang baru."
+ ],
+ "I sent the revised slides. Please share any feedback today.": [
+  "Enviei os slides revisados. Envie seus comentários ainda hoje.",
+  "Ich habe die überarbeiteten Folien verschickt. Bitte geben Sie mir noch heute Rückmeldung.",
+  "修訂後的投影片已寄出，請在今天提供意見。",
+  "J’ai envoyé les diapositives révisées. Merci de me faire part de vos remarques aujourd’hui.",
+  "Saya sudah mengirim revisi slide. Mohon kirim masukan hari ini."
+ ],
+ "Android · Mail": [
+  "Android · E-mail",
+  "Android · E-Mail",
+  "Android · 郵件",
+  "Android · Messagerie",
+  "Android · Email"
+ ],
+ "Paste here": [
+  "Cole aqui",
+  "Hier einfügen",
+  "貼在這裡",
+  "Coller ici",
+  "Tempel di sini"
+ ],
+ "Copy": [
+  "Copiar",
+  "Kopieren",
+  "複製",
+  "Copier",
+  "Salin"
+ ],
+ "Paste": [
+  "Colar",
+  "Einfügen",
+  "貼上",
+  "Coller",
+  "Tempel"
+ ],
+ "Android · Sample note": [
+  "Android · Nota de exemplo",
+  "Android · Beispielnotiz",
+  "Android · 範例筆記",
+  "Android · Exemple de note",
+  "Android · Contoh catatan"
+ ],
+ "Windows · Notepad": [
+  "Windows · Bloco de Notas",
+  "Windows · Editor",
+  "Windows · 記事本",
+  "Windows · Bloc-notes",
+  "Windows · Notepad"
+ ],
+ "Copy from phone": [
+  "Copiar do celular",
+  "Vom Smartphone kopieren",
+  "從手機複製",
+  "Copier depuis le téléphone",
+  "Salin dari ponsel"
+ ],
+ "Paste on PC": [
+  "Colar no PC",
+  "Auf dem PC einfügen",
+  "貼到 PC",
+  "Coller sur le PC",
+  "Tempel di PC"
+ ],
+ "Notifications appear automatically. Copy on the phone, then paste into Notepad on the PC.": [
+  "As notificações aparecem automaticamente. Copie no celular e cole no Bloco de Notas do PC.",
+  "Benachrichtigungen erscheinen automatisch. Kopieren Sie den Text auf dem Smartphone und fügen Sie ihn im Editor auf dem PC ein.",
+  "通知會自動顯示。在手機上複製，再貼到 PC 的記事本。",
+  "Les notifications s’affichent automatiquement. Copiez sur le téléphone, puis collez dans le Bloc-notes du PC.",
+  "Notifikasi muncul secara otomatis. Salin di ponsel, lalu tempel di Notepad pada PC."
+ ],
+ "Sample note copied. Paste it into Notepad on the PC.": [
+  "Nota copiada. Cole no Bloco de Notas do PC.",
+  "Beispielnotiz kopiert. Fügen Sie sie im Editor auf dem PC ein.",
+  "已複製範例筆記，請貼到 PC 的記事本。",
+  "Note copiée. Collez-la dans le Bloc-notes du PC.",
+  "Contoh catatan disalin. Tempel di Notepad pada PC."
+ ],
+ "First, copy the sample note on the phone.": [
+  "Primeiro, copie a nota de exemplo no celular.",
+  "Kopieren Sie zuerst die Beispielnotiz auf dem Smartphone.",
+  "請先在手機上複製範例筆記。",
+  "Copiez d’abord la note sur le téléphone.",
+  "Salin contoh catatan di ponsel terlebih dahulu."
+ ],
+ "The same text was pasted into Notepad on the PC.": [
+  "O mesmo texto foi colado no Bloco de Notas do PC.",
+  "Derselbe Text wurde im Editor auf dem PC eingefügt.",
+  "相同的文字已貼到 PC 的記事本。",
+  "Le même texte a été collé dans le Bloc-notes du PC.",
+  "Teks yang sama telah ditempel di Notepad pada PC."
+ ],
+ "My PC": [
+  "Meu PC",
+  "Mein PC",
+  "我的電腦",
+  "Mon PC",
+  "PC saya"
+ ],
+ "Recycle Bin": [
+  "Lixeira",
+  "Papierkorb",
+  "資源回收筒",
+  "Corbeille",
+  "Keranjang sampah"
+ ],
+ "Example PC screen. Press Enter or Space to capture it all.": [
+  "Tela de exemplo do PC. Pressione Enter ou Espaço para capturar a tela inteira.",
+  "Beispielbildschirm. Drücken Sie die Eingabe- oder Leertaste, um den ganzen Bildschirm aufzunehmen.",
+  "範例電腦螢幕。按 Enter 或空白鍵即可擷取全螢幕。",
+  "Écran de démonstration. Appuyez sur Entrée ou Espace pour le capturer en entier.",
+  "Contoh layar PC. Tekan Enter atau Spasi untuk menangkap seluruh layar."
+ ],
+ "Saved on the demo PC": [
+  "Salvo no PC da demo",
+  "Auf dem Demo-PC gespeichert",
+  "已儲存至模擬 PC",
+  "Enregistré sur le PC de démo",
+  "Disimpan di PC demo"
+ ],
+ "Preview of the selected screenshot": [
+  "Prévia da captura selecionada",
+  "Vorschau des ausgewählten Bildschirmfotos",
+  "所選螢幕截圖預覽",
+  "Aperçu de la capture sélectionnée",
+  "Pratinjau tangkapan layar yang dipilih"
+ ],
+ "Save": [
+  "Salvar",
+  "Speichern",
+  "儲存",
+  "Enregistrer",
+  "Simpan"
+ ],
+ "Send": [
+  "Enviar",
+  "Senden",
+  "傳送",
+  "Envoyer",
+  "Kirim"
+ ],
+ "Screenshot": [
+  "Captura de tela",
+  "Bildschirmfoto",
+  "螢幕截圖",
+  "Capture d’écran",
+  "Tangkapan layar"
+ ],
+ "Received screenshots appear here.": [
+  "As capturas recebidas aparecem aqui.",
+  "Empfangene Bildschirmfotos erscheinen hier.",
+  "收到的螢幕截圖會顯示在這裡。",
+  "Les captures reçues s’affichent ici.",
+  "Tangkapan layar yang diterima muncul di sini."
+ ],
+ "Simulated Android phone in the image": [
+  "Celular Android simulado na imagem",
+  "Simuliertes Android-Smartphone im Bild",
+  "圖中的模擬 Android 手機",
+  "Téléphone Android simulé dans l’image",
+  "Ponsel Android simulasi dalam gambar"
+ ],
+ "Drag on the desktop with a mouse or finger to capture it. This is an example with an AI-generated background.": [
+  "Arraste o mouse ou o dedo na área de trabalho para capturar uma região. O fundo deste exemplo foi gerado por IA.",
+  "Ziehen Sie mit der Maus oder dem Finger auf dem Desktop, um einen Bereich aufzunehmen. Der Hintergrund dieses Beispiels wurde mit KI erstellt.",
+  "在桌面上用滑鼠或手指拖曳即可擷取。此範例使用 AI 生成的背景。",
+  "Faites glisser la souris ou le doigt sur le bureau pour le capturer. L’arrière-plan de cet exemple a été généré par IA.",
+  "Seret mouse atau jari di desktop untuk mengambil tangkapan. Latar dalam contoh ini dihasilkan oleh AI."
+ ],
+ "Screenshot received": [
+  "Captura recebida",
+  "Bildschirmfoto empfangen",
+  "已收到螢幕截圖",
+  "Capture reçue",
+  "Tangkapan layar diterima"
+ ],
+ "You can still capture the example desktop by dragging or tapping.": [
+  "Você ainda pode capturar a área de trabalho de exemplo arrastando ou tocando.",
+  "Sie können den Beispiel-Desktop weiterhin durch Ziehen oder Tippen aufnehmen.",
+  "仍可透過拖曳或輕觸擷取範例桌面。",
+  "Vous pouvez toujours capturer le bureau de démonstration en faisant glisser le pointeur ou en appuyant.",
+  "Anda tetap dapat menangkap desktop contoh dengan menyeret atau mengetuk."
+ ],
+ "This browser could not create a PNG. You can still show it saved on the demo PC or send the screenshot to the simulated phone.": [
+  "O navegador não conseguiu criar o PNG. Você ainda pode simular o salvamento no PC da demo ou enviar a captura ao celular simulado.",
+  "Der Browser konnte kein PNG erstellen. Sie können das Speichern auf dem Demo-PC trotzdem anzeigen oder das Bildschirmfoto an das simulierte Smartphone senden.",
+  "瀏覽器無法建立 PNG。仍可在模擬 PC 中顯示儲存結果，或將截圖傳到模擬手機。",
+  "Le navigateur n’a pas pu créer le PNG. Vous pouvez toujours simuler l’enregistrement sur le PC ou envoyer la capture au téléphone simulé.",
+  "Browser ini tidak dapat membuat PNG. Anda masih bisa menampilkan hasil penyimpanan di PC demo atau mengirim tangkapan ke ponsel simulasi."
+ ],
+ "Copied to the clipboard. You can capture the desktop again.": [
+  "Copiado para a área de transferência. Você já pode fazer outra captura.",
+  "In die Zwischenablage kopiert. Sie können den Desktop erneut aufnehmen.",
+  "已複製到剪貼簿，可以再次擷取桌面。",
+  "Copié dans le presse-papiers. Vous pouvez refaire une capture du bureau.",
+  "Disalin ke papan klip. Anda dapat menangkap desktop lagi."
+ ],
+ "Image copying is unavailable in this browser. You can still send the screenshot to the simulated phone.": [
+  "Este navegador não permite copiar imagens. Você ainda pode enviar a captura ao celular simulado.",
+  "Dieser Browser unterstützt das Kopieren von Bildern nicht. Sie können das Bildschirmfoto weiterhin an das simulierte Smartphone senden.",
+  "此瀏覽器不支援複製圖片。仍可將截圖傳到模擬手機。",
+  "La copie d’images n’est pas disponible dans ce navigateur. Vous pouvez toujours envoyer la capture au téléphone simulé.",
+  "Browser ini tidak mendukung penyalinan gambar. Anda tetap dapat mengirim tangkapan ke ponsel simulasi."
+ ],
+ "A saved file is shown on the demo PC desktop. No file was downloaded.": [
+  "O arquivo salvo aparece na área de trabalho do PC da demo. Nenhum arquivo foi baixado.",
+  "Die gespeicherte Datei erscheint auf dem Desktop des Demo-PCs. Es wurde keine Datei heruntergeladen.",
+  "儲存的檔案會顯示在模擬 PC 桌面上，不會下載任何檔案。",
+  "Le fichier enregistré apparaît sur le bureau du PC de démo. Aucun fichier n’a été téléchargé.",
+  "File tersimpan ditampilkan di desktop PC demo. Tidak ada file yang diunduh."
+ ],
+ "The simulated phone received the screenshot.": [
+  "O celular simulado recebeu a captura.",
+  "Das simulierte Smartphone hat das Bildschirmfoto empfangen.",
+  "模擬手機已收到截圖。",
+  "Le téléphone simulé a reçu la capture.",
+  "Ponsel simulasi telah menerima tangkapan layar."
+ ],
+ "Captured the area around your tap.": [
+  "Área ao redor do toque capturada.",
+  "Bereich um den Berührungspunkt aufgenommen.",
+  "已擷取輕觸位置周圍的區域。",
+  "La zone autour du point de contact a été capturée.",
+  "Area di sekitar titik ketukan ditangkap."
+ ],
+ "Captured the selected area.": [
+  "Área selecionada capturada.",
+  "Ausgewählter Bereich aufgenommen.",
+  "已擷取所選區域。",
+  "La zone sélectionnée a été capturée.",
+  "Area yang dipilih ditangkap."
+ ],
+ "Selection interrupted. Drag or tap again.": [
+  "Seleção interrompida. Arraste ou toque novamente.",
+  "Auswahl unterbrochen. Ziehen oder tippen Sie erneut.",
+  "選取已中斷，請重新拖曳或輕觸。",
+  "Sélection interrompue. Faites glisser le pointeur ou appuyez à nouveau.",
+  "Pemilihan terhenti. Seret atau ketuk lagi."
+ ],
+ "Captured the full screen.": [
+  "Tela inteira capturada.",
+  "Ganzer Bildschirm aufgenommen.",
+  "已擷取全螢幕。",
+  "L’écran entier a été capturé.",
+  "Seluruh layar ditangkap."
+ ],
+ "Travel photo.jpg": [
+  "Foto da viagem.jpg",
+  "Reisefoto.jpg",
+  "旅遊照片.jpg",
+  "Photo de voyage.jpg",
+  "Foto perjalanan.jpg"
+ ],
+ "Work document.pdf": [
+  "Documento de trabalho.pdf",
+  "Arbeitsdokument.pdf",
+  "工作文件.pdf",
+  "Document de travail.pdf",
+  "Dokumen kerja.pdf"
+ ],
+ "Note.txt": [
+  "Nota.txt",
+  "Notiz.txt",
+  "筆記.txt",
+  "Note.txt",
+  "Catatan.txt"
+ ],
+ "File Explorer · Shared folder": [
+  "Explorador de Arquivos · Pasta compartilhada",
+  "Explorer · Freigegebener Ordner",
+  "檔案總管 · 共用資料夾",
+  "Explorateur de fichiers · Dossier partagé",
+  "File Explorer · Folder bersama"
+ ],
+ "Sample Windows files": [
+  "Arquivos de exemplo do Windows",
+  "Windows-Beispieldateien",
+  "Windows 範例檔案",
+  "Fichiers Windows de démonstration",
+  "Contoh file Windows"
+ ],
+ "Send selected files to the Mac desktop": [
+  "Enviar os arquivos selecionados para a mesa do Mac",
+  "Ausgewählte Dateien auf den Mac-Schreibtisch senden",
+  "將所選檔案傳到 Mac 桌面",
+  "Envoyer les fichiers sélectionnés vers le bureau du Mac",
+  "Kirim file yang dipilih ke desktop Mac"
+ ],
+ "Mac desktop": [
+  "Mesa do Mac",
+  "Mac-Schreibtisch",
+  "Mac 桌面",
+  "Bureau du Mac",
+  "Desktop Mac"
+ ],
+ "Drag a file to the Mac. Drag from an empty spot in the folder to select multiple files.": [
+  "Arraste um arquivo para o Mac. Para selecionar vários, comece a arrastar em um espaço vazio da pasta.",
+  "Ziehen Sie eine Datei auf den Mac. Um mehrere auszuwählen, ziehen Sie von einer freien Stelle im Ordner aus.",
+  "將檔案拖曳到 Mac。若要選取多個檔案，請從資料夾的空白處拖曳。",
+  "Faites glisser un fichier vers le Mac. Partez d’une zone vide du dossier pour sélectionner plusieurs fichiers.",
+  "Seret file ke Mac. Seret dari area kosong di folder untuk memilih beberapa file."
+ ],
+ "Selected {!0!}.": [
+  "Selecionados: {!0!}.",
+  "Ausgewählt: {!0!}.",
+  "已選取 {!0!} 個。",
+  "Sélection : {!0!}.",
+  "Dipilih: {!0!}."
+ ],
+ "{!0!} · Arrived on Mac.": [
+  "{!0!} · Recebido no Mac.",
+  "{!0!} · Auf dem Mac angekommen.",
+  "{!0!} · 已送達 Mac。",
+  "{!0!} · Reçu sur le Mac.",
+  "{!0!} · Diterima di Mac."
+ ],
+ "The selected files are already on the Mac.": [
+  "Os arquivos selecionados já estão no Mac.",
+  "Die ausgewählten Dateien befinden sich bereits auf dem Mac.",
+  "所選檔案已在 Mac 上。",
+  "Les fichiers sélectionnés sont déjà sur le Mac.",
+  "File yang dipilih sudah ada di Mac."
+ ],
+ "{!0!} selected": [
+  "Selecionados: {!0!}",
+  "Ausgewählt: {!0!}",
+  "已選取 {!0!} 個",
+  "Sélection : {!0!}",
+  "Dipilih: {!0!}"
+ ],
+ "Drop inside the Mac screen to transfer the files.": [
+  "Solte dentro da tela do Mac para transferir os arquivos.",
+  "Legen Sie die Dateien im Mac-Bildschirm ab, um sie zu übertragen.",
+  "請放到 Mac 螢幕範圍內以傳送檔案。",
+  "Déposez les fichiers dans l’écran du Mac pour les transférer.",
+  "Lepaskan di dalam layar Mac untuk mentransfer file."
+ ],
+ "Selected {!0!}. Drag any selected file to move them together.": [
+  "Selecionados: {!0!}. Arraste um deles para mover todos juntos.",
+  "Ausgewählt: {!0!}. Ziehen Sie eine der Dateien, um alle gemeinsam zu verschieben.",
+  "已選取 {!0!} 個。拖曳其中一個即可一起移動。",
+  "Sélection : {!0!}. Faites glisser un des fichiers pour déplacer tout le groupe.",
+  "Dipilih: {!0!}. Seret salah satu file untuk memindahkan semuanya."
+ ],
+ "No files selected.": [
+  "Nenhum arquivo selecionado.",
+  "Keine Dateien ausgewählt.",
+  "未選取檔案。",
+  "Aucun fichier sélectionné.",
+  "Tidak ada file yang dipilih."
+ ],
+ "Android phone": [
+  "Celular Android",
+  "Android-Smartphone",
+  "Android 手機",
+  "Téléphone Android",
+  "Ponsel Android"
+ ],
+ "Android tablet": [
+  "Tablet Android",
+  "Android-Tablet",
+  "Android 平板",
+  "Tablette Android",
+  "Tablet Android"
+ ],
+ "Pointer: {!0!}": [
+  "Ponteiro: {!0!}",
+  "Zeiger: {!0!}",
+  "游標：{!0!}",
+  "Pointeur : {!0!}",
+  "Penunjuk: {!0!}"
+ ],
+ "Moved {!0!}.": [
+  "{!0!} movido.",
+  "{!0!} verschoben.",
+  "已移動 {!0!}。",
+  "{!0!} déplacé.",
+  "{!0!} dipindahkan."
+ ],
+ "Android tablet gestures: left goes back, up or down scrolls, and down then right minimizes the app.": [
+  "Gestos no tablet Android: para a esquerda volta, para cima ou para baixo rola, e para baixo e depois à direita minimiza o app.",
+  "Gesten auf dem Android-Tablet: Nach links geht es zurück, nach oben oder unten wird gescrollt, nach unten und dann rechts minimiert die App.",
+  "Android 平板手勢：向左返回，向上或下捲動，向下再向右可將應用程式最小化。",
+  "Gestes sur la tablette Android : gauche pour revenir, haut ou bas pour défiler, bas puis droite pour réduire l’application.",
+  "Gestur tablet Android: ke kiri untuk kembali, ke atas atau bawah untuk menggulir, ke bawah lalu kanan untuk meminimalkan aplikasi."
+ ],
+ "Right-click": [
+  "Clique com o botão direito",
+  "Rechtsklick",
+  "按右鍵",
+  "Clic droit",
+  "Klik kanan"
+ ],
+ "Gesture shortcuts": [
+  "Atalhos de gestos",
+  "Gesten-Kurzbefehle",
+  "手勢捷徑",
+  "Raccourcis gestuels",
+  "Pintasan gestur"
+ ],
+ "Internet · Travel journal": [
+  "Internet · Diário de viagem",
+  "Internet · Reisetagebuch",
+  "網際網路 · 旅行日誌",
+  "Internet · Carnet de voyage",
+  "Internet · Jurnal perjalanan"
+ ],
+ "Internet": [
+  "Internet",
+  "Internet",
+  "網際網路",
+  "Internet",
+  "Internet"
+ ],
+ "Move the pointer between PC and tablet. Hold the right mouse button while drawing, or use the on-screen right-click button.": [
+  "Mova o ponteiro entre o PC e o tablet. Mantenha o botão direito pressionado ao desenhar ou use o botão de clique direito na tela.",
+  "Bewegen Sie den Zeiger zwischen PC und Tablet. Halten Sie beim Zeichnen die rechte Maustaste gedrückt oder verwenden Sie die Rechtsklick-Schaltfläche auf dem Bildschirm.",
+  "在 PC 與平板間移動游標。畫手勢時按住滑鼠右鍵，或使用畫面上的右鍵按鈕。",
+  "Déplacez le pointeur entre le PC et la tablette. Maintenez le bouton droit de la souris pour tracer un geste, ou utilisez le bouton de clic droit à l’écran.",
+  "Gerakkan penunjuk antara PC dan tablet. Tahan tombol kanan mouse saat menggambar gestur, atau gunakan tombol klik kanan di layar."
+ ],
+ "← Back": [
+  "← Voltar",
+  "← Zurück",
+  "← 返回",
+  "← Retour",
+  "← Kembali"
+ ],
+ "↑ Up": [
+  "↑ Acima",
+  "↑ Nach oben",
+  "↑ 向上",
+  "↑ Haut",
+  "↑ Atas"
+ ],
+ "↓ Down": [
+  "↓ Abaixo",
+  "↓ Nach unten",
+  "↓ 向下",
+  "↓ Bas",
+  "↓ Bawah"
+ ],
+ "↓→ Minimize app": [
+  "↓→ Minimizar app",
+  "↓→ App minimieren",
+  "↓→ 最小化應用程式",
+  "↓→ Réduire l’application",
+  "↓→ Minimalkan aplikasi"
+ ],
+ "Open Internet": [
+  "Abrir Internet",
+  "Internet öffnen",
+  "開啟網際網路",
+  "Ouvrir Internet",
+  "Buka Internet"
+ ],
+ "Travel journal": [
+  "Diário de viagem",
+  "Reisetagebuch",
+  "旅行日誌",
+  "Carnet de voyage",
+  "Jurnal perjalanan"
+ ],
+ "01 / Coast": [
+  "01 / Litoral",
+  "01 / Küste",
+  "01 / 海岸",
+  "01 / Côte",
+  "01 / Pesisir"
+ ],
+ "A calm beach": [
+  "Uma praia tranquila",
+  "Ein ruhiger Strand",
+  "寧靜的海灘",
+  "Une plage paisible",
+  "Pantai yang tenang"
+ ],
+ "The wind settled and gentle waves rolled onto the sand.": [
+  "O vento amainou e as ondas suaves chegaram à areia.",
+  "Der Wind legte sich und sanfte Wellen rollten auf den Sand.",
+  "風漸漸停了，柔和的海浪拍打著沙灘。",
+  "Le vent est retombé et de petites vagues ont glissé sur le sable.",
+  "Angin mereda dan ombak kecil menyapu pasir."
+ ],
+ "02 / Walk": [
+  "02 / Caminhada",
+  "02 / Spaziergang",
+  "02 / 散步",
+  "02 / Balade",
+  "02 / Jalan kaki"
+ ],
+ "Morning walk": [
+  "Passeio matinal",
+  "Morgenspaziergang",
+  "晨間漫步",
+  "Promenade matinale",
+  "Jalan pagi"
+ ],
+ "Sunlight fell through the trees and there was a bench at the end of the path.": [
+  "A luz atravessava as árvores e havia um banco no fim da trilha.",
+  "Sonnenlicht fiel durch die Bäume, und am Ende des Weges stand eine Bank.",
+  "陽光穿過樹梢，小徑盡頭有一張長椅。",
+  "La lumière filtrait à travers les arbres. Un banc se trouvait au bout du sentier.",
+  "Sinar matahari menembus pepohonan. Ada bangku di ujung jalan setapak."
+ ],
+ "Internet ·": [
+  "Internet ·",
+  "Internet ·",
+  "網際網路 ·",
+  "Internet ·",
+  "Internet ·"
+ ],
+ "Take a short break": [
+  "Faça uma pausa",
+  "Zeit für eine kurze Pause",
+  "稍作休息",
+  "Faites une pause",
+  "Istirahat sejenak"
+ ],
+ "The view changes with each step. Stop for a moment to feel the light and wind.": [
+  "A paisagem muda a cada passo. Pare um instante para sentir a luz e o vento.",
+  "Mit jedem Schritt verändert sich die Aussicht. Halten Sie kurz inne und spüren Sie das Licht und den Wind.",
+  "每一步都有不同的風景。停下來感受一下陽光和微風吧。",
+  "Le paysage change à chaque pas. Arrêtez-vous un instant pour profiter de la lumière et du vent.",
+  "Pemandangan berubah di setiap langkah. Berhentilah sejenak untuk menikmati cahaya dan angin."
+ ],
+ "Let’s remember the path we walked today.": [
+  "Vamos guardar na memória o caminho de hoje.",
+  "Behalten wir den heutigen Weg in Erinnerung.",
+  "一起記下今天走過的路吧。",
+  "Gardons en mémoire le chemin parcouru aujourd’hui.",
+  "Mari kenang jalan yang kita lalui hari ini."
+ ],
+ "Reopened Internet.": [
+  "Internet reaberto.",
+  "Internet erneut geöffnet.",
+  "已重新開啟網際網路。",
+  "Internet a été rouvert.",
+  "Internet dibuka kembali."
+ ],
+ "There is no previous page.": [
+  "Não há página anterior.",
+  "Es gibt keine vorherige Seite.",
+  "沒有上一頁。",
+  "Il n’y a pas de page précédente.",
+  "Tidak ada halaman sebelumnya."
+ ],
+ "Returned to the previous page.": [
+  "Você voltou à página anterior.",
+  "Zur vorherigen Seite zurückgekehrt.",
+  "已返回上一頁。",
+  "Retour à la page précédente.",
+  "Kembali ke halaman sebelumnya."
+ ],
+ "At the top of the page.": [
+  "Início da página.",
+  "Am Seitenanfang.",
+  "已到頁首。",
+  "En haut de la page.",
+  "Di bagian atas halaman."
+ ],
+ "At the bottom of the page.": [
+  "Fim da página.",
+  "Am Seitenende.",
+  "已到頁尾。",
+  "En bas de la page.",
+  "Di bagian bawah halaman."
+ ],
+ "Scrolled up.": [
+  "Rolagem para cima.",
+  "Nach oben gescrollt.",
+  "已向上捲動。",
+  "Défilement vers le haut.",
+  "Digulir ke atas."
+ ],
+ "Scrolled down.": [
+  "Rolagem para baixo.",
+  "Nach unten gescrollt.",
+  "已向下捲動。",
+  "Défilement vers le bas.",
+  "Digulir ke bawah."
+ ],
+ "App minimized. Select Internet on the tablet to reopen it.": [
+  "App minimizado. Toque em Internet no tablet para reabri-lo.",
+  "App minimiert. Wählen Sie Internet auf dem Tablet, um sie erneut zu öffnen.",
+  "應用程式已最小化。選取平板上的「網際網路」即可重新開啟。",
+  "Application réduite. Sélectionnez Internet sur la tablette pour la rouvrir.",
+  "Aplikasi diminimalkan. Pilih Internet di tablet untuk membukanya kembali."
+ ],
+ "Right-click canceled.": [
+  "Clique direito cancelado.",
+  "Rechtsklick abgebrochen.",
+  "已取消右鍵。",
+  "Clic droit annulé.",
+  "Klik kanan dibatalkan."
+ ],
+ "Right-click held. Draw a direction on the tablet.": [
+  "Botão direito pressionado. Trace uma direção no tablet.",
+  "Rechte Maustaste gedrückt. Zeichnen Sie eine Richtung auf dem Tablet.",
+  "已按住右鍵。請在平板上畫出方向。",
+  "Bouton droit maintenu. Tracez une direction sur la tablette.",
+  "Tombol kanan ditahan. Gambar arah pada tablet."
+ ],
+ "Draw left, up, down, or down then right.": [
+  "Trace para a esquerda, para cima, para baixo ou para baixo e depois à direita.",
+  "Zeichnen Sie nach links, oben, unten oder nach unten und dann rechts.",
+  "向左、向上、向下，或先向下再向右畫。",
+  "Tracez vers la gauche, le haut, le bas, ou le bas puis la droite.",
+  "Gambar ke kiri, atas, bawah, atau ke bawah lalu kanan."
+ ],
+ "LANE RUSH": [
+  "LANE RUSH",
+  "LANE RUSH",
+  "LANE RUSH",
+  "LANE RUSH",
+  "LANE RUSH"
+ ],
+ "Score: 0": [
+  "Pontos: 0",
+  "Punkte: 0",
+  "分數：0",
+  "Score : 0",
+  "Skor: 0"
+ ],
+ "Mini racer": [
+  "Minicorrida",
+  "Mini-Rennen",
+  "迷你賽車",
+  "Mini-course",
+  "Balap mini"
+ ],
+ "Start with the Android gamepad": [
+  "Comece pelo controle Android",
+  "Mit dem Android-Gamepad starten",
+  "使用 Android 遊戲控制器開始",
+  "Démarrez avec la manette Android",
+  "Mulai dengan gamepad Android"
+ ],
+ "Racing": [
+  "Corrida",
+  "Rennen",
+  "賽車",
+  "Course",
+  "Balapan"
+ ],
+ "Change lanes": [
+  "Mude de faixa",
+  "Spur wechseln",
+  "切換車道",
+  "Changez de voie",
+  "Pindah jalur"
+ ],
+ "Brick Breaker": [
+  "Quebra-blocos",
+  "Steinebrecher",
+  "打磚塊",
+  "Casse-briques",
+  "Pemecah bata"
+ ],
+ "Drag to move": [
+  "Arraste para mover",
+  "Zum Bewegen ziehen",
+  "拖曳移動",
+  "Glissez pour déplacer",
+  "Seret untuk bergerak"
+ ],
+ "Rabbit Jump": [
+  "Salto do coelho",
+  "Hasensprung",
+  "兔子跳躍",
+  "Saut du lapin",
+  "Lompat kelinci"
+ ],
+ "Tap to jump": [
+  "Toque para pular",
+  "Zum Springen tippen",
+  "點一下跳躍",
+  "Touchez pour sauter",
+  "Ketuk untuk melompat"
+ ],
+ "Remote game demo on a simulated PC and phone": [
+  "Demo de jogo remoto em um PC e um celular simulados",
+  "Remote-Spiel auf einem simulierten PC und Smartphone",
+  "在模擬 PC 和手機上的遠端遊戲示範",
+  "Démo de jeu à distance sur un PC et un téléphone simulés",
+  "Demo game jarak jauh di PC dan ponsel simulasi"
+ ],
+ "Racing controls: Use the joystick or arrow keys to steer, A to accelerate, and B to brake.": [
+  "Use o direcional ou as setas para virar, A para acelerar e B para frear.",
+  "Mit Joystick oder Pfeiltasten lenken, mit A beschleunigen und mit B bremsen.",
+  "用搖桿或方向鍵控制方向，按 A 加速、B 煞車。",
+  "Dirigez-vous avec le joystick ou les flèches, accélérez avec A et freinez avec B.",
+  "Kemudikan dengan joystick atau tombol panah, A untuk mempercepat dan B untuk mengerem."
+ ],
+ "Joystick. The left and right arrow keys also work.": [
+  "Direcional. As setas para a esquerda e direita também funcionam.",
+  "Joystick. Auch die linke und rechte Pfeiltaste funktionieren.",
+  "搖桿，也能用左右方向鍵操作。",
+  "Joystick. Les flèches gauche et droite fonctionnent aussi.",
+  "Joystick. Tombol panah kiri dan kanan juga dapat digunakan."
+ ],
+ "Reset racing": [
+  "Reiniciar corrida",
+  "Rennen zurücksetzen",
+  "重設賽車",
+  "Réinitialiser la course",
+  "Atur ulang balapan"
+ ],
+ "A Accelerate": [
+  "A Acelerar",
+  "A Beschleunigen",
+  "A 加速",
+  "A Accélérer",
+  "A Percepat"
+ ],
+ "A Accelerate (X key)": [
+  "A Acelerar (tecla X)",
+  "A Beschleunigen (Taste X)",
+  "A 加速（X 鍵）",
+  "A Accélérer (touche X)",
+  "A Percepat (tombol X)"
+ ],
+ "B Brake": [
+  "B Frear",
+  "B Bremsen",
+  "B 煞車",
+  "B Freiner",
+  "B Rem"
+ ],
+ "B Brake (Z key)": [
+  "B Frear (tecla Z)",
+  "B Bremsen (Taste Z)",
+  "B 煞車（Z 鍵）",
+  "B Freiner (touche Z)",
+  "B Rem (tombol Z)"
+ ],
+ "Mini-game gamepad": [
+  "Controle de minijogos",
+  "Gamepad für Minispiele",
+  "小遊戲控制器",
+  "Manette de mini-jeu",
+  "Gamepad permainan mini"
+ ],
+ "Joystick": [
+  "Direcional",
+  "Joystick",
+  "搖桿",
+  "Joystick",
+  "Joystick"
+ ],
+ "Reset game": [
+  "Reiniciar jogo",
+  "Spiel zurücksetzen",
+  "重設遊戲",
+  "Réinitialiser le jeu",
+  "Atur ulang game"
+ ],
+ "A Jump": [
+  "A Pular",
+  "A Springen",
+  "A 跳躍",
+  "A Sauter",
+  "A Lompat"
+ ],
+ "B Pause": [
+  "B Pausar",
+  "B Pause",
+  "B 暫停",
+  "B Pause",
+  "B Jeda"
+ ],
+ "Start": [
+  "Iniciar",
+  "Starten",
+  "開始",
+  "Démarrer",
+  "Mulai"
+ ],
+ "A": [
+  "A",
+  "A",
+  "A",
+  "A",
+  "A"
+ ],
+ "Gas": [
+  "Acelerar",
+  "Gas",
+  "加速",
+  "Accélérer",
+  "Gas"
+ ],
+ "B": [
+  "B",
+  "B",
+  "B",
+  "B",
+  "B"
+ ],
+ "Brake": [
+  "Frear",
+  "Bremse",
+  "煞車",
+  "Freiner",
+  "Rem"
+ ],
+ "Games": [
+  "Jogos",
+  "Spiele",
+  "遊戲",
+  "Jeux",
+  "Game"
+ ],
+ "Jump": [
+  "Pular",
+  "Springen",
+  "跳躍",
+  "Sauter",
+  "Lompat"
+ ],
+ "Pause": [
+  "Pausar",
+  "Pause",
+  "暫停",
+  "Pause",
+  "Jeda"
+ ],
+ "Could not load the background image, but you can still play on both screens.": [
+  "Não foi possível carregar o fundo, mas você ainda pode jogar nas duas telas.",
+  "Das Hintergrundbild konnte nicht geladen werden. Du kannst trotzdem auf beiden Bildschirmen spielen.",
+  "背景圖片無法載入，但仍可在兩個螢幕上遊玩。",
+  "L’image d’arrière-plan n’a pas pu être chargée. Vous pouvez quand même jouer sur les deux écrans.",
+  "Gambar latar gagal dimuat, tetapi Anda tetap bisa bermain di kedua layar."
+ ],
+ "Score:": [
+  "Pontos:",
+  "Punkte:",
+  "分數：",
+  "Score :",
+  "Skor:"
+ ],
+ "Paused": [
+  "Pausado",
+  "Pausiert",
+  "已暫停",
+  "En pause",
+  "Dijeda"
+ ],
+ "You hit a car": [
+  "Você bateu em um carro",
+  "Du bist mit einem Auto zusammengestoßen",
+  "你撞到車了",
+  "Vous avez heurté une voiture",
+  "Anda menabrak mobil"
+ ],
+ "Resume to continue": [
+  "Retome para continuar",
+  "Zum Weiterspielen fortsetzen",
+  "繼續遊戲即可接著玩",
+  "Reprenez pour continuer",
+  "Lanjutkan untuk bermain kembali"
+ ],
+ "Try again.": [
+  "Tente de novo.",
+  "Versuche es noch einmal.",
+  "再試一次。",
+  "Réessayez.",
+  "Coba lagi."
+ ],
+ "Resume": [
+  "Continuar",
+  "Fortsetzen",
+  "繼續",
+  "Reprendre",
+  "Lanjutkan"
+ ],
+ "Retry": [
+  "Tentar de novo",
+  "Erneut versuchen",
+  "再試一次",
+  "Réessayer",
+  "Coba lagi"
+ ],
+ "Crash. Final score:": [
+  "Batida. Pontuação final:",
+  "Unfall. Endpunktzahl:",
+  "撞車了。最終分數：",
+  "Collision. Score final :",
+  "Tabrakan. Skor akhir:"
+ ],
+ "Game paused.": [
+  "Jogo pausado.",
+  "Spiel pausiert.",
+  "遊戲已暫停。",
+  "Jeu en pause.",
+  "Permainan dijeda."
+ ],
+ "Use the joystick or arrow keys to dodge cars. A accelerates and B brakes.": [
+  "Use o joystick ou as setas para desviar dos carros. A acelera e B freia.",
+  "Weiche den Autos mit dem Joystick oder den Pfeiltasten aus. Mit A gibst du Gas, mit B bremst du.",
+  "用搖桿或方向鍵閃避車輛，按 A 加速、B 煞車。",
+  "Évitez les voitures avec le joystick ou les touches fléchées. A accélère et B freine.",
+  "Hindari mobil dengan joystick atau tombol panah. Tekan A untuk mempercepat dan B untuk mengerem."
+ ],
+ "Dodged": [
+  "Você desviou de",
+  "Umfahren:",
+  "已閃過",
+  "Voitures évitées :",
+  "Anda menghindari"
+ ],
+ "cars.": [
+  "carros.",
+  "Autos.",
+  "輛車。",
+  "au total.",
+  "mobil."
+ ],
+ "Race started. Change lanes with the joystick, accelerate with A, and brake with B.": [
+  "Corrida iniciada. Mude de faixa com o joystick, acelere com A e freie com B.",
+  "Rennen gestartet. Wechsle mit dem Joystick die Spur, gib mit A Gas und bremse mit B.",
+  "比賽開始。用搖桿切換車道，按 A 加速、B 煞車。",
+  "Course lancée. Changez de voie avec le joystick, accélérez avec A et freinez avec B.",
+  "Balapan dimulai. Ganti lajur dengan joystick, tekan A untuk mempercepat dan B untuk mengerem."
+ ],
+ "Pick a game from OneMouse Arcade.": [
+  "Escolha um jogo no OneMouse Arcade.",
+  "Wähle ein Spiel in OneMouse Arcade.",
+  "從 OneMouse Arcade 選一款遊戲。",
+  "Choisissez un jeu dans OneMouse Arcade.",
+  "Pilih game di OneMouse Arcade."
+ ],
+ "You won!": [
+  "Você venceu!",
+  "Gewonnen!",
+  "你贏了！",
+  "Vous avez gagné !",
+  "Anda menang!"
+ ],
+ "Game over": [
+  "Fim de jogo",
+  "Spiel vorbei",
+  "遊戲結束",
+  "Fin de la partie",
+  "Permainan berakhir"
+ ],
+ "Launch": [
+  "Lançar",
+  "Starten",
+  "發射",
+  "Lancer",
+  "Luncurkan"
+ ],
+ "A Retry": [
+  "A Tentar de novo",
+  "A Erneut versuchen",
+  "A 再試一次",
+  "A Réessayer",
+  "A Coba lagi"
+ ],
+ "A Launch ball": [
+  "A Lançar bola",
+  "A Ball starten",
+  "A 發球",
+  "A Lancer la balle",
+  "A Luncurkan bola"
+ ],
+ "B Resume": [
+  "B Continuar",
+  "B Fortsetzen",
+  "B 繼續",
+  "B Reprendre",
+  "B Lanjutkan"
+ ],
+ "You won.": [
+  "Você venceu.",
+  "Gewonnen.",
+  "你贏了。",
+  "Vous avez gagné.",
+  "Anda menang."
+ ],
+ "Game over. You can try again.": [
+  "Fim de jogo. Você pode tentar de novo.",
+  "Spiel vorbei. Du kannst es erneut versuchen.",
+  "遊戲結束。你可以再試一次。",
+  "Fin de la partie. Vous pouvez réessayer.",
+  "Permainan berakhir. Anda bisa mencoba lagi."
+ ],
+ "Could not load the game. Try refreshing.": [
+  "Não foi possível carregar o jogo. Tente atualizar a página.",
+  "Das Spiel konnte nicht geladen werden. Lade die Seite erneut.",
+  "遊戲無法載入，請重新整理頁面。",
+  "Le jeu n’a pas pu être chargé. Actualisez la page.",
+  "Game gagal dimuat. Coba muat ulang halaman."
+ ],
+ "Joystick. Move the paddle left or right.": [
+  "Joystick. Mova a raquete para a esquerda ou a direita.",
+  "Joystick. Bewege den Schläger nach links oder rechts.",
+  "搖桿：左右移動球拍。",
+  "Joystick. Déplacez la raquette vers la gauche ou la droite.",
+  "Joystick. Gerakkan pemukul ke kiri atau kanan."
+ ],
+ "Joystick. Push up to jump.": [
+  "Joystick. Empurre para cima para pular.",
+  "Joystick. Zum Springen nach oben schieben.",
+  "搖桿：往上推即可跳躍。",
+  "Joystick. Poussez vers le haut pour sauter.",
+  "Joystick. Dorong ke atas untuk melompat."
+ ],
+ "Move the paddle with the joystick and launch the ball with A. You can also drag on screen or use the arrow keys.": [
+  "Mova a raquete com o joystick e lance a bola com A. Você também pode arrastar na tela ou usar as setas.",
+  "Bewege den Schläger mit dem Joystick und starte den Ball mit A. Du kannst auch auf dem Bildschirm ziehen oder die Pfeiltasten verwenden.",
+  "用搖桿移動球拍，按 A 發球。也可直接在畫面上拖曳，或使用方向鍵。",
+  "Déplacez la raquette avec le joystick et lancez la balle avec A. Vous pouvez aussi glisser sur l’écran ou utiliser les flèches du clavier.",
+  "Gerakkan pemukul dengan joystick dan luncurkan bola dengan A. Anda juga bisa menggeser layar atau memakai tombol panah."
+ ],
+ "Press A or push the joystick up to jump.": [
+  "Pressione A ou empurre o joystick para cima para pular.",
+  "Drücke A oder schiebe den Joystick zum Springen nach oben.",
+  "按 A 或把搖桿往上推即可跳躍。",
+  "Appuyez sur A ou poussez le joystick vers le haut pour sauter.",
+  "Tekan A atau dorong joystick ke atas untuk melompat."
+ ],
+ "Game resumed.": [
+  "Jogo retomado.",
+  "Spiel fortgesetzt.",
+  "遊戲已繼續。",
+  "Jeu repris.",
+  "Permainan dilanjutkan."
+ ],
+ "Game reset.": [
+  "Jogo reiniciado.",
+  "Spiel zurückgesetzt.",
+  "遊戲已重設。",
+  "Jeu réinitialisé.",
+  "Permainan direset."
+ ],
+ "Try moving the cursor": [
+  "Experimente mover o cursor",
+  "Probiere aus, den Mauszeiger zu bewegen",
+  "試著移動游標",
+  "Essayez de déplacer le pointeur",
+  "Coba gerakkan kursor"
+ ],
+ "Choose an Android device": [
+  "Escolha um dispositivo Android",
+  "Android-Gerät auswählen",
+  "選擇 Android 裝置",
+  "Choisir un appareil Android",
+  "Pilih perangkat Android"
+ ],
+ "My Windows PC": [
+  "Meu PC Windows",
+  "Mein Windows-PC",
+  "我的 Windows 電腦",
+  "Mon PC Windows",
+  "PC Windows saya"
+ ],
+ "Mac": [
+  "Mac",
+  "Mac",
+  "Mac",
+  "Mac",
+  "Mac"
+ ],
+ "Other Windows PC": [
+  "Outro PC Windows",
+  "Anderer Windows-PC",
+  "另一台 Windows 電腦",
+  "Autre PC Windows",
+  "PC Windows lain"
+ ],
+ "Move your mouse or slide a finger to the right. Move left to come back. On a keyboard, use ← and →.": [
+  "Mova o mouse ou deslize o dedo para a direita. Para voltar, vá para a esquerda. No teclado, use ← e →.",
+  "Bewege die Maus oder streiche mit dem Finger nach rechts. Nach links geht es zurück. Mit der Tastatur verwendest du ← und →.",
+  "把滑鼠或手指往右移，往左移即可返回。使用鍵盤時，請按 ← 或 →。",
+  "Déplacez la souris ou faites glisser un doigt vers la droite. Revenez vers la gauche pour retourner au point de départ. Au clavier, utilisez ← et →.",
+  "Gerakkan mouse atau geser satu jari ke kanan. Geser ke kiri untuk kembali. Di keyboard, gunakan ← dan →."
+ ],
+ "Cursor on:": [
+  "Cursor em:",
+  "Mauszeiger auf:",
+  "游標位置：",
+  "Pointeur sur :",
+  "Kursor di:"
+ ],
+ "Notepad": [
+  "Bloco de Notas",
+  "Editor",
+  "記事本",
+  "Bloc-notes",
+  "Notepad"
+ ],
+ "Move file": [
+  "Mover arquivo",
+  "Datei verschieben",
+  "移動檔案",
+  "Déplacer le fichier",
+  "Pindahkan file"
+ ],
+ "Close": [
+  "Fechar",
+  "Schließen",
+  "關閉",
+  "Fermer",
+  "Tutup"
+ ],
+ "Write a note…": [
+  "Escreva uma nota…",
+  "Notiz schreiben…",
+  "寫點筆記…",
+  "Écrivez une note…",
+  "Tulis catatan…"
+ ],
+ "Drag a file onto the other screen.": [
+  "Arraste um arquivo para a outra tela.",
+  "Ziehe eine Datei auf den anderen Bildschirm.",
+  "把檔案拖到另一個螢幕上。",
+  "Faites glisser un fichier sur l’autre écran.",
+  "Seret file ke layar lainnya."
+ ],
+ "Drag on the screen. Enter: whole screen.": [
+  "Arraste na tela. Enter: tela inteira.",
+  "Ziehe auf dem Bildschirm. Eingabetaste: ganzer Bildschirm.",
+  "在螢幕上拖曳選取。按 Enter 選取整個螢幕。",
+  "Faites glisser sur l’écran. Entrée : écran entier.",
+  "Seret di layar. Enter: seluruh layar."
+ ],
+ "Virtual screenshot": [
+  "Captura de tela virtual",
+  "Virtueller Screenshot",
+  "虛擬螢幕截圖",
+  "Capture d’écran virtuelle",
+  "Tangkapan layar virtual"
+ ],
+ "Copied.": [
+  "Copiado.",
+  "Kopiert.",
+  "已複製。",
+  "Copié.",
+  "Disalin."
+ ],
+ "Pasted.": [
+  "Colado.",
+  "Eingefügt.",
+  "已貼上。",
+  "Collé.",
+  "Ditempel."
+ ],
+ "Select the text to copy.": [
+  "Selecione o texto a copiar.",
+  "Wähle den zu kopierenden Text aus.",
+  "請選取要複製的文字。",
+  "Sélectionnez le texte à copier.",
+  "Pilih teks yang ingin disalin."
+ ],
+ "Copy some text from a note first.": [
+  "Copie primeiro um texto de uma nota.",
+  "Kopiere zuerst Text aus einer Notiz.",
+  "請先從筆記裡複製文字。",
+  "Copiez d’abord du texte dans une note.",
+  "Salin dulu teks dari catatan."
+ ],
+ "Try selecting the region again.": [
+  "Tente selecionar a área novamente.",
+  "Wähle den Bereich erneut aus.",
+  "請重新選取範圍。",
+  "Essayez de sélectionner la zone à nouveau.",
+  "Coba pilih area lagi."
+ ],
+ "Moved to:": [
+  "Movido para:",
+  "Verschoben nach:",
+  "已移至：",
+  "Déplacé vers :",
+  "Dipindahkan ke:"
+ ],
+ "Cancel": [
+  "Cancelar",
+  "Abbrechen",
+  "取消",
+  "Annuler",
+  "Batal"
+ ],
+ "Files selected": [
+  "Arquivos selecionados",
+  "Ausgewählte Dateien",
+  "已選取的檔案",
+  "Fichiers sélectionnés",
+  "File terpilih"
+ ],
+ "Received on:": [
+  "Recebido em:",
+  "Empfangen auf:",
+  "接收裝置：",
+  "Reçu sur :",
+  "Diterima di:"
+ ],
+ "Swipe on any blank part of the card to move the cursor. Hold, then slide to select or drag.": [
+  "Deslize o dedo em qualquer parte vazia do cartão para mover o cursor. Para selecionar ou arrastar, toque e segure antes de deslizar.",
+  "Streiche auf einer freien Stelle der Karte, um den Mauszeiger zu bewegen. Halte kurz gedrückt und streiche dann, um auszuwählen oder zu ziehen.",
+  "在卡片空白處滑動即可移動游標。先按住再滑動，可框選或拖曳。",
+  "Glissez sur une zone vide de la carte pour déplacer le pointeur. Pour sélectionner ou déplacer un élément, maintenez le doigt appuyé avant de glisser.",
+  "Geser di bagian kartu yang kosong untuk menggerakkan kursor. Untuk memilih atau menyeret, tahan sebentar lalu geser."
+ ],
+ "Drag from a blank area to select files, then drag them to the other screen.": [
+  "Arraste a partir de uma área vazia para selecionar arquivos e leve-os para a outra tela.",
+  "Ziehe von einer freien Stelle aus, um Dateien auszuwählen. Ziehe sie dann auf den anderen Bildschirm.",
+  "從空白處拖曳框選檔案，再將檔案拖到另一個螢幕。",
+  "Faites glisser depuis une zone vide pour sélectionner des fichiers, puis déplacez-les sur l’autre écran.",
+  "Seret dari area kosong untuk memilih file, lalu seret file tersebut ke layar lainnya."
+ ],
+ "In this demo, files move instead of being copied. Drag from empty space on either screen to select several files, then drag one of the selected files to the other screen.": [
+  "Nesta demonstração, os arquivos são movidos, não copiados. Comece a arrastar em uma área vazia de qualquer uma das telas para selecionar vários arquivos. Depois, arraste um deles para a outra tela para mover o grupo.",
+  "In dieser Demo werden Dateien verschoben, nicht kopiert. Ziehe von einer freien Stelle auf einem der Bildschirme aus, um mehrere Dateien auszuwählen. Ziehe dann eine der ausgewählten Dateien auf den anderen Bildschirm.",
+  "此示範會移動而不是複製檔案。從任一螢幕的空白處拖曳可框選多個檔案，再將其中一個拖到另一個螢幕，就能一起移動。",
+  "Dans cette démo, les fichiers sont déplacés et non copiés. Sur l’un ou l’autre écran, faites glisser depuis une zone vide pour sélectionner plusieurs fichiers, puis déplacez-en un sur l’autre écran pour déplacer tout le groupe.",
+  "Dalam demo ini, file dipindahkan, bukan disalin. Seret dari bagian kosong di salah satu layar untuk memilih beberapa file. Kemudian seret salah satu file terpilih ke layar lainnya untuk memindahkan semuanya."
+ ],
+ "Move selected files": [
+  "Mover arquivos selecionados",
+  "Ausgewählte Dateien verschieben",
+  "移動選取的檔案",
+  "Déplacer les fichiers sélectionnés",
+  "Pindahkan file terpilih"
+ ],
+ "Move to Mac": [
+  "Mover para o Mac",
+  "Auf den Mac verschieben",
+  "移到 Mac",
+  "Déplacer vers le Mac",
+  "Pindah ke Mac"
+ ],
+ "Move to Windows": [
+  "Mover para o Windows",
+  "Auf den Windows-PC verschieben",
+  "移到 Windows",
+  "Déplacer vers Windows",
+  "Pindah ke Windows"
+ ],
+ "Reset demo": [
+  "Reiniciar demonstração",
+  "Demo zurücksetzen",
+  "重設示範",
+  "Réinitialiser la démo",
+  "Reset demo"
+ ],
+ "All files are back on Windows.": [
+  "Todos os arquivos estão de volta no Windows.",
+  "Alle Dateien sind wieder auf dem Windows-PC.",
+  "所有檔案都回到 Windows 了。",
+  "Tous les fichiers sont de retour sur Windows.",
+  "Semua file kembali ke Windows."
+ ],
+ "Selected {n}.": [
+  "Selecionados: {n}.",
+  "Ausgewählt: {n}.",
+  "已選取 {n} 個。",
+  "Sélection : {n}.",
+  "Dipilih: {n}."
+ ],
+ "Selected {n}. Drag any selected file to move them together.": [
+  "Selecionados: {n}. Arraste um dos arquivos selecionados para movê-los juntos.",
+  "Ausgewählt: {n}. Ziehe eine der ausgewählten Dateien, um alle zusammen zu verschieben.",
+  "已選取 {n} 個。拖曳其中一個檔案即可一起移動。",
+  "Sélection : {n}. Faites glisser l’un des fichiers sélectionnés pour les déplacer ensemble.",
+  "Dipilih: {n}. Seret salah satu file terpilih untuk memindahkan semuanya."
+ ],
+ "{files} · Moved to {side}.": [
+  "{files} · Movido para {side}.",
+  "{files} · Verschoben nach {side}.",
+  "{files} · 已移至 {side}。",
+  "{files} · Déplacement vers {side}.",
+  "{files} · Dipindahkan ke {side}."
+ ],
+ "Drop inside the other screen to move your files.": [
+  "Solte os arquivos dentro da outra tela para movê-los.",
+  "Lasse die Dateien auf dem anderen Bildschirm los, um sie zu verschieben.",
+  "把檔案放在另一個螢幕內即可移動。",
+  "Déposez les fichiers sur l’autre écran pour les déplacer.",
+  "Lepaskan file di dalam layar lainnya untuk memindahkannya."
+ ],
+ "Slide a finger to move the cursor. Tap to click where it is pointing.": [
+  "Deslize o dedo para mover o cursor. Toque para clicar no ponto indicado.",
+  "Streiche mit einem Finger, um den Mauszeiger zu bewegen. Tippe, um an seiner Position zu klicken.",
+  "滑動手指來移動游標，輕點即可在游標所指處按一下。",
+  "Glissez un doigt pour déplacer le pointeur. Touchez pour cliquer à l’endroit pointé.",
+  "Geser satu jari untuk menggerakkan kursor. Ketuk untuk mengeklik titik yang ditunjuk."
+ ],
+ "To drag, hold briefly before sliding.": [
+  "Para arrastar, toque e segure um instante antes de deslizar.",
+  "Halte zum Ziehen kurz gedrückt, bevor du streichst.",
+  "若要拖曳，先按住片刻再滑動。",
+  "Pour faire glisser un élément, maintenez brièvement le doigt appuyé avant de le déplacer.",
+  "Untuk menyeret, tahan sebentar sebelum menggeser."
+ ],
+ "With right-click armed, slide your finger to draw a gesture.": [
+  "Com o botão direito ativado, deslize o dedo para desenhar um gesto.",
+  "Streiche bei aktiviertem Rechtsklick mit dem Finger, um eine Geste zu zeichnen.",
+  "啟用右鍵模式後，滑動手指畫出手勢。",
+  "Lorsque le clic droit est activé, glissez le doigt pour dessiner un geste.",
+  "Saat klik kanan aktif, geser jari untuk menggambar gestur."
+ ]
+}

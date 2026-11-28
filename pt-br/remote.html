@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Jogue mini-jogos do navegador em uma tela do Windows simulada com um gamepad de telefone Android.">
+<meta name="theme-color" content="#f5f8fa">
+<script>if(new URLSearchParams(location.search).get("embed")==="1")document.documentElement.classList.add("race-embedded");</script>
+<title>Demonstração remota do telefone para PC · OneMouse</title>
+<link rel="icon" href="/assets/preview/onemouse-android-icon.png" type="image/png" sizes="240x240">
+<link rel="stylesheet" href="/assets/preview/one-preview.css?v=light1">
+<style>*,*::before,*::after{box-sizing:border-box}body{margin:0;background:var(--preview-bg);color:var(--preview-ink);color-scheme:light;font:1rem/1.65 system-ui,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;word-break:keep-all;overflow-wrap:anywhere}a{color:var(--preview-accent);text-underline-offset:.2em}a:focus-visible,summary:focus-visible{outline:3px solid var(--preview-accent);outline-offset:3px}.layout{width:min(960px,calc(100% - 36px));margin-inline:auto}.skip{position:absolute;left:12px;top:-80px;z-index:3;background:var(--preview-accent);color:#fff;padding:7px}.skip:focus{top:7px}.hero{padding:35px 0 20px;background:radial-gradient(ellipse at 78% 0,#e3f4f1,transparent 70%)}.eyebrow{margin:0 0 10px;color:var(--preview-accent);font-weight:800;font-size:.88rem;letter-spacing:.04em}.hero h1{margin:0;line-height:1.15;letter-spacing:-.055em;font-size:clamp(2.05rem,6vw,3.68rem)}.subtitle{color:var(--preview-muted);max-width:48ch;margin:.85rem 0;font-size:1.04rem}.section{margin:18px auto 38px}.section h2{margin:0 0 12px;line-height:1.25;font-size:clamp(1.35rem,4.5vw,2rem);letter-spacing:-.045em}.cards{display:grid;gap:10px}.card,.notice{border-radius:15px;border:1px solid var(--preview-line);background:var(--preview-panel);padding:16px;min-width:0}.card h3{font-size:1.15rem;margin:4px 0 6px;line-height:1.25}.card p{color:var(--preview-muted);margin:0 0 8px}.pill{display:inline-block;color:#115c4d;border-radius:999px;background:#e0f4ee;padding:1px 8px;font-weight:780;font-size:.82rem}.buttons{display:flex;flex-wrap:wrap;gap:6px;margin-top:13px}.btn{min-height:44px;padding:7px 10px;display:inline-flex;align-items:center;justify-content:center;border:1px solid #758a98;color:var(--preview-ink);border-radius:9px;text-decoration:none;font-weight:750;font-size:.91rem;background:#fff}.btn:hover{background:#eaf2f6}.btn.primary{background:var(--preview-accent);color:#fff;border-color:var(--preview-accent)}.btn.primary:hover{background:var(--preview-accent-hover)}.notice{border-left:3px solid var(--preview-accent);background:#e6f5f1;color:#194b43}.notice p{margin:0}.notice + .notice{margin-top:8px}.plain{color:var(--preview-muted)}.fine{font-size:.9rem;color:var(--preview-muted)}.matrix{display:grid;gap:10px}.requirement{display:grid;margin:0;gap:5px}.requirement>div{display:grid;grid-template-columns:minmax(88px,1fr) minmax(0,2fr);gap:7px;border-top:1px solid var(--preview-line);padding-top:6px}.requirement dt{font-weight:760}.requirement dd{margin:0;color:var(--preview-muted)}.intro-links{display:flex;gap:8px;flex-wrap:wrap}@media(min-width:650px){.hero{padding-block:58px 26px}.cards,.matrix{grid-template-columns:repeat(3,minmax(0,1fr))}.card{padding:18px}}
+[hidden]{display:none!important}
+#gamepad,#documents{scroll-margin-top:14px}
+.remote-desk{margin:1rem 0}
+.remote-desk .race-scene,.remote-desk noscript img{border-radius:14px}
+.remote-desk noscript img{display:block;width:100%;height:auto}
+.race-embedded .preview-header,.race-embedded .hero,.race-embedded .preview-footer,.race-embedded body>.skip,.race-embedded #real-remote-section,.race-embedded #try-remote{display:none}
+.race-embedded .section.layout{width:100%;padding-block:0}
+.race-embedded .section.layout>.plain{margin:0 0 .75rem}
+.race-embedded body{background:var(--preview-panel)}
+</style>
+<link rel="stylesheet" href="/assets/preview/race-card.css?v=allpad1">
+<style>.topic-language-links{padding:7px 0;display:flex;gap:8px;flex-wrap:wrap;width:min(980px,calc(100% - 36px));margin:auto;font-size:.9rem}.topic-language-links [aria-current]{font-weight:750}</style><link rel="stylesheet" href="/css/official-footer.css?v=1">
+<link rel="stylesheet" href="/css/official-language-picker.css?v=1">
+<script src="/js/official-language-picker.js?v=1" defer></script>
+<link rel="stylesheet" href="/assets/preview/cursor-mode.css?v=1">
+<link rel="canonical" href="https://onemouse.pages.dev/pt-br/remote">
+<link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/remote">
+<link rel="alternate" hreflang="en" href="https://onemouse.pages.dev/en/remote">
+<link rel="alternate" hreflang="ja" href="https://onemouse.pages.dev/ja/remote">
+<link rel="alternate" hreflang="zh" href="https://onemouse.pages.dev/zh/remote">
+<link rel="alternate" hreflang="es" href="https://onemouse.pages.dev/es/remote">
+<link rel="alternate" hreflang="pt-BR" href="https://onemouse.pages.dev/pt-br/remote">
+<link rel="alternate" hreflang="de" href="https://onemouse.pages.dev/de/remote">
+<link rel="alternate" hreflang="zh-TW" href="https://onemouse.pages.dev/zh-tw/remote">
+<link rel="alternate" hreflang="fr" href="https://onemouse.pages.dev/fr/remote">
+<link rel="alternate" hreflang="id" href="https://onemouse.pages.dev/id/remote">
+<link rel="alternate" hreflang="x-default" href="https://onemouse.pages.dev/remote">
+</head>
+<body>
+<a class="skip" href="#main">Ir para o conteúdo</a>
+<header class="preview-header"><div class="preview-frame">
+  <a class="preview-brand" href="/pt-br/" aria-label="Página inicial do OneMouse"><span class="preview-mark" aria-hidden="true"><img src="/assets/preview/onemouse-android-icon.png" alt="" width="33" height="33"></span>OneMouse</a>
+  <nav class="preview-nav" aria-label="Navegação principal"><a href="/pt-br/">Início</a><a href="/pt-br/features">Recursos</a><a href="/pt-br/guide">Guia de ligação</a><a href="/pt-br/help">Ajuda</a><a href="/pt-br/download">Downloads</a></nav>
+
+  <div class="one-language-select"><label class="one-language-label" for="one-language-picker">Idioma</label><select id="one-language-picker" data-language-picker data-current-language="pt-BR" hidden><option value="ko" lang="ko" data-language-route="/remote" data-fragments="documents gamepad main real-remote real-remote-section remote-desk try-remote">한국어</option><option value="en" lang="en" data-language-route="/en/remote" data-fragments="documents gamepad main real-remote real-remote-section remote-desk try-remote">English</option><option value="ja" lang="ja" data-language-route="/ja/remote" data-fragments="documents gamepad main real-remote real-remote-section remote-desk try-remote">日本語</option><option value="zh" lang="zh" data-language-route="/zh/remote" data-fragments="documents gamepad main real-remote real-remote-section remote-desk try-remote">简体中文</option><option value="es" lang="es" data-language-route="/es/remote" data-fragments="documents gamepad main real-remote real-remote-section remote-desk try-remote">Español</option><option value="pt-BR" lang="pt-BR" data-language-route="/pt-br/remote" data-fragments="documents gamepad main real-remote real-remote-section remote-desk try-remote" selected>Português (Brasil)</option><option value="de" lang="de" data-language-route="/de/remote" data-fragments="documents gamepad main real-remote real-remote-section remote-desk try-remote">Deutsch</option><option value="zh-TW" lang="zh-TW" data-language-route="/zh-tw/remote" data-fragments="documents gamepad main real-remote real-remote-section remote-desk try-remote">繁體中文</option><option value="fr" lang="fr" data-language-route="/fr/remote" data-fragments="documents gamepad main real-remote real-remote-section remote-desk try-remote">Français</option><option value="id" lang="id" data-language-route="/id/remote" data-fragments="documents gamepad main real-remote real-remote-section remote-desk try-remote">Bahasa Indonesia</option></select><noscript><nav class="one-language-fallback" aria-label="Idioma"><a href="/remote" lang="ko" hreflang="ko">한국어</a><a href="/en/remote" lang="en" hreflang="en">English</a><a href="/ja/remote" lang="ja" hreflang="ja">日本語</a><a href="/zh/remote" lang="zh" hreflang="zh">简体中文</a><a href="/es/remote" lang="es" hreflang="es">Español</a><span lang="pt-BR" aria-current="true">Português (Brasil)</span><a href="/de/remote" lang="de" hreflang="de">Deutsch</a><a href="/zh-tw/remote" lang="zh-TW" hreflang="zh-TW">繁體中文</a><a href="/fr/remote" lang="fr" hreflang="fr">Français</a><a href="/id/remote" lang="id" hreflang="id">Bahasa Indonesia</a></nav></noscript></div>
+</div></header>
+<main id="main">
+<div class="hero"><div class="layout"><p class="eyebrow">Demonstração de tela remota OneMouse</p><h1>Tente controlar um PC de um telefone.</h1><p class="subtitle">O monitor e o telefone na imagem mostram o mesmo jogo. Jogue com o gamepad do telefone na tela.</p></div></div>
+
+<section class="section layout" aria-labelledby="try-remote">
+<h2 id="try-remote">Jogar mini-jogos com o telefone</h2>
+<div id="gamepad"><span id="documents" aria-hidden="true"></span></div>
+<p class="plain">Escolha um jogo na tela do PC. No corredor, use a vara para evitar carros, A para acelerar, e B para frear.</p>
+<div class="remote-desk" id="remote-desk" data-race-inline>
+  <noscript><img src="/assets/preview/remote-racing-example.webp" width="1199" height="675" alt="O mesmo jogo no PC e no telefone"><p>Activar o JavaScript para reproduzir.</p></noscript>
+</div>
+</section>
+<section class="section layout" id="real-remote-section" aria-labelledby="real-remote"><h2 id="real-remote">Como esta demonstração difere do aplicativo</h2>
+<div class="notice"><p>Este jogo de navegador não se conecta a jogos ou dispositivos reais para PC ou acessar sua tela. Com o OneMouse instalado em dispositivos compatíveis com Windows e Android, você pode abrir uma tela remota através da mesma rede local (Wi-Fi ou LAN com fio) ou uma conexão de conta Google suportada.</p></div>
+<div class="buttons"><a class="btn primary" href="/pt-br/features#remote-gamepad">OneMouse gamepad</a><a class="btn" href="/pt-br/features#remote-gesture-examples">Controles de toque e ponteiro</a><a class="btn" href="/pt-br/features#mouse-gestures">Gestos do mouse Android</a><a class="btn" href="/pt-br/guide-reference#mobile-pc-remote">Conecte meu dispositivo Android</a><a class="btn" href="/pt-br/help#remote">Solucionar problemas na tela remota</a></div>
+</section>
+</main>
+<footer class="preview-footer official-footer"><div class="preview-frame">
+  <div class="official-footer-credit"><span>© 2026 OneMouse</span><a class="ato-badge" href="https://alternativeto.net/software/onemouse/about/?utm_source=badge&amp;utm_medium=referral" target="_blank" rel="noopener"><img src="https://alternativeto.net/static/badges/badge-compact-color.svg" alt="OneMouse | AlternativeTo" width="171" height="55" loading="lazy"></a></div>
+  <nav class="preview-refs" aria-label="Recursos"><a href="/pt-br/compare">Comparar aplicativos</a><a href="/pt-br/technical">Tecnologia e segurança</a><a href="/pt-br/privacy">Política de privacidade</a><a href="/pt-br/terms">Termos de uso</a><a href="/pt-br/licenses">Licenças de código aberto</a></nav>
+</div></footer>
+<script src="/js/preview-arcade-games.js?v=endless1"></script>
+<script src="/js/onemouse-race-pt-br.js?v=1"></script>
+<script>
+(() => {
+  const desk = document.getElementById('remote-desk');
+  const demo = window.OneMouseRaceCard?.mount(desk);
+  const query = new URLSearchParams(location.search);
+  if (demo && query.get('embed') === '1' && query.get('play') === '1') {
+    setTimeout(() => {
+      if (!document.hidden && desk.querySelector('[data-game="library"]')) demo.start();
+    }, 3000);
+  }
+})();
+</script>
+<script src="/js/preview-cursor-mode.js?v=tenlang1" defer></script>
+</body>
+</html>

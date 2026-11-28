@@ -1,13 +1,25 @@
 (() => {
   'use strict';
-  const copy = {
+  const copy = {/* web-demo-locales */
+    "pt-br":["Bloco de Notas","Captura de tela","Mover arquivo","Copiar","Colar","Fechar","Escreva uma nota…","Arraste um arquivo para a outra tela.","Arraste na tela. Enter: tela inteira.","Captura de tela virtual","Copiado.","Colado.","Selecione o texto a copiar.","Copie primeiro um texto de uma nota.","Tente selecionar a área novamente.","Movido para: "],
+    "de":["Editor","Bildschirmfoto","Datei verschieben","Kopieren","Einfügen","Schließen","Notiz schreiben…","Ziehe eine Datei auf den anderen Bildschirm.","Ziehe auf dem Bildschirm. Eingabetaste: ganzer Bildschirm.","Virtueller Screenshot","Kopiert.","Eingefügt.","Wähle den zu kopierenden Text aus.","Kopiere zuerst Text aus einer Notiz.","Wähle den Bereich erneut aus.","Verschoben nach: "],
+    "zh-tw":["記事本","螢幕截圖","移動檔案","複製","貼上","關閉","寫點筆記…","把檔案拖到另一個螢幕上。","在螢幕上拖曳選取。按 Enter 選取整個螢幕。","虛擬螢幕截圖","已複製。","已貼上。","請選取要複製的文字。","請先從筆記裡複製文字。","請重新選取範圍。","已移至： "],
+    "fr":["Bloc-notes","Capture d’écran","Déplacer le fichier","Copier","Coller","Fermer","Écrivez une note…","Faites glisser un fichier sur l’autre écran.","Faites glisser sur l’écran. Entrée : écran entier.","Capture d’écran virtuelle","Copié.","Collé.","Sélectionnez le texte à copier.","Copiez d’abord du texte dans une note.","Essayez de sélectionner la zone à nouveau.","Déplacé vers : "],
+    "id":["Notepad","Tangkapan layar","Pindahkan file","Salin","Tempel","Tutup","Tulis catatan…","Seret file ke layar lainnya.","Seret di layar. Enter: seluruh layar.","Tangkapan layar virtual","Disalin.","Ditempel.","Pilih teks yang ingin disalin.","Salin dulu teks dari catatan.","Coba pilih area lagi.","Dipindahkan ke: "],
+  /* end-web-demo-locales */
     ko: ['메모장','스크린샷','파일 넘기기','복사','붙여넣기','닫기','메모를 써 보세요.','파일을 골라 옆 화면으로 끌어 보세요.','화면에서 영역을 드래그하세요. Enter: 전체 화면','가상 화면 캡처','복사했어요.','붙여넣었어요.','복사할 텍스트를 선택하세요.','먼저 메모에서 텍스트를 복사하세요.','캡처할 영역을 다시 골라 보세요.','이동한 화면: '],
     en: ['Notepad','Screenshot','Move file','Copy','Paste','Close','Write a note…','Drag a file onto the other screen.','Drag on the screen. Enter: whole screen.','Virtual screenshot','Copied.','Pasted.','Select the text to copy.','Copy some text from a note first.','Try selecting the region again.','Moved to: '],
     es: ['Bloc de notas','Captura','Mover archivo','Copiar','Pegar','Cerrar','Escribe una nota…','Arrastra un archivo a la otra pantalla.','Arrastra en la pantalla. Intro: pantalla completa.','Captura de pantalla virtual','Copiado.','Pegado.','Selecciona el texto que quieres copiar.','Copia primero texto de una nota.','Vuelve a seleccionar la zona.','Movido a: '],
     ja: ['メモ帳','スクリーンショット','ファイル移動','コピー','貼り付け','閉じる','メモを書いてみましょう。','ファイルを別の画面にドラッグします。','画面上でドラッグします。Enter：画面全体。','仮想画面のキャプチャ','コピーしました。','貼り付けました。','コピーするテキストを選択してください。','先にメモからテキストをコピーしてください。','範囲をもう一度選択してください。','移動先：'],
     zh: ['记事本','截图','移动文件','复制','粘贴','关闭','写一条笔记…','把文件拖到另一块屏幕。','在屏幕上拖动选区。按 Enter 截取整屏。','虚拟屏幕截图','已复制。','已粘贴。','请选择要复制的文字。','请先从记事本复制文字。','请重新选择截图区域。','已移动到：'],
   };
-  const transfer = {
+  const transfer = {/* web-demo-locales */
+    "pt-br":["Enviar","Cancelar","Arquivos selecionados","Recebido em: ","Deslize o dedo em qualquer parte vazia do cartão para mover o cursor. Para selecionar ou arrastar, toque e segure antes de deslizar.","Arraste a partir de uma área vazia para selecionar arquivos e leve-os para a outra tela."],
+    "de":["Senden","Abbrechen","Ausgewählte Dateien","Empfangen auf: ","Streiche auf einer freien Stelle der Karte, um den Mauszeiger zu bewegen. Halte kurz gedrückt und streiche dann, um auszuwählen oder zu ziehen.","Ziehe von einer freien Stelle aus, um Dateien auszuwählen. Ziehe sie dann auf den anderen Bildschirm."],
+    "zh-tw":["傳送","取消","已選取的檔案","接收裝置： ","在卡片空白處滑動即可移動游標。先按住再滑動，可框選或拖曳。","從空白處拖曳框選檔案，再將檔案拖到另一個螢幕。"],
+    "fr":["Envoyer","Annuler","Fichiers sélectionnés","Reçu sur : ","Glissez sur une zone vide de la carte pour déplacer le pointeur. Pour sélectionner ou déplacer un élément, maintenez le doigt appuyé avant de glisser.","Faites glisser depuis une zone vide pour sélectionner des fichiers, puis déplacez-les sur l’autre écran."],
+    "id":["Kirim","Batal","File terpilih","Diterima di: ","Geser di bagian kartu yang kosong untuk menggerakkan kursor. Untuk memilih atau menyeret, tahan sebentar lalu geser.","Seret dari area kosong untuk memilih file, lalu seret file tersebut ke layar lainnya."],
+  /* end-web-demo-locales */
     ko: ['보내기','취소','선택한 파일','받은 화면: ','카드의 빈 곳을 밀어 커서를 움직여요. 잠깐 누른 뒤 밀면 선택하거나 끌 수 있어요.','빈 곳에서 여러 파일을 선택한 뒤 옆 화면으로 끌어요.'],
     en: ['Send','Cancel','Files selected','Received on: ','Swipe on any blank part of the card to move the cursor. Hold, then slide to select or drag.','Drag from a blank area to select files, then drag them to the other screen.'],
     es: ['Enviar','Cancelar','Archivos seleccionados','Recibido en: ','Desliza en una zona libre de la tarjeta para mover el cursor. Mantén pulsado y desliza para seleccionar o arrastrar.','Selecciona archivos desde una zona vacía y arrástralos a la otra pantalla.'],
@@ -64,9 +76,9 @@
     const [
       notepad, capture, move, copyText, pasteText, closeText, placeholder, _dragHint, captureHint,
       captured, copied, pasted, chooseText, noClipboard, chooseRegion, moved,
-    ] = copy[lang.split('-')[0]] || copy.en;
+    ] = copy[lang.toLowerCase()] || copy[lang.toLowerCase().split('-')[0]] || copy.en;
     const [send, cancel, filesSelected, received, touchHint, groupHint] =
-      transfer[lang.split('-')[0]] || transfer.en;
+      transfer[lang.toLowerCase()] || transfer[lang.toLowerCase().split('-')[0]] || transfer.en;
     const captureApi = window.OneMouseGuideCapture;
     const screenActions = new WeakMap();
     // Register only our in-screen buttons. Direct and virtual input share one

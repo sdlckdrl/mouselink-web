@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="zh-TW">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OneMouse QQ 開放原始碼授權</title>
+  <meta name="description" content="OneMouse PC、Android和macOS應用程式使用的開源圖書庫和第三方 SDK 通知。" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="icon" href="/assets/preview/onemouse-android-icon.png" type="image/png" sizes="240x240">
+<link rel="stylesheet" href="/assets/preview/one-preview.css?v=light1">
+<meta name="theme-color" content="#f5f8fa">
+
+<style>
+:root{color-scheme:light}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--preview-bg);color:var(--preview-ink);font:1rem/1.68 system-ui,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;overflow-wrap:anywhere}
+html:lang(ko) body{word-break:keep-all}
+.legal-skip{position:absolute;top:6px;left:8px;z-index:4;transform:translateY(-180%);padding:.55rem .8rem;border-radius:.45rem;color:white;background:var(--preview-accent)}
+.legal-skip:focus{transform:none}
+#legal-content{padding:0 0 3rem}
+#legal-content .wrap{width:min(880px,calc(100% - 36px));margin-inline:auto}
+#legal-content .phero{padding:clamp(32px,6vw,68px) 0 1.45rem}
+#legal-content .ey{color:var(--preview-accent);font-size:.9rem;font-weight:800;letter-spacing:.02em;margin:0 0 .4rem}
+#legal-content h1{font-size:clamp(2rem,5vw,3.55rem);font-weight:800;letter-spacing:-.045em;margin:0;line-height:1.14}
+#legal-content h2{font-size:clamp(1.15rem,3vw,1.55rem);line-height:1.3;letter-spacing:-.025em;margin:0 0 .6rem}
+#legal-content .lead{font-size:1.06rem;margin:.85rem 0 .65rem}
+#legal-content .lead,#legal-content .policy-date{color:var(--preview-muted)}
+#legal-content .policy-date{font-size:.9rem;margin:.55rem 0 0}
+#legal-content .legal{display:grid;gap:12px}
+#legal-content .lcard{background:var(--preview-panel);border:1px solid var(--preview-line);border-radius:14px;padding:clamp(16px,3vw,25px);scroll-margin-top:1rem}
+#legal-content .lcard p,#legal-content .lcard ul,#legal-content .lcard ol{margin:.3rem 0 .65rem}
+#legal-content .lcard li+li{margin-top:.4rem}
+#legal-content .num{display:inline-block;font-size:.84em;color:var(--preview-accent);margin-inline-end:.4em}
+#legal-content a,.legal-languages a{color:var(--preview-accent);text-decoration:underline;text-underline-offset:.2em}
+#legal-content a:focus-visible,.legal-languages a:focus-visible{outline:3px solid var(--preview-accent);outline-offset:3px}
+.legal-languages{width:min(880px,calc(100% - 36px));display:flex;flex-wrap:wrap;gap:.3rem .95rem;margin:.75rem auto 0;color:var(--preview-muted);font-size:.85rem}
+.legal-languages a,.legal-languages span{display:inline-flex;align-items:center;min-height:36px}
+.legal-languages [aria-current]{font-weight:800;color:var(--preview-ink)}
+.preview-footer a[aria-current]{font-weight:800;color:var(--preview-accent)}
+.preview-footer .ato-badge img{display:block;max-width:100%;object-fit:contain}
+</style>
+
+  <link rel="canonical" href="https://onemouse.pages.dev/zh-tw/licenses" />
+  <link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/licenses">
+<link rel="alternate" hreflang="en" href="https://onemouse.pages.dev/en/licenses">
+<link rel="alternate" hreflang="ja" href="https://onemouse.pages.dev/ja/licenses">
+<link rel="alternate" hreflang="zh" href="https://onemouse.pages.dev/zh/licenses">
+<link rel="alternate" hreflang="es" href="https://onemouse.pages.dev/es/licenses">
+<link rel="alternate" hreflang="pt-BR" href="https://onemouse.pages.dev/pt-br/licenses">
+<link rel="alternate" hreflang="de" href="https://onemouse.pages.dev/de/licenses">
+<link rel="alternate" hreflang="zh-TW" href="https://onemouse.pages.dev/zh-tw/licenses">
+<link rel="alternate" hreflang="fr" href="https://onemouse.pages.dev/fr/licenses">
+<link rel="alternate" hreflang="id" href="https://onemouse.pages.dev/id/licenses">
+<link rel="alternate" hreflang="x-default" href="https://onemouse.pages.dev/licenses">
+<link rel="stylesheet" href="/css/official-footer.css?v=1">
+<link rel="stylesheet" href="/css/official-language-picker.css?v=1">
+<script src="/js/official-language-picker.js?v=1" defer></script>
+</head>
+<body>
+  <a class="legal-skip" href="#legal-content">跳至主要內容</a>
+<header class="preview-header"><div class="preview-frame">
+  <a class="preview-brand" href="/zh-tw/" aria-label="OneMouse 首頁"><span class="preview-mark" aria-hidden="true"><img src="/assets/preview/onemouse-android-icon.png" alt="" width="33" height="33"></span>OneMouse</a>
+  <nav class="preview-nav" aria-label="主選單"><a href="/zh-tw/">首頁</a><a href="/zh-tw/features">功能</a><a href="/zh-tw/guide">連線指南</a><a href="/zh-tw/help">說明</a><a href="/zh-tw/download">下載</a></nav>
+
+  <div class="one-language-select"><label class="one-language-label" for="one-language-picker">語言</label><select id="one-language-picker" data-language-picker data-current-language="zh-TW" hidden><option value="ko" lang="ko" data-language-route="/licenses" data-fragments="legal-content library-source original-notices">한국어</option><option value="en" lang="en" data-language-route="/en/licenses" data-fragments="legal-content library-source original-notices">English</option><option value="ja" lang="ja" data-language-route="/ja/licenses" data-fragments="legal-content library-source original-notices">日本語</option><option value="zh" lang="zh" data-language-route="/zh/licenses" data-fragments="legal-content library-source original-notices">简体中文</option><option value="es" lang="es" data-language-route="/es/licenses" data-fragments="legal-content library-source original-notices">Español</option><option value="pt-BR" lang="pt-BR" data-language-route="/pt-br/licenses" data-fragments="legal-content library-source original-notices">Português (Brasil)</option><option value="de" lang="de" data-language-route="/de/licenses" data-fragments="legal-content library-source original-notices">Deutsch</option><option value="zh-TW" lang="zh-TW" data-language-route="/zh-tw/licenses" data-fragments="legal-content library-source original-notices" selected>繁體中文</option><option value="fr" lang="fr" data-language-route="/fr/licenses" data-fragments="legal-content library-source original-notices">Français</option><option value="id" lang="id" data-language-route="/id/licenses" data-fragments="legal-content library-source original-notices">Bahasa Indonesia</option></select><noscript><nav class="one-language-fallback" aria-label="語言"><a href="/licenses" lang="ko" hreflang="ko">한국어</a><a href="/en/licenses" lang="en" hreflang="en">English</a><a href="/ja/licenses" lang="ja" hreflang="ja">日本語</a><a href="/zh/licenses" lang="zh" hreflang="zh">简体中文</a><a href="/es/licenses" lang="es" hreflang="es">Español</a><a href="/pt-br/licenses" lang="pt-BR" hreflang="pt-BR">Português (Brasil)</a><a href="/de/licenses" lang="de" hreflang="de">Deutsch</a><span lang="zh-TW" aria-current="true">繁體中文</span><a href="/fr/licenses" lang="fr" hreflang="fr">Français</a><a href="/id/licenses" lang="id" hreflang="id">Bahasa Indonesia</a></nav></noscript></div>
+</div></header>
+
+
+  <main id="legal-content">
+    <section class="phero wrap">
+      <p class="ey">開放原始碼</p>
+      <h1 class="page">開放原始碼授權</h1>
+      <p class="lead">以下是 OneMouse 內含開放原始碼元件的授權與著作權聲明，以及授權原文、NOTICE 檔案和對應原始碼。</p>
+      <p class="policy-date">最近更新：2026 年 11 月 5 日</p>
+    </section>
+
+    <section>
+      <div class="wrap narrow">
+        <div class="legal one">
+        <article class="lcard">
+          <h2>元件詳細清單</h2>
+          <p>本清單列出已驗證的 Windows MSIX 1.6.2.0、Android 1.2.43（79）Play 與 Galaxy 發行版本，以及 macOS 1.6.0 所含元件。商店更新是否可用取決於各商店的審查與發布狀態。舊版應用程式可能包含不同元件。</p>
+        </article>
+
+        <article class="lcard">
+          <h2>Android 應用程式</h2>
+          <ul>
+            <li><strong>AndroidX Core 1.18.0 · Activity 1.13.0 · AppCompat 1.8.0 · Browser 1.9.0</strong><br />Android 相容性、使用者介面、瀏覽器與裝置連線支援<br /><a href="../assets/licenses/APACHE-2.0.txt">Apache License 2.0</a></li>
+            <li><strong>Kotlin standard library 2.2.21 · kotlinx-coroutines 1.9.0</strong><br />Kotlin 執行環境與非同步處理<br /><a href="../assets/licenses/APACHE-2.0.txt">Apache License 2.0</a></li>
+            <li><strong>OkHttp 5.3.2 · Okio 3.16.4</strong><br />帳戶的 HTTPS 和 WebSocket 連線及輸入輸出<br /><a href="../assets/licenses/APACHE-2.0.txt">Apache License 2.0</a></li>
+            <li><strong>ZXing Android Embedded 4.3.0 · ZXing Core 3.4.1</strong><br />QR 碼掃描<br /><a href="../assets/licenses/APACHE-2.0.txt">Apache License 2.0</a></li>
+            <li><strong>WebRTC Android SDK 144.7559.05</strong><br />遠端螢幕影像傳輸<br /><a href="../assets/licenses/webrtc-android-144.7559.05-LICENSE.txt">BSD 3 梯度</a> · <a href="../assets/licenses/webrtc-android-144.7559.05-THIRD-PARTY-NOTICES.md">第三方聲明</a> · <a href="../assets/licenses/webrtc-android-144.7559.05-PATENTS.txt">PATENTS</a></li>
+            <li><strong>LazySodium Android 5.2.0 · libsodium 1.0.20</strong><br />配對與加密<br /><a href="../assets/licenses/MPL-2.0.txt">MPL 2.0</a> · <a href="../assets/licenses/libsodium-1.0.20-LICENSE.txt">ISC</a></li>
+            <li><strong>Java Native Access (JNA) 5.19.1</strong><br />存取隨附的原生程式庫<br /><a href="../assets/licenses/APACHE-2.0.txt">Apache License 2.0</a></li>
+            <li><strong>AOSP Pinyin ─ OpenWnn</strong><br />中文拼音及日文輸入<br /><a href="../assets/licenses/APACHE-2.0.txt">Apache License 2.0</a> · <a href="#original-notices">第三方聲明</a></li>
+            <li><strong>Android NDK libc++ / LLVM runtime (28.2.13676358)</strong><br />中文拼音及日文輸入<br /><a href="../assets/licenses/android-ndk-28.2.13676358-llvm-NOTICE.txt">Apache 2.0 with LLVM exception</a></li>
+            <li><strong>Google Play Billing 8.3.0 · App Update 2.1.0 · In-App Review 2.0.2</strong><br />僅限 Google Play：計費、更新與評論<br /><a href="https://developer.android.com/studio/terms" target="_blank" rel="noopener">Google SDK 條款</a></li>
+            <li><strong>Firebase 編碼器</strong><br />Google Play 專用 SDK 的間接相依項目<br /><a href="../assets/licenses/APACHE-2.0.txt">Apache License 2.0</a></li>
+          </ul>
+          <p>只有 Play 版本包含 Google Play SDK 和 Firebase 編碼器，Galaxy 版本不包含這些元件。</p>
+          <p><a href="../assets/licenses/android-1.2.43-runtime-components.json">元件詳細清單</a> · <a href="../assets/licenses/Android-THIRD-PARTY-NOTICES.txt">第三方聲明</a></p>
+        </article>
+
+        <article class="lcard">
+          <h2>Windows 電腦版應用程式</h2>
+          <ul>
+            <li><strong>Electron 45.2.3</strong><br />桌面使用者介面與 Chromium／Node.js 執行環境<br /><a href="../assets/licenses/electron-45.2.3-LICENSE.txt">MIT</a> · <a href="../assets/licenses/electron-45.2.3-LICENSES.chromium.html">鉻/節點.js/FFmpeg</a></li>
+            <li><strong>Python 3.11.9</strong><br />電腦版後端執行環境<br /><a href="../assets/licenses/python-3.11.9-LICENSE.txt">PSF 授權</a></li>
+            <li><strong>cryptography 50.0.1 · PyNaCl 1.6.2 · libsodium</strong><br />配對與加密<br /><a href="../assets/licenses/APACHE-2.0.txt">Apache License 2.0</a> / BSD 3- Clause / ISC</li>
+            <li><strong>OpenSSL 3.0.13 (Python) · OpenSSL 4.0.2 (cryptography)</strong><br />配對與加密<br /><a href="../assets/licenses/openssl-3.0.13-LICENSE.txt">Apache 2.0</a> · <a href="../assets/licenses/openssl-4.0.2-LICENSE.txt">Apache 2.0</a></li>
+            <li><strong>zeroconf 0.151.3 · ifaddr 0.2.0</strong><br />探索區域網路裝置及查詢網路介面位址<br /><a href="../assets/licenses/LGPL-2.1.txt">LGPL 2.1-or-later</a> 麻省理工學院 <a href="#library-source">對應原始碼</a></li>
+            <li><strong>winsdk 1.0.0b10 · pyserial 3.5</strong><br />Windows 藍牙與序列通訊<br />麻省理工學院 · BSD 3- Clause</li>
+            <li><strong>cffi 2.0.0</strong><br />Python 原生程式庫介面<br /><a href="../assets/licenses/cffi-2.0.0-LICENSE.txt">MIT-0</a></li>
+          </ul>
+        </article>
+
+        <article class="lcard">
+          <h2>macOS 應用程式</h2>
+          <ul>
+            <li><strong>Swift Sodium 0.11.0 · libsodium 1.0.22</strong><br />配對與加密<br /><a href="../assets/licenses/swift-sodium-0.11.0-LICENSE.txt">ISC</a> · <a href="../assets/licenses/libsodium-1.0.22-LICENSE.txt">ISC</a></li>
+            <li><strong>WebRTC 152.0.0 (stasel/WebRTC)</strong><br />遠端螢幕影像傳輸<br /><a href="../assets/licenses/webrtc-macos-152.0.0-LICENSE.txt">BSD 3 梯度</a> · <a href="../assets/licenses/webrtc-macos-152.0.0-PATENTS.txt">PATENTS</a></li>
+          </ul>
+        </article>
+
+        <article class="lcard" id="original-notices">
+          <h2>授權原文與著作權聲明</h2>
+          <p>這些副本保留各元件實際適用的授權條文、著作權聲明和 NOTICE 檔案。通用授權名稱不能取代各元件專屬的聲明。法律文件原文以其原始語言提供。</p>
+          <ul>
+            <li><a href="../assets/licenses/license-assets.json">來源、版本與 SHA-256 清單</a></li>
+            <li><a href="../assets/licenses/onemouse-license-notices.zip">下載授權與聲明</a></li>
+            <li><a href="../assets/licenses/Android-THIRD-PARTY-NOTICES.txt">Android：第三方聲明</a></li>
+            <li><a href="../assets/licenses/electron-45.2.3-LICENSE.txt">電子-麻省理工</a></li>
+            <li><a href="../assets/licenses/electron-45.2.3-LICENSES.chromium.html">Chromium／Node.js／FFmpeg：第三方聲明</a></li>
+            <li><a href="../assets/licenses/webrtc-android-144.7559.05-LICENSE.txt">WebRTC Android — BSD 3- 空白</a></li>
+            <li><a href="../assets/licenses/webrtc-android-144.7559.05-THIRD-PARTY-NOTICES.md">WebRTC Android：第三方聲明</a></li>
+            <li><a href="../assets/licenses/webrtc-macos-152.0.0-LICENSE.txt">WebRTC macOS — BSD 3- Clause</a></li>
+            <li><a href="../assets/licenses/swift-sodium-0.11.0-LICENSE.txt">Swift Sodium —— ISC</a></li>
+            <li><a href="../assets/licenses/webrtc-sdk-android-144.7559.05-LICENSE.txt">WebRTC Android SDK 發行方：MIT</a></li>
+            <li><a href="../assets/licenses/webrtc-macos-152.0.0-DISTRIBUTOR-LICENSE.md">WebRTC macOS 發行方：BSD 3-Clause</a></li>
+            <li><a href="../assets/licenses/libsodium-1.0.20-LICENSE.txt">libsodium 1.0.20 — ISC</a></li>
+            <li><a href="../assets/licenses/libsodium-1.0.22-LICENSE.txt">libsodium 1.0.22 — ISC</a></li>
+            <li><a href="../assets/licenses/python-3.11.9-LICENSE.txt">Python — PSF 授權</a></li>
+            <li><a href="../assets/licenses/cryptography-50.0.1-LICENSE.txt">cryptography — Apache 2.0 / BSD 3-Clause</a></li>
+            <li><a href="../assets/licenses/cryptography-50.0.1-LICENSE.APACHE.txt">cryptography — Apache License 2.0</a></li>
+            <li><a href="../assets/licenses/cryptography-50.0.1-LICENSE.BSD.txt">加密法 — BSD 3- Clause</a></li>
+            <li><a href="../assets/licenses/pynacl-1.6.2-LICENSE.txt">PyNaCl — Apache License 2.0</a></li>
+            <li><a href="../assets/licenses/pynacl-1.6.2-libsodium-LICENSE.txt">PyNaCl 隨附的 libsodium：ISC</a></li>
+            <li><a href="../assets/licenses/ifaddr-0.2.0-LICENSE.txt">麻省理工學院</a></li>
+            <li><a href="../assets/licenses/winsdk-1.0.0b10-LICENSE.txt">Windk——麻省理工</a></li>
+            <li><a href="../assets/licenses/pyserial-3.5-LICENSE.txt">pyserial — BSD</a></li>
+            <li><a href="../assets/licenses/cffi-2.0.0-LICENSE.txt">Cffi — MIT-0</a></li>
+            <li><a href="../assets/licenses/cffi-2.0.0-libffi-x86-x64-NOTICES.txt">cffi 隨附的 libffi：MIT 聲明</a></li>
+            <li><a href="../assets/licenses/openssl-3.0.13-LICENSE.txt">OpenSSL 3.0.13 — Apache License 2.0</a></li>
+            <li><a href="../assets/licenses/openssl-3.0.13-AUTHORS.md">OpenSSL 3.0.13 — AUTHORS</a></li>
+            <li><a href="../assets/licenses/openssl-4.0.2-LICENSE.txt">OpenSSL 4.0.2 — Apache License 2.0</a></li>
+            <li><a href="../assets/licenses/openssl-4.0.2-AUTHORS.md">OpenSSL 4.0.2 — AUTHORS</a></li>
+            <li><a href="../assets/licenses/zeroconf-0.151.3-COPYING.txt">zeroconf — LGPL 2.1-or-later</a></li>
+            <li><a href="../assets/licenses/lazysodium-android-5.2.0-LICENSE.md">LazySodium Android — MPL 2.0</a></li>
+            <li><a href="../assets/licenses/aosp-pinyin-NOTICE.txt">AOSP Pinyin — NOTICE</a></li>
+            <li><a href="../assets/licenses/aosp-pinyin-PROVENANCE.md">AOSP Pinyin：原始碼及變更</a></li>
+            <li><a href="../assets/licenses/aosp-openwnn-NOTICE.txt">AOSP OpenWnn — NOTICE</a></li>
+            <li><a href="../assets/licenses/aosp-openwnn-ATTRIBUTION.txt">AOSP OpenWnn：著作權歸屬及變更</a></li>
+            <li><a href="../assets/licenses/aosp-japanese-PROVENANCE.md">AOSP OpenWnn：原始碼及變更</a></li>
+            <li><a href="../assets/licenses/android-ndk-28.2.13676358-llvm-NOTICE.txt">Android NDK libc++／LLVM 執行環境：Apache 2.0（附 LLVM 例外條款）</a></li>
+            <li><a href="../assets/licenses/pyinstaller-6.22.2-COPYING.txt">PyInstaller：GPL（附開機載入程式例外條款）</a></li>
+            <li><a href="../assets/licenses/APACHE-2.0.txt">Apache License 2.0</a></li>
+            <li><a href="../assets/licenses/MPL-2.0.txt">Mozilla Public License 2.0</a></li>
+            <li><a href="../assets/licenses/LGPL-2.1.txt">GNU LGPL 2.1</a></li>
+            <li><a href="../assets/licenses/GPL-2.0.txt">GNU GPL 2.0</a></li>
+            <li><a href="../assets/licenses/GPL-3.0.txt">GNU GPL 3.0</a></li>
+            <li><a href="../assets/licenses/LGPL-3.0.txt">GNU LGPL 3.0</a></li>
+          </ul>
+        </article>
+
+        <article class="lcard" id="library-source">
+          <h2>原始碼取得方式與函式庫重組</h2>
+          <p>下方提供 LazySodium Android 5.2.0 的對應原始碼，包括原始程式碼及其授權。OneMouse 未修改此函式庫的原始碼。</p>
+          <p><a href="../assets/licenses/lazysodium-android-5.2.0-source.zip">對應原始碼：LazySodium Android 5.2.0</a></p>
+          <p><a href="../assets/licenses/lazysodium-android-5.2.0-sources.jar">LazySodium Android 5.2.0：已發佈的原始碼 JAR</a></p>
+          <p>下方列出的 Windows 版本提供 zeroconf 0.151.3 的對應原始碼與重組材料。此工具保留發行時的應用程式目的碼，並使用修改後的 zeroconf 原始碼建立獨立的執行檔，不會覆寫原始應用程式，也不假設封裝在執行檔中的模組可以自動替換。</p>
+          <p><a href="../assets/licenses/pc-1.6.9/README.html">Windows 1.6.9：重新組合說明及檔案</a></p>
+          <p><a href="../assets/licenses/pc-1.7.0/README.html">Windows 1.7.0：重新組合說明及檔案</a></p>
+          <p><a href="../assets/licenses/pc-1.7.2/README.html">Windows 1.7.2：重新組合說明及檔案</a></p>
+          <p><a href="../assets/licenses/pc-1.6.8/README.html">Windows 1.6.8：重新組合說明及檔案</a></p>
+          <p><a href="../assets/licenses/pc-1.6.5/README.html">Windows 1.6.5：重新組合說明及檔案</a></p>
+          <p><a href="../assets/licenses/pc-1.6.4/README.html">Windows 1.6.4：重新組合說明及檔案</a></p>
+          <p><a href="../assets/licenses/pc-1.6.2/README.html">Windows 1.6.2.0：重新組合說明及檔案</a></p>
+          <p>在相關開放原始碼授權允許的範圍內，我們不會限制修改、重組函式庫，也不會限制為偵錯這些修改而進行的逆向工程。重組的執行檔為獨立檔案，不含 Microsoft Store 簽章。程序與驗證範圍請見說明。</p>
+          <p>如需其他版本的對應原始碼或材料，或遇到無法下載的情況，請聯絡我們並提供應用程式版本。 <a href="mailto:sdlckdrl@gmail.com">sdlckdrl@gmail.com</a></p>
+        </article>
+
+        <article class="lcard">
+          <h2>建置與測試工具</h2>
+          <p>PyInstaller 6.22.2（GPLv2 或更新版本，附開機載入程式例外條款）、Electron Builder 26.18.1（MIT）、Android Gradle Plugin、Gradle、Kotlin Gradle Plugin 與測試工具均與應用程式執行時元件分開列示，並提供 PyInstaller 開機載入程式例外條款原文。</p>
+        </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="preview-footer official-footer"><div class="preview-frame">
+  <div class="official-footer-credit"><span>© 2026 OneMouse</span><a class="ato-badge" href="https://alternativeto.net/software/onemouse/about/?utm_source=badge&amp;utm_medium=referral" target="_blank" rel="noopener"><img src="https://alternativeto.net/static/badges/badge-compact-color.svg" alt="OneMouse | AlternativeTo" width="171" height="55" loading="lazy"></a></div>
+  <nav class="preview-refs" aria-label="相關資訊"><a href="/zh-tw/compare">應用程式比較</a><a href="/zh-tw/technical">技術與安全性</a><a href="/zh-tw/privacy">隱私權政策</a><a href="/zh-tw/terms">使用條款</a><a href="/zh-tw/licenses">開放原始碼授權</a></nav>
+</div></footer>
+</body>
+</html>

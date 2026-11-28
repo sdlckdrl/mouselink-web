@@ -1,0 +1,1362 @@
+<!doctype html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>指南 QQ OneMouse — 連線Android、Windows PC和Mac</title>
+    <meta
+      name="description"
+      content="設定 OneMouse 並學習截圖抓取與分享、從 Android 的 PC 遠端控制、檔案與剪貼簿傳輸、以及藍芽連線。"
+    />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <link rel="stylesheet" href="../css/onemouse.css" />
+    <link rel="stylesheet" href="../css/guide-help.css" />
+    <script src="../js/guide-help.js" defer></script>
+    <link rel="canonical" href="https://onemouse.pages.dev/en/guide" />
+    <link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/guide-reference">
+<link rel="alternate" hreflang="en" href="https://onemouse.pages.dev/en/guide-reference">
+<link rel="alternate" hreflang="ja" href="https://onemouse.pages.dev/ja/guide-reference">
+<link rel="alternate" hreflang="zh" href="https://onemouse.pages.dev/zh/guide-reference">
+<link rel="alternate" hreflang="es" href="https://onemouse.pages.dev/es/guide-reference">
+<link rel="alternate" hreflang="pt-BR" href="https://onemouse.pages.dev/pt-br/guide-reference">
+<link rel="alternate" hreflang="de" href="https://onemouse.pages.dev/de/guide-reference">
+<link rel="alternate" hreflang="zh-TW" href="https://onemouse.pages.dev/zh-tw/guide-reference">
+<link rel="alternate" hreflang="fr" href="https://onemouse.pages.dev/fr/guide-reference">
+<link rel="alternate" hreflang="id" href="https://onemouse.pages.dev/id/guide-reference">
+<link rel="alternate" hreflang="x-default" href="https://onemouse.pages.dev/guide-reference">
+  <link rel="stylesheet" href="/css/official-language-picker.css?v=1">
+<script src="/js/official-language-picker.js?v=1" defer></script>
+</head>
+  <body>
+    <header class="site">
+      <div class="wrap hd">
+        <a class="brand" href="./" aria-label="OneMouse 首頁"><span class="om">OM</span>OneMouse</a>
+        <nav class="nav" aria-label="主導航">
+          <a href="./">概述</a>
+          <a href="./#use">功能</a>
+          <a href="./guide" class="on">指南</a>
+          <a href="./help">說明</a>
+        </nav>
+        <div class="hd-right">
+          <div class="one-language-select"><label class="one-language-label" for="one-language-picker">語言</label><select id="one-language-picker" data-language-picker data-current-language="zh-TW" hidden><option value="ko" lang="ko" data-language-route="/guide-reference" data-fragments="android-shortcuts-title bluetooth connect-account connect-bluetooth connect-wifi device-order file-receive-folder files keyboard-shortcuts mac mobile-pc-remote mouse-gestures mouse-gestures-title notifications pc-shortcuts-title pcpc permissions position quick remote remote-gesture-examples screenshots shortcuts shortcuts-next-release start text-to-pc windows-remote">한국어</option><option value="en" lang="en" data-language-route="/en/guide-reference" data-fragments="android-shortcuts-title bluetooth connect-account connect-bluetooth connect-wifi device-order file-receive-folder files keyboard-shortcuts mac mobile-pc-remote mouse-gestures mouse-gestures-title notifications pc-shortcuts-title pcpc permissions position quick remote remote-gesture-examples screenshots shortcuts shortcuts-next-release start text-to-pc windows-remote">English</option><option value="ja" lang="ja" data-language-route="/ja/guide-reference" data-fragments="android-shortcuts-title bluetooth connect-account connect-bluetooth connect-wifi device-order file-receive-folder files keyboard-shortcuts mac mobile-pc-remote mouse-gestures mouse-gestures-title notifications pc-shortcuts-title pcpc permissions position quick remote remote-gesture-examples screenshots shortcuts shortcuts-next-release start text-to-pc windows-remote">日本語</option><option value="zh" lang="zh" data-language-route="/zh/guide-reference" data-fragments="android-shortcuts-title bluetooth connect-account connect-bluetooth connect-wifi device-order file-receive-folder files keyboard-shortcuts mac mobile-pc-remote mouse-gestures mouse-gestures-title notifications pc-shortcuts-title pcpc permissions position quick remote remote-gesture-examples screenshots shortcuts shortcuts-next-release start text-to-pc windows-remote">简体中文</option><option value="es" lang="es" data-language-route="/es/guide-reference" data-fragments="android-shortcuts-title bluetooth connect-account connect-bluetooth connect-wifi device-order file-receive-folder files keyboard-shortcuts mac mobile-pc-remote mouse-gestures mouse-gestures-title notifications pc-shortcuts-title pcpc permissions position quick remote remote-gesture-examples screenshots shortcuts shortcuts-next-release start text-to-pc windows-remote">Español</option><option value="pt-BR" lang="pt-BR" data-language-route="/pt-br/guide-reference" data-fragments="android-shortcuts-title bluetooth connect-account connect-bluetooth connect-wifi device-order file-receive-folder files keyboard-shortcuts mac mobile-pc-remote mouse-gestures mouse-gestures-title notifications pc-shortcuts-title pcpc permissions position quick remote remote-gesture-examples screenshots shortcuts shortcuts-next-release start text-to-pc windows-remote">Português (Brasil)</option><option value="de" lang="de" data-language-route="/de/guide-reference" data-fragments="android-shortcuts-title bluetooth connect-account connect-bluetooth connect-wifi device-order file-receive-folder files keyboard-shortcuts mac mobile-pc-remote mouse-gestures mouse-gestures-title notifications pc-shortcuts-title pcpc permissions position quick remote remote-gesture-examples screenshots shortcuts shortcuts-next-release start text-to-pc windows-remote">Deutsch</option><option value="zh-TW" lang="zh-TW" data-language-route="/zh-tw/guide-reference" data-fragments="android-shortcuts-title bluetooth connect-account connect-bluetooth connect-wifi device-order file-receive-folder files keyboard-shortcuts mac mobile-pc-remote mouse-gestures mouse-gestures-title notifications pc-shortcuts-title pcpc permissions position quick remote remote-gesture-examples screenshots shortcuts shortcuts-next-release start text-to-pc windows-remote" selected>繁體中文</option><option value="fr" lang="fr" data-language-route="/fr/guide-reference" data-fragments="android-shortcuts-title bluetooth connect-account connect-bluetooth connect-wifi device-order file-receive-folder files keyboard-shortcuts mac mobile-pc-remote mouse-gestures mouse-gestures-title notifications pc-shortcuts-title pcpc permissions position quick remote remote-gesture-examples screenshots shortcuts shortcuts-next-release start text-to-pc windows-remote">Français</option><option value="id" lang="id" data-language-route="/id/guide-reference" data-fragments="android-shortcuts-title bluetooth connect-account connect-bluetooth connect-wifi device-order file-receive-folder files keyboard-shortcuts mac mobile-pc-remote mouse-gestures mouse-gestures-title notifications pc-shortcuts-title pcpc permissions position quick remote remote-gesture-examples screenshots shortcuts shortcuts-next-release start text-to-pc windows-remote">Bahasa Indonesia</option></select><noscript><nav class="one-language-fallback" aria-label="語言"><a href="/guide-reference" lang="ko" hreflang="ko">한국어</a><a href="/en/guide-reference" lang="en" hreflang="en">English</a><a href="/ja/guide-reference" lang="ja" hreflang="ja">日本語</a><a href="/zh/guide-reference" lang="zh" hreflang="zh">简体中文</a><a href="/es/guide-reference" lang="es" hreflang="es">Español</a><a href="/pt-br/guide-reference" lang="pt-BR" hreflang="pt-BR">Português (Brasil)</a><a href="/de/guide-reference" lang="de" hreflang="de">Deutsch</a><span lang="zh-TW" aria-current="true">繁體中文</span><a href="/fr/guide-reference" lang="fr" hreflang="fr">Français</a><a href="/id/guide-reference" lang="id" hreflang="id">Bahasa Indonesia</a></nav></noscript></div>
+          <a class="hd-cta" href="./#get">下載</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="main-grid-aligned">
+      <section class="phero wrap">
+        <p class="ey">指南</p>
+        <h1 class="page">從第一次接觸到日常特徵一步一步的</h1>
+        <p class="lead">
+          大多數人只需遵守此命令。 關於更難的網路細節, 請參考
+          <a href="./technical" style="color: var(--coral-deep); font-weight: 700"
+            >技術安全( S)</a
+          >萬一有東西不起作用,就檢查一下
+          <a href="./help" style="color: var(--coral-deep); font-weight: 700">說明</a>
+          單獨的。
+        </p>
+        <nav class="toc" aria-label="此頁面">
+          <a href="#start">5分鐘設定</a>
+          <a href="#position">把手機放好</a>
+          <a href="#remote">遠端螢幕</a>
+          <a href="#mobile-pc-remote">從手機控制 PC</a>
+          <a href="#mouse-gestures">滑鼠手勢</a>
+          <a href="#files">檔案剪貼簿( D)</a>
+          <a href="#screenshots">抓取並傳送截圖( S)</a>
+          <a href="#text-to-pc">手機到 PC</a>
+          <a href="#notifications">通知和答覆</a>
+          <a href="#quick">數字捷徑</a>
+          <a href="#bluetooth">藍芽連線</a>
+          <a href="#pcpc">連線另一個 PC</a>
+          <a href="#mac">連線 Mac</a>
+          <a href="#shortcuts">快捷表</a>
+        </nav>
+      </section>
+
+      <!-- QUICK START -->
+      <section id="start">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">Android設定</p>
+            <h2 class="sec">選擇如何在目前的應用程式中連線 。</h2>
+            <p class="sec-lead">
+              選擇一個 Google 帳戶, QR/ code 在同一無線網路上對對, 或是藍芽。 所有三種方法都需要 Android Accessable 來控制您的手機與 PC 滑鼠與鍵盤 。
+            </p>
+          </div>
+          <div class="connection-picker" data-connection-picker>
+            <div
+              class="connection-options"
+              data-connection-options
+              aria-label="連線方法"
+              hidden
+            >
+              <button
+                type="button"
+                data-connection-choice="account"
+                aria-controls="connect-account"
+                hidden
+              >
+                Google 帳戶
+              </button>
+              <button
+                type="button"
+                data-connection-choice="wifi"
+                aria-controls="connect-wifi"
+                hidden
+              >
+                Wi-Fi ─ QR/ 程式碼
+              </button>
+              <button
+                type="button"
+                data-connection-choice="bluetooth"
+                aria-controls="connect-bluetooth"
+                hidden
+              >
+                Bluetooth
+              </button>
+            </div>
+            <section class="connection-panel" id="connect-account" data-connection-panel="account">
+              <h3>連線同一個 Google 帳戶</h3>
+              <p class="connection-description">
+                在帳號清單中尋找您的網路連線裝置。 不需要 QR 或配對程式碼 。
+              </p>
+              <ol class="connection-steps">
+                <li>
+                  簽到 <b>同樣的谷歌帳戶</b> in <b>裝置</b> 在Windows和OneMouse家用螢幕上
+                </li>
+                <li>
+                  保持應用程式開啟並檢查裝置清單。 如果其他裝置缺失, 請檢查帳號地址和網路連線, 然後選擇 <b>重新整理</b>.
+                </li>
+                <li>
+                  下 <b>已註冊的電腦</b> 在電話家用螢幕中, 選擇
+                  <b>連線裝置</b> 對此 PC 檢查是否已連通。 如果已連通, 請繼續到下一步 。 請確認其他裝置的許可權要求 。
+                </li>
+                <li>
+                  啟用手機的存取服務並設定 <b>手機投放</b> 在 PC 上。 將滑鼠移動到已設定的 <b>遊標輸入通道</b> 在那邊緣。
+                </li>
+              </ol>
+              <p class="connection-note">
+                需要 Internet 存取。 裝置能否連線取決於網路。 選擇 Wi- Fi 或 Bluetooth 不簽署而使用 OneMouse 。
+              </p>
+              <a class="text-link" href="./help#account-connect-help"
+                >裝置在您的帳號中失蹤或無法連線 ? ^</a
+              >
+            </section>
+            <section class="connection-panel" id="connect-wifi" data-connection-panel="wifi">
+              <h3>同一Wi- Fi上的 QR 或六位數程式碼對等</h3>
+              <p class="connection-description">
+                不需要 Google 簽署。 只要連線到和手機相同的路由器, PC 可以使用有線的區域網 。
+              </p>
+              <div class="timeline">
+                <div class="tstep">
+                  <div class="rail"><span class="num">1</span><span class="line"></span></div>
+                  <div class="body">
+                    <h4>將 PC 與手機連線到同一個無線網</h4>
+                    <p>在兩個裝置上執行 OneMouse。 在 PC 應用程式中開啟裝置 。</p>
+                  </div>
+                </div>
+                <div class="tstep">
+                  <div class="rail"><span class="num">2</span><span class="line"></span></div>
+                  <div class="body">
+                    <h4>允許 Android 存取</h4>
+                    <p>
+                      啟用 Android 設定下的服務 ^ 存取 ^ 安裝的應用程式( 或下載的應用程式 ) ^ OneMouse。 選單名稱因製造商而異 。 另外要檢查發現所需的許可權, 如 Nearby Wi- Fi 裝置 。
+                    </p>
+                  </div>
+                </div>
+                <div class="tstep">
+                  <div class="rail"><span class="num">3</span><span class="line"></span></div>
+                  <div class="body">
+                    <h4>在 PC 上顯示 QR 與配對程式碼</h4>
+                    <p>
+                      在裝置中, 擴張此 PC 的 QR 和程式碼的其他連線方式。 此對話方塊顯示 QR 和六位數程式碼 。
+                    </p>
+                  </div>
+                </div>
+                <div class="tstep">
+                  <div class="rail"><span class="num">4</span><span class="line"></span></div>
+                  <div class="body">
+                    <h4>用密碼或 QR 驗證電話</h4>
+                    <p>
+                      選擇家 → 以其他方式連線 → 加入 QR 或配對程式碼。 輸入數字程式碼中的六位數字並選擇連線, 或使用 Scan QR 程式碼 → 開放相機來掃描 PC 的 QR。 選擇一個方法 。
+                    </p>
+                  </div>
+                </div>
+                <div class="tstep">
+                  <div class="rail"><span class="num">5</span><span class="line"></span></div>
+                  <div class="body">
+                    <h4>檢查已註冊的 PC 和連線狀態</h4>
+                    <p>
+                      確認 PC 在手機的家用螢幕下出現。 已登記的裝置並不每次都需要此認證 。
+                    </p>
+                  </div>
+                </div>
+                <div class="tstep">
+                  <div class="rail"><span class="num">6</span></div>
+                  <div class="body">
+                    <h4>設定電話位置, 將滑鼠移過</h4>
+                    <p>
+                      將手機位置匹配到手機的實際位置, 然後將滑鼠移動到 <b>設定遊標專案通道</b> 如果通道很窄,先試一下邊緣的中部
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <details class="fold pairing-screens">
+                <summary>
+                  <span>參觀目前的應用程式對對螢幕</span
+                  ><small>顯示 PC 程式碼 → 在您的手機上加入 PC → 選擇程式碼或 QR</small>
+                </summary>
+                <div class="fold-body">
+                  <div class="pairing-gallery">
+                    <figure class="pairing-shot pairing-shot-pc">
+                      <a href="../assets/pairing/pc-code-en.webp" target="_blank" rel="noopener">
+                        <img
+                          src="../assets/pairing/pc-code-en.webp"
+                          alt="1. 顯示 PC 的 QR 和配對程式碼: 裝置 → 連線 QR 和編碼的其他方式"
+                          width="888"
+                          height="742"
+                          loading="lazy"
+                        />
+                      </a>
+                      <figcaption>
+                        <b>1. 顯示 PC QR 和配對程式碼</b
+                        ><span>此 PC 的 QR 程式碼的連線方式</span>
+                      </figcaption>
+                    </figure>
+                    <figure class="pairing-shot pairing-overview-shot">
+                      <a
+                        href="../assets/pairing/android-other-en.webp"
+                        target="_blank"
+                        rel="noopener"
+                      >
+                        <img
+                          src="../assets/pairing/android-other-en.webp"
+                          alt="2. 在您的手機上加入 PC: 家 – 連線的其他方式 – 加入 QR 或配對程式碼"
+                          width="1080"
+                          height="2400"
+                          loading="lazy"
+                        />
+                      </a>
+                      <figcaption>
+                        <b>2. 在您的手機上加入 PC</b
+                        ><span>家 → 其他連線方式 + 加入 QR 或配對程式碼</span>
+                      </figcaption>
+                    </figure>
+                    <figure class="pairing-shot pairing-dialog-shot">
+                      <a
+                        href="../assets/pairing/android-code-en.webp"
+                        target="_blank"
+                        rel="noopener"
+                      >
+                        <img
+                          src="../assets/pairing/android-code-en.webp"
+                          alt="3. 用數字程式碼連線:在數字程式碼分頁中,輸入 PC 的 6 位數字並選擇連線 。"
+                          width="1080"
+                          height="2400"
+                          loading="lazy"
+                        />
+                      </a>
+                      <figcaption>
+                        <b>3. 連線數字程式碼</b
+                        ><span
+                          >在數字程式碼分頁中, 輸入 PC 的 6 位數字並選擇連線 。</span
+                        >
+                      </figcaption>
+                    </figure>
+                    <figure class="pairing-shot pairing-dialog-shot">
+                      <a href="../assets/pairing/android-qr-en.webp" target="_blank" rel="noopener">
+                        <img
+                          src="../assets/pairing/android-qr-en.webp"
+                          alt="或用 QR 程式碼連線 : 選擇 Scan QR 程式碼 → 開放相機並掃描 PC 的 QR。 使用數字程式碼或 QR , 而不是雙用 。"
+                          width="1080"
+                          height="2400"
+                          loading="lazy"
+                        />
+                      </a>
+                      <figcaption>
+                        <b>或與 QR 碼連線</b
+                        ><span
+                          >選擇掃描 QR 碼 → 開放相機並掃描 PC 的 QR。 使用數碼或 QR 而不是兩樣 。</span
+                        >
+                      </figcaption>
+                    </figure>
+                  </div>
+                  <p class="pairing-example-note">
+                    用例裝置和程式碼抓取的實際應用程式螢幕。 連線時使用您自己的 PC 應用程式中顯示的程式碼或QR 。 請選擇一個影像來完整檢視它 。
+                  </p>
+                </div>
+              </details>
+            </section>
+            <section
+              class="connection-panel"
+              id="connect-bluetooth"
+              data-connection-panel="bluetooth"
+            >
+              <h3>在沒有路由器的情況下連線藍芽</h3>
+              <p>Bluetooth 在β。 不需要 Wi- Fi、 Google 簽署、 QR 碼或配對碼 。</p>
+              <ol class="connection-steps">
+                <li>啟動兩套裝置的藍芽。 在 Android OneMouse 設定中, 敲擊 <strong>啟動藍芽模式</strong>。在 Android 12 上或以後, 如果被啟動, 請允許近旁裝置。 開啟 OneMouse 存取功能, 供點選與輸入 。</li>
+                <li>在 Windows 藍芽設定中對話一次 。</li>
+                <li>在 Windows 的 OneMouse 中,開啟 <strong>裝置 → 連線的其他方式 → 藍芽</strong> 開啟您的手機接線開關。 一旦連線, 便安排裝置, 將遊標移到另一邊 。</li>
+              </ol>
+              <p class="connection-note">
+                這些步數是為 Windows QQ Android 的。 Bluetooth 不攜帶遠端影片。 要檢視您的手機上的 PC 螢幕, 請使用 Wi- Fi/ LAN 或支援的帳號連線 。
+              </p>
+              <a class="text-link" href="#bluetooth">藍芽設定與詳細的步徑 ^</a>
+            </section>
+          </div>
+          <p class="connection-followup">
+            輸入許可權: Android 設定 → 存取 → 安裝的應用程式(或下載的應用程式) → OneMouse.
+            <a class="text-link" href="./help#cursor-not-crossing"
+              >接觸過,但老鼠不會過河?</a
+            >
+          </p>
+        </div>
+      </section>
+
+      <!-- POSITION -->
+      <section class="section-alt" id="position">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">電話位置</p>
+            <h2 class="sec">
+              接通之後把你的手機位置和它真正的位置匹配一下
+            </h2>
+          </div>
+          <p class="sec-lead" style="max-width: 60ch">
+            將每個裝置拖曳到安排螢幕中的真正位置。 Cross through the control <b>遊標輸入通道</b> 通道可能只覆蓋其中的一部分。
+          </p>
+          <details class="fold">
+            <summary><span>參觀安排螢幕</span></summary>
+            <div class="fold-body">
+              <a href="../assets/pairing/pc-position-en.webp" target="_blank" rel="noopener"
+                ><img
+                  src="../assets/pairing/pc-position-en.webp"
+                  alt="目前 OneMouse 裝置佈局, 列個例 Android 裝置放在 PC 右邊"
+                  width="2240"
+                  height="1800"
+                  loading="lazy"
+                  style="border-radius: 12px"
+              /></a>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <!-- REMOTE CONTROL -->
+      <section id="remote">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="ey">遠端控制</p>
+            <h2 class="sec">從裝置開啟遠端螢幕 。</h2>
+          </div>
+          <div class="split lead-left">
+            <div>
+              <p class="sec-lead" style="margin-bottom: 16px">
+                在裝置中, 敲擊一對Android 的列上的遙控圖示, 並開啟一個顯示手機螢幕的獨立視窗。 您第一次開啟時, Android 螢幕需要獲得批准 。
+              </p>
+              <div class="panel">
+                <h3>Android 視窗中的控制</h3>
+                <ul>
+                  <li>左鍵拖動輪子直接透過</li>
+                  <li><b>右鍵 = 後</b>, <b>輪點選 = 家</b>.</li>
+                  <li>
+                    您的 PC 鍵盤( 包括 IME 和非拉丁語的輸入) , 直接輸入手機目前的文字欄位 。
+                  </li>
+                  <li>
+                    如果螢幕看起來是空白的, 請檢查抓取批准彈出並關閉遙控器, 一次又一次地關閉 。
+                  </li>
+                </ul>
+              </div>
+              <div class="panel tip" style="margin-top: 18px">
+                <h3 id="windows-remote">在 Windows 遠端視窗中拖曳的右鍵</h3>
+                <p>
+                  從裝置的遠端控制圖示中開啟視窗或預設
+                  <b>Ctrl+ Alt+Shift+1~9</b>。右鍵拖曳工作,在目標的 PC 瀏覽器中配置手勢延伸,與Android 手勢相隔。
+                </p>
+                <p>
+                  <a href="./help#windows-remote-gestures-faq">遠端視窗說明</a>
+                </p>
+              </div>
+            </div>
+            <div>
+              <details class="fold" open>
+                <summary><span>裝置列與圖示</span></summary>
+                <div class="fold-body">
+                  <a
+                    href="../assets/guide_remote_control_devices.jpg"
+                    target="_blank"
+                    rel="noopener"
+                    ><img
+                      src="../assets/guide_remote_control_devices.jpg"
+                      alt="裝置中的遙控圖示"
+                      loading="lazy"
+                      style="border-radius: 12px"
+                  /></a>
+                </div>
+              </details>
+              <details class="fold">
+                <summary><span>開啟的遙控視窗</span></summary>
+                <div class="fold-body">
+                  <a
+                    href="../assets/guide_mobile_remote_control_window.jpg"
+                    target="_blank"
+                    rel="noopener"
+                    ><img
+                      src="../assets/guide_mobile_remote_control_window.jpg"
+                      alt="開啟的手機遙控視窗"
+                      loading="lazy"
+                      style="border-radius: 12px"
+                  /></a>
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MOBILE TO PC REMOTE CONTROL -->
+      <section class="section-alt" id="mobile-pc-remote">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="ey">Android – 視窗</p>
+            <h2 class="sec">從手機上開啟控制您的電腦螢幕</h2>
+            <p class="sec-lead">
+              參觀您的 PC 螢幕, 按下觸控, 移動遊標並用您的手機鍵盤輸入。 PC 和 Android 都需要支援此功能的最新應用程式 。
+            </p>
+          </div>
+          <div class="split lead-left">
+            <div>
+              <div class="panel">
+                <h3>開啟遠端螢幕</h3>
+                <ol>
+                  <li>
+                    在 PC 上執行 OneMouse 。 將您的裝置對等到同一個無線網路, 或是使用同一個 Google 帳戶連結它們 。
+                  </li>
+                  <li>在Android的登記PC清單中,選擇 <b>遠端螢幕</b> 那臺PC的</li>
+                  <li>
+                    如果在 PC 上出現了要求, 請選擇 <b>允許</b>。對於自己的手機,你可以選擇 <b>總是允許此裝置</b> 6月30日。
+                  </li>
+                  <li>
+                    連線後, 用觸控來控制螢幕。 用右邊的設定圖示開啟控制面板 。
+                  </li>
+                </ol>
+              </div>
+              <div class="panel" style="margin-top: 18px">
+                <h3>選擇適合您的控制元件</h3>
+                <ul>
+                  <li><b>觸控模式 :</b> 按下要點選的地方,拖曳以移動專案。</li>
+                  <li><b>遊標模式 :</b> 滑動指標並按下按鍵。</li>
+                  <li>
+                    按住按住, 不動, 然後把手指抬到右鍵。 在遊標模式下, 按住並移動到拖曳, 或是雙拖曳並移動, 而握住第二拍 。
+                  </li>
+                  <li>
+                    用兩根手指來縮放 。 1x 移動兩根手指來滾動 PC ; 放大後, 將它們移動到視窗中 。
+                  </li>
+                  <li>
+                    使用 <b>鍵盤</b> 以輸入,或啟用 <b>只檢視</b> 你只想要看。
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div>
+              <figure class="feature-figure">
+                <img
+                  class="feature-visual"
+                  src="../assets/feature-mobile-pc-remote-photo.webp"
+                  alt="從Android 手機控制 Windows PC 的相對現實化用法示例"
+                  width="1536"
+                  height="1024"
+                  loading="lazy"
+                />
+                <figcaption>
+                  AI 產生的用法示例 : 實際介面可能因應用程式版本而不同 。
+                </figcaption>
+              </figure>
+              <div class="panel tip" style="margin-top: 18px">
+                <h3>質量、幀率和斷線</h3>
+                <p>
+                  在控制面板中選擇影像質量和最大幀率。 一個支援活質變更的PC 不重新連線而應用它們。 實際解析度和幀率取決於裝置的效能和網路條件 。
+                </p>
+                <p>
+                  要完成, 使用 <b>控制面板 – 斷線</b>。關閉遠端控制會讓 PC 運作。藍芽連線不帶遠端影片 。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-alt" id="remote-gesture-examples">
+        <div class="wrap gesture-guide" data-animation-playing="false">
+          <div class="gesture-guide-heading">
+            <div>
+              <h3>追隨學習遙控器的動態</h3>
+              <p>
+                這些說明性動畫顯示了遊標模式的基本原理。 這些動畫不是應用程式的錄影 。
+              </p>
+            </div>
+            <button
+              type="button"
+              class="btn btn-sec sm"
+              data-demo-toggle
+              data-play-label="播放示例"
+              data-pause-label="暫停"
+              aria-pressed="false"
+              hidden
+            >
+              播放示例
+            </button>
+          </div>
+          <div class="gesture-demo-grid">
+            <article class="gesture-demo" data-gesture-demo="move">
+              <div class="gesture-stage" aria-hidden="true">
+                <div class="demo-window"><i></i><span></span><span></span></div>
+                <b class="demo-pointer"></b><i class="demo-finger"></i>
+              </div>
+              <h4>1. 移動遊標</h4>
+              <p>
+                滑一指以移指標抬起手指並重新定位以繼續移動
+              </p>
+            </article>
+            <article class="gesture-demo" data-gesture-demo="click">
+              <div class="gesture-stage" aria-hidden="true">
+                <div class="demo-window"><i></i><span></span><span></span></div>
+                <b class="demo-pointer"></b><i class="demo-finger"></i><i class="demo-tap-ring"></i>
+              </div>
+              <h4>2. 點選</h4>
+              <p>
+                把指標移到按鈕上, 再拍一次。 點選會發生在指標上, 而不是手指上 。
+              </p>
+            </article>
+            <article class="gesture-demo" data-gesture-demo="drag">
+              <div class="gesture-stage" aria-hidden="true">
+                <div class="demo-window"><i></i><span></span><span></span></div>
+                <b class="demo-pointer"></b><i class="demo-finger"></i>
+              </div>
+              <h4>3. 拖曳視窗或專案</h4>
+              <p>
+                將指標放在標題列或專案上, 手指不要動, 直到指標變成藍色 。 移動手指拖曳, 然後抬起來丟下專案 。
+              </p>
+            </article>
+            <article class="gesture-demo" data-gesture-demo="scroll">
+              <div class="gesture-stage" aria-hidden="true">
+                <div class="demo-window">
+                  <i></i>
+                  <div class="demo-lines">
+                    <span></span><span></span><span></span><span></span><span></span>
+                  </div>
+                </div>
+                <i class="demo-finger"></i><i class="demo-finger demo-finger-second"></i>
+              </div>
+              <h4>4. 卷片和放大</h4>
+              <p>
+                1× 時, 兩隻手指一起滑動來滾動 PC。 張開兩隻手指來放大; 放大後, 一起移動它們來遮蓋視窗 。
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ANDROID MOUSE GESTURES -->
+      <section id="mouse-gestures">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">Android 滑鼠手勢</p>
+            <h2 class="sec" id="mouse-gestures-title">
+              按住右鍵,畫出航向
+            </h2>
+            <p class="sec-lead">
+              如何啟動手勢、七中風模式和支援限制
+            </p>
+          </div>
+          <div class="panel gesture-setup">
+            <h3>1. 啟動手勢</h3>
+            <p>
+              在設定 → 打字與剪貼簿中, 啟動 Mouse 手勢並選擇應用程式( 預設值 ) 。 PC 和 Android 都需要一個手勢能力版本 。
+            </p>
+            <p>
+              選擇 <b>所有應用程式</b> 在應用程式和家用螢幕上使用手勢。
+              <a href="./help#mouse-gestures-faq">檢查支援限制</a>
+            </p>
+            <h3>2. 按住、抽取、放出</h3>
+            <p>將 PC 指標移到 Android 手機或平板上, 開啟選取的應用程式 。</p>
+            <ol class="gesture-steps">
+              <li>在頁面內容上按住滑鼠右鍵 。</li>
+              <li>按順序畫出方向; 檢查紅色小徑旁的動作 。</li>
+              <li>釋放以執行動作。 畫面時不滾動 。</li>
+            </ol>
+            <p>
+              箭頭和垂直測量表顯示方向和卷動的強度根據中風長度而不是你在頁面上的位置或精確的距離
+            </p>
+          </div>
+          <div class="table-wrap gesture-patterns">
+            <table class="kt gesture-table" aria-labelledby="mouse-gestures-title">
+              <thead>
+                <tr>
+                  <th scope="col">手腕</th>
+                  <th scope="col">動作</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr data-gesture-action="back">
+                  <td><span role="img" aria-label="左">←</span></td>
+                  <td>
+                    <b>退後</b><small>畫到左邊以返回上一頁或螢幕 。</small>
+                  </td>
+                </tr>
+                <tr data-gesture-action="forward">
+                  <td><span role="img" aria-label="好">→</span></td>
+                  <td>
+                    <b>前進</b><small>返回後向右畫到頁面 。</small>
+                  </td>
+                </tr>
+                <tr data-gesture-action="scroll_up">
+                  <td><span role="img" aria-label="上">↑</span></td>
+                  <td>
+                    <b>向上卷</b
+                    ><small
+                      >寫出並放出。 更長的按鍵卷; 短的按鍵卷縮少 。</small
+                    >
+                  </td>
+                </tr>
+                <tr data-gesture-action="scroll_down">
+                  <td><span role="img" aria-label="下">↓</span></td>
+                  <td>
+                    <b>向下滾動</b
+                    ><small
+                      >向下拉放 。 中風卷長點 、 卷短點卷長點 。</small
+                    >
+                  </td>
+                </tr>
+                <tr data-gesture-action="minimize">
+                  <td><span role="img" aria-label="往下,右轉">↓ →</span></td>
+                  <td><b>最小化應用程式</b><small>不關上應用程式就回家去吧</small></td>
+                </tr>
+                <tr data-gesture-action="reload">
+                  <td><span role="img" aria-label="上,下">↑ ↓</span></td>
+                  <td><b>重新載入</b><small>在支援的瀏覽器中重新整理頁面 。</small></td>
+                </tr>
+                <tr data-gesture-action="recents">
+                  <td><span role="img" aria-label="上,右">↑ →</span></td>
+                  <td>
+                    <b>最近的程式</b><small>開啟最近的應用程式清單以選擇另一個應用程式 。</small>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="panel gesture-notes">
+            <h3>如果手勢不起作用的話</h3>
+            <ul>
+              <li>用於直接Android控制,而不是Windows/Mac控制或反射視窗.</li>
+              <li>前進還原瀏覽器歷史 。 前進與重新載入需要瀏覽器支援 。</li>
+              <li>從頁面內容開始。 單擊右鍵會保持它的正常行為 。</li>
+              <li>翻滾距離因應用程式而異; 家和應用程式抽屜只使用一個刷子 。</li>
+            </ul>
+            <p>
+              <a href="./help#mouse-gestures-faq">手術幫助</a> ·
+              <a href="./help#mouse-gestures-scroll">滾動限制和取消</a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- FILES -->
+      <section class="section-alt" id="files">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="ey">檔案剪貼簿( D)</p>
+            <h2 class="sec">
+              從傳輸螢幕、 快丟區或桌面到桌面拖曳傳送檔案 。
+            </h2>
+          </div>
+          <div class="split lead-left">
+            <div>
+              <ul class="panel" style="list-style: none; padding-left: 22px">
+                <li style="margin: 0 0 8px">
+                  丟棄檔案到 <b>傳輸螢幕</b> 或小 <b>投放區域</b> 將它們傳送至選取的Android、Windows PC或Mac。
+                </li>
+                <li style="margin: 8px 0">
+                  <b>在區域網上視窗對視窗或視窗對視窗對視窗</b>: 持有檔案, 拖過排列的螢幕邊界, 將檔案扔到目標上 。
+                </li>
+                <li style="margin: 8px 0">
+                  <a class="text-link" href="#text-to-pc">從 Android 傳送至 PC</a>
+                </li>
+                <li style="margin: 8px 0 0">
+                  如果它不啟動, 請檢查連線狀態與選取的裝置 。
+                </li>
+              </ul>
+            </div>
+            <div>
+              <div class="panel tip">
+                <h3>快速投放區域</h3>
+                <ul>
+                  <li>按 <b>Ctrl+ Alt+D</b> 以隱藏或顯示空降區域。</li>
+                  <li>其位置和狀態儲存在 PC 應用程式中 。</li>
+                </ul>
+              </div>
+              <details class="fold">
+                <summary><span>快速投放區域螢幕</span></summary>
+                <div class="fold-body">
+                  <a href="../assets/guide_quick_drop_send.png" target="_blank" rel="noopener"
+                    ><img
+                      src="../assets/guide_quick_drop_send.png"
+                      alt="以快速丟棄區域傳送檔案"
+                      loading="lazy"
+                      style="border-radius: 12px"
+                  /></a>
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SCREENSHOT CAPTURE AND SHARING -->
+      <section id="screenshots">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="ey">抓取並傳送截圖( S)</p>
+            <h2 class="sec">抓住你需要的東西把它送到你需要的地方</h2>
+            <p class="sec-lead">
+              抓取您的 PC 或您正在控制的裝置 。 從預覽中複製或儲存結果, 或是送至相關裝置的剪貼簿 。
+            </p>
+          </div>
+          <div class="split lead-left">
+            <div>
+              <div class="panel">
+                <h3>抓好並逐步傳送</h3>
+                <ol>
+                  <li>
+                    按預設值 <b>Ctrl+ Alt+S 中</b> Windows 中的捷徑。 如果您正在控制其它裝置, 請抓取此裝置; 否則, 抓取您的 PC 。
+                  </li>
+                  <li>拖曳以選擇區域或選擇區域 <b>全屏</b> 從工具列中。</li>
+                  <li>
+                    在 PC 上的小預覽中, 選擇 <b>複製</b> 或 <b>儲存</b>。要使用其他裝置上的影像,請選擇 <b>傳送</b> 並選擇接收裝置。
+                  </li>
+                  <li>
+                    在接收裝置上, 貼上影像到一個支援影像貼上影像的應用程式中 。
+                  </li>
+                </ol>
+                <p>
+                  如果您改變了捷徑, 請使用您設定的金鑰。 在選擇區域時,
+                  <b>Esc</b> 或取消不傳送影像的選擇區。
+                </p>
+              </div>
+            </div>
+            <figure class="feature-figure">
+              <img
+                class="feature-visual"
+                src="../assets/feature-screenshot-share-photo.webp"
+                alt="PC 截圖預覽和Android手機接收同樣影像的相片現實用例"
+                width="1536"
+                height="1024"
+                loading="lazy"
+              />
+              <figcaption>
+                AI 產生的用法示例 : 實際介面可能因應用程式版本而不同 。
+              </figcaption>
+            </figure>
+          </div>
+          <div class="panel tip" style="margin-top: 18px">
+            <h3>檢查連線與許可權</h3>
+            <ul>
+              <li>
+                <b>傳送影像需要 Wi-Fi/ LAN</b> 及兩種應用程式中的支援。 只在藍芽上連線的裝置無法接收此傳輸 。
+              </li>
+              <li>
+                抓取Android螢幕需要
+                <b>Android 11 或稍晚及存取許可權</b>。抓取 Mac 螢幕需要螢幕錄制許可權。 保護螢幕可能無法抓取 。
+              </li>
+              <li>
+                Android 上, 使用支援影像貼件的應用程式。 接收影像並非自動貼件或儲存到畫廊 。
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- MOBILE TO PC -->
+      <section id="text-to-pc">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="ey">手機到 PC</p>
+            <h2 class="sec">將檔案及選取的文字從您的手機傳送至您的 PC 。</h2>
+            <p class="sec-lead">
+              區域網轉移時,選擇 <b>預設的 PC</b> 使用 mobile 應用程式的家用螢幕, 檢查它是否對對並連線。 從傳輸分頁或 Android 的共享選單中傳送檔案, 將文字從 OneMouse 傳送至選取選單中的 PC 。
+            </p>
+          </div>
+          <div class="split lead-left">
+            <div class="panel">
+              <h3>傳送檔案</h3>
+              <ol>
+                <li>
+                  在手機應用程式裡 <b>傳輸</b> 分頁, 踢踏 <b>選擇檔案並傳送至 PC</b>.
+                </li>
+                <li>選擇檔案並傳送至目前選取的 PC 。</li>
+                <li>
+                  您也可以從相片或檔案應用程式中選擇 <b>分享</b> 並選擇 OneMouse 。
+                </li>
+              </ol>
+            </div>
+            <div class="panel">
+              <h3>傳送文字</h3>
+              <ol>
+                <li>Android 的長壓文字, 選擇它, 然後開啟 <b>更多</b>.</li>
+                <li>磁帶 <b>OneMouse 傳送至電腦</b> 複製到 PC 剪貼簿。</li>
+                <li>
+                  如果它第一次失蹤, 請在應用程式管理中啟動 OneMouse, 然後再次選擇它 。
+                </li>
+              </ol>
+            </div>
+          </div>
+          <div class="panel tip" style="margin-top: 18px">
+            <h3 id="file-receive-folder">在 PC 上尋找已接收的檔案</h3>
+            <p>
+              在PC中 <b>設定 → 一般 → 檔案傳輸 → 收到檔案位置</b>使用
+              <b>變更資料夾</b> 選擇目的地和 <b>開啟資料夾</b> 以檢視它。此功能既可以在主機,也可以在子機上使用。
+            </p>
+            <p>
+              <a href="./help#file-receive-folder-faq">資料夾設定與排除故障</a>
+            </p>
+          </div>
+          <details class="fold">
+            <summary>
+              <span>參觀文字轉換螢幕</span
+              ><small>如何從Android的選單中啟用並使用 OneMouse 到 PC 。</small>
+            </summary>
+            <div
+              class="fold-body"
+              style="
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 12px;
+              "
+            >
+              <figure>
+                <img
+                  src="../assets/text_to_pc_step_1.jpg"
+                  alt="選擇文字並開啟更多選單"
+                  loading="lazy"
+                  style="border-radius: 12px"
+                />
+                <figcaption>1. 選取文字</figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="../assets/text_to_pc_step_2.jpg"
+                  alt="從文字選單中開啟應用程式管理"
+                  loading="lazy"
+                  style="border-radius: 12px"
+                />
+                <figcaption>2. 開放應用程式管理</figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="../assets/text_to_pc_step_3.jpg"
+                  alt="在應用程式管理中啟動 OneMouse"
+                  loading="lazy"
+                  style="border-radius: 12px"
+                />
+                <figcaption>3. 開啟 " 一模一樣 "</figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="../assets/text_to_pc_step_4.jpg"
+                  alt="從更多選單中選擇 OneMouse 到 PC"
+                  loading="lazy"
+                  style="border-radius: 12px"
+                />
+                <figcaption>4. 送到個人計算機</figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="../assets/text_to_pc_step_5.jpg"
+                  alt="文字已成功傳送至 PC 剪貼簿"
+                  loading="lazy"
+                  style="border-radius: 12px"
+                />
+                <figcaption>5. 在PC上貼上</figcaption>
+              </figure>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <!-- NOTIFICATIONS -->
+      <section class="section-alt" id="notifications">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">通知和答覆</p>
+            <h2 class="sec">支援時讀取電話通知及回覆 。</h2>
+          </div>
+          <div class="split">
+            <div class="panel">
+              <h3>接收通知並檢視歷史</h3>
+              <p>
+                在Android應用程式中, 啟用 <b>傳送通知到 PC</b>,允許通知存取,並選擇接觸的應用程式。在主機上,可以在
+                <b>設定 − 通知</b>.
+              </p>
+              <p>
+                同樣的螢幕顯示歷史與保留設定值 。
+                <a href="./help#phone-notifications">更多通知</a>
+              </p>
+            </div>
+            <div class="panel">
+              <h3>活性通知的答覆</h3>
+              <p>
+                <b>答覆</b> 當 PC 和 Android 支援回覆和手機通知原件提供自由文字回覆時會出現。輸入您的回覆並選擇 <b>傳送</b> 或
+                <b>Ctrl+ 輸入</b> 透過原手機應用程式傳送( S)<b>Enter</b> 新增換行符).
+              </p>
+              <p><a href="./help#notification-reply-faq">沒有回覆按鈕, 還是沒有發回?</a></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- QUICK CONNECT -->
+      <section id="quick">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">數字捷徑</p>
+            <h2 class="sec">立即連線您的裝置清單中的號碼 。</h2>
+          </div>
+          <div class="split">
+            <div class="panel">
+              <h3>Ctrl + Alt + 1~9</h3>
+              <ul>
+                <li>
+                  預設情況下, 主 PC 裝置清單中的前 9 個 LAN 裝置會得到
+                  <b>Ctrl+ Alt+1~9 中</b>。 <a href="#shortcuts">捷徑設定值</a> 以變更按鍵。
+                </li>
+                <li>按下數字來連線那個裝置 。</li>
+                <li>
+                  重按相同的號碼來放出您目前控制的裝置的輸入控制 。
+                </li>
+              </ul>
+            </div>
+            <div class="panel tip">
+              <h3>自動重連線</h3>
+              <ul>
+                <li>
+                  當 PC 應用程式啟動時, 當您的最後裝置重新出現或只有一個裝置準備好時, 便會自動連線 。
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="panel tip" style="margin-top: 18px">
+            <h3 id="device-order">變更裝置排序與捷徑數字</h3>
+            <p>
+              主 PC 上至少有兩個區域網裝置, 請選擇 <b>裝置 − 編輯命令</b>。拖曳手柄或使用 XQ/%; 變更自動儲存, 然後選擇 <b>完成</b>。連線與遠端視窗捷徑數字遵循相同的順序。
+            </p>
+            <p>
+              <a href="./help#device-order-faq">找不到編輯命令嗎 ?</a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- BLUETOOTH -->
+      <section class="section-alt" id="bluetooth">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="ey">Bluetooth</p>
+            <h2 class="sec">您也可以在藍芽上連線, 沒有路由器 。</h2>
+            <p class="sec-lead">
+              Bluetooth 在β。 不需要 Wi- Fi、 Google 簽署、 QR 碼或配對碼 。<br>
+              Windows_Android和Windows可以直接在藍芽上交換輸入、剪貼簿和檔案。
+            </p>
+          </div>
+          <div class="split lead-left">
+            <div>
+              <div class="panel" style="margin-bottom: 14px">
+                <h3>好,當</h3>
+                <ul>
+                  <li>你在一間房間室外或是一輛沒有同用無線電的車裡</li>
+                  <li>客人 Wi- Fi 或防火牆區塊裝置的發現</li>
+                  <li>你主要做輕鍵盤和剪貼簿的工作</li>
+                </ul>
+              </div>
+              <div class="panel tip">
+                <h3>很高興知道</h3>
+                <ul>
+                  <li>藍芽不帶遠端影片。</li>
+                  <li>
+                    Mac Bluetooth 是 beta( 在應用程式設定中可以使用; 預設關閉 ) 。 LAN 被正式支援, 而 Mac 螢幕/ 視窗共享只使用 LAN 。
+                  </li>
+                </ul>
+                <p>
+                  <a class="text-link" href="/zh-tw/help#bluetooth-help">藍芽故障檢查</a>
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="panel">
+                <h3>連線命令</h3>
+                <div class="timeline" style="margin-top: 8px">
+                  <div class="tstep">
+                    <div class="rail"><span class="num">1</span><span class="line"></span></div>
+                    <div class="body" style="padding-bottom: 14px">
+                      <h4>在兩套裝置上啟動藍芽。 在Android OneMouse設定中, 啟動藍芽模式。 在Android 12 或以後, 如果被啟動, 請允許近旁裝置。 開啟 OneMouse 存取功能, 供點選與輸入 。</h4>
+                    </div>
+                  </div>
+                  <div class="tstep">
+                    <div class="rail"><span class="num">2</span><span class="line"></span></div>
+                    <div class="body" style="padding-bottom: 14px">
+                      <h4>在 Windows 藍芽設定中對話一次 。</h4>
+                    </div>
+                  </div>
+                  <div class="tstep">
+                    <div class="rail"><span class="num">3</span><span class="line"></span></div>
+                    <div class="body" style="padding-bottom: 14px">
+                      <h4>在 OneMouse for Windows 中, 開啟裝置 + 以其他方式連線 + 藍芽並開啟您的手機的連線開關。 一旦連線, 便安排裝置, 將遊標移過 。</h4>
+                    </div>
+                  </div>
+                  <div class="tstep">
+                    <div class="rail"><span class="num">4</span></div>
+                    <div class="body" style="padding-bottom: 0">
+                      <h4>藍芽不帶遠端影片。</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <details class="fold">
+                <summary><span>藍芽目標裝置螢幕</span></summary>
+                <div class="fold-body">
+                  <a href="../assets/guide_bt_sub_devices.png" target="_blank" rel="noopener"
+                    ><img
+                      src="../assets/guide_bt_sub_devices.png"
+                      alt="藍芽目標裝置清單"
+                      loading="lazy"
+                      style="border-radius: 12px"
+                  /></a>
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PC TO PC -->
+      <section id="pcpc">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="ey">另一臺PC</p>
+            <h2 class="sec">連線另一臺 Windows PC: 裝置、 連線、 然後安排 。</h2>
+          </div>
+          <div class="split lead-left">
+            <div>
+              <div class="panel">
+                <h3>連線中</h3>
+                <ul>
+                  <li>
+                    在 Windows 的 PC 上執行 OneMouse 。 簽署到相同的 Google 帳戶, 或是將兩臺 PC 放在相同的網路上, 供區域網配對 。
+                  </li>
+                  <li>
+                    區域網,開放 <b>裝置管理 – 連線的其他方式</b> 在控制 PC 上, 選擇其他 Windows PC , 輸入其 6 位碼並選擇
+                    <b>平面</b>找到其他 PC 的程式碼
+                    <b>裝置管理 → 連線 QR &amp; 程式碼的其他方式</b>區域網配對不需要簽名
+                  </li>
+                  <li>
+                    檢查已登記的 PC 的連線狀態並開啟 <b>連線</b> 。如果需要,那麼把它放在排版編輯器中,以匹配其物理位置。
+                  </li>
+                  <li>
+                    將滑鼠移到那個方向以控制其他的 PC, 並且拖曳到邊界以換取檔案 。
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div>
+              <details class="fold" open>
+                <summary><span>配對和安排螢幕</span></summary>
+                <div class="fold-body">
+                  <figure class="feature-figure" style="margin-bottom: 18px">
+                    <a href="../assets/pairing/pc-peer-en.webp" target="_blank" rel="noopener"
+                      ><img
+                        src="../assets/pairing/pc-peer-en.webp"
+                        alt="目前其他將螢幕與其他 Windows PC 的六位數配對碼連線的方法"
+                        width="2240"
+                        height="1800"
+                        loading="lazy"
+                        style="border-radius: 12px"
+                    /></a>
+                    <figcaption>
+                      1. 輸入其他 PC 的六位數碼並選擇對等。 程式碼和裝置名稱就是例子 。
+                    </figcaption>
+                  </figure>
+                  <figure class="feature-figure">
+                    <a
+                      href="../assets/pairing/pc-peer-position-en.webp"
+                      target="_blank"
+                      rel="noopener"
+                      ><img
+                        src="../assets/pairing/pc-peer-position-en.webp"
+                        alt="目前裝置管理螢幕安排連線的 Windows PC"
+                        width="2240"
+                        height="1800"
+                        loading="lazy"
+                        style="border-radius: 12px"
+                    /></a>
+                    <figcaption>
+                      2. 檢查連線器,然後安排另一臺PC以匹配其物理位置.
+                    </figcaption>
+                  </figure>
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MAC -->
+      <section class="section-alt" id="mac">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="ey">Mac 公共支助</p>
+            <h2 class="sec">從 Windows 連線 Apple Silicon Mac 執行 macOS 13+ 。</h2>
+            <p class="sec-lead">
+              在 Mac 上安裝公開的 DMG, 然後從 OneMouse 開始並管理 Windows 上的 LAN 連線。 跟著這五步 。
+            </p>
+          </div>
+          <div class="split lead-left">
+            <div class="timeline">
+              <div class="tstep">
+                <div class="rail"><span class="num">1</span><span class="line"></span></div>
+                <div class="body">
+                  <h4>將 Windows 和 Mac 放到同一個本地網路</h4>
+                  <p>
+                    在 Windows 10/11 和 Mac 上執行 OneMouse , 兩臺電腦都連線到相同的 Wi- Fi 或 LAN。 連線從 Windows 開始並管理 。
+                  </p>
+                </div>
+              </div>
+              <div class="tstep">
+                <div class="rail"><span class="num">2</span><span class="line"></span></div>
+                <div class="body">
+                  <h4>允許 Mac 許可權</h4>
+                  <p>
+                    允許 <b>輔助使用</b> 因此 Mac 可以執行接收到的滑鼠與鍵盤輸入。 在 macOS 15+ 上, 也允許 <b>本地網路</b> ; macOS 13/14 可能不顯示此專案。
+                  </p>
+                </div>
+              </div>
+              <div class="tstep">
+                <div class="rail"><span class="num">3</span><span class="line"></span></div>
+                <div class="body">
+                  <h4>在視窗中選擇 Mac</h4>
+                  <p>在 Windows 應用程式中開啟裝置, 並選擇已檢測到的 Mac 。</p>
+                </div>
+              </div>
+              <div class="tstep">
+                <div class="rail"><span class="num">4</span><span class="line"></span></div>
+                <div class="body">
+                  <h4>輸入 Mac 的 6 位碼</h4>
+                  <p>
+                    在 Windows 中輸入 Mac 顯示的 6 位元配對碼, 然後確認配對 。
+                  </p>
+                </div>
+              </div>
+              <div class="tstep">
+                <div class="rail"><span class="num">5</span></div>
+                <div class="body">
+                  <h4>安排 Mac 和交叉</h4>
+                  <p>
+                    將 Mac 放在安排編輯器中的 Windows 顯示處。 將遊標移過邊緣, 以控制它, 並以雙向換取檔案與剪貼簿內容 。
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="panel tip">
+                <h3>可選擇的 LAN 螢幕分享</h3>
+                <p>
+                  只能當您選擇從 Windows 檢視或控制 Mac 顯示時, 才需要螢幕與系統音效錄音許可權。 OneMouse 不捕捉系統音效 。
+                </p>
+              </div>
+              <div class="panel" style="margin-top: 14px">
+                <h3>麥克藍芽</h3>
+                <p>
+                  Mac Bluetooth 以β形式提供: 在 Mac 應用程式設定中啟用它( 預設關閉 ) 。 LAN 仍然是官方支援的路徑, 螢幕或視窗共享只使用 LAN 。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PERMISSIONS (short summary + link) -->
+      <section id="permissions">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">許可權</p>
+            <h2 class="sec">每個平臺只要求其功能需要的許可權 。</h2>
+            <p class="sec-lead">
+              Android 輸入需要存取服務; Mac 輸入需要存取。 檢視 Android 或 Mac 遠端螢幕, 也需要螢幕捕捉或錄制批准 。
+            </p>
+          </div>
+          <div style="margin-top: 18px">
+            <a class="btn btn-sec sm" href="./technical#permissions"
+              >詳細參考平臺許可權</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- SHORTCUTS -->
+      <span id="keyboard-shortcuts" aria-hidden="true"></span>
+      <section id="shortcuts">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <h2 class="sec">鍵盤捷徑及何時適用 。</h2>
+            <p class="sec-lead">
+              這些 PC 捷徑是預設的 。 在 PC 設定 → 捷徑中, 您可以變更每個組合, 關閉單一動作, 或是禁用所有捷徑。 如果您已變更, 請使用您已儲存的組合 。
+            </p>
+          </div>
+          <h3 id="pc-shortcuts-title">Windows 應用程式預設</h3>
+          <div class="table-wrap">
+            <table class="kt" aria-labelledby="pc-shortcuts-title">
+              <thead>
+                <tr>
+                  <th scope="col">預設捷徑</th>
+                  <th scope="col">動作和條件</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>1~9</kbd></td>
+                  <td>
+                    主 PC: 將輸入控制與清單中的匹配裝置連線。 再按相同的數字來放出您目前控制的裝置 。
+                  </td>
+                </tr>
+                <tr id="shortcuts-next-release" data-shortcut-action="remote-window">
+                  <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>1~9</kbd></td>
+                  <td>
+                    主 PC: 開啟相對的遠端視窗或將已存在的視窗帶往前。 再按一次就不會關閉視窗。 它會使用相同的區域網裝置編號來做連線捷徑; 藍芽裝置不在編號中 。
+                  </td>
+                </tr>
+                <tr>
+                  <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>D</kbd></td>
+                  <td>顯示/ 隱藏快速丟棄區域 。</td>
+                </tr>
+                <tr>
+                  <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>S</kbd></td>
+                  <td>
+                    選擇您在主 PC 上控制和接收的 Windows PC 、 Mac 或 Android 裝置的區域。 沒有遙控裝置, 請抓取此 PC。 兩個應用程式必須支援此功能, 目標需要抓取許可權 。
+                  </td>
+                </tr>
+                <tr>
+                  <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>V</kbd></td>
+                  <td>
+                    主 PC: 在 PC 上可以看到其電話通知時, 複製檢查碼。 請先開啟電話通知中繼器 。
+                  </td>
+                </tr>
+                <tr>
+                  <td><kbd>Ctrl</kbd>+<kbd>V</kbd></td>
+                  <td>
+                    接收並貼上其他 PC 上覆制的共享檔案。 沒有等待共享檔案, 一般的貼子仍然可用 。
+                  </td>
+                </tr>
+                <tr>
+                  <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Backspace</kbd></td>
+                  <td>
+                    主 PC : 立即將遊標傳回您自己的監控器中心, 同時控制另一個裝置 。
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 id="android-shortcuts-title">直接控制Android</h3>
+          <p>
+            這些是送至Android的輸入組合, 從上面的 PC 應用程式捷徑設定中分開。 文字編輯依賴於目標應用程式和文字欄位的支援 。
+          </p>
+          <div class="table-wrap">
+            <table class="kt" aria-labelledby="android-shortcuts-title">
+              <thead>
+                <tr>
+                  <th scope="col">預設捷徑</th>
+                  <th scope="col">動作和條件</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><kbd>PrintScreen</kbd></td>
+                  <td>
+                    Android 11+: 在直接控制時抓取手機螢幕並傳送至PC. 需要存取許可權.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>↑</kbd> /
+                    <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>↓</kbd>
+                  </td>
+                  <td>
+                    提高/ 降低Android 螢幕亮度。 需要許可權才能修改系統設定 。
+                  </td>
+                </tr>
+                <tr>
+                  <td><kbd>Alt</kbd>+<kbd>↑</kbd> / <kbd>Alt</kbd>+<kbd>↓</kbd></td>
+                  <td>提升/ 降低Android 媒體音量 。</td>
+                </tr>
+                <tr>
+                  <td>
+                    <kbd>Alt</kbd>+<kbd>Tab</kbd> / <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>Tab</kbd>
+                  </td>
+                  <td>
+                    將最近的應用程式 / 週期反轉切換。 釋放 Alt 以輸入選取的應用程式 。
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <kbd>Ctrl</kbd>+<kbd>A</kbd> / <kbd>Ctrl</kbd>+<kbd>C</kbd> /
+                    <kbd>Ctrl</kbd>+<kbd>X</kbd> / <kbd>Ctrl</kbd>+<kbd>V</kbd>
+                  </td>
+                  <td>選擇支援的文字欄位中所有的 / copy / cut / plose 。</td>
+                </tr>
+                <tr>
+                  <td>
+                    <kbd>Ctrl</kbd>+<kbd>Insert</kbd> / <kbd>Shift</kbd>+<kbd>Insert</kbd> /
+                    <kbd>Shift</kbd>+<kbd>Delete</kbd>
+                  </td>
+                  <td>複製 / 貼上 / 切入支援的文字欄位 。</td>
+                </tr>
+                <tr>
+                  <td><kbd>Ctrl</kbd>+<kbd>Z</kbd></td>
+                  <td>在支援它的應用程式與文字欄位中撤消 。</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="panel">
+            <h3>使用 Windows 鍵盤控制 Mac</h3>
+            <p>
+              預設的 Windows 捷徑對映傳送 Ctrl 做為指令, Alt 做為選擇。 您可以在 Mac app 鍵盤設定中切換到本地 Mac 變更器對映 。 這不意味在以上 Windows 應用程式的捷徑中用 Command 取代 Ctrl 。
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site">
+      <div class="wrap ft">
+        <span>© 2026 OneMouse</span>
+        <a
+          class="ato-badge"
+          href="https://alternativeto.net/software/onemouse/about/?utm_source=badge&amp;utm_medium=referral"
+          target="_blank"
+          rel="noopener"
+          ><img
+            src="https://alternativeto.net/static/badges/badge-compact-color.svg"
+            alt="OneMouse | AlternativeTo"
+            width="171"
+            height="55"
+            loading="lazy"
+        /></a>
+        <span class="links"
+          ><a href="./compare">比較</a><a href="./technical">技術安全( S)</a
+          ><a href="./privacy">隱私權政策</a><a href="./terms">任期</a
+          ><a href="./licenses">開源授權</a></span
+        >
+      </div>
+    </footer>
+  </body>
+</html>

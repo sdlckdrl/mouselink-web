@@ -29,3 +29,35 @@
 /zh/help-reference
   X-Robots-Tag: noindex, follow
 
+# Additional localized reference pages.
+/pt-br/guide-reference
+  X-Robots-Tag: noindex, follow
+
+/pt-br/help-reference
+  X-Robots-Tag: noindex, follow
+
+/de/guide-reference
+  X-Robots-Tag: noindex, follow
+
+/de/help-reference
+  X-Robots-Tag: noindex, follow
+
+/zh-tw/guide-reference
+  X-Robots-Tag: noindex, follow
+
+/zh-tw/help-reference
+  X-Robots-Tag: noindex, follow
+
+/fr/guide-reference
+  X-Robots-Tag: noindex, follow
+
+/fr/help-reference
+  X-Robots-Tag: noindex, follow
+
+/id/guide-reference
+  X-Robots-Tag: noindex, follow
+
+/id/help-reference
+  X-Robots-Tag: noindex, follow
+
+# End additional localized reference pages.

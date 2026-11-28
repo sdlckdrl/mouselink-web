@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hilfe | OneMouse - Android, Windows und Mac Fehlerbehebung</title>
+    <meta
+      name="description"
+      content="Beheben Sie OneMouse-Verbindungen von Windows zu Android, einem anderen Windows-PC oder einem Apple Silicon Mac mit macOS 13+, einschließlich Erkennung, Paarung, Eingabe und Dateiübertragung."
+    />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <link rel="stylesheet" href="../css/onemouse.css" />
+    <link rel="stylesheet" href="../css/guide-help.css" />
+    <script src="../js/guide-help.js" defer></script>
+    <link rel="canonical" href="https://onemouse.pages.dev/en/help" />
+    <link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/help-reference">
+<link rel="alternate" hreflang="en" href="https://onemouse.pages.dev/en/help-reference">
+<link rel="alternate" hreflang="ja" href="https://onemouse.pages.dev/ja/help-reference">
+<link rel="alternate" hreflang="zh" href="https://onemouse.pages.dev/zh/help-reference">
+<link rel="alternate" hreflang="es" href="https://onemouse.pages.dev/es/help-reference">
+<link rel="alternate" hreflang="pt-BR" href="https://onemouse.pages.dev/pt-br/help-reference">
+<link rel="alternate" hreflang="de" href="https://onemouse.pages.dev/de/help-reference">
+<link rel="alternate" hreflang="zh-TW" href="https://onemouse.pages.dev/zh-tw/help-reference">
+<link rel="alternate" hreflang="fr" href="https://onemouse.pages.dev/fr/help-reference">
+<link rel="alternate" hreflang="id" href="https://onemouse.pages.dev/id/help-reference">
+<link rel="alternate" hreflang="x-default" href="https://onemouse.pages.dev/help-reference">
+  <link rel="stylesheet" href="/css/official-language-picker.css?v=1">
+<script src="/js/official-language-picker.js?v=1" defer></script>
+
+<style>
+.return-keys{display:inline-flex;align-items:center;gap:.18rem;white-space:nowrap;vertical-align:middle}
+.return-keys kbd,kbd.return-key{display:inline-block;white-space:nowrap;background:#174c91;color:#fff;border:1px solid #10376b;border-radius:.32rem;padding:.15rem .36rem;font:750 .79rem/1.35 system-ui,sans-serif;box-shadow:0 1px #10376b}
+</style>
+<script>
+(() => {
+  const faqIds = new Set(['faq', 'faq-title', 'faq-connections', 'faq-account-devices', 'connection-drops', 'firewall-help', 'faq-guest-wifi', 'faq-android-input', 'faq-mac-input', 'faq-mac-screen', 'faq-cursor-return', 'screen-sleep', 'bluetooth-help', 'device-order-faq', 'faq-sharing', 'notification-reply-faq', 'default-pc-faq', 'file-receive-folder-faq', 'screenshot-preview-faq', 'faq-gestures', 'windows-remote-gestures-faq', 'mouse-gestures-faq', 'mouse-gestures-history', 'mouse-gestures-minimize', 'mouse-gestures-scroll']);
+  function forwardFAQ() {
+    if (!faqIds.has(location.hash.slice(1))) return;
+    location.replace('/en/help' + location.search + location.hash);
+  }
+  forwardFAQ();
+  window.addEventListener('hashchange', forwardFAQ);
+})();
+</script>
+</head>
+  <body>
+    <header class="site">
+      <div class="wrap hd">
+        <a class="brand" href="./" aria-label="OneMouse-Startseite"><span class="om">OM</span>OneMouse</a>
+        <nav class="nav" aria-label="Hauptverkehrsschifffahrt">
+          <a href="./">Übersicht</a>
+          <a href="./#use">Funktionen</a>
+          <a href="./guide">Führung</a>
+          <a href="./help" class="on">Hilfe</a>
+        </nav>
+        <div class="hd-right">
+          <div class="one-language-select"><label class="one-language-label" for="one-language-picker">Sprache</label><select id="one-language-picker" data-language-picker data-current-language="de" hidden><option value="ko" lang="ko" data-language-route="/help-reference" data-fragments="account-connect-help android-input-help bluetooth-help connection-drops connection-symptoms cursor-not-crossing default-pc-faq device-order-faq faq faq-account-devices faq-android-input faq-connections faq-cursor-return faq-gestures faq-guest-wifi faq-mac-input faq-mac-screen faq-sharing faq-title file-receive-folder-faq firewall-help mac-help mac-input-help mac-screen-help mouse-gestures-faq mouse-gestures-history mouse-gestures-minimize mouse-gestures-scroll notification-history notification-reply-faq order phone-notifications quick-help remote-control-help screen-sleep screenshot-preview-faq windows-remote-gestures-faq">한국어</option><option value="en" lang="en" data-language-route="/en/help-reference" data-fragments="account-connect-help android-input-help bluetooth-help connection-drops connection-symptoms cursor-not-crossing default-pc-faq device-order-faq faq faq-account-devices faq-android-input faq-connections faq-cursor-return faq-gestures faq-guest-wifi faq-mac-input faq-mac-screen faq-sharing faq-title file-receive-folder-faq firewall-help mac mac-input-help mac-screen-help mouse-gestures-faq mouse-gestures-history mouse-gestures-minimize mouse-gestures-scroll notification-history notification-reply-faq order phone-notifications quick-help remote-control-help screen-sleep screenshot-preview-faq windows-remote-gestures-faq">English</option><option value="ja" lang="ja" data-language-route="/ja/help-reference" data-fragments="account-connect-help android-input-help bluetooth-help connection-drops connection-symptoms cursor-not-crossing default-pc-faq device-order-faq faq faq-account-devices faq-android-input faq-connections faq-cursor-return faq-gestures faq-guest-wifi faq-mac-input faq-mac-screen faq-sharing faq-title file-receive-folder-faq firewall-help mac mac-input-help mac-screen-help mouse-gestures-faq mouse-gestures-history mouse-gestures-minimize mouse-gestures-scroll notification-history notification-reply-faq order phone-notifications quick-help remote-control-help screen-sleep screenshot-preview-faq windows-remote-gestures-faq">日本語</option><option value="zh" lang="zh" data-language-route="/zh/help-reference" data-fragments="account-connect-help android-input-help bluetooth-help connection-drops connection-symptoms cursor-not-crossing default-pc-faq device-order-faq faq faq-account-devices faq-android-input faq-connections faq-cursor-return faq-gestures faq-guest-wifi faq-mac-input faq-mac-screen faq-sharing faq-title file-receive-folder-faq firewall-help mac mac-input-help mac-screen-help mouse-gestures-faq mouse-gestures-history mouse-gestures-minimize mouse-gestures-scroll notification-history notification-reply-faq order phone-notifications quick-help remote-control-help screen-sleep screenshot-preview-faq windows-remote-gestures-faq">简体中文</option><option value="es" lang="es" data-language-route="/es/help-reference" data-fragments="account-connect-help android-input-help bluetooth-help connection-drops connection-symptoms cursor-not-crossing default-pc-faq device-order-faq faq faq-account-devices faq-android-input faq-connections faq-cursor-return faq-gestures faq-guest-wifi faq-mac-input faq-mac-screen faq-sharing faq-title file-receive-folder-faq firewall-help mac mac-input-help mac-screen-help mouse-gestures-faq mouse-gestures-history mouse-gestures-minimize mouse-gestures-scroll notification-history notification-reply-faq order phone-notifications quick-help remote-control-help screen-sleep screenshot-preview-faq windows-remote-gestures-faq">Español</option><option value="pt-BR" lang="pt-BR" data-language-route="/pt-br/help-reference" data-fragments="account-connect-help android-input-help bluetooth-help connection-drops connection-symptoms cursor-not-crossing default-pc-faq device-order-faq faq faq-account-devices faq-android-input faq-connections faq-cursor-return faq-gestures faq-guest-wifi faq-mac-input faq-mac-screen faq-sharing faq-title file-receive-folder-faq firewall-help mac mac-input-help mac-screen-help mouse-gestures-faq mouse-gestures-history mouse-gestures-minimize mouse-gestures-scroll notification-history notification-reply-faq order phone-notifications quick-help remote-control-help screen-sleep screenshot-preview-faq windows-remote-gestures-faq">Português (Brasil)</option><option value="de" lang="de" data-language-route="/de/help-reference" data-fragments="account-connect-help android-input-help bluetooth-help connection-drops connection-symptoms cursor-not-crossing default-pc-faq device-order-faq faq faq-account-devices faq-android-input faq-connections faq-cursor-return faq-gestures faq-guest-wifi faq-mac-input faq-mac-screen faq-sharing faq-title file-receive-folder-faq firewall-help mac mac-input-help mac-screen-help mouse-gestures-faq mouse-gestures-history mouse-gestures-minimize mouse-gestures-scroll notification-history notification-reply-faq order phone-notifications quick-help remote-control-help screen-sleep screenshot-preview-faq windows-remote-gestures-faq" selected>Deutsch</option><option value="zh-TW" lang="zh-TW" data-language-route="/zh-tw/help-reference" data-fragments="account-connect-help android-input-help bluetooth-help connection-drops connection-symptoms cursor-not-crossing default-pc-faq device-order-faq faq faq-account-devices faq-android-input faq-connections faq-cursor-return faq-gestures faq-guest-wifi faq-mac-input faq-mac-screen faq-sharing faq-title file-receive-folder-faq firewall-help mac mac-input-help mac-screen-help mouse-gestures-faq mouse-gestures-history mouse-gestures-minimize mouse-gestures-scroll notification-history notification-reply-faq order phone-notifications quick-help remote-control-help screen-sleep screenshot-preview-faq windows-remote-gestures-faq">繁體中文</option><option value="fr" lang="fr" data-language-route="/fr/help-reference" data-fragments="account-connect-help android-input-help bluetooth-help connection-drops connection-symptoms cursor-not-crossing default-pc-faq device-order-faq faq faq-account-devices faq-android-input faq-connections faq-cursor-return faq-gestures faq-guest-wifi faq-mac-input faq-mac-screen faq-sharing faq-title file-receive-folder-faq firewall-help mac mac-input-help mac-screen-help mouse-gestures-faq mouse-gestures-history mouse-gestures-minimize mouse-gestures-scroll notification-history notification-reply-faq order phone-notifications quick-help remote-control-help screen-sleep screenshot-preview-faq windows-remote-gestures-faq">Français</option><option value="id" lang="id" data-language-route="/id/help-reference" data-fragments="account-connect-help android-input-help bluetooth-help connection-drops connection-symptoms cursor-not-crossing default-pc-faq device-order-faq faq faq-account-devices faq-android-input faq-connections faq-cursor-return faq-gestures faq-guest-wifi faq-mac-input faq-mac-screen faq-sharing faq-title file-receive-folder-faq firewall-help mac mac-input-help mac-screen-help mouse-gestures-faq mouse-gestures-history mouse-gestures-minimize mouse-gestures-scroll notification-history notification-reply-faq order phone-notifications quick-help remote-control-help screen-sleep screenshot-preview-faq windows-remote-gestures-faq">Bahasa Indonesia</option></select><noscript><nav class="one-language-fallback" aria-label="Sprache"><a href="/help-reference" lang="ko" hreflang="ko">한국어</a><a href="/en/help-reference" lang="en" hreflang="en">English</a><a href="/ja/help-reference" lang="ja" hreflang="ja">日本語</a><a href="/zh/help-reference" lang="zh" hreflang="zh">简体中文</a><a href="/es/help-reference" lang="es" hreflang="es">Español</a><a href="/pt-br/help-reference" lang="pt-BR" hreflang="pt-BR">Português (Brasil)</a><span lang="de" aria-current="true">Deutsch</span><a href="/zh-tw/help-reference" lang="zh-TW" hreflang="zh-TW">繁體中文</a><a href="/fr/help-reference" lang="fr" hreflang="fr">Français</a><a href="/id/help-reference" lang="id" hreflang="id">Bahasa Indonesia</a></nav></noscript></div>
+          <a class="hd-cta" href="./#get">Download</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="phero wrap narrow">
+        <p class="ey">Hilfe</p>
+        <h1 class="page">Wenn es nicht funktioniert, verengen Sie es Schritt für Schritt.</h1>
+        <p class="lead">
+          Überprüfung <b>Apps → Discovery → Firewall → Pairing → Input</b> in dieser Reihenfolge.
+        </p>
+      </section>
+
+      <!-- 이것부터 -->
+      <section id="quick-help" style="padding-top: 14px">
+        <div class="wrap narrow">
+          <div class="panel tip">
+            <p>
+              Wenn Sie es in den PC-Einstellungen → Verknüpfungen geändert haben, verwenden Sie Ihren gespeicherten Schlüssel. Wenn alle Verknüpfungen oder Notfallrückgaben auf dem Haupt-PC deaktiviert sind, kehren Sie über den Bildschirmrand zurück.
+              <a href="./guide#shortcuts">Siehe Abkürzungen und ihre Bedingungen</a>
+            </p>
+            <h3>Beginnen Sie mit diesen beiden</h3>
+            <ul>
+              <li>
+                <b>Verloren Ihren Cursor?</b> Presse
+                <kbd class="return-key">Ctrl + Alt + Backspace</kbd> und der Cursor kehrt zu Ihrem eigenen PC (Mitte des Monitors) zurück.
+              </li>
+              <li id="android-input-help">
+                <b>Vernetzt, aber Input funktioniert nicht?</b> Der Android Accessibility Service ist möglicherweise deaktiviert oder wurde möglicherweise neu gestartet.
+                <a class="text-link" href="#cursor-not-crossing"
+                  >Überprüfen Sie Zugänglichkeit, Anordnung und die Einfahrtspassage in der Reihenfolge</a
+                >.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-alt" id="connection-symptoms">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">Finden Sie Ihr Symptom</p>
+            <h2 class="sec">Was geschieht jetzt?</h2>
+            <p class="sec-lead">
+              Erweitern Sie das passende Thema und überprüfen Sie jeden Schritt in der Reihenfolge, bevor Sie Ihre Anmeldung oder Paarung löschen.
+            </p>
+          </div>
+          <div class="troubleshoot-list">
+            <details class="troubleshoot-card" id="cursor-not-crossing" data-help-topic>
+              <summary>Verbunden, aber der Cursor wird nicht auf das Telefon bewegt</summary>
+              <ol>
+                <li>
+                  <b>Zugänglichkeit:</b> Überprüfen Sie, ob OneMouse unter Android-Einstellungen → Zugänglichkeit → Installierte Apps (oder heruntergeladene Apps) aktiviert ist. Wenn es aktiviert ist, aber die Eingabe immer noch fehlschlägt, schalten Sie es aus und wieder ein.
+                </li>
+                <li>
+                  <b>Anordnung:</b> Überprüfen Sie, auf welcher Seite des PC-Bildschirms sich das Zielgerät in der Telefonplatzierung befindet. Die Anpassung an die physische Position des Telefons erleichtert die Richtung.
+                </li>
+                <li>
+                  <b>Eingangspassage:</b> Verwenden Sie die konfigurierte Passage an dieser Kante. Wenn sich die Passage in der Mitte befindet, lassen Sie die Bildschirmecken nicht überqueren.
+                  <a class="text-link" href="./guide#position">Siehe den Arrangement Screen</a>
+                </li>
+                <li>
+                  <b>App Versionen:</b> Aktualisieren Sie Windows und Android auf die neuesten öffentlichen Versionen und starten Sie OneMouse auf beiden neu.
+                </li>
+              </ol>
+              <p>
+                Wenn Sie den Cursor verlieren, ist die Standardeinstellung <kbd class="return-key">Ctrl + Alt + Backspace</kbd> Wenn Sie diese Verknüpfung geändert haben, verwenden Sie die gespeicherte Schlüsselkombination.
+              </p>
+            </details>
+            <details class="troubleshoot-card" id="account-connect-help" data-help-topic>
+              <summary>Ein Gerät fehlt in meinem Google-Konto oder wird keine Verbindung herstellen</summary>
+              <ol>
+                <li>
+                  Stellen Sie sicher, dass beide OneMouse-Apps die gleiche Google-Kontoadresse anzeigen, beide Geräte über einen Internetzugang verfügen und beide Apps ausgeführt werden.
+                </li>
+                <li>
+                  Aktualisieren Sie die Geräteliste und verbinden Sie das Zielgerät. Bestätigen Sie jede Anforderung auf dem anderen Gerät.
+                  <a class="text-link" href="./guide#connect-account">Schritte bei der Kontoverbindung</a>
+                </li>
+                <li>
+                  Wenn Sie aufgefordert werden, Ihr Google-Konto erneut zu verifizieren, schließen Sie die Anmeldebestätigung ab. Wenn Sie „Kann keine weiteren Verbindungen herstellen sehen, schließen Sie unbenutzte Fernbildschirme und -verbindungen und versuchen Sie es nach kurzer Wartezeit erneut. Das Entfernen eines Kontogeräts und das Beenden einer Verbindung sind verschiedene Aktionen.
+                </li>
+              </ol>
+              <p>
+                Um eine Verbindung herzustellen, ohne sich auf demselben Wi-Fi anzumelden, wählen Sie
+                <a class="text-link" href="./guide#connect-wifi">QR/Code-Paarung</a>Kontoverbindungen erfordern nicht den gleichen Router.
+              </p>
+            </details>
+            <details class="troubleshoot-card" id="remote-control-help" data-help-topic>
+              <summary>Ich kann den PC-Bildschirm auf meinem Telefon sehen, kann ihn aber nicht kontrollieren</summary>
+              <ol>
+                <li>Prüfen Sie, ob <b>Nur Ansicht</b> ist im Fernbildschirm-Bedienfeld ausgeschaltet.</li>
+                <li>
+                  <b>Berührungsmodus</b> Klicks, wo Sie sich berühren. <b>Cursormodus</b>, schieben Sie Ihren Finger, um den Zeiger zu positionieren, und tippen Sie dann.
+                </li>
+                <li>
+                  Wenn eine Kontrollanforderung auf dem PC erscheint, erlauben Sie sie. Verwenden Sie unterstützte, aktuelle Versionen sowohl unter Windows als auch unter Android. Eine Bluetooth-Verbindung kann Remote-Videos nicht öffnen.
+                </li>
+              </ol>
+              <a class="text-link" href="./guide#remote-gesture-examples"
+                >Siehe Click, Drag &amp; Scroll Beispiele</a
+              >
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- 문제 해결 순서 -->
+      <section id="order">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">Fehlerbehebung</p>
+            <h2 class="sec">Überprüfen Sie einen Schritt nach dem anderen, in dieser Reihenfolge.</h2>
+          </div>
+          <div class="timeline">
+            <div class="tstep">
+              <div class="rail"><span class="num">1</span><span class="line"></span></div>
+              <div class="body">
+                <h4>Befugnisse und Berechtigungen</h4>
+                <p>
+                  Überprüfen Sie, ob beide Apps ausgeführt werden.
+                  <a class="text-link" href="#quick-help">Schnellkontrollen</a>.
+                </p>
+              </div>
+            </div>
+            <div class="tstep">
+              <div class="rail"><span class="num">2</span><span class="line"></span></div>
+              <div class="body">
+                <h4>Überprüfen Sie Ihre gewählte Verbindungsmethode</h4>
+                <p>
+                  <b>QR/Code:</b> Verwenden Sie den gleichen Router und überprüfen Sie die Berechtigungen und die Erkennung des lokalen Netzwerks. <b>Google-Konto:</b> Überprüfen Sie das freigegebene Konto und den Internetzugang auf beiden Geräten. <b>Bluetooth:</b> Überprüfen Sie, ob Bluetooth eingeschaltet, gekoppelt und verbunden ist.
+                </p>
+              </div>
+            </div>
+            <div class="tstep">
+              <div class="rail"><span class="num">3</span><span class="line"></span></div>
+              <div class="body">
+                <h4>Firewall &amp; Isolation</h4>
+                <p>
+                  Für eine Wi-Fi / LAN-Verbindung, wenn das Telefon den PC sehen kann, aber der PC das Telefon nicht sehen kann, kann es ein
+                  <b>Windows Firewall Inbound</b> Problem (ob das Netzwerk auf "Public" oder "Private" eingestellt ist). <b>Kundenisolation</b>.
+                </p>
+              </div>
+            </div>
+            <div class="tstep">
+              <div class="rail"><span class="num">4</span><span class="line"></span></div>
+              <div class="body">
+                <h4>Pairing &amp; Connection</h4>
+                <p>
+                  Überprüfen Sie den Pairing- und Verbindungsstatus in Devices. <a class="text-link" href="./guide#start">Aufstellführung</a>.
+                </p>
+              </div>
+            </div>
+            <div class="tstep">
+              <div class="rail"><span class="num">5</span></div>
+              <div class="body">
+                <h4>Input &amp; Return</h4>
+                <p>
+                  Überprüfen Sie die arrangierte Richtung und die Konfiguration <b>Cursor-Eingangspassage</b>. Folgen Sie dem <a class="text-link" href="#cursor-not-crossing">Eingabeprüfungen</a>Wenn du den Cursor verlierst, siehe <a class="text-link" href="#quick-help">Wie man es zurückbringt</a>.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 파일·클립보드 -->
+      <section class="section-alt">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">Übertragung</p>
+            <h2 class="sec">Wenn Dateien und Zwischenablage nicht durchgehen.</h2>
+          </div>
+          <div class="panel">
+            <ul>
+              <li>
+                Bestätige die <b>Ausgewähltes Gerät</b> ist korrekt - eine Übertragung geht an das Ziel, das Sie ausgewählt haben.
+              </li>
+              <li>
+                Desktop-zu-Desktop-Drag erfordert, dass das Ziel Windows PC oder Mac
+                <b>verbunden und angeordnet</b>Mac Edge Drag verwendet derzeit LAN.
+              </li>
+              <li>
+                Halten Sie die Akte, <b>den angeordneten Siebrand überqueren</b>, und legen Sie es auf das Ziel, um den Transfer zu starten.
+              </li>
+              <li>
+                Wenn die Zwischenablage nicht durchkommt, überprüfen Sie, ob beide Apps verbunden sind und ob ein Bildschirm ausgeschaltet und im Leerlauf ist.
+              </li>
+              <li>Bluetooth ist langsamer als Wi-Fi - senden Sie große Dateien über Wi-Fi.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- PHONE NOTIFICATIONS -->
+      <section id="phone-notifications">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">Telefonische Benachrichtigungen</p>
+            <h2 class="sec">Wenn Telefonbenachrichtigungen nicht auf dem PC angezeigt werden.</h2>
+          </div>
+          <div class="panel">
+            <ul>
+              <li>
+                In der Telefon-App <b>Benachrichtigungen an den PC</b> Einstellungen, einschalten
+                <b>Benachrichtigungen an den PC senden</b> und prüfen Sie, <b>Zugang zu Benachrichtigungen</b> Sagt erlaubt.
+              </li>
+              <li>
+                Überprüfen Sie, ob die App in <b>Apps an den PC senden</b>Die Standardeinstellungen sind Ihre SMS-App und KakaoTalk; Sie können auch alle Apps auswählen.
+              </li>
+              <li>
+                Auf dem Haupt-PC, offen <b>Einstellungen → Benachrichtigungen</b> und stellen sicher,
+                <b>Produktmeldungen</b> ist eingeschaltet.
+              </li>
+              <li>
+                Wenn nur Verifizierungscode-Nachrichten als "versteckt" ankommen, ist das der Schutz von Android 15. <b>Überprüfungscode-Meldungen</b> Block, Abgriff
+                <b>Register PC</b> Bluetooth wird nur während der Registrierung benötigt.
+              </li>
+            </ul>
+            <details class="fold" id="notification-history">
+              <summary><span>Meldeverlauf und Löschung</span></summary>
+              <div class="fold-body">
+                <p>
+                  Benachrichtigungen werden kurz angezeigt; die Historie wird lokal auf dem PC verschlüsselt, niemals hochgeladen; nur die nach der Aktivierung empfangenen Benachrichtigungen werden aufgezeichnet; Verifizierungscodes und versteckte sensible Inhalte werden nicht gespeichert.
+                </p>
+                <p>
+                  Der Verlauf ist standardmäßig auf ein, 7 Tage und bis zu 200 Einträge eingestellt. Main-PC-Einstellungen → Benachrichtigungen bieten 1/7/30 Tage oder keine neuen Einträge. Bestehender Verlauf bleibt; Löschen Sie alle löscht es.
+                </p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- MAC -->
+      <section id="mac">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">Mac · Fehlerbehebung</p>
+            <h2 class="sec">Checks für die öffentliche macOS 13+ App.</h2>
+            <p class="sec-lead">
+              Installieren Sie den öffentlichen Apple Silicon Build und starten Sie die LAN-Verbindung von OneMouse unter Windows.
+            </p>
+          </div>
+          <div class="faq">
+            <details open>
+              <summary>Der Mac wird nicht in Windows-Geräten angezeigt.</summary>
+              <div class="a">
+                Setzen Sie beide Computer auf das gleiche WLAN oder LAN. auf macOS 15+, erlauben Sie OneMouse unter
+                <b>Datenschutz &amp; Sicherheit → Lokales Netzwerk</b>; macOS 13/14 zeigt dieses Element möglicherweise nicht an, kehren Sie zu OneMouse zurück und aktualisieren Sie Geräte in Windows.
+              </div>
+            </details>
+            <details id="mac-input-help">
+              <summary>Der Mac ist angeschlossen, aber Maus- und Tastatureingaben funktionieren nicht.</summary>
+              <div class="a">
+                OneMouse unter macOS zulassen <b>Privatsphäre &amp; Sicherheit → Zugänglichkeit</b>, kehren Sie dann zur App zurück, damit sie die Berechtigung erneut überprüfen kann.
+              </div>
+            </details>
+            <details id="mac-screen-help">
+              <summary>Der Mac-Bildschirm ist im Windows-Fernbedienungsfenster leer.</summary>
+              <div class="a">
+                OneMouse unter macOS zulassen
+                <b>Datenschutz &amp; Sicherheit → Bildschirm &amp; System Audio Recording</b>Diese optionale Funktion ist nur LAN und wird nicht über Bluetooth bereitgestellt; OneMouse erfasst kein Systemaudio.
+              </div>
+            </details>
+            <details>
+              <summary>Können sich Windows und Mac über Bluetooth verbinden?</summary>
+              <div class="a">
+                Ja, als Beta: Aktivieren Sie Bluetooth in den Mac-App-Einstellungen (standardmäßig deaktiviert). LAN bleibt der offiziell unterstützte Pfad.
+              </div>
+            </details>
+            <details>
+              <summary>Wo starte ich eine Mac-Verbindung?</summary>
+              <div class="a">
+                <a class="text-link" href="./guide#mac">Folgen Sie dem Mac Connection Guide</a><p>Mac kann Eingaben an Windows senden oder von Windows empfangen. Um Eingaben von Mac zu senden, erlauben Sie Zugänglichkeit und Eingabeüberwachung. Um Eingaben auf Mac zu erhalten, erlauben Sie Zugänglichkeit. <a class="text-link" href="/de/guide#mac-bluetooth">Mac Bluetooth Setup</a></p>.
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq" aria-labelledby="faq-title">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <h2 class="sec" id="faq-title">Häufig gestellte Fragen</h2>
+            <p>Wählen Sie ein Thema und öffnen Sie die Frage, die zu Ihrem Gerät und Ihrer Verbindungsmethode passt.</p>
+            <nav aria-label="FAQ Themen"><ul><li><a href="#faq-connections">Anschlüsse und Eingänge</a></li><li><a href="#faq-sharing">Benachrichtigungen, Dateien und Screenshots</a></li><li><a href="#faq-gestures">Mausgesten und entfernte Fenster</a></li></ul></nav>
+          </div>
+          <div class="panel" id="faq-connections">
+            <h3>Anschlüsse und Eingänge</h3>
+            <details class="fold" id="faq-account-devices">
+              <summary><span>Meine Geräte verwenden das gleiche Google-Konto.</span></summary>
+              <div class="fold-body"><p>Öffnen Sie OneMouse auf beiden Geräten, überprüfen Sie, ob beide online sind und mit demselben Google-Konto angemeldet sind, und aktualisieren Sie dann die Geräteliste. <a class="text-link" href="/de/guide#connect-account">Einrichtung eines Google-Kontos</a></p></div>
+            </details>
+            <details class="fold" id="connection-drops">
+              <summary><span>Warum sinkt die Verbindung immer wieder?</span></summary>
+              <div class="fold-body"><p>Wenn der Bildschirm eingeschaltet ist, prüfen Sie, ob sich beide Geräte noch im beabsichtigten Netzwerk befinden und ob das Problem einem bestimmten Router folgt. <a class="text-link" href="/de/guide#quick">Automatische LAN-Wiederverbindung</a></p></div>
+            </details>
+            <details class="fold" id="firewall-help">
+              <summary><span>Warum sieht mein Telefon den PC, aber der PC kann mein Telefon nicht sehen?</span></summary>
+              <div class="fold-body"><p>Überprüfen Sie bei der LAN-Erkennung, ob beide OneMouse-Apps geöffnet und mit demselben Router verbunden sind. Prüfen Sie, ob die Windows-Firewall OneMouse in diesem vertrauenswürdigen Netzwerk zulässt. Schalten Sie die Firewall nicht aus oder markieren Sie ein öffentliches Netzwerk nicht als privat.</p></div>
+            </details>
+            <details class="fold" id="faq-guest-wifi">
+              <summary><span>Warum funktioniert Pairing zu Hause, aber nicht im Büro oder Gast-WLAN?</span></summary>
+              <div class="fold-body"><p>Einige Netzwerke blockieren den Datenverkehr von Gerät zu Gerät, sogar über Wi-Fi mit dem gleichen Namen. Wenn Sie ein Gerät unter demselben Google-Konto sehen, ist nicht garantiert, dass jede Funktion in diesem Netzwerk funktioniert. Versuchen Sie ein vertrauenswürdiges Netzwerk, mit dem Geräte kommunizieren können, oder Bluetooth (Beta) für ein unterstütztes Gerätepaar.</p></div>
+            </details>
+            <details class="fold" id="faq-android-input">
+              <summary><span>Es heißt "vernetzt". Warum funktionieren Maus- und Tastatureingaben nicht auf Android?</span></summary>
+              <div class="fold-body"><p>Unter Android gehen Sie zu Einstellungen → Zugänglichkeit → Installierte Apps und aktivieren OneMouse. Wenn es eingeschaltet ist, der Dienst jedoch getrennt ist, schalten Sie ihn aus und wieder ein. Überprüfen Sie im PC-Layout, ob der Cursor den markierten Eingangsbereich durchquert. <a class="text-link" href="/de/guide#android">Android-Eingang einrichten</a></p></div>
+            </details>
+            <details class="fold" id="faq-mac-input">
+              <summary><span>Der Mac wird angezeigt, aber warum kann ich nicht klicken oder tippen?</span></summary>
+              <div class="fold-body"><p>Öffnen Sie auf dem Mac die Systemeinstellungen → Datenschutz &amp; Sicherheit → Zugänglichkeit und aktivieren Sie OneMouse. Nachdem Sie den Zugriff gewährt haben, öffnen Sie OneMouse erneut und versuchen Sie dann, den Cursor zu verschieben und ein Klartextfeld einzugeben. <a class="text-link" href="/de/features#permissions">Mac Berechtigungen</a></p></div>
+            </details>
+            <details class="fold" id="faq-mac-screen">
+              <summary><span>Warum sieht mein Mac-Bildschirm oder Fenster schwarz aus?</span></summary>
+              <div class="fold-body"><p>Überprüfen Sie auf dem Mac die Berechtigung für die Bildschirmaufzeichnung von OneMouse (bei einigen Versionen von macOS als Bildschirm- und Systemaudioaufzeichnung bezeichnet). Wenn Sie sie geändert haben, öffnen Sie die App erneut, wenn macOS fragt, und starten Sie die Freigabe erneut. <a class="text-link" href="/de/features#permissions">Mac Screen Recording Berechtigung</a></p></div>
+            </details>
+            <details class="fold" id="faq-cursor-return">
+              <summary><span>Wie bekomme ich meinen Cursor zurück zum PC?</span></summary>
+              <div class="fold-body"><p>Unter Windows ist die Standard-Notfallrückgabe <kbd class="return-key">Ctrl + Alt + Backspace</kbd>Wenn Sie es geändert haben, verwenden Sie die gespeicherte Verknüpfung. Wenn es deaktiviert ist, bewegen Sie den Cursor zurück über die Rückgabekante. <a class="text-link" href="/de/features#shortcut-return">Rückgabekürzel</a></p></div>
+            </details>
+            <details class="fold" id="screen-sleep">
+              <summary><span>Warum fällt die Verbindung nur ab, wenn der Android-Bildschirm ausfällt?</span></summary>
+              <div class="fold-body"><p>Auf Handys, die es anbieten, versuchen Sie, die uneingeschränkte Nutzung für OneMouse zu erlauben. Die genauen Etiketten und das Verhalten variieren je nach Hersteller.</p></div>
+            </details>
+            <details class="fold" id="bluetooth-help">
+              <summary><span>Was sollte ich zuerst auf Bluetooth (Beta) überprüfen?</span></summary>
+              <p>Bluetooth erfordert kein Wi-Fi oder vorherige LAN-Einrichtung. koppeln Sie die Geräte in Ihren Systemeinstellungen und schalten Sie dann die Verbindung in OneMouse ein.</p>
+              <div class="fold-body"><p>Überprüfen Sie, ob Bluetooth eingeschaltet ist und die unterstützten Geräte in OneMouse gekoppelt und verbunden sind. Für Remote-Bildschirme verwenden Sie die Verbindungsmethode, die für Ihr Gerätepaar aufgeführt ist. Grundlegende Bluetooth-Eingaben bedeuten nicht, dass die Bildschirmfreigabe über Bluetooth unterstützt wird. <a class="text-link" href="/de/compatibility#support">Unterstützung durch Gerätepaar</a></p></div>
+            </details>
+            <details class="fold" id="device-order-faq">
+              <summary><span>Warum kann ich Geräte unter Windows nicht neu bestellen?</span></summary>
+              <div class="fold-body"><p>Öffnen Sie auf dem Haupt-PC die Geräteverwaltung und suchen Sie nach der Reihenfolge der Bearbeitungslisten, wenn mindestens zwei zugelassene Geräte aufgeführt sind. Unterstützte nummerierte Verknüpfungen folgen der Listenreihenfolge; Bildschirmlayout bleibt gleich. Bluetooth-Geräte sind ausgeschlossen. <a class="text-link" href="/de/guide#device-order">Reihenfolge der Geräteliste</a></p></div>
+            </details>
+          </div>
+          <div class="panel" id="faq-sharing">
+            <h3>Benachrichtigungen, Dateien und Screenshots</h3>
+            <details class="fold" id="notification-reply-faq">
+              <summary><span>Warum kann ich nicht auf eine Benachrichtigung von meinem PC antworten?</span></summary>
+              <div class="fold-body"><p>Vergewissern Sie sich, dass die ursprüngliche Android-Benachrichtigung ein Antwortfeld enthält und immer noch aktiv ist. Versuchen Sie auf dem Haupt-PC die Live-Benachrichtigung, nicht ein Historienelement. Versteckte oder sensible Benachrichtigungen sind nicht zulässig. Wenn eine Antwort ausfällt, überprüfen Sie die ursprüngliche App, bevor Sie es erneut versuchen. Sowohl die PC- als auch die Android-App benötigen Versionen, die Antworten unterstützen. „An die Telefon-App übergeben bedeutet, dass die Antwort die ursprüngliche App erreicht hat; sie bestätigt nicht die Lieferung an den Empfänger. <a class="text-link" href="/de/features#notifications">Einstellungen für Benachrichtigungen und Antworten</a></p></div>
+            </details>
+            <details class="fold" id="default-pc-faq">
+              <summary><span>Warum erreicht eine Datei, die von meinem Telefon geteilt wird, nicht den PC?</span></summary>
+              <div class="fold-body"><p>Wenn Bluetooth aktiv ist, hat der angeschlossene PC Vorrang. Andernfalls überprüfen Sie, ob der Wi-Fi/LAN-Standard-PC in Android OneMouse gepaart, verfügbar und als Haupt-PC eingestellt ist. Wenn der Standard nicht verfügbar ist, wählen Sie einen anderen geeigneten gepaarten PC auf dem Dateifreigabebildschirm aus. <a class="text-link" href="/de/features#text-to-pc">Senden Sie Dateien und Text von Ihrem Telefon</a></p></div>
+            </details>
+            <details class="fold" id="file-receive-folder-faq">
+              <summary><span>Wo werden empfangene Dateien unter Windows gespeichert?</span></summary>
+              <div class="fold-body"><p>In OneMouse, öffnen Sie Einstellungen → Allgemein → Datei übertragen und überprüfen Sie den empfangenen Ordner. Wenn er nicht geöffnet wird, versuchen Sie einen beschreibbaren Ordner auf einem Laufwerk, das verbunden ist. Ändern dieses Ordners verschiebt keine Dateien, die Sie bereits erhalten haben. Screenshots haben ihren eigenen Speicherort. <a class="text-link" href="/de/features#file-receive-folder">Ändern Sie den Empfangsordner</a></p></div>
+            </details>
+            <details class="fold" id="screenshot-preview-faq">
+              <summary><span>Warum schließt sich die Screenshot-Vorschau oder der Cursor kehrt nicht zurück?</span></summary>
+              <div class="fold-body"><p>Wenn es von beiden Geräten unterstützt wird, kann die Screenshot-Aufnahme den Cursor auf dem gesteuerten Gerät lassen, anstatt ihn zurückzudrängen. Bewegen Sie den Cursor zurück, um die Vorschau zu bedienen. Erfolgreiches Kopieren oder Speichern schließt die Vorschau. Abbrechen eines Speicherns oder eines Speicherfehlers hält es offen.</p></div>
+            </details>
+          </div>
+          <div class="panel" id="faq-gestures">
+            <h3>Mausgesten und entfernte Fenster</h3>
+            <details class="fold" id="windows-remote-gestures-faq">
+              <summary><span>Warum funktionieren Browsergesten nicht in einem Windows-Remotefenster?</span></summary>
+              <div class="fold-body"><p>Ein rechtstasten-schleppen in einem windows-fernfenster wird an das entfernte gerät weitergeleitet aktivieren sie die gestenunterstützung im zielbrowser, wenn es sie anbietet dies ist getrennt von den gesten von OneMouse, wenn android direkt gesteuert wird. <a class="text-link" href="/de/features#remote">Fernfensterführung</a></p></div>
+            </details>
+            <details class="fold" id="mouse-gestures-faq">
+              <summary><span>Wie starte ich eine OneMouse Mausgeste auf Android?</span></summary>
+              <div class="fold-body"><p>In Android OneMouse, öffnen Sie Einstellungen → Input &amp; Clipboard, aktivieren Sie Mausgesten und erlauben Sie die gewünschte App. Bewegen Sie den PC-Cursor auf Android, halten Sie die rechte Taste, zeichnen und veröffentlichen Sie. Android-System und Berechtigungsbildschirme sind keine Gestenziele. Diese Android-Gesten laufen nicht unter Windows, Mac oder separaten Fernanzeigefenstern. <a class="text-link" href="/de/features#mouse-gestures">Gestenführer der Maus</a></p></div>
+            </details>
+            <details class="fold" id="mouse-gestures-history">
+              <summary><span>Warum funktionieren Forward und Reload in einigen Android-Apps nicht?</span></summary>
+              <div class="fold-body"><p>Forward besucht eine Seite nach Zurück; sie wird nicht zum nächsten Element in einem Feed weitergeleitet. Reload hängt von einer kompatiblen Browsersteuerung ab, so dass sie auf einigen Bildschirmen möglicherweise nicht verfügbar ist, selbst in einer aktivierten App.</p></div>
+            </details>
+            <details class="fold" id="mouse-gestures-minimize">
+              <summary><span>Zeichnet nach unten, dann schließen Sie meine Android-App?</span></summary>
+              <div class="fold-body"><p>Nein. Zeichnen Sie zuerst nach unten, dann biegen Sie rechts ab, bevor Sie loslassen. Es geht nach Hause, ohne die App oder den Tab zu schließen.</p></div>
+            </details>
+            <details class="fold" id="mouse-gestures-scroll">
+              <summary><span>Wie kontrolliere oder stoppe ich eine Scroll-Geste auf Android?</span></summary>
+              <div class="fold-body"><p>Zeichnen Sie im Inhaltsbereich nach oben oder unten und lassen Sie die rechte Maustaste los. Nichts scrollt während des Zeichnens. Ein längerer Strich scrollt normalerweise weiter als ein kürzerer Strich; der Abstand variiert je nach App. Der Pfeil und die vertikale Anzeige zeigen Richtung und Strichstärke, nicht die Position des Dokuments. Eine verlängerte Schriftrolle dauert bis zu 8 Bildschirme oder 10 Sekunden. Klicken, Starten einer neuen Geste, Wechseln von Apps oder Beenden der Steuerung hebt den Rest auf. Die Zeigerbewegung allein stoppt sie nicht.</p></div>
+            </details>
+          </div>
+          <p><a class="text-link" href="/de/help">Zurück zu Quick Troubleshooting</a></p>
+        </div>
+      </section>
+<script>
+  (() => {
+    const faq = document.getElementById('faq');
+    function openQuestion() {
+      if (!/^#[a-z0-9-]+$/.test(location.hash)) return;
+      const question = document.getElementById(location.hash.slice(1));
+      if (question?.tagName !== 'DETAILS' || !faq.contains(question)) return;
+      question.open = true;
+    }
+    openQuestion();
+    window.addEventListener('hashchange', openQuestion);
+  })();
+</script>
+    </main>
+
+    <footer class="site">
+      <div class="wrap ft">
+        <span>© 2026 OneMouse</span>
+        <a
+          class="ato-badge"
+          href="https://alternativeto.net/software/onemouse/about/?utm_source=badge&amp;utm_medium=referral"
+          target="_blank"
+          rel="noopener"
+          ><img
+            src="https://alternativeto.net/static/badges/badge-compact-color.svg"
+            alt="OneMouse | AlternativeTo"
+            width="171"
+            height="55"
+            loading="lazy"
+        /></a>
+        <span class="links"
+          ><a href="./compare">Vergleichen</a><a href="./technical">Technik &amp; Sicherheit</a
+          ><a href="./privacy">Datenschutzerklärung</a><a href="./terms">Bedingungen für die Zustellung</a
+          ><a href="./licenses">Open-Source-Lizenzen</a></span
+        >
+      </div>
+    </footer>
+  </body>
+</html>

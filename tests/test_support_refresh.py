@@ -185,10 +185,10 @@ class SupportRefreshTest(unittest.TestCase):
                         if option.tag == "option":
                             fragments = set(option.attrs["data-fragments"].split())
                             if option.attrs["value"] in {"pt-BR", "de", "zh-TW", "fr", "id"}:
-                                # The added concise FAQ only preserves anchors it actually renders.
+                                # Each localized version must preserve its source anchors.
                                 route = option.attrs["data-language-route"].lstrip("/")
                                 target = Document(ROOT / (route + ".html"))
-                                self.assertIn("faq-device-reset", fragments)
+                                self.assertTrue(anchors <= fragments)
                                 for ident in fragments:
                                     self.assertIsNotNone(target.by_id(ident))
                             else:

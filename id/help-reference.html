@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bantuan 124; OneMouse - Android, Windows, dan Mac discohooting</title>
+    <meta
+      name="description"
+      content="Troubleshoot OneMouse connection from Windows to Android, another Windows PC, or an Apple Silicon Mac running macOS 13 +, including devention, parding, input, and file transfer."
+    />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <link rel="stylesheet" href="../css/onemouse.css" />
+    <link rel="stylesheet" href="../css/guide-help.css" />
+    <script src="../js/guide-help.js" defer></script>
+    <link rel="canonical" href="https://onemouse.pages.dev/en/help" />
+    <link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/help-reference">
+<link rel="alternate" hreflang="en" href="https://onemouse.pages.dev/en/help-reference">
+<link rel="alternate" hreflang="ja" href="https://onemouse.pages.dev/ja/help-reference">
+<link rel="alternate" hreflang="zh" href="https://onemouse.pages.dev/zh/help-reference">
+<link rel="alternate" hreflang="es" href="https://onemouse.pages.dev/es/help-reference">
+<link rel="alternate" hreflang="pt-BR" href="https://onemouse.pages.dev/pt-br/help-reference">
+<link rel="alternate" hreflang="de" href="https://onemouse.pages.dev/de/help-reference">
+<link rel="alternate" hreflang="zh-TW" href="https://onemouse.pages.dev/zh-tw/help-reference">
+<link rel="alternate" hreflang="fr" href="https://onemouse.pages.dev/fr/help-reference">
+<link rel="alternate" hreflang="id" href="https://onemouse.pages.dev/id/help-reference">
+<link rel="alternate" hreflang="x-default" href="https://onemouse.pages.dev/help-reference">
+  <link rel="stylesheet" href="/css/official-language-picker.css?v=1">
+<script src="/js/official-language-picker.js?v=1" defer></script>
+
+<style>
+.return-keys{display:inline-flex;align-items:center;gap:.18rem;white-space:nowrap;vertical-align:middle}
+.return-keys kbd,kbd.return-key{display:inline-block;white-space:nowrap;background:#174c91;color:#fff;border:1px solid #10376b;border-radius:.32rem;padding:.15rem .36rem;font:750 .79rem/1.35 system-ui,sans-serif;box-shadow:0 1px #10376b}
+</style>
+<script>
+(() => {
+  const faqIds = new Set(['faq', 'faq-title', 'faq-connections', 'faq-account-devices', 'connection-drops', 'firewall-help', 'faq-guest-wifi', 'faq-android-input', 'faq-mac-input', 'faq-mac-screen', 'faq-cursor-return', 'screen-sleep', 'bluetooth-help', 'device-order-faq', 'faq-sharing', 'notification-reply-faq', 'default-pc-faq', 'file-receive-folder-faq', 'screenshot-preview-faq', 'faq-gestures', 'windows-remote-gestures-faq', 'mouse-gestures-faq', 'mouse-gestures-history', 'mouse-gestures-minimize', 'mouse-gestures-scroll']);
+  function forwardFAQ() {
+    if (!faqIds.has(location.hash.slice(1))) return;
+    location.replace('/en/help' + location.search + location.hash);
+  }
+  forwardFAQ();
+  window.addEventListener('hashchange', forwardFAQ);
+})();
+</script>
+</head>
+  <body>
+    <header class="site">
+      <div class="wrap hd">
+        <a class="brand" href="./" aria-label="Beranda OneMouse"><span class="om">OM</span>OneMouse</a>
+        <nav class="nav" aria-label="Navigasi utama">
+          <a href="./">Pinggiran</a>
+          <a href="./#use">Fitur</a>
+          <a href="./guide">Panduan</a>
+          <a href="./help" class="on">Bantuan</a>
+        </nav>
+        <div class="hd-right">
+          <div class="one-language-select"><label class="one-language-label" for="one-language-picker">Bahasa</label><select id="one-language-picker" data-language-picker data-current-language="id" hidden><option value="ko" lang="ko" data-language-route="/help-reference" data-fragments="account-connect-help android-input-help bluetooth-help connection-drops connection-symptoms cursor-not-crossing default-pc-faq device-order-faq faq faq-account-devices faq-android-input faq-connections faq-cursor-return faq-gestures faq-guest-wifi faq-mac-input faq-mac-screen faq-sharing faq-title file-receive-folder-faq firewall-help mac-help mac-input-help mac-screen-help mouse-gestures-faq mouse-gestures-history mouse-gestures-minimize mouse-gestures-scroll notification-history notification-reply-faq order phone-notifications quick-help remote-control-help screen-sleep screenshot-preview-faq windows-remote-gestures-faq">한국어</option><option value="en" lang="en" data-language-route="/en/help-reference" data-fragments="account-connect-help android-input-help bluetooth-help connection-drops connection-symptoms cursor-not-crossing default-pc-faq device-order-faq faq faq-account-devices faq-android-input faq-connections faq-cursor-return faq-gestures faq-guest-wifi faq-mac-input faq-mac-screen faq-sharing faq-title file-receive-folder-faq firewall-help mac mac-input-help mac-screen-help mouse-gestures-faq mouse-gestures-history mouse-gestures-minimize mouse-gestures-scroll notification-history notification-reply-faq order phone-notifications quick-help remote-control-help screen-sleep screenshot-preview-faq windows-remote-gestures-faq">English</option><option value="ja" lang="ja" data-language-route="/ja/help-reference" data-fragments="account-connect-help android-input-help bluetooth-help connection-drops connection-symptoms cursor-not-crossing default-pc-faq device-order-faq faq faq-account-devices faq-android-input faq-connections faq-cursor-return faq-gestures faq-guest-wifi faq-mac-input faq-mac-screen faq-sharing faq-title file-receive-folder-faq firewall-help mac mac-input-help mac-screen-help mouse-gestures-faq mouse-gestures-history mouse-gestures-minimize mouse-gestures-scroll notification-history notification-reply-faq order phone-notifications quick-help remote-control-help screen-sleep screenshot-preview-faq windows-remote-gestures-faq">日本語</option><option value="zh" lang="zh" data-language-route="/zh/help-reference" data-fragments="account-connect-help android-input-help bluetooth-help connection-drops connection-symptoms cursor-not-crossing default-pc-faq device-order-faq faq faq-account-devices faq-android-input faq-connections faq-cursor-return faq-gestures faq-guest-wifi faq-mac-input faq-mac-screen faq-sharing faq-title file-receive-folder-faq firewall-help mac mac-input-help mac-screen-help mouse-gestures-faq mouse-gestures-history mouse-gestures-minimize mouse-gestures-scroll notification-history notification-reply-faq order phone-notifications quick-help remote-control-help screen-sleep screenshot-preview-faq windows-remote-gestures-faq">简体中文</option><option value="es" lang="es" data-language-route="/es/help-reference" data-fragments="account-connect-help android-input-help bluetooth-help connection-drops connection-symptoms cursor-not-crossing default-pc-faq device-order-faq faq faq-account-devices faq-android-input faq-connections faq-cursor-return faq-gestures faq-guest-wifi faq-mac-input faq-mac-screen faq-sharing faq-title file-receive-folder-faq firewall-help mac mac-input-help mac-screen-help mouse-gestures-faq mouse-gestures-history mouse-gestures-minimize mouse-gestures-scroll notification-history notification-reply-faq order phone-notifications quick-help remote-control-help screen-sleep screenshot-preview-faq windows-remote-gestures-faq">Español</option><option value="pt-BR" lang="pt-BR" data-language-route="/pt-br/help-reference" data-fragments="account-connect-help android-input-help bluetooth-help connection-drops connection-symptoms cursor-not-crossing default-pc-faq device-order-faq faq faq-account-devices faq-android-input faq-connections faq-cursor-return faq-gestures faq-guest-wifi faq-mac-input faq-mac-screen faq-sharing faq-title file-receive-folder-faq firewall-help mac mac-input-help mac-screen-help mouse-gestures-faq mouse-gestures-history mouse-gestures-minimize mouse-gestures-scroll notification-history notification-reply-faq order phone-notifications quick-help remote-control-help screen-sleep screenshot-preview-faq windows-remote-gestures-faq">Português (Brasil)</option><option value="de" lang="de" data-language-route="/de/help-reference" data-fragments="account-connect-help android-input-help bluetooth-help connection-drops connection-symptoms cursor-not-crossing default-pc-faq device-order-faq faq faq-account-devices faq-android-input faq-connections faq-cursor-return faq-gestures faq-guest-wifi faq-mac-input faq-mac-screen faq-sharing faq-title file-receive-folder-faq firewall-help mac mac-input-help mac-screen-help mouse-gestures-faq mouse-gestures-history mouse-gestures-minimize mouse-gestures-scroll notification-history notification-reply-faq order phone-notifications quick-help remote-control-help screen-sleep screenshot-preview-faq windows-remote-gestures-faq">Deutsch</option><option value="zh-TW" lang="zh-TW" data-language-route="/zh-tw/help-reference" data-fragments="account-connect-help android-input-help bluetooth-help connection-drops connection-symptoms cursor-not-crossing default-pc-faq device-order-faq faq faq-account-devices faq-android-input faq-connections faq-cursor-return faq-gestures faq-guest-wifi faq-mac-input faq-mac-screen faq-sharing faq-title file-receive-folder-faq firewall-help mac mac-input-help mac-screen-help mouse-gestures-faq mouse-gestures-history mouse-gestures-minimize mouse-gestures-scroll notification-history notification-reply-faq order phone-notifications quick-help remote-control-help screen-sleep screenshot-preview-faq windows-remote-gestures-faq">繁體中文</option><option value="fr" lang="fr" data-language-route="/fr/help-reference" data-fragments="account-connect-help android-input-help bluetooth-help connection-drops connection-symptoms cursor-not-crossing default-pc-faq device-order-faq faq faq-account-devices faq-android-input faq-connections faq-cursor-return faq-gestures faq-guest-wifi faq-mac-input faq-mac-screen faq-sharing faq-title file-receive-folder-faq firewall-help mac mac-input-help mac-screen-help mouse-gestures-faq mouse-gestures-history mouse-gestures-minimize mouse-gestures-scroll notification-history notification-reply-faq order phone-notifications quick-help remote-control-help screen-sleep screenshot-preview-faq windows-remote-gestures-faq">Français</option><option value="id" lang="id" data-language-route="/id/help-reference" data-fragments="account-connect-help android-input-help bluetooth-help connection-drops connection-symptoms cursor-not-crossing default-pc-faq device-order-faq faq faq-account-devices faq-android-input faq-connections faq-cursor-return faq-gestures faq-guest-wifi faq-mac-input faq-mac-screen faq-sharing faq-title file-receive-folder-faq firewall-help mac mac-input-help mac-screen-help mouse-gestures-faq mouse-gestures-history mouse-gestures-minimize mouse-gestures-scroll notification-history notification-reply-faq order phone-notifications quick-help remote-control-help screen-sleep screenshot-preview-faq windows-remote-gestures-faq" selected>Bahasa Indonesia</option></select><noscript><nav class="one-language-fallback" aria-label="Bahasa"><a href="/help-reference" lang="ko" hreflang="ko">한국어</a><a href="/en/help-reference" lang="en" hreflang="en">English</a><a href="/ja/help-reference" lang="ja" hreflang="ja">日本語</a><a href="/zh/help-reference" lang="zh" hreflang="zh">简体中文</a><a href="/es/help-reference" lang="es" hreflang="es">Español</a><a href="/pt-br/help-reference" lang="pt-BR" hreflang="pt-BR">Português (Brasil)</a><a href="/de/help-reference" lang="de" hreflang="de">Deutsch</a><a href="/zh-tw/help-reference" lang="zh-TW" hreflang="zh-TW">繁體中文</a><a href="/fr/help-reference" lang="fr" hreflang="fr">Français</a><span lang="id" aria-current="true">Bahasa Indonesia</span></nav></noscript></div>
+          <a class="hd-cta" href="./#get">Unduh</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="phero wrap narrow">
+        <p class="ey">Bantuan</p>
+        <h1 class="page">Ketika tidak akan bekerja, mempersempit turun langkah demi langkah.</h1>
+        <p class="lead">
+          Periksa <b>Apps &gt; penemuan: Firewall memungkinkan input terjemahannya</b> dalam urutan itu.
+        </p>
+      </section>
+
+      <!-- 이것부터 -->
+      <section id="quick-help" style="padding-top: 14px">
+        <div class="wrap narrow">
+          <div class="panel tip">
+            <p>
+              Kunci kembali di bawah ini adalah bawaan. Jika Anda mengubahnya dalam PC Pengaturan Jalan Pintas, gunakan kunci tersimpan Anda. Bila semua pintasan atau pengembalian darurat dimatikan pada PC utama, kembali ke ujung layar.
+              <a href="./guide#shortcuts">Lihat jalan pintas dan kondisi mereka</a>
+            </p>
+            <h3>Mulailah dengan kedua</h3>
+            <ul>
+              <li>
+                <b>Anda kehilangan kursor?</b> Tekan
+                <kbd class="return-key">Ctrl + Alt + Backspace</kbd> dan cursor kembali ke PC Anda sendiri (pusat monitor).
+              </li>
+              <li id="android-input-help">
+                <b>Terhubung tapi masukan tidak bekerja?</b> Layanan Aksesibilitas Android mungkin mati atau mungkin telah dijalankan ulang.
+                <a class="text-link" href="#cursor-not-crossing"
+                  >Periksa aksesibilitas, pengaturan, dan jalur entri dalam urutan</a
+                >.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-alt" id="connection-symptoms">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">Temukan gejala Anda</p>
+            <h2 class="sec">Apa yang terjadi sekarang?</h2>
+            <p class="sec-lead">
+              Memperluas topik yang cocok dan memeriksa setiap langkah dalam rangka sebelum membersihkan tanda-in atau pasangan Anda.
+            </p>
+          </div>
+          <div class="troubleshoot-list">
+            <details class="troubleshoot-card" id="cursor-not-crossing" data-help-topic>
+              <summary>Terhubung, tetapi kursor tidak akan pindah ke telepon</summary>
+              <ol>
+                <li>
+                  <b>Aksebilitas:</b> check that OneMouse is enabled under Android Settings Accessibility Installed apps (atau Downloaded apps). If it is enabled but input still failed, turn it off and on again. Untuk app Test, check OneMouse Test.
+                </li>
+                <li>
+                  <b>Pengaturan:</b> periksa sisi mana dari PC layar perangkat target menempati dalam penempatan Telepon. Cocok dengan posisi fisik telepon membuat arah lebih mudah untuk mengikuti.
+                </li>
+                <li>
+                  <b>Bagian masukan:</b> gunakan bagian yang dikonfigurasi di tepi itu. jika bagian ini di tengah, layar sudut tidak akan membiarkan Anda menyeberang.
+                  <a class="text-link" href="./guide#position">Lihat layar pengaturan</a>
+                </li>
+                <li>
+                  <b>Versi app:</b> perbarui Windows dan Android ke versi publik terbaru dan jalankan ulang OneMouse pada keduanya. Periksa apakah Layanan Aksesibilitas masih diaktifkan.
+                </li>
+              </ol>
+              <p>
+                Jika Anda kehilangan kursor, maka nilai baku <kbd class="return-key">Ctrl + Alt + Backspace</kbd> mengembalikan ke PC. Jika anda mengubah jalan pintas itu, gunakan kombinasi kunci anda yang tersimpan.
+              </p>
+            </details>
+            <details class="troubleshoot-card" id="account-connect-help" data-help-topic>
+              <summary>Sebuah perangkat hilang dari akun Google saya atau tidak akan terhubung</summary>
+              <ol>
+                <li>
+                  Periksa apakah kedua aplikasi OneMouse menampilkan alamat akun Google yang sama, kedua perangkat memiliki akses internet, dan kedua aplikasi sedang berjalan.
+                </li>
+                <li>
+                  Segarkan daftar perangkat dan hubungkan perangkat target. Konfirmasi permintaan apapun pada perangkat lain.
+                  <a class="text-link" href="./guide#connect-account">Langkah koneksi akun</a>
+                </li>
+                <li>
+                  Jika diminta untuk memverifikasi akun Google Anda lagi, melengkapi tanda tangan dalam verifikasi. Jika Anda melihat "Tidak dapat membuat lebih banyak koneksi," close unused remote screends dan koneksi, maka coba lagi setelah tunggu singkat. Menghapus perangkat akun dan mengakhiri koneksi adalah tindakan yang berbeda.
+                </li>
+              </ol>
+              <p>
+                Untuk menyambung tanpa menanda-tangani pada Wi- Fi yang sama, pilih
+                <a class="text-link" href="./guide#connect-wifi">Pasangan QR / code</a>. Koneksi akun tidak memerlukan router yang sama.
+              </p>
+            </details>
+            <details class="troubleshoot-card" id="remote-control-help" data-help-topic>
+              <summary>Aku bisa melihat layar PC di ponsel saya, tapi tidak bisa mengendalikannya</summary>
+              <ol>
+                <li>Periksa <b>Hanya Tilikan</b> tidak aktif di panel kontrol layar remote.</li>
+                <li>
+                  <b>Modus sentuh</b> Klik di mana Anda menyentuh. <b>Mode kursor</b>, geser jari Anda ke posisi pointer, kemudian tekan.
+                </li>
+                <li>
+                  Jika sebuah permintaan kontrol muncul di PC, ijinkan. Gunakan didukung, up-to-date versi pada Windows dan Android. Sebuah Bluetooth-hanya koneksi tidak dapat membuka video remote.
+                </li>
+              </ol>
+              <a class="text-link" href="./guide#remote-gesture-examples"
+                >Lihat contoh klik, seret dan gulir legan</a
+              >
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- 문제 해결 순서 -->
+      <section id="order">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">Urutan teriakan masalah</p>
+            <h2 class="sec">Periksa satu langkah pada satu waktu, dalam urutan ini.</h2>
+          </div>
+          <div class="timeline">
+            <div class="tstep">
+              <div class="rail"><span class="num">1</span><span class="line"></span></div>
+              <div class="body">
+                <h4>Kekuasaan dan hak akses</h4>
+                <p>
+                  Periksa apakah kedua aplikasi sedang berjalan. Untuk ijin masukan, lihat
+                  <a class="text-link" href="#quick-help">pemeriksaan cepat</a>.
+                </p>
+              </div>
+            </div>
+            <div class="tstep">
+              <div class="rail"><span class="num">2</span><span class="line"></span></div>
+              <div class="body">
+                <h4>Periksa metoda koneksi yang Anda pilih</h4>
+                <p>
+                  <b>QR / code:</b> gunakan router yang sama dan periksa ijin jaringan lokal dan penemuan. <b>Akun Google:</b> periksa akun yang dipakai dan akses internet pada kedua perangkat tersebut. <b>Bluetooth:</b> Periksa Bluetooth yang ada, dipasangkan dan terhubung.
+                </p>
+              </div>
+            </div>
+            <div class="tstep">
+              <div class="rail"><span class="num">3</span><span class="line"></span></div>
+              <div class="body">
+                <h4>Firewall &amp; isolasi</h4>
+                <p>
+                  Untuk koneksi Wi-Fi / LAN, jika telepon dapat melihat PC tetapi PC tidak dapat melihat telepon, mungkin
+                  <b>Firewall Windows inbound</b> isu (apakah jaringan diatur ke "Publik" atau "Pribadi"). Kantor dan café Wi- Fi juga dapat memblokir dengan <b>isolasi klien</b>.
+                </p>
+              </div>
+            </div>
+            <div class="tstep">
+              <div class="rail"><span class="num">4</span><span class="line"></span></div>
+              <div class="body">
+                <h4>Penyedia &amp; koneksi</h4>
+                <p>
+                  Periksa pasangan dan status koneksi dalam Perangkat. Untuk sambungan pertama, ikuti <a class="text-link" href="./guide#start">penuntun setup</a>.
+                </p>
+              </div>
+            </div>
+            <div class="tstep">
+              <div class="rail"><span class="num">5</span></div>
+              <div class="body">
+                <h4>Masukan &amp; kembali</h4>
+                <p>
+                  Periksa arah yang telah diatur dan dikonfigurasi <b>bagian masukan kursor</b>Ikuti <a class="text-link" href="#cursor-not-crossing">pemeriksaan masukan</a>; jika Anda kehilangan kursor, lihat <a class="text-link" href="#quick-help">bagaimana membawanya kembali</a>.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 파일·클립보드 -->
+      <section class="section-alt">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">Transfer</p>
+            <h2 class="sec">Ketika file dan clipboard tidak akan pergi melalui.</h2>
+          </div>
+          <div class="panel">
+            <ul>
+              <li>
+                Konfirmasi <b>perangkat terpilih</b> benar - transfer pergi ke target yang Anda pilih.
+              </li>
+              <li>
+                Desktop- to-desktop seret membutuhkan target Windows PC atau Mac untuk menjadi
+                <b>tersambung dan diatur</b>Mac roda tepi saat ini menggunakan LAN.
+              </li>
+              <li>
+                Terus pegang berkasnya, <b>melewati sisi layar yang diatur</b>, dan jatuhkan pada target untuk memulai transfer.
+              </li>
+              <li>
+                Bila papan klip tidak masuk, periksa apakah kedua aplikasi tersambung dan apakah layar dimatikan dan menganggur.
+              </li>
+              <li>Bluetooth lebih lambat dari WiFi - mengirim file besar melalui Wi- Fi.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- PHONE NOTIFICATIONS -->
+      <section id="phone-notifications">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">Pemberitahuan telepon</p>
+            <h2 class="sec">Ketika pemberitahuan telepon tidak muncul di PC.</h2>
+          </div>
+          <div class="panel">
+            <ul>
+              <li>
+                Dalam aplikasi telepon <b>Notifikasi ke PC</b> konfigurasi, nyalakan
+                <b>Kirim pemberitahuan ke PC</b> dan periksa <b>Akses pemberitahuan</b> mengatakan diperbolehkan.
+              </li>
+              <li>
+                Periksa apakah aplikasi sudah masuk <b>Apps untuk dikirim ke PC</b>Baku adalah aplikasi SMS Anda dan KakaoTalk; Anda juga dapat memilih semua aplikasi.
+              </li>
+              <li>
+                Di PC utama, buka <b>Pengaturan Notifikasi Lansekap</b> dan pastikan
+                <b>Pemberitahuan perangkat</b> sudah dimulai.
+              </li>
+              <li>
+                If only verification- code messages arrive as "hidden", that is Android 15 's protection. In the phone app' s <b>Pemberitahuan kode verifikasi</b> blok, tekan
+                <b>PC Register</b> Bluetooth hanya dibutuhkan saat mendaftar.
+              </li>
+            </ul>
+            <details class="fold" id="notification-history">
+              <summary><span>Pemberitahuan sejarah dan penghapusan</span></summary>
+              <div class="fold-body">
+                <p>
+                  Notifikasi muncul sebentar; sejarah dienkripsi secara lokal di PC, tidak pernah diunggah. Hanya pemberitahuan yang diterima setelah mengaktifkan; kode verifikasi dan konten sensitif tersembunyi tidak disimpan.
+                </p>
+                <p>
+                  Default sejarah selama 7 hari, dan hingga 200 entri. Pengaturan Pengaturan PC Notifications menawarkan 1 / 7 / 30 hari atau tidak ada entri baru. Tetap ada; Hapus semua menghapusnya.
+                </p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- MAC -->
+      <section id="mac">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">Mac</p>
+            <h2 class="sec">Cek untuk maOS publik 13 + app.</h2>
+            <p class="sec-lead">
+              Instal publik Apple Silicon build dan mulai sambungan LAN dari OneMouse pada Windows.
+            </p>
+          </div>
+          <div class="faq">
+            <details open>
+              <summary>Mac tidak muncul dalam Perangkat Windows.</summary>
+              <div class="a">
+                Taruh kedua komputer pada WiFi atau LAN yang sama. Pada maOS 15 +, ijinkan OneMouse di bawah
+                <b>Privasi &amp; Keamanan Lokal Jaringan</b>; macOS 13 / 14 tidak boleh menampilkan item ini. Kembali ke OneMouse dan segarkan Perangkat di Windows.
+              </div>
+            </details>
+            <details id="mac-input-help">
+              <summary>Mac tersambung, tapi masukan mouse dan keyboard tidak bekerja.</summary>
+              <div class="a">
+                Ijinkan OneMouse di bawah macOS <b>Aksesibilitas &amp; Keamanan</b>, kemudian kembali ke aplikasi sehingga dapat memeriksa ulang ijin. Masukan masukan tidak memerlukan Pemantauan Masukan.
+              </div>
+            </details>
+            <details id="mac-screen-help">
+              <summary>Layar Mac kosong di jendela kendali Windows.</summary>
+              <div class="a">
+                Ijinkan OneMouse di bawah macOS
+                <b>Privasi &amp; Keamanan Layar &amp; Rekaman Audio Sistem</b>. Fitur opsional ini adalah LAN-only dan tidak disediakan melalui Bluetooth; OneMouse tidak menangkap audio sistem.
+              </div>
+            </details>
+            <details>
+              <summary>Dapatkah Windows dan Mac terhubung melalui Bluetooth?</summary>
+              <div class="a">
+                Ya, sebagai beta: aktifkan Bluetooth di pengaturan aplikasi Mac (mati secara baku). LAN tetap jalur yang didukung secara resmi. Mac layar dan berbagi jendela hanya LAN-saja.
+              </div>
+            </details>
+            <details>
+              <summary>Di mana saya memulai koneksi Mac?</summary>
+              <div class="a">
+                <a class="text-link" href="./guide#mac">Ikuti panduan koneksi Mac</a><p>Mac dapat mengirim masukan ke Windows atau menerimanya dari Windows. Untuk mengirim masukan dari Mac, memungkinkan Aksesibilitas dan Pemantauan Masukan. Untuk menerima masukan di Mac, memungkinkan Aksesibilitas. <a class="text-link" href="/id/guide#mac-bluetooth">Pengaturan Mac Bluetooth</a></p>.
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq" aria-labelledby="faq-title">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <h2 class="sec" id="faq-title">Pertanyaan yang sering ditanyakan</h2>
+            <p>Pilih topik dan buka pertanyaan yang cocok dengan metode perangkat dan koneksi Anda.</p>
+            <nav aria-label="Topik PSD"><ul><li><a href="#faq-connections">Koneksi dan masukan</a></li><li><a href="#faq-sharing">Notifikasi, berkas, dan cuplikan layar</a></li><li><a href="#faq-gestures">Gerak tetikus dan jendela jauh</a></li></ul></nav>
+          </div>
+          <div class="panel" id="faq-connections">
+            <h3>Koneksi dan masukan</h3>
+            <details class="fold" id="faq-account-devices">
+              <summary><span>Perangkat saya menggunakan akun Google yang sama. Mengapa satu hilang?</span></summary>
+              <div class="fold-body"><p>Buka OneMouse pada kedua perangkat, periksa bahwa keduanya daring dan masuk ke akun Google yang sama, kemudian segarkan daftar perangkat. Jika perangkat muncul tetapi kursor tidak akan menyeberang, periksa koneksi dan tata letak perangkat secara terpisah. <a class="text-link" href="/id/guide#connect-account">Pengaturan akun Google</a></p></div>
+            </details>
+            <details class="fold" id="connection-drops">
+              <summary><span>Kenapa koneksinya terus menurun?</span></summary>
+              <div class="fold-body"><p>When the screen is on, check if both devices are still on the intended network and if the problem following a particular router. If it only drops on screen- off, check Android power settings rather than treating the interval as a diagnosis. <a class="text-link" href="/id/guide#quick">Koneksi otomatis LAN</a></p></div>
+            </details>
+            <details class="fold" id="firewall-help">
+              <summary><span>Mengapa telepon saya melihat PC, tapi PC tidak bisa melihat telepon saya?</span></summary>
+              <div class="fold-body"><p>Untuk penemuan LAN, periksa apakah baik aplikasi OneMouse terbuka dan terhubung ke router yang sama. Periksa apakah Windows Firewall mengijinkan OneMouse pada jaringan terpercaya tersebut. Jangan matikan firewall atau tandai jaringan publik sebagai pribadi.</p></div>
+            </details>
+            <details class="fold" id="faq-guest-wifi">
+              <summary><span>Mengapa pasangan bekerja di rumah tapi tidak di kantor atau tamu Wi- Fi?</span></summary>
+              <div class="fold-body"><p>Beberapa jaringan memblokir device- to-device traffic, bahkan di Wi-Fi dengan nama yang sama. Melihat sebuah perangkat di bawah akun Google yang sama tidak menjamin bahwa setiap fitur bekerja pada jaringan tersebut. Coba sebuah jaringan terpercaya yang memungkinkan perangkat untuk berkomunikasi, atau Bluetooth (beta) untuk pasangan perangkat yang didukung.</p></div>
+            </details>
+            <details class="fold" id="faq-android-input">
+              <summary><span>It says connected. Why don 't mouse and keyboard input work on Android?</span></summary>
+              <div class="fold-body"><p>On Android, go to Setting Encessibility Enabliclecled apps and check OneMouse. If it 's on but the service is diputus, matikan dan kembali. Dalam tata letak PC, periksa apakah kursor melewati area masukan yang ditandai. <a class="text-link" href="/id/guide#android">Siapkan input Android</a></p></div>
+            </details>
+            <details class="fold" id="faq-mac-input">
+              <summary><span>Mac muncul, tapi mengapa aku tidak bisa klik atau mengetik?</span></summary>
+              <div class="fold-body"><p>Pada Mac, tata Sistem Terbuka: Privasi &amp; Keamanan Aksesibilitas dan periksa OneMouse. Setelah pemberian akses, buka kembali OneMouse, kemudian coba pindahkan kursor ke atas dan mengetik di daerah teks biasa. <a class="text-link" href="/id/features#permissions">Izin Mac</a></p></div>
+            </details>
+            <details class="fold" id="faq-mac-screen">
+              <summary><span>Mengapa layar Mac saya atau jendela terlihat hitam?</span></summary>
+              <div class="fold-body"><p>Pada Mac, periksa ijinnya OneMouse Recording (bernama Screen &amp; System Audio Recording pada beberapa versi macOS). Jika Anda mengubahnya, buka kembali aplikasi bila macOS bertanya, maka mulai lagi. <a class="text-link" href="/id/features#permissions">Izin rekaman Mac</a></p></div>
+            </details>
+            <details class="fold" id="faq-cursor-return">
+              <summary><span>Bagaimana cara mendapatkan kursor saya kembali ke PC?</span></summary>
+              <div class="fold-body"><p>Pada Windows, kembali darurat baku adalah <kbd class="return-key">Ctrl + Alt + Backspace</kbd>Bila Anda mengubahnya, gunakan jalan pintas yang disimpan. Bila dinonaktifkan, pindahkan kursor kembali ke sisi belakang. <a class="text-link" href="/id/features#shortcut-return">Kembalikan pengaturan pintas</a></p></div>
+            </details>
+            <details class="fold" id="screen-sleep">
+              <summary><span>Mengapa koneksi terputus hanya saat layar Android mati?</span></summary>
+              <div class="fold-body"><p>Periksa apakah baterai latar belakang OneMouse membatasi. Pada telepon yang menawarkannya, coba ijinkan penggunaan tak terbatas bagi OneMouse. Label dan perilaku yang tepat bervariasi oleh produsen.</p></div>
+            </details>
+            <details class="fold" id="bluetooth-help">
+              <summary><span>Apa yang harus saya periksa pertama untuk Bluetooth (beta)?</span></summary>
+              <p>Bluetooth tidak memerlukan pengaturan Wi- Fi atau sebelum LAN. Pair perangkat di pengaturan sistem Anda, kemudian aktifkan koneksi di OneMouse.</p>
+              <div class="fold-body"><p>Periksa apakah Bluetooth aktif dan perangkat yang didukung dipasangkan dan tersambung dalam OneMouse. Untuk layar jarak jauh, gunakan metode koneksi yang terdaftar bagi pasangan perangkat Anda. Masukan Bluetooth dasar tidak berarti berbagi layar didukung melalui Bluetooth. <a class="text-link" href="/id/compatibility#support">Dukungan oleh pasangan perangkat</a></p></div>
+            </details>
+            <details class="fold" id="device-order-faq">
+              <summary><span>Mengapa saya tidak dapat memesan ulang perangkat di Windows?</span></summary>
+              <div class="fold-body"><p>Pada PC utama, buka Manajemen Perangkat dan cari urutan daftar Sunting ketika setidaknya dua perangkat yang terdaftar. Jalan pintas yang didukung untuk mengikuti urutan daftar; tata letak layar tetap sama. Perangkat Bluetooth dikecualikan. <a class="text-link" href="/id/guide#device-order">Panduan urutan daftar perangkat</a></p></div>
+            </details>
+          </div>
+          <div class="panel" id="faq-sharing">
+            <h3>Notifikasi, berkas, dan cuplikan layar</h3>
+            <details class="fold" id="notification-reply-faq">
+              <summary><span>Mengapa aku tidak bisa menjawab pemberitahuan dari PC saya?</span></summary>
+              <div class="fold-body"><p>Check that the original Android notifications provides a reply field and is active. On the PC, try the live notification, not a history item. Disnected or sensitive notifications aren 't reply time out, check the original app before trying again. Kedua PC and Android apps need versions that support reply. "Passed to phone app" meached the reply " <a class="text-link" href="/id/features#notifications">Pengaturan pemberitahuan dan jawaban</a></p></div>
+            </details>
+            <details class="fold" id="default-pc-faq">
+              <summary><span>Mengapa tidak file bersama dari telepon saya mencapai PC?</span></summary>
+              <div class="fold-body"><p>Jika Bluetooth aktif, PC tersambung mengambil prioritas. Jika tidak, periksa bahwa PC baku Wi-Fi / LAN dalam Android OneMouse dipasangkan, tersedia dan diatur sebagai PC utama. Jika baku tidak tersedia, pilih PC lain yang memenuhi syarat dalam file sharing screen. <a class="text-link" href="/id/features#text-to-pc">Kirim berkas dan teks dari telepon Anda</a></p></div>
+            </details>
+            <details class="fold" id="file-receive-folder-faq">
+              <summary><span>Di mana berkas yang diterima disimpan pada Windows?</span></summary>
+              <div class="fold-body"><p>Dalam OneMouse, buka Pengaturan Jenderal AverFile transfer dan periksa folder yang diterima. Bila tidak mau terbuka, coba folder yang dapat ditulis pada kandar yang tersambung. Mengubah folder ini tidak memindah berkas yang telah Anda terima. Cuplikan layar memiliki lokasi penyimpanan sendiri. <a class="text-link" href="/id/features#file-receive-folder">Mengubah folder yang diterima</a></p></div>
+            </details>
+            <details class="fold" id="screenshot-preview-faq">
+              <summary><span>Mengapa pratinjau cuplikan layar ditutup, atau kursor tidak kembali?</span></summary>
+              <div class="fold-body"><p>Bila didukung oleh kedua perangkat, cuplikan cuplikan layar dapat meninggalkan kursor Anda pada perangkat yang dikendalikan daripada memaksanya kembali. Pindahkan kursor kembali untuk mengoperasikan pratilik. Sukses menyalin atau menyimpan menutup pratilik. Membatalkan menyimpan atau menyimpan kesalahan tetap terbuka.</p></div>
+            </details>
+          </div>
+          <div class="panel" id="faq-gestures">
+            <h3>Gerak tetikus dan jendela jauh</h3>
+            <details class="fold" id="windows-remote-gestures-faq">
+              <summary><span>Mengapa gerakan peramban tidak bekerja di dalam jendela remote Windows?</span></summary>
+              <div class="fold-body"><p>Tombol-kanan seret dalam jendela remote Windows relayed ke perangkat jauh. Aktifkan dukungan isyarat dalam target peramban jika ditawarkan. Ini terpisah dari gerakan OneMouse ketika mengendalikan Android secara langsung. <a class="text-link" href="/id/features#remote">Panduan jendela jauh</a></p></div>
+            </details>
+            <details class="fold" id="mouse-gestures-faq">
+              <summary><span>Bagaimana cara memulai gerakan tetikus OneMouse pada Android?</span></summary>
+              <div class="fold-body"><p>In Android OneMouse, open Settings Entry &amp; clipboard, enable Mouse gesture and allow the app you want. Move the PC cursor into Android, hold the right button, and release. Android system and ignitive screences aren 't gesture art not previces not run on Windows, Mac or separate remote watching windows. <a class="text-link" href="/id/features#mouse-gestures">Panduan gerakan tetikus</a></p></div>
+            </details>
+            <details class="fold" id="mouse-gestures-history">
+              <summary><span>Mengapa tidak Forward dan Reload bekerja dalam beberapa aplikasi Android?</span></summary>
+              <div class="fold-body"><p>Meneruskan revisit suatu halaman setelah Kembali; ini tidak akan maju ke item selanjutnya dalam pakan. Muat ulang bergantung pada kendali peramban yang kompatibel, sehingga mungkin tidak tersedia di beberapa layar, bahkan pada aplikasi yang diaktifkan.</p></div>
+            </details>
+            <details class="fold" id="mouse-gestures-minimize">
+              <summary><span>Apakah gerakan ke bawah lalu ke kanan menutup aplikasi Android?</span></summary>
+              <div class="fold-body"><p>Tidak, turunkan yang pertama, lalu belok kanan sebelum melepaskan. Ia pergi ke Rumah tanpa menutup aplikasi atau tab.</p></div>
+            </details>
+            <details class="fold" id="mouse-gestures-scroll">
+              <summary><span>Bagaimana cara mengatur atau menghentikan gestur gulir di Android?</span></summary>
+              <div class="fold-body"><p>Menggambar ke atas atau ke bawah di area konten dan merilis tombol tetikus yang tepat. Tidak ada gulungan ketika menggambar. Sebuah stroke lebih jauh biasanya menggulung lebih jauh daripada yang lebih pendek; jarak bervariasi dengan app. Panah dan pengukur vertikal menunjukkan arah dan kekuatan aksi, bukan posisi tebu. Gulungan diperpanjang berlangsung hingga 8 layar atau 10 detik. Mengklik, memulai gerakan baru, menukar aplikasi atau mengakhiri kontrol membatalkan sisanya. Gerakan penunjuk saja tidak menghentikannya.</p></div>
+            </details>
+          </div>
+          <p><a class="text-link" href="/id/help">Kembali dengan cepat.</a></p>
+        </div>
+      </section>
+<script>
+  (() => {
+    const faq = document.getElementById('faq');
+    function openQuestion() {
+      if (!/^#[a-z0-9-]+$/.test(location.hash)) return;
+      const question = document.getElementById(location.hash.slice(1));
+      if (question?.tagName !== 'DETAILS' || !faq.contains(question)) return;
+      question.open = true;
+    }
+    openQuestion();
+    window.addEventListener('hashchange', openQuestion);
+  })();
+</script>
+    </main>
+
+    <footer class="site">
+      <div class="wrap ft">
+        <span>© 2026 OneMouse</span>
+        <a
+          class="ato-badge"
+          href="https://alternativeto.net/software/onemouse/about/?utm_source=badge&amp;utm_medium=referral"
+          target="_blank"
+          rel="noopener"
+          ><img
+            src="https://alternativeto.net/static/badges/badge-compact-color.svg"
+            alt="OneMouse | AlternativeTo"
+            width="171"
+            height="55"
+            loading="lazy"
+        /></a>
+        <span class="links"
+          ><a href="./compare">Bandingkan</a><a href="./technical">Teknis &amp; Keamanan</a
+          ><a href="./privacy">Kebijakan privasi</a><a href="./terms">Akhir Layanan</a
+          ><a href="./licenses">Licenses Open-source</a></span
+        >
+      </div>
+    </footer>
+  </body>
+</html>

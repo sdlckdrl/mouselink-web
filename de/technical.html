@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Technik &amp; Sicherheit | OneMouse für Android, Windows und Mac</title>
+    <meta
+      name="description"
+      content="Wie OneMouse Windows, Android, einen anderen Windows-PC und Apple Silicon Macs mit macOS 13+ verbindet, einschließlich Berechtigungen, lokalem Datenfluss und Supportumfang."
+    />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <link rel="stylesheet" href="../css/onemouse.css" />
+    <link rel="canonical" href="https://onemouse.pages.dev/de/technical" />
+    <link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/technical">
+<link rel="alternate" hreflang="en" href="https://onemouse.pages.dev/en/technical">
+<link rel="alternate" hreflang="ja" href="https://onemouse.pages.dev/ja/technical">
+<link rel="alternate" hreflang="zh" href="https://onemouse.pages.dev/zh/technical">
+<link rel="alternate" hreflang="es" href="https://onemouse.pages.dev/es/technical">
+<link rel="alternate" hreflang="pt-BR" href="https://onemouse.pages.dev/pt-br/technical">
+<link rel="alternate" hreflang="de" href="https://onemouse.pages.dev/de/technical">
+<link rel="alternate" hreflang="zh-TW" href="https://onemouse.pages.dev/zh-tw/technical">
+<link rel="alternate" hreflang="fr" href="https://onemouse.pages.dev/fr/technical">
+<link rel="alternate" hreflang="id" href="https://onemouse.pages.dev/id/technical">
+<link rel="alternate" hreflang="x-default" href="https://onemouse.pages.dev/technical">
+  <link rel="icon" href="/assets/preview/onemouse-android-icon.png" type="image/png" sizes="240x240">
+<link rel="stylesheet" href="/assets/preview/one-preview.css?v=light1">
+<meta name="theme-color" content="#f5f8fa">
+
+<style>
+:root{color-scheme:light;--paper:var(--preview-bg);--paper2:#eaf3f4;--card:var(--preview-panel);--ink:var(--preview-ink);--muted:var(--preview-muted);--line:var(--preview-line);--line-soft:#eaf1f4;--coral-deep:var(--preview-accent);--coral:#68a892;--blue:#224d96;--shadow-soft:0 9px 20px -18px #152c4055;--shadow:0 16px 32px -25px #152c4070}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--preview-bg);color:var(--preview-ink);font:1rem/1.68 system-ui,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;overflow-wrap:anywhere}
+html:lang(ko) body{word-break:keep-all}
+.legal-skip{position:absolute;top:6px;left:8px;z-index:4;transform:translateY(-180%);padding:.55rem .8rem;border-radius:.45rem;color:white;background:var(--preview-accent)}
+.legal-skip:focus{transform:none}
+#legal-content{padding:0 0 3rem}
+#legal-content .wrap{width:min(880px,calc(100% - 36px));margin-inline:auto}
+#legal-content.main-grid-aligned .wrap:not(.narrow){width:min(1070px,calc(100% - 36px))}
+#legal-content .phero{padding:clamp(32px,6vw,68px) 0 1.45rem}
+#legal-content .ey{padding:0;background:none;color:var(--preview-accent);font-size:.9rem;font-weight:800;letter-spacing:.02em;margin:0 0 .4rem}
+#legal-content h1{font-size:clamp(2rem,5vw,3.55rem);font-weight:800;letter-spacing:-.045em;margin:0;line-height:1.14}
+#legal-content h2{font-size:clamp(1.15rem,3vw,1.55rem);line-height:1.3;letter-spacing:-.025em;margin:0 0 .6rem}
+#legal-content .lead{font-size:1.06rem;margin:.85rem 0 .65rem}
+#legal-content .lead,#legal-content .policy-date{color:var(--preview-muted)}
+#legal-content .policy-date{font-size:.9rem;margin:.55rem 0 0}
+#legal-content .legal{display:grid;grid-template-columns:minmax(0,1fr);gap:12px}
+#legal-content .phero+section{padding-top:0}
+#legal-content .lcard p,#legal-content .lcard ul,#legal-content .lcard ol{font-size:inherit;color:inherit}
+#legal-content .lcard{background:var(--preview-panel);border:1px solid var(--preview-line);border-radius:14px;padding:clamp(16px,3vw,25px);scroll-margin-top:1rem}
+#legal-content .lcard p,#legal-content .lcard ul,#legal-content .lcard ol{margin:.3rem 0 .65rem}
+#legal-content .lcard li+li{margin-top:.4rem}
+#legal-content .num{display:inline-block;font-size:.84em;color:var(--preview-accent);margin-inline-end:.4em}
+#legal-content a,.legal-languages a{color:var(--preview-accent);text-decoration:underline;text-underline-offset:.2em}
+#legal-content a:focus-visible,.legal-languages a:focus-visible{outline:3px solid var(--preview-accent);outline-offset:3px}
+.legal-languages{width:min(880px,calc(100% - 36px));display:flex;flex-wrap:wrap;gap:.3rem .95rem;margin:.75rem auto 0;color:var(--preview-muted);font-size:.85rem}
+.legal-languages a,.legal-languages span{display:inline-flex;align-items:center;min-height:36px}
+.legal-languages [aria-current]{font-weight:800;color:var(--preview-ink)}
+.preview-footer a[aria-current]{font-weight:800;color:var(--preview-accent)}
+.preview-footer .ato-badge img{display:block;max-width:100%;object-fit:contain}
+</style>
+
+<link rel="stylesheet" href="/css/official-footer.css?v=1">
+<link rel="stylesheet" href="/css/official-language-picker.css?v=1">
+<script src="/js/official-language-picker.js?v=1" defer></script>
+</head>
+  <body>
+    <a class="legal-skip" href="#legal-content">Zum Inhalt springen</a>
+<header class="preview-header"><div class="preview-frame">
+  <a class="preview-brand" href="/de/" aria-label="OneMouse-Startseite"><span class="preview-mark" aria-hidden="true"><img src="/assets/preview/onemouse-android-icon.png" alt="" width="33" height="33"></span>OneMouse</a>
+  <nav class="preview-nav" aria-label="Hauptmenü"><a href="/de/">Startseite</a><a href="/de/features">Funktionen</a><a href="/de/guide">Einrichtungsanleitung</a><a href="/de/help">Hilfe</a><a href="/de/download">Download</a></nav>
+
+  <div class="one-language-select"><label class="one-language-label" for="one-language-picker">Sprache</label><select id="one-language-picker" data-language-picker data-current-language="de" hidden><option value="ko" lang="ko" data-language-route="/technical" data-fragments="data-flow handling legal-content network permissions scope updates updates-history-note">한국어</option><option value="en" lang="en" data-language-route="/en/technical" data-fragments="data-flow handling legal-content network permissions scope updates updates-history-note">English</option><option value="ja" lang="ja" data-language-route="/ja/technical" data-fragments="data-flow handling legal-content network permissions roles scope updates updates-history-note">日本語</option><option value="zh" lang="zh" data-language-route="/zh/technical" data-fragments="data-flow handling legal-content network permissions roles scope updates updates-history-note">简体中文</option><option value="es" lang="es" data-language-route="/es/technical" data-fragments="data-flow handling legal-content network permissions scope updates updates-history-note">Español</option><option value="pt-BR" lang="pt-BR" data-language-route="/pt-br/technical" data-fragments="data-flow handling legal-content network permissions scope updates updates-history-note">Português (Brasil)</option><option value="de" lang="de" data-language-route="/de/technical" data-fragments="data-flow handling legal-content network permissions scope updates updates-history-note" selected>Deutsch</option><option value="zh-TW" lang="zh-TW" data-language-route="/zh-tw/technical" data-fragments="data-flow handling legal-content network permissions scope updates updates-history-note">繁體中文</option><option value="fr" lang="fr" data-language-route="/fr/technical" data-fragments="data-flow handling legal-content network permissions scope updates updates-history-note">Français</option><option value="id" lang="id" data-language-route="/id/technical" data-fragments="data-flow handling legal-content network permissions scope updates updates-history-note">Bahasa Indonesia</option></select><noscript><nav class="one-language-fallback" aria-label="Sprache"><a href="/technical" lang="ko" hreflang="ko">한국어</a><a href="/en/technical" lang="en" hreflang="en">English</a><a href="/ja/technical" lang="ja" hreflang="ja">日本語</a><a href="/zh/technical" lang="zh" hreflang="zh">简体中文</a><a href="/es/technical" lang="es" hreflang="es">Español</a><a href="/pt-br/technical" lang="pt-BR" hreflang="pt-BR">Português (Brasil)</a><span lang="de" aria-current="true">Deutsch</span><a href="/zh-tw/technical" lang="zh-TW" hreflang="zh-TW">繁體中文</a><a href="/fr/technical" lang="fr" hreflang="fr">Français</a><a href="/id/technical" lang="id" hreflang="id">Bahasa Indonesia</a></nav></noscript></div>
+</div></header>
+
+
+    <main id="legal-content" class="main-grid-aligned">
+      <section class="phero wrap">
+        <p class="ey">Technik &amp; Sicherheit</p>
+        <h1 class="page">Verbindungen und Sicherheit</h1>
+        <p class="lead">
+          Wie mit Daten umgegangen wird und welche Berechtigungen benötigt werden. <a class="text-link" href="./guide" style="color: var(--coral-deep); font-weight: 700">Benutzerhandbuch</a>.
+        </p>
+        <nav class="toc" aria-label="Auf dieser Seite">
+          <a href="#data-flow">Lokaler Erster</a>
+          <a href="#permissions">Genehmigungen</a>
+          <a href="#handling">Datenverarbeitung</a>
+          <a href="#network">Netz</a>
+          <a href="#scope">Unterstützte Verbindungen</a>
+          <a href="#updates">Aktualisierungsprotokoll</a>
+        </nav>
+      </section>
+
+      <!-- LOCAL FIRST -->
+      <section id="data-flow">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">Lokaler Erster</p>
+            <h2 class="sec">Daten werden direkt zwischen angeschlossenen Geräten übertragen.</h2>
+          </div>
+          <p class="sec-lead" style="max-width: 64ch">Maus- und Tastatureingaben, Dateien und Zwischenablagedaten werden direkt zwischen angeschlossenen Geräten übertragen. Eine LAN-Verbindung verwendet das gleiche lokale Netzwerk (verdrahtet oder Wi-Fi). Die Google-Kontoverknüpfung verwendet einen Kontodienst für Gerätelisten und Verbindungssignale, nicht zum Hochladen von Eingaben oder Dateien.</p>
+        </div>
+      </section>
+
+      <!-- PERMISSIONS -->
+      <section class="section-alt" id="permissions">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="ey">Genehmigungen</p>
+            <h2 class="sec">Nur das, was ein Feature eigentlich braucht.</h2>
+            <p class="sec-lead">Android bittet möglicherweise um einige Berechtigungen, wenn die App geöffnet wird, siehe unten für funktionsspezifische Anforderungen, wie Zugänglichkeit und Bildschirmerfassung.</p>
+          </div>
+          <div class="cards">
+            <article class="card accent">
+              <p class="card-lbl">erforderlich</p>
+              <h3>Barrierefreiheitsdienst</h3>
+              <p>
+                Um Android mit der Maus und Tastatur Ihres PCs zu steuern und Ferneingaben und bildschirmbezogene Aktionen zu bewältigen, ist der Accessibility Service erforderlich.
+              </p>
+            </article>
+            <article class="card">
+              <p class="card-lbl">beim Starten der Fernbedienung</p>
+              <h3>Screen Capture Genehmigung</h3>
+              <p>
+                Genehmigt über ein Android-System, wenn Sie das mobile Fernbedienungsfenster öffnen. Einige Inhalte, wie sichere Bildschirme, werden möglicherweise nicht angezeigt.
+              </p>
+            </article>
+            <article class="card">
+              <p class="card-lbl">Wenn die App fragt</p>
+              <h3>Nahe gelegene Wi-Fi-Geräte</h3>
+              <p>Unter Android 13 und höher kann die App beim ersten Öffnen nach Wi-Fi-Geräten in der Nähe und Benachrichtigungsberechtigungen fragen. Unter Android 12 und höher kann der Bluetooth-Modus nach der separaten Berechtigung für Geräte in der Nähe fragen.</p>
+            </article>
+            <article class="card">
+              <p class="card-lbl">Wenn der Dienst startet</p>
+              <h3>Meldungen</h3>
+              <p>Wird verwendet, um den Status der Hintergrundverbindung anzuzeigen; wird nur bei Bedarf angefordert.</p>
+            </article>
+            <article class="card">
+              <p class="card-lbl">Bei Verwendung von Helligkeit</p>
+              <h3>Systemeinstellungen ändern</h3>
+              <p>
+                Benötigt einmal das erste Mal, wenn Sie die Helligkeit des mobilen Bildschirms mit Alt + Shift + ↑ / ↓ anpassen.
+              </p>
+            </article>
+            <article class="card">
+              <p class="card-lbl">Empfohlen</p>
+              <h3>Ausnahme für Batterieoptimierung</h3>
+              <p>
+                Empfohlen für Stabilität, wenn die Verbindung nach dem Ausschalten des Bildschirms abfällt.
+              </p>
+            </article>
+            <article class="card accent">
+              <p class="card-lbl">Mac · macOS 15+ nur</p>
+              <h3>Lokales Netzwerk</h3>
+              <p>
+                Ermöglicht es dem Mac, den Windows-PC unter macOS 15+ zu entdecken. macOS 13/14 zeigt möglicherweise diese Berechtigung nicht an und die Laufzeit behandelt sie als nicht erforderlich.
+              </p>
+            </article>
+            <article class="card accent">
+              <p class="card-lbl">Erforderlich für Mac</p>
+              <h3>Bedienungshilfen</h3>
+              <p>
+                Ermöglicht es dem Mac, die von Windows empfangenen Maus- und Tastatureingaben auszuführen.
+              </p>
+            </article>
+            <article class="card">
+              <p class="card-lbl">Mac Screen Sharing nur</p>
+              <h3>Bildschirm &amp; System Audio Recording</h3>
+              <p>
+                Wird nur verwendet, wenn das Display des Mac mit Windows geteilt wird. OneMouse erfasst kein Systemaudio.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- DATA HANDLING -->
+      <section id="handling">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">Datenverarbeitung</p>
+            <h2 class="sec">Datenverarbeitung</h2>
+          </div>
+          <div class="panel">
+            <ul>
+              <li>Die LAN/Bluetooth-Paarung benötigt keine Anmeldung. Die optionale Google-Kontoverknüpfung verwendet einen Kontodienst für Gerätelisten und Verbindungssignale. <a class="text-link" href="./privacy#google-account">Kontodatenverarbeitung</a>.</li>
+              <li>
+                Dateien, die Sie senden, werden nicht auf einem Server gespeichert. Sie gehen direkt zu dem Gerät, das Sie auswählen.
+              </li>
+              <li>
+                <b>Zugänglichkeitsdaten werden niemals für Werbung oder Bildschirmsammlung verwendet.</b> Es wird nur für die angegebenen Funktionen verwendet, wie z. B. Eingabe und Fernbedienung.
+              </li>
+              <li>Senden Sie Dateien, indem Sie ein Gerät auswählen oder an es ziehen. Mit aktiver Zwischenablage-Freigabe müssen Sie nicht jedes Mal ein Ziel auswählen, wenn Sie Text kopieren.</li>
+              <li>
+                Die Mac-App speichert ihren gepaarten Sitzungsschlüssel im macOS-Schlüsselbund. Durch das Löschen der vertrauenswürdigen Verbindung wird die vertrauenswürdige Verbindung entfernt.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- NETWORK -->
+      <section class="section-alt" id="network">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">Netz</p>
+            <h2 class="sec">Netzbedingungen</h2>
+          </div>
+          <div class="split">
+            <div class="panel tip">
+              <h3>Empfohlenes Setup</h3>
+              <ul>
+                <li>Das gleiche Wi-Fi auf einem persönlichen Wi-Fi-Router (2,4 oder 5 GHz, entweder ist in Ordnung)</li>
+                <li>Ein Netzwerk, das die Kommunikation von Gerät zu Gerät ermöglicht</li>
+                <li>OneMouse erlaubt Inbound in der Windows-Firewall</li>
+                <li>Unter macOS 15+ ist der Zugriff auf das lokale Netzwerk für OneMouse auf dem Mac erlaubt</li>
+              </ul>
+            </div>
+            <div class="panel">
+              <h3>Begrenztes Setup</h3>
+              <ul>
+                <li>Client-Isolation auf Gast- oder Firmen-WiFi</li>
+                <li>Inbound blockiert in einem Netzwerk, das als "Public" gekennzeichnet ist</li>
+                <li>Verwenden Sie in diesen Fällen eine direkte Bluetooth-Verbindung oder einen persönlichen Hotspot</li>
+              </ul>
+            </div>
+          </div>
+          <p class="sec-lead" style="margin-top: 16px">Geräte müssen in der Lage sein, direkt miteinander zu kommunizieren.</p>
+        </div>
+      </section>
+
+      <!-- SCOPE -->
+      <section id="scope">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">Förderumfang</p>
+            <h2 class="sec">Unterstützte Plattformen und Verbindungen</h2>
+          </div>
+          <div class="panel">
+            <ul>
+              <li>Windows 10 oder 11 (x64): verbindet sich mit einem anderen Windows PC, Android oder Mac.</li>
+              <li>Android 8.0 oder höher: Telefone und Tablets können Windows-Maus- und Tastatureingaben empfangen. Das Öffnen eines Windows-Fernbildschirms von Android ist eine separate Funktion.</li>
+              <li>Apple Silicon Mac mit macOS 13 oder höher: Verbinden Sie sich mit Windows über LAN, mit einem Google-Konto oder über Bluetooth (Beta). Mac-to-Windows-Maus- und Tastatureingaben können auch über Bluetooth eingerichtet werden.</li>
+              <li>Bluetooth ist eine Beta-Option für unterstützte Paare und benötigt weder Wi-Fi noch Google-Anmeldung. Es enthält kein Remote-Video. Um einen Mac-Bildschirm oder ein Windows-Fenster anzuzeigen, verwenden Sie dasselbe lokale Netzwerk und erteilen Sie die Berechtigung zur Bildschirmaufzeichnung auf dem Mac.</li>
+              <li>USB/ADB-Verbindungen werden offiziell nicht unterstützt.</li>
+            </ul>
+            <p><a class="text-link" href="/de/guide">Verbindungsführungen nach Vorrichtung</a></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- UPDATES -->
+      <section class="section-alt" id="updates">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">Aktualisierungen</p>
+            <h2 class="sec">Aktuelles Update Log.</h2>
+            <p class="sec-lead" id="updates-history-note">Geplante Veröffentlichungen in älteren Einträgen spiegeln den Status wider, als diese Notizen geschrieben wurden.</p>
+          </div>
+          <h3>App Updates</h3>
+          <div class="log">
+            <div class="log-item">
+              <time datetime="2026-11-24">2026.11.24</time>
+              <div>
+                <p><b><a href="https://github.com/sdlckdrl/mouselink-web/releases/tag/v1.7.1">Windows 1.7.1</a></b></p>
+                <p>Veröffentlicht wurde das Standard-Windows 10/11 x64 Installer (EXE).</p>
+              </div>
+            </div>
+            <div class="log-item">
+              <time datetime="2026-11-19">2026.11.19</time>
+              <div>
+                <p><b><a href="https://github.com/sdlckdrl/mouselink-web/releases/tag/v1.7.0">Windows 1.7.0</a></b></p>
+                <p>Veröffentlicht das Windows 10/11 x64 Installer. Dieser Eintrag bezieht sich auf die EXE von der Website verfügbar.</p>
+              </div>
+            </div>
+            <div class="log-item">
+              <time datetime="2026-11-18">2026.11.18</time>
+              <div>
+                <p><b><a href="https://play.google.com/store/apps/details?id=com.mouselink.app">Android: Google Play</a></b></p>
+                <ul style="margin: 8px 0 0; padding-left: 18px">
+                  <li>Die Mauseingabe übernimmt jetzt den Standby-Modus und wird zuverlässiger fortgesetzt, wenn das Telefon gesperrt oder entriegelt wird.</li>
+                  <li>Die App synchronisiert ihren Zustand zuverlässiger mit dem PC, wenn das Telefon aufwacht, entsperrt oder Netzwerke wechselt.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="log-item">
+              <time datetime="2026-11-17">2026.11.17</time>
+              <div>
+                <p><b><a href="https://github.com/sdlckdrl/mouselink-web/releases/tag/mac-v1.6.8">macOS 1.6.8 · Apple Silicon</a></b></p>
+                <ul style="margin: 8px 0 0; padding-left: 18px">
+                  <li>Drücken Sie die Steuerung + Option + S, um einen Teil Ihres Mac-Bildschirms zu erfassen. Wenn Sie Windows über Bluetooth (Beta) steuern, können Sie eine Region unter Windows auswählen und auf dem Mac eine Vorschau anzeigen.</li>
+                  <li>Sie können die Bluetooth-Erkennung nach einem Timeout aus der Gerätezeile wiederholen. Capture- und Vorschautasten haben einen höheren Kontrast.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="log-item">
+              <time datetime="2026-10-10">2026.10.10</time>
+              <div>
+                <p><b>Windows 1.5.4</b></p>
+                <ul style="margin: 8px 0 0; padding-left: 18px">
+                  <li>
+                    <p>
+                      Bestellen Sie die Liste der lokalen Netzwerke (LAN) des Haupt-PCs durch Ziehen oder Verwenden der Aufwärts-/Abwärts-Tasten. Die Reihenfolge wird automatisch gespeichert und für Verbindungs- und Fernfenster-Verknüpfungsnummern verwendet.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Sowohl PC- als auch Android-Apps benötigen eine Version, die Antworten unterstützt, und die ursprüngliche Telefonbenachrichtigung muss eine Antwortaktion bereitstellen.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Verbesserte Drag-Eingabe mit der rechten Taste in Windows Remote Windows für vorhandene Browser-Gestenfunktionen und -Erweiterungen.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Unbeabsichtigte Übertragungen der OneMouse-Ausführung auf ein Telefon beim automatischen Start behoben.
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="log-item">
+              <time datetime="2026-08">2026.08</time>
+              <p>
+                <b>Öffentliche macOS 13+ Unterstützung</b> — ein öffentliches DMG ist jetzt für Apple Silicon Macs verfügbar. Verbinden und ordnen Sie einen Mac von Windows an, um weiterhin Maus- und Tastatureingaben, Dateien und Zwischenablage zu verwenden.
+              </p>
+            </div>
+            <div class="log-item">
+              <time datetime="2026-08">2026.08</time>
+              <p>
+                <b
+                  >Kommen in der nächsten Windows-Version: zuverlässigere Datei ziehen und Rückfahrten</b
+                >
+                Wenn Sie eine Datei über PC- und Mac-Grenzen hinweg tragen, vor dem Drop zurückkehren, die Übertragung abschließen oder abbrechen, bleiben Cursor und Drag synchron.
+              </p>
+            </div>
+            <div class="log-item">
+              <time datetime="2026-08">2026.08</time>
+              <p>
+                <b
+                  >Kommen in den nächsten Windows- und Android-Versionen: stabile Telefonorientierung und Multi-Device-Handoffs</b
+                >
+                Ein einzelnes Telefon wechselt nicht mehr zwischen Landschaft und Porträt im Gerätelayout, und die Position des Cursors und der Verbindungszustand bleiben bei wiederholten Übergaben über mehrere Geräte hinweg stabil.
+              </p>
+            </div>
+            <div class="log-item">
+              <time datetime="2026-07">2026.07</time>
+              <p>
+                <b>Intelligente Vorrichtungsanordnung</b> · <b>Sehen Sie das vollständige Layout auf einem anderen PC</b> — Geräte überlappen sich nicht mehr, und wenn man eines zwischen zwei anderen zieht, wird es eingeklemmt. Bewegen Sie das Ankergerät und den Rest-Magnet-Snap zurück zum Windows-PC, und ein zweiter PC, der über Bluetooth oder Wi-Fi verbunden ist, zeigt jetzt auch die vollständige Anordnung des Windows-PCs.
+              </p>
+            </div>
+            <div class="log-item">
+              <time datetime="2026-07">2026.07</time>
+              <p>
+                <b>Halten Sie den Bildschirm ein, während Sie angeschlossen sind · Leerlaufdimmung</b> — der Telefonbildschirm bleibt während einer Verbindung eingeschaltet und dimmt im Leerlauf, um Batterie zu sparen. Es hält auch bei mehreren gleichzeitig angeschlossenen Geräten.
+              </p>
+            </div>
+            <div class="log-item">
+              <time datetime="2026-07">2026.07</time>
+              <p>
+                <b>Sehen Sie die Positionen anderer Geräte vom Mobilgerät aus</b> ·
+                <b>Kettenanordnung (einreihig)</b> - Von Ihrem Telefon aus können Sie überprüfen, wie die anderen angeschlossenen Geräte angeordnet sind, und PC, Telefon und PC in einer einzigen Reihe anordnen.
+              </p>
+            </div>
+            <div class="log-item">
+              <time datetime="2026-07">2026.07</time>
+              <p>
+                <b>Cursor Crossing Effekt zwischen Geräten</b> ·
+                <b>Ctrl+Alt+Backspace zu neueren</b> - ein glatter Effekt, wenn der Cursor zwischen Geräten kreuzt; Wenn er verloren geht, kehrt er in die Mitte des Monitors zurück.
+              </p>
+            </div>
+            <div class="log-item">
+              <time datetime="2026-07">2026.07</time>
+              <p>
+                <b>Senden Sie die Gesandten</b> - in messaging-apps drücken sie enter auf der pc-tastatur zum senden und shift + enter für eine neue zeile.
+              </p>
+            </div>
+            <div class="log-item">
+              <time datetime="2026-06">2026.06</time>
+              <p>
+                <b>Direkte Bluetooth-Verbindung</b> · <b>PC-zu-PC Bluetooth</b> Verbinden Sie sich mit Ihrem Telefon oder einem anderen PC ohne WLAN-Router, um Eingaben, Zwischenablagen und Dateien auszutauschen.
+              </p>
+            </div>
+          </div>
+          <div class="lcard website-update" style="margin-top: 1.25rem">
+            <h3>Website Updates</h3>
+            <p><time datetime="2026-11-20">2026.11.20</time></p>
+            <p><a href="/de/compare">App Vergleich</a> zeigt nun Werkzeuge nebeneinander und <a href="/de/help#faq">Hilfe</a> Das sind Website-Änderungen, keine App-Releases.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="preview-footer official-footer"><div class="preview-frame">
+  <div class="official-footer-credit"><span>© 2026 OneMouse</span><a class="ato-badge" href="https://alternativeto.net/software/onemouse/about/?utm_source=badge&amp;utm_medium=referral" target="_blank" rel="noopener"><img src="https://alternativeto.net/static/badges/badge-compact-color.svg" alt="OneMouse | AlternativeTo" width="171" height="55" loading="lazy"></a></div>
+  <nav class="preview-refs" aria-label="Weitere Informationen"><a href="/de/compare">Apps im Vergleich</a><a href="/de/technical">Technik und Sicherheit</a><a href="/de/privacy">Datenschutzerklärung</a><a href="/de/terms">Nutzungsbedingungen</a><a href="/de/licenses">Open-Source-Lizenzen</a></nav>
+</div></footer>
+  </body>
+</html>

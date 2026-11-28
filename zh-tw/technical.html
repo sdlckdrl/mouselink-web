@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>技術安全 &amp; QQ OneMouse 用於 Android, Windows 和 Mac</title>
+    <meta
+      name="description"
+      content="OneMouse 如何連線 Windows, Android, 另一臺 Windows PC, 和 Apple Silicon Macs 執行 macOS 13+, 包括許可權, 本地資料流, 以及支援範圍 。"
+    />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <link rel="stylesheet" href="../css/onemouse.css" />
+    <link rel="canonical" href="https://onemouse.pages.dev/zh-tw/technical" />
+    <link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/technical">
+<link rel="alternate" hreflang="en" href="https://onemouse.pages.dev/en/technical">
+<link rel="alternate" hreflang="ja" href="https://onemouse.pages.dev/ja/technical">
+<link rel="alternate" hreflang="zh" href="https://onemouse.pages.dev/zh/technical">
+<link rel="alternate" hreflang="es" href="https://onemouse.pages.dev/es/technical">
+<link rel="alternate" hreflang="pt-BR" href="https://onemouse.pages.dev/pt-br/technical">
+<link rel="alternate" hreflang="de" href="https://onemouse.pages.dev/de/technical">
+<link rel="alternate" hreflang="zh-TW" href="https://onemouse.pages.dev/zh-tw/technical">
+<link rel="alternate" hreflang="fr" href="https://onemouse.pages.dev/fr/technical">
+<link rel="alternate" hreflang="id" href="https://onemouse.pages.dev/id/technical">
+<link rel="alternate" hreflang="x-default" href="https://onemouse.pages.dev/technical">
+  <link rel="icon" href="/assets/preview/onemouse-android-icon.png" type="image/png" sizes="240x240">
+<link rel="stylesheet" href="/assets/preview/one-preview.css?v=light1">
+<meta name="theme-color" content="#f5f8fa">
+
+<style>
+:root{color-scheme:light;--paper:var(--preview-bg);--paper2:#eaf3f4;--card:var(--preview-panel);--ink:var(--preview-ink);--muted:var(--preview-muted);--line:var(--preview-line);--line-soft:#eaf1f4;--coral-deep:var(--preview-accent);--coral:#68a892;--blue:#224d96;--shadow-soft:0 9px 20px -18px #152c4055;--shadow:0 16px 32px -25px #152c4070}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--preview-bg);color:var(--preview-ink);font:1rem/1.68 system-ui,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;overflow-wrap:anywhere}
+html:lang(ko) body{word-break:keep-all}
+.legal-skip{position:absolute;top:6px;left:8px;z-index:4;transform:translateY(-180%);padding:.55rem .8rem;border-radius:.45rem;color:white;background:var(--preview-accent)}
+.legal-skip:focus{transform:none}
+#legal-content{padding:0 0 3rem}
+#legal-content .wrap{width:min(880px,calc(100% - 36px));margin-inline:auto}
+#legal-content.main-grid-aligned .wrap:not(.narrow){width:min(1070px,calc(100% - 36px))}
+#legal-content .phero{padding:clamp(32px,6vw,68px) 0 1.45rem}
+#legal-content .ey{padding:0;background:none;color:var(--preview-accent);font-size:.9rem;font-weight:800;letter-spacing:.02em;margin:0 0 .4rem}
+#legal-content h1{font-size:clamp(2rem,5vw,3.55rem);font-weight:800;letter-spacing:-.045em;margin:0;line-height:1.14}
+#legal-content h2{font-size:clamp(1.15rem,3vw,1.55rem);line-height:1.3;letter-spacing:-.025em;margin:0 0 .6rem}
+#legal-content .lead{font-size:1.06rem;margin:.85rem 0 .65rem}
+#legal-content .lead,#legal-content .policy-date{color:var(--preview-muted)}
+#legal-content .policy-date{font-size:.9rem;margin:.55rem 0 0}
+#legal-content .legal{display:grid;grid-template-columns:minmax(0,1fr);gap:12px}
+#legal-content .phero+section{padding-top:0}
+#legal-content .lcard p,#legal-content .lcard ul,#legal-content .lcard ol{font-size:inherit;color:inherit}
+#legal-content .lcard{background:var(--preview-panel);border:1px solid var(--preview-line);border-radius:14px;padding:clamp(16px,3vw,25px);scroll-margin-top:1rem}
+#legal-content .lcard p,#legal-content .lcard ul,#legal-content .lcard ol{margin:.3rem 0 .65rem}
+#legal-content .lcard li+li{margin-top:.4rem}
+#legal-content .num{display:inline-block;font-size:.84em;color:var(--preview-accent);margin-inline-end:.4em}
+#legal-content a,.legal-languages a{color:var(--preview-accent);text-decoration:underline;text-underline-offset:.2em}
+#legal-content a:focus-visible,.legal-languages a:focus-visible{outline:3px solid var(--preview-accent);outline-offset:3px}
+.legal-languages{width:min(880px,calc(100% - 36px));display:flex;flex-wrap:wrap;gap:.3rem .95rem;margin:.75rem auto 0;color:var(--preview-muted);font-size:.85rem}
+.legal-languages a,.legal-languages span{display:inline-flex;align-items:center;min-height:36px}
+.legal-languages [aria-current]{font-weight:800;color:var(--preview-ink)}
+.preview-footer a[aria-current]{font-weight:800;color:var(--preview-accent)}
+.preview-footer .ato-badge img{display:block;max-width:100%;object-fit:contain}
+</style>
+
+<link rel="stylesheet" href="/css/official-footer.css?v=1">
+<link rel="stylesheet" href="/css/official-language-picker.css?v=1">
+<script src="/js/official-language-picker.js?v=1" defer></script>
+</head>
+  <body>
+    <a class="legal-skip" href="#legal-content">跳至主要內容</a>
+<header class="preview-header"><div class="preview-frame">
+  <a class="preview-brand" href="/zh-tw/" aria-label="OneMouse 首頁"><span class="preview-mark" aria-hidden="true"><img src="/assets/preview/onemouse-android-icon.png" alt="" width="33" height="33"></span>OneMouse</a>
+  <nav class="preview-nav" aria-label="主選單"><a href="/zh-tw/">首頁</a><a href="/zh-tw/features">功能</a><a href="/zh-tw/guide">連線指南</a><a href="/zh-tw/help">說明</a><a href="/zh-tw/download">下載</a></nav>
+
+  <div class="one-language-select"><label class="one-language-label" for="one-language-picker">語言</label><select id="one-language-picker" data-language-picker data-current-language="zh-TW" hidden><option value="ko" lang="ko" data-language-route="/technical" data-fragments="data-flow handling legal-content network permissions scope updates updates-history-note">한국어</option><option value="en" lang="en" data-language-route="/en/technical" data-fragments="data-flow handling legal-content network permissions scope updates updates-history-note">English</option><option value="ja" lang="ja" data-language-route="/ja/technical" data-fragments="data-flow handling legal-content network permissions roles scope updates updates-history-note">日本語</option><option value="zh" lang="zh" data-language-route="/zh/technical" data-fragments="data-flow handling legal-content network permissions roles scope updates updates-history-note">简体中文</option><option value="es" lang="es" data-language-route="/es/technical" data-fragments="data-flow handling legal-content network permissions scope updates updates-history-note">Español</option><option value="pt-BR" lang="pt-BR" data-language-route="/pt-br/technical" data-fragments="data-flow handling legal-content network permissions scope updates updates-history-note">Português (Brasil)</option><option value="de" lang="de" data-language-route="/de/technical" data-fragments="data-flow handling legal-content network permissions scope updates updates-history-note">Deutsch</option><option value="zh-TW" lang="zh-TW" data-language-route="/zh-tw/technical" data-fragments="data-flow handling legal-content network permissions scope updates updates-history-note" selected>繁體中文</option><option value="fr" lang="fr" data-language-route="/fr/technical" data-fragments="data-flow handling legal-content network permissions scope updates updates-history-note">Français</option><option value="id" lang="id" data-language-route="/id/technical" data-fragments="data-flow handling legal-content network permissions scope updates updates-history-note">Bahasa Indonesia</option></select><noscript><nav class="one-language-fallback" aria-label="語言"><a href="/technical" lang="ko" hreflang="ko">한국어</a><a href="/en/technical" lang="en" hreflang="en">English</a><a href="/ja/technical" lang="ja" hreflang="ja">日本語</a><a href="/zh/technical" lang="zh" hreflang="zh">简体中文</a><a href="/es/technical" lang="es" hreflang="es">Español</a><a href="/pt-br/technical" lang="pt-BR" hreflang="pt-BR">Português (Brasil)</a><a href="/de/technical" lang="de" hreflang="de">Deutsch</a><span lang="zh-TW" aria-current="true">繁體中文</span><a href="/fr/technical" lang="fr" hreflang="fr">Français</a><a href="/id/technical" lang="id" hreflang="id">Bahasa Indonesia</a></nav></noscript></div>
+</div></header>
+
+
+    <main id="legal-content" class="main-grid-aligned">
+      <section class="phero wrap">
+        <p class="ey">技術安全( S)</p>
+        <h1 class="page">連線和安全</h1>
+        <p class="lead">
+          如何處理資料以及需要哪些許可權 。 設定參考 <a class="text-link" href="./guide" style="color: var(--coral-deep); font-weight: 700">使用者指南</a>.
+        </p>
+        <nav class="toc" aria-label="此頁面">
+          <a href="#data-flow">本地第一</a>
+          <a href="#permissions">許可權</a>
+          <a href="#handling">資料處理</a>
+          <a href="#network">網路</a>
+          <a href="#scope">支援範圍</a>
+          <a href="#updates">更新日誌</a>
+        </nav>
+      </section>
+
+      <!-- LOCAL FIRST -->
+      <section id="data-flow">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">本地第一</p>
+            <h2 class="sec">資料直接在連線的裝置之間穿行 。</h2>
+          </div>
+          <p class="sec-lead" style="max-width: 64ch">滑鼠與鍵盤輸入、 檔案與剪貼簿資料直接在連線裝置之間穿行。 LAN 連線方式使用相同的本地網路( 線或 Wi- Fi )。 Google 帳號連線方式使用裝置清單與連線訊號的帳號服務, 而不是上傳輸入或檔案 。</p>
+        </div>
+      </section>
+
+      <!-- PERMISSIONS -->
+      <section class="section-alt" id="permissions">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="ey">許可權</p>
+            <h2 class="sec">只有一個功能真正需要的</h2>
+            <p class="sec-lead">Android 在應用程式開啟時可能要取得一些許可權。 參考以下的特性要求, 如存取和螢幕抓取 。</p>
+          </div>
+          <div class="cards">
+            <article class="card accent">
+              <p class="card-lbl">需要</p>
+              <h3>無障礙服務</h3>
+              <p>
+                要用您的 PC 的滑鼠和鍵盤控制 Android, 以及處理遠端輸入與螢幕相關的動作, 需要存取服務。 OneMouse 的核心功能依賴於它 。
+              </p>
+            </article>
+            <article class="card">
+              <p class="card-lbl">啟動遙控器時</p>
+              <h3>螢幕抓取批准</h3>
+              <p>
+                當您開啟手機遙控視窗時, 透過Android 系統被批准。 有些內容, 如安全螢幕, 可能不會出現 。
+              </p>
+            </article>
+            <article class="card">
+              <p class="card-lbl">當應用程式問起</p>
+              <h3>接近無線電裝置</h3>
+              <p>在 Android 13 上, app 可以在您第一次開啟時要求 Nearby Wi- Fi 裝置和通知許可權。 在 Android 12 上, 藍芽模式可以要求 Closeby 裝置的許可權 。</p>
+            </article>
+            <article class="card">
+              <p class="card-lbl">當服務開始時</p>
+              <h3>通知</h3>
+              <p>曾顯示背景連線狀態 。 只在有需要時才要求 。</p>
+            </article>
+            <article class="card">
+              <p class="card-lbl">使用亮度</p>
+              <h3>修改系統設定</h3>
+              <p>
+                第一次需要用 Alt+Shift+↑/↓來調整手機螢幕亮度。
+              </p>
+            </article>
+            <article class="card">
+              <p class="card-lbl">推薦</p>
+              <h3>電池最佳化例外</h3>
+              <p>
+                如果螢幕關閉後連線器會下降, 建議保持穩定。 不需要 。
+              </p>
+            </article>
+            <article class="card accent">
+              <p class="card-lbl">mac → macOS 15+</p>
+              <h3>本地網路</h3>
+              <p>
+                讓 Mac 在 macOS 15+ 上發現 Windows PC 。 macOS 13/14 可能無法顯示此許可權, 執行時段將它視為不需要 。
+              </p>
+            </article>
+            <article class="card accent">
+              <p class="card-lbl">需要於 Mac</p>
+              <h3>輔助使用</h3>
+              <p>
+                允許 Mac 執行 Windows 接收的滑鼠和鍵盤輸入。 基本輸入接收不需要輸入監控 。
+              </p>
+            </article>
+            <article class="card">
+              <p class="card-lbl">只分享麥克螢幕</p>
+              <h3>螢幕系統音效錄音( S)</h3>
+              <p>
+                只在與 Windows 分享 Mac 顯示時使用。 OneMouse 不捕捉系統音效 。
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- DATA HANDLING -->
+      <section id="handling">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">資料處理</p>
+            <h2 class="sec">資料處理</h2>
+          </div>
+          <div class="panel">
+            <ul>
+              <li>LAN/ 藍芽配對不需要簽署。 可選用 Google 帳號連線會用於一個帳號服務來提供裝置清單和連線訊號 。 <a class="text-link" href="./privacy#google-account">帳號資料處理</a>.</li>
+              <li>
+                您寄送的檔案不是儲存在伺服器上, 而是直接送到您選取的裝置上 。
+              </li>
+              <li>
+                <b>從來不使用存取資料做廣告或螢幕收集。</b> 它只用於說明的功能,例如傳輸輸入和遙控.
+              </li>
+              <li>選擇一個裝置或拖曳檔案到它來傳送檔案。 使用剪貼簿共享已啟動, 您不必每次複製文字都選擇目的地 。</li>
+              <li>
+                Mac 應用程式在 macOS 金鑰鏈中儲存其配對的會話金鑰。 清除配對會移除信任的連線 。
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- NETWORK -->
+      <section class="section-alt" id="network">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">網路</p>
+            <h2 class="sec">網路條件</h2>
+          </div>
+          <div class="split">
+            <div class="panel tip">
+              <h3>建議的設定</h3>
+              <ul>
+                <li>個人Wi-Fi路由器上相同的Wi-Fi(2.4或5 GHz, 要麼很好)</li>
+                <li>允許裝置對裝置通訊的網路</li>
+                <li>OneMouse 允許在 Windows 防火牆中入境</li>
+                <li>在 macOS 15+ 上, OneMouse 在 Mac 上允許本地網路存取</li>
+              </ul>
+            </div>
+            <div class="panel">
+              <h3>有限設定</h3>
+              <ul>
+                <li>客人或公司Wi-Fi的客戶端隔離</li>
+                <li>以「公開」為標記的網路封鎖入境</li>
+                <li>在這些情況下,使用直接的藍芽連線或個人熱點</li>
+              </ul>
+            </div>
+          </div>
+          <p class="sec-lead" style="margin-top: 16px">裝置必須能直接互相交流 。</p>
+        </div>
+      </section>
+
+      <!-- SCOPE -->
+      <section id="scope">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">支援範圍</p>
+            <h2 class="sec">支援的平臺和連線</h2>
+          </div>
+          <div class="panel">
+            <ul>
+              <li>Windows 10 或 11 (x64): 連線到另一臺Windows PC, Android, 或 Mac.</li>
+              <li>Android 8.0 或以後: 手機和平板電腦可以接收 Windows 滑鼠和鍵盤輸入。 從 Android 開啟 Windows 遠端螢幕是另外一個功能 。</li>
+              <li>使用 macOS 13 的 Apple Silicon Mac : 在 LAN 上連線 Windows , 使用 Google 帳號, 或是 Bluetooth (beta) 。 Mac- to- Windows 滑鼠和鍵盤輸入也可以在 Bluetooth 上建立 。</li>
+              <li>Bluetooth 是支援對對的β選項, 不需要 Wi- Fi 或 Google 簽署。 它不攜帶遠端影片。 要從 Windows 檢視 Mac 螢幕或視窗, 請使用同一個本地網路, 並在 Mac 上授權螢幕錄制 。</li>
+              <li>USB/ ADB 連線不正式支援 。</li>
+            </ul>
+            <p><a class="text-link" href="/zh-tw/guide">由裝置連線導引</a></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- UPDATES -->
+      <section class="section-alt" id="updates">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">更新</p>
+            <h2 class="sec">最近的更新日誌 。</h2>
+            <p class="sec-lead" id="updates-history-note">預計的釋放內容反映了這些筆記的寫作狀態。</p>
+          </div>
+          <h3>App 更新</h3>
+          <div class="log">
+            <div class="log-item">
+              <time datetime="2026-11-24">2026.11.24</time>
+              <div>
+                <p><b><a href="https://github.com/sdlckdrl/mouselink-web/releases/tag/v1.7.1">視窗 1.7.1</a></b></p>
+                <p>釋放標準的Windows 10/11 x64安裝器(EXE).</p>
+              </div>
+            </div>
+            <div class="log-item">
+              <time datetime="2026-11-19">2026.11.19</time>
+              <div>
+                <p><b><a href="https://github.com/sdlckdrl/mouselink-web/releases/tag/v1.7.0">1.7.0視窗</a></b></p>
+                <p>已釋出 Windows 10/11 x64 安裝器。 本專案指由網站提供的EXE 。</p>
+              </div>
+            </div>
+            <div class="log-item">
+              <time datetime="2026-11-18">2026.11.18</time>
+              <div>
+                <p><b><a href="https://play.google.com/store/apps/details?id=com.mouselink.app">Android ─ Google Play</a></b></p>
+                <ul style="margin: 8px 0 0; padding-left: 18px">
+                  <li>mouse 輸入現在處理備用功能, 當手機鎖定或解鎖時更可靠地恢復 。</li>
+                  <li>當手機醒來、解鎖或改變網路時,</li>
+                </ul>
+              </div>
+            </div>
+            <div class="log-item">
+              <time datetime="2026-11-17">2026.11.17</time>
+              <div>
+                <p><b><a href="https://github.com/sdlckdrl/mouselink-web/releases/tag/mac-v1.6.8">macOS 1.6.8 · Apple Silicon</a></b></p>
+                <ul style="margin: 8px 0 0; padding-left: 18px">
+                  <li>按下 Control+option+S 來抓取您的 Mac 螢幕的一部分。 當在藍芽( β) 上控制視窗時, 您可以在 Windows 上選擇一個區域, 並在 Mac 上預覽它 。</li>
+                  <li>您可以在超時後從裝置列中重試藍芽的發現。 抓取和預覽按鈕的對比更高 。</li>
+                </ul>
+              </div>
+            </div>
+            <div class="log-item">
+              <time datetime="2026-10-10">2026.10.10</time>
+              <div>
+                <p><b>視窗 1.5.4</b></p>
+                <ul style="margin: 8px 0 0; padding-left: 18px">
+                  <li>
+                    <p>
+                      透過拖曳或使用上下按鈕來重排主要 PC 的本地網路裝置清單。 此命令會自動儲存, 並用於連線與遠端視窗捷徑數字 。
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      直接從 PC 通知回覆。 PC 和 Android 應用程式都需要一個版本的支援回覆, 而原電話通知必須提供回覆動作 。
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      改進了Windows遠端視窗的右鍵拖曳輸入, 以顯示已有的瀏覽器手勢特性與延伸 。
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      自動啟動時, 固定地將 OneMouse 可執行檔轉至手機 。
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="log-item">
+              <time datetime="2026-08">2026.08</time>
+              <p>
+                <b>公共macOS 13+支援</b> —— 公開的 DMG 供 Apple Silicon Macs 使用。 連線並安排 Windows 的 Mac, 繼續使用滑鼠和鍵盤的輸入、 檔案和剪貼簿 。
+              </p>
+            </div>
+            <div class="log-item">
+              <time datetime="2026-08">2026.08</time>
+              <p>
+                <b
+                  >下一個 Windows 發行中來到: 更可靠的檔案拖曳與回傳行程</b
+                >
+                —— 攜帶檔案跨越 PC 和 Mac 邊界, 在下載前傳回, 完成傳輸, 或取消會保持遊標與拖曳狀態同步 。
+              </p>
+            </div>
+            <div class="log-item">
+              <time datetime="2026-08">2026.08</time>
+              <p>
+                <b
+                  >下一個 Windows 和 Android 的發行: 穩定的手機方向和多裝置的交接</b
+                >
+                單個手機將不再在裝置佈局的地貌與肖像中交換, 遊標位置與連線狀態在多個裝置的重複交換中會保持穩定 。
+              </p>
+            </div>
+            <div class="log-item">
+              <time datetime="2026-07">2026.07</time>
+              <p>
+                <b>更聰明的裝置安排</b> · <b>在另一個 PC 上看到完整佈局</b> ─ 裝置不再重複, 再拖曳一個在另外兩個套件中的位置。 將固定裝置和剩下的磁鐵彈片放回 Windows PC 上, 而第二個在藍芽或Wi-Fi 上連線的 PC 也顯示了 Windows PC 的全部安排 。
+              </p>
+            </div>
+            <div class="log-item">
+              <time datetime="2026-07">2026.07</time>
+              <p>
+                <b>連線時保持螢幕 :% 閒置暗淡</b> ─ 手機螢幕在連線期間仍會保持, 空置時會暗淡以儲存電池。 它甚至會持續連線若干個裝置。
+              </p>
+            </div>
+            <div class="log-item">
+              <time datetime="2026-07">2026.07</time>
+              <p>
+                <b>從手機中看到其他裝置的位置</b> ·
+                <b>串( 單行) 安排</b> 從您的手機中, 您可以檢查其他連線裝置的排列方式, 並排成一排 PC、 手機、 PC 。
+              </p>
+            </div>
+            <div class="log-item">
+              <time datetime="2026-07">2026.07</time>
+              <p>
+                <b>裝置之間的遊標過界效果</b> ·
+                <b>Ctrl+ Alt+ 後空格到最近的</b> ─游標在裝置之間交叉的平滑效果; 如果它迷路了, 它會回到顯示器的中心 。
+              </p>
+            </div>
+            <div class="log-item">
+              <time datetime="2026-07">2026.07</time>
+              <p>
+                <b>輸入以傳送信使</b> ─在訊息應用程式中, 按 Enter 在 PC 鍵盤上傳送, 並 Shift+ Enter 來換新行 。
+              </p>
+            </div>
+            <div class="log-item">
+              <time datetime="2026-06">2026.06</time>
+              <p>
+                <b>直接藍芽連線</b> · <b>PC 到 PC 藍芽</b> —— 連線您的手機或另一個沒有 Wi-Fi 路由器的 PC 以互換輸入、剪貼簿與檔案 。
+              </p>
+            </div>
+          </div>
+          <div class="lcard website-update" style="margin-top: 1.25rem">
+            <h3>網站更新</h3>
+            <p><time datetime="2026-11-20">2026.11.20</time></p>
+            <p><a href="/zh-tw/compare">App 比較</a> 現在顯示工具並排,以及 <a href="/zh-tw/help#faq">說明</a> 這些是網站變更, 不是應用程式的放行 。</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="preview-footer official-footer"><div class="preview-frame">
+  <div class="official-footer-credit"><span>© 2026 OneMouse</span><a class="ato-badge" href="https://alternativeto.net/software/onemouse/about/?utm_source=badge&amp;utm_medium=referral" target="_blank" rel="noopener"><img src="https://alternativeto.net/static/badges/badge-compact-color.svg" alt="OneMouse | AlternativeTo" width="171" height="55" loading="lazy"></a></div>
+  <nav class="preview-refs" aria-label="相關資訊"><a href="/zh-tw/compare">應用程式比較</a><a href="/zh-tw/technical">技術與安全性</a><a href="/zh-tw/privacy">隱私權政策</a><a href="/zh-tw/terms">使用條款</a><a href="/zh-tw/licenses">開放原始碼授權</a></nav>
+</div></footer>
+  </body>
+</html>

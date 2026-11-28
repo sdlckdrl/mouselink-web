@@ -1,0 +1,872 @@
+{
+ "Home": {
+  "pt-BR": "Início",
+  "de": "Startseite",
+  "zh-TW": "首頁",
+  "fr": "Accueil",
+  "id": "Beranda"
+ },
+ "Features": {
+  "pt-BR": "Recursos",
+  "de": "Funktionen",
+  "zh-TW": "功能",
+  "fr": "Fonctionnalités",
+  "id": "Fitur"
+ },
+ "Setup guide": {
+  "pt-BR": "Guia de conexão",
+  "de": "Einrichtungsanleitung",
+  "zh-TW": "連線指南",
+  "fr": "Guide de connexion",
+  "id": "Panduan koneksi"
+ },
+ "Help": {
+  "pt-BR": "Ajuda",
+  "de": "Hilfe",
+  "zh-TW": "說明",
+  "fr": "Aide",
+  "id": "Bantuan"
+ },
+ "Download": {
+  "pt-BR": "Baixar",
+  "de": "Download",
+  "zh-TW": "下載",
+  "fr": "Télécharger",
+  "id": "Unduh"
+ },
+ "Downloads": {
+  "pt-BR": "Downloads",
+  "de": "Downloads",
+  "zh-TW": "下載",
+  "fr": "Téléchargements",
+  "id": "Unduhan"
+ },
+ "Compatibility": {
+  "pt-BR": "Compatibilidade",
+  "de": "Kompatibilität",
+  "zh-TW": "相容性",
+  "fr": "Compatibilité",
+  "id": "Kompatibilitas"
+ },
+ "Resources": {
+  "pt-BR": "Recursos",
+  "de": "Weitere Informationen",
+  "zh-TW": "相關資訊",
+  "fr": "Ressources",
+  "id": "Informasi lainnya"
+ },
+ "Skip to content": {
+  "pt-BR": "Ir para o conteúdo",
+  "de": "Zum Inhalt springen",
+  "zh-TW": "跳至主要內容",
+  "fr": "Aller au contenu",
+  "id": "Lewati ke konten utama"
+ },
+ "Main menu": {
+  "pt-BR": "Menu principal",
+  "de": "Hauptmenü",
+  "zh-TW": "主選單",
+  "fr": "Menu principal",
+  "id": "Menu utama"
+ },
+ "OneMouse home": {
+  "pt-BR": "Página inicial do OneMouse",
+  "de": "OneMouse-Startseite",
+  "zh-TW": "OneMouse 首頁",
+  "fr": "Accueil de OneMouse",
+  "id": "Beranda OneMouse"
+ },
+ "Download Windows installer": {
+  "pt-BR": "Baixar instalador para Windows",
+  "de": "Windows-Installationsdatei herunterladen",
+  "zh-TW": "下載 Windows 安裝程式",
+  "fr": "Télécharger le programme d’installation Windows",
+  "id": "Unduh penginstal Windows"
+ },
+ "Download for Apple Silicon": {
+  "pt-BR": "Baixar para Apple Silicon",
+  "de": "Für Apple Silicon herunterladen",
+  "zh-TW": "下載 Apple Silicon 版",
+  "fr": "Télécharger pour Apple Silicon",
+  "id": "Unduh untuk Apple Silicon"
+ },
+ "Get it from Microsoft Store": {
+  "pt-BR": "Obter na Microsoft Store",
+  "de": "Im Microsoft Store abrufen",
+  "zh-TW": "前往 Microsoft Store",
+  "fr": "Obtenir sur le Microsoft Store",
+  "id": "Dapatkan dari Microsoft Store"
+ },
+ "Get it on Google Play": {
+  "pt-BR": "Obter no Google Play",
+  "de": "Bei Google Play herunterladen",
+  "zh-TW": "前往 Google Play",
+  "fr": "Télécharger sur Google Play",
+  "id": "Dapatkan di Google Play"
+ },
+ "Get it from Galaxy Store": {
+  "pt-BR": "Obter na Galaxy Store",
+  "de": "Im Galaxy Store abrufen",
+  "zh-TW": "前往 Galaxy Store",
+  "fr": "Obtenir sur le Galaxy Store",
+  "id": "Dapatkan di Galaxy Store"
+ },
+ "Privacy policy": {
+  "pt-BR": "Política de privacidade",
+  "de": "Datenschutzerklärung",
+  "zh-TW": "隱私權政策",
+  "fr": "Politique de confidentialité",
+  "id": "Kebijakan privasi"
+ },
+ "Terms of use": {
+  "pt-BR": "Termos de uso",
+  "de": "Nutzungsbedingungen",
+  "zh-TW": "使用條款",
+  "fr": "Conditions d’utilisation",
+  "id": "Ketentuan penggunaan"
+ },
+ "Compare apps": {
+  "pt-BR": "Comparar aplicativos",
+  "de": "Apps im Vergleich",
+  "zh-TW": "應用程式比較",
+  "fr": "Comparer les applications",
+  "id": "Perbandingan aplikasi"
+ },
+ "Technology and security": {
+  "pt-BR": "Tecnologia e segurança",
+  "de": "Technik und Sicherheit",
+  "zh-TW": "技術與安全性",
+  "fr": "Technologie et sécurité",
+  "id": "Teknologi dan keamanan"
+ },
+ "Open-source licenses": {
+  "pt-BR": "Licenças de código aberto",
+  "de": "Open-Source-Lizenzen",
+  "zh-TW": "開放原始碼授權",
+  "fr": "Licences open source",
+  "id": "Lisensi sumber terbuka"
+ },
+ "Cursor on:": {
+  "pt-BR": "Cursor em:",
+  "de": "Zeiger auf:",
+  "zh-TW": "游標所在裝置：",
+  "fr": "Pointeur sur :",
+  "id": "Kursor di:"
+ },
+ "Android phone": {
+  "pt-BR": "Celular Android",
+  "de": "Android-Smartphone",
+  "zh-TW": "Android 手機",
+  "fr": "Téléphone Android",
+  "id": "Ponsel Android"
+ },
+ "Android tablet": {
+  "pt-BR": "Tablet Android",
+  "de": "Android-Tablet",
+  "zh-TW": "Android 平板",
+  "fr": "Tablette Android",
+  "id": "Tablet Android"
+ },
+ "Loading image…": {
+  "pt-BR": "Carregando imagem…",
+  "de": "Bild wird geladen …",
+  "zh-TW": "正在載入圖片…",
+  "fr": "Chargement de l’image…",
+  "id": "Memuat gambar…"
+ },
+ "Could not load the image.": {
+  "pt-BR": "Não foi possível carregar a imagem.",
+  "de": "Das Bild konnte nicht geladen werden.",
+  "zh-TW": "無法載入圖片。",
+  "fr": "Impossible de charger l’image.",
+  "id": "Gambar tidak dapat dimuat."
+ },
+ "Accessibility": {
+  "pt-BR": "Acessibilidade",
+  "de": "Bedienungshilfen",
+  "zh-TW": "輔助使用",
+  "fr": "Accessibilité",
+  "id": "Aksesibilitas"
+ },
+ "App screen example": {
+  "pt-BR": "Exemplo de tela do aplicativo",
+  "de": "Beispiel aus der App",
+  "zh-TW": "應用程式畫面範例",
+  "fr": "Exemple d’écran de l’application",
+  "id": "Contoh layar aplikasi"
+ },
+ "Bluetooth (beta)": {
+  "pt-BR": "Bluetooth (beta)",
+  "de": "Bluetooth (Beta)",
+  "zh-TW": "藍牙（Beta）",
+  "fr": "Bluetooth (bêta)",
+  "id": "Bluetooth (beta)"
+ },
+ "Device Management": {
+  "pt-BR": "Gerenciamento de dispositivos",
+  "de": "Geräteverwaltung",
+  "zh-TW": "裝置管理",
+  "fr": "Gestion des appareils",
+  "id": "Pengelolaan perangkat"
+ },
+ "Registered PCs": {
+  "pt-BR": "PCs registrados",
+  "de": "Registrierte PCs",
+  "zh-TW": "已註冊的電腦",
+  "fr": "PC enregistrés",
+  "id": "PC terdaftar"
+ },
+ "Reset devices": {
+  "pt-BR": "Redefinir dispositivos",
+  "de": "Geräte zurücksetzen",
+  "zh-TW": "重設裝置",
+  "fr": "Réinitialiser les appareils",
+  "id": "Reset perangkat"
+ },
+ "Windows PC": {
+  "pt-BR": "PC Windows",
+  "de": "Windows-PC",
+  "zh-TW": "Windows 電腦",
+  "fr": "PC Windows",
+  "id": "PC Windows"
+ },
+ "App UI recreation": {
+  "pt-BR": "Recriação da interface do aplicativo",
+  "de": "Nachbildung der App-Oberfläche",
+  "zh-TW": "應用程式介面示意圖",
+  "fr": "Reconstitution de l’interface",
+  "id": "Ilustrasi antarmuka aplikasi"
+ },
+ "App capture · earlier version": {
+  "pt-BR": "Captura do aplicativo · versão anterior",
+  "de": "App-Aufnahme · ältere Version",
+  "zh-TW": "應用程式截圖（舊版）",
+  "fr": "Capture de l’application · ancienne version",
+  "id": "Tangkapan layar aplikasi · versi sebelumnya"
+ },
+ "Linux": {
+  "pt-BR": "Linux",
+  "de": "Linux",
+  "zh-TW": "Linux",
+  "fr": "Linux",
+  "id": "Linux"
+ },
+ "Input forwarding ready": {
+  "pt-BR": "Encaminhamento de entrada pronto",
+  "de": "Eingabeweiterleitung bereit",
+  "zh-TW": "可轉送輸入",
+  "fr": "Transmission des commandes prête",
+  "id": "Penerusan input siap"
+ },
+ "Google account": {
+  "pt-BR": "Conta do Google",
+  "de": "Google-Konto",
+  "zh-TW": "Google 帳戶",
+  "fr": "Compte Google",
+  "id": "Akun Google"
+ },
+ "Local network (LAN)": {
+  "pt-BR": "Rede local (LAN)",
+  "de": "Lokales Netzwerk (LAN)",
+  "zh-TW": "區域網路（LAN）",
+  "fr": "Réseau local (LAN)",
+  "id": "Jaringan lokal (LAN)"
+ },
+ "FAQ": {
+  "pt-BR": "Perguntas frequentes",
+  "de": "Häufig gestellte Fragen",
+  "zh-TW": "常見問題",
+  "fr": "Questions fréquentes",
+  "id": "Pertanyaan umum"
+ },
+ "Android 11 or later and accessibility permission": {
+  "id": "Android 11 atau yang lebih baru dan izin aksesibilitas"
+ },
+ "Android OneMouse QR scanning tab": {
+  "id": "Tab pemindai QR OneMouse untuk Android"
+ },
+ "Android OneMouse connection settings and Start Bluetooth mode button": {
+  "id": "Pengaturan koneksi OneMouse di Android dan tombol Mulai mode Bluetooth"
+ },
+ "Android OneMouse number code tab": {
+  "id": "Tab kode angka OneMouse untuk Android"
+ },
+ "Android app and permission limits": {
+  "id": "Batasan aplikasi dan izin Android"
+ },
+ "Android app pricing": {
+  "id": "Harga aplikasi Android"
+ },
+ "Android compatibility, UI, browser, and device connection support": {
+  "id": "Kompatibilitas Android serta dukungan antarmuka, browser, dan koneksi perangkat"
+ },
+ "Android device placed to the right of the PC in Windows OneMouse": {
+  "id": "Perangkat Android di sebelah kanan PC pada OneMouse untuk Windows"
+ },
+ "Android phone or tablet": {
+  "id": "Ponsel atau tablet Android"
+ },
+ "Android settings example": {
+  "id": "Contoh pengaturan Android"
+ },
+ "Android store billing": {
+  "id": "Penagihan melalui toko aplikasi Android"
+ },
+ "Control the PC with an Android gamepad": {
+  "id": "Kendalikan PC dengan gamepad Android"
+ },
+ "Controls in an Android window": {
+  "id": "Kontrol di jendela Android"
+ },
+ "Desk with a Windows monitor in the center, a Mac on the left, an Android phone below and an Android tablet on the right": {
+  "id": "Meja dengan monitor Windows di tengah, Mac di kiri, ponsel Android di bawah, dan tablet Android di kanan"
+ },
+ "Does drawing down, then right close my Android app?": {
+  "id": "Apakah gerakan ke bawah lalu ke kanan menutup aplikasi Android?"
+ },
+ "Enlarge image: Android: clear OneMouse app data": {
+  "id": "Perbesar gambar: hapus data aplikasi OneMouse di Android"
+ },
+ "Enter the code or scan the QR code on Android": {
+  "id": "Masukkan kode atau pindai kode QR di Android"
+ },
+ "Features by connection type": {
+  "id": "Fitur menurut jenis koneksi"
+ },
+ "Go back or scroll on Android": {
+  "id": "Kembali atau gulir di Android"
+ },
+ "Google Play only: billing, updates, and reviews": {
+  "id": "Khusus Google Play: penagihan, pembaruan, dan ulasan"
+ },
+ "Google SDK terms": {
+  "id": "Ketentuan Google SDK"
+ },
+ "Grant notification access on Android and turn on": {
+  "id": "Berikan akses notifikasi di Android lalu aktifkan"
+ },
+ "How do I control or stop a scroll gesture on Android?": {
+  "id": "Bagaimana cara mengatur atau menghentikan gestur gulir di Android?"
+ },
+ "If the pointer does not reach Android": {
+  "id": "Jika kursor tidak berpindah ke Android"
+ },
+ "In OneMouse on Mac, open": {
+  "id": "Di OneMouse untuk Mac, buka"
+ },
+ "In OneMouse, check": {
+  "id": "Di OneMouse, periksa"
+ },
+ "In the Android app, enable": {
+  "id": "Di aplikasi Android, aktifkan"
+ },
+ "In the Android app, use": {
+  "id": "Di aplikasi Android, gunakan"
+ },
+ "Move the pointer to Android, then go back or scroll with the mouse.": {
+  "id": "Geser kursor ke Android, lalu gunakan mouse untuk kembali atau menggulir."
+ },
+ "Move your Windows cursor past the edge of the screen to keep working on Android, a Mac, or another PC.": {
+  "id": "Geser kursor Windows melewati tepi layar untuk melanjutkan pekerjaan di Android, Mac, atau PC lain."
+ },
+ "On Android Home, check": {
+  "id": "Di Beranda Android, periksa"
+ },
+ "On Android, use an app that supports image pasting. Receiving an image does not automatically paste it or save it to the gallery.": {
+  "id": "Di Android, gunakan aplikasi yang mendukung penempelan gambar. Gambar yang diterima tidak otomatis ditempel atau disimpan ke galeri."
+ },
+ "On Windows and Android,": {
+  "id": "Di Windows dan Android,"
+ },
+ "On the PC you want to control, open": {
+  "id": "Di PC yang ingin Anda kendalikan, buka"
+ },
+ "On the main PC, open": {
+  "id": "Di PC utama, buka"
+ },
+ "Open Windows from Android": {
+  "id": "Buka Windows dari Android"
+ },
+ "Open the Android screen on your PC": {
+  "id": "Buka layar Android di PC Anda"
+ },
+ "Open the app and enable Android Accessibility": {
+  "id": "Buka aplikasi dan aktifkan layanan aksesibilitas Android"
+ },
+ "PC mouse and keyboard control Android": {
+  "id": "Kendalikan Android dengan mouse dan keyboard PC"
+ },
+ "PC to Android instead": {
+  "id": "Sebaliknya, kendalikan Android dari PC"
+ },
+ "Raise / lower Android media volume.": {
+  "id": "Naikkan atau turunkan volume media Android."
+ },
+ "Set up Android input": {
+  "id": "Siapkan input Android"
+ },
+ "Standby clock weather": {
+  "id": "Cuaca pada jam siaga"
+ },
+ "Up, then down": {
+  "id": "Ke atas, lalu ke bawah"
+ },
+ "When opening the Android screen on your PC, accept the": {
+  "id": "Saat membuka layar Android di PC, setujui"
+ },
+ "While directly controlling Android": {
+  "id": "Saat mengendalikan Android secara langsung"
+ },
+ "Why does the connection drop only when the Android screen goes off?": {
+  "id": "Mengapa koneksi terputus hanya saat layar Android mati?"
+ },
+ "Windows monitor and Android phone seen from an angle": {
+  "id": "Monitor Windows dan ponsel Android dilihat dari samping"
+ },
+ "iPad, not Android": {
+  "id": "iPad, bukan Android"
+ },
+ "in Android Settings.": {
+  "id": "di Pengaturan Android."
+ },
+ "on Windows and use OneMouse Home on Android to sign in. Under": {
+  "id": "di Windows, lalu masuk melalui Beranda OneMouse di Android. Pada bagian"
+ },
+ "on your phone, choose your PC to connect, then enable Android": {
+  "id": "di ponsel, pilih PC untuk disambungkan, lalu aktifkan aksesibilitas Android"
+ },
+ "Features · OneMouse": {
+  "pt-BR": "Recursos · OneMouse",
+  "de": "Funktionen · OneMouse",
+  "zh-TW": "功能 · OneMouse",
+  "fr": "Fonctionnalités · OneMouse",
+  "id": "Fitur · OneMouse"
+ },
+ "Android phones and tablets · Android 8.0 or later": {
+  "pt-BR": "Celulares e tablets Android · Android 8.0 ou posterior",
+  "de": "Android-Smartphones und -Tablets · ab Android 8.0",
+  "zh-TW": "Android 手機和平板電腦 · Android 8.0 以上",
+  "fr": "Téléphones et tablettes Android · Android 8.0 ou version ultérieure",
+  "id": "Ponsel dan tablet Android · Android 8.0 atau lebih baru"
+ },
+ "Apple Silicon, macOS 13 or later": {
+  "pt-BR": "Apple Silicon, macOS 13 ou posterior",
+  "de": "Apple Silicon, macOS 13 oder neuer",
+  "zh-TW": "Apple Silicon，macOS 13 以上",
+  "fr": "Apple Silicon, macOS 13 ou version ultérieure",
+  "id": "Apple Silicon, macOS 13 atau lebih baru"
+ },
+ "OneMouse overview video preview": {
+  "pt-BR": "Prévia do vídeo de apresentação do OneMouse",
+  "de": "Vorschau des OneMouse-Übersichtsvideos",
+  "zh-TW": "OneMouse 介紹影片預覽",
+  "fr": "Aperçu de la vidéo de présentation de OneMouse",
+  "id": "Pratinjau video pengenalan OneMouse"
+ },
+ "OneMouse to PC": {
+  "pt-BR": "OneMouse para o PC",
+  "de": "OneMouse zum PC",
+  "zh-TW": "OneMouse 傳送至電腦",
+  "fr": "OneMouse vers le PC",
+  "id": "OneMouse ke PC"
+ },
+ "Use reset only if the issue persists after updating and reopening OneMouse. If only one device is affected, try removing just that device from Device Management and pairing it again first.": {
+  "pt-BR": "Faça a redefinição apenas se o problema persistir depois de atualizar e reabrir o OneMouse. Se apenas um dispositivo for afetado, primeiro remova-o do Gerenciamento de dispositivos e pareie-o novamente.",
+  "de": "Setzen Sie die Geräte erst zurück, wenn das Problem nach dem Aktualisieren und erneuten Öffnen von OneMouse weiterhin besteht. Ist nur ein Gerät betroffen, entfernen Sie es zuerst aus der Geräteverwaltung und koppeln Sie es erneut.",
+  "zh-TW": "更新並重新開啟 OneMouse 後，如果問題仍未解決，再使用重設功能。若只有一部裝置受影響，請先到裝置管理移除該裝置，再重新配對。",
+  "fr": "Ne réinitialisez les appareils que si le problème persiste après la mise à jour et le redémarrage de OneMouse. Si un seul appareil est concerné, retirez-le d’abord dans la gestion des appareils, puis associez-le à nouveau.",
+  "id": "Lakukan reset hanya jika masalah masih muncul setelah memperbarui dan membuka kembali OneMouse. Jika hanya satu perangkat yang bermasalah, hapus perangkat itu saja dari Pengelolaan perangkat terlebih dahulu, lalu pasangkan kembali."
+ },
+ "© 2026 OneMouse": {
+  "pt-BR": "© 2026 OneMouse",
+  "de": "© 2026 OneMouse",
+  "zh-TW": "© 2026 OneMouse",
+  "fr": "© 2026 OneMouse",
+  "id": "© 2026 OneMouse"
+ },
+ "OneMouse | AlternativeTo": {
+  "pt-BR": "OneMouse | AlternativeTo",
+  "de": "OneMouse | AlternativeTo",
+  "zh-TW": "OneMouse | AlternativeTo",
+  "fr": "OneMouse | AlternativeTo",
+  "id": "OneMouse | AlternativeTo"
+ },
+ "AOSP OpenWnn — NOTICE": {
+  "pt-BR": "AOSP OpenWnn — NOTICE",
+  "de": "AOSP OpenWnn — NOTICE",
+  "zh-TW": "AOSP OpenWnn — NOTICE",
+  "fr": "AOSP OpenWnn — NOTICE",
+  "id": "AOSP OpenWnn — NOTICE"
+ },
+ "AOSP Pinyin — NOTICE": {
+  "pt-BR": "AOSP Pinyin — NOTICE",
+  "de": "AOSP Pinyin — NOTICE",
+  "zh-TW": "AOSP Pinyin — NOTICE",
+  "fr": "AOSP Pinyin — NOTICE",
+  "id": "AOSP Pinyin — NOTICE"
+ },
+ "Microsoft Store": {
+  "pt-BR": "Microsoft Store",
+  "de": "Microsoft Store",
+  "zh-TW": "Microsoft Store",
+  "fr": "Microsoft Store",
+  "id": "Microsoft Store"
+ },
+ "Google Play": {
+  "pt-BR": "Google Play",
+  "de": "Google Play",
+  "zh-TW": "Google Play",
+  "fr": "Google Play",
+  "id": "Google Play"
+ },
+ "Galaxy Store": {
+  "pt-BR": "Galaxy Store",
+  "de": "Galaxy Store",
+  "zh-TW": "Galaxy Store",
+  "fr": "Galaxy Store",
+  "id": "Galaxy Store"
+ },
+ "Windows 1.7.2 recombination instructions and files": {
+  "pt-BR": "Windows 1.7.2: instruções e arquivos de recombinação",
+  "de": "Windows 1.7.2: Anleitung und Dateien für die Rekombination",
+  "zh-TW": "Windows 1.7.2：重新組合說明及檔案",
+  "fr": "Windows 1.7.2 : instructions et fichiers de recombinaison",
+  "id": "Windows 1.7.2: petunjuk dan berkas rekombinasi"
+ },
+ "zeroconf — LGPL 2.1-or-later": {
+  "pt-BR": "zeroconf — LGPL 2.1-or-later",
+  "de": "zeroconf — LGPL 2.1-or-later",
+  "zh-TW": "zeroconf — LGPL 2.1-or-later",
+  "fr": "zeroconf — LGPL 2.1-or-later",
+  "id": "zeroconf — LGPL 2.1-or-later"
+ },
+ "Windows 1.6.8 recombination instructions and files": {
+  "pt-BR": "Windows 1.6.8: instruções e arquivos de recombinação",
+  "de": "Windows 1.6.8: Anleitung und Dateien für die Rekombination",
+  "zh-TW": "Windows 1.6.8：重新組合說明及檔案",
+  "fr": "Windows 1.6.8 : instructions et fichiers de recombinaison",
+  "id": "Windows 1.6.8: petunjuk dan berkas rekombinasi"
+ },
+ "PyNaCl — Apache License 2.0": {
+  "pt-BR": "PyNaCl — Apache License 2.0",
+  "de": "PyNaCl — Apache License 2.0",
+  "zh-TW": "PyNaCl — Apache License 2.0",
+  "fr": "PyNaCl — Apache License 2.0",
+  "id": "PyNaCl — Apache License 2.0"
+ },
+ "Android NDK libc++ / LLVM runtime — Apache 2.0 with LLVM exception": {
+  "pt-BR": "Android NDK libc++ / LLVM runtime — Apache 2.0 with LLVM exception",
+  "de": "Android NDK libc++ / LLVM runtime — Apache 2.0 with LLVM exception",
+  "zh-TW": "Android NDK libc++ / LLVM runtime — Apache 2.0 with LLVM exception",
+  "fr": "Android NDK libc++ / LLVM runtime — Apache 2.0 with LLVM exception",
+  "id": "Android NDK libc++ / LLVM runtime — Apache 2.0 with LLVM exception"
+ },
+ "MPL 2.0": {
+  "pt-BR": "MPL 2.0",
+  "de": "MPL 2.0",
+  "zh-TW": "MPL 2.0",
+  "fr": "MPL 2.0",
+  "id": "MPL 2.0"
+ },
+ "OpenSSL 4.0.2 — Apache License 2.0": {
+  "pt-BR": "OpenSSL 4.0.2 — Apache License 2.0",
+  "de": "OpenSSL 4.0.2 — Apache License 2.0",
+  "zh-TW": "OpenSSL 4.0.2 — Apache License 2.0",
+  "fr": "OpenSSL 4.0.2 — Apache License 2.0",
+  "id": "OpenSSL 4.0.2 — Apache License 2.0"
+ },
+ "LGPL 2.1-or-later": {
+  "pt-BR": "LGPL 2.1-or-later",
+  "de": "LGPL 2.1-or-later",
+  "zh-TW": "LGPL 2.1-or-later",
+  "fr": "LGPL 2.1-or-later",
+  "id": "LGPL 2.1-or-later"
+ },
+ "Windows 1.7.0 recombination instructions and files": {
+  "pt-BR": "Windows 1.7.0: instruções e arquivos de recombinação",
+  "de": "Windows 1.7.0: Anleitung und Dateien für die Rekombination",
+  "zh-TW": "Windows 1.7.0：重新組合說明及檔案",
+  "fr": "Windows 1.7.0 : instructions et fichiers de recombinaison",
+  "id": "Windows 1.7.0: petunjuk dan berkas rekombinasi"
+ },
+ "Windows 1.6.9 recombination instructions and files": {
+  "pt-BR": "Windows 1.6.9: instruções e arquivos de recombinação",
+  "de": "Windows 1.6.9: Anleitung und Dateien für die Rekombination",
+  "zh-TW": "Windows 1.6.9：重新組合說明及檔案",
+  "fr": "Windows 1.6.9 : instructions et fichiers de recombinaison",
+  "id": "Windows 1.6.9: petunjuk dan berkas rekombinasi"
+ },
+ "Apache 2.0 with LLVM exception": {
+  "pt-BR": "Apache 2.0 with LLVM exception",
+  "de": "Apache 2.0 with LLVM exception",
+  "zh-TW": "Apache 2.0 with LLVM exception",
+  "fr": "Apache 2.0 with LLVM exception",
+  "id": "Apache 2.0 with LLVM exception"
+ },
+ "AndroidX Core 1.18.0 · Activity 1.13.0 · AppCompat 1.8.0 · Browser 1.9.0": {
+  "pt-BR": "AndroidX Core 1.18.0 · Activity 1.13.0 · AppCompat 1.8.0 · Browser 1.9.0",
+  "de": "AndroidX Core 1.18.0 · Activity 1.13.0 · AppCompat 1.8.0 · Browser 1.9.0",
+  "zh-TW": "AndroidX Core 1.18.0 · Activity 1.13.0 · AppCompat 1.8.0 · Browser 1.9.0",
+  "fr": "AndroidX Core 1.18.0 · Activity 1.13.0 · AppCompat 1.8.0 · Browser 1.9.0",
+  "id": "AndroidX Core 1.18.0 · Activity 1.13.0 · AppCompat 1.8.0 · Browser 1.9.0"
+ },
+ "OpenSSL 3.0.13 — Apache License 2.0": {
+  "pt-BR": "OpenSSL 3.0.13 — Apache License 2.0",
+  "de": "OpenSSL 3.0.13 — Apache License 2.0",
+  "zh-TW": "OpenSSL 3.0.13 — Apache License 2.0",
+  "fr": "OpenSSL 3.0.13 — Apache License 2.0",
+  "id": "OpenSSL 3.0.13 — Apache License 2.0"
+ },
+ "Java Native Access (JNA) 5.19.1": {
+  "pt-BR": "Java Native Access (JNA) 5.19.1",
+  "de": "Java Native Access (JNA) 5.19.1",
+  "zh-TW": "Java Native Access (JNA) 5.19.1",
+  "fr": "Java Native Access (JNA) 5.19.1",
+  "id": "Java Native Access (JNA) 5.19.1"
+ },
+ "Windows 1.6.4 recombination instructions and files": {
+  "pt-BR": "Windows 1.6.4: instruções e arquivos de recombinação",
+  "de": "Windows 1.6.4: Anleitung und Dateien für die Rekombination",
+  "zh-TW": "Windows 1.6.4：重新組合說明及檔案",
+  "fr": "Windows 1.6.4 : instructions et fichiers de recombinaison",
+  "id": "Windows 1.6.4: petunjuk dan berkas rekombinasi"
+ },
+ "Swift Sodium 0.11.0 · libsodium 1.0.22": {
+  "pt-BR": "Swift Sodium 0.11.0 · libsodium 1.0.22",
+  "de": "Swift Sodium 0.11.0 · libsodium 1.0.22",
+  "zh-TW": "Swift Sodium 0.11.0 · libsodium 1.0.22",
+  "fr": "Swift Sodium 0.11.0 · libsodium 1.0.22",
+  "id": "Swift Sodium 0.11.0 · libsodium 1.0.22"
+ },
+ "Corresponding source — LazySodium Android 5.2.0": {
+  "pt-BR": "Corresponding source — LazySodium Android 5.2.0",
+  "de": "Corresponding source — LazySodium Android 5.2.0",
+  "zh-TW": "Corresponding source — LazySodium Android 5.2.0",
+  "fr": "Corresponding source — LazySodium Android 5.2.0",
+  "id": "Corresponding source — LazySodium Android 5.2.0"
+ },
+ "Electron 45.2.3": {
+  "pt-BR": "Electron 45.2.3",
+  "de": "Electron 45.2.3",
+  "zh-TW": "Electron 45.2.3",
+  "fr": "Electron 45.2.3",
+  "id": "Electron 45.2.3"
+ },
+ "libsodium 1.0.22 — ISC": {
+  "pt-BR": "libsodium 1.0.22 — ISC",
+  "de": "libsodium 1.0.22 — ISC",
+  "zh-TW": "libsodium 1.0.22 — ISC",
+  "fr": "libsodium 1.0.22 — ISC",
+  "id": "libsodium 1.0.22 — ISC"
+ },
+ "Google Play Billing 8.3.0 · App Update 2.1.0 · In-App Review 2.0.2": {
+  "pt-BR": "Google Play Billing 8.3.0 · App Update 2.1.0 · In-App Review 2.0.2",
+  "de": "Google Play Billing 8.3.0 · App Update 2.1.0 · In-App Review 2.0.2",
+  "zh-TW": "Google Play Billing 8.3.0 · App Update 2.1.0 · In-App Review 2.0.2",
+  "fr": "Google Play Billing 8.3.0 · App Update 2.1.0 · In-App Review 2.0.2",
+  "id": "Google Play Billing 8.3.0 · App Update 2.1.0 · In-App Review 2.0.2"
+ },
+ "winsdk 1.0.0b10 · pyserial 3.5": {
+  "pt-BR": "winsdk 1.0.0b10 · pyserial 3.5",
+  "de": "winsdk 1.0.0b10 · pyserial 3.5",
+  "zh-TW": "winsdk 1.0.0b10 · pyserial 3.5",
+  "fr": "winsdk 1.0.0b10 · pyserial 3.5",
+  "id": "winsdk 1.0.0b10 · pyserial 3.5"
+ },
+ "WebRTC 152.0.0 (stasel/WebRTC)": {
+  "pt-BR": "WebRTC 152.0.0 (stasel/WebRTC)",
+  "de": "WebRTC 152.0.0 (stasel/WebRTC)",
+  "zh-TW": "WebRTC 152.0.0 (stasel/WebRTC)",
+  "fr": "WebRTC 152.0.0 (stasel/WebRTC)",
+  "id": "WebRTC 152.0.0 (stasel/WebRTC)"
+ },
+ "OkHttp 5.3.2 · Okio 3.16.4": {
+  "pt-BR": "OkHttp 5.3.2 · Okio 3.16.4",
+  "de": "OkHttp 5.3.2 · Okio 3.16.4",
+  "zh-TW": "OkHttp 5.3.2 · Okio 3.16.4",
+  "fr": "OkHttp 5.3.2 · Okio 3.16.4",
+  "id": "OkHttp 5.3.2 · Okio 3.16.4"
+ },
+ "WebRTC Android SDK 144.7559.05": {
+  "pt-BR": "WebRTC Android SDK 144.7559.05",
+  "de": "WebRTC Android SDK 144.7559.05",
+  "zh-TW": "WebRTC Android SDK 144.7559.05",
+  "fr": "WebRTC Android SDK 144.7559.05",
+  "id": "WebRTC Android SDK 144.7559.05"
+ },
+ "cryptography 50.0.1 · PyNaCl 1.6.2 · libsodium": {
+  "pt-BR": "cryptography 50.0.1 · PyNaCl 1.6.2 · libsodium",
+  "de": "cryptography 50.0.1 · PyNaCl 1.6.2 · libsodium",
+  "zh-TW": "cryptography 50.0.1 · PyNaCl 1.6.2 · libsodium",
+  "fr": "cryptography 50.0.1 · PyNaCl 1.6.2 · libsodium",
+  "id": "cryptography 50.0.1 · PyNaCl 1.6.2 · libsodium"
+ },
+ "LazySodium Android — MPL 2.0": {
+  "pt-BR": "LazySodium Android — MPL 2.0",
+  "de": "LazySodium Android — MPL 2.0",
+  "zh-TW": "LazySodium Android — MPL 2.0",
+  "fr": "LazySodium Android — MPL 2.0",
+  "id": "LazySodium Android — MPL 2.0"
+ },
+ "GNU GPL 3.0": {
+  "pt-BR": "GNU GPL 3.0",
+  "de": "GNU GPL 3.0",
+  "zh-TW": "GNU GPL 3.0",
+  "fr": "GNU GPL 3.0",
+  "id": "GNU GPL 3.0"
+ },
+ "LazySodium Android 5.2.0 — published sources JAR": {
+  "pt-BR": "LazySodium Android 5.2.0 — published sources JAR",
+  "de": "LazySodium Android 5.2.0 — published sources JAR",
+  "zh-TW": "LazySodium Android 5.2.0 — published sources JAR",
+  "fr": "LazySodium Android 5.2.0 — published sources JAR",
+  "id": "LazySodium Android 5.2.0 — published sources JAR"
+ },
+ "Mozilla Public License 2.0": {
+  "pt-BR": "Mozilla Public License 2.0",
+  "de": "Mozilla Public License 2.0",
+  "zh-TW": "Mozilla Public License 2.0",
+  "fr": "Mozilla Public License 2.0",
+  "id": "Mozilla Public License 2.0"
+ },
+ "libsodium 1.0.20 — ISC": {
+  "pt-BR": "libsodium 1.0.20 — ISC",
+  "de": "libsodium 1.0.20 — ISC",
+  "zh-TW": "libsodium 1.0.20 — ISC",
+  "fr": "libsodium 1.0.20 — ISC",
+  "id": "libsodium 1.0.20 — ISC"
+ },
+ "Kotlin standard library 2.2.21 · kotlinx-coroutines 1.9.0": {
+  "pt-BR": "Kotlin standard library 2.2.21 · kotlinx-coroutines 1.9.0",
+  "de": "Kotlin standard library 2.2.21 · kotlinx-coroutines 1.9.0",
+  "zh-TW": "Kotlin standard library 2.2.21 · kotlinx-coroutines 1.9.0",
+  "fr": "Kotlin standard library 2.2.21 · kotlinx-coroutines 1.9.0",
+  "id": "Kotlin standard library 2.2.21 · kotlinx-coroutines 1.9.0"
+ },
+ "Windows 1.6.2.0 recombination instructions and files": {
+  "pt-BR": "Windows 1.6.2.0 recombination instructions and files",
+  "de": "Windows 1.6.2.0 recombination instructions and files",
+  "zh-TW": "Windows 1.6.2.0 recombination instructions and files",
+  "fr": "Windows 1.6.2.0 recombination instructions and files",
+  "id": "Windows 1.6.2.0 recombination instructions and files"
+ },
+ "Apache License 2.0": {
+  "pt-BR": "Apache License 2.0",
+  "de": "Apache License 2.0",
+  "zh-TW": "Apache License 2.0",
+  "fr": "Apache License 2.0",
+  "id": "Apache License 2.0"
+ },
+ "ZXing Android Embedded 4.3.0 · ZXing Core 3.4.1": {
+  "pt-BR": "ZXing Android Embedded 4.3.0 · ZXing Core 3.4.1",
+  "de": "ZXing Android Embedded 4.3.0 · ZXing Core 3.4.1",
+  "zh-TW": "ZXing Android Embedded 4.3.0 · ZXing Core 3.4.1",
+  "fr": "ZXing Android Embedded 4.3.0 · ZXing Core 3.4.1",
+  "id": "ZXing Android Embedded 4.3.0 · ZXing Core 3.4.1"
+ },
+ "LazySodium Android 5.2.0 · libsodium 1.0.20": {
+  "pt-BR": "LazySodium Android 5.2.0 · libsodium 1.0.20",
+  "de": "LazySodium Android 5.2.0 · libsodium 1.0.20",
+  "zh-TW": "LazySodium Android 5.2.0 · libsodium 1.0.20",
+  "fr": "LazySodium Android 5.2.0 · libsodium 1.0.20",
+  "id": "LazySodium Android 5.2.0 · libsodium 1.0.20"
+ },
+ "OpenSSL 4.0.2 — AUTHORS": {
+  "pt-BR": "OpenSSL 4.0.2 — AUTHORS",
+  "de": "OpenSSL 4.0.2 — AUTHORS",
+  "zh-TW": "OpenSSL 4.0.2 — AUTHORS",
+  "fr": "OpenSSL 4.0.2 — AUTHORS",
+  "id": "OpenSSL 4.0.2 — AUTHORS"
+ },
+ "GNU LGPL 3.0": {
+  "pt-BR": "GNU LGPL 3.0",
+  "de": "GNU LGPL 3.0",
+  "zh-TW": "GNU LGPL 3.0",
+  "fr": "GNU LGPL 3.0",
+  "id": "GNU LGPL 3.0"
+ },
+ "cffi 2.0.0": {
+  "pt-BR": "cffi 2.0.0",
+  "de": "cffi 2.0.0",
+  "zh-TW": "cffi 2.0.0",
+  "fr": "cffi 2.0.0",
+  "id": "cffi 2.0.0"
+ },
+ "OpenSSL 3.0.13 — AUTHORS": {
+  "pt-BR": "OpenSSL 3.0.13 — AUTHORS",
+  "de": "OpenSSL 3.0.13 — AUTHORS",
+  "zh-TW": "OpenSSL 3.0.13 — AUTHORS",
+  "fr": "OpenSSL 3.0.13 — AUTHORS",
+  "id": "OpenSSL 3.0.13 — AUTHORS"
+ },
+ "Android NDK libc++ / LLVM runtime (28.2.13676358)": {
+  "pt-BR": "Android NDK libc++ / LLVM runtime (28.2.13676358)",
+  "de": "Android NDK libc++ / LLVM runtime (28.2.13676358)",
+  "zh-TW": "Android NDK libc++ / LLVM runtime (28.2.13676358)",
+  "fr": "Android NDK libc++ / LLVM runtime (28.2.13676358)",
+  "id": "Android NDK libc++ / LLVM runtime (28.2.13676358)"
+ },
+ "OpenSSL 3.0.13 (Python) · OpenSSL 4.0.2 (cryptography)": {
+  "pt-BR": "OpenSSL 3.0.13 (Python) · OpenSSL 4.0.2 (cryptography)",
+  "de": "OpenSSL 3.0.13 (Python) · OpenSSL 4.0.2 (cryptography)",
+  "zh-TW": "OpenSSL 3.0.13 (Python) · OpenSSL 4.0.2 (cryptography)",
+  "fr": "OpenSSL 3.0.13 (Python) · OpenSSL 4.0.2 (cryptography)",
+  "id": "OpenSSL 3.0.13 (Python) · OpenSSL 4.0.2 (cryptography)"
+ },
+ "zeroconf 0.151.3 · ifaddr 0.2.0": {
+  "pt-BR": "zeroconf 0.151.3 · ifaddr 0.2.0",
+  "de": "zeroconf 0.151.3 · ifaddr 0.2.0",
+  "zh-TW": "zeroconf 0.151.3 · ifaddr 0.2.0",
+  "fr": "zeroconf 0.151.3 · ifaddr 0.2.0",
+  "id": "zeroconf 0.151.3 · ifaddr 0.2.0"
+ },
+ "Windows 1.6.5 recombination instructions and files": {
+  "pt-BR": "Windows 1.6.5: instruções e arquivos de recombinação",
+  "de": "Windows 1.6.5: Anleitung und Dateien für die Rekombination",
+  "zh-TW": "Windows 1.6.5：重新組合說明及檔案",
+  "fr": "Windows 1.6.5 : instructions et fichiers de recombinaison",
+  "id": "Windows 1.6.5: petunjuk dan berkas rekombinasi"
+ },
+ "GNU LGPL 2.1": {
+  "pt-BR": "GNU LGPL 2.1",
+  "de": "GNU LGPL 2.1",
+  "zh-TW": "GNU LGPL 2.1",
+  "fr": "GNU LGPL 2.1",
+  "id": "GNU LGPL 2.1"
+ },
+ "Apache 2.0": {
+  "pt-BR": "Apache 2.0",
+  "de": "Apache 2.0",
+  "zh-TW": "Apache 2.0",
+  "fr": "Apache 2.0",
+  "id": "Apache 2.0"
+ },
+ "Python 3.11.9": {
+  "pt-BR": "Python 3.11.9",
+  "de": "Python 3.11.9",
+  "zh-TW": "Python 3.11.9",
+  "fr": "Python 3.11.9",
+  "id": "Python 3.11.9"
+ },
+ "cryptography — Apache 2.0 / BSD 3-Clause": {
+  "pt-BR": "cryptography — Apache 2.0 / BSD 3-Clause",
+  "de": "cryptography — Apache 2.0 / BSD 3-Clause",
+  "zh-TW": "cryptography — Apache 2.0 / BSD 3-Clause",
+  "fr": "cryptography — Apache 2.0 / BSD 3-Clause",
+  "id": "cryptography — Apache 2.0 / BSD 3-Clause"
+ },
+ "cryptography — Apache License 2.0": {
+  "pt-BR": "cryptography — Apache License 2.0",
+  "de": "cryptography — Apache License 2.0",
+  "zh-TW": "cryptography — Apache License 2.0",
+  "fr": "cryptography — Apache License 2.0",
+  "id": "cryptography — Apache License 2.0"
+ },
+ "GNU GPL 2.0": {
+  "pt-BR": "GNU GPL 2.0",
+  "de": "GNU GPL 2.0",
+  "zh-TW": "GNU GPL 2.0",
+  "fr": "GNU GPL 2.0",
+  "id": "GNU GPL 2.0"
+ }
+}

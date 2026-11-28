@@ -20,8 +20,9 @@ class Page(HTMLParser):
         self.tags.setdefault(tag, []).append(dict(attrs))
 
 def resolve(route):
-    p = ROOT / urlsplit(route).path.lstrip("/")
-    return p / "index.html" if route.endswith("/") else p.with_suffix(".html") if not p.suffix else p
+    path = urlsplit(route).path
+    p = ROOT / path.lstrip("/")
+    return p / "index.html" if path.endswith("/") else p.with_suffix(".html") if not p.suffix else p
 
 class LocaleTests(unittest.TestCase):
     def test_routes_reciprocal_and_indexed(self):

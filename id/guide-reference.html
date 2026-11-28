@@ -1,0 +1,1362 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Panduan 124; OneMouse - Hubungkan Android, Windows PC, dan Mac</title>
+    <meta
+      name="description"
+      content="Set up OneMouse and learn screenshot capture and sharing, PC remote control from Android, file and clipboard transfer, and Bluetooth connections."
+    />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <link rel="stylesheet" href="../css/onemouse.css" />
+    <link rel="stylesheet" href="../css/guide-help.css" />
+    <script src="../js/guide-help.js" defer></script>
+    <link rel="canonical" href="https://onemouse.pages.dev/en/guide" />
+    <link rel="alternate" hreflang="ko" href="https://onemouse.pages.dev/guide-reference">
+<link rel="alternate" hreflang="en" href="https://onemouse.pages.dev/en/guide-reference">
+<link rel="alternate" hreflang="ja" href="https://onemouse.pages.dev/ja/guide-reference">
+<link rel="alternate" hreflang="zh" href="https://onemouse.pages.dev/zh/guide-reference">
+<link rel="alternate" hreflang="es" href="https://onemouse.pages.dev/es/guide-reference">
+<link rel="alternate" hreflang="pt-BR" href="https://onemouse.pages.dev/pt-br/guide-reference">
+<link rel="alternate" hreflang="de" href="https://onemouse.pages.dev/de/guide-reference">
+<link rel="alternate" hreflang="zh-TW" href="https://onemouse.pages.dev/zh-tw/guide-reference">
+<link rel="alternate" hreflang="fr" href="https://onemouse.pages.dev/fr/guide-reference">
+<link rel="alternate" hreflang="id" href="https://onemouse.pages.dev/id/guide-reference">
+<link rel="alternate" hreflang="x-default" href="https://onemouse.pages.dev/guide-reference">
+  <link rel="stylesheet" href="/css/official-language-picker.css?v=1">
+<script src="/js/official-language-picker.js?v=1" defer></script>
+</head>
+  <body>
+    <header class="site">
+      <div class="wrap hd">
+        <a class="brand" href="./" aria-label="Beranda OneMouse"><span class="om">OM</span>OneMouse</a>
+        <nav class="nav" aria-label="Navigasi utama">
+          <a href="./">Pinggiran</a>
+          <a href="./#use">Fitur</a>
+          <a href="./guide" class="on">Panduan</a>
+          <a href="./help">Bantuan</a>
+        </nav>
+        <div class="hd-right">
+          <div class="one-language-select"><label class="one-language-label" for="one-language-picker">Bahasa</label><select id="one-language-picker" data-language-picker data-current-language="id" hidden><option value="ko" lang="ko" data-language-route="/guide-reference" data-fragments="android-shortcuts-title bluetooth connect-account connect-bluetooth connect-wifi device-order file-receive-folder files keyboard-shortcuts mac mobile-pc-remote mouse-gestures mouse-gestures-title notifications pc-shortcuts-title pcpc permissions position quick remote remote-gesture-examples screenshots shortcuts shortcuts-next-release start text-to-pc windows-remote">한국어</option><option value="en" lang="en" data-language-route="/en/guide-reference" data-fragments="android-shortcuts-title bluetooth connect-account connect-bluetooth connect-wifi device-order file-receive-folder files keyboard-shortcuts mac mobile-pc-remote mouse-gestures mouse-gestures-title notifications pc-shortcuts-title pcpc permissions position quick remote remote-gesture-examples screenshots shortcuts shortcuts-next-release start text-to-pc windows-remote">English</option><option value="ja" lang="ja" data-language-route="/ja/guide-reference" data-fragments="android-shortcuts-title bluetooth connect-account connect-bluetooth connect-wifi device-order file-receive-folder files keyboard-shortcuts mac mobile-pc-remote mouse-gestures mouse-gestures-title notifications pc-shortcuts-title pcpc permissions position quick remote remote-gesture-examples screenshots shortcuts shortcuts-next-release start text-to-pc windows-remote">日本語</option><option value="zh" lang="zh" data-language-route="/zh/guide-reference" data-fragments="android-shortcuts-title bluetooth connect-account connect-bluetooth connect-wifi device-order file-receive-folder files keyboard-shortcuts mac mobile-pc-remote mouse-gestures mouse-gestures-title notifications pc-shortcuts-title pcpc permissions position quick remote remote-gesture-examples screenshots shortcuts shortcuts-next-release start text-to-pc windows-remote">简体中文</option><option value="es" lang="es" data-language-route="/es/guide-reference" data-fragments="android-shortcuts-title bluetooth connect-account connect-bluetooth connect-wifi device-order file-receive-folder files keyboard-shortcuts mac mobile-pc-remote mouse-gestures mouse-gestures-title notifications pc-shortcuts-title pcpc permissions position quick remote remote-gesture-examples screenshots shortcuts shortcuts-next-release start text-to-pc windows-remote">Español</option><option value="pt-BR" lang="pt-BR" data-language-route="/pt-br/guide-reference" data-fragments="android-shortcuts-title bluetooth connect-account connect-bluetooth connect-wifi device-order file-receive-folder files keyboard-shortcuts mac mobile-pc-remote mouse-gestures mouse-gestures-title notifications pc-shortcuts-title pcpc permissions position quick remote remote-gesture-examples screenshots shortcuts shortcuts-next-release start text-to-pc windows-remote">Português (Brasil)</option><option value="de" lang="de" data-language-route="/de/guide-reference" data-fragments="android-shortcuts-title bluetooth connect-account connect-bluetooth connect-wifi device-order file-receive-folder files keyboard-shortcuts mac mobile-pc-remote mouse-gestures mouse-gestures-title notifications pc-shortcuts-title pcpc permissions position quick remote remote-gesture-examples screenshots shortcuts shortcuts-next-release start text-to-pc windows-remote">Deutsch</option><option value="zh-TW" lang="zh-TW" data-language-route="/zh-tw/guide-reference" data-fragments="android-shortcuts-title bluetooth connect-account connect-bluetooth connect-wifi device-order file-receive-folder files keyboard-shortcuts mac mobile-pc-remote mouse-gestures mouse-gestures-title notifications pc-shortcuts-title pcpc permissions position quick remote remote-gesture-examples screenshots shortcuts shortcuts-next-release start text-to-pc windows-remote">繁體中文</option><option value="fr" lang="fr" data-language-route="/fr/guide-reference" data-fragments="android-shortcuts-title bluetooth connect-account connect-bluetooth connect-wifi device-order file-receive-folder files keyboard-shortcuts mac mobile-pc-remote mouse-gestures mouse-gestures-title notifications pc-shortcuts-title pcpc permissions position quick remote remote-gesture-examples screenshots shortcuts shortcuts-next-release start text-to-pc windows-remote">Français</option><option value="id" lang="id" data-language-route="/id/guide-reference" data-fragments="android-shortcuts-title bluetooth connect-account connect-bluetooth connect-wifi device-order file-receive-folder files keyboard-shortcuts mac mobile-pc-remote mouse-gestures mouse-gestures-title notifications pc-shortcuts-title pcpc permissions position quick remote remote-gesture-examples screenshots shortcuts shortcuts-next-release start text-to-pc windows-remote" selected>Bahasa Indonesia</option></select><noscript><nav class="one-language-fallback" aria-label="Bahasa"><a href="/guide-reference" lang="ko" hreflang="ko">한국어</a><a href="/en/guide-reference" lang="en" hreflang="en">English</a><a href="/ja/guide-reference" lang="ja" hreflang="ja">日本語</a><a href="/zh/guide-reference" lang="zh" hreflang="zh">简体中文</a><a href="/es/guide-reference" lang="es" hreflang="es">Español</a><a href="/pt-br/guide-reference" lang="pt-BR" hreflang="pt-BR">Português (Brasil)</a><a href="/de/guide-reference" lang="de" hreflang="de">Deutsch</a><a href="/zh-tw/guide-reference" lang="zh-TW" hreflang="zh-TW">繁體中文</a><a href="/fr/guide-reference" lang="fr" hreflang="fr">Français</a><span lang="id" aria-current="true">Bahasa Indonesia</span></nav></noscript></div>
+          <a class="hd-cta" href="./#get">Unduh</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="main-grid-aligned">
+      <section class="phero wrap">
+        <p class="ey">Panduan</p>
+        <h1 class="page">Dari koneksi pertama ke fitur sehari-hari, langkah demi langkah.</h1>
+        <p class="lead">
+          Kebanyakan orang hanya perlu mengikuti perintah ini, untuk rincian jaringan yang lebih sulit.
+          <a href="./technical" style="color: var(--coral-deep); font-weight: 700"
+            >Teknis &amp; Keamanan</a
+          >, dan ketika sesuatu tidak bekerja, cek
+          <a href="./help" style="color: var(--coral-deep); font-weight: 700">Bantuan</a>
+          terpisah.
+        </p>
+        <nav class="toc" aria-label="Pada halaman ini">
+          <a href="#start">Pengaturan 5 menit</a>
+          <a href="#position">Letakkan telepon Anda</a>
+          <a href="#remote">Layar jarak jauh</a>
+          <a href="#mobile-pc-remote">Kendalikan PC dari ponsel</a>
+          <a href="#mouse-gestures">Gerak tetikus</a>
+          <a href="#files">Berkas &amp; papan klip</a>
+          <a href="#screenshots">Tangkap &amp; kirim cuplikan layar</a>
+          <a href="#text-to-pc">Mobile ke PC</a>
+          <a href="#notifications">Pemberitahuan &amp; jawaban</a>
+          <a href="#quick">Pintas angka</a>
+          <a href="#bluetooth">Koneksi Bluetooth</a>
+          <a href="#pcpc">Hubungkan PC lain</a>
+          <a href="#mac">Hubungkan Mac</a>
+          <a href="#shortcuts">Tabel Pintas</a>
+        </nav>
+      </section>
+
+      <!-- QUICK START -->
+      <section id="start">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">Android setup</p>
+            <h2 class="sec">Pilih bagaimana menyambung dalam aplikasi saat ini.</h2>
+            <p class="sec-lead">
+              Pilih akun Google, pasangan QR / code pada Wi-Fi yang sama, atau Bluetooth. Ketiga metoda ini perlu aksesibilitas Android untuk mengendalikan ponsel Anda dengan mouse dan keyboard PC.
+            </p>
+          </div>
+          <div class="connection-picker" data-connection-picker>
+            <div
+              class="connection-options"
+              data-connection-options
+              aria-label="Metode koneksi"
+              hidden
+            >
+              <button
+                type="button"
+                data-connection-choice="account"
+                aria-controls="connect-account"
+                hidden
+              >
+                Akun Google
+              </button>
+              <button
+                type="button"
+                data-connection-choice="wifi"
+                aria-controls="connect-wifi"
+                hidden
+              >
+                WiFi
+              </button>
+              <button
+                type="button"
+                data-connection-choice="bluetooth"
+                aria-controls="connect-bluetooth"
+                hidden
+              >
+                Bluetooth
+              </button>
+            </div>
+            <section class="connection-panel" id="connect-account" data-connection-panel="account">
+              <h3>Hubungkan dengan akun Google yang sama</h3>
+              <p class="connection-description">
+                Temukan internet- perangkat yang terhubung dalam daftar akun. Tak ada kode QR atau pasangan yang diperlukan.
+              </p>
+              <ol class="connection-steps">
+                <li>
+                  Masuk ke <b>akun Google yang sama</b> in <b>Perangkat</b> pada Windows dan pada layar rumah OneMouse pada ponsel Anda.
+                </li>
+                <li>
+                  Jaga baik aplikasi terbuka dan periksa daftar perangkat. Jika perangkat lain hilang, periksa alamat akun dan koneksi internet, maka pilih <b>Segarkan</b>.
+                </li>
+                <li>
+                  Bawah <b>PC terdaftar</b> di layar telepon rumah, pilih
+                  <b>Sambungkan perangkat</b> untuk PC itu dan periksa apakah itu tersambung. Jika sudah tersambung, lanjutkan ke langkah selanjutnya. Konfirmasi permintaan izin apapun pada perangkat lain.
+                </li>
+                <li>
+                  Aktifkan Layanan Aksesibilitas dan Layanan Telepon ditata <b>Penempatan telepon</b> di PC. Pindahkan tetikus melalui konfigurasi <b>bagian masukan kursor</b> di tepi itu.
+                </li>
+              </ol>
+              <p class="connection-note">
+                Akses Internet diperlukan. Apakah perangkat dapat menyambung bergantung pada jaringan. Pilih Wi-Fi atau Bluetooth untuk memakai OneMouse tanpa masuk.
+              </p>
+              <a class="text-link" href="./help#account-connect-help"
+                >Perangkat yang hilang dari akun Anda atau tak bisa menyambung?</a
+              >
+            </section>
+            <section class="connection-panel" id="connect-wifi" data-connection-panel="wifi">
+              <h3>Pasangan dengan kode QR atau six-digit pada Wi- Fi yang sama</h3>
+              <p class="connection-description">
+                Tidak ada tanda Google -in dibutuhkan. PC dapat menggunakan kabel LAN selama terhubung ke router yang sama seperti telepon.
+              </p>
+              <div class="timeline">
+                <div class="tstep">
+                  <div class="rail"><span class="num">1</span><span class="line"></span></div>
+                  <div class="body">
+                    <h4>Hubungkan PC dan telepon ke Wi- Fi yang sama</h4>
+                    <p>Jalankan OneMouse pada kedua perangkat. Buka Perangkat dalam aplikasi PC.</p>
+                  </div>
+                </div>
+                <div class="tstep">
+                  <div class="rail"><span class="num">2</span><span class="line"></span></div>
+                  <div class="body">
+                    <h4>Ijinkan Aksesibilitas Android</h4>
+                    <p>
+                      Aktifkan layanan di bawah Android Settings Aksesibilitas Otentikasi Aplikasi terpasang (atau Aplikasi Downloaded) Az OneMouse. Nama menu bervariasi dengan produsen. Juga periksa perizinan yang diperlukan untuk penemuan, seperti Perangkat Nearby Wi- Fi.
+                    </p>
+                  </div>
+                </div>
+                <div class="tstep">
+                  <div class="rail"><span class="num">3</span><span class="line"></span></div>
+                  <div class="body">
+                    <h4>Tampilkan kode QR dan pasangan pada PC</h4>
+                    <p>
+                      Dalam Perangkat, memperluas Cara lain untuk menyambung dan memilih QR &amp; kode untuk PC ini. Dialog ini menunjukkan kode QR dan six-digit.
+                    </p>
+                  </div>
+                </div>
+                <div class="tstep">
+                  <div class="rail"><span class="num">4</span><span class="line"></span></div>
+                  <div class="body">
+                    <h4>Otentikasi di telepon dengan kode atau QR</h4>
+                    <p>
+                      Pilih Rumah Saran Cara lain untuk menghubungkan Tambahkan dengan QR atau kode pasangan. Masukkan enam digit dalam Kode Nomor dan pilih Sambung, atau gunakan Pindai kode QR Buka untuk memindai QR PC. Pilih satu metode.
+                    </p>
+                  </div>
+                </div>
+                <div class="tstep">
+                  <div class="rail"><span class="num">5</span><span class="line"></span></div>
+                  <div class="body">
+                    <h4>Periksa keadaan PC dan koneksi yang terdaftar</h4>
+                    <p>
+                      Konfirmasi bahwa PC muncul di bawah PC terdaftar pada layar telepon. Perangkat yang sudah terdaftar tidak perlu otentikasi ini setiap saat.
+                    </p>
+                  </div>
+                </div>
+                <div class="tstep">
+                  <div class="rail"><span class="num">6</span></div>
+                  <div class="body">
+                    <h4>Atur penempatan Telepon dan pindahkan tetikus ke seluruh</h4>
+                    <p>
+                      Cocok penempatan Telepon ke posisi sebenarnya telepon, kemudian memindahkan mouse melalui <b>konfigurasi bagian masukan kursor</b> Jika bagian itu sempit, coba di tengah-tengah tepi pertama.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <details class="fold pairing-screens">
+                <summary>
+                  <span>Lihat layar pasangan aplikasi saat ini</span
+                  ><small>Tampilkan kode PC akhiri tambahkan PC di telepon anda, tanyakan kode atau QR</small>
+                </summary>
+                <div class="fold-body">
+                  <div class="pairing-gallery">
+                    <figure class="pairing-shot pairing-shot-pc">
+                      <a href="../assets/pairing/pc-code-en.webp" target="_blank" rel="noopener">
+                        <img
+                          src="../assets/pairing/pc-code-en.webp"
+                          alt="1. Tampilkan PC QR dan kode pasangan: Perangkat strings Cara lain untuk menghubungka SIQR &amp; kode untuk PC ini"
+                          width="888"
+                          height="742"
+                          loading="lazy"
+                        />
+                      </a>
+                      <figcaption>
+                        <b>1. Tampilkan PC QR dan kode pasangan</b
+                        ><span>Perangkat ganda cara lain untuk menghubungkan GNU QR &amp; kode untuk PC ini</span>
+                      </figcaption>
+                    </figure>
+                    <figure class="pairing-shot pairing-overview-shot">
+                      <a
+                        href="../assets/pairing/android-other-en.webp"
+                        target="_blank"
+                        rel="noopener"
+                      >
+                        <img
+                          src="../assets/pairing/android-other-en.webp"
+                          alt="2. Tambahkan PC pada telepon Anda: Rumah Saran Cara lain untuk menghubungkan tambahkan GNU Tambah dengan QR atau kode pasangan"
+                          width="1080"
+                          height="2400"
+                          loading="lazy"
+                        />
+                      </a>
+                      <figcaption>
+                        <b>2, tambahkan komputer di ponselmu.</b
+                        ><span>Cara lain untuk menghubungkan GNU Tambah dengan QR atau kode pasangan</span>
+                      </figcaption>
+                    </figure>
+                    <figure class="pairing-shot pairing-dialog-shot">
+                      <a
+                        href="../assets/pairing/android-code-en.webp"
+                        target="_blank"
+                        rel="noopener"
+                      >
+                        <img
+                          src="../assets/pairing/android-code-en.webp"
+                          alt="3. Hubungkan dengan kode numerik: Dalam tab kode nomor, masukkan enam digit PC dan pilih Sambung."
+                          width="1080"
+                          height="2400"
+                          loading="lazy"
+                        />
+                      </a>
+                      <figcaption>
+                        <b>3, hubungkan dengan kode numerik.</b
+                        ><span
+                          >Dalam tab Kode Nomor, masukkan enam digit PC dan pilih Sambung.</span
+                        >
+                      </figcaption>
+                    </figure>
+                    <figure class="pairing-shot pairing-dialog-shot">
+                      <a href="../assets/pairing/android-qr-en.webp" target="_blank" rel="noopener">
+                        <img
+                          src="../assets/pairing/android-qr-en.webp"
+                          alt="Atau terhubung dengan kode QR: Pilih Pindai kode QR Buka kamera dan pindai PC QR. Gunakan baik kode numerik atau QR, bukan keduanya."
+                          width="1080"
+                          height="2400"
+                          loading="lazy"
+                        />
+                      </a>
+                      <figcaption>
+                        <b>Atau terhubung dengan kode QR</b
+                        ><span
+                          >Pilih kode QR Buka kamera dan pindai PC QR. Gunakan baik kode numerik atau QR, bukan keduanya.</span
+                        >
+                      </figcaption>
+                    </figure>
+                  </div>
+                  <p class="pairing-example-note">
+                    Layar aplikasi yang sebenarnya ditangkap dengan perangkat contoh dan kode. Gunakan kode atau QR yang ditampilkan dalam aplikasi PC Anda sendiri ketika menyambung. Pilih sebuah gambar untuk melihatnya dengan ukuran penuh.
+                  </p>
+                </div>
+              </details>
+            </section>
+            <section
+              class="connection-panel"
+              id="connect-bluetooth"
+              data-connection-panel="bluetooth"
+            >
+              <h3>Menyambung Bluetooth tanpa router</h3>
+              <p>Bluetooth dalam beta. Tidak ada Wi- Fi, Google sign-in, kode QR, atau kode pasangan diperlukan.</p>
+              <ol class="connection-steps">
+                <li>Aktifkan Bluetooth pada kedua perangkat. Dalam pengaturan Android OneMouse, tekan <strong>Mode Bluetooth mulai</strong>On Android 12 or later, allow Nearby devices if promitted. Fungsikan OneMouse Aksesibilitas untuk mengklik dan mengetik.</li>
+                <li>Pasangkan telepon Anda sekali dalam pengaturan Bluetooth Windows.</li>
+                <li>Dalam OneMouse untuk Windows, terbuka <strong>Perangkat ganda cara lain untuk menghubungkan Bluetooth Gibberts</strong> dan nyalakan tombol koneksi bagi ponsel Anda. Setelah tersambung, atur perangkat dan pindahkan kursor ke seberang.</li>
+              </ol>
+              <p class="connection-note">
+                Langkah-langkah ini untuk Windows WexAndroid. Bluetooth tidak membawa video jarak jauh. Untuk melihat layar PC pada ponsel Anda, gunakan Wi- Fi / LAN atau koneksi akun yang didukung.
+              </p>
+              <a class="text-link" href="#bluetooth">Pengaturan Bluetooth dan langkah-langkah terrinci legacy</a>
+            </section>
+          </div>
+          <p class="connection-followup">
+            Ijin masukan: Android Settings Encessibility Aplikasi yang terpasang (atau Aplikasi Downloaded) Az OneMouse.
+            <a class="text-link" href="./help#cursor-not-crossing"
+              >Terhubung, tapi tetikus tidak akan menyeberang?</a
+            >
+          </p>
+        </div>
+      </section>
+
+      <!-- POSITION -->
+      <section class="section-alt" id="position">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">Posisi telepon</p>
+            <h2 class="sec">
+              Setelah terhubung, cocokkan saja posisi teleponmu ke tempat yang benar-benar ada.
+            </h2>
+          </div>
+          <p class="sec-lead" style="max-width: 60ch">
+            Seret setiap perangkat ke posisi sebenarnya dalam layar pengaturan. Lewati konfigurasi <b>bagian masukan kursor</b> di tepi korespondensi. Bagian ini mungkin mencakup hanya bagian dari tepi itu.
+          </p>
+          <details class="fold">
+            <summary><span>Lihat layar pengaturan</span></summary>
+            <div class="fold-body">
+              <a href="../assets/pairing/pc-position-en.webp" target="_blank" rel="noopener"
+                ><img
+                  src="../assets/pairing/pc-position-en.webp"
+                  alt="AloMouse device layout dengan contoh Android device ditempatkan di kanan PC"
+                  width="2240"
+                  height="1800"
+                  loading="lazy"
+                  style="border-radius: 12px"
+              /></a>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <!-- REMOTE CONTROL -->
+      <section id="remote">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="ey">Remote control</p>
+            <h2 class="sec">Buka layar jarak jauh dari Perangkat.</h2>
+          </div>
+          <div class="split lead-left">
+            <div>
+              <p class="sec-lead" style="margin-bottom: 16px">
+                In Devices, tap the remote control icon on the row of a pair Android, and a separate window opening showing the phone 's screen. The first time you open it, Android screen capture afception is needed.
+              </p>
+              <div class="panel">
+                <h3>Kontrol di jendela Android</h3>
+                <ul>
+                  <li>Klik kiri, tarik, dan roda melewatinya.</li>
+                  <li><b>Klik kanan = Mundur</b>, <b>klik roda = Rumah</b>.</li>
+                  <li>
+                    Keyboard PC Anda - termasuk IME dan masukan non-Latin - masuk ke kolom teks telepon saat ini.
+                  </li>
+                  <li>
+                    Jika layar tampak kosong, periksa data persetujuan penangkapan dan matikan remote control lagi.
+                  </li>
+                </ul>
+              </div>
+              <div class="panel tip" style="margin-top: 18px">
+                <h3 id="windows-remote">Tombol-kanan menyeret di Windows jendela jauh</h3>
+                <p>
+                  Buka jendela dari ikon remote control-nya atau dengan bawaan
+                  <b>Ctrl + Alt + Shift + 1 ~ 9</b>. Benar-tombol menyeret bekerja dengan gesture ekstensi dikonfigurasi dalam target PC browser, terpisah dari Android gerakan.
+                </p>
+                <p>
+                  <a href="./help#windows-remote-gestures-faq">Remote bantuan jendela</a>
+                </p>
+              </div>
+            </div>
+            <div>
+              <details class="fold" open>
+                <summary><span>Baris dan ikon divais</span></summary>
+                <div class="fold-body">
+                  <a
+                    href="../assets/guide_remote_control_devices.jpg"
+                    target="_blank"
+                    rel="noopener"
+                    ><img
+                      src="../assets/guide_remote_control_devices.jpg"
+                      alt="Ikon remote control dalam Perangkat"
+                      loading="lazy"
+                      style="border-radius: 12px"
+                  /></a>
+                </div>
+              </details>
+              <details class="fold">
+                <summary><span>Jendela remote control terbuka</span></summary>
+                <div class="fold-body">
+                  <a
+                    href="../assets/guide_mobile_remote_control_window.jpg"
+                    target="_blank"
+                    rel="noopener"
+                    ><img
+                      src="../assets/guide_mobile_remote_control_window.jpg"
+                      alt="Jendela remote remote terbuka"
+                      loading="lazy"
+                      style="border-radius: 12px"
+                  /></a>
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MOBILE TO PC REMOTE CONTROL -->
+      <section class="section-alt" id="mobile-pc-remote">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="ey">Android Aida Windows</p>
+            <h2 class="sec">Buka dan kontrol layar PC Anda dari telepon Anda.</h2>
+            <p class="sec-lead">
+              Lihat layar PC Anda, klik dengan sentuhan, pindahkan kursor dan ketik dengan keyboard telepon Anda. Baik PC dan Android perlu up- to-date aplikasi yang mendukung fitur ini.
+            </p>
+          </div>
+          <div class="split lead-left">
+            <div>
+              <div class="panel">
+                <h3>Buka layar jauh</h3>
+                <ol>
+                  <li>
+                    Jalankan OneMouse pada PC. Pair perangkat Anda pada jaringan Wi-Fi yang sama atau link mereka menggunakan akun Google yang sama.
+                  </li>
+                  <li>Dalam daftar PC yang terdaftar Android, pilih <b>Layar jarak jauh</b> untuk PC itu.</li>
+                  <li>
+                    Jika permintaan muncul pada PC, pilih <b>Ijinkan</b>Untuk ponsel Anda sendiri, Anda dapat memilih <b>Selalu ijinkan perangkat ini</b> untuk sesi masa depan.
+                  </li>
+                  <li>
+                    Setelah tersambung, gunakan sentuhan untuk mengendalikan layar. Buka panel kontrol dengan ikon pengaturan di sebelah kanan.
+                  </li>
+                </ol>
+              </div>
+              <div class="panel" style="margin-top: 18px">
+                <h3>Pilih kontrol yang sesuai dengan Anda</h3>
+                <ul>
+                  <li><b>Mode sentuh:</b> tekan dimana anda ingin mengklik, dan seret untuk memindahkan item.</li>
+                  <li><b>Mode kursor:</b> geser satu jari untuk memindahkan penunjuk dan tekan untuk klik.</li>
+                  <li>
+                    Tekan dan tahan tanpa bergerak, lalu angkat jarimu ke kanan. Dalam mode kursor, tahan dan kemudian pindah ke seret, atau tekan dua kali dan bergerak sambil memegang tekan kedua.
+                  </li>
+                  <li>
+                    Pinch dengan dua jari untuk diperbesar.
+                  </li>
+                  <li>
+                    Gunakan <b>Papan Ketik</b> ke tipe, atau mengaktifkan <b>Hanya Tilikan</b> ketika Anda hanya ingin menonton.
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div>
+              <figure class="feature-figure">
+                <img
+                  class="feature-visual"
+                  src="../assets/feature-mobile-pc-remote-photo.webp"
+                  alt="Contoh penggunaan foto dari mengendalikan suatu PC Windows dari sebuah telepon Android"
+                  width="1536"
+                  height="1024"
+                  loading="lazy"
+                />
+                <figcaption>
+                  Contoh penggunaan yang dihasilkan oleh tampilan aktual mungkin bervariasi oleh versi aplikasi.
+                </figcaption>
+              </figure>
+              <div class="panel tip" style="margin-top: 18px">
+                <h3>Kualitas, laju bingkai dan pemutusan</h3>
+                <p>
+                  Pilih kualitas gambar dan rate frame maksimum di panel kontrol. PC yang mendukung perubahan kualitas hidup berlaku mereka tanpa menghubungkan kembali. Resolusi aktual dan laju frame tergantung pada kinerja perangkat dan kondisi jaringan.
+                </p>
+                <p>
+                  Untuk menyelesaikan, gunakan <b>Panel kontrol (Control panel) Diputus</b>Menonaktifkan remote control meninggalkan PC berjalan. koneksi Bluetooth tidak membawa video remote.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-alt" id="remote-gesture-examples">
+        <div class="wrap gesture-guide" data-animation-playing="false">
+          <div class="gesture-guide-heading">
+            <div>
+              <h3>Ikuti gerakan untuk mempelajari remote control</h3>
+              <p>
+                Animasi penjelasan ini menunjukkan dasar-dasar mode kursor. Ini bukan rekaman aplikasi.
+              </p>
+            </div>
+            <button
+              type="button"
+              class="btn btn-sec sm"
+              data-demo-toggle
+              data-play-label="Putar contoh"
+              data-pause-label="Jeda"
+              aria-pressed="false"
+              hidden
+            >
+              Putar contoh
+            </button>
+          </div>
+          <div class="gesture-demo-grid">
+            <article class="gesture-demo" data-gesture-demo="move">
+              <div class="gesture-stage" aria-hidden="true">
+                <div class="demo-window"><i></i><span></span><span></span></div>
+                <b class="demo-pointer"></b><i class="demo-finger"></i>
+              </div>
+              <h4>1. Pindahkan kursor</h4>
+              <p>
+                Geser satu jari untuk memindahkan pointer Angkat dan reposisi jari Anda untuk terus bergerak
+              </p>
+            </article>
+            <article class="gesture-demo" data-gesture-demo="click">
+              <div class="gesture-stage" aria-hidden="true">
+                <div class="demo-window"><i></i><span></span><span></span></div>
+                <b class="demo-pointer"></b><i class="demo-finger"></i><i class="demo-tap-ring"></i>
+              </div>
+              <h4>2. Klik</h4>
+              <p>
+                Pindahkan penunjuk atas tombol, kemudian tekan sekali. Klik terjadi di pointer, bukan di jari Anda.
+              </p>
+            </article>
+            <article class="gesture-demo" data-gesture-demo="drag">
+              <div class="gesture-stage" aria-hidden="true">
+                <div class="demo-window"><i></i><span></span><span></span></div>
+                <b class="demo-pointer"></b><i class="demo-finger"></i>
+              </div>
+              <h4>3. Seret jendela atau item</h4>
+              <p>
+                Tempatkan penunjuk pada batang judul atau item dan terus jari Anda masih sampai pointer berubah biru. Pindahkan jari Anda ke drag, kemudian angkat untuk menjatuhkan item.
+              </p>
+            </article>
+            <article class="gesture-demo" data-gesture-demo="scroll">
+              <div class="gesture-stage" aria-hidden="true">
+                <div class="demo-window">
+                  <i></i>
+                  <div class="demo-lines">
+                    <span></span><span></span><span></span><span></span><span></span>
+                  </div>
+                </div>
+                <i class="demo-finger"></i><i class="demo-finger demo-finger-second"></i>
+              </div>
+              <h4>Gulung dan perbesar</h4>
+              <p>
+                Pada 1 ×, geser dua jari bersama-sama untuk menggulung PC. Spread dua jari untuk zoom in; sekali diperbesar, bergerak mereka bersama-sama untuk pan tampilan.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ANDROID MOUSE GESTURES -->
+      <section id="mouse-gestures">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">Android mouse gesture</p>
+            <h2 class="sec" id="mouse-gestures-title">
+              Tahan tombol kanan dan tarik ke navigasi.
+            </h2>
+            <p class="sec-lead">
+              Cara mengaktifkan gerakan, tujuh pola stroke, dan batas dukungan.
+            </p>
+          </div>
+          <div class="panel gesture-setup">
+            <h3>1. Aktifkan gerakan</h3>
+            <p>
+              In Settings Slipboard &amp; clipboard, turn on Mouse gesture and choose the apps (off by default). Baik PC dan Android membutuhkan versi gesture-capable.
+            </p>
+            <p>
+              Pilih <b>Semua aplikasi</b> untuk menggunakan gerakan dalam aplikasi dan pada layar rumah.
+              <a href="./help#mouse-gestures-faq">Periksa batas dukungan</a>
+            </p>
+            <h3>Tahan, tarik, lepaskan.</h3>
+            <p>Pindahkan penunjuk PC ke telepon Android atau tablet dan buka aplikasi yang dipilih.</p>
+            <ol class="gesture-steps">
+              <li>Pegang tombol tetikus yang tepat di atas isi halaman.</li>
+              <li>Gambar arah dalam rangka; periksa tindakan di samping jejak merah.</li>
+              <li>Lepaskan untuk menjalankan aksi. Halaman tidak menggulung ketika menggambar.</li>
+            </ol>
+            <p>
+              Panah dan gauge vertikal menunjukkan arah dan intensitas gulungan berdasarkan panjang stroke, bukan posisi Anda pada halaman atau jarak yang tepat.
+            </p>
+          </div>
+          <div class="table-wrap gesture-patterns">
+            <table class="kt gesture-table" aria-labelledby="mouse-gestures-title">
+              <thead>
+                <tr>
+                  <th scope="col">Gerak</th>
+                  <th scope="col">Aksi</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr data-gesture-action="back">
+                  <td><span role="img" aria-label="Kiri">←</span></td>
+                  <td>
+                    <b>Mundur</b><small>Gambar kiri untuk kembali ke halaman sebelumnya atau layar.</small>
+                  </td>
+                </tr>
+                <tr data-gesture-action="forward">
+                  <td><span role="img" aria-label="Kanan">→</span></td>
+                  <td>
+                    <b>Maju</b><small>Gambar kanan untuk kembali ke halaman setelah kembali.</small>
+                  </td>
+                </tr>
+                <tr data-gesture-action="scroll_up">
+                  <td><span role="img" aria-label="Naik">↑</span></td>
+                  <td>
+                    <b>Gulung</b
+                    ><small
+                      >Menggambar dan melepaskan.</small
+                    >
+                  </td>
+                </tr>
+                <tr data-gesture-action="scroll_down">
+                  <td><span role="img" aria-label="Turun">↓</span></td>
+                  <td>
+                    <b>Gulung ke bawah</b
+                    ><small
+                      >Menggambar ke bawah dan melepaskan. Lebih lama gulungan stroke lebih banyak; lebih sedikit gulungan stroke.</small
+                    >
+                  </td>
+                </tr>
+                <tr data-gesture-action="minimize">
+                  <td><span role="img" aria-label="Bawah, maka kanan">↓ →</span></td>
+                  <td><b>Minimalkan aplikasi</b><small>Pergi ke Rumah tanpa menutup aplikasi.</small></td>
+                </tr>
+                <tr data-gesture-action="reload">
+                  <td><span role="img" aria-label="Ke atas, lalu ke bawah">↑ ↓</span></td>
+                  <td><b>Muat Ulang</b><small>Segarkan halaman dalam peramban yang didukung.</small></td>
+                </tr>
+                <tr data-gesture-action="recents">
+                  <td><span role="img" aria-label="Up, maka kanan">↑ →</span></td>
+                  <td>
+                    <b>Aplikasi baru-baru Ini</b><small>Buka daftar recent- app untuk memilih aplikasi lain.</small>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="panel gesture-notes">
+            <h3>Jika gerakan tidak bekerja</h3>
+            <ul>
+              <li>For direct Android control, not Windows / Mac control or a mirror window.</li>
+              <li>Simpan ulang riwayat peramban. Teruskan dan Muat Ulang memerlukan dukungan peramban.</li>
+              <li>Mulai dari isi halaman. Hak pendek klik saja menjaga perilaku biasanya.</li>
+              <li>Scroll jarak bervariasi dengan aplikasi; Rumah dan laci aplikasi hanya menggunakan satu swipe.</li>
+            </ul>
+            <p>
+              <a href="./help#mouse-gestures-faq">{\ cHffffff} Bantu aku!</a> ·
+              <a href="./help#mouse-gestures-scroll">Batas Scroll dan pembatalan</a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- FILES -->
+      <section class="section-alt" id="files">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="ey">Berkas &amp; papan klip</p>
+            <h2 class="sec">
+              Kirim berkas dari layar transfer, zona Quick Drop, atau seret desktop ke desktop.
+            </h2>
+          </div>
+          <div class="split lead-left">
+            <div>
+              <ul class="panel" style="list-style: none; padding-left: 22px">
+                <li style="margin: 0 0 8px">
+                  Jatuhkan berkas pada <b>layar transfer</b> atau kecil <b>zona drop</b> untuk mengirim mereka ke Android yang dipilih, Windows PC, atau Mac.
+                </li>
+                <li style="margin: 8px 0">
+                  <b>Windows- to- Windows atau Windows- to- Mac over LAN</b>: tahan sebuah berkas, tarik ke seluruh batas layar yang diatur, dan jatuhkan pada target.
+                </li>
+                <li style="margin: 8px 0">
+                  <a class="text-link" href="#text-to-pc">Kirim dari Android ke PC</a>
+                </li>
+                <li style="margin: 8px 0 0">
+                  Jika tidak mau menyala, periksa status koneksi dan perangkat yang dipilih.
+                </li>
+              </ul>
+            </div>
+            <div>
+              <div class="panel tip">
+                <h3>Zona Penurunan Cepat</h3>
+                <ul>
+                  <li>Tekan <b>Ctrl + Alt + D</b> untuk menyembunyikan atau menunjukkan zona drop.</li>
+                  <li>Posisi dan negara disimpan dalam aplikasi PC.</li>
+                </ul>
+              </div>
+              <details class="fold">
+                <summary><span>Layar zona Penurunan Cepat</span></summary>
+                <div class="fold-body">
+                  <a href="../assets/guide_quick_drop_send.png" target="_blank" rel="noopener"
+                    ><img
+                      src="../assets/guide_quick_drop_send.png"
+                      alt="Mengirim berkas dengan zona Quick Drop"
+                      loading="lazy"
+                      style="border-radius: 12px"
+                  /></a>
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SCREENSHOT CAPTURE AND SHARING -->
+      <section id="screenshots">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="ey">Tangkap &amp; kirim cuplikan layar</p>
+            <h2 class="sec">Tangkap apa yang Anda butuhkan dan kirimkan ke tempat yang Anda butuhkan.</h2>
+            <p class="sec-lead">
+              Tangkap PC Anda sendiri atau perangkat yang sedang Anda kendalikan. Salin atau simpan hasilnya dari pratinjau, atau kirim ke papan klip perangkat terhubung.
+            </p>
+          </div>
+          <div class="split lead-left">
+            <div>
+              <div class="panel">
+                <h3>Tangkap dan kirim, langkah demi langkah</h3>
+                <ol>
+                  <li>
+                    Tekan standar <b>Ctrl + Alt + S</b> pintasan di Windows. Jika Anda mengendalikan perangkat lain, tangkap perangkat itu; sebaliknya, tangkap PC Anda sendiri.
+                  </li>
+                  <li>Seret untuk memilih suatu wilayah atau pilih <b>Layar penuh</b> dari toolbar.</li>
+                  <li>
+                    Dalam preview kecil pada PC, pilih <b>Salin</b> atau <b>Simpan</b>. Untuk menggunakan gambar pada perangkat lain, pilih <b>Kirim</b> dan pilih perangkat penerima.
+                  </li>
+                  <li>
+                    Pada perangkat penerima, tempelkan gambar ke dalam aplikasi yang mendukung penempelan gambar.
+                  </li>
+                </ol>
+                <p>
+                  Bila Anda mengubah jalan pintas, gunakan tombol yang dikonfigurasi Anda. Saat memilih suatu wilayah,
+                  <b>Esc</b> atau Batal menutup pilihan tanpa mengirim gambar.
+                </p>
+              </div>
+            </div>
+            <figure class="feature-figure">
+              <img
+                class="feature-visual"
+                src="../assets/feature-screenshot-share-photo.webp"
+                alt="Contoh penggunaan fotorealistik dari pratinjau cuplikan layar PC dan sebuah telepon Android menerima gambar yang sama"
+                width="1536"
+                height="1024"
+                loading="lazy"
+              />
+              <figcaption>
+                Contoh penggunaan yang dihasilkan oleh tampilan aktual mungkin bervariasi oleh versi aplikasi.
+              </figcaption>
+            </figure>
+          </div>
+          <div class="panel tip" style="margin-top: 18px">
+            <h3>Periksa koneksi dan perizinan</h3>
+            <ul>
+              <li>
+                <b>Mengirim gambar membutuhkan Wi- Fi / LAN</b> dan dukungan dalam kedua aplikasi. Sebuah perangkat yang terhubung hanya lebih Bluetooth tidak dapat menerima transfer ini.
+              </li>
+              <li>
+                Capturing an Android screen needs
+                <b>Android 11 atau yang lebih baru dan izin aksesibilitas</b>Menangkap layar Mac memerlukan izin merekam layar. Layar dilindungi mungkin tidak akan ditangkap.
+              </li>
+              <li>
+                Di Android, gunakan aplikasi yang mendukung penempelan gambar. Gambar yang diterima tidak otomatis ditempel atau disimpan ke galeri.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- MOBILE TO PC -->
+      <section id="text-to-pc">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="ey">Mobile ke PC</p>
+            <h2 class="sec">Kirim berkas dan teks yang dipilih dari ponsel Anda ke PC Anda.</h2>
+            <p class="sec-lead">
+              Untuk transfer LAN, pilih <b>PC baku</b> on the mobile app 's home screen and check that it is pair and connected. Send files from the transfer tab or Android' s share menu, and send text through OneMouse to PC in the selection menu.
+            </p>
+          </div>
+          <div class="split lead-left">
+            <div class="panel">
+              <h3>Kirim berkas</h3>
+              <ol>
+                <li>
+                  Dalam aplikasi mobile <b>Transfer</b> tab, tekan <b>Pilih berkas dan kirim ke PC</b>.
+                </li>
+                <li>Pilih berkas dan mereka dikirim ke PC yang saat ini dipilih.</li>
+                <li>
+                  Dari aplikasi foto atau dokumen, Anda juga dapat memilih <b>Berbagi</b> dan pilih OneMouse.
+                </li>
+              </ol>
+            </div>
+            <div class="panel">
+              <h3>Kirim teks</h3>
+              <ol>
+                <li>Long- press text on Android, select it, then open <b>Lebih</b>.</li>
+                <li>Tap <b>OneMouse ke PC</b> untuk menyalin ke PC clipboard.</li>
+                <li>
+                  Jika hilang pertama kalinya, nyalakan OneMouse sekali dalam manajemen aplikasi, maka pilih lagi.
+                </li>
+              </ol>
+            </div>
+          </div>
+          <div class="panel tip" style="margin-top: 18px">
+            <h3 id="file-receive-folder">Cari berkas yang diterima pada PC</h3>
+            <p>
+              Dalam PC <b>Pengaturan Transfer Berkas Umum Berkas: Lokasi berkas yang diterima</b>, gunakan
+              <b>Ubah folder</b> untuk memilih tujuan dan <b>Buka folder</b> Ini tersedia pada kedua PC utama dan sub.
+            </p>
+            <p>
+              <a href="./help#file-receive-folder-faq">Pengaturan folder dan penyerapan</a>
+            </p>
+          </div>
+          <details class="fold">
+            <summary>
+              <span>Lihat layar teks-transfer</span
+              ><small>How to enable and use OneMouse to PC from Android 's selection menu.</small>
+            </summary>
+            <div
+              class="fold-body"
+              style="
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 12px;
+              "
+            >
+              <figure>
+                <img
+                  src="../assets/text_to_pc_step_1.jpg"
+                  alt="Memilih teks dan membuka menu Lebih"
+                  loading="lazy"
+                  style="border-radius: 12px"
+                />
+                <figcaption>1. Pilih teks</figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="../assets/text_to_pc_step_2.jpg"
+                  alt="Membuka manajemen aplikasi dari menu pemilihan teks"
+                  loading="lazy"
+                  style="border-radius: 12px"
+                />
+                <figcaption>2. Buka manajemen aplikasi</figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="../assets/text_to_pc_step_3.jpg"
+                  alt="Mengaktifkan OneMouse dalam manajemen aplikasi"
+                  loading="lazy"
+                  style="border-radius: 12px"
+                />
+                <figcaption>3. Aktifkan OneMouse</figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="../assets/text_to_pc_step_4.jpg"
+                  alt="Memilih OneMouse ke PC dari menu Lebih Jauh"
+                  loading="lazy"
+                  style="border-radius: 12px"
+                />
+                <figcaption>4, kirim ke PC.</figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="../assets/text_to_pc_step_5.jpg"
+                  alt="Teks berhasil dikirim ke papan klip PC"
+                  loading="lazy"
+                  style="border-radius: 12px"
+                />
+                <figcaption>Paste di PC</figcaption>
+              </figure>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <!-- NOTIFICATIONS -->
+      <section class="section-alt" id="notifications">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">Pemberitahuan &amp; jawaban</p>
+            <h2 class="sec">Baca pemberitahuan telepon dan balas ketika didukung.</h2>
+          </div>
+          <div class="split">
+            <div class="panel">
+              <h3>Menerima pemberitahuan dan riwayat tilikan</h3>
+              <p>
+                Di aplikasi Android, aktifkan <b>Kirim pemberitahuan ke PC</b>, ijinkan akses pemberitahuan, dan pilih aplikasi untuk relay. Pada PC utama, aktifkan pemberitahuan perangkat dalam
+                <b>Pengaturan Notifikasi Lansekap</b>.
+              </p>
+              <p>
+                Layar yang sama menunjukkan sejarah dan pengaturan penahanan.
+                <a href="./help#phone-notifications">Lebih lanjut tentang pemberitahuan</a>
+              </p>
+            </div>
+            <div class="panel">
+              <h3>Balas ke pemberitahuan langsung</h3>
+              <p>
+                <b>Balas</b> muncul ketika PC dan Android mendukung balasan dan pemberitahuan telepon asli menawarkan sebuah free-text jawaban. Ketikkan balasan dan pilih <b>Kirim</b> atau
+                <b>Ctrl + Enter</b> untuk mengirim melalui aplikasi telepon asli (<b>Enter</b> Menambahkan garis istirahat).
+              </p>
+              <p><a href="./help#notification-reply-faq">Tak ada tombol Balas, atau tak dikirim?</a></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- QUICK CONNECT -->
+      <section id="quick">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">Pintas angka</p>
+            <h2 class="sec">Hubungkan langsung dengan nomor dari daftar perangkat Anda.</h2>
+          </div>
+          <div class="split">
+            <div class="panel">
+              <h3>Ctrl + Alt + 1 ~ 9</h3>
+              <ul>
+                <li>
+                  Secara baku, 9 LAN pertama perangkat dalam daftar perangkat PC utama mendapatkan
+                  <b>Ctrl + Alt + 1 ~ 9</b>Lihat <a href="#shortcuts">pengaturan pintas</a> untuk mengubah kunci.
+                </li>
+                <li>Tekan nomor untuk menyambung ke perangkat itu.</li>
+                <li>
+                  Tekan nomor yang sama lagi untuk melepaskan kontrol masukan perangkat yang saat ini sedang Anda kendalikan.
+                </li>
+              </ul>
+            </div>
+            <div class="panel tip">
+              <h3>Otomatis-sambung kembali</h3>
+              <ul>
+                <li>
+                  Ketika aktif, aplikasi PC menghubungkan kembali secara otomatis ketika perangkat terakhir Anda muncul kembali atau ketika hanya satu perangkat siap.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="panel tip" style="margin-top: 18px">
+            <h3 id="device-order">Ubah urutan perangkat dan nomor pintas</h3>
+            <p>
+              Dengan setidaknya dua perangkat LAN pada PC utama, pilih <b>Urutan perangkat gledit</b>. Seret handle atau gunakan string.change save secara otomatis, then choose <b>Selesai</b>. Koneksi dan remote-jendela jalan pintas nomor mengikuti urutan yang sama.
+            </p>
+            <p>
+              <a href="./help#device-order-faq">Tidak dapat menemukan urutan Edit?</a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- BLUETOOTH -->
+      <section class="section-alt" id="bluetooth">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="ey">Bluetooth</p>
+            <h2 class="sec">Anda juga dapat terhubung melalui Bluetooth, tanpa router.</h2>
+            <p class="sec-lead">
+              Bluetooth dalam beta. Tidak ada Wi- Fi, Google sign-in, kode QR, atau kode pasangan diperlukan.<br>
+              Windows Android Android dan Windows AiverWindows dapat bertukar masukan, papan klip, dan berkas secara langsung di Bluetooth.
+            </p>
+          </div>
+          <div class="split lead-left">
+            <div>
+              <div class="panel" style="margin-bottom: 14px">
+                <h3>Hebat ketika</h3>
+                <ul>
+                  <li>Anda berada di sebuah ruangan, di luar ruangan, atau di dalam mobil tanpa WiFi bersama</li>
+                  <li>Pengunjung WiFi atau penemuan perangkat firewall blok</li>
+                  <li>Anda biasanya melakukan pekerjaan papan tik dan papan klip ringan</li>
+                </ul>
+              </div>
+              <div class="panel tip">
+                <h3>Senang mendengarnya.</h3>
+                <ul>
+                  <li>Bluetooth tidak membawa video remote.</li>
+                  <li>
+                    Mac Bluetooth adalah beta (aktif dalam pengaturan aplikasi; mati secara baku). LAN secara resmi didukung, dan Mac screen / window sharing hanya LAN-saja.
+                  </li>
+                </ul>
+                <p>
+                  <a class="text-link" href="/id/help#bluetooth-help">Bluetooth discouphooting</a>
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="panel">
+                <h3>Urutan koneksi</h3>
+                <div class="timeline" style="margin-top: 8px">
+                  <div class="tstep">
+                    <div class="rail"><span class="num">1</span><span class="line"></span></div>
+                    <div class="body" style="padding-bottom: 14px">
+                      <h4>Aktifkan Bluetooth kedua perangkat. Dalam pengaturan Android OneMouse, tekan Mode Bluetooth Mulai. Pada Android 12 atau kemudian, ijinkan perangkat Nearby jika mendorong. Aktifkan Aksesibilitas OneMouse untuk mengklik dan mengetik.</h4>
+                    </div>
+                  </div>
+                  <div class="tstep">
+                    <div class="rail"><span class="num">2</span><span class="line"></span></div>
+                    <div class="body" style="padding-bottom: 14px">
+                      <h4>Pasangkan telepon Anda sekali dalam pengaturan Bluetooth Windows.</h4>
+                    </div>
+                  </div>
+                  <div class="tstep">
+                    <div class="rail"><span class="num">3</span><span class="line"></span></div>
+                    <div class="body" style="padding-bottom: 14px">
+                      <h4>Dalam OneMouse bagi Windows, membuka Perangkat Atlit cara lain untuk menghubungkan snippet Bluetooth dan menyalakan saklar koneksi bagi ponsel Anda. Setelah tersambung, mengatur perangkat dan memindahkan kursor ke seluruh.</h4>
+                    </div>
+                  </div>
+                  <div class="tstep">
+                    <div class="rail"><span class="num">4</span></div>
+                    <div class="body" style="padding-bottom: 0">
+                      <h4>Bluetooth tidak membawa video remote.</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <details class="fold">
+                <summary><span>Target Bluetooth layar perangkat</span></summary>
+                <div class="fold-body">
+                  <a href="../assets/guide_bt_sub_devices.png" target="_blank" rel="noopener"
+                    ><img
+                      src="../assets/guide_bt_sub_devices.png"
+                      alt="Daftar perangkat target Bluetooth"
+                      loading="lazy"
+                      style="border-radius: 12px"
+                  /></a>
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PC TO PC -->
+      <section id="pcpc">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="ey">PC lain</p>
+            <h2 class="sec">Hubungkan Windows PC lain: Perangkat, koneksi, kemudian pengaturan.</h2>
+          </div>
+          <div class="split lead-left">
+            <div>
+              <div class="panel">
+                <h3>Menyambung</h3>
+                <ul>
+                  <li>
+                    Jalankan OneMouse pada kedua Windows PC. Masuk ke akun Google yang sama, atau tempatkan kedua PC pada jaringan yang sama untuk pasangan LAN.
+                  </li>
+                  <li>
+                    Untuk LAN, terbuka <b>Cara lain manajemen perangkat untuk menyambung</b> pada PC yang mengendalikan, pilih PC Windows lain, masukkan kode 6- digit dan pilih
+                    <b>Pair</b>Cari kode pada PC lain di bawah
+                    <b>Pengelolaan perangkat (Device management) Cara lain untuk menghubungkan Brasero QR &amp; code untuk PC ini</b>Perpasangan LAN tidak perlu tanda-tanda masuk.
+                  </li>
+                  <li>
+                    Periksa keadaan koneksi PC yang terdaftar dan aktifkan <b>Sambung</b> Lalu taruh di penyunting tata letak untuk mencocokkan posisi fisiknya.
+                  </li>
+                  <li>
+                    Pindahkan tetikus ke arah itu untuk mengontrol PC lain, dan bertukar berkas dengan menyeret melintasi batas.
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div>
+              <details class="fold" open>
+                <summary><span>Layar pasangan dan pengaturan</span></summary>
+                <div class="fold-body">
+                  <figure class="feature-figure" style="margin-bottom: 18px">
+                    <a href="../assets/pairing/pc-peer-en.webp" target="_blank" rel="noopener"
+                      ><img
+                        src="../assets/pairing/pc-peer-en.webp"
+                        alt="Cara lain untuk menghubungkan layar dengan kode pasangan enam digit Windows PC lainnya"
+                        width="2240"
+                        height="1800"
+                        loading="lazy"
+                        style="border-radius: 12px"
+                    /></a>
+                    <figcaption>
+                      1. Masukkan kode enam digit PC lainnya dan pilih Pair. Nama kode dan perangkat adalah contoh.
+                    </figcaption>
+                  </figure>
+                  <figure class="feature-figure">
+                    <a
+                      href="../assets/pairing/pc-peer-position-en.webp"
+                      target="_blank"
+                      rel="noopener"
+                      ><img
+                        src="../assets/pairing/pc-peer-position-en.webp"
+                        alt="Layar manajemen perangkat saat ini mengatur suatu PC Windows yang terhubung"
+                        width="2240"
+                        height="1800"
+                        loading="lazy"
+                        style="border-radius: 12px"
+                    /></a>
+                    <figcaption>
+                      Cek koneksinya, kemudian atur PC lain untuk mencocokkan posisi fisiknya.
+                    </figcaption>
+                  </figure>
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MAC -->
+      <section class="section-alt" id="mac">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="ey">Mac</p>
+            <h2 class="sec">Menyambung Apple Silicon menjalankan macOS 13 + dari Windows.</h2>
+            <p class="sec-lead">
+              Instal DMG publik pada Mac, kemudian mulai dan mengelola koneksi LAN dari OneMouse pada Windows. Ikuti lima langkah ini.
+            </p>
+          </div>
+          <div class="split lead-left">
+            <div class="timeline">
+              <div class="tstep">
+                <div class="rail"><span class="num">1</span><span class="line"></span></div>
+                <div class="body">
+                  <h4>Taruh Windows dan Mac pada jaringan lokal yang sama</h4>
+                  <p>
+                    Jalankan OneMouse pada Windows 10 / 11 dan Mac, dengan kedua komputer yang terhubung dengan WiFi atau LAN yang sama. Koneksi dimulai dan dikelola dari Windows.
+                  </p>
+                </div>
+              </div>
+              <div class="tstep">
+                <div class="rail"><span class="num">2</span><span class="line"></span></div>
+                <div class="body">
+                  <h4>Ijinkan izin Mac</h4>
+                  <p>
+                    Ijinkan <b>Aksesibilitas</b> sehingga Mac dapat melakukan masukan tetikus dan papan ketik diterima. Pada maOS 15 +, juga mengijinkan <b>Jaringan Lokal</b> untuk penemuan; macOS 13 / 14 mungkin tidak menampilkan item ini.
+                  </p>
+                </div>
+              </div>
+              <div class="tstep">
+                <div class="rail"><span class="num">3</span><span class="line"></span></div>
+                <div class="body">
+                  <h4>Pilih Mac dalam Windows</h4>
+                  <p>Buka Perangkat dalam aplikasi Windows dan pilih Mac yang terdeteksi.</p>
+                </div>
+              </div>
+              <div class="tstep">
+                <div class="rail"><span class="num">4</span><span class="line"></span></div>
+                <div class="body">
+                  <h4>Masukkan kode Mac 6-digit</h4>
+                  <p>
+                    Masukkan dalam Windows kode pasangan 6 digit yang ditampilkan oleh Mac, kemudian konfirmasi pasangan.
+                  </p>
+                </div>
+              </div>
+              <div class="tstep">
+                <div class="rail"><span class="num">5</span></div>
+                <div class="body">
+                  <h4>Atur Mac dan menyeberang</h4>
+                  <p>
+                    Tempatkan Mac di samping tampilan Windows di penyunting pengaturan. Pindahkan kursor ke ujung untuk mengendalikannya dan bertukar berkas dan isi papan klip di kedua arah.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="panel tip">
+                <h3>Berbagi layar LAN opsional</h3>
+                <p>
+                  Izin Perekaman Audio Layar &amp; Sistem hanya diperlukan ketika Anda memilih untuk melihat atau mengontrol tampilan Mac dari Windows. OneMouse tidak menangkap audio sistem.
+                </p>
+              </div>
+              <div class="panel" style="margin-top: 14px">
+                <h3>Bluetooth Mac</h3>
+                <p>
+                  Mac Bluetooth tersedia sebagai beta: mengaktifkannya dalam pengaturan aplikasi Mac (mati secara baku). LAN tetap jalur yang didukung secara resmi, dan layar atau berbagi jendela hanya LAN-saja.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PERMISSIONS (short summary + link) -->
+      <section id="permissions">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <p class="ey">Hak</p>
+            <h2 class="sec">Setiap platform hanya meminta hak akses yang diperlukan fitur tersebut.</h2>
+            <p class="sec-lead">
+              Android input needs Accessibility Service; Mac input needs Accessibility. Viewing an Android or Mac remote screen also needs screen capture or recording acception.
+            </p>
+          </div>
+          <div style="margin-top: 18px">
+            <a class="btn btn-sec sm" href="./technical#permissions"
+              >Lihat perizinan platform secara detail</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- SHORTCUTS -->
+      <span id="keyboard-shortcuts" aria-hidden="true"></span>
+      <section id="shortcuts">
+        <div class="wrap narrow">
+          <div class="sec-head">
+            <h2 class="sec">Tombol singkat papan ketik dan ketika mereka mendaftar.</h2>
+            <p class="sec-lead">
+              Pintasan PC ini adalah bawaan. Dalam PC Pengaturan Pintas, Anda dapat mengubah setiap kombinasi, mematikan aksi individual, atau menonaktifkan semua pintasan. Gunakan kombinasi yang tersimpan jika Anda telah mengubahnya.
+            </p>
+          </div>
+          <h3 id="pc-shortcuts-title">Baterai aplikasi Windows</h3>
+          <div class="table-wrap">
+            <table class="kt" aria-labelledby="pc-shortcuts-title">
+              <thead>
+                <tr>
+                  <th scope="col">Jalan pintas bawaan</th>
+                  <th scope="col">Aksi dan kondisi</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>1~9</kbd></td>
+                  <td>
+                    PC utama: hubungkan kontrol masukan ke perangkat yang cocok dalam daftar. Tekan nomor yang sama lagi untuk merilis perangkat yang sedang Anda kendalikan.
+                  </td>
+                </tr>
+                <tr id="shortcuts-next-release" data-shortcut-action="remote-window">
+                  <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>1~9</kbd></td>
+                  <td>
+                    PC utama: membuka jendela jarak jauh yang cocok atau membawa jendela yang ada ke depan. Menekan lagi tidak menutup jendela. Ini menggunakan nomor perangkat LAN yang sama dengan jalan pintas koneksi; perangkat Bluetooth dikeluarkan dari penjumlahan.
+                  </td>
+                </tr>
+                <tr>
+                  <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>D</kbd></td>
+                  <td>Tampilkan / sembunyikan zona Quick Drop.</td>
+                </tr>
+                <tr>
+                  <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>S</kbd></td>
+                  <td>
+                    Pilih sebuah area pada PC Windows, Mac, atau perangkat Android Anda mengendalikan dan menerimanya pada PC utama. Dengan tidak ada perangkat jarak jauh di bawah kendali, menangkap PC ini. Kedua aplikasi harus mendukung fitur, dan target membutuhkan izin penangkapan.
+                  </td>
+                </tr>
+                <tr>
+                  <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>V</kbd></td>
+                  <td>
+                    PC utama: menyalin kode verifikasi sementara pemberitahuan telepon terlihat pada PC. Aktifkan relay pemberitahuan telepon pertama.
+                  </td>
+                </tr>
+                <tr>
+                  <td><kbd>Ctrl</kbd>+<kbd>V</kbd></td>
+                  <td>
+                    Menerima dan menyalin berkas yang telah dibagikan ke PC lain. Tanpa ada berkas bersama yang menunggu, paste biasa tetap tersedia.
+                  </td>
+                </tr>
+                <tr>
+                  <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Backspace</kbd></td>
+                  <td>
+                    PC Utama: segera kembalikan kursor ke pusat monitor Anda sendiri saat mengendalikan perangkat lain.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 id="android-shortcuts-title">Saat mengendalikan Android secara langsung</h3>
+          <p>
+            Ini adalah kombinasi masukan yang dikirim ke Android, terpisah dari pengaturan pintasan aplikasi PC di atas. Penyuntingan teks tergantung pada dukungan dalam target app dan text field.
+          </p>
+          <div class="table-wrap">
+            <table class="kt" aria-labelledby="android-shortcuts-title">
+              <thead>
+                <tr>
+                  <th scope="col">Jalan pintas bawaan</th>
+                  <th scope="col">Aksi dan kondisi</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><kbd>PrintScreen</kbd></td>
+                  <td>
+                    Android 11 +: menangkap layar telepon selama kendali langsung dan mengirimkannya ke PC. Izin aksesibilitas diperlukan.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>↑</kbd> /
+                    <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>↓</kbd>
+                  </td>
+                  <td>
+                    Raise / lower Android screen brightness. Memerlukan izin untuk memodifikasi pengaturan sistem.
+                  </td>
+                </tr>
+                <tr>
+                  <td><kbd>Alt</kbd>+<kbd>↑</kbd> / <kbd>Alt</kbd>+<kbd>↓</kbd></td>
+                  <td>Naikkan atau turunkan volume media Android.</td>
+                </tr>
+                <tr>
+                  <td>
+                    <kbd>Alt</kbd>+<kbd>Tab</kbd> / <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>Tab</kbd>
+                  </td>
+                  <td>
+                    Tukar aplikasi / cycle baru-baru ini secara terbalik. Keluarkan Alt untuk memasukkan aplikasi yang dipilih.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <kbd>Ctrl</kbd>+<kbd>A</kbd> / <kbd>Ctrl</kbd>+<kbd>C</kbd> /
+                    <kbd>Ctrl</kbd>+<kbd>X</kbd> / <kbd>Ctrl</kbd>+<kbd>V</kbd>
+                  </td>
+                  <td>Pilih semua / salin / potong / tempel dalam ruas teks yang didukung.</td>
+                </tr>
+                <tr>
+                  <td>
+                    <kbd>Ctrl</kbd>+<kbd>Insert</kbd> / <kbd>Shift</kbd>+<kbd>Insert</kbd> /
+                    <kbd>Shift</kbd>+<kbd>Delete</kbd>
+                  </td>
+                  <td>Salin / tempel / potong dalam ruas teks yang didukung.</td>
+                </tr>
+                <tr>
+                  <td><kbd>Ctrl</kbd>+<kbd>Z</kbd></td>
+                  <td>Batalkan dalam aplikasi dan ruas teks yang mendukungnya.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="panel">
+            <h3>Menggunakan papan tik Windows untuk mengendalikan Mac</h3>
+            <p>
+              Pemetaan jalan pintas bawaan Windows mengirim Ctrl sebagai Perintah dan Alt sebagai Opsi. Anda dapat beralih ke pemetaan pemodifikasi Mac asli dalam pengaturan papan ketik Mac app. Ini tidak berarti mengganti Ctrl dengan Perintah di dalam pintasan aplikasi Windows di atas.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site">
+      <div class="wrap ft">
+        <span>© 2026 OneMouse</span>
+        <a
+          class="ato-badge"
+          href="https://alternativeto.net/software/onemouse/about/?utm_source=badge&amp;utm_medium=referral"
+          target="_blank"
+          rel="noopener"
+          ><img
+            src="https://alternativeto.net/static/badges/badge-compact-color.svg"
+            alt="OneMouse | AlternativeTo"
+            width="171"
+            height="55"
+            loading="lazy"
+        /></a>
+        <span class="links"
+          ><a href="./compare">Bandingkan</a><a href="./technical">Teknis &amp; Keamanan</a
+          ><a href="./privacy">Kebijakan privasi</a><a href="./terms">Akhir Layanan</a
+          ><a href="./licenses">Licenses Open-source</a></span
+        >
+      </div>
+    </footer>
+  </body>
+</html>
