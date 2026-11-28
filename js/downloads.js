@@ -1,7 +1,7 @@
 (function () {
   var repo = 'sdlckdrl/mouselink-web';
   var windowsFallbackUrl =
-    'https://github.com/sdlckdrl/mouselink-web/releases/download/v1.7.1/OneMouse-Setup-1.7.1-x64.exe';
+    'https://github.com/sdlckdrl/mouselink-web/releases/download/v1.7.2/OneMouse-Setup-1.7.2-x64.exe';
   var apiUrl = 'https://api.github.com/repos/' + repo + '/releases?per_page=100';
   var cacheKey = 'onemouse_latest_windows_download_v1_4_9';
   var cacheTtlMs = 60 * 60 * 1000;
@@ -10,6 +10,25 @@
 
   if (!links.length || !window.fetch) {
     return;
+  }
+
+  function windowsVersion(url) {
+    var match = /\/OneMouse-Setup-(\d+)\.(\d+)\.(\d+)-x64\.exe(?:[?#]|$)/i.exec(url || '');
+    return match && match.slice(1).map(Number);
+  }
+
+  function isCurrentWindowsSetup(url) {
+    var candidate = windowsVersion(url);
+    var minimum = windowsVersion(windowsFallbackUrl);
+    if (!candidate || !minimum) {
+      return false;
+    }
+    for (var i = 0; i < minimum.length; i += 1) {
+      if (candidate[i] !== minimum[i]) {
+        return candidate[i] > minimum[i];
+      }
+    }
+    return true;
   }
 
   function readCache() {
@@ -99,7 +118,7 @@
 
   function resolveDownload() {
     var cached = readCache();
-    if (cached && cached.url) {
+    if (cached && isCurrentWindowsSetup(cached.url)) {
       applyAsset(cached);
       return Promise.resolve(cached.url);
     }
@@ -116,7 +135,7 @@
           })
           .map(pickSetupAsset)
           .find(function (candidate) {
-            return candidate && candidate.browser_download_url;
+            return candidate && isCurrentWindowsSetup(candidate.browser_download_url);
           });
         if (!asset || !asset.browser_download_url) {
           throw new Error('No Windows setup asset found');
