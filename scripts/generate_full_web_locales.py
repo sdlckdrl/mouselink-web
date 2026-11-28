@@ -11,7 +11,9 @@ EXISTING={"ko":("","한국어"),"en":("en","English"),"ja":("ja","日本語"),"z
 NEW={"pt-BR":("pt-br","Português (Brasil)"),"de":("de","Deutsch"),"zh-TW":("zh-tw","繁體中文"),"fr":("fr","Français"),"id":("id","Bahasa Indonesia")}
 LANGS=EXISTING|NEW
 CORE=("index","features","guide","help","download","compatibility")
-PUBLIC=CORE+("compare","technical","privacy","terms","licenses","pricing","remote")
+INDEXABLE=CORE+("compare","technical","privacy","terms","licenses","pricing")
+# The standalone remote demo stays public but is excluded from search.
+PUBLIC=INDEXABLE+("remote",)
 REFERENCE=("guide-reference","help-reference")
 ROUTES=PUBLIC+REFERENCE
 VOID=set("area base br col embed hr img input link meta param source track wbr".split())
@@ -198,7 +200,7 @@ def normalize_markup(page,lang,src,allids):
 def refresh_sitemap():
     p=ROOT/'sitemap.xml'
     s=re.sub(r'  <!-- additional-locales:start -->.*?  <!-- additional-locales:end -->\n','',p.read_text(encoding='utf-8'),flags=re.S)
-    entries=''.join(f'  <url><loc>{HOST}{addr(l,page)}</loc></url>\n' for l in NEW for page in PUBLIC)
+    entries=''.join(f'  <url><loc>{HOST}{addr(l,page)}</loc></url>\n' for l in NEW for page in INDEXABLE)
     write(p,s.replace('</urlset>','  <!-- additional-locales:start -->\n'+entries+'  <!-- additional-locales:end -->\n</urlset>'))
     hp=ROOT/'_headers'
     h=re.sub(r'\n# Additional localized reference pages\..*?\n# End additional localized reference pages\.\n','\n',hp.read_text(encoding='utf-8'),flags=re.S).rstrip()

@@ -7,7 +7,7 @@ from collections import Counter
 from html.parser import HTMLParser
 
 from test_web_locales import Page, resolve
-from scripts.generate_full_web_locales import HOST, LANGS, NEW, PUBLIC, REFERENCE, ROUTES, ROOT, PICK, addr, ids
+from scripts.generate_full_web_locales import HOST, LANGS, NEW, INDEXABLE, REFERENCE, ROUTES, ROOT, PICK, addr, ids
 
 class Neat(HTMLParser):
     def __init__(self,text):
@@ -64,8 +64,13 @@ class FullLocaleTests(unittest.TestCase):
                     self.assertEqual({a['value']:a['data-language-route'] for a in opts},
                                      {l:addr(l,page) for l in LANGS})
                     self.assertEqual([lang],[o['value'] for o in opts if 'selected' in o])
-                    if lang in NEW and page in REFERENCE:
+                    if page in REFERENCE:
                         self.assertNotIn(HOST+addr(lang,page),loc)
                         self.assertIn(addr(lang,page)+'\n  X-Robots-Tag: noindex, follow',headers)
-                    if lang in NEW and page in PUBLIC:
+                    if page == 'remote':
+                        robots = [a.get('content', '') for a in p.tags['meta'] if a.get('name') == 'robots']
+                        self.assertTrue(any('noindex' in content.lower() for content in robots))
+                        self.assertNotIn(HOST+addr(lang,page),loc)
+                    if page in INDEXABLE:
                         self.assertIn(HOST+addr(lang,page),loc)
+        self.assertEqual(set(loc), {HOST+addr(lang,page) for lang in LANGS for page in INDEXABLE})
