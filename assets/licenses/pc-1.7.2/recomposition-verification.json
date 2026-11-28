@@ -1,0 +1,44 @@
+{
+  "date": "2026-11-28",
+  "original_setup_sha256": "ff9615d75f69cffac36ee519af311317e3713af7a8475249b64da40ddbf27949",
+  "original_backend_sha256": "ee635e26abd73dfe01eb32a1d6de1d836217030cbd74d3efcec0833880fea8ee",
+  "extracted_from_setup": true,
+  "normal_reconstructed_sha256": "e8f4a7069d136004790ffdcf2fdf3a1564ed62f8592f3b861e7f86bce7c05047",
+  "original_library_probe": {
+    "version": "0.151.3",
+    "python_version": "3.11.9",
+    "marker": null,
+    "cache_marker": null,
+    "service_port": 5000,
+    "empty_cache": true,
+    "library_file": "D:/project/MouseLink/dist/license-compliance/web-172-stage\\_MEI000024f02\\zeroconf\\__init__.py",
+    "cache_file": "D:\\project/MouseLink/dist/license-compliance/web-172-stage\\_MEI000024f02\\zeroconf\\_cache.cp311-win_amd64.pyd"
+  },
+  "unmodified_source_probe": {
+    "version": "0.151.3",
+    "python_version": "3.11.9",
+    "marker": null,
+    "cache_marker": null,
+    "service_port": 5000,
+    "empty_cache": true,
+    "library_file": "D:/project/MouseLink/dist/license-compliance/web-172-stage\\_MEI000013d42\\zeroconf\\__init__.py",
+    "cache_file": "D:/project/MouseLink/dist/license-compliance/web-172-stage\\_MEI000013d42\\zeroconf\\_cache.py"
+  },
+  "modified_library_probe": {
+    "version": "0.151.3",
+    "python_version": "3.11.9",
+    "marker": "modified-zeroconf-1.7.2",
+    "cache_marker": "modified-zeroconf-1.7.2",
+    "service_port": 5000,
+    "empty_cache": true,
+    "library_file": "D:/project/MouseLink/dist/license-compliance/web-172-stage\\_MEI00003fb42\\zeroconf\\__init__.py",
+    "cache_file": "D:/project/MouseLink/dist/license-compliance/web-172-stage\\_MEI00003fb42\\zeroconf\\_cache.py"
+  },
+  "unchanged_carchive_payloads": 721,
+  "removed_zeroconf_cython_extensions": 18,
+  "replacement_python_modules": 33,
+  "unchanged_bootloader": true,
+  "source_sha256": "ce6c548e665759b6150cef4db9ab9d7bdd89857e90c513abd6b7340bdd7dbd6a",
+  "application_started": false,
+  "scope": "Isolated import and data-only APIs; no GUI, discovery, pairing or input tests. Does not modify the installed Store package."
+}

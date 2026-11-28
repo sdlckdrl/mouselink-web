@@ -1,0 +1,29 @@
+{
+  "schema": 1,
+  "release": "OneMouse PC 1.7.2",
+  "kind": "original unsigned application object code, split for download only",
+  "filename": "MouseLinkBackend.exe",
+  "bytes": 28033148,
+  "sha256": "ee635e26abd73dfe01eb32a1d6de1d836217030cbd74d3efcec0833880fea8ee",
+  "python": "CPython 3.11.9 x64",
+  "parts": [
+    {
+      "filename": "MouseLinkBackend-1.7.2.exe.part01",
+      "bytes": 15728640,
+      "sha256": "560dc453ba8191a4f4e15c0d47fe623b9073c84a246294b991e9e4aa2c77f3bc"
+    },
+    {
+      "filename": "MouseLinkBackend-1.7.2.exe.part02",
+      "bytes": 12304508,
+      "sha256": "e212621ef92a47a68da84b3603bc4b55cb3eae05af99605d9bd683699a57be67"
+    }
+  ],
+  "zeroconf": {
+    "version": "0.151.3",
+    "license": "LGPL-2.1-or-later",
+    "modified_by_onemouse": false,
+    "source_file": "source/zeroconf-0.151.3.tar.gz",
+    "source_sha256": "ce6c548e665759b6150cef4db9ab9d7bdd89857e90c513abd6b7340bdd7dbd6a",
+    "source_url": "https://files.pythonhosted.org/packages/2b/7f/bb22975bbbc04765920b766e433410422794568053bff0ab5b3f0bf0197c/zeroconf-0.151.3.tar.gz"
+  }
+}
