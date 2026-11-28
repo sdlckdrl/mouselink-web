@@ -12,7 +12,7 @@
 
   const labels = {/* web-demo-locales */
     "pt-br":["Deslize o dedo para mover o cursor. Toque para clicar no ponto indicado.","Para arrastar, toque e segure um instante antes de deslizar.","Com o botão direito ativado, deslize o dedo para desenhar um gesto."],
-    "de":["Streiche mit einem Finger, um den Mauszeiger zu bewegen. Tippe, um an seiner Position zu klicken.","Halte zum Ziehen kurz gedrückt, bevor du streichst.","Streiche bei aktiviertem Rechtsklick mit dem Finger, um eine Geste zu zeichnen."],
+    "de":["Streichen Sie mit einem Finger, um den Mauszeiger zu bewegen. Tippen Sie, um an seiner Position zu klicken.","Halten Sie zum Ziehen kurz gedrückt, bevor Sie streichen.","Streichen Sie bei aktiviertem Rechtsklick mit dem Finger, um eine Geste zu zeichnen."],
     "zh-tw":["滑動手指來移動游標，輕點即可在游標所指處按一下。","若要拖曳，先按住片刻再滑動。","啟用右鍵模式後，滑動手指畫出手勢。"],
     "fr":["Glissez un doigt pour déplacer le pointeur. Touchez pour cliquer à l’endroit pointé.","Pour faire glisser un élément, maintenez brièvement le doigt appuyé avant de le déplacer.","Lorsque le clic droit est activé, glissez le doigt pour dessiner un geste."],
     "id":["Geser satu jari untuk menggerakkan kursor. Ketuk untuk mengeklik titik yang ditunjuk.","Untuk menyeret, tahan sebentar sebelum menggeser.","Saat klik kanan aktif, geser jari untuk menggambar gestur."],

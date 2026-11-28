@@ -101,7 +101,7 @@
   }
   function missingPhoto(){
     scene.classList.add('photo-missing');
-    live.textContent="Das Hintergrundbild konnte nicht geladen werden. Du kannst trotzdem auf beiden Bildschirmen spielen.";
+    live.textContent="Das Hintergrundbild konnte nicht geladen werden. Sie können trotzdem auf beiden Bildschirmen spielen.";
   }
   backdrop.addEventListener('error',missingPhoto);
   const stage = [mirror, control], ns='http://www.w3.org/2000/svg';
@@ -172,8 +172,8 @@
       nodes.score.textContent="Punkte: "+score;
       nodes.overlay.hidden=phase==='playing';
       if(phase!=='playing'){
-        nodes.title.textContent={idle:"Mini-Rennen",paused:"Pausiert",lose:"Du bist mit einem Auto zusammengestoßen"}[phase];
-        nodes.subtitle.textContent={idle:"Mit dem Android-Gamepad starten",paused:"Zum Weiterspielen fortsetzen",lose:"Versuche es noch einmal."}[phase];
+        nodes.title.textContent={idle:"Mini-Rennen",paused:"Pausiert",lose:"Sie sind mit einem Auto zusammengestoßen"}[phase];
+        nodes.subtitle.textContent={idle:"Mit dem Android-Gamepad starten",paused:"Zum Weiterspielen fortsetzen",lose:"Versuchen Sie es noch einmal."}[phase];
       }
     });
     desk.dataset.phase=phase;
@@ -183,7 +183,7 @@
     gameReset.disabled=phase==='idle';
     if(phase==='lose')announce("Unfall. Endpunktzahl: "+score+".");
     else if(phase==='paused')announce("Spiel pausiert.");
-    else if(phase==='idle')announce("Weiche den Autos mit dem Joystick oder den Pfeiltasten aus. Mit A gibst du Gas, mit B bremst du.");
+    else if(phase==='idle')announce("Weichen Sie den Autos mit dem Joystick oder den Pfeiltasten aus. Mit A geben Sie Gas, mit B bremsen Sie.");
     else if(score!==lastScore)announce("Umfahren: "+score+" Autos.");
     lastScore=score;
   }
@@ -248,7 +248,7 @@
     if(phase==='playing')return;
     if(phase==='paused'){phase='playing';drive();renderGame();}
     else setGame('playing');
-    announce("Rennen gestartet. Wechsle mit dem Joystick die Spur, gib mit A Gas und bremse mit B.");
+    announce("Rennen gestartet. Wechseln Sie mit dem Joystick die Spur, geben Sie mit A Gas und bremsen Sie mit B.");
     gameControls.focus({preventScroll:true});
   }
   function pause(){
@@ -279,7 +279,7 @@
     stop();stopArcade();engine=null;arcadeViews=[];
     activate('library');scene.classList.add('is-live');
     mirror.innerHTML=library(true);control.innerHTML=library(false);
-    announce("Wähle ein Spiel in OneMouse Arcade.");
+    announce("Wählen Sie ein Spiel in OneMouse Arcade.");
     if(focusId)mirror.querySelector('[data-pick="'+focusId+'"]')?.focus({preventScroll:true});
   }
   function paintArcade(){
@@ -313,7 +313,7 @@
     engine.step(dt);
     result=engine.state().result;paintArcade();
     if(result){
-      updateArcadeControls();announce(result==='won'?"Gewonnen.":"Spiel vorbei. Du kannst es erneut versuchen.");
+      updateArcadeControls();announce(result==='won'?"Gewonnen.":"Spiel vorbei. Sie können es erneut versuchen.");
     }else animation=requestAnimationFrame(frameArcade);
   }
   function queueArcade(){if(!animation&&!paused&&!result)animation=requestAnimationFrame(frameArcade);}
@@ -324,10 +324,10 @@
   function prepareArcade(id){
     stop();stopArcade();
     engine=window.OneMouseArcadeGames?.create(id);
-    if(!engine){announce("Das Spiel konnte nicht geladen werden. Lade die Seite erneut.");return false;}
+    if(!engine){announce("Das Spiel konnte nicht geladen werden. Laden Sie die Seite erneut.");return false;}
     activate(id);scene.classList.add('is-live');paused=false;result='';
     arcadeControls.dataset.arcade=id;
-    arcadeStick.setAttribute('aria-label',id==='breakout'?"Joystick. Bewege den Schläger nach links oder rechts.":"Joystick. Zum Springen nach oben schieben.");
+    arcadeStick.setAttribute('aria-label',id==='breakout'?"Joystick. Bewegen Sie den Schläger nach links oder rechts.":"Joystick. Zum Springen nach oben schieben.");
     arcadeGuide.textContent=id==='breakout'?'‹　›':'⌃';
     arcadeViews=stage.map(screen=>{
       screen.innerHTML='<div class="game-frame"><canvas width="640" height="360"></canvas><span class="game-title" data-arcade-title></span><span class="game-score" data-points></span><div class="game-overlay" data-arcade-overlay hidden></div></div>';
@@ -343,7 +343,7 @@
     }else if(id==='breakout'||id==='rabbit'){
       if(!prepareArcade(id))return;
       arcadeControls.focus({preventScroll:true});
-      announce(id==='breakout'?"Bewege den Schläger mit dem Joystick und starte den Ball mit A. Du kannst auch auf dem Bildschirm ziehen oder die Pfeiltasten verwenden.":"Drücke A oder schiebe den Joystick zum Springen nach oben.");
+      announce(id==='breakout'?"Bewegen Sie den Schläger mit dem Joystick und starten Sie den Ball mit A. Sie können auch auf dem Bildschirm ziehen oder die Pfeiltasten verwenden.":"Drücken Sie A oder schieben Sie den Joystick zum Springen nach oben.");
     }
   }
   mirror.addEventListener('click',event=>{

@@ -170,7 +170,8 @@ def migrate_extra(s,page,lang,catalog):
         s=s.replace("'"+phrase+"'","'"+escaped+"'")
     for stem in ('onemouse-demos','onemouse-race'):
         s=s.replace('/js/'+stem+'-en.js','/js/'+stem+'-'+slug+'.js')
-    s=re.sub(r'(/js/(?:guide-handoff|guide-handoff-workspace|preview-file-demo|preview-cursor-mode)\.js)(?:\?[^"\']*)?',r'\1?v=tenlang1',s)
+    s=re.sub(r'(/js/(?:guide-handoff|guide-handoff-workspace|preview-file-demo|preview-cursor-mode)\.js)(?:\?[^"\']*)?',r'\1?v=tenlang2',s)
+    s=re.sub(r'(/js/onemouse-(?:demos|race)-'+re.escape(slug)+r'\.js)(?:\?[^"\']*)?',r'\1?v=tenlang2',s)
     return s
 
 def normalize_markup(page,lang,src,allids):

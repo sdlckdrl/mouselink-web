@@ -855,7 +855,7 @@
  ],
  "Could not load the background image, but you can still play on both screens.": [
   "Não foi possível carregar o fundo, mas você ainda pode jogar nas duas telas.",
-  "Das Hintergrundbild konnte nicht geladen werden. Du kannst trotzdem auf beiden Bildschirmen spielen.",
+  "Das Hintergrundbild konnte nicht geladen werden. Sie können trotzdem auf beiden Bildschirmen spielen.",
   "背景圖片無法載入，但仍可在兩個螢幕上遊玩。",
   "L’image d’arrière-plan n’a pas pu être chargée. Vous pouvez quand même jouer sur les deux écrans.",
   "Gambar latar gagal dimuat, tetapi Anda tetap bisa bermain di kedua layar."
@@ -876,7 +876,7 @@
  ],
  "You hit a car": [
   "Você bateu em um carro",
-  "Du bist mit einem Auto zusammengestoßen",
+  "Sie sind mit einem Auto zusammengestoßen",
   "你撞到車了",
   "Vous avez heurté une voiture",
   "Anda menabrak mobil"
@@ -890,7 +890,7 @@
  ],
  "Try again.": [
   "Tente de novo.",
-  "Versuche es noch einmal.",
+  "Versuchen Sie es noch einmal.",
   "再試一次。",
   "Réessayez.",
   "Coba lagi."
@@ -925,7 +925,7 @@
  ],
  "Use the joystick or arrow keys to dodge cars. A accelerates and B brakes.": [
   "Use o joystick ou as setas para desviar dos carros. A acelera e B freia.",
-  "Weiche den Autos mit dem Joystick oder den Pfeiltasten aus. Mit A gibst du Gas, mit B bremst du.",
+  "Weichen Sie den Autos mit dem Joystick oder den Pfeiltasten aus. Mit A geben Sie Gas, mit B bremsen Sie.",
   "用搖桿或方向鍵閃避車輛，按 A 加速、B 煞車。",
   "Évitez les voitures avec le joystick ou les touches fléchées. A accélère et B freine.",
   "Hindari mobil dengan joystick atau tombol panah. Tekan A untuk mempercepat dan B untuk mengerem."
@@ -946,14 +946,14 @@
  ],
  "Race started. Change lanes with the joystick, accelerate with A, and brake with B.": [
   "Corrida iniciada. Mude de faixa com o joystick, acelere com A e freie com B.",
-  "Rennen gestartet. Wechsle mit dem Joystick die Spur, gib mit A Gas und bremse mit B.",
+  "Rennen gestartet. Wechseln Sie mit dem Joystick die Spur, geben Sie mit A Gas und bremsen Sie mit B.",
   "比賽開始。用搖桿切換車道，按 A 加速、B 煞車。",
   "Course lancée. Changez de voie avec le joystick, accélérez avec A et freinez avec B.",
   "Balapan dimulai. Ganti lajur dengan joystick, tekan A untuk mempercepat dan B untuk mengerem."
  ],
  "Pick a game from OneMouse Arcade.": [
   "Escolha um jogo no OneMouse Arcade.",
-  "Wähle ein Spiel in OneMouse Arcade.",
+  "Wählen Sie ein Spiel in OneMouse Arcade.",
   "從 OneMouse Arcade 選一款遊戲。",
   "Choisissez un jeu dans OneMouse Arcade.",
   "Pilih game di OneMouse Arcade."
@@ -1009,21 +1009,21 @@
  ],
  "Game over. You can try again.": [
   "Fim de jogo. Você pode tentar de novo.",
-  "Spiel vorbei. Du kannst es erneut versuchen.",
+  "Spiel vorbei. Sie können es erneut versuchen.",
   "遊戲結束。你可以再試一次。",
   "Fin de la partie. Vous pouvez réessayer.",
   "Permainan berakhir. Anda bisa mencoba lagi."
  ],
  "Could not load the game. Try refreshing.": [
   "Não foi possível carregar o jogo. Tente atualizar a página.",
-  "Das Spiel konnte nicht geladen werden. Lade die Seite erneut.",
+  "Das Spiel konnte nicht geladen werden. Laden Sie die Seite erneut.",
   "遊戲無法載入，請重新整理頁面。",
   "Le jeu n’a pas pu être chargé. Actualisez la page.",
   "Game gagal dimuat. Coba muat ulang halaman."
  ],
  "Joystick. Move the paddle left or right.": [
   "Joystick. Mova a raquete para a esquerda ou a direita.",
-  "Joystick. Bewege den Schläger nach links oder rechts.",
+  "Joystick. Bewegen Sie den Schläger nach links oder rechts.",
   "搖桿：左右移動球拍。",
   "Joystick. Déplacez la raquette vers la gauche ou la droite.",
   "Joystick. Gerakkan pemukul ke kiri atau kanan."
@@ -1037,14 +1037,14 @@
  ],
  "Move the paddle with the joystick and launch the ball with A. You can also drag on screen or use the arrow keys.": [
   "Mova a raquete com o joystick e lance a bola com A. Você também pode arrastar na tela ou usar as setas.",
-  "Bewege den Schläger mit dem Joystick und starte den Ball mit A. Du kannst auch auf dem Bildschirm ziehen oder die Pfeiltasten verwenden.",
+  "Bewegen Sie den Schläger mit dem Joystick und starten Sie den Ball mit A. Sie können auch auf dem Bildschirm ziehen oder die Pfeiltasten verwenden.",
   "用搖桿移動球拍，按 A 發球。也可直接在畫面上拖曳，或使用方向鍵。",
   "Déplacez la raquette avec le joystick et lancez la balle avec A. Vous pouvez aussi glisser sur l’écran ou utiliser les flèches du clavier.",
   "Gerakkan pemukul dengan joystick dan luncurkan bola dengan A. Anda juga bisa menggeser layar atau memakai tombol panah."
  ],
  "Press A or push the joystick up to jump.": [
   "Pressione A ou empurre o joystick para cima para pular.",
-  "Drücke A oder schiebe den Joystick zum Springen nach oben.",
+  "Drücken Sie A oder schieben Sie den Joystick zum Springen nach oben.",
   "按 A 或把搖桿往上推即可跳躍。",
   "Appuyez sur A ou poussez le joystick vers le haut pour sauter.",
   "Tekan A atau dorong joystick ke atas untuk melompat."
@@ -1065,7 +1065,7 @@
  ],
  "Try moving the cursor": [
   "Experimente mover o cursor",
-  "Probiere aus, den Mauszeiger zu bewegen",
+  "Probieren Sie aus, den Mauszeiger zu bewegen",
   "試著移動游標",
   "Essayez de déplacer le pointeur",
   "Coba gerakkan kursor"
@@ -1100,7 +1100,7 @@
  ],
  "Move your mouse or slide a finger to the right. Move left to come back. On a keyboard, use ← and →.": [
   "Mova o mouse ou deslize o dedo para a direita. Para voltar, vá para a esquerda. No teclado, use ← e →.",
-  "Bewege die Maus oder streiche mit dem Finger nach rechts. Nach links geht es zurück. Mit der Tastatur verwendest du ← und →.",
+  "Bewegen Sie die Maus oder streichen Sie mit dem Finger nach rechts. Nach links geht es zurück. Auf der Tastatur verwenden Sie ← und →.",
   "把滑鼠或手指往右移，往左移即可返回。使用鍵盤時，請按 ← 或 →。",
   "Déplacez la souris ou faites glisser un doigt vers la droite. Revenez vers la gauche pour retourner au point de départ. Au clavier, utilisez ← et →.",
   "Gerakkan mouse atau geser satu jari ke kanan. Geser ke kiri untuk kembali. Di keyboard, gunakan ← dan →."
@@ -1142,14 +1142,14 @@
  ],
  "Drag a file onto the other screen.": [
   "Arraste um arquivo para a outra tela.",
-  "Ziehe eine Datei auf den anderen Bildschirm.",
+  "Ziehen Sie eine Datei auf den anderen Bildschirm.",
   "把檔案拖到另一個螢幕上。",
   "Faites glisser un fichier sur l’autre écran.",
   "Seret file ke layar lainnya."
  ],
  "Drag on the screen. Enter: whole screen.": [
   "Arraste na tela. Enter: tela inteira.",
-  "Ziehe auf dem Bildschirm. Eingabetaste: ganzer Bildschirm.",
+  "Ziehen Sie auf dem Bildschirm. Eingabetaste: ganzer Bildschirm.",
   "在螢幕上拖曳選取。按 Enter 選取整個螢幕。",
   "Faites glisser sur l’écran. Entrée : écran entier.",
   "Seret di layar. Enter: seluruh layar."
@@ -1177,21 +1177,21 @@
  ],
  "Select the text to copy.": [
   "Selecione o texto a copiar.",
-  "Wähle den zu kopierenden Text aus.",
+  "Wählen Sie den zu kopierenden Text aus.",
   "請選取要複製的文字。",
   "Sélectionnez le texte à copier.",
   "Pilih teks yang ingin disalin."
  ],
  "Copy some text from a note first.": [
   "Copie primeiro um texto de uma nota.",
-  "Kopiere zuerst Text aus einer Notiz.",
+  "Kopieren Sie zuerst Text aus einer Notiz.",
   "請先從筆記裡複製文字。",
   "Copiez d’abord du texte dans une note.",
   "Salin dulu teks dari catatan."
  ],
  "Try selecting the region again.": [
   "Tente selecionar a área novamente.",
-  "Wähle den Bereich erneut aus.",
+  "Wählen Sie den Bereich erneut aus.",
   "請重新選取範圍。",
   "Essayez de sélectionner la zone à nouveau.",
   "Coba pilih area lagi."
@@ -1226,21 +1226,21 @@
  ],
  "Swipe on any blank part of the card to move the cursor. Hold, then slide to select or drag.": [
   "Deslize o dedo em qualquer parte vazia do cartão para mover o cursor. Para selecionar ou arrastar, toque e segure antes de deslizar.",
-  "Streiche auf einer freien Stelle der Karte, um den Mauszeiger zu bewegen. Halte kurz gedrückt und streiche dann, um auszuwählen oder zu ziehen.",
+  "Streichen Sie auf einer freien Stelle der Karte, um den Mauszeiger zu bewegen. Halten Sie kurz gedrückt und streichen Sie dann, um auszuwählen oder zu ziehen.",
   "在卡片空白處滑動即可移動游標。先按住再滑動，可框選或拖曳。",
   "Glissez sur une zone vide de la carte pour déplacer le pointeur. Pour sélectionner ou déplacer un élément, maintenez le doigt appuyé avant de glisser.",
   "Geser di bagian kartu yang kosong untuk menggerakkan kursor. Untuk memilih atau menyeret, tahan sebentar lalu geser."
  ],
  "Drag from a blank area to select files, then drag them to the other screen.": [
   "Arraste a partir de uma área vazia para selecionar arquivos e leve-os para a outra tela.",
-  "Ziehe von einer freien Stelle aus, um Dateien auszuwählen. Ziehe sie dann auf den anderen Bildschirm.",
+  "Ziehen Sie von einer freien Stelle aus, um Dateien auszuwählen. Ziehen Sie sie dann auf den anderen Bildschirm.",
   "從空白處拖曳框選檔案，再將檔案拖到另一個螢幕。",
   "Faites glisser depuis une zone vide pour sélectionner des fichiers, puis déplacez-les sur l’autre écran.",
   "Seret dari area kosong untuk memilih file, lalu seret file tersebut ke layar lainnya."
  ],
  "In this demo, files move instead of being copied. Drag from empty space on either screen to select several files, then drag one of the selected files to the other screen.": [
   "Nesta demonstração, os arquivos são movidos, não copiados. Comece a arrastar em uma área vazia de qualquer uma das telas para selecionar vários arquivos. Depois, arraste um deles para a outra tela para mover o grupo.",
-  "In dieser Demo werden Dateien verschoben, nicht kopiert. Ziehe von einer freien Stelle auf einem der Bildschirme aus, um mehrere Dateien auszuwählen. Ziehe dann eine der ausgewählten Dateien auf den anderen Bildschirm.",
+  "In dieser Demo werden Dateien verschoben, nicht kopiert. Ziehen Sie von einer freien Stelle auf einem der Bildschirme aus, um mehrere Dateien auszuwählen. Ziehen Sie dann eine der ausgewählten Dateien auf den anderen Bildschirm.",
   "此示範會移動而不是複製檔案。從任一螢幕的空白處拖曳可框選多個檔案，再將其中一個拖到另一個螢幕，就能一起移動。",
   "Dans cette démo, les fichiers sont déplacés et non copiés. Sur l’un ou l’autre écran, faites glisser depuis une zone vide pour sélectionner plusieurs fichiers, puis déplacez-en un sur l’autre écran pour déplacer tout le groupe.",
   "Dalam demo ini, file dipindahkan, bukan disalin. Seret dari bagian kosong di salah satu layar untuk memilih beberapa file. Kemudian seret salah satu file terpilih ke layar lainnya untuk memindahkan semuanya."
@@ -1289,7 +1289,7 @@
  ],
  "Selected {n}. Drag any selected file to move them together.": [
   "Selecionados: {n}. Arraste um dos arquivos selecionados para movê-los juntos.",
-  "Ausgewählt: {n}. Ziehe eine der ausgewählten Dateien, um alle zusammen zu verschieben.",
+  "Ausgewählt: {n}. Ziehen Sie eine der ausgewählten Dateien, um alle zusammen zu verschieben.",
   "已選取 {n} 個。拖曳其中一個檔案即可一起移動。",
   "Sélection : {n}. Faites glisser l’un des fichiers sélectionnés pour les déplacer ensemble.",
   "Dipilih: {n}. Seret salah satu file terpilih untuk memindahkan semuanya."
@@ -1303,28 +1303,28 @@
  ],
  "Drop inside the other screen to move your files.": [
   "Solte os arquivos dentro da outra tela para movê-los.",
-  "Lasse die Dateien auf dem anderen Bildschirm los, um sie zu verschieben.",
+  "Lassen Sie die Dateien auf dem anderen Bildschirm los, um sie zu verschieben.",
   "把檔案放在另一個螢幕內即可移動。",
   "Déposez les fichiers sur l’autre écran pour les déplacer.",
   "Lepaskan file di dalam layar lainnya untuk memindahkannya."
  ],
  "Slide a finger to move the cursor. Tap to click where it is pointing.": [
   "Deslize o dedo para mover o cursor. Toque para clicar no ponto indicado.",
-  "Streiche mit einem Finger, um den Mauszeiger zu bewegen. Tippe, um an seiner Position zu klicken.",
+  "Streichen Sie mit einem Finger, um den Mauszeiger zu bewegen. Tippen Sie, um an seiner Position zu klicken.",
   "滑動手指來移動游標，輕點即可在游標所指處按一下。",
   "Glissez un doigt pour déplacer le pointeur. Touchez pour cliquer à l’endroit pointé.",
   "Geser satu jari untuk menggerakkan kursor. Ketuk untuk mengeklik titik yang ditunjuk."
  ],
  "To drag, hold briefly before sliding.": [
   "Para arrastar, toque e segure um instante antes de deslizar.",
-  "Halte zum Ziehen kurz gedrückt, bevor du streichst.",
+  "Halten Sie zum Ziehen kurz gedrückt, bevor Sie streichen.",
   "若要拖曳，先按住片刻再滑動。",
   "Pour faire glisser un élément, maintenez brièvement le doigt appuyé avant de le déplacer.",
   "Untuk menyeret, tahan sebentar sebelum menggeser."
  ],
  "With right-click armed, slide your finger to draw a gesture.": [
   "Com o botão direito ativado, deslize o dedo para desenhar um gesto.",
-  "Streiche bei aktiviertem Rechtsklick mit dem Finger, um eine Geste zu zeichnen.",
+  "Streichen Sie bei aktiviertem Rechtsklick mit dem Finger, um eine Geste zu zeichnen.",
   "啟用右鍵模式後，滑動手指畫出手勢。",
   "Lorsque le clic droit est activé, glissez le doigt pour dessiner un geste.",
   "Saat klik kanan aktif, geser jari untuk menggambar gestur."
