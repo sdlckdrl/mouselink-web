@@ -14,7 +14,7 @@ OneMouse is a local mouse and keyboard sharing utility (software KVM). The publi
 - Terms: https://onemouse.pages.dev/terms
 - Open source licenses: https://onemouse.pages.dev/licenses
 
-The site is available in Korean (root), English (/en/), Spanish (/es/), Japanese (/ja/), and Simplified Chinese (/zh/). Each language provides the same page routes.
+The site is available in Korean (root), English (/en/), Spanish (/es/), Japanese (/ja/), Simplified Chinese (/zh/), Brazilian Portuguese (/pt-br/), German (/de/), Traditional Chinese (/zh-tw/), French (/fr/), and Indonesian (/id/). Each language provides the same page routes.
 
 ## Connections and setup
 
